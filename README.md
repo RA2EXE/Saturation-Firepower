@@ -1,5 +1,5 @@
 # 饱和火力
-![logo](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/a50992d5-a072-42bc-91c7-c55c509c0524)
+![logo](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/e39d7de5-09ea-4fd6-b815-674141e0557c)
 
 这里是饱和火力模组Git存储位置
 Here is the Git location of the [Saturation-Firepower] module for Mindustry!
