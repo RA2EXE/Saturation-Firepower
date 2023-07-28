@@ -1,0 +1,60 @@
+{
+	"type": "GenericCrafter",
+	"name": "前沿实验室",
+	"description": "研究并改进尖端高级技术。\n[red]不要急于求成[white]，科研不是短时间内可以成功的",
+	"outputItem":"二级协议/1",
+	"size": 3,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-1",
+				"rotateSpeed": 1.08
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-2",
+				"rotation": 120,
+				"rotateSpeed": 0.18
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-3",
+				"rotation": 240,
+				"rotateSpeed": 0.03
+			},
+			{
+				"type": "DrawFlame",
+				"flameColor": "25C9ABFF"
+			},
+			"DrawDefault",
+			{
+				"type": "DrawFade",
+				"scale": 30
+			}
+		]
+	},
+	"canOverdrive": false,
+	"health": 2500,
+	"itemCapacity": 25,
+	"hasPower": true,
+	"hasItems": true,
+	"craftTime": 3600,
+	"consumes": {
+		"power": 20
+	},
+	"requirements": [
+		"lead/220",
+		"silicon/150",
+		"thorium/180",
+		"纳米核/50",
+		"一级协议/3"
+	],
+	"category": "effect",
+	"research": "实验室"
+}

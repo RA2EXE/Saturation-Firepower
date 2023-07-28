@@ -1,0 +1,21 @@
+{
+	"name": "裂位驱动器",
+	"description": "超远距离发送物品包，收集一定物品后将其发射到另一个裂位驱动器中。",
+	"type": "MassDriver",
+	"size": 4,
+	"hasItems": true,
+	"itemCapacity": 260,
+	"reload": 100,
+	"range": 800,
+	"consumes": {
+		"power": 13
+	},
+	"requirements": [
+		"thorium/250",
+		"硅钢/120",
+		"plastanium/85",
+		"裂位能/25"
+	],
+	"research": "mass-driver",
+	"category": "distribution"
+}

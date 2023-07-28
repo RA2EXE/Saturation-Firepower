@@ -1,0 +1,105 @@
+{
+	"details": "升级火炮射击系统与弹药，安装更强劲的激光发生器",
+	"health": 48000,
+	"armor": 24,
+	"weapons": [
+		{
+			"name": "死神1",
+			"reload": 28,
+			"shoot": {
+				"shots": 2,
+				"shotDelay": 6
+			},
+			"shootY": 9,
+			"x": 11,
+			"y": 27,
+			"rotate": true,
+			"rotateSpeed": 3,
+			"shootSound": "shoot",
+			"shake": 1,
+			"ejectEffect": "casing3",
+			"bullet": {
+				"type": "BasicBulletType",
+				"speed": 6,
+				"lifetime": 60,
+				"width": 10,
+				"height": 12,
+				"damage": 21,
+				"status": "blasted",
+				"statusDuration": 120,
+				"smokeEffect": "shootBig",
+				"splashDamageRadius": 40,
+				"splashDamage": 95,
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"ammoMultiplier": 6,
+				"lightningDamage": 8,
+				"lightning": 3,
+				"lightningLength": 3
+			}
+		},
+		{
+			"name": "死神1",
+			"reload": 30,
+			"shoot": {
+				"shots": 2,
+				"shotDelay": 6
+			},
+			"shootY": 9,
+			"x": 20,
+			"y": -13,
+			"rotate": true,
+			"rotateSpeed": 3,
+			"shootSound": "shoot",
+			"shake": 1,
+			"ejectEffect": "casing3",
+			"bullet": {
+				"type": "BasicBulletType",
+				"speed": 6,
+				"lifetime": 60,
+				"width": 10,
+				"height": 12,
+				"damage": 20,
+				"status": "blasted",
+				"statusDuration": 120,
+				"smokeEffect": "shootBig",
+				"splashDamageRadius": 40,
+				"splashDamage": 95,
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"ammoMultiplier": 6,
+				"lightningDamage": 8,
+				"lightning": 3,
+				"lightningLength": 3
+			}
+		},
+		{
+			"name": "死神2",
+			"reload": 40,
+			"x": 18,
+			"y": 5,
+			"shootY": 9,
+			"rotate": true,
+			"rotateSpeed": 1.5,
+			"inaccuracy": 0,
+			"alternate": true,
+			"shake": 3,
+			"shootSound": "laser",
+			"bullet": {
+				"type": "LaserBulletType",
+				"damage": 160,
+				"sideAngle": 20,
+				"sideWidth": 1,
+				"sideLength": 88,
+				"smokeEffect": "bigShockwave",
+				"colors": [
+					"D86E56FF",
+					"FFA05CFF",
+					"FFFFFF"
+				],
+				"width": 25,
+				"length": 320
+			}
+		}
+	]
+}

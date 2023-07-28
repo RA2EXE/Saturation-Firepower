@@ -1,0 +1,25 @@
+{
+"name":"强攻",
+	"damageMultiplier":2,
+	"healthMultiplier":2,
+	"speedMultiplier":1.3,
+	"reloadMultiplier":1.5,
+	"effectChance":0.5,
+	"affinities": [
+		"overdrive",
+		"shielded",
+		"修复"
+	],
+	"effect":{	"type": "ParticleEffect",
+	"particles": 3,  
+	"baseLength": 26,
+	"length":-25,
+	"lifetime": 20,
+	"spin":9,
+	"region":"饱和火力-三角形",
+	"sizeFrom": 2.5,
+	"sizeTo": 0,
+	"colorFrom": "ffffff",
+	"colorTo": "FF5B5BFF",
+	"cone":360 }
+}

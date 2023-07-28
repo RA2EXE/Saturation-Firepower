@@ -1,0 +1,14 @@
+{
+	"name": "泰勒合金",
+	"description": "致密坚硬，拥有极强电磁性能的合金。用做短时性高能电容。",
+	"hardness": 9,
+	"cost":8,
+	"color": "25C9AB",
+	"healthScaling": 1.4,
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"charge":1.2,
+	"research": "surge-alloy"
+}

@@ -1,0 +1,12 @@
+{  
+"itemCapacity": 30,   
+"drillEffect": "mineHuge",
+"updateEffect": "explosion",
+"drillTime": 45,
+"requirements": [
+		"copper/65",
+		"titanium/55",
+		"silicon/60",
+		"thorium/70"	
+	]
+}

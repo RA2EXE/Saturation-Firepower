@@ -1,0 +1,115 @@
+{
+	"type": "flying",
+	"name": "多云",
+	"speed": 2.4,
+	"drag": 0.05,
+	"accel": 0.1,
+	"rotateSpeed": 10,
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 100
+	},
+	"ammoCapacity": 300,
+	"hitSize": 8,
+	"buildSpeed": 0.25,
+	"flying": true,
+	"faceTarget": true,
+	"drawMinimap": false,
+	"health": 200,
+	"armor": 2,
+	"engineOffset": 8,
+	"engineSize": 2,
+	"itemCapacity": 0,
+	"immunities": [
+		"freezing"
+	],
+	"research": "flare",
+	/*"requirements": {
+		"block": "air-factory",
+		"time": 1500,
+		"requirements": [
+			"titanium/15",
+			"silicon/20"]},*/
+	"weapons": [
+		{
+			"name": "多云1",
+			"x": -2.5,
+			"y": 2.5,
+			"reload": 8,
+			"top": false,
+			"rotate": false,
+			"shootSound": "JG1",
+			"bullet": {
+				"sprite": "circle-bullet",
+				"shrinkY": 0,
+				"frontColor": "FFFFFF",
+				"backColor": "c0ecff",
+				"hitEffect": {
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 1,
+					"sizeTo": 8,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				},
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 1,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 8,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff",
+					"cone": 360
+				},
+				"damage": 10,
+				"width": 3,
+				"height": 3,
+				"speed": 8,
+				"lifetime": 25
+			}
+		},
+		{
+			"name": "none",
+			"x": 0,
+			"y": 0,
+			"reload": 40,
+			"shootSound": "missile",
+			"bullet": {
+				"damage": 8,
+				"sprite": "circle-bullet",
+				"shrinkY": 0,
+				"frontColor": "FFFFFF",
+				"backColor": "c0ecff",
+				"splashDamageRadius": 18,
+				"splashDamage": 13,
+				"hitEffect": {
+					"type": "WaveEffect",
+					"lifetime": 20,
+					"sizeFrom": 1,
+					"sizeTo": 16,
+					"strokeFrom": 8,
+					"strokeTo": 0,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				},
+				"despawnEffect": "none",
+				"width": 8,
+				"height": 8,
+				"trailLength": 2,
+				"trailWidth": 2,
+				"trailColor": "c0ecff",
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"speed": 5,
+				"lifetime": 41
+			}
+		}
+	]
+}

@@ -1,0 +1,179 @@
+{
+	"type": "ItemTurret",
+	"name": "穿云",
+	"description": "发射马赫级穿甲弹头，需要固定种类的弹药供给",
+	"health": 3400,
+	"armor": 4,
+	"size": 3,
+	"reload": 100,
+	"range": 280,
+	"maxAmmo": 24,
+	"recoilTime": 40,
+	"recoil": 3,
+	"cooldownTime": 90,
+	"shake": 3.5,
+	"consumes": {
+		"coolant": {
+			"amount": 0.3,
+			"optional": true
+		}
+	},
+	"liquidCapacity": 40,
+	"shootSound": "artillery",
+	"ammoUseEffect": "casing3Double",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 0,
+	"rotateSpeed": 5,
+	"ammoPerShot": 6,
+	"ammoTypes": {
+		"titanium": {
+			"type": "BasicBulletType",
+			"ammoMultiplier": 1,
+			"speed": 16,
+			"lifetime": 20,
+			"width": 14,
+			"height": 25,
+			"trailChance": 1,
+			"trailInterval": 36,
+			"trailEffect": {
+				"type": "WaveEffect",
+				"lifetime": 10,
+				"sizeFrom": 3,
+				"sizeTo": 24,
+				"strokeFrom": 2,
+				"strokeTo": 0,
+				"colorFrom": "ffffff",
+				"colorTo": "ffffff"
+			},
+			"damage": 185,
+			"pierceArmor": true,
+			"pierce": true,
+			"pierceBuilding": false,
+			"pierceCap": 3,
+			"shootEffect": "bigShockwave",
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"particles": 15,
+				"line": true,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"lenFrom": 10,
+				"lenTo": 0,
+				"length": 50,
+				"baseLength": 0,
+				"lifetime": 10,
+				"colorFrom": "FFE176FF",
+				"colorTo": "ffffff",
+				"cone": 60
+			},
+			"despawnEffect": "none"
+		},
+		"thorium": {
+			"type": "BasicBulletType",
+			"ammoMultiplier": 2,
+			"speed": 20,
+			"lifetime": 20,
+			"rangeChange":70,
+			"width": 16,
+			"height": 25,
+			"damage": 235,
+			"pierceArmor": true,
+			"pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 5,
+			"trailChance": 1,
+			"trailInterval": 36,
+			"trailEffect": {
+				"type": "WaveEffect",
+				"lifetime": 10,
+				"sizeFrom": 3,
+				"sizeTo": 24,
+				"strokeFrom": 2,
+				"strokeTo": 0,
+				"colorFrom": "ffffff",
+				"colorTo": "ffffff"
+			},
+			"shootEffect": "bigShockwave",
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"particles": 15,
+				"line": true,
+				"strokeFrom": 4,
+				"strokeTo": 0,
+				"lenFrom": 10,
+				"lenTo": 0,
+				"length": 70,
+				"baseLength": 0,
+				"lifetime": 10,
+				"colorFrom": "FFE176FF",
+				"colorTo": "ffffff",
+				"cone": 60
+			},
+			"despawnEffect": "none"
+		},
+		"镄": {
+			"type": "BasicBulletType",
+			"ammoMultiplier": 3,
+			"speed": 25,
+			"lifetime": 20,
+			"rangeChange":120,
+			"width": 10,
+			"height": 25,
+			"damage": 420,
+			"pierceArmor": true,
+			"pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 10,
+			"trailChance": 1,
+			"trailInterval": 36,
+			"trailEffect": {
+				"type": "WaveEffect",
+				"lifetime": 10,
+				"sizeFrom": 3,
+				"sizeTo": 24,
+				"strokeFrom": 2,
+				"strokeTo": 0,
+				"colorFrom": "ffffff",
+				"colorTo": "ffffff"
+			},
+			"shootEffect": "bigShockwave",
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"particles": 15,
+				"line": true,
+				"strokeFrom": 5,
+				"strokeTo": 0,
+				"lenFrom": 16,
+				"lenTo": 0,
+				"length": 100,
+				"baseLength": 0,
+				"lifetime": 10,
+				"colorFrom": "FFE176FF",
+				"colorTo": "ffffff",
+				"cone": 60
+			},
+			"despawnEffect": "none"
+		}
+	},
+	"requirements": [
+		{
+			"item": "titanium",
+			"amount": 135
+		},
+		{
+			"item": "镄",
+			"amount": 70
+		},
+		{
+			"item": "thorium",
+			"amount": 95
+		},
+		{
+			"item": "blast-compound",
+			"amount": 10
+		}
+	],
+	"category": "turret",
+	"research": "阔刀"
+}

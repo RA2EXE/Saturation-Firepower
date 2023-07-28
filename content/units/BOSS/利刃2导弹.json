@@ -1,0 +1,106 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"name": "利刃2导弹",
+	"homingDelay": 100,
+	"speed": 6,
+	"lifetime": 290,
+	"rotateSpeed": 3,
+	"loopSoundVolume": 0.03,
+	"deathSound": "Explosionbig",
+	"hidden": true,
+	"missileAccelTime": 100,
+	"hitSize": 18,
+	"health": 3000,
+	"armor": 35,
+	"fogRadius": 8,
+	"engineColor": "FF5B5B",
+	"trailColor": "FF5B5B",
+	"trailLength": 12,
+	"engineLayer": 110,
+	"engineOffset": 8,
+	"engineSize": 4,
+	"maxRange": 30,
+	"abilities": [
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 4,
+				"sizeFrom": 8,
+				"sizeTo": 0,
+				"length": 16,
+				"lifetime": 80,
+				"interp": "pow10Out",
+				"sizeInterp": "pow5In",
+				"colorFrom": "FF5B5B40",
+				"colorTo": "FF5B5B40",
+				"cone": 360
+			},
+			"interval": 5,
+			"y": -8,
+			"color": "FF5B5B"
+		}
+	],
+	"weapons": [
+		{
+			"name": "自爆",
+			"shootStatusDuration": 100,
+			"shootStatus": "绝判",
+			"x": 0,
+			"y": 0,
+			"reload": 1,
+			"mirror": false,
+			"rotate": true,
+			"shake": 10,
+			"shootSound": "none",
+			"shootOnDeath": true,
+			"bullet": {
+				"collides":false,
+				"instantDisappear": true,
+				"ammoMultiplier": 1,
+				"hitSound": "titanExplosion",
+				"hitSoundVolume": 6,
+				"killShooter": true,
+				"splashDamageRadius": 66,
+				"splashDamage": 5250,
+				"status": "碎解",
+				"statusDuration": 600,
+				"hitShake": 15,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"despawnEffect": "none",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 26,
+							"sizeFrom": 13,
+							"sizeTo": 0,
+							"length": 56,
+							"baseLength": 20,
+							"interp": "pow10Out",
+							"sizeInterp": "pow10Out",
+							"lifetime": 85,
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B00",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"interp": "circleOut",
+							"lifetime": 60,
+							"sizeFrom": 0,
+							"sizeTo": 70,
+							"strokeFrom": 10,
+							"strokeTo": 0,
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B"
+						}
+					]
+				}
+			}
+		}
+	]
+}

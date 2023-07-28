@@ -1,0 +1,70 @@
+{
+	"type": "ItemTurret",
+	"name": "陨星",
+	"description": "毁灭工程学的优秀作品，通过核爆炸来获得毁灭性的动能",
+	"details": "很抱歉，当下最坚硬的材料也不能充当其能量导轨，我们暂时无法控制核爆炸的方向",
+	"health": 17650,
+	"size": 5,
+	"reload": 980,
+	"fogRadiusMultiplier":0.3,
+	"range": 1000,
+	"maxAmmo": 20,
+	"recoilTime": 180,
+	"recoil": 8,
+	"canOverdrive": false,
+	"cooldownTime": 200,
+	"shake": 35,
+	"shootSound": "DBZ1",
+	"ammoUseEffect": "casing3Double",
+	"shootEffect": {
+		"type": "WaveEffect",
+		"lifetime": 15,
+		"sizeFrom": 0,
+		"sizeTo": 200,
+		"strokeFrom": 3,
+		"strokeTo": 0,
+		"colorFrom": "FFFFFF",
+		"colorTo": "ffffff"
+	},
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 32,
+	"rotateSpeed": 2,
+	"ammoPerShot": 20,
+	"ammoTypes": {
+		"镄": {
+			"type": "BasicBulletType",
+			"ammoMultiplier": 1,
+			"speed": 25,
+			"lifetime": 160,
+			"width": 15,
+			"height": 45,
+			"damage": 58200,
+			"pierce": true,
+			"pierceBuilding": false,
+			"trailChance": 1,
+			"trailInterval": 24,
+			"trailRotation": true,
+			"trailEffect": "instTrail",
+			"hitSound": "shotgun",
+			"shootEffect": {
+				"type": "WaveEffect",
+				"lifetime": 15,
+				"sizeFrom": 0,
+				"sizeTo": 200,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "FFFFFF",
+				"colorTo": "ffffff"
+			},
+			"hitEffect": "instHit",
+			"despawnEffect": "none"
+		}
+	},
+	"requirements": [
+		"镄/25000","blast-compound/50000"
+	],
+	//"buildVisibility": "sandboxOnly",
+	"category": "turret",
+	"research": "陨星"
+}

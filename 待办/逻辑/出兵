@@ -1,0 +1,44 @@
+wait 37
+set X 4
+set 队伍 1
+set 次数 0
+read 产量 cell1 0
+jump 11 equal 产量 0
+op rand a 53 a
+op add Y 142 a
+spawn @dagger X Y 0 队伍 result
+op add 次数 次数 1
+jump 6 lessThan 次数 产量
+set 次数 0
+read 产量 cell1 1
+jump 19 equal 产量 0
+op rand a 53 a
+op add Y 142 a
+spawn @mace X Y 0 队伍 result
+op add 次数 次数 1
+jump 14 lessThan 次数 产量
+set 次数 0
+read 产量 cell1 2
+jump 27 equal 产量 0
+op rand a 53 a
+op add Y 142 a
+spawn @fortress X Y 0 队伍 result
+op add 次数 次数 1
+jump 22 lessThan 次数 产量
+set 次数 0
+read 产量 cell1 3
+jump 35 equal 产量 0
+op rand a 53 a
+op add Y 142 a
+spawn @scepter X Y 0 队伍 result
+op add 次数 次数 1
+jump 30 lessThan 次数 产量
+set 次数 0
+read 产量 cell1 4
+jump 43 equal 产量 0
+op rand a 53 a
+op add Y 142 a
+spawn @reign X Y 0 队伍 result
+op add 次数 次数 1
+jump 38 lessThan 次数 产量
+end

@@ -1,0 +1,50 @@
+{
+	"type": "Separator",
+	"name": "分子破碎机",
+	"results": [
+	{"item": "copper", "amount": 1},
+	{"item": "lead", "amount": 1},
+	{"item": "titanium", "amount": 1},
+	{"item": "metaglass", "amount": 1},
+	{"item": "thorium", "amount": 1},
+	{"item": "graphite", "amount": 1},
+	{"item": "silicon", "amount": 1},
+	{ "item": "plastanium", "amount": 1 },
+	{ "item": "surge-alloy", "amount": 1 } ,
+	{ "item": "phase-fabric", "amount": 1 }
+	],
+	"canOverdrive": false,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			"DrawDefault",
+			{"type":"DrawLiquidRegion",
+			"drawLiquid":"slag",
+		"suffix":"-液体"},
+	{"type":"DrawRegion",
+	"suffix":"-转",
+	"spinSprite":true,
+	"rotateSpeed":6}
+	]},
+	"size": 3,
+	"itemCapacity": 20,
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids": true,
+	"liquidCapacity": 20,
+	"craftTime": 20,
+	"consumes": {
+		"power": 6,
+		"liquid": { "liquid": "slag", "amount": 0.2 }
+	},
+	"requirements": [
+	{ "item": "copper","amount":200},
+	{ "item": "graphite", "amount": 130 },
+	{ "item": "thorium", "amount": 180 },
+	{ "item": "硅钢", "amount": 100 },
+	{ "item": "plastanium", "amount": 70 }
+	],
+	"ambientSound":"hum",
+	"category": "crafting",
+	"research": "separator"
+}

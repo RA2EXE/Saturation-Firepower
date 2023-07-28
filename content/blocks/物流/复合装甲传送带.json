@@ -1,0 +1,21 @@
+{
+	"type": "ArmoredConveyor",
+	"name": "复合装甲传送带",
+	"description": "快速地在战场运输物品，不接受边上的输入，已做水密封处理，耐高温且绝缘",
+	"health": 450,
+	"insulated":true,
+	"absorbLasers":true,
+	"requirements": [
+	{"item": "copper", "amount":1},
+    {"item": "titanium", "amount":1 },
+    {"item": "metaglass", "amount":1 },
+    {"item": "硅钢", "amount":1 },
+	{"item": "镄", "amount":1 }
+	],
+	"category": "distribution",
+	"research":"armored-conveyor",
+	"speed": 0.20,
+	"displayedSpeed": 20,
+	"displayFlow":true,
+	"placeableLiquid": true
+}

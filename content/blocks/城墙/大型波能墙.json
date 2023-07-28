@@ -1,0 +1,19 @@
+{
+	"name": "大型波能墙",
+	"description": "收集敌人的攻击产生的动能与热能，并在之后反射。占据多个方块。",
+	"type": "Wall",
+	"armor":13,
+	"lightningChance":0.1,
+	"lightningDamage":50,
+	"lightningLength":25,
+	"health":7600,
+	"size":2 ,
+	"insulated":true,
+	"absorbLasers":true,
+	"requirements": [
+		"硅钢/12","metaglass/8",
+		"plastanium/8","surge-alloy/12"		
+	],
+	"category": "defense",
+	"research": "波能墙"
+}

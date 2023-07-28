@@ -1,0 +1,70 @@
+{
+	"type": "ConsumeGenerator",
+	"name": "增压励磁发电站",
+	"description": "大型励磁发电机，利用内产磁场更快发电。",
+	"size": 3,
+	"health": 400,
+	"hasLiquids": true,
+	"hasItems": true,
+	"itemDuration": 15,
+	"powerProduction": 44,
+	"itemCapacity": 20,
+	"liquidCapacity": 200,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawRegion",
+				"suffix": "-转",
+				"rotateSpeed":9,
+				"rotation":45
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-转2",
+				"rotateSpeed":-1.25,
+				"rotation":60
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-顶"
+			},
+			"DrawWarmupRegion",
+			{"type": "DrawLiquidRegion",
+			"drawLiquid": "water"}
+		]
+	},
+	"generateEffect": "generatespark",
+	"consumes": {
+		"itemFlammable":{},
+		"itemExplode":{},
+		"liquid": "water/0.8"
+	},
+	"requirements": [
+		{
+			"item": "titanium",
+			"amount": 320
+		},
+		{
+			"item": "lead",
+			"amount": 260
+		},
+		{
+			"item": "metaglass",
+			"amount": 80
+		},
+		{
+			"item": "silicon",
+			"amount": 230
+		},
+		{
+			"item": "硅钢",
+			"amount": 80
+		}
+	],
+	"ambientSound": "smelter",
+	"ambientSoundVolume": 0.06,
+	"category": "power",
+	"research": "steam-generator"
+}

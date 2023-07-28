@@ -1,0 +1,75 @@
+{
+	"health":2220,
+	"ammoTypes": {
+	"copper":{
+		"type":"BasicBulletType",
+		"width":8,	"height":13,
+		"speed":13,	"lifetime":15,
+		"damage":15,
+		"ammoMultiplier":2
+	},
+	"graphite":{
+		"type":"BasicBulletType",
+		"width":10,	"height":15,
+		"speed":16,	"lifetime":13.93,
+		"damage":26,
+		"splashDamageRadius":15,
+		"splashDamage":12,
+		"knockback":1,
+		"hitEffect":"flakExplosion",
+		"reloadMultiplier":0.6,
+		"ammoMultiplier":4
+	},
+	"pyratite":{
+		"type":"BasicBulletType",
+		"width":10,	"height":17,
+		"speed":17.5,	"lifetime":13.3,
+		"damage":18,
+		"splashDamageRadius":22,
+		"splashDamage":35,
+		"frontColor": "f8ad42",
+		"backColor": "f68021",
+		"hitEffect":{
+			"type":"MultiEffect",
+			"effects":["flakExplosion","fireHit"]},
+		"status": "burning",
+		"statusDuration": 720,
+		"makeFire":true,
+		"ammoMultiplier":5
+	},
+	"blast-compound": {
+		"type": "BasicBulletType",
+		"width": 12,"height": 18,
+		"speed": 10,"lifetime": 22.3,
+		"damage": 16,
+		"splashDamageRadius": 30,
+		"splashDamage": 45,
+		"ammoMultiplier": 6,
+		"knockback":3,
+		"hitEffect": "blastExplosion",
+		"despawnEffect": "blastExplosion",
+		"status": "blasted",
+		"statusDuration": 60
+	},
+	"silicon":{
+		"type":"BasicBulletType",
+		"width":10,	"height":15,
+		"speed":15.5,	"lifetime":15.5,
+		"damage":18,
+		"homingPower":0.1,
+		"reloadMultiplier":1.67,
+		"ammoMultiplier":5
+	},
+	"thorium":{
+		"type":"BasicBulletType",
+		"shootEffect":"shootBig",
+		"smokeEffect":"shootBigSmoke",
+		"width":12,	"height":19,
+		"speed":17,	"lifetime":13.7,
+		"damage":36,
+		"ammoMultiplier":4
+	}
+	},
+	"range":223,
+	"ammoUseEffect":"casing3"
+}

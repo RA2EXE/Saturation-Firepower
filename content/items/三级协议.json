@@ -1,0 +1,16 @@
+{
+	"name": "最高协议",
+	"description": "进行建筑之前请确定你已被授权该协议",
+	"details":"最高建造指挥已授权",
+	"hardness": 0,
+	"cost":1,
+	"color": "FF0000",
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"frames":6,
+	"transitionFrames":1,
+	"frameTime":3,
+	"research": "二级协议"
+}

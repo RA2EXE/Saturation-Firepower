@@ -1,0 +1,25 @@
+{
+	"type": "GenericCrafter",
+	"name": "集束捆合器",
+	"outputItem": { "item": "集束", "amount": 1 },
+	"size": 2,
+	"hasPower": true,
+	"hasItems": true,
+	"craftTime": 40,
+	"itemCapacity": 15,
+	"consumes": {
+    "power":2.333,
+    "items": {	 "items": [
+ { "item": "pyratite", "amount": 1},
+ { "item": "blast-compound", "amount": 5}
+ ]
+  } },
+"requirements": [
+	{ "item": "lead", "amount": 45},
+	{ "item": "graphite", "amount": 25 },
+	{ "item": "titanium", "amount": 30 },
+	{ "item": "一级协议", "amount": 0}
+	],
+	"category": "crafting",
+	"research": "blast-mixer"
+}

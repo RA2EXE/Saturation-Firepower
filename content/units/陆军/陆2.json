@@ -1,0 +1,101 @@
+{
+	"type": "tank",
+	"name": "突袭",
+	"description": "攻击附近所有敌人。发射高爆火箭，重装速度较慢。\n密封舱室，可以跨越水域。",
+	"squareShape": true,
+	"omniMovement": false,
+	"rotateMoveFirst": false,
+	"hovering": true,
+	"canDrown": false,
+	"speed": 1.8,
+	"hitSize": 18,
+	"ammoType": "graphite",
+	"ammoCapacity": 80,
+	"health": 660,
+	"armor": 5,
+	"drag": 0.08,
+	"accel": 0.1,
+	"rotateSpeed": 3,
+	"itemCapacity": 30,
+	"faceTarget": false,
+	"research": "陆1",
+	"requirements": {
+		"block": "additive-reconstructor", 
+		"previous": "陆1"
+	},
+	"weapons": [
+		{
+			"name": "突袭1",
+			"reload": 120,
+			"x": 0,
+			"y": -1,
+			"rotate": true,
+			"rotateSpeed": 9,
+			"mirror": false,
+			"inaccuracy": 0,
+			"ejectEffect": "casing2",
+			"shootSound": "artillery",
+			"alternate": false,
+			"bullet": {
+				"type": "MissileBulletType",
+				"hitSize": 40,
+				"splashDamageRadius": 46,
+				"splashDamage": 96,
+				"damage": 108,
+				"status": "blasted",
+				"statusDuration": 60,
+				"sprite": "饱和火力-导弹",
+				"backColor": "FF7F24",
+				"frontColor": "E3E3E3",
+				"lifetime": 30,
+				"speed": 11,
+				"homingPower": 0.03,
+				"homingRange": 80,
+				"knockback": 8,
+				"width": 12,
+				"height": 40,
+				"ammoMultiplier": 3,
+				"despawnEffect": "none",
+				"shootEffect": "shootPyraFlame",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 8,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 25,
+							"baseLength": 23,
+							"lifetime": 35,
+							"colorFrom": "737373FF",
+							"colorTo": "737373FF",
+							"cone": 360
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 12,
+							"line": true,
+							"length": 43,
+							"baseLength": 3,
+							"lifetime": 22,
+							"colorFrom": "FFFFFF",
+							"colorTo": "FFE176FF",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 1,
+							"sizeTo": 48,
+							"strokeFrom": 2,
+							"strokeTo": 0,
+							"colorFrom": "FFE176FF",
+							"colorTo": "ffffff"
+						}
+					]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"health": 1500,
+	"details": "升级火控系统，安装高聚光设备，强行突破塑钢墙",
+	"boostMultiplier": 2.3,
+	"abilities": [
+		{
+			"type": "ForceFieldAbility",
+			"sides": 4,
+			"radius": 66,
+			"max": 600,
+			"regen": 1.55,
+			"cooldown": 180
+		}
+	],
+	"weapons": [
+		{
+			"name": "耀星1",
+			"reload": 50,
+			"x": 7,
+			"y": -1,
+			"rotate": false,
+			"top": false,
+			"recoil": 4,
+			"inaccuracy": 0,
+			"alternate": true,
+			"shootSound": "laser",
+			"shake": 2,
+			"bullet": {
+				"type": "LaserBulletType",
+				"healPercent": 8,
+				"recoil": 1,
+				"damage": 85,
+				"collidesTeam": true,
+				"laserAbsorb": false,
+				"shootEffect": "bigShockwave",
+				"sideAngle": 35,
+				"sideWidth": 1,
+				"sideLength": 70,
+				"colors": [
+					"7CF38990",
+					"97FFA880",
+					"FFFFFF"
+				],
+				"width": 16,
+				"length": 200
+			}
+		}
+	]
+}

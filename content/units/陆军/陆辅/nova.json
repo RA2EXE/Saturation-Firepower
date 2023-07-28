@@ -1,0 +1,27 @@
+{
+	"health":200,
+	"details":"塞 星 双 枪 手",
+	"weapons":[
+	{	"name": "新星1",	
+		"reload": 25, 
+		"x": 4.5,  "y": 0,  
+		"shoot":{
+			"shots":2,
+			"shotDelay":6},
+		"rotate": false,
+		"shootY":4.5,
+		"top":false,
+		"inaccuracy": 0,
+		"alternate": false, 
+		"shootSound": "lasershoot",
+		"bullet":{	
+	"type":"LaserBoltBulletType",
+		"frontColor":"FFFFFF",	
+		"backColor":"97FFA8FF",	
+		"healPercent":5.5,
+		"damage":17,
+		"collidesTeam":true,
+		"speed":7.6, "lifetime":24,
+		"width":2,	 "height":8	}	}
+		]
+}

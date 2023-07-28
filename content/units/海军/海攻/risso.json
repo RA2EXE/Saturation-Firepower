@@ -1,0 +1,52 @@
+{
+	"health": 300,
+	"details": "先进反制机炮，自主寻的导弹",
+	"weapons": [
+		{
+			"name": "尖刀1",
+			"reload": 5,
+			"x": 4,
+			"y": 1.5,
+			"shootY": 4,
+			"rotate": true,
+			"inaccuracy": 2,
+			"alternate": true,
+			"ejectEffect": "casing1",
+			"bullet": {
+				"ammoMultiplier": 2,
+				"damage": 11,
+				"speed": 11,
+				"lifetime": 16,
+				"width": 5,
+				"height": 8
+		}},
+		{
+			"name": "巫妖2",
+			"reload": 35,
+			"x": 0,
+			"y": -5,
+			"shootY": 2,
+			"rotate": true,
+			"inaccuracy": 10,
+			"mirror":false,
+			"shootSound":"missile",
+			"bullet": {
+				"type":"MissileBulletType",
+				"homingRange": 80,
+				"homingDelay": 5,
+				"homingPower": 0.3,
+				"trailColor":"E3E3E3",
+				"keepVelocity":false,
+				"ammoMultiplier": 2,
+				"damage": 11,
+				"splashDamage": 30,
+				"splashDamageRadius": 25,
+				"hitEffect":"blastExplosion",
+				"speed": 6,
+				"lifetime": 35,
+				"width": 8,
+				"height": 12
+			}
+		}
+	]
+}

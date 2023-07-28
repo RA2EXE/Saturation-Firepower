@@ -1,0 +1,13 @@
+{
+	"name": "铬",
+	"description": "最坚硬的金属元素，无法通过舰载构造仪建筑",
+	"hardness":9,
+	"cost":12,
+	"color": "666484",
+	"healthScaling": 2,
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "镄"
+}

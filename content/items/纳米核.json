@@ -1,0 +1,13 @@
+{
+	"name": "纳米核",
+	"description":"精细纳米材料，用于修复并强化建筑和干扰型弹药",
+	"details":"纳米材料，伽马！",
+	"cost":3.5,
+	"hardness":9,
+	"alwaysUnlocked":false,
+	"color": "76D081",
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "silicon"
+}

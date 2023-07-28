@@ -1,0 +1,33 @@
+{
+	"type": "GenericCrafter",
+	"name": "终极合金厂",
+	"outputItem": { "item": "surge-alloy", "amount": 5},
+	"size": 2,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 120,
+	"itemCapacity": 200,
+	"drawer":{
+        "type":"DrawMulti",
+        "drawers":[
+            "DrawDefault",
+            "DrawFlame"
+            ]
+    },
+	"consumes": {
+    "power":7.5,
+    "liquid":{
+	"liquid":"oil",
+	"amount":0.3,
+	"booster":false	},
+    "items": {
+	 "items": [
+	  { "item": "coal", "amount": 100}
+	]
+  }
+ },
+	"buildVisibility": "sandboxOnly",
+	"category": "crafting",
+	"research": "终极合金厂"
+}

@@ -1,0 +1,311 @@
+{
+	"type": "ItemTurret",
+	"name": "扩散轨道炮",
+	"description": "发射集束能量弹，毁灭目标周边区域",
+	"details": "为什么不试试EU的连续轨道炮呢？",
+	"health": 10700,
+	"size": 8,
+	"shootSound": "release",
+	"reload": 600,
+	"canOverdrive": false,
+	"range": 800,
+	"fogRadiusMultiplier": 0.35,
+	"coolantMultiplier": 0.5,
+	"recoilTime": 100,
+	"recoil": 8,
+	"maxAmmo": 30,
+	"cooldownTime": 120,
+	"consumes": {
+		"coolant": {
+			"amount": 3,
+			"optional": true
+		}
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "ShapePart",
+				"progress": "warmup",
+				"y": -24,
+				"color": "25C9ABFF",
+				"circle": true,
+				"hollow": false,
+				"radius": 0,
+				"radiusTo": 6,
+				"layer": 110
+			},
+			{
+				"type": "HaloPart",
+				"progress": "reload",
+				"y": -24,
+				"rotateSpeed": 0,
+				"sides": 3,
+				"shapes": 4,
+				"color": "25C9ABFF",
+				"tri": true,
+				"hollow": true,
+				"stroke": 0,
+				"strokeTo": 0.1,
+				"radius": 10,
+				"radiusTo": 0,
+				"triLength": 24,
+				"triLengthTo": 0,
+				"haloRadius": 3,
+				"haloRotation": 0,
+				"haloRotateSpeed": 0.5,
+				"layer": 110
+			}
+		]
+	},
+	"targetGround": true,
+	"targetAir": true,
+	"ammoUseEffect": "smokeCloud",
+	"inaccuracy": 0,
+	"ammoPerShot": 30,
+	"shake": 20,
+	"liquidCapacity": 300,
+	"rotateSpeed": 2,
+	"ammoTypes": {
+		"泰勒合金": {
+			"splashDamageRadius": 240,
+			"splashDamage": 2200,
+			"speed": 20,
+			"damage": 500,
+			"width": 128,
+			"height": 128,
+			"hitSize": 100,
+			"spin": 10,
+			"lightningDamage": 87,
+			"lightning": 8,
+			"lightningLength": 33,
+			"lightningLengthRand": 20,
+			"lightningColor": "25C9ABFF",
+			"status": "干扰",
+			"statusDuration": 180,
+			"sprite": "饱和火力-海胆",
+			"trailLength": 9,
+			"trailWidth": 4,
+			"shrinkY": 0,
+			"shrinkX": 0,
+			"hitShake": 20,
+			"hitSound": "DBZ1",
+			"ammoMultiplier": 1,
+			"lifetime": 40,
+			"backColor": "25C9ABFF",
+			"frontColor": "FFFFFF",
+			"trailColor": "25C9ABFF",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 80,
+						"sizeFrom": 50,
+						"sizeTo": 0,
+						"length": 135,
+						"baseLength": 33,
+						"lifetime": 35,
+						"colorFrom": "25C9ABFF",
+						"colorTo": "FFFFFF",
+						"cone": 360
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 92,
+						"line": true,
+						"strokeFrom": 8,
+						"strokeTo": 0,
+						"lenFrom": 0,
+						"lenTo": 45,
+						"length": 203,
+						"baseLength": 53,
+						"lifetime": 32,
+						"colorFrom": "FFFFFF",
+						"colorTo": "25C9ABFF",
+						"cone": 360
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 50,
+						"sizeFrom": 20,
+						"sizeTo": 240,
+						"strokeFrom": 45,
+						"strokeTo": 0,
+						"colorFrom": "25C9ABFF",
+						"colorTo": "ffffff"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 78,
+						"strokeFrom": 8,
+						"strokeTo": 0,
+						"colorFrom": "25C9ABFF",
+						"colorTo": "ffffff"
+					}
+				]
+			},
+			"shootEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"strokeFrom": 5,
+						"strokeTo": 0,
+						"lenFrom": 0,
+						"lenTo": 24,
+						"length": 43,
+						"baseLength": 3,
+						"lifetime": 55,
+						"colorFrom": "25C9ABFF",
+						"colorTo": "25C9ABFF",
+						"cone": 60
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 20,
+						"sizeTo": 80,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 58,
+						"colorFrom": "25C9AB20",
+						"colorTo": "FFFFFF00",
+						"cone": 360
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 5,
+						"sizeTo": 80,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"colorFrom": "BFFFDBFF",
+						"colorTo": "25C9ABFF"
+					}
+				]
+			},
+			"smokeEffect": "smokeCloud",
+			"fragLifeMin": 0.3,
+			"fragBullets": 35,
+			"fragBullet": {
+				"hitSound": "plasmaboom",
+				"width": 16,
+				"height": 16,
+				"sprite": "circle-bullet",
+				"shrinkY": 0,
+				"hitShake": 8,
+				"backColor": "25C9ABFF",
+				"frontColor": "FFFFFF",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 80,
+							"sizeTo": 9,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 18,
+							"colorFrom": "25C9AB80",
+							"colorTo": "FFFFFF00",
+							"cone": 360
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 20,
+							"sizeFrom": 10,
+							"sizeTo": 0,
+							"length": 35,
+							"baseLength": 133,
+							"lifetime": 35,
+							"colorFrom": "25C9ABFF",
+							"colorTo": "FFFFFF",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 30,
+							"sizeFrom": 0,
+							"sizeTo": 160,
+							"strokeFrom": 11,
+							"strokeTo": 0,
+							"colorFrom": "25C9ABFF",
+							"colorTo": "ffffff"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 1,
+							"sizeTo": 78,
+							"strokeFrom": 8,
+							"strokeTo": 0,
+							"colorFrom": "25C9ABFF",
+							"colorTo": "ffffff"
+						}
+					]
+				},
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 13,
+					"line": true,
+					"strokeFrom": 6,
+					"strokeTo": 0,
+					"lenFrom": 200,
+					"lenTo": 0,
+					"length": 1,
+					"baseLength": 3,
+					"lifetime": 22,
+					"colorFrom": "FFFFFF",
+					"colorTo": "25C9ABFF",
+					"cone": 360
+				},
+				"collides": false,
+				"status": "干扰",
+				"statusDuration": 70,
+				"lightningDamage": 150,
+				"lightning": 3,
+				"lightningLength": 18,
+				"lightningLengthRand": 9,
+				"lightningColor": "25C9ABFF",
+				"speed": 5,
+				"lifetime": 90,
+				"splashDamageRadius": 160,
+				"splashDamage": 280
+			}
+		}
+	},
+	"requirements": [
+		{
+			"item": "plastanium",
+			"amount": 1400
+		},
+		{
+			"item": "裂位能",
+			"amount": 1200
+		},
+		{
+			"item": "镄",
+			"amount": 1300
+		},
+		{
+			"item": "泰勒合金",
+			"amount": 950
+		},
+		{
+			"item": "二级协议",
+			"amount": 50
+		},
+		{
+			"item": "三级协议",
+			"amount": 15
+		}
+	],
+	"category": "turret",
+	"research": "战研"
+}

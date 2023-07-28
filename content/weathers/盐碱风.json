@@ -1,0 +1,17 @@
+{
+"name":"盐碱风",
+"type":"ParticleWeather",
+"particleRegion":"particle",
+"sizeMax": 10,
+"sizeMin": 1,
+"density":1200,
+"opacityMultiplier": 0.95,
+"baseSpeed":2.1,
+"force": 0.1,
+"sound":"windhowl",
+"soundVol":0.66,
+"soundVolOscMag":1.5,
+"soundVolOscScl":1100,
+"soundVolMin":0.02,
+"status":"corroded"
+}

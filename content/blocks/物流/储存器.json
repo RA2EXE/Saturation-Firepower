@@ -1,0 +1,12 @@
+{
+	"description": "建立一个简易的临时储存器，可以使用卸载器取出物品",
+	"requirements": [
+	{"amount": 200, "item": "copper"}
+   ],
+	"type": "StorageBlock",
+	"name": "储存器",
+	"size": 2,
+	"itemCapacity": 100,
+	"research": "机械卸载器",
+	"category": "effect"
+}

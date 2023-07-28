@@ -1,0 +1,35 @@
+{
+	"type": "Conveyor",
+	"name": "磁能传送带",
+	"description": "在传送带内部产生磁场来快速输送物品",
+ 	"details":"[red]瞬间失磁会导致剧烈爆炸与小范围瘫痪性磁能脉冲",
+	"health": 90,
+	"baseExplosiveness":5,
+	"hasShadow": true,
+	"destroyBullet":{ 
+	"type":"PointBulletType",
+	"hitShake": 2,
+	"splashDamageRadius":25,
+	"splashDamage":30,
+	"status":"unmoving",
+	"statusDuration":30, 
+	"speed":0,
+	"lifetime":2,
+	"collides":false,
+	"despawnEffect":{"type": "WaveEffect",
+	"lifetime": 10,
+	"sizeFrom": 0,"sizeTo": 30,
+	"strokeFrom":3,"strokeTo":0,
+	"colorFrom":"ffffff",
+	"colorTo": "ffffff"},
+	"hitEffect":"none"},
+	"requirements": [
+	{"item": "lead", "amount": 1},
+	{"item": "thorium", "amount": 1},
+	{ "item": "silicon", "amount": 1 }
+	],
+	"category": "distribution",
+	"research":"armored-conveyor",
+	"speed": 0.60,
+	"displayedSpeed": 60
+}

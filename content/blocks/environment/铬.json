@@ -1,0 +1,11 @@
+{
+"name":"铬",
+"type":"OreBlock",
+"playerUnmineable":true,
+"itemDrop":"铬",
+"mapColor":"666484FF",
+"useColor":true,
+"oreDefault":true,
+"oreThreshold":0.89,
+"oreScale":20
+}

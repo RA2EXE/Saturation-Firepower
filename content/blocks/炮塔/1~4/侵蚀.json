@@ -1,0 +1,132 @@
+{
+	"name": "侵蚀",
+	"type": "LaserTurret",
+	"size": 4,
+	"health": 4750,
+	"heatColor": "7CF38990",
+	"shootEffect": "none",
+	"shootSound": "laserbig",
+	"range": 240,
+	"reload": 400,
+	"coolantMultiplier": 2,
+	"liquidCapacity": 180,
+	"inaccuracy": 0,
+	"recoil": 3.5,
+	"rotateSpeed": 3.6,
+	"shake": 5,
+	"coolEffect": "steam",
+	"targetHealing": true,
+	"unitSort": "strongest",
+	"cooldownTime": 90,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawTurret",
+				"parts": [
+					{
+						"type": "RegionPart",
+						"mirror": false,
+						"x": 0,
+						"y": 0,
+						"suffix": "-3",
+						"under": true,
+						"heatProgress": "recoil",
+						"heatColor": "7CF38990",
+						"moveX": 0,
+						"moveY": 8
+					},
+					{
+						"type": "RegionPart",
+						"mirror": true,
+						"x": 0,
+						"y": 0,
+						"suffix": "-1",
+						"layer": 50,
+						"heatProgress": "recoil",
+						"heatColor": "7CF38990",
+						"moveX": 3.5,
+						"moveY": 0
+					},
+					{
+						"type": "RegionPart",
+						"mirror": false,
+						"x": 0,
+						"y": 0,
+						"suffix": "-2",
+						"heatProgress": "recoil",
+						"heatColor": "7CF38990",
+						"layer": 50,
+						"moveX": 0,
+						"moveY": -4.25
+					}
+				]
+			}
+		]
+	},
+	"shootType": {
+		"type": "ContinuousLaserBulletType",
+		"hitEffect": {
+			"type": "ParticleEffect",
+			"particles": 6,
+			"baseLength": 8,
+			"length": 18,
+			"lifetime": 10,
+			"line": true,
+			"lenFrom": 16,
+			"lenTo": 0,
+			"strokeFrom": 1.6,
+			"strokeTo": 0,
+			"colorFrom": "97FFA8",
+			"colorTo": "97FFA8",
+			"cone": 360
+		},
+		"shootEffect": {
+			"type": "ParticleEffect",
+			"particles": 0,
+			"sizeFrom": 10,
+			"sizeTo": 0,
+			"length": 0,
+			"baseLength": 0,
+			"lifetime": 300,
+			"colorFrom": "7CF389FF",
+			"colorTo": "7CF389FF",
+			"cone": 0
+		},
+		"status": "拆解",
+		"statusDuration": 10,
+		"incendChance": 0,
+		"incendSpread": 0,
+		"incendAmount": 0,
+		"hitSize": 8,
+		"collidesTeam": true,
+		"healPercent": 2,
+		"ammoMultiplier": 1,
+		"length": 250,
+		"damage": 300,
+		"colors": [
+			"7CF38990",
+			"97FFA880",
+			"FFFFFF"
+		]
+	},
+	"consumes": {
+		"power": 48,
+		"coolant": {
+			"amount": 2.5,
+			"optional": true
+		}
+	},
+	"shootDuration": 250,
+	"requirements": [
+		"lead/800",
+		"metaglass/600",
+		"silicon/700",
+		"硅钢/550",
+		"纳米核/300",
+		"surge-alloy/300",
+		"二级协议/0"
+	],
+	"category": "turret",
+	"research": "meltdown"
+}

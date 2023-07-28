@@ -1,0 +1,23 @@
+{
+    "type": "Floor",
+    "name": "纳米地",
+    "itemDrop":"纳米核",
+    "emitLight":true,
+    "lightRadius":60,
+    "lightColor":"7CF38980",
+    "playerUnmineable":true,
+    "useColor":true,
+	"speedMultiplier": 0.8,
+	"statusDuration":10,	
+	"walkEffect":{"type": "ParticleEffect",
+    "particles": 3,
+    "sizeFrom": 2,"sizeTo": 0,
+    "length": 17,"baseLength": 0,
+    "lifetime": 10,
+    "colorFrom": "97FFA8FF",
+    "colorTo": "ffffff",
+    "cone": 360},
+	"status":"修复",
+	"isLiquid":false,
+	"variants":0
+}

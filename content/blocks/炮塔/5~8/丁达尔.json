@@ -1,0 +1,115 @@
+{
+	"type": "PowerTurret",
+	"name": "丁达尔",
+	"description": "向敌方空中单位发射密集的穿透光束。火力逐渐加强。",
+	"targetAir": true,
+	"targetGround": false,
+	"health": 3500,
+	"armor":6,
+	"size": 6,
+	"shootSound": "JG1",
+	"shake": 0.5,
+	"shootCone": 270,
+	"inaccuracy": 1.2,
+	"recoil": 3,
+	"cooldownTime": 20,
+	"shootY": 0,
+	"coolantMultiplier": 1,
+	"velocityRnd": 0.15,
+	"canOverdrive": false,
+	"reload": 8,
+	"xRand":1.5,
+	"shoot": {
+		"shots": 12,
+		"shotDelay": 4,
+		"type": "ShootBarrel",
+		"barrels": [
+		5.5,22.25,0,
+		-5.5,22.25,0,
+		16,21.25,0,
+		-16,21.25,0
+		]
+	},
+	"shootType": {
+		"type": "BasicBulletType",
+		"damage": 92,
+		"collidesGround": false,
+		"speed": 18,
+		"lifetime": 25,
+		"drag": 0.005,
+		"pierce": true,
+		"pierceArmor":true,
+		"pierceCap": 3,
+		"absorbable": false,
+		"frontColor": "FFFFFF",
+		"backColor": "FEEBB3",
+		"width": 5,
+		"height": 25,
+		"trailLength": 2,
+		"trailWidth": 1.3,
+		"trailColor": "FEEBB3",
+		"shrinkY": 0,
+		"shootEffect": {
+			"type": "WaveEffect",
+			"lifetime": 6,
+			"sizeFrom": 1,
+			"sizeTo": 10,
+			"strokeFrom": 1.3,
+			"strokeTo": 0,
+			"colorFrom": "ffffff",
+			"colorTo": "FEEBB3"
+		},
+		"smokeEffect": "none",
+		"hitEffect": {
+			"type": "ParticleEffect",
+			"particles": 15,
+			"line": true,
+			"strokeFrom": 3,
+			"strokeTo": 0,
+			"lenFrom": 10,
+			"lenTo": 0,
+			"length": 50,
+			"baseLength": 0,
+			"lifetime": 10,
+			"colorFrom": "FEEBB3",
+			"colorTo": "ffffff",
+			"cone": 60
+		},
+		"despawnEffect": 
+			{"type": "ParticleEffect",
+			"particles": 1,
+			"sizeFrom": 1,
+			"sizeTo": 0,
+			"length": 0,
+			"baseLength": 0,
+			"lifetime":8,
+			"colorFrom": "FEEBB3",
+			"colorTo": "ffffff",
+			"cone": 360},
+	"ammoMultiplier": 1
+	},
+	"consumes": {
+		"power": 50,
+		"coolant": {
+			"amount": 2,
+			"optional": true
+		}
+	},
+	"rotateSpeed": 2.6,
+	"range": 448,
+	"category": "turret",
+	"research": {
+		"parent": "天际",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "迫降区"
+			}
+		]
+	},
+	"requirements": [
+		"silicon/660","metaglass/870",
+		"裂位能/450","plastanium/500",
+		"泰勒合金/430","二级协议/3"
+	]
+}

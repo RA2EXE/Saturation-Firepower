@@ -1,0 +1,75 @@
+{
+	"type": "ItemTurret",
+	"name": "金属风暴",
+	"description": "装弹后快速向敌人喷出600枚子弹，需要极长的准备时间。",
+	"health": 960,
+	"size": 2,
+	"reload":900,
+	"range": 240,
+    "maxAmmo":600,
+	"recoilTime":100,
+	"recoil": 2,
+	"consumeAmmoOnce":false,
+    "ammoPerShot": 1,
+    "consumes": {
+		"coolant":{"amount":1,"optional":true}  
+			},
+	"shoot":{
+	    "shots":600,
+	    "shotDelay":0.5
+	},
+	"shake":1.5,
+	"ammoUseEffect": "none",
+	"xRand":4.5,
+	"targetGround":true,
+	"targetAir":true,
+	"inaccuracy": 5,
+	"rotateSpeed": 8,
+	"velocityRnd": "0.15",
+	"ammoTypes": {
+		"copper": {
+			"speed": 7.5,
+			"damage": 9,
+			"lifetime":32,
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier":2,
+			"shootEffect": "shootSmall" 	},
+		"lead": {
+			"speed": 7.5,
+			"damage": 9,
+			"knockback":1,
+			"lifetime":32,
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier":2,
+			"shootEffect": "shootSmall" 
+		},
+	    "titanium":{
+	        "speed": 7.5,
+			"damage": 14,
+			"lifetime":35,
+			"width": 9,
+			"height": 10,
+			"shootEffect": "shootSmall",
+			"ammoMultiplier":4
+			},
+		"thorium":{
+	        "speed": 7.5,
+			"damage": 20,
+			"lifetime":35,
+			"width": 4,
+			"height": 11,
+			"shootEffect": "shootSmall",
+			"ammoMultiplier":6
+		}
+    },
+	"requirements": [
+		{ "item": "copper", "amount": 130 },
+		{ "item": "lead", "amount": 90 },
+		{ "item": "graphite", "amount": 80 },
+		{ "item": "titanium", "amount": 70 },
+		{ "item": "一级协议", "amount": 2 }	],
+	"category": "turret",
+	"research": "F2机炮"
+	}

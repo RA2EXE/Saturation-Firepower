@@ -1,0 +1,160 @@
+{
+	"name": "相位超速器",
+	"description": "在一定范围内提供超速场，需要氢气。使用相位物可以提升加速倍率。",
+	"type": "OverdriveProjector",
+	"health": 1040,
+	"size": 3,
+	"range": 150,
+	"reload": 90,
+	"itemCapacity": 3,
+	"phaseRangeBoost": 0,
+	"speedBoostPhase": 0.3,
+	"speedBoost": 1.5,
+	"squareSprite": false,
+	"hasBoost": true,
+	"consumes": {
+		"power": 6,
+		"liquid": {
+			"liquid": "hydrogen",
+			"amount": "0.05"
+		},
+		"items": {
+			"items": [
+				{
+					"item": "phase-fabric",
+					"amount": 1
+				}
+			],
+			"booster": true,
+			"optional": true
+		}
+	},
+	"destroyBullet": {
+		"damage": 180,
+		"absorbable": false,
+		"instantDisappear": true,
+		"hitEffect": "none",
+		"despawnEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 35,
+					"sizeFrom": 10,
+					"sizeTo": 0,
+					"length": 45,
+					"baseLength": 29,
+					"region": "饱和火力-菱形",
+					"lifetime": 25,
+					"colorFrom": "EEC591A0",
+					"colorTo": "ffffff",
+					"cone": 360
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 0,
+					"sizeTo": 60,
+					"strokeFrom": 9,
+					"strokeTo": 0,
+					"colorFrom": "EEC591FF",
+					"colorTo": "EEC591FF"
+				}
+			]
+		},
+		"hitSound": "explosionbig",
+		"width": 125,
+		"height": 125,
+		"backColor": "EEC591",
+		"frontColor": "EEC591",
+		"sprite": "饱和火力-海胆",
+		"spin": 0.88,
+		"speed": 0,
+		"lifetime": 0,
+		"splashDamageRadius": 60,
+		"splashDamage": 200,
+		"lightningDamage": 23,
+		"lightning": 8,
+		"lightningLength": 20,
+		"hitShake": 10,
+		"fragLifeMin": 0.3,
+		"fragBullets": 30,
+		"fragBullet": {
+			"type": "PointBulletType",
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"lifetime": 6,
+				"line": true,
+				"randLength": false,
+				"length": 0,
+				"baseLength": 1,
+				"lenFrom": 7,
+				"lenTo": 7,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "FEEBB3",
+				"colorTo": "FEEBB3",
+				"cone": 0
+			},
+			"trailSpacing": 6,
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 4,
+						"baseLength": 0,
+						"length": 16,
+						"region": "饱和火力-菱形",
+						"lifetime": 23,
+						"sizeFrom": 4,
+						"sizeTo": 0,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591",
+						"cone": 360
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"baseLength": 0,
+						"length": 0,
+						"lifetime": 25,
+						"sizeFrom": 8,
+						"sizeTo": 0,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591",
+						"cone": 360
+					}
+				]
+			},
+			"despawnEffect": {
+				"type": "WaveEffect",
+				"lifetime": 15,
+				"sizeFrom": 0,
+				"sizeTo": 20,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591"
+			},
+			"hitSound": "explosion",
+			"splashDamageRadius": 20,
+			"splashDamage": 35,
+			"lifetime": 20,
+			"speed": 8,
+			"status": "shocked",
+			"statusDuration": 10
+		}
+	},
+	"requirements": [
+		"silicon/100",
+		"oxide/80",
+		"phase-fabric/20",
+		"surge-alloy/60",
+		"tungsten/90",
+		"carbide/25"
+	],
+	"category": "effect",
+	"research": "regen-projector"
+}

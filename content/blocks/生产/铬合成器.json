@@ -1,0 +1,45 @@
+{
+	"type": "GenericCrafter",
+	"health": 360,
+	"name": "铬合成器",
+	"description": "在服务器合成铬\n[red]临时工具！",
+	"drawer":{
+        "type":"DrawMulti",
+        "drawers":[
+            "DrawDefault",
+            "DrawFlame"
+            ]
+    },
+	"outputItem": {
+	"item": "铬", "amount": 1
+	},
+	"research": {
+		"parent": "镄合成器",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "灭绝"
+			}
+			]},
+	"itemCapacity": 20,
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 50,
+	"consumes": {
+	"power": 6,
+	"liquid": { "liquid": "slag", "amount": 0.1 },
+	"items": {
+		"items": [
+	{ "item": "plastanium", "amount": 5 },
+	{ "item": "镄", "amount": 1}		]	}	},
+	"requirements": [
+	{ "item": "plastanium", "amount": 35 },
+	{ "item": "surge-alloy", "amount": 15 },
+	{ "item": "镄", "amount": 10 },
+	{ "item": "二级协议", "amount": 0 }
+	],
+	"ambientSound":"smelter",
+	"category": "crafting"
+}

@@ -1,0 +1,103 @@
+{
+	"type": "ItemTurret",
+	"name": "纳米风暴",
+	"health": 2300,
+	"size": 3,
+	"reload": 360,
+	"range": 400,
+	"shoot": {
+		"shots": 2,
+		"shotDelay": 6
+	},
+	"ammoUseEffect": "bigShockwave",
+	"heatColor": "76D081",
+	"cooldownTime": 120,
+	"targetHealing": true,
+	"canOverdrive": false,
+	"inaccuracy": 20,
+	"velocityRnd": 0.2,
+	"rotateSpeed": 2,
+	"shake": 1,
+	"shootSound": "laser",
+	"shootEffect": "hitEmpSpark",
+	"consumes": {
+		"power": 3
+	},
+	"ammoPerShot": 2,
+	"ammoTypes": {
+		"纳米核": {
+			"type": "ArtilleryBulletType",
+			"splashDamageRadius": 160,
+			"splashDamage": 15,
+			"speed": 6.5,
+			"lifetime": 70,
+			"damage": 18,
+			"shrinkY": 0,
+			"shrinkX": 0,
+			"spin": 2,
+			"sprite": "large-bomb",
+			"backColor": "76D081",
+			"frontColor": "FFFFFF",
+			"trailLength": 10,
+			"trailWidth": 2.2,
+			"trailInterval": 20,
+			"trailColor": "76D081",
+			"collidesTeam": true,
+			"healPercent": 30,
+			"status": "干扰",
+			"statusDuration": 180,
+			"drag": 0.001,
+			"width": 24,
+			"height": 24,
+			"hitShake": 1,
+			"ammoMultiplier": 1,
+			"hitEffect": {
+				"type": "WaveEffect",
+				"lifetime": 30,
+				"sizeFrom": 0,
+				"sizeTo": 160,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"interp": "circleOut",
+				"colorFrom": "76D081",
+				"colorTo": "76D081"
+			},
+			"fragBullets": 1,
+			"fragBullet": {
+				"type": "EmpBulletType",
+				"timeIncrease": 2.75,
+				"timeDuration": 450,
+				"status": "拆解",
+				"statusDuration": 300,
+				"range": 160,
+				"splashDamageRadius": 160,
+				"splashDamage": 20,
+				"width": 0,
+				"height": 0,
+				"damage": 15,
+				"keepVelocity": true,
+				"trailEffect": "none",
+				"backColor": "76D081",
+				"frontColor": "FFFFFF",
+				"instantDisappear": true,
+				"hitSound": "plasmaboom",
+				"hitEffect": {
+					"type":"WrapEffect",
+					"effect":"dynamicSpikes",
+					"color":"76D081",
+					"rotation":160
+				},
+				"despawnEffect": "hitEmpSpark"
+			}
+		}
+	},
+	"requirements": [
+		"lead/135",
+		"silicon/85",
+		"plastanium/110",
+		"纳米核/50",
+		"一级协议/0"
+	],
+	"category": "effect",
+	"research": "纳米组装机"
+}

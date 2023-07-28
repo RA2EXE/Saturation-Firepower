@@ -1,0 +1,106 @@
+{
+	"type": "NuclearReactor",
+	"name": "镄反应堆",
+	"description": "利用镄的强烈放射性产生能量，需要持续冷却液供给，过热或被摧毁会导致剧烈爆炸。",
+	"size": 3,
+	"health": 1500,
+	"liquidCapacity": 30,
+	"itemCapacity": 25,
+	"hasItems": true,
+	"hasLiquids": true,
+	"outputsPower": true,
+	"powerProduction": 51.5,
+	"itemDuration": 300,
+	"heating": 0.02,
+	"lightColor": "FFFFFF",
+	"explosionShake": 9,
+	"explosionShakeDuration": 120,
+	"explosionRadius": 35,
+	"explosionDamage": 9000,
+	"explodeSound": "DBZ1",
+	"explodeEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "WaveEffect",
+				"lifetime": 20,
+				"sizeFrom": 0,
+				"sizeTo": 320,
+				"strokeFrom": 18,
+				"strokeTo": 0,
+				"colorFrom": "EEC591",
+				"colorTo": "ffffff"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 25,
+				"interp": "pow10Out",
+				"sizeInterp": "pow5In",
+				"sizeFrom": 35,
+				"sizeTo": 0,
+				"length": 280,
+				"baseLength": 0,
+				"lifetime": 250,
+				"colorFrom": "DEDEDE70",
+				"colorTo": "DEDEDE70"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 35,
+				"interp": "pow10Out",
+				"sizeInterp": "pow5In",
+				"sizeFrom": 30,
+				"sizeTo": 0,
+				"length": 290,
+				"baseLength": 0,
+				"lifetime": 300,
+				"colorFrom": "DEDEDE70",
+				"colorTo": "DEDEDE70"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 40,
+				"interp": "pow10Out",
+				"sizeInterp": "pow5In",
+				"sizeFrom": 20,
+				"sizeTo": 0,
+				"length": 300,
+				"baseLength": 0,
+				"lifetime": 350,
+				"colorFrom": "DEDEDE70",
+				"colorTo": "DEDEDE70"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 25,
+				"line": true,
+				"interp": "pow10Out",
+				"sizeInterp": "pow3In",
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"lenFrom": 150,
+				"lenTo": 0,
+				"length": 220,
+				"baseLength": 60,
+				"lifetime": 60,
+				"colorFrom": "DEDEDE",
+				"colorTo": "DEDEDE"
+			}
+		]
+	},
+	"fuelItem": "镄",
+	"consumes": {
+		"liquid":"cryofluid/0.1",
+		"items": ["镄/1"]
+	},
+	"requirements": [
+		"lead/300",
+		"graphite/90",
+		"metaglass/60",
+		"镄/150",
+		"silicon/130",
+		"硅钢/90"
+	],
+	"category": "power",
+	"research": "thorium-reactor"
+}

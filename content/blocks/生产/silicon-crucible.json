@@ -1,0 +1,19 @@
+{
+"details": "升级高耐热外壳，优良热传导底座。得以更高的热转化效率",
+"baseEfficiency": 1,
+"maxBoost":2.5,
+"boostScale":0.33333,
+"minEfficiency":1,
+"floating": true,
+"outputItem": {"item": "silicon", "amount": 10	},
+	"itemCapacity": 40,
+	"craftTime": 90,
+	"consumes": {
+	"power": 4.5	},
+	"requirements": [
+ 	{ "item": "metaglass", "amount":80 },
+ 	{ "item": "titanium", "amount": 90},
+ 	{ "item": "硅钢", "amount": 40},
+ 	{ "item": "silicon", "amount":70 },
+ 	{ "item": "plastanium", "amount":65 }
+		]}

@@ -1,0 +1,17 @@
+{
+	"type": "LiquidBridge",
+	"name": "裂位导管塔",
+	"description": "更先进的液体传输建筑，能更远的传输液体",
+	"health": 80,
+	"range": 36,
+	"liquidCapacity": 32,
+	"consumes": {"power": 0.5},
+	"requirements": [
+	{ "item": "metaglass", "amount": 20 },
+	{ "item": "silicon", "amount": 10 },
+	{ "item": "硅钢", "amount":  5},
+	{ "item": "裂位能", "amount":  5}
+	],
+	"category": "liquid",	
+	"research": "phase-conduit"
+}

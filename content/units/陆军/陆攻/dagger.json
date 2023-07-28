@@ -1,0 +1,22 @@
+{	"details":"奇袭！",  
+	"health":250,
+	"boostMultiplier": 1.5,
+	"engineOffset": 5, 
+	"engineSize": 2,
+	"canBoost": true,
+	"weapons":[
+	{	"name": "尖刀1",	
+		"reload": 10, 
+		"x": 4.5,  "y": -0.5, 
+		"rotate": false,
+		"inaccuracy": 0,
+		"alternate": true,
+		"top":false,
+	"ejectEffect":"casing1",
+		"bullet":{
+		"damage":11,	  
+		"speed":8,
+		"lifetime":20,
+		"width":5,	 "height":8	}	}
+	]
+}

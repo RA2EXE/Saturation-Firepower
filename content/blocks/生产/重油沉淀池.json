@@ -1,0 +1,39 @@
+{
+	"type": "Separator",
+	"name": "重油沉淀池",
+	"results": [
+{"item": "blast-compound", "amount": 3},
+{ "item": "pyratite", "amount": 2}	],
+"drawer":{
+	"type":"DrawMulti",
+	"drawers":[
+		"DrawDefault",
+		{"type":"DrawLiquidRegion",
+		"drawLiquid":"硝化重油",
+	"suffix":"-液体"},
+{"type":"DrawRegion",
+"suffix":"-转",
+"spinSprite":true,
+"rotateSpeed":2}
+]},
+	"size": 4,
+	"itemCapacity": 10,
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids": true,
+	"liquidCapacity": 60,
+	"craftTime": 7.5,
+	"consumes": {
+		"power": 4,
+		"liquid": { "liquid": "硝化重油", "amount": 0.9 }
+	},
+	"requirements": [
+	{ "item":"镄","amount":120},
+	{ "item": "graphite", "amount": 90 },
+	{ "item": "硅钢", "amount": 45},
+	{ "item": "plastanium", "amount": 30 },
+	{ "item": "surge-alloy", "amount": 20 }
+	],
+	"category": "crafting",
+	"research": "硝化反应器"
+}

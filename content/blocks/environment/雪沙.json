@@ -1,0 +1,10 @@
+{
+	"type": "floor",
+	"name": "雪沙",
+	"itemDrop": "sand",
+	"speedMultiplier": 0.95,
+	"attributes":
+	{"oil": 0.5,"water":0.2},
+	"variants":2,
+	"playerUnmineable": true
+}

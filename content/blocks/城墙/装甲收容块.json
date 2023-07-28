@@ -1,0 +1,12 @@
+{
+	"name": "装甲收容块",
+	"type": "Wall",
+	"health":1200,
+	"size":4,
+	"buildCostMultiplier":0.8,
+	"requirements": [
+	"plastanium/200","surge-alloy/200","镄/60"
+	],
+	"category": "defense",
+	"research":"裂位收容块"
+}

@@ -1,0 +1,43 @@
+{
+	"health":1200,
+	"accurateDelay":true,
+	"moveWhileCharging": false,
+	"shootType": {
+	"type": "LaserBulletType",
+	"chargeEffect":{
+		"type":"MultiEffect",
+		"effects":["lancerLaserCharge","lancerLaserChargeBegin"]
+	},
+	"collidesAir":false,
+	"despawnEffect":"none",
+	"lightningSpacing":25,
+	"lightningLength":5,
+	"lightningDelay":0.6,
+	"lightningLengthRand":1,
+	"lightningAngleRand":8,
+	"lightningDamage":15,
+	"lightningColor":"FFFFFF",
+	"damage": 230,
+	"buildingDamageMultiplier":0.35,
+	"ammoMultiplier":1,
+	"width": 18,	"length": 226,
+	"lifetime": 20
+	},
+	"consumes":{"power":8},
+	"shoot":{
+		"type":"ShootPattern",
+		"firstShotDelay":60
+	},
+	"reload":130,
+	"shootSound":"laser",
+	"chargeSound":"lasercharge2",
+	"shootEffect":"lancerLaserShoot",
+	"smokeEffect": "bigShockwave",
+	"range": 225,
+	"requirements": [
+		{ "item": "copper", "amount":90},
+		{ "item": "lead", "amount":85},
+		{ "item": "silicon", "amount":70},
+		{ "item": "titanium", "amount": 35}	]
+	
+}

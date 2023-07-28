@@ -1,0 +1,71 @@
+{
+	"type": "GenericCrafter",
+	"health": 660,
+	"name": "爆破冲压炉",
+	"outputItem": {
+	"item":"silicon", "amount":10},
+	"itemCapacity": 40,
+	"size": 4,
+	"craftEffect":{"type": "MultiEffect",
+		"effects": [
+		{"type": "ParticleEffect",
+		"particles": 8,
+		"sizeFrom": 8,
+		"sizeTo": 0,
+		"length": 35,
+		"baseLength": 13,
+		"lifetime": 35,
+		"colorFrom": "73737390",
+		"colorTo": "73737390",
+		"cone": 360},
+		{"type": "ParticleEffect",
+		"particles": 12,
+		"line":true,
+		"length": 43,
+		"baseLength": 3,
+		"lifetime": 20,
+		"colorFrom": "FFFFFF",
+		"colorTo": "FFE176FF",
+		"cone": 360},
+		{"type": "ParticleEffect",
+		"particles": 1,
+		"sizeFrom": 0,
+		"sizeTo": 45,
+		"length": 0,
+		"baseLength": 0,
+		"lifetime": 10,
+		"colorFrom": "FFFFFF80",
+		"colorTo": "FFFFFF00",
+		"cone": 360},
+		{"type": "WaveEffect",
+		"lifetime": 10,
+		"sizeFrom": 0,
+		"sizeTo": 45,
+		"strokeFrom":3,
+		"strokeTo": 0,
+		"colorFrom": "FFFFFFFF",
+		"colorTo": "FFFFFF00"}]},
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 30,
+	"consumes": {
+	"power": 10,
+	"items": {
+		"items": [
+	"blast-compound/1",
+	"sand/10"
+	]}
+	},
+	"requirements": [
+	{ "item": "thorium", "amount": 70 },
+	{ "item": "silicon", "amount": 80 },
+	{ "item": "plastanium", "amount": 50 },
+	{ "item": "裂位能", "amount": 30 },
+	{ "item": "二级协议", "amount": 0}
+		],
+		"ambientSound":"explosion",
+	"category": "crafting",
+	"research": "silicon-crucible"
+	
+}

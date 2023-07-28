@@ -1,0 +1,17 @@
+{
+"name":"磁爆脉冲",
+"type":"ParticleWeather",
+"particleRegion":"particle",
+"noiseColor": "FFFFFF",
+"sizeMax":0,
+"sizeMin":0,
+"density":1200,
+"useWindVector": true,
+"drawNoise": true,
+"sound":"spark",
+"soundVol":0,
+"soundVolOscMag":1.5,
+"soundVolOscScl":1100,
+"soundVolMin":0.02,
+"status":"unmoving"
+}

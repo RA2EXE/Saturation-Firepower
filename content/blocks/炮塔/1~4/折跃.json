@@ -1,0 +1,22 @@
+{
+	"type":"PointDefenseTurret",
+	"name":"折跃光束",
+	"size":2,
+	"health":380,
+	"range":187,
+	"hasPower":true,
+	"shootLength":10,
+	"bulletDamage":88,
+	"retargetTime":1,
+	"reload":1,
+	"consumes":{
+		"power":10
+	},
+	"requirements":[
+	{"item": "硅钢", "amount": 100},
+	{"item": "silicon", "amount": 140},
+	{ "item": "裂位能", "amount": 70 } 
+		],
+	"category":"turret",
+	"research": "segment"
+}

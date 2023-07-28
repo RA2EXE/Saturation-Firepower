@@ -1,0 +1,277 @@
+{
+	"type": "PowerTurret",
+	"name": "离子要塞炮",
+	"description": "锁定敌人，充能后发射一道蓄能波束，摧毁目标附近的敌人",
+	"details": "随着战事的进行，敌人的军工厂已经全部动员完毕，防线压力大幅增加，我们正需这样一款维护简单威力强大的防御性炮台。",
+	"targetAir": false,
+	"targetGround": true,
+	"health": 3650,
+	"armor":8,
+	"accurateDelay": false,
+	"size": 5,
+	"moveWhileCharging": false,
+	"shake": 20,
+	"inaccuracy": 0,
+	"recoil": 5,
+	"cooldownTime": 80,
+	"liquidCapacity": 360,
+	"canOverdrive": false,
+	"recoilTime": 120,
+	"unitSort":"strongest",
+	"shootY":8,
+	"shoot": {
+		"type": "ShootPattern",
+		"firstShotDelay": 75
+	},
+	"shootSound": "laser",
+	"shootEffect": {
+		"type": "ParticleEffect",
+		"particles": 1,
+		"sizeFrom": 15,
+		"sizeTo": 0,
+		"length": 0,
+		"baseLength": 0,
+		"lifetime": 55,
+		"colorFrom": "F2FF9C",
+		"colorTo": "F2FF9C",
+		"cone": 0
+	},
+	"chargeSound": "lasercharge",
+	"shootType": {
+		"type": "PointBulletType",
+		"damage": 5480,
+		"lifetime": 90,
+		"speed": 100,
+		"collidesAir": true,
+		"splashDamageRadius": 80,
+		"splashDamage": 5400,
+		"ammoMultiplier": 1,
+		"hitSound": "plasmaboom",
+		"chargeEffect": {
+			"type": "MultiEffect",
+			"lifetime": 80,
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 25,
+					"sizeFrom": 0,
+					"sizeTo": 4,
+					"length": 100,
+					"baseLength": -100,
+					"lifetime": 70,
+					"colorFrom": "F2FF9C",
+					"colorTo": "F2FF9C",
+					"cone": 360
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 0,
+					"sizeTo": 15,
+					"length": 0,
+					"baseLength": -0,
+					"lifetime": 76,
+					"colorFrom": "F2FF9C",
+					"colorTo": "F2FF9C",
+					"cone": 360
+				}
+			]
+		},
+		"despawnEffect": {
+			"type": "ParticleEffect",
+			"particles": 15,
+			"sizeFrom": 3,
+			"sizeTo": 0,
+			"length": 100,
+			"baseLength": 0,
+			"lifetime": 10,
+			"colorFrom": "F2FF9C",
+			"colorTo": "F2FF9C",
+			"cone": 60
+		},
+		"smokeEffect": {
+			"type": "ParticleEffect",
+			"particles": 10,
+			"sizeFrom": 8,
+			"interp":"pow5Out",
+			"sizeInterp":"pow10In",
+			"sizeTo": 0,
+			"length": 60,
+			"baseLength": 0,
+			"lifetime": 125,
+			"colorFrom": "F2FF9C80",
+			"colorTo": "F2FF9C40",
+			"cone": 360
+		},
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 20,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": -0,
+					"lifetime": 55,
+					"colorFrom": "F2FF9C",
+					"colorTo": "F2FF9C",
+					"cone": 360
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 25,
+					"sizeFrom": 5,
+					"sizeTo": 80,
+					"strokeFrom": 5,
+					"strokeTo": 0,
+					"colorFrom": "F2FF9C",
+					"colorTo": "F2FF9C"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 30,
+					"sizeFrom": 8,
+					"sizeTo": 0,
+					"length": 70,
+					"baseLength": 0,
+					"lifetime": 20,
+					"colorFrom": "F2FF9C",
+					"colorTo": "F2FF9C",
+					"cone": 360
+				}
+			]
+		},
+		"trailSpacing": 12,
+		"trailEffect":{
+			"type": "MultiEffect",
+			"effects": [
+		{"type": "ParticleEffect",
+			"particles": 1,
+			"length": 0,
+			"baseLength": 0.2,
+			"lifetime": 50,
+			"line": true,
+			"randLength": false,
+			"lenFrom": 13,
+			"lenTo": 13,
+			"strokeFrom": 8.5,
+			"strokeTo": 0,
+			"colorFrom": "F2FF9C",
+			"colorTo": "F2FF9C",
+			"cone": 0},
+			{
+				"type": "ParticleEffect",
+				"particles": 2,
+				"sizeFrom": 3,
+				"interp":"pow10Out",
+				"sizeInterp":"pow5In",
+				"sizeTo": 0,
+				"length": 13,
+				"baseLength": 0,
+				"lifetime": 55,
+				"colorFrom": "F2FF9C",
+				"colorTo": "F2FF9C",
+				"cone": 360
+			}
+			]},
+		"fragBullets":3,
+		"fragBullet":{
+			"type":"PointBulletType",
+			"trailSpacing": 9,
+			"trailEffect":{
+		"type": "ParticleEffect",
+		"particles": 1,
+		"length":0,
+		"baseLength": 1,
+		"lifetime": 20,
+		"line": true,
+		"randLength": false,
+		"lenFrom": 10,
+		"lenTo":10,
+		"strokeFrom": 5,
+		"strokeTo": 0,
+		"colorFrom": "F2FF9CFF",
+		"colorTo": "F2FF9CFF",
+		"cone":0 },
+			"lifetime": 8,
+			"speed": 10,
+			"status":"余热",
+			"statusDuration":20,
+			"buildingDamageMultiplier":0.8,
+			"splashDamageRadius": 8,
+			"splashDamage": 7,
+			"hitShake":1,
+			"hitSound": "laser",
+		"hitEffect":{
+		"type":"MultiEffect",
+		"effects":[
+	{"type": "ParticleEffect",
+	"particles": 1,
+	"sizeFrom": 8,
+	"sizeTo": 0,
+	"length": 0,
+	"baseLength": 0,
+	"lifetime": 21,
+	"colorFrom": "F2FF9C",
+	"colorTo": "F2FF9C",
+	"cone": 360},
+		{
+		"type": "ParticleEffect",
+		"particles": 8,
+		"length":30,
+		"baseLength": 0,
+		"lifetime": 15,
+		"line": true,
+		"lenFrom": 30,
+		"lenTo":0,
+		"strokeFrom": 3.3,
+		"strokeTo": 0,
+		"colorFrom": "F2FF9CFF",
+		"colorTo": "F2FF9CFF",
+		"cone":360 }
+		]},
+		"despawnEffect":"none"
+		}
+	},
+	"consumes": {
+		"power": 33,
+		"coolant": {
+			"amount": 3,
+			"optional": true
+		}
+	},
+	"coolantMultiplier": 0.5,
+	"reload": 680,
+	"rotateSpeed": 2.35,
+	"range": 650,
+	"category": "turret",
+	"research": {"parent": "foreshadow",
+	"objectives": [{"type": "SectorComplete","preset": "荒芜矿区"}]},
+	"requirements": [
+		{
+			"item": "titanium",
+			"amount": 960
+		},
+		{
+			"item": "silicon",
+			"amount": 1250
+		},
+		{
+			"item": "plastanium",
+			"amount": 870
+		},
+		{
+			"item": "硅钢",
+			"amount": 750
+		},
+		{
+			"item": "surge-alloy",
+			"amount": 650
+		},
+		{
+			"item": "二级协议",
+			"amount": 2
+		}
+	]
+}

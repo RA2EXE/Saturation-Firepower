@@ -1,0 +1,153 @@
+{
+	"type":"LaunchPad", 
+	"name":"裂位发射台", 
+	"description":"使用裂位引擎发射更多物品，需要更长充能时间。", 
+	"health":5200,
+	"armor":25,
+	"size":5, 
+	"itemCapacity":750,
+	"launchTime":2000,
+	"hasPower":true,
+	"lightColor":"FEEBB3A8",
+	"consumes": {"power":18},
+	"category": "effect",
+	"buildVisibility":"campaignOnly",
+	"destroyBullet":{
+		"type": "PointBulletType",
+		"despawnEffect": "none",
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 15,
+					"sizeFrom": 9,
+					"sizeTo": 0,
+					"length": 85,
+					"baseLength": 9,
+					"lifetime": 15,
+					"colorFrom": "FEEBB3",
+					"colorTo": "ffffff",
+					"cone": 70
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 5,
+					"sizeTo": 80,
+					"strokeFrom": 9,
+					"strokeTo": 0,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				}
+			]
+		},
+		"hitSound": "plasmaboom",
+		"trailEffect": "none",
+		"speed": 1,
+		"lifetime": 5,
+		"buildingDamageMultiplier": 5,
+		"hitShake": 8,
+		"fragBullets": 8,
+		"fragLifeMin":0.3,
+		"fragBullet": {
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 8,
+						"sizeFrom": 6,
+						"sizeTo": 0,
+						"length": 55,
+						"baseLength": 9,
+						"lifetime": 15,
+						"colorFrom": "FEEBB3",
+						"colorTo": "ffffff",
+						"cone": 40
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 6,
+						"sizeTo": 50,
+						"strokeFrom": 6,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					}
+				]
+			},
+			"despawnEffect": "instBomb",
+			"hitSound": "plasmaboom",
+			"width": 0,"height": 0,
+			"damage": 45,
+			"splashDamageRadius": 52,
+			"splashDamage": 55,
+			"lifetime": 10,
+			"speed": 9,
+			"lightningDamage": 35,
+			"lightning": 2,
+			"lightningLength": 9,
+			"buildingDamageMultiplier": 5,
+			"fragRandomSpread": 180,
+			"fragBullets": 3,
+			"fragLifeMin":0.3,
+			"fragBullet": {
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 8,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 55,
+							"baseLength": 9,
+							"lifetime": 15,
+							"colorFrom": "FEEBB3",
+							"colorTo": "ffffff",
+							"cone": 40
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 6,
+							"sizeTo": 50,
+							"strokeFrom": 6,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"despawnEffect": "instBomb",
+				"hitSound": "plasmaboom",
+				"width": 0,"height": 0,
+				"damage": 26,
+				"splashDamageRadius": 52,
+				"splashDamage": 55,
+				"lifetime": 10,
+				"speed": 4,
+				"lightningDamage": 15,
+				"lightning": 2,
+				"lightningLength": 9,
+				"buildingDamageMultiplier": 5
+			}
+		}
+	},
+	"research": {
+		"parent": "分子数据库",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "断层带"
+			}]},
+	"requirements": [
+		"镄/2000",
+		"metaglass/500",
+		"silicon/750",
+		"泰勒合金/120",
+		"裂位能/500"
+	]
+}

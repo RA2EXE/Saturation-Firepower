@@ -1,0 +1,87 @@
+{
+	"type": "tank",
+	"name": "冲锋",
+	"description": "攻击附近所有敌人。向附近敌人发射大口径子弹。",
+	"details": "[red]冲锋号已吹响！",
+	"squareShape": true,
+	"omniMovement": false,
+	"rotateMoveFirst": false,
+	"rotateSpeed": 3,
+	"speed": 2.4,
+	"hitSize": 9.5,
+	"ammoCapacity": 300,
+	"health": 350,
+	"armor": 5,
+	"drag": 0.08,
+	"accel": 0.1,
+	"itemCapacity": 5,
+	"treadPullOffset": 3,
+	"treadRects": [
+		{
+			"x": 4,
+			"y": 2.75,
+			"width": 2,
+			"height": 4.5
+		},
+		{
+			"x": 4,
+			"y": -4.5,
+			"width": 2,
+			"height": 4.5
+		}
+	],
+	"faceTarget": false,
+	"research": "nova",
+	/*"requirements": {
+		"block": "ground-factory",
+		"time": 1800,
+		"requirements": [
+			"silicon/30",
+			"lead/25",
+			"titanium/25"
+		]},*/
+	"abilities": [
+		{
+			"type": "StatusFieldAbility",
+			"duration": 250,
+			"reload": 300,
+			"range": 30,
+			"applyEffect": "none",
+			"activeEffect": {
+				"type": "WaveEffect",
+				"lifetime": 10,
+				"sizeFrom": 8,
+				"sizeTo": 40,
+				"strokeFrom": 2,
+				"strokeTo": 0,
+				"colorFrom": "ffffff",
+				"colorTo": "ffffff"
+			},
+			"effect": "overclock"
+		}
+	],
+	"weapons": [
+		{
+			"name": "冲锋1",
+			"reload": 7.6,
+			"recoil": 0,
+			"x": 0,
+			"y": 0,
+			"rotate": true,
+			"rotateSpeed": 15,
+			"mirror": false,
+			"inaccuracy": 0.5,
+			"ejectEffect": "casing1",
+			"shootSound": "shoot",
+			"alternate": false,
+			"bullet": {
+				"damage": 10,
+				"speed": 9,
+				"buildingDamageMultiplier": 0.8,
+				"lifetime": 18,
+				"width": 3,
+				"height": 10
+			}
+		}
+	]
+}

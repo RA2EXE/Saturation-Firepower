@@ -1,0 +1,104 @@
+{
+	"type": "tether",
+	"name": "组装无人机",
+	"defaultController": "AssemblerAI",
+	"speed": 1.15,
+	"drag": 0.06,
+	"accel": 0.09,
+	"rotateSpeed": 2.5,
+	"immunities": [
+		"electrified",
+		"干扰",
+		"unmoving"
+	],
+	"hitSize": 24,
+	"buildBeamOffset": 11,
+	"buildSpeed": 0.5,
+	"flying": true,
+	"faceTarget": false,
+	"useUnitCap": true,
+	"health": 270,
+	"engineOffset": 16,
+	"engineSize": 2.6,
+	"engines": [
+		{
+			"x": -9.25,
+			"y": -8,
+			"radius": 2.2,
+			"rotation": -135
+		},
+		{
+			"x": 9.25,
+			"y": -8,
+			"radius": 2.2,
+			"rotation": -45
+		}
+	],
+	"isEnemy": false,
+	"hidden": true,
+	"createWreck": false,
+	"allowedInPayloads": false,
+	"logicControllable": false,
+	"playerControllable": false,
+	"abilities": [
+		{
+			"type": "RepairFieldAbility",
+			"amount": 180,
+			"healEffect": "none",
+			"reload": 60,
+			"range": 65,
+			"activeEffect": {
+				"type": "WaveEffect",
+				"lifetime": 248,
+				"sizeFrom": 0,
+				"sizeTo": 65,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "97FFA8",
+				"colorTo": "97FFA8A8"
+			}
+		}
+	],
+	"parts": [
+		{
+			"type": "ShapePart",
+			"stroke": 1.5,
+			"strokeTo": 1.5,
+			"color": "97FFA866",
+			"colorTo": "97FFA8",
+			"circle": true,
+			"hollow": true,
+			"radius": 65,
+			"radiusTo": 65,
+			"layer": 110
+		},
+		{
+			"type": "ShapePart",
+			"stroke": 0,
+			"strokeTo": 2,
+			"color": "97FFA800",
+			"colorTo": "97FFA8",
+			"circle": true,
+			"hollow": true,
+			"radius": 0,
+			"radiusTo": 65,
+			"layer": 110
+		}
+	],
+	"weapons": [
+		{
+			"name": "广寒2",
+			"type": "RepairBeamWeapon",
+			"x": 0,
+			"y": 1.75,
+			"rotateSpeed": 3.2,
+			"shootY": 6,
+			"beamWidth": 0.6,
+			"mirror": false,
+			"repairSpeed": 0.6,
+			"bullet": {
+				"maxRange": 66
+			}
+		}
+	]
+}

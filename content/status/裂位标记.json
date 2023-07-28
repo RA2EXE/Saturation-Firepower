@@ -1,0 +1,15 @@
+{
+	"name": "裂位标记",	
+	"healthMultiplier":0.65,
+	"speedMultiplier":2.3,
+	"reloadMultiplier":0.6,
+	"effectChance":0.01,
+	"effect": {
+	"type": "WaveEffect",
+	"lifetime":30,  
+	"strokeFrom": 2,
+	"strokeTo": 0,
+	"sizeFrom":10,  "sizeTo":30,
+	"colorFrom":"EEC591",
+	"colorTo":"EEC59100"}
+}

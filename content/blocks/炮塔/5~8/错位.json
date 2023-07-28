@@ -1,0 +1,826 @@
+{
+	"type": "ItemTurret",
+	"name": "错位",
+	"description": "发射高相位震荡波，对护盾杀伤效果显著。每穿过敌方单位，后方伤害增加一倍。撕碎敌人！",
+	"details": "[red]连你的设备一起！不到万不得已，不要使用裂位能直接攻击敌方单位！",
+	"canOverdrive": false,
+	"health": 2650,
+	"armor": 6,
+	"size": 5,
+	"heatColor": "FFD197FF",
+	"reload": 190,
+	"range": 346,
+	"maxAmmo": 15,
+	"ammoPerShot": 5,
+	"recoilTime": 80,
+	"recoil": 5,
+	"cooldownTime": 90,
+	"shake": 4,
+	"liquidCapacity": 60,
+	"ammoUseEffect": "none",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 0,
+	"shootSound": "plasmaboom",
+	"rotateSpeed": 2.5,
+	"coolantMultiplier": 1,
+	"unitSort":"farthest",
+	"consumes": {
+		"power": 30,
+		"coolant": {
+			"amount": 1,
+			"optional": true
+		}
+	},
+	"ammoTypes": {
+		"phase-fabric": {
+			"type": "BasicBulletType",
+			"collides":false,
+			"hittable":false,
+			"absorbable":false,
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 9,
+				"sizeFrom": 8,
+				"sizeTo": 0,
+				"length": 65,
+				"baseLength": 9,
+				"lifetime": 15,
+				"colorFrom": "FEEBB3",
+				"colorTo": "ffffff",
+				"cone": 40
+			},
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 9,
+						"sizeFrom": 8,
+						"sizeTo": 0,
+						"length": 65,
+						"baseLength": 9,
+						"lifetime": 15,
+						"colorFrom": "FEEBB3",
+						"colorTo": "ffffff",
+						"cone": 40
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 2,
+						"sizeTo": 60,
+						"strokeFrom": 5,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					}
+				]
+			},
+			"hitSound": "laser",
+			"shrinkY": 0,
+			"width": 12,
+			"height": 28,
+			"frontColor": "FFFFFF",
+			"backColor": "FEEBB3",
+			"trailLength": 8,
+			"trailWidth": 3,
+			"trailColor": "FEEBB3",
+			"speed": 12,
+			"lifetime": 30,
+			"splashDamageRadius": 64,
+			"splashDamage": 95,
+			"ammoMultiplier": 1,
+			"pierce": true,
+			"bulletInterval": 0.5,
+			"intervalBullets": 1,
+			"intervalRandomSpread": 60,
+			"intervalSpread": 10,
+			"intervalAngle": 0,
+			"intervalBullet": {
+				"type": "BasicBulletType",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"sizeFrom": 4,
+							"sizeTo": 0,
+							"length": 45,
+							"baseLength": 9,
+							"lifetime": 15,
+							"colorFrom": "FEEBB3",
+							"colorTo": "ffffff",
+							"cone": 40
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 2,
+							"sizeTo": 40,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"despawnEffect": "instBomb",
+				"hitSound": "laser",
+				"status":"崩溃",
+				"statusDuration":180,
+				"lightningColor":"FEEBB3",
+				"lightningDamage": 35,
+				"lightning": 1,
+				"lightningLength": 9,
+				"width": 10,
+				"height": 4,
+				"speed": 16,
+				"lifetime": 2,
+				"damage": 25,
+				"pierceArmor": true,
+				"pierce": true,
+				"hittable":false,
+				"splashDamageRadius": 40,
+				"splashDamage": 45
+			}
+		},
+		"裂位能": {
+			"type": "BasicBulletType",
+			"damage": 240,
+			"rangeChange": 45,
+			"pierce": true,
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 15,
+				"sizeFrom": 9,
+				"sizeTo": 0,
+				"length": 85,
+				"baseLength": 9,
+				"lifetime": 15,
+				"colorFrom": "FEEBB3",
+				"colorTo": "ffffff",
+				"cone": 70
+			},
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 15,
+						"sizeFrom": 9,
+						"sizeTo": 0,
+						"length": 85,
+						"baseLength": 9,
+						"lifetime": 15,
+						"colorFrom": "FEEBB3",
+						"colorTo": "ffffff",
+						"cone": 70
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 5,
+						"sizeTo": 80,
+						"strokeFrom": 9,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					}
+				]
+			},
+			"hitSound": "plasmaboom",
+			"shrinkY": 0,
+			"sprite": "饱和火力-透彻",
+			"width": 12,
+			"height": 40,
+			"frontColor": "FFFFFF",
+			"backColor": "FEEBB3",
+			"trailLength": 10,
+			"trailWidth": 2,
+			"trailColor": "FEEBB3",
+			"bulletInterval": 0.5,
+			"intervalBullets": 1,
+			"intervalRandomSpread": 60,
+			"intervalSpread": 8,
+			"intervalAngle": 0,
+			"intervalBullet": {
+				"type": "BasicBulletType",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 8,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 55,
+							"baseLength": 9,
+							"lifetime": 15,
+							"colorFrom": "FEEBB3",
+							"colorTo": "ffffff",
+							"cone": 40
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 6,
+							"sizeTo": 50,
+							"strokeFrom": 6,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"despawnEffect": "instBomb",
+				"hitSound": "plasmaboom",
+				"width": 0,
+				"height": 0,
+				"damage": 36,
+				"collides": false,
+				"splashDamageRadius": 52,
+				"splashDamage": 55,
+				"pierceArmor": true,
+				"lifetime": 30,
+				"speed": 0.5,
+				"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+				"lightning": 3,
+				"lightningLength": 6
+			},
+			"speed": 16,
+			"lifetime": 30,
+			"status":"崩溃",
+			"statusDuration":320,
+			"splashDamageRadius": 80,
+			"splashDamage": 170,
+			"ammoMultiplier": 3,
+			"fragRandomSpread": 0,
+			"fragBullets": 1,
+			"fragBullet": {
+				"pierce": true,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 8,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 55,
+							"baseLength": 9,
+							"lifetime": 15,
+							"colorFrom": "FEEBB3",
+							"colorTo": "ffffff",
+							"cone": 40
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 6,
+							"sizeTo": 50,
+							"strokeFrom": 6,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"despawnEffect": "instBomb",
+				"hitSound": "plasmaboom",
+				"width": 0,
+				"height": 0,
+				"damage": 36,
+				"collides": true,
+				"splashDamageRadius": 52,
+				"splashDamage": 55,
+				"pierceArmor": true,
+				"lifetime": 9,
+				"speed": 4,
+				"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+				"lightning": 3,
+				"lightningLength": 6,
+				"fragRandomSpread": 0,
+				"fragBullets": 1,
+				"fragBullet": {
+					"pierce": true,
+					"hitEffect": {
+						"type": "MultiEffect",
+						"effects": [
+							{
+								"type": "ParticleEffect",
+								"particles": 8,
+								"sizeFrom": 6,
+								"sizeTo": 0,
+								"length": 55,
+								"baseLength": 9,
+								"lifetime": 15,
+								"colorFrom": "FEEBB3",
+								"colorTo": "ffffff",
+								"cone": 40
+							},
+							{
+								"type": "WaveEffect",
+								"lifetime": 10,
+								"sizeFrom": 6,
+								"sizeTo": 50,
+								"strokeFrom": 6,
+								"strokeTo": 0,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							}
+						]
+					},
+					"despawnEffect": "instBomb",
+					"hitSound": "plasmaboom",
+					"width": 0,
+					"height": 0,
+					"damage": 36,
+					"collides": true,
+					"splashDamageRadius": 52,
+					"splashDamage": 55,
+					"pierceArmor": true,
+					"lifetime": 9,
+					"speed": 4,
+					"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+					"lightning": 3,
+					"lightningLength": 6,
+					"fragRandomSpread": 0,
+					"fragBullets": 1,
+					"fragBullet": {
+						"pierce": true,
+						"hitEffect": {
+							"type": "MultiEffect",
+							"effects": [
+								{
+									"type": "ParticleEffect",
+									"particles": 8,
+									"sizeFrom": 6,
+									"sizeTo": 0,
+									"length": 55,
+									"baseLength": 9,
+									"lifetime": 15,
+									"colorFrom": "FEEBB3",
+									"colorTo": "ffffff",
+									"cone": 40
+								},
+								{
+									"type": "WaveEffect",
+									"lifetime": 10,
+									"sizeFrom": 6,
+									"sizeTo": 50,
+									"strokeFrom": 6,
+									"strokeTo": 0,
+									"colorFrom": "FEEBB3",
+									"colorTo": "FEEBB3"
+								}
+							]
+						},
+						"despawnEffect": "instBomb",
+						"hitSound": "plasmaboom",
+						"width": 0,
+						"height": 0,
+						"damage": 36,
+						"collides": true,
+						"splashDamageRadius": 52,
+						"splashDamage": 55,
+						"pierceArmor": true,
+						"lifetime": 9,
+						"speed": 4,
+						"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+						"lightning": 3,
+						"lightningLength": 6,
+						"fragRandomSpread": 0,
+						"fragBullets": 1,
+						"fragBullet": {
+							"hitEffect": {
+								"type": "MultiEffect",
+								"effects": [
+									{
+										"type": "ParticleEffect",
+										"particles": 8,
+										"sizeFrom": 6,
+										"sizeTo": 0,
+										"length": 55,
+										"baseLength": 9,
+										"lifetime": 15,
+										"colorFrom": "FEEBB3",
+										"colorTo": "ffffff",
+										"cone": 40
+									},
+									{
+										"type": "WaveEffect",
+										"lifetime": 10,
+										"sizeFrom": 6,
+										"sizeTo": 50,
+										"strokeFrom": 6,
+										"strokeTo": 0,
+										"colorFrom": "FEEBB3",
+										"colorTo": "FEEBB3"
+									}
+								]
+							},
+							"despawnEffect": "instBomb",
+							"hitSound": "plasmaboom",
+							"width": 0,
+							"height": 0,
+							"damage": 36,
+							"collides": true,
+							"splashDamageRadius": 52,
+							"splashDamage": 55,
+							"pierceArmor": true,
+							"lifetime": 9,
+							"speed": 4,
+							"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+							"lightning": 3,
+							"lightningLength": 6,
+							"fragRandomSpread": 0,
+							"fragBullets": 1,
+							"fragBullet": {
+								"hitEffect": {
+									"type": "MultiEffect",
+									"effects": [
+										{
+											"type": "ParticleEffect",
+											"particles": 8,
+											"sizeFrom": 6,
+											"sizeTo": 0,
+											"length": 55,
+											"baseLength": 9,
+											"lifetime": 15,
+											"colorFrom": "FEEBB3",
+											"colorTo": "ffffff",
+											"cone": 40
+										},
+										{
+											"type": "WaveEffect",
+											"lifetime": 10,
+											"sizeFrom": 6,
+											"sizeTo": 50,
+											"strokeFrom": 6,
+											"strokeTo": 0,
+											"colorFrom": "FEEBB3",
+											"colorTo": "FEEBB3"
+										}
+									]
+								},
+								"despawnEffect": "instBomb",
+								"hitSound": "plasmaboom",
+								"width": 0,
+								"height": 0,
+								"damage": 36,
+								"collides": true,
+								"splashDamageRadius": 52,
+								"splashDamage": 55,
+								"pierceArmor": true,
+								"lifetime": 9,
+								"speed": 4,
+								"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+								"lightning": 3,
+								"lightningLength": 6,
+								"fragRandomSpread": 0,
+								"fragBullets": 1,
+								"fragBullet": {
+									"hitEffect": {
+										"type": "MultiEffect",
+										"effects": [
+											{
+												"type": "ParticleEffect",
+												"particles": 8,
+												"sizeFrom": 6,
+												"sizeTo": 0,
+												"length": 55,
+												"baseLength": 9,
+												"lifetime": 15,
+												"colorFrom": "FEEBB3",
+												"colorTo": "ffffff",
+												"cone": 40
+											},
+											{
+												"type": "WaveEffect",
+												"lifetime": 10,
+												"sizeFrom": 6,
+												"sizeTo": 50,
+												"strokeFrom": 6,
+												"strokeTo": 0,
+												"colorFrom": "FEEBB3",
+												"colorTo": "FEEBB3"
+											}
+										]
+									},
+									"despawnEffect": "instBomb",
+									"hitSound": "plasmaboom",
+									"width": 0,
+									"height": 0,
+									"damage": 36,
+									"collides": true,
+									"splashDamageRadius": 52,
+									"splashDamage": 55,
+									"pierceArmor": true,
+									"lifetime": 9,
+									"speed": 4,
+									"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+									"lightning": 3,
+									"lightningLength": 6,
+									"fragRandomSpread": 0,
+									"fragBullets": 1,
+									"fragBullet": {
+										"hitEffect": {
+											"type": "MultiEffect",
+											"effects": [
+												{
+													"type": "ParticleEffect",
+													"particles": 8,
+													"sizeFrom": 6,
+													"sizeTo": 0,
+													"length": 55,
+													"baseLength": 9,
+													"lifetime": 15,
+													"colorFrom": "FEEBB3",
+													"colorTo": "ffffff",
+													"cone": 40
+												},
+												{
+													"type": "WaveEffect",
+													"lifetime": 10,
+													"sizeFrom": 6,
+													"sizeTo": 50,
+													"strokeFrom": 6,
+													"strokeTo": 0,
+													"colorFrom": "FEEBB3",
+													"colorTo": "FEEBB3"
+												}
+											]
+										},
+										"despawnEffect": "instBomb",
+										"hitSound": "plasmaboom",
+										"width": 0,
+										"height": 0,
+										"damage": 36,
+										"collides": true,
+										"splashDamageRadius": 52,
+										"splashDamage": 55,
+										"pierceArmor": true,
+										"lifetime": 9,
+										"speed": 4,
+										"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+										"lightning": 3,
+										"lightningLength": 6,
+										"fragRandomSpread": 0,
+										"fragBullets": 1,
+										"fragBullet": {
+											"hitEffect": {
+												"type": "MultiEffect",
+												"effects": [
+													{
+														"type": "ParticleEffect",
+														"particles": 8,
+														"sizeFrom": 6,
+														"sizeTo": 0,
+														"length": 55,
+														"baseLength": 9,
+														"lifetime": 15,
+														"colorFrom": "FEEBB3",
+														"colorTo": "ffffff",
+														"cone": 40
+													},
+													{
+														"type": "WaveEffect",
+														"lifetime": 10,
+														"sizeFrom": 6,
+														"sizeTo": 50,
+														"strokeFrom": 6,
+														"strokeTo": 0,
+														"colorFrom": "FEEBB3",
+														"colorTo": "FEEBB3"
+													}
+												]
+											},
+											"despawnEffect": "instBomb",
+											"hitSound": "plasmaboom",
+											"width": 0,
+											"height": 0,
+											"damage": 36,
+											"collides": true,
+											"splashDamageRadius": 52,
+											"splashDamage": 55,
+											"pierceArmor": true,
+											"lifetime": 9,
+											"speed": 4,
+											"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+											"lightning": 3,
+											"lightningLength": 6,
+											"fragRandomSpread": 0,
+											"fragBullets": 1,
+											"fragBullet": {
+												"hitEffect": {
+													"type": "MultiEffect",
+													"effects": [
+														{
+															"type": "ParticleEffect",
+															"particles": 8,
+															"sizeFrom": 6,
+															"sizeTo": 0,
+															"length": 55,
+															"baseLength": 9,
+															"lifetime": 15,
+															"colorFrom": "FEEBB3",
+															"colorTo": "ffffff",
+															"cone": 40
+														},
+														{
+															"type": "WaveEffect",
+															"lifetime": 10,
+															"sizeFrom": 6,
+															"sizeTo": 50,
+															"strokeFrom": 6,
+															"strokeTo": 0,
+															"colorFrom": "FEEBB3",
+															"colorTo": "FEEBB3"
+														}
+													]
+												},
+												"despawnEffect": "instBomb",
+												"hitSound": "plasmaboom",
+												"width": 0,
+												"height": 0,
+												"damage": 36,
+												"collides": true,
+												"splashDamageRadius": 52,
+												"splashDamage": 55,
+												"pierceArmor": true,
+												"lifetime": 9,
+												"speed": 4,
+												"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+												"lightning": 3,
+												"lightningLength": 6,
+												"fragRandomSpread": 0,
+												"fragBullets": 1,
+												"fragBullet": {
+													"hitEffect": {
+														"type": "MultiEffect",
+														"effects": [
+															{
+																"type": "ParticleEffect",
+																"particles": 8,
+																"sizeFrom": 6,
+																"sizeTo": 0,
+																"length": 55,
+																"baseLength": 9,
+																"lifetime": 15,
+																"colorFrom": "FEEBB3",
+																"colorTo": "ffffff",
+																"cone": 40
+															},
+															{
+																"type": "WaveEffect",
+																"lifetime": 10,
+																"sizeFrom": 6,
+																"sizeTo": 50,
+																"strokeFrom": 6,
+																"strokeTo": 0,
+																"colorFrom": "FEEBB3",
+																"colorTo": "FEEBB3"
+															}
+														]
+													},
+													"despawnEffect": "instBomb",
+													"hitSound": "plasmaboom",
+													"width": 0,
+													"height": 0,
+													"damage": 36,
+													"collides": true,
+													"splashDamageRadius": 52,
+													"splashDamage": 55,
+													"pierceArmor": true,
+													"lifetime": 9,
+													"speed": 4,
+													"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+													"lightning": 3,
+													"lightningLength": 6,
+													"fragRandomSpread": 0,
+													"fragBullets": 1,
+													"fragBullet": {
+														"hitEffect": {
+															"type": "MultiEffect",
+															"effects": [
+																{
+																	"type": "ParticleEffect",
+																	"particles": 8,
+																	"sizeFrom": 6,
+																	"sizeTo": 0,
+																	"length": 55,
+																	"baseLength": 9,
+																	"lifetime": 15,
+																	"colorFrom": "FEEBB3",
+																	"colorTo": "ffffff",
+																	"cone": 40
+																},
+																{
+																	"type": "WaveEffect",
+																	"lifetime": 10,
+																	"sizeFrom": 6,
+																	"sizeTo": 50,
+																	"strokeFrom": 6,
+																	"strokeTo": 0,
+																	"colorFrom": "FEEBB3",
+																	"colorTo": "FEEBB3"
+																}
+															]
+														},
+														"despawnEffect": "instBomb",
+														"hitSound": "plasmaboom",
+														"width": 0,
+														"height": 0,
+														"damage": 36,
+														"collides": true,
+														"splashDamageRadius": 52,
+														"splashDamage": 55,
+														"pierceArmor": true,
+														"lifetime": 9,
+														"speed": 4,
+														"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+														"lightning": 3,
+														"lightningLength": 6,
+														"fragRandomSpread": 0,
+														"fragBullets": 1,
+														"fragBullet": {
+															"hitEffect": {
+																"type": "MultiEffect",
+																"effects": [
+																	{
+																		"type": "ParticleEffect",
+																		"particles": 8,
+																		"sizeFrom": 6,
+																		"sizeTo": 0,
+																		"length": 55,
+																		"baseLength": 9,
+																		"lifetime": 15,
+																		"colorFrom": "FEEBB3",
+																		"colorTo": "ffffff",
+																		"cone": 40
+																	},
+																	{
+																		"type": "WaveEffect",
+																		"lifetime": 10,
+																		"sizeFrom": 6,
+																		"sizeTo": 50,
+																		"strokeFrom": 6,
+																		"strokeTo": 0,
+																		"colorFrom": "FEEBB3",
+																		"colorTo": "FEEBB3"
+																	}
+																]
+															},
+															"despawnEffect": "instBomb",
+															"hitSound": "plasmaboom",
+															"width": 0,
+															"height": 0,
+															"damage": 36,
+															"collides": true,
+															"splashDamageRadius": 52,
+															"splashDamage": 55,
+															"pierceArmor": true,
+															"lifetime": 9,
+															"speed": 4,
+															"lightningColor":"FEEBB3",
+				"lightningDamage": 15,
+															"lightning": 3,
+															"lightningLength": 6
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"requirements": [
+		"镄/300","silicon/500",
+		"plastanium/300","phase-fabric/150",
+		"泰勒合金/85","二级协议/5"
+	],
+	"category": "turret",
+	"research": "foreshadow"
+}

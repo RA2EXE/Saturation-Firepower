@@ -1,0 +1,14 @@
+{
+	"name": "纳米流体",
+	"description": "用作反应堆，炮台的快速散热以及瘫痪性弹药和修复机构",
+	"alwaysUnlocked":false,
+	"lightColor":"7CF389A0",
+	"color": "7CF389FF",
+	"effect":"拆解",
+	"flammability": 0,
+	"temperature": 0.3,
+	"heatCapacity": 1.45,
+	"viscosity": 0.3,
+	"explosiveness": 0,
+	"research": "cryofluid"
+}

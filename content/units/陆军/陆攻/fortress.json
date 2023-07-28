@@ -1,0 +1,39 @@
+{
+	"health": 1900,
+	"details": "使用新型炮管与大型击退爆破弹",
+	"targetAir": false,
+	"weapons": [
+		{
+			"name": "堡垒1",
+			"reload": 70,
+			"x": 9,
+			"y": 1,
+			"rotate": false,
+			"inaccuracy": 0,
+			"shake": 2,
+			"recoil": 4,
+			"top": false,
+			"alternate": true,
+			"ejectEffect": "casing3",
+			"shootSound": "artillery",
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"status": "blasted",
+				"damage": 45,
+				"speed": 3,
+				"lifetime": 82,
+				"collides": true,
+				"collidesTiles": true,
+				"knockback": 9,
+				"hitSound": "explosion",
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"smokeEffect": "shootBig",
+				"splashDamage": 105,
+				"splashDamageRadius": 45,
+				"width": 12,
+				"height": 16
+			}
+		}
+	]
+}

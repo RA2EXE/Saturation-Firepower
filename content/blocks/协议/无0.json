@@ -1,0 +1,23 @@
+{
+	"type": "GenericCrafter",
+	"name": "无中生有",
+	"description": "这玩意违反了能量守恒定律,物理老师会neng死我的",
+	"outputItem": { "item": "coal", "amount": 10},
+	"size": 1,
+	"health":50,
+	"itemCapacity": 50,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 6,
+	"consumes": {
+   "power":0.5
+		},
+"requirements": [
+    { "item": "lead", "amount": 10},
+	{ "item": "二级协议", "amount": 1}
+	],
+	"buildVisibility": "sandboxOnly",
+	"category": "crafting",
+	"research": "无0"
+}

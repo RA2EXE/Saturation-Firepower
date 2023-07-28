@@ -1,0 +1,77 @@
+{
+	"type": "GenericCrafter",
+	"health": 360,
+	"name": "归中编织器",
+	"outputItem": {
+		"item": "phase-fabric",
+		"amount": 3
+	},
+	"itemCapacity": 40,
+	"size": 3,
+	"updateEffect": {
+		"type": "WaveEffect",
+		"lifetime": 30,
+		"sizeFrom": 0,
+		"sizeTo": 10,
+		"strokeFrom": 6,
+		"strokeTo": 0,
+		"colorFrom": "FFF1D2",
+		"colorTo": "FFD197"
+	},
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			"DrawWeave",
+			"DrawDefault"
+		]
+	},
+	"craftTime": 60,
+	"consumes": {
+		"power": 8,
+		"items": {
+			"items": [
+				{
+					"item": "thorium",
+					"amount": 4
+				},
+				{
+					"item": "sand",
+					"amount": 20
+				},
+				{
+					"item": "裂位能",
+					"amount": 1
+				}
+			]
+		}
+	},
+	"requirements": [
+		{
+			"item": "镄",
+			"amount": 45
+		},
+		{
+			"item": "silicon",
+			"amount": 65
+		},
+		{
+			"item": "硅钢",
+			"amount": 45
+		},
+		{
+			"item": "裂位能",
+			"amount": 8
+		},
+		{
+			"item": "二级协议",
+			"amount": 0
+		}
+	],
+	"ambientSound":"techloop",
+	"category": "crafting",
+	"research": "激发器"
+}

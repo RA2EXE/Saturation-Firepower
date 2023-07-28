@@ -1,0 +1,10 @@
+{
+	"name": "矿渣桶",
+	"description": "标准液体桶，内存60单位矿渣",
+	"color": "ffa166",
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "slag"
+}

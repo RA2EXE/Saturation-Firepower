@@ -1,0 +1,69 @@
+{
+	"details": "新的装甲结构与动力系统。换用含铅燃料，拥有更高的附着性与喷射力度",
+	"health": 800,
+	"armor": 8,
+	"speed": 0.62,
+	"range": 65,
+	"weapons": [
+		{
+			"name": "战锤1",
+			"reload": 12.2,
+			"shootY": 2,
+			"rotate": false,
+			"inaccuracy": 0,
+			"alternate": true,
+			"top": false,
+			"shootSound": "flame",
+			"ejectEffect": "none",
+			"shoot": {
+				"shots": 2
+			},
+			"cooldownTime": 120,
+			"bullet": {
+				"type": "BulletType",
+				"lifetime": 6,
+				"speed": 11,
+				"knockback": 0.42,
+				"damage": 34.6,
+				"ammoMultiplier": 3,
+				"incendAmount": 1,
+				"incendSpread": 8,
+				"incendChance": 0.2,
+				"hittable": false,
+				"absorbable": false,
+				"pierce": true,
+				"makeFire": true,
+				"pierceBuilding": true,
+				"pierceCap": 6,
+				"shootEffect": "shootPyraFlame",
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 5,
+					"line": true,
+					"strokeFrom": 1.2,
+					"strokeTo": 0,
+					"lenFrom": 16,
+					"lenTo": 8,
+					"length": 76,
+					"baseLength": 0,
+					"lifetime": 12,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FFE176FF",
+					"cone": 10
+				},
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 4,
+					"lifetime": 10,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"colorFrom": "FF8C00",
+					"colorTo": "FF8C00"
+				},
+				"despawnEffect": "none",
+				"statusDuration": 360,
+				"status": "burning"
+			}
+		}
+	]
+}

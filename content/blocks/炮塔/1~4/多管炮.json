@@ -1,0 +1,88 @@
+{
+	"type": "ItemTurret",
+	"name": "多管炮",
+	"description": "双管叠层版，可以在短时间内倾泻大量火力。",
+	"health": 500,
+	"size": 1,
+	"reload": 40,
+	"range": 120,
+	"ammoPerShot": 2,
+	"consumes": {
+		"coolant": {
+			"amount": 0.1,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 4,
+		"shotDelay": 3,
+		"type": "ShootAlternate",
+		"barrels": 2,
+		"spread": 3
+	},
+	"xRand": 1,
+	"ammoUseEffect": "casing2Double",
+	"inaccuracy": 1,
+	"rotateSpeed": 12,
+	"shake": 1,
+	"ammoTypes": {
+		"copper": {
+			"speed": 5,
+			"damage": 11,
+			"lifetime": 24,
+			"width": 7,
+			"height": 8,
+			"ammoMultiplier": 2,
+			"shootEffect": "shootSmall"
+		},
+		"graphite": {
+			"reloadMultiplier": 0.5,
+			"speed": 5,
+			"damage": 20,
+			"lifetime": 24,
+			"width": 7,
+			"height": 8,
+			"ammoMultiplier": 4,
+			"shootEffect": "shootSmall"
+		},
+		"pyratite": {
+			"speed": 5,
+			"damage": 13,
+			"lifetime": 24,
+			"width": 7,
+			"height": 8,
+			"makeFire": true,
+			"ammoMultiplier": 2,
+			"shootEffect": "shootSmall",
+			"status": "burning",
+			"statusDuration": 600,
+			"frontColor":"f8ad42",
+			"backColor":"f68021"
+		},
+		"silicon": {
+			"speed": 5.3,
+			"damage": 14,
+			"reloadMultiplier": 1.6,
+			"lifetime": 35,
+			"width": 7,
+			"height": 8,
+			"shootEffect": "shootSmall",
+			"homingRange": 40,
+			"homingPower": 0.06,
+			"ammoMultiplier": 5
+		}
+	},
+	"researchCostMultiplier": 0.5,
+	"requirements": [
+		{
+			"item": "copper",
+			"amount": 25
+		},
+		{
+			"item": "lead",
+			"amount": 15
+		}
+	],
+	"category": "turret",
+	"research": "前哨基地"
+}

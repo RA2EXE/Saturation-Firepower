@@ -1,0 +1,19 @@
+{
+	"name": "波能墙",
+	"description": "收集敌人的攻击产生的动能与热能，并在之后反射。",
+	"type": "Wall",
+	"armor":13,
+	"lightningChance":0.1,
+	"lightningDamage":50,
+	"lightningLength":25,
+	"health":1900 ,
+	"size":1 ,
+	"insulated":true,
+	"absorbLasers":true,
+	"requirements": [
+		"硅钢/3","metaglass/2",
+		"plastanium/2","surge-alloy/3"
+	],
+	"category": "defense",
+	"research": "surge-wall-large"
+}

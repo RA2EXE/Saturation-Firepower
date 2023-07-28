@@ -1,0 +1,14 @@
+{
+"name":"镄",
+"type":"OreBlock",
+"emitLight":true,
+"lightRadius":18,
+"lightColor":"DEDEDE50",
+"playerUnmineable":true,
+"itemDrop":"镄",
+"mapColor":"DEDEDEFF",
+"useColor":true,
+"oreDefault":true,
+"oreThreshold":0.9,
+"oreScale":35
+}

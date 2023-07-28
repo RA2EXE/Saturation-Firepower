@@ -1,0 +1,16 @@
+{
+	"type": "Conduit",
+	"name": "硅钢导管",
+	"description": "绝缘真空，更快地传输液体",
+	"health": 100,
+	"liquidCapacity":32,
+	"liquidPressure": 2, 
+	"insulated":true,
+	"requirements": [
+	{"item": "lead", "amount": 1 },
+	{"item": "硅钢", "amount": 1 },
+	{"item": "metaglass", "amount": 2 }
+	],
+	"category": "liquid",
+	"research": "pulse-conduit"
+}

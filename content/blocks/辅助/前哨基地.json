@@ -1,0 +1,20 @@
+{
+	"description": "在前线建立一个可拆除的先锋作战基地。\n在[yellow]同一个区块[red]中存在过多核心会导致中央数据库过载爆炸。\n[yellow]区块核心总承载上限：8",
+	"research": {
+		"root":true,
+		"name": "泰伯利亚"
+		},
+	"requirements": [
+	{"amount": 800, "item": "copper"},
+	{"amount": 2000, "item": "lead"},
+	{"amount": 500, "item": "silicon"}
+	],
+	"unitType": "alpha",
+	"alwaysUnlocked":true,
+	"armor":28,
+	"health": 1000,
+	"itemCapacity": 800,
+	"size": 3,
+	"unitCapModifier": 3,
+	"category": "effect"
+}

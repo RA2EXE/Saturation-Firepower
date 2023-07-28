@@ -1,0 +1,13 @@
+{
+	"name": "铜铅合金墙",
+	"description": "前期的优良防御",
+	"type": "Wall",
+	"health": 400,
+	"size": 1,
+	"requirements": [
+	{ "item": "copper", "amount": 3},
+	{"item": "lead", "amount": 3 }
+	],
+	"category": "defense",
+	"research": "copper-wall"
+}

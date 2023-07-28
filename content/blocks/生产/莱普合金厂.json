@@ -1,0 +1,54 @@
+{
+	"type": "GenericCrafter",
+	"name": "莱普合金冶炼厂",
+	"outputItem": { "item": "莱普合金", "amount": 1},
+	"size": 3,
+	"hasPower": true,
+	"hasItems": true,
+	"craftTime": 150,
+	"itemCapacity": 20,
+	"drawer":{
+        "type":"DrawMulti",
+        "drawers":[
+            "DrawDefault",
+    {"type":"DrawFlame",
+"flameRadius": 0,
+"flameRadiusIn": 0,
+"flameRadiusMag": 0,
+"flameRadiusInMag": 0,
+"flameColor":"5C5D79FF"
+    }
+    ]
+    },
+	"craftEffect":{
+		"type": "ParticleEffect",
+		"particles": 5,
+		"baseLength": 1,
+		"length":13,
+		"region":"饱和火力-菱形",
+		"lifetime": 22,
+		"sizeFrom": 5,
+		"sizeTo": 0,
+		"colorFrom": "5C5D79",
+		"colorTo": "5C5D79",
+		"cone":360 },
+	"consumes": {
+    "power":10,
+    "items": {
+	 "items": [
+	  { "item": "镄", "amount": 1},
+	  { "item": "铬", "amount": 1}
+	]
+  }
+ },
+"requirements": [
+		{ "item": "镄", "amount": 80},
+		{ "item": "铬", "amount": 20},
+		{ "item": "硅钢", "amount": 75 },
+		{ "item": "裂位能", "amount": 25 },
+		{ "item": "二级协议", "amount": 0 }
+	],
+	"category": "crafting",
+	"ambientSound":"smelter",
+	"research": "泰勒厂"
+}

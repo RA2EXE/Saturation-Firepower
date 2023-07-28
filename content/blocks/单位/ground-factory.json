@@ -1,0 +1,23 @@
+{
+	"plans":[
+	    
+{ "unit": "dagger", "time": 800, "requirements": [
+{ "item": "silicon", "amount": 15 },
+{ "item": "lead", "amount": 10 }]},
+
+{ "unit": "crawler", "time": 600, "requirements": [
+{ "item": "silicon", "amount": 10 },
+{ "item": "coal", "amount": 20 }]},
+
+{ "unit": "nova", "time": 2400, "requirements": [
+{ "item": "silicon", "amount": 30 },
+{ "item": "lead", "amount": 20 },
+{ "item": "titanium","amount": 20 }]},
+
+{ "unit": "陆1", "time": 1200, "requirements": [
+{ "item": "silicon", "amount": 30 },	
+{ "item": "lead", "amount": 25 },
+{ "item": "titanium", "amount": 25 }]}
+		
+    ]
+}

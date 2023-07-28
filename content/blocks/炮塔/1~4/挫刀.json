@@ -1,0 +1,67 @@
+{
+	"type": "PowerTurret",
+	"name": "挫刀",
+	"description": "中口径对空霰弹炮。与差扰光束协同可有效牵制空军。与冰风暴协作可造成极高伤害。",
+	"targetAir": true,
+	"targetGround": false,
+	"health": 350,
+	"size": 2,
+	"shootSound": "shootBig",
+	"shake": 0.05,
+	"inaccuracy": 2,
+	"recoil": 2,
+	"recoilTime":10,
+	"cooldownTime": 80,
+	"shootEffect": "shootBig",
+	"shootType": {
+		"type": "PointBulletType",
+		"trailEffect": "none",
+		"hitEffect": "none",
+		"despawnEffect": "none",
+		"splashDamageRadius": 24,
+		"splashDamage": 35,
+		"knockback": 2.5,
+		"speed": 20,
+		"lifetime": 30,
+		"ammoMultiplier": 1,
+		"fragBullets": 4,
+		"fragBullet": {
+			"type": "PointBulletType",
+			"trailEffect": "none",
+			"hitEffect": "flakExplosion",
+			"despawnEffect": "flakExplosion",
+			"splashDamageRadius": 16,
+			"splashDamage": 10,
+			"status": "blasted",
+			"statusDuration": 30,
+			"speed": 20,
+			"lifetime": 1
+		}
+	},
+	"consumes": {
+		"power": 4,
+		"coolant": {
+			"amount": 0.2,
+			"optional": true
+		}
+	},
+	"reload": 20,
+	"rotateSpeed": 7,
+	"range": 200,
+	"category": "turret",
+	"research": "parallax",
+	"requirements": [
+		{
+			"item": "copper",
+			"amount": 85
+		},
+		{
+			"item": "titanium",
+			"amount": 60
+		},
+		{
+			"item": "silicon",
+			"amount": 70
+		}
+	]
+}

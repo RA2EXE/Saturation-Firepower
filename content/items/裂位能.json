@@ -1,0 +1,14 @@
+{
+	"name": "裂位能",
+	"description": "高能量且不稳定物，用做远距离瞬间移动或高能破甲弹",
+	"details":"撕 裂 时 空",
+	"cost":6,
+	"hardness":1,
+	"alwaysUnlocked":false,
+	"color": "EEC591",
+	"healthScaling": 0.9,
+	"radioactivity": 2.5,
+	"explosiveness": 0.85,
+	"flammability": 0,
+	"research": "phase-fabric"
+}

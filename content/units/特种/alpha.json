@@ -1,0 +1,25 @@
+{
+	"details":"梦，开始的地方",
+	"health": 200,
+	"mineSpeed": 5,
+	"mineTier": 2,
+	"buildSpeed": 1,
+	"speed":3.6,
+	"weapons":[
+	{	"name": "A枪",	
+		"reload": 7, 
+		"x": 2.5,  "y": 1.5, 
+		"rotate": false,
+		"inaccuracy": 0,
+		"shootSound": "pew",
+		"alternate": true,
+		"ejectEffect":"casing1",
+		"bullet":{
+"buildingDamageMultiplier":0.01,
+		"damage":9,	  
+		"speed":2.5,
+		"lifetime":80,
+		"width":7,	 "height":10
+	}	}
+	]
+}

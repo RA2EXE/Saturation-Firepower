@@ -1,0 +1,30 @@
+{
+	"health": 48000,
+	"weapons":[
+	{	"name": "海神轨道炮",
+	"reload": 100,  
+	"x": 0,  "y": 0, 
+	"shootY":10,
+	"cooldownTime": 90,
+	"rotate": true,
+	"rotateSpeed":4,
+	"mirror":false,
+	"inaccuracy": 0,
+	"shootSound":"railgun",
+	"shake":8,
+	"bullet":{	
+	"type":"RailBulletType",
+	"damage":1850,
+	"pierce": true,	
+	"pierceBuilding":true,
+	"pierceEffect":"railHit",
+	"pointEffect":"railTrail",
+	"hitEffect":"massiveExplosion",
+	"shootEffect":"railShoot",
+	"smokeEffect":"smokeCloud",
+	"pierceDamageFactor":0.2,
+	"length":784,
+	"despawnEffect":"bigShockwave"
+	}	}
+	]
+}

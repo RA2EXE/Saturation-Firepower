@@ -1,0 +1,7 @@
+{
+	"range": 6,
+	"requirements": [
+	"metaglass/12",
+	"graphite/6"
+	]
+}

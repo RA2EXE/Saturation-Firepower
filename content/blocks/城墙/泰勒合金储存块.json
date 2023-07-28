@@ -1,0 +1,14 @@
+{
+	"name": "泰勒合金储存块",
+	"type": "Wall",
+	"health":28000,
+	"size":4,
+	"insulated":true,
+	"absorbLasers":true,
+	"buildCostMultiplier":0.01,
+	"requirements": [
+	"泰勒合金/625"
+	],
+	"category": "defense",
+	"buildVisibility": "sandboxOnly"
+}

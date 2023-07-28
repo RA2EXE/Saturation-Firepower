@@ -1,0 +1,28 @@
+{
+	"name": "急冻",
+	"damage": 1.26,
+	"healthMultiplier":0.75,
+	"speedMultiplier": 0.58,
+	"reloadMultiplier":0.58,
+	"effectChance": 0.088,
+	"opposites": [
+		"burning",
+		"melting",
+		"殁火"
+	],
+	"effect": {
+		"type": "ParticleEffect",
+		"particles": 3,
+		"baseLength": 36,
+		"length": -25,
+		"lifetime": 26,
+		"spin": -2,
+		"interp": "fastSlow",
+		"region": "饱和火力-三角形",
+		"sizeInterp":"pow5In",
+		"sizeFrom": 3,
+		"sizeTo": 0,
+		"colorFrom": "c0ecff",
+		"colorTo": "c0ecff"
+	}
+}

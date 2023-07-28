@@ -1,0 +1,30 @@
+{
+	"plans": [
+		{
+			"unit": "risso",
+			"requirements": [
+				"silicon/20",
+				"metaglass/25"
+			],
+			"time": 2400
+		},
+		{
+			"unit": "retusa",
+			"requirements": [
+				"silicon/15",
+				"metaglass/25",
+				"titanium/30"
+			],
+			"time": 3000
+		},
+		{
+			"unit": "海1",
+			"requirements": [
+				"silicon/35",
+				"metaglass/25",
+				"titanium/35"
+			],
+			"time": 3600
+		}
+	]
+}

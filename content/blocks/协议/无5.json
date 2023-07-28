@@ -1,0 +1,27 @@
+{
+	"type": "GenericCrafter",
+	"name": "钛",
+	"description": "物理老师震怒5",
+	"outputItem": { "item": "titanium", "amount": 10},
+	"size": 1,
+	"health":50,
+	"itemCapacity": 50,
+	"hasPower": false,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 6,
+	"consumes": {
+   "items": {
+	 "items": [
+    { "item": "coal", "amount": 10}
+	]
+  }
+ },
+"requirements": [
+  { "item": "titanium", "amount":10 },
+  {"item": "一级协议", "amount": 0 }
+    ],
+	"buildVisibility": "sandboxOnly",
+	"category": "crafting",
+	"research": "无0"
+}

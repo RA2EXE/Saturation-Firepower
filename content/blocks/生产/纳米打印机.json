@@ -1,0 +1,45 @@
+{
+	"type": "GenericCrafter",
+	"name": "纳米打印机",
+	"outputItem": "纳米核/1",
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 13,
+	"itemCapacity": 8,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawFade",
+				"scale": 1.13,
+				"alpha": 0.99
+			},
+			"DrawWeave",
+			"DrawDefault"
+		]
+	},
+	"consumes": {
+		"power": 15,
+		"items": {
+			"items": [
+				"titanium/1",
+				"silicon/1"
+			]
+		}
+	},
+	"requirements": [
+		"镄/100",
+		"泰勒合金/35",
+		"纳米核/220",
+		"二级协议/1"
+	],
+	"category": "crafting",
+	"ambientSound": "techloop",
+	"research": "纳米组装机"
+}

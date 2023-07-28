@@ -1,0 +1,26 @@
+{
+	"name":"最高指挥中心",
+	"description": "汝欲和平，必先战争",
+	"details":"[red]警告！慎重确定建设位置，确定后不可拆除。\n附加怨灵作为基础防御设施。",
+	"research": {
+		"parent": "前哨基地",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "第五战区"
+			}]},
+	"requirements": [
+		"thorium/9300","silicon/8000",
+		"plastanium/1750","surge-alloy/960",
+		"镄/5000","硅钢/3500",
+		"二级协议/50","三级协议/30"
+	],
+	"unitType": "欧米茄",
+	"health": 48000,
+	"armor":48,
+	"itemCapacity": 20000,
+	"size": 8,
+	"unitCapModifier": 50,
+	"researchCostMultiplier": 0.8,
+	"category": "effect"
+}

@@ -1,0 +1,16 @@
+{
+    "type":"PowerNode",
+    "name":"特高压输电塔",
+	"description":"以特高压进行远距离输电，有效降低电能损耗。",
+    "health":310,
+	"size":3,
+    "maxNodes":3,
+    "laserRange":80,
+	"research":"surge-tower",
+	"requirements": [
+	{"item": "lead", "amount": 35},
+	{ "item": "硅钢", "amount":12},
+	{ "item": "surge-alloy", "amount":10}
+	],
+	"category":"power"
+}

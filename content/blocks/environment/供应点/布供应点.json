@@ -1,0 +1,11 @@
+{
+"name":"相位物供应点",
+"itemDrop":"phase-fabric",
+"type":"Floor",
+"description":"无限量供应，用于非自然环境地图",
+"playerUnmineable":true,
+"mapColor":"FFFFFF",
+"isLiquid":false,
+"useColor":true,
+"variants":0
+}

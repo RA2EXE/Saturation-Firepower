@@ -1,0 +1,128 @@
+{
+	"type": "ItemTurret",
+	"name": "B6机炮",
+	"description": "相较于原型，射击模式更改为精准的点射。",
+	"health": 960,
+	"size": 2,
+	"reload": 30,
+	"range": 200,
+	"maxAmmo": 120,
+	"recoilTime": 10,
+	"recoil": 1,
+	"consumes": {
+		"coolant": {
+			"amount": 0.2,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 6,
+		"shotDelay": 2
+	},
+	"shake": 1.1,
+	"liquidCapacity": 30,
+	"ammoPerShot": 6,
+	"ammoUseEffect": "casing2",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 0.5,
+	"rotateSpeed": 15,
+	"ammoTypes": {
+		"copper": {
+			"speed": 6.5,
+			"damage": 11,
+			"knockback": 0.5,
+			"lifetime": 30.76,
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier": 2,
+			"shootEffect": "shootBig"
+		},
+		"lead": {
+			"speed": 6.5,
+			"damage": 5,
+			"fragBullets": 3,
+			"fragBullet": {
+				"speed": 0.8,
+				"damage": 7,
+				"lifetime": 32
+			},
+			"lifetime": 30.76,
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier": 2,
+			"shootEffect": "shootBig"
+		},
+		"graphite": {
+			"speed": 6.5,
+			"damage": 20,
+			"reloadMultiplier": 1.3,
+			"lifetime": 30.76,
+			"width": 7,
+			"height": 10,
+			"ammoMultiplier": 4,
+			"shootEffect": "shootBig"
+		},
+		"pyratite": {
+			"speed": 6.5,
+			"damage": 13,
+			"status": "burning",
+			"statusDuration": 600,
+			"lifetime": 30.76,
+			"backColor": "FF8C00",
+			"frontColor": "FFB90F",
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier": 4,
+			"shootEffect": "shootBig"
+		},
+		"silicon": {
+			"speed": 6.5,
+			"damage": 14,
+			"reloadMultiplier": 1.4,
+			"lifetime": 30.76,
+			"width": 6,
+			"height": 11,
+			"shootEffect": "shootBig",
+			"homingRange": 80,
+			"homingPower": 0.08,
+			"ammoMultiplier": 5
+		},
+		"titanium": {
+			"speed": 9,
+			"lifetime": 22.22,
+			"damage": 19,
+			"reloadMultiplier": 0.7,
+			"width": 8,
+			"height": 10,
+			"ammoMultiplier": 6,
+			"shootEffect": "shootBig"
+		},
+		"thorium": {
+			"speed": 8,
+			"damage": 28,
+			"lifetime": 25,
+			"reloadMultiplier": 0.7,
+			"width": 10,
+			"height": 11,
+			"shootEffect": "shootBig",
+			"ammoMultiplier": 6
+		}
+	},
+	"requirements": [
+		{
+			"item": "copper",
+			"amount": 130
+		},
+		{
+			"item": "graphite",
+			"amount": 60
+		},
+		{
+			"item": "titanium",
+			"amount": 70
+		}
+	],
+	"category": "turret",
+	"research": "F2机炮"
+}

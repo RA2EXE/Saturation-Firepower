@@ -1,0 +1,15 @@
+{
+	"name": "大型镄墙",
+	"description": "坚硬且致密，耐温差，耐酸碱，耐打击，绝对可靠。",
+	"type": "Wall",
+	"health": 9600,
+	"armor":15,
+	"size": 2,
+	"absorbLasers":true,
+	"requirements": [
+	{ "item": "镄", "amount": 96} 
+	],
+	"buildCostMultiplier": 0.85,
+	"category": "defense",
+	"research": "镄墙"
+}

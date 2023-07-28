@@ -1,0 +1,17 @@
+{
+	  "health": 90,
+	  "size":1,
+	  "speed": 1,
+	  "update": "true",
+	  "hasItems": "true",
+	  "type":"Unloader",
+	  "description": "物流中心特供",
+	  "name":"高速卸载器",
+	  "requirements": [
+		  {"item": "lead", "amount":30},
+		{"item": "silicon", "amount": 10},
+		{"item": "硅钢", "amount": 15}
+	],
+	"category": "effect",
+	"research":"unloader"
+	}

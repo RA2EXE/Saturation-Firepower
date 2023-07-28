@@ -1,0 +1,10 @@
+{
+	"name": "冷冻液桶",
+	"description": "标准液体桶，内存60单位冷冻液",
+	"color": "6ecdec",
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "cryofluid"
+}

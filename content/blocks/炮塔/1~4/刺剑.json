@@ -1,0 +1,93 @@
+{
+	"type": "ItemTurret",
+	"name": "刺剑",
+	"description": "扫射前方大片面积，击穿敌人与护盾",
+	"health": 3250,
+	"size": 3,
+	"reload": 28,
+	"range": 160,
+	"maxAmmo": 48,
+	"recoilTime": 30,
+	"recoil": 3,
+	"consumes": {
+		"coolant": {
+			"amount": 0.3,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 6,
+		"shotDelay": 4
+	},
+	"ammoPerShot": 6,
+	"shootSound": "shotgun",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 15,
+	"shake": 3,
+	"shootCone": 20,
+	"rotateSpeed": 9,
+	"ammoTypes": {
+		"titanium": {
+			"type": "ShrapnelBulletType",
+			"reloadMultiplier": 1.2,
+			"width": 20,
+			"length": 170,
+			"damage": 150,
+			"ammoMultiplier": 2,
+			"pierce": true
+		},
+		"thorium": {
+			"type": "ShrapnelBulletType",
+			"reloadMultiplier": 1,
+			"rangeChange":10,
+			"length": 200,
+			"damage": 150,
+			"width": 20,
+			"fromColor": "FF69B4",
+			"toColor": "FF69B4",
+			"ammoMultiplier": 4,
+			"pierce": true,
+			"shootEffect": "thoriumShoot"
+		},
+		"镄": {
+			"type": "ShrapnelBulletType",
+			"reloadMultiplier": 1,
+			"rangeChange":40,
+			"length": 230,
+			"damage": 180,
+			"width": 20,
+			"fromColor": "dedede",
+			"toColor": "aaaaaa",
+			"ammoMultiplier": 6,
+			"pierce": true,
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 9,
+				"line": true,
+				"length": 55,
+				"baseLength": 0,
+				"lifetime": 15,
+				"colorFrom": "dedede",
+				"colorTo": "aaaaaa",
+				"cone": 60
+			}
+		}
+	},
+	"requirements": [
+		{
+			"item": "graphite",
+			"amount": 50
+		},
+		{
+			"item": "硅钢",
+			"amount": 70
+		},
+		{
+			"item": "镄",
+			"amount": 130
+		}
+	],
+	"category": "turret",
+	"research": "阔刀"
+}

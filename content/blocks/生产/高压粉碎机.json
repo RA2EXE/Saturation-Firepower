@@ -1,0 +1,37 @@
+{
+	"type": "GenericCrafter",
+	"name": "高压粉碎机",
+	"outputItem": { "item": "sand", "amount": 3},
+	"size": 2,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 10,
+	"itemCapacity": 20,
+	"updateEffect":"pulverizeSmall",
+    "drawer":{
+        "type":"DrawMulti",
+        "drawers":[
+            "DrawDefault",
+    {"type":"DrawRegion",
+    "suffix":"-转",
+    "spinSprite":true,
+    "rotateSpeed":12},
+	{"type":"DrawRegion",
+    "suffix":"-顶"}
+    ]},
+	"consumes": {
+    "power":0.8333,
+    "items": {	 "items": [
+		{ "item": "scrap", "amount": 2}	]
+		 }
+},
+"ambientSound":"grinding",
+"requirements": [
+	"lead/20",
+	"graphite/15",
+	"silicon/10"
+	],
+	"category": "crafting",
+	"research": "pulverizer"
+}

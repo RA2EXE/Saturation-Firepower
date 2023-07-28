@@ -1,0 +1,20 @@
+{
+	"name": "莱普合金墙",
+	"description": "坚硬，接地，耐温差，耐酸碱，耐打击。",
+	"type": "Wall",
+	"health": 10500,
+	"armor":29,
+	"size": 1,
+	"absorbLasers":true,
+	"insulated":true,
+	"placeableLiquid": true,
+	"requirements": [ 
+		"metaglass/10",
+		"硅钢/16",
+		"plastanium/16",
+		"莱普合金/18"
+	],
+	"buildCostMultiplier": 0.6,
+	"category": "defense",
+	"research": "大镄墙"
+}

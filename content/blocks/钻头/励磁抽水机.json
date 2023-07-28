@@ -1,0 +1,26 @@
+{
+	"name": "励磁抽水机",
+	"type": "SolidPump",
+	"health": 250,
+	"size": 2,
+	"hasPower": true,
+	"hasLiquids": true,
+	"liquidCapacity": 30,
+	"requirements": [
+		"titanium/35",
+		"silicon/50",
+		"metaglass/30",
+		"硅钢/35",
+		"一级协议/1"
+	],
+	"consumes": {
+		"power": 2.29
+	},
+	"pumpAmount": 0.3,
+	"rotateSpeed": 1.3,
+	"result": "water",
+	"baseEfficiency": 1,
+	"attribute": "water",
+	"category": "production",
+	"research": "water-extractor"
+}

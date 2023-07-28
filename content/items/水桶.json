@@ -1,0 +1,11 @@
+{
+	"name": "水桶",
+	"description": "标准液体桶，内存60单位水",
+	"details":"适用于大面积灭火设备",
+	"color": "596ab8",
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "water"
+}

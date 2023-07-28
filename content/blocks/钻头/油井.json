@@ -1,0 +1,26 @@
+{
+"name":"石油深井" ,
+"description":"将抽水机耐高压处理并加强钻头强度，能够下掘石油",
+"type": "SolidPump",
+"health": 350,
+"size": 3,
+"floating":true,
+"hasPower": true,
+"hasLiquids": true,
+"liquidCapacity": 60,
+	"requirements": [
+		{"item": "silicon", "amount": 85},
+		{"item": "graphite", "amount": 90},
+		{"item": "硅钢", "amount":40},
+		{"item": "metaglass", "amount":85},
+		{"item": "thorium", "amount":90}
+],
+"consumes": { "power": 2},
+"pumpAmount": 0.1,
+"rotateSpeed": 1.3,
+"result":"oil",
+"baseEfficiency": 1,
+"attribute": "oil",
+"category": "production",
+"research": "高速掘进机"
+}

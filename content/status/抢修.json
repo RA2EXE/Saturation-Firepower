@@ -1,0 +1,35 @@
+{
+	"name":"抢修",
+	"damage":-18,
+	"healthMultiplier":1.35,
+	"effectChance":1,
+	"opposites": [
+		"burning",
+		"wet",
+		"sapped",
+		"freezing",
+		"melting",
+		"tarred",
+		"muddy",
+		"blasted",
+		"corroded",
+		"拆解",
+		"修复",
+		"油蚀"
+	],
+	"effect": {
+		"type": "ParticleEffect",
+		"particles": 2,
+		"baseLength": 50,
+		"length": -50,
+		"lifetime": 10,
+		"line": true,
+		"strokeFrom": 2,
+		"strokeTo": 0,
+		"lenFrom": 20,
+		"lenTo": 0,
+		"colorFrom": "97FFA8",
+		"colorTo": "97FFA8",
+		"cone": 360
+	}
+}

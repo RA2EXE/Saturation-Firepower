@@ -1,0 +1,49 @@
+{
+	"type": "GenericCrafter",
+	"name": "泰勒合金冶炼厂",
+	"outputItem": { "item": "泰勒合金", "amount": 1},
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 100,
+	"itemCapacity": 20,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			"DrawDefault",
+	{"type":"DrawFlame",
+	"flameColor":"25C9ABFF"}
+			]
+	},
+	"craftEffect":{
+		"type": "ParticleEffect",
+		"particles": 5,
+		"baseLength": 1,
+		"length":13,
+		"region":"饱和火力-菱形",
+		"lifetime": 22,
+		"sizeFrom": 5,
+		"sizeTo": 0,
+		"colorFrom": "25C9ABFF",
+		"colorTo": "25C9AB",
+		"cone":360 },
+	"consumes": {
+	"power":8,
+	"items": {
+	"items": [
+	{ "item": "硅钢", "amount": 1},
+	{ "item": "surge-alloy", "amount": 1}
+			]
+  }
+ },
+"requirements": [
+		{ "item": "lead", "amount": 85},
+		{ "item": "silicon", "amount": 65 },
+		{ "item": "surge-alloy", "amount": 45 },
+		{ "item": "一级协议", "amount": 0 }
+	],
+	"category": "crafting",
+	"ambientSound":"smelter",
+	"research": "alloy-smelter"
+}

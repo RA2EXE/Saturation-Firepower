@@ -1,0 +1,43 @@
+{
+	"type": "GenericCrafter",
+	"health": 360,
+	"name": "镄合成器",
+	"description": "在服务器合成镄\n[red]临时工具！",
+	"outputItem": {
+	"item": "镄", "amount": 1	},
+	"itemCapacity": 20,
+	"size": 2,
+	"hasPower": true,
+	"hasItems": true,
+	"craftTime": 30,
+	"research": {
+		"parent": "前哨基地",
+		"objectives": [
+            {
+				"type": "SectorComplete",
+				"preset": "迫降区"
+			}
+			]},
+	"drawer":{
+        "type":"DrawMulti",
+        "drawers":[
+            "DrawDefault",
+            "DrawFlame"
+            ]
+    },
+	"craftEffect":"smeltsmoke",
+    "consumes": {
+	"power": 5,
+	"items": {
+		"items": [
+	{"item": "graphite", "amount": 1},
+	{ "item": "thorium", "amount": 1}		]	}	},
+	"requirements": [
+	{ "item": "thorium", "amount": 20 },
+	{ "item": "silicon", "amount": 25 },
+	{ "item": "硅钢", "amount": 20 },
+	{ "item": "二级协议", "amount": 0 }
+	],
+	"ambientSound":"smelter",
+	"category": "crafting"
+}

@@ -1,0 +1,57 @@
+{
+	"type": "UnitAssembler",
+	"name": "阔野管理中心",
+	"description": "携带大量纳米机器人，分级建造方案，更快组装阔野战舰。\n可以修复附近的单位。\n[red]需要占用4台纳米组装无人机部署位！一旦部署位被占满，则失去建造阔野的能力！",
+	"details": " [red]最高建造权限已授权！\n[white]这是要塞数据库中的意外惊喜，这种新技术允许我们[yellow]也能[white]在相对较短的时间中建造大型单位\n[red]现在正是 破局之时！",
+	"size": 10,
+	"liquidCapacity": 120,
+	"consumes": {
+		"power": 1800,
+		"liquid": {
+			"liquid": "纳米流体",
+			"amount": 3.6
+		}
+	},
+	"areaSize": 28,
+	"plans": [
+		{
+			"unit": "阔野",
+			"time": 28800,
+			"requirements": [
+				"饱和火力-竹林/1",
+				"饱和火力-破晓/2",
+				"饱和火力-错位/2",
+				"饱和火力-消去/2",
+				"饱和火力-裂位收容块/5",
+				"饱和火力-装甲收容块/20"
+			]
+		}
+	],
+	"droneType": "组装无人机",
+	"requirements": [
+		"镄/8000",
+		"silicon/6000",
+		"纳米核/5000",
+		"plastanium/5000",
+		"裂位能/3000",
+		"泰勒合金/3000",
+		"莱普合金/2000",
+		"二级协议/200",
+		"三级协议/90"
+	],
+	"category": "units",
+	"canOverdrive": false,
+	"research": {
+		"parent": "实验工厂",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "溢裂要塞"
+			},
+			{
+				"type": "SectorComplete",
+				"preset": "火天路"
+			}
+		]
+	}
+}

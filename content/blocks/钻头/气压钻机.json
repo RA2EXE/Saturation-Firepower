@@ -1,0 +1,33 @@
+{
+	"name":"气压钻机",
+	"type": "Drill",
+	"description":"利用大气压力推动大型钻头旋转",
+	"size": 4,
+	"health": 640,
+	"tier": 3,
+	"drillTime": 200,
+	"liquidBoostIntensity":2,
+	"canOverdrive": true,
+	"warmupSpeed": 0.02,
+	"drillEffect": "mineBig",
+	"updateEffect": "mineBig",
+	"rotateSpeed": 2,
+	"drawMineItem": true,
+	"consumes": {
+		"liquid": {
+			"liquid": "water",
+			"amount": 0.3,
+			"booster": true,
+			"optional": true
+		}
+	},
+	"itemCapacity": 20,
+	"liquidCapacity": 20,
+	"requirements": [	
+   { "item": "copper", "amount":45},
+   { "item": "lead", "amount":35},
+   { "item": "graphite", "amount":45}
+   ],
+	"category": "production",
+	"research": "pneumatic-drill"
+}

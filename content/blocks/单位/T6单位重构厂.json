@@ -1,0 +1,59 @@
+{
+	"type": "Reconstructor",
+	"name": "泰特级单位重构工厂",
+	"size":11,
+	"liquidCapacity":180,
+	"consumes": {
+		"power": 45,
+		"items": {
+			"items": [
+				"silicon/1300",
+				"plastanium/850",
+				"surge-alloy/700",
+				"硅钢/800",
+				"泰勒合金/600",
+				"裂位能/450"
+			]
+		},
+		"liquid": "cryofluid/6"
+	},
+	"upgrades":[
+        ["reign","陆战6"],
+		["eclipse","空战6"], 
+		["omura","海战6"],
+		["toxopid","爬爬6"],
+		["corvus","路辅6"],
+		["oct","空辅6"],
+		["navanax","海辅6"],
+		["陆5","陆6"],
+		["空5","空6"],
+		["海5","海6"]
+	],
+	"constructTime": 17280,
+	"requirements": [
+		"lead/4000",
+		"silicon/3800",
+		"plastanium/2200",
+		"镄/800",
+		"硅钢/1500",
+		"泰勒合金/1200",
+		"裂位能/750",
+		"三级协议/30"
+	],
+	"category": "units",
+	"buildVisibility": "shown",
+	"researchCostMultiplier": 0,
+	"research": {
+		"parent": "战研",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "中央盆地"
+			},
+			{
+				"type": "OnSector",
+				"preset": "第五战区"
+			}
+		]
+	}
+}

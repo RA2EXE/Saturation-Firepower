@@ -1,0 +1,182 @@
+{
+	"type":"mech",
+	"name":"冥燃",
+	"boostMultiplier": 1,
+	"engineOffset": 14, 
+	"engineSize": 6,
+	"canBoost": true,
+	"hitSize":26,
+	"canDrown":false,
+	"armor": 18,
+	"speed":0.48,
+	"rotateSpeed": 2.35,
+	"baseRotateSpeed":2.3,
+	"health": 3300,
+	"mechStepParticles":true,
+	"mechFrontSway":0.98,
+	"mechSideSway":0.4,
+	"ammoType":"石油桶",
+	"ammoCapacity": 300,
+	"immunities":["burning","blasted","崩溃","殁火"],
+	"research":"特种工厂",
+	"abilities": [
+		{
+			"type": "LiquidExplodeAbility",
+			"liquid": "硝化重油",
+			"amount": 300,
+			"radScale": 2.5
+		},
+		{
+			"type": "ArmorPlateAbility",
+			"healthMultiplier": 1
+		}
+	],
+	"weapons": [
+		{
+			"name": "冥燃1",
+			"x": -13,
+			"reload": 6.66,
+			"shootX": -0.75,
+			"shootY": 15,
+			"mirror": false,
+			"recoil": 0.6,
+			"inaccuracy": 10,
+			"shootSound":"missile",
+			"top": true,
+			"shootWarmupSpeed":0.03,
+			"minWarmup":0.9,
+			"shake": 0.36,
+			"velocityRnd":0.1,
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"sprite":"饱和火力-抛射",
+				"height": 20,
+				"width": 16,
+				"frontColor": "f8ad42",
+				"backColor": "f68021",
+				"spin": 18,
+				"drag":0.017,
+				"lifetime": 33,
+				"speed": 10,
+				"ammoMultiplier": 10,
+				"splashDamageRadius": 26,
+				"splashDamage": 83,
+				"incendAmount": 1,
+				"incendSpread": 16,
+				"incendChance": 0.2,
+				"absorbable": false,
+				"hitSound":"explosion",
+				"shootEffect": "shootPyraFlame",
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "none",
+				"statusDuration": 360,
+				"status": "burning"
+			},
+			"parts": [
+				{
+					"type": "RegionPart",
+					"mirror": false,
+					"y":-8,
+					"suffix": "-下",
+					"under": true,
+					"moveY": 10,
+					"progress": "warmup"
+				},
+				{
+					"type": "RegionPart",
+					"mirror": false,
+					"suffix": "-盖",
+					"under": true,
+					"moveY": -10,
+					"progress": "warmup"
+				},
+				{
+					"type": "RegionPart",
+					"mirror": false,
+					"y":-8,
+					"suffix": "-下",
+					"under": true,
+					"moveY": 10,
+					"progress": "warmup"
+				}
+			]
+		},
+		{
+			"name": "冥燃2",
+			"x":14,
+			"reload": 300,
+			"shootY": 9,
+			"mirror": false,
+			"top": false,
+			"rotate": true,
+			"rotateSpeed": 1,
+			"rotationLimit": 13,
+			"shootSound": "torch",
+			"alwaysContinuous": true,
+			"shoot": {
+				"shotDelay": 1.36,
+				"shots": 3
+			},
+			"cooldownTime": 300,
+			"heatColor":"FF4040",
+			"bullet": {
+				"type": "ContinuousFlameBulletType",
+				"recoil": 0.01,
+				"pierceBuilding": false,
+				"colors":["F33304A0","F33304B8","FEAF1FCC","FCBE11","FEFF5F"],
+				"lightColor":"FCBE11",
+				"flareColor":"FEAF1F",
+				"length": 96,
+				"lifetime": 8,
+				"knockback": 2.5,
+				"statusDuration": 600,
+				"status": "burning",
+				"damage": 30,
+				"incendAmount": 1,
+				"incendSpread": 8,
+				"incendChance": 0.2,
+				"makeFire": true,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 4,
+					"sizeFrom":3.3,
+					"sizeTo":0,
+					"interp":"pow10Out",
+					"sizeInterp":"pow5In",
+					"length": 88,
+					"baseLength": 0,
+					"lifetime": 32,
+					"colorFrom": "f8ad42",
+					"colorTo": "F33304B8",
+					"cone": 13
+				},
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 2,
+					"line": true,
+					"strokeFrom": 1.3,
+					"strokeTo": 0,
+					"lenFrom": 18,
+					"lenTo": 8,
+					"length": 88,
+					"baseLength": 0,
+					"lifetime": 16,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FFE176",
+					"cone": 16
+				},
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"lifetime": 20,
+					"sizeFrom":2,
+					"sizeTo":0,
+					"interp":"pow3Out",
+					"sizeInterp":"pow3In",
+					"colorFrom": "F33304",
+					"colorTo": "FFE176"
+				}
+			}
+		}
+	]
+}

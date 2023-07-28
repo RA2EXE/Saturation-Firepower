@@ -1,0 +1,21 @@
+{
+	"name":"碎解",
+	"damage":9,
+	"damageMultiplier":0.7,
+	"healthMultiplier":0.75,
+	"speedMultiplier":0.8,
+	"effectChance":0.8,
+	"effect":{	"type": "ParticleEffect",
+	"particles": 1,  
+	"baseLength": 0,
+	"length":65,
+	"lifetime": 10,
+	"spin":12,
+	"sizeInterp":"pow5In",
+	"region":"饱和火力-三角形",
+	"sizeFrom": 4,
+	"sizeTo": 0,
+	"colorFrom": "FF5B5BFF",
+	"colorTo": "ffffff",
+	"cone":360 }
+}

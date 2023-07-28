@@ -1,0 +1,123 @@
+{
+	"name": "裂位收容块",
+	"type": "Wall",
+	"health": 800,
+	"size": 4,
+	"buildCostMultiplier": 0.8,
+	"requirements": [
+		"裂位能/300",
+		"镄/85"
+	],
+	"destroyBullet": {
+		"splashDamageRadius":68,
+		"instantDisappear":true,
+		"collides": false,
+		"splashDamage":200,
+		"speed":1,"lifetime":10,
+		"hitEffect":"none",
+		"despawnEffect":"none",
+		"width":0,	 "height":0,
+		"fragBullets":18,
+		"fragRandomSpread":360,
+		"fragLifeMin":0.1,
+		"fragLifeMax":1.5,
+		"fragBullet":{
+		"type": "BasicBulletType",
+		"weaveMag":4,
+		"weaveScale":10,
+		"damage": 60,
+		"pierce": true,
+		"despawnEffect": "none",
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 15,
+					"sizeFrom": 9,
+					"sizeTo": 0,
+					"length": 85,
+					"baseLength": 9,
+					"lifetime": 15,
+					"colorFrom": "FEEBB3",
+					"colorTo": "ffffff",
+					"cone": 70
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 0,
+					"sizeTo": 80,
+					"strokeFrom": 5,
+					"strokeTo": 0,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				}
+			]
+		},
+		"hitSound": "plasmaboom",
+		"shrinkY": 0,
+		"sprite": "饱和火力-透彻",
+		"width": 12,
+		"height": 40,
+		"frontColor": "FFFFFF",
+		"backColor": "FEEBB3",
+		"trailLength": 10,
+		"trailWidth": 2,
+		"trailColor": "FEEBB3",
+		"bulletInterval": 0.5,
+		"intervalBullets": 1,
+		"intervalRandomSpread": 60,
+		"intervalSpread": 8,
+		"intervalAngle": 0,
+		"intervalBullet": {
+			"type": "BasicBulletType",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 8,
+						"sizeFrom": 6,
+						"sizeTo": 0,
+						"length": 35,
+						"baseLength": 9,
+						"lifetime": 15,
+						"colorFrom": "FEEBB3",
+						"colorTo": "ffffff",
+						"cone": 40
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 0,
+						"sizeTo": 35,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					}
+				]
+			},
+			"despawnEffect": "instBomb",
+			"hitSound": "plasmaboom",
+			"width": 0,
+			"height": 0,
+			"damage": 36,
+			"collides": false,
+			"splashDamageRadius": 35,
+			"splashDamage": 23.5,
+			"lifetime": 15,
+			"speed": 0.5,
+			"lightningDamage": 7.5,
+			"lightning": 2,
+			"lightningLength": 3
+		},
+		"speed": 32,
+		"lifetime": 15,
+		"splashDamageRadius": 80,
+		"splashDamage": 85
+	}},
+	"category": "defense",
+	"research": "阔野管理中心"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "灌注站",
+	"description": "灌注液体至桶中",
+	"health": 360,
+	"size": 2,
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids":true,
+	"liquidCapacity":120,
+	"requirements": [
+ 	{ "item": "lead", "amount": 80 },
+ 	{ "item": "metaglass", "amount":20 },
+	{ "item": "silicon", "amount": 30 }
+	],
+	"category": "crafting",
+	"research":"kiln"
+}

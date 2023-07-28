@@ -1,0 +1,316 @@
+{
+	"type": "flying",
+	"name": "飓风",
+	"autoFindTarget": true,
+	"speed": 1.7,
+	"drag": 0.02,
+	"accel": 0.02,
+	"rotateSpeed": 2,
+	"immunities": [
+		"electrified",
+		"slow"
+	],
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 1000
+	},
+	"ammoCapacity": 1600,
+	"hitSize": 35,
+	"buildSpeed": 0,
+	"flying": true,
+	"health": 22500,
+	"armor": 12,
+	"itemCapacity": 90,
+	"engines": [
+		{
+			"x": -12,
+			"y": -12,
+			"radius": 4,
+			"rotation": -45
+		},
+		{
+			"x": 12,
+			"y": -12,
+			"radius": 4,
+			"rotation": -135
+		}
+	],
+	"engineOffset": 20,
+	"engineSize": 2,
+	"research": "空3",
+	"requirements": {
+		"block": "exponential-reconstructor",
+		"previous": "空3"
+	},
+	"faceTarget": true,
+	"weapons": [
+		{
+			"name": "飓风1",
+			"x": 8,
+			"y": 16,
+			"reload": 2.8,
+			"rotate": true,
+			"rotationLimit": 22,
+			"shootCone": 13,
+			"inaccuracy": 1.2,
+			"rotateSpeed": 16,
+			"shootSound": "JG1",
+			"top": false,
+			"bullet": {
+				"shrinkY": 0,
+				"frontColor": "FFFFFF",
+				"backColor": "c0ecff",
+				"shootEffect": {
+					"type": "WaveEffect",
+					"lifetime": 6,
+					"sizeFrom": 1,
+					"sizeTo": 8,
+					"strokeFrom": 4,
+					"strokeTo": 0,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				},
+				"smokeEffect": "none",
+				"hitEffect": {
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 1,
+					"sizeTo": 6,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				},
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 2.23,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 8,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff",
+					"cone": 360
+				},
+				"damage": 19,
+				"width": 7,
+				"height": 10,
+				"speed": 9,
+				"lifetime": 39
+			}
+		},
+		{
+			"name": "飓风1",
+			"x": 16,
+			"y": 4,
+			"reload": 3.2,
+			"rotate": true,
+			"rotationLimit": 22,
+			"shootCone": 13,
+			"inaccuracy": 1.2,
+			"rotateSpeed": 16,
+			"shootSound": "JG1",
+			"top": false,
+			"bullet": {
+				"shrinkY": 0,
+				"frontColor": "FFFFFF",
+				"backColor": "c0ecff",
+				"shootEffect": {
+					"type": "WaveEffect",
+					"lifetime": 6,
+					"sizeFrom": 1,
+					"sizeTo": 8,
+					"strokeFrom": 4,
+					"strokeTo": 0,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				},
+				"smokeEffect": "none",
+				"hitEffect": {
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 1,
+					"sizeTo": 6,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				},
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 2.23,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 8,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff",
+					"cone": 360
+				},
+				"damage": 25,
+				"width": 7,
+				"height": 10,
+				"speed": 9,
+				"lifetime": 39
+			}
+		},
+		{
+			"name": "飓风2",
+			"x": 10,
+			"y": 7,
+			"reload": 30,
+			"xRand": 4,
+			"alternate": false,
+			"shoot": {
+				"shots": 5,
+				"shotDelay": 5
+			},
+			"inaccuracy": 5,
+			"shootSound": "missile",
+			"velocityRnd": 0.1,
+			"bullet": {
+				"damage": 23,
+				"trailLength": 5,
+				"trailWidth": 3,
+				"trailColor": "c0ecff",
+				"sprite": "circle-bullet",
+				"shrinkY": 0,
+				"frontColor": "FFFFFF",
+				"backColor": "c0ecff",
+				"shootEffect": "none",
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 2,
+					"sizeFrom": 8,
+					"sizeTo": 0,
+					"length": 25,
+					"baseLength": 0,
+					"lifetime": 25,
+					"colorFrom": "ffffff",
+					"colorTo": "c0ecff",
+					"cone": 30
+				},
+				"splashDamageRadius": 35,
+				"splashDamage": 45,
+				"status": "unmoving",
+				"statusDuration": 5,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"sizeFrom": 5,
+							"sizeTo": 0,
+							"length": 45,
+							"baseLength": 0,
+							"interp": "pow5Out",
+							"sizeInterp": "pow5In",
+							"lifetime": 25,
+							"colorFrom": "ffffff",
+							"colorTo": "c0ecff",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"interp": "circleOut",
+							"lifetime": 18,
+							"sizeFrom": 1,
+							"sizeTo": 38,
+							"strokeFrom": 5,
+							"strokeTo": 0,
+							"colorFrom": "c0ecff",
+							"colorTo": "c0ecff"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"drag": -0.005,
+				"width": 7,
+				"height": 7,
+				"speed": 8,
+				"lifetime": 35
+			}
+		},
+		{
+			"name": "飓风2",
+			"x": 16,
+			"y": 2,
+			"reload": 30,
+			"xRand": 4,
+			"alternate": false,
+			"shoot": {
+				"shots": 5,
+				"shotDelay": 5
+			},
+			"inaccuracy": 5,
+			"shootSound": "missile",
+			"velocityRnd": 0.1,
+			"bullet": {
+				"damage": 23,
+				"trailLength": 5,
+				"trailWidth": 3,
+				"trailColor": "c0ecff",
+				"sprite": "circle-bullet",
+				"shrinkY": 0,
+				"frontColor": "FFFFFF",
+				"backColor": "c0ecff",
+				"shootEffect": "none",
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 2,
+					"sizeFrom": 8,
+					"sizeTo": 0,
+					"length": 25,
+					"baseLength": 0,
+					"lifetime": 25,
+					"colorFrom": "ffffff",
+					"colorTo": "c0ecff",
+					"cone": 30
+				},
+				"splashDamageRadius": 35,
+				"splashDamage": 45,
+				"status": "unmoving",
+				"statusDuration": 5,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"sizeFrom": 5,
+							"sizeTo": 0,
+							"length": 45,
+							"baseLength": 0,
+							"interp": "pow5Out",
+							"sizeInterp": "pow5In",
+							"lifetime": 25,
+							"colorFrom": "ffffff",
+							"colorTo": "c0ecff",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"interp": "circleOut",
+							"lifetime": 18,
+							"sizeFrom": 1,
+							"sizeTo": 38,
+							"strokeFrom": 5,
+							"strokeTo": 0,
+							"colorFrom": "c0ecff",
+							"colorTo": "c0ecff"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"drag": -0.005,
+				"width": 7,
+				"height": 7,
+				"speed": 8,
+				"lifetime": 35
+			}
+		}
+	]
+}

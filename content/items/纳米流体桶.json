@@ -1,0 +1,11 @@
+{
+	"name": "纳米流体桶",
+	"description": "标准液体桶，内存60单位纳米流体",
+	"details":"可以用作大面积修复与灭火，后勤之友",
+	"color": "7CF389FF",
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "纳米流体"
+}

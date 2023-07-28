@@ -1,0 +1,93 @@
+{
+	"name": "阳离子照射炮",
+	"type": "LaserTurret",
+	"size": 3,
+	"health": 2150,
+	"shootEffect": "none",
+	"shootSound": "pulse",
+	"range": 200,
+	"reload": 3,
+	"liquidCapacity": 120,
+	"inaccuracy": 0,
+	"recoil": 4,
+	"recoilTime": 80,
+	"rotateSpeed": 9,
+	"shake": 2,
+	"coolEffect": "steam",
+	"cooldownTime": 150,
+	"consumes": {
+		"power": 8,
+		"liquid": "water/1"
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"suffix": "-侧",
+				"under": true,
+				"moveX": 0.5,
+				"moveY": 3,
+				"moveRot": 11
+			}
+		]
+	},
+	"minWarmup": 0.98,
+	"shootDuration": 120,
+	"shootType": {
+		"type": "ContinuousLaserBulletType",
+		"hitEffect": "hitMeltdown",
+		"status": "阳电",
+		"statusDuration": 8,
+		"pierceArmor": true,
+		"width": 4,
+		"length": 220,
+		"knockback": 1,
+		"damage": 12,
+		"ammoMultiplier": 1,
+		"spawnBullets": [
+			{
+				"height": 25,
+				"width": 12,
+				"damage": 88,
+				"speed": 22,
+				"lifetime": 10,
+				"pierceArmor": true,
+				"splashDamageRadius": 35,
+				"splashDamage": 135,
+				"statusDuration": 60,
+				"status": "melting",
+				"frontColor": "FFA05C",
+				"backColor": "FFFFFF",
+				"trailLength": 16,
+				"trailWidth": 1.5,
+				"trailColor": "FFA05C",
+				"hitSound": "plasmaboom",
+				"despawnEffect": "none",
+				"hitEffect": {
+					"type": "ExplosionEffect",
+					"lifetime": 43,
+					"waveStroke": 6,
+					"waveLife": 22,
+					"waveRadBase": 4,
+					"waveColor": "FFA05C",
+					"waveRad": 44,
+					"smokes": 11,
+					"smokeColor": "FFA05C",
+					"sparkColor": "FFA05C",
+					"sparks": 23,
+					"sparkRad": 55,
+					"sparkStroke": 2,
+					"sparkLen": 16
+				}
+			}
+		]
+	},
+	"requirements": [
+		"lead/110","silicon/80",
+		"metaglass/50","硅钢/45"
+	],
+	"category": "turret",
+	"research": "lancer"
+}

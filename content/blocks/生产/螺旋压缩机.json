@@ -1,0 +1,21 @@
+{
+    "name": "螺旋压缩机",
+	"description": "新型四重液压机，以极快的速度处理材料",
+	"health": 1800,
+	"size": 4,
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids":true,
+	"itemCapacity":20,
+	"liquidCapacity":120,
+	"requirements": [
+ 	{ "item": "titanium", "amount": 250},
+ 	{ "item": "graphite", "amount":210 }, 
+ 	{ "item": "plastanium", "amount":90 }, 
+ 	{ "item": "silicon", "amount":80 }, 
+ 	{ "item": "一级协议", "amount":0}, 
+	{ "item": "水桶", "amount":4}
+	],
+	"category": "crafting",
+	"research":"塑钢厂"
+}

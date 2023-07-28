@@ -1,0 +1,55 @@
+{
+	"type": "GenericCrafter",
+	"name": "化合硅冶炼台",
+	"outputItem": "silicon/8",
+	"size": 4,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"squareSprite": false,
+	"craftTime": 60,
+	"itemCapacity": 20,
+	"liquidCapacity": 20,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{"type": "DrawLiquidRegion",
+			"drawLiquid": "hydrogen"},
+			{
+				"type":"DrawCrucibleFlame",
+				"midColor":"97A5F7",
+				"flameColor":"D1E4FF",
+				"flameRad":4.45,
+				"circleSpace":3,
+				"flameRadiusScl":16,
+				"flameRadiusMag":3,
+				"circleStroke":0.6,
+				"particles": 33,
+				"particleLife":107,
+				"particleRad":16,
+				"particleSize":2.68,
+				"rotateScl":1.7
+			},
+			"DrawDefault"
+			]
+	},
+	"craftEffect":"none",
+	"consumes": {
+	"power":3,
+	"liquid":"hydrogen/0.05",
+	"items": {"items": ["sand/8"] }},
+	"requirements": [
+		"beryllium/100",
+		"graphite/75",
+		"silicon/50",
+		"oxide/35",
+		"tungsten/90"
+	],
+	"ambientSound":"smelter",
+	"category": "crafting",
+	"research": "silicon-arc-furnace"
+}

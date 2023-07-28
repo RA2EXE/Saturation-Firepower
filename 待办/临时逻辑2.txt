@@ -1,0 +1,52 @@
+"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 末段圈内径,
+							"sizeTo": 末段圈内径,
+							"sizeInterp": "pow5In",
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 跟末段圈同步,
+							"colorFrom": "76D081A8",
+							"colorTo": "76D08100"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 末段圈内径,
+							"sizeTo": 2~3倍实际杀伤大小,
+							"strokeFrom": 12,
+							"strokeTo": 18,//如果可以的话，做一下边缘模糊
+							"colorFrom": "76D081AA",
+							"colorTo": "E3E3E3"//用臭猫深色变出的半透明能更好的模拟冲击波（json的爹
+						},
+                        {
+							"type": "ParticleEffect",
+							"particles": 16,
+							"sizeFrom": 28~32波动？,//具体大小我看不出来，大概是末段的内径的30%~40%
+					    	"sizeTo": 0,
+							"sizeInterp": "pow10In",
+							"interp": "pow5Out",
+							"length": 末段外径+30差不多,
+							"baseLength": 0,
+							"lifetime": 末段+120,
+							"colorFrom": "76D081A8",
+							"colorTo": "76D08180",
+							"cone": 360
+						},
+					]
+				},
+            "hitEffect": {
+				"type": "WaveEffect",
+				"lifetime": 30,
+				"sizeFrom": 0,
+				"sizeTo": 160,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"interp": "circleOut",
+				"colorFrom": "76D081",
+				"colorTo": "76D081"
+			},

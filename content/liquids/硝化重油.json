@@ -1,0 +1,13 @@
+{
+	"name": "硝化重油",
+	"description": "用作爆炸性流体弹药",
+	"alwaysUnlocked":false,
+	"color": "333333",
+	"effect":"油蚀",
+	"flammability": 1.5,
+	"temperature": 0.5,
+	"heatCapacity": 0,
+	"viscosity": 0.8,
+	"explosiveness": 3.2,
+	"research": "oil"
+}

@@ -1,0 +1,176 @@
+{
+	"type": "UnitFactory",
+	"name": "特种工厂",
+	"health": 2800,
+	"size": 5,
+	"consumes": {
+		"power": 18,
+		"liquid": "cryofluid/0.6"
+	},
+	"plans": [
+		{
+			"unit": "fortress",
+			"time": 1980,
+			"requirements": [
+				"lead/10",
+				"silicon/180",
+				"graphite/40",
+				"titanium/80",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "zenith",
+			"time": 1980,
+			"requirements": [
+				"silicon/185",
+				"graphite/40",
+				"titanium/80",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "bryde",
+			"time": 3060,
+			"requirements": [
+				"silicon/190",
+				"graphite/40",
+				"titanium/80",
+				"metaglass/75"
+			]
+		},
+		{
+			"unit": "spiroct",
+			"time": 1800,
+			"requirements": [
+				"coal/10",
+				"silicon/180",
+				"graphite/40",
+				"titanium/80",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "quasar",
+			"time": 2880,
+			"requirements": [
+				"lead/20",
+				"silicon/200",
+				"graphite/40",
+				"titanium/100",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "mega",
+			"time": 2700,
+			"requirements": [
+				"lead/15",
+				"silicon/200",
+				"graphite/40",
+				"titanium/80",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "cyerce",
+			"time": 3240,
+			"requirements": [
+				"silicon/185",
+				"graphite/40",
+				"titanium/100",
+				"metaglass/65"
+			]
+		},
+		{
+			"unit": "工农",
+			"time": 2800,
+			"requirements": [
+				"titanium/80",
+				"silicon/230",
+				"硅钢/60",
+				"纳米核/20"
+			]
+		},
+		{
+			"unit": "陆3",
+			"time": 2520,
+			"requirements": [
+				"lead/25",
+				"silicon/200",
+				"graphite/40",
+				"titanium/105",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "空3",
+			"time": 2340,
+			"requirements": [
+				"silicon/190",
+				"graphite/40",
+				"titanium/95",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "海3",
+			"time": 3600,
+			"requirements": [
+				"lead/25",
+				"silicon/200",
+				"graphite/40",
+				"titanium/105",
+				"metaglass/40"
+			]
+		},
+		{
+			"unit": "长弓",
+			"time": 4060,
+			"requirements": [
+				"silicon/230",
+				"titanium/120",
+				"metaglass/80",
+				"plastanium/60"
+			]
+		},
+		{
+			"unit": "攻城锤",
+			"time": 1800,
+			"requirements": [
+				"silicon/80",
+				"graphite/50",
+				"硅钢/20"
+			]
+		},
+		{
+			"unit": "冥燃",
+			"time": 3000,
+			"requirements": [
+				"silicon/180",
+				"graphite/90",
+				"硅钢/60",
+				"石油桶/10"
+			]
+		},
+		{
+			"unit": "雷鸣",
+			"time": 3000,
+			"requirements": [
+				"silicon/60",
+				"titanium/50",
+				"plastanium/20"
+			]
+		}
+	],
+	"requirements": [
+		"titanium/300",
+		"silicon/360",
+		"硅钢/80",
+		"纳米核/20",
+		"plastanium/60",
+		"二级协议/1"
+	],
+	"category": "units",
+	"research": "前沿实验室"
+}

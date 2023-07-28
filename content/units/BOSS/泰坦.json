@@ -1,0 +1,260 @@
+{
+	"type": "mech",
+	"name": "泰坦",
+	"description": "信息缺失！",
+	"details": "信息缺失！",
+	"immunities": [
+		"blasted",
+		"burning",
+		"electrified",
+		"freezing",
+		"melting",
+		"disarmed",
+		"sapped",
+		"shocked",
+		"slow",
+		"tarred",
+		"unmoving",
+		"wet",
+		"spore-slowed",
+		"corroded"
+	],
+	"speed": 0.66,
+	"mechSideSway": 0.7,
+	"mechFrontSway": 2.1,
+	"hitSize": 75,
+	"health": 250000,
+	"armor": 230,
+	"rotateSpeed": 1.5,
+	"hovering": true,
+	"faceTarget": true,
+	"canDrown": false,
+	"research": "泰坦",
+	"abilities": [
+		{
+			"type": "StatusFieldAbility",
+			"duration": 400,
+			"reload": 300,
+			"range": 160,
+			"applyEffect": "none",
+			"activeEffect": "none",
+			"effect": "boss"
+		},
+		{
+			"type": "ShieldRegenFieldAbility",
+			"amount": 60,
+			"max": 6000,
+			"reload": 60,
+			"range": 160,
+			"applyEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 1,
+						"sizeTo": 80,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 30,
+						"colorFrom": "FF5B5B55",
+						"colorTo": "FF5B5B00",
+						"cone": 360
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 22,
+						"sizeFrom": 0,
+						"sizeTo": 60,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "FF5B5BFF",
+						"colorTo": "FF5B5BFF"
+					}
+				]
+			},
+			"activeEffect": {
+				"type": "WaveEffect",
+				"lifetime": 42,
+				"sizeFrom": 0,
+				"sizeTo": 160,
+				"strokeFrom": 10,
+				"strokeTo": 0,
+				"colorFrom": "FEEBB355",
+				"colorTo": "FEEBB355"
+			}
+		}
+	],
+	"weapons": [
+		{
+			"name": "泰坦1",
+			"reload": 18,
+			"shoot": {
+				"type": "ShootMulti",
+				"source": {},
+				"dest": [
+					{
+						"type": "ShootHelix",
+						"scl": 6,
+						"mag": 6,
+						"shots": 15
+					},
+					{
+						"type": "ShootHelix",
+						"scl": 8,
+						"mag": 3,
+						"shots": 15
+					}
+				]
+			},
+			"inaccuracy": 15,
+			"shootCone": 30,
+			"x": 44,
+			"y": 0,
+			"shootY": 30,
+			"rotate": false,
+			"shake": 5,
+			"recoil": 6,
+			"shootSound": "largeCannon",
+			"velocityRnd": 0.35,
+			"bullet": {
+				"damage": 104.6,
+				"pierce": true,
+				"pierceBuilding": true,
+				"pierceArmor": true,
+				"pierceCap": 4,
+				"knockback": 16,
+				"speed": 23,
+				"lifetime": 17.3,
+				"width": 12,
+				"height": 24,
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"line": true,
+					"strokeFrom": 5,
+					"strokeTo": 0,
+					"lenFrom": 26,
+					"lenTo": 0,
+					"length": 100,
+					"baseLength": 0,
+					"lifetime": 10,
+					"colorFrom": "FFE176",
+					"colorTo": "ffffff",
+					"cone": 60
+				},
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 6,
+					"line": true,
+					"strokeFrom": 5,
+					"strokeTo": 0,
+					"lenFrom": 26,
+					"lenTo": 0,
+					"length": 100,
+					"baseLength": 0,
+					"lifetime": 10,
+					"colorFrom": "FFE176",
+					"colorTo": "ffffff",
+					"cone": 60
+				},
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"interp": "fastSlow",
+					"sizeFrom": 8,
+					"sizeTo": 0,
+					"length": 35,
+					"baseLength": 0,
+					"lifetime": 25,
+					"colorFrom": "ffffff",
+					"colorTo": "ffffff",
+					"cone": 60
+				},
+				"smokeEffect": "bigShockwave"
+			}
+		},
+		{
+			"name": "泰坦2",
+			"reload": 60,
+			"x": 32,
+			"y": 16,
+			"shoot": {
+				"type": "ShootSpread",
+				"shots": 5,
+				"spread": 0
+			},
+			"shake": 3,
+			"recoil": 1,
+			"rotate": false,
+			"inaccuracy": 5,
+			"shootSound": "plasmadrop",
+			"velocityRnd": 0.15,
+			"bullet": {
+				"damage": 180,
+				"splashDamage": 300,
+				"splashDamageRadius": 144,
+				"hitShake": 8,
+				"hitSize": 90,
+				"status": "碎解",
+				"hitSound": "plasmaboom",
+				"statusDuration": 600,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"width": 13,
+				"height": 20,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 15,
+							"sizeFrom": 12,
+							"sizeTo": 0,
+							"length": 150,
+							"baseLength": 35,
+							"lifetime": 45,
+							"colorFrom": "FF5B5BFF",
+							"colorTo": "ffffff",
+							"cone": 360
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 130,
+							"sizeTo": 0,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 65,
+							"colorFrom": "FF5B5B50",
+							"colorTo": "FF5B5B00",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 19,
+							"sizeFrom": 2,
+							"sizeTo": 145,
+							"strokeFrom": 8,
+							"strokeTo": 0,
+							"colorFrom": "FF5B5BFF",
+							"colorTo": "FF5B5BFF"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"sprite": "missile-large",
+				"shrinkX": 0.1,
+				"shrinkY": 0.2,
+				"speed": 60,
+				"lifetime": 50,
+				"drag": 0.1,
+				"backColor": "FF5B5BFF",
+				"frontColor": "FFFFFF",
+				"trailLength": 9,
+				"trailWidth": 2,
+				"trailColor": "FF5B5BFF"
+			}
+		}
+	]
+}

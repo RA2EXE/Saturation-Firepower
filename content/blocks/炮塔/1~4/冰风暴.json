@@ -1,0 +1,93 @@
+{
+	"type": "PowerTurret",
+	"name": "冰风暴",
+	"description": "延缓敌人的攻势。与电光箭同时使用可能会降低效益。",
+	"targetAir": true,
+	"targetGround": true,
+	"health": 1200,
+	"size": 2,
+	"heatColor": "turretHeat",
+	"shootSound": "JG1",
+	"shake": 0.2,
+	"inaccuracy": 3,
+	"recoil": 2,
+	"shoot": {
+		"type": "ShootAlternate",
+		"barrels": 2,
+		"spread": 4
+	},
+	"recoilTime": 10,
+	"shootType": {
+		"type": "BasicBulletType",
+		"damage": 12,
+		"frontColor": "87CEEB",
+		"backColor": "87CEEB",
+		"width": 4,
+		"height": 8,	   
+		"trailLength": 1,
+		"trailWidth": 1.3,
+		"trailColor": "87CEEB",
+		"pierce": true,
+		"status": "freezing",
+		"statusDuration": 180,
+		"speed": 20,
+		"lifetime": 10,
+		"ammoMultiplier": 1,
+		"hitEffect": {
+			"type": "WaveEffect",
+			"lifetime": 8,
+			"sizeFrom": 0,
+			"sizeTo": 8,
+			"strokeFrom": 1,
+			"strokeTo": 0,
+			"colorFrom": "FFFFFF",
+			"colorTo": "87CEEB"
+		},
+		"despawnEffect": {
+			"type": "WaveEffect",
+			"lifetime": 8,
+			"sizeFrom": 0,
+			"sizeTo": 8,
+			"strokeFrom": 1,
+			"strokeTo": 0,
+			"colorFrom": "FFFFFF",
+			"colorTo": "87CEEB"
+		}
+	},
+	"shootEffect": {
+		"type": "WaveEffect",
+		"lifetime": 8,
+		"sizeFrom": 0,
+		"sizeTo": 8,
+		"strokeFrom": 1,
+		"strokeTo": 0,
+		"colorFrom": "FFFFFF",
+		"colorTo": "87CEEB"
+	},
+	"consumes": {
+		"power": 7,
+		"coolant": {
+			"amount": 0.2,
+			"optional": true
+		}
+	},
+	"reload": 5,
+	"rotateSpeed": 13,
+	"range": 200,
+	"category": "turret",
+	"research": "电光箭",
+	"requirements": [
+		{
+			"item": "copper",
+			"amount": 90
+		},
+		{
+			"item": "lead",
+			"amount": 100
+		},
+		{
+			"item": "silicon",
+			"amount": 90
+		}
+	]
+}

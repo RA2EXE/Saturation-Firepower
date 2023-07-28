@@ -1,0 +1,16 @@
+{
+	"name": "高级协议",
+	"description": "进行建筑之前请确定你已被授权该协议",
+	"details":"前沿战略性技术使用许可已授权",
+	"hardness": 0,
+	"cost":0.75,
+	"alwaysUnlocked":false,
+	"color": "EEEE00",
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"frames":6,
+	"transitionFrames":1,
+	"frameTime":3,
+	"research": "一级协议"
+}

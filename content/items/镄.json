@@ -1,0 +1,14 @@
+{
+	"name": "镄",
+	"description": "用于高耐用结构与高抗热装甲，穿透性化学燃烧弹药与裂变反应剂。",
+	"details":"泰伯利亚上的稀有金属，致密坚硬。具有放射性，",
+	"cost":6,
+	"color": "DEDEDEFF",
+	"alwaysUnlocked":false,   
+	"hardness":7,
+	"healthScaling": 1.8,
+	"radioactivity": 1.5,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "前哨基地"
+}

@@ -1,0 +1,32 @@
+{
+	"type": "Constructor",
+	"name": "载荷组装器",
+	"health": 2000,
+	"breakable":false,
+	"canOverdrive": false,
+	"minBlockSize": 4,
+	"maxBlockSize": 4,
+	"size": 6,
+	"buildSpeed": 0.35,
+	"filter":["裂位收容块","装甲收容块"],
+	"consumes": {
+		"power": 10,
+		"liquid": "cryofluid/1"
+	},
+	"requirements": [
+		"silicon/450",
+		"莱普合金/600",
+		"纳米核/200",
+		"二级协议/1"
+	],
+	"category": "units",
+	"research": {
+		"parent": "阔野管理中心",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "火天路"
+			}
+		]
+	}
+}

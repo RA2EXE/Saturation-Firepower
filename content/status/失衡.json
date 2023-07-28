@@ -1,0 +1,22 @@
+{
+	"name": "失衡",
+	"show":false,
+	"damageMultiplier":-0.05,
+	"speedMultiplier": -1.28,
+	"reloadMultiplier":0.43,
+	"effectChance": 0.08,
+	"effect": {
+		"type": "ParticleEffect",
+		"particles": 3,
+		"length": 50,
+		"lifetime": 26,
+		"spin": -2,
+		"interp": "pow10In",
+		"region": "饱和火力-三角形",
+		"sizeInterp":"pow5In",
+		"sizeFrom": 3,
+		"sizeTo": 0,
+		"colorFrom": "BFFFDB",
+		"colorTo": "BFFFDB"
+	}
+}

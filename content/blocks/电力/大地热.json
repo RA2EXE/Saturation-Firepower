@@ -1,0 +1,28 @@
+{
+	"type": "ThermalGenerator",
+	"name": "大型地热炉",
+	"description": "地热高效利用，更大，更强！",
+	"size": 3,
+	"health": 460,
+	"powerProduction": 3.6,
+	"generateEffect":"redgeneratespark",
+	"effectChance":0.08,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			"DrawDefault",
+			{"type":"DrawFade",
+			"scale":10}
+			]
+	},
+	"requirements": [
+	"copper/160","lead/200",
+	"metaglass/160","graphite/140",
+	"silicon/140"
+	],
+	"floating": true,
+	"ambientSound":"hum",
+	"attribute": "heat",
+	"category": "power",
+	"research": "thermal-generator"
+}

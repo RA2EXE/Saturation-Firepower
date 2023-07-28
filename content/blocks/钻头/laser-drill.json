@@ -1,0 +1,19 @@
+{
+    "itemCapacity": 15,
+    "drillTime": 100,
+    "updateEffect":{
+        "type": "ParticleEffect",
+        "particles": 5,
+        "line": true,
+        "strokeFrom": 3,
+        "strokeTo": 0,
+        "lenFrom": 10,
+        "lenTo": 0,
+        "length": 20,
+        "baseLength": 0,
+        "lifetime": 10,
+        "colorFrom": "ffffff",
+        "colorTo": "ffffff",
+        "cone":360
+            }
+}

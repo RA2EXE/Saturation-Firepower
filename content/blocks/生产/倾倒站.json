@@ -1,0 +1,17 @@
+{
+	"name": "倾倒站",
+	"description": "倒出桶中液体",
+	"size": 2,
+	"health": 360,
+	"hasPower": false,
+	"hasLiquids": true,
+	"hasItems": true,
+	"itemCapacity": 20,
+	"liquidCapacity": 300,
+	"requirements": [
+	{ "item": "lead", "amount": 80},
+	{ "item": "metaglass", "amount": 40 }
+	],
+	"category": "crafting",
+	"research": "灌注站"
+}

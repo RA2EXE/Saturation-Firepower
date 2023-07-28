@@ -1,0 +1,63 @@
+{
+	"details": "更高的能量效率意味着更高的压力与更大的爆燃事故",
+	"destroyBullet": {
+		"hitSound": "explosionbig",
+		"width": 16,
+		"height": 16,
+		"sprite": "circle-bullet",
+		"shrinkY": 0,
+		"hitShake": 5,
+		"makeFire": true,
+		"status": "burning",
+		"statusDuration": 300,
+		"backColor": "FFFFFF",
+		"frontColor": "FFFFFF",
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+"type": "ParticleEffect",
+"particles": 16,
+"sizeFrom": 9,
+"sizeTo": 0,
+"length": 100,
+"baseLength": 30,
+"lifetime": 45,
+"colorFrom": "737373FF",
+"colorTo": "737373FF",
+"cone": 360
+				},
+				{
+"type": "ParticleEffect",
+"particles": 12,
+"line": true,
+"sizeFrom": 8,
+"sizeTo": 0,
+"length": 160,
+"baseLength": 8,
+"lifetime": 22,
+"colorFrom": "FFFFFF",
+"colorTo": "FFE176FF",
+"cone": 360
+				},
+				{
+"type": "WaveEffect",
+"lifetime": 10,
+"sizeFrom": 1,
+"sizeTo": 170,
+"strokeFrom": 6,
+"strokeTo": 0,
+"colorFrom": "FFE176FF",
+"colorTo": "ffffff"
+				}
+			]
+		},
+		"despawnEffect": "none",
+		"collides": false,
+		"speed": 1,
+		"lifetime": 1,
+		"splashDamageRadius": 160,
+		"splashDamage": 80
+	},
+	"powerProduction": 28
+}

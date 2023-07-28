@@ -1,0 +1,6 @@
+{	"details":"兄弟，借个火？",
+	"outputItem": {"item": "silicon", "amount": 1},
+	"craftTime": 40,
+	"consumes": {
+	"power": 0.25	}
+}

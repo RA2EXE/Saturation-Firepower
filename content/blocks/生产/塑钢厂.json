@@ -1,0 +1,41 @@
+{
+	"type": "GenericCrafter",
+	"name": "大型塑钢压缩机",
+	"outputItem": { "item": "plastanium", "amount": 3},
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 60,
+	"itemCapacity": 20,
+	"liquidCapacity": 20,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			"DrawDefault",
+			"DrawFade"
+			]
+	},
+	"craftEffect":"formsmoke",
+	"updateEffect":"plasticburn",
+	"consumes": {
+	"power":7,
+	"liquid":{
+	"liquid":"oil",
+	"amount":0.5,
+	"booster":false	},
+	"items": {
+	 "items": [
+		{ "item": "titanium", "amount": 5 }	]
+  }
+ },
+"requirements": [
+		{ "item": "graphite", "amount": 100 },
+		{"item": "silicon","amount":90 },
+		{"item": "thorium","amount":80},
+		{"item": "硅钢","amount": 35},
+		{"item": "一级协议","amount":0}
+	],
+	"category": "crafting",
+	"research": "plastanium-compressor"
+}

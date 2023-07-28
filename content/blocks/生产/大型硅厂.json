@@ -1,0 +1,40 @@
+{
+	"type": "GenericCrafter",
+	"health": 360,
+	"name": "火硅炉",
+	"outputItem": {"item": "silicon", "amount": 3	},
+	"itemCapacity": 40,
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 35,
+	"updateEffect":"none",
+	"craftEffect":"smeltsmoke",
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			"DrawDefault",
+		{"type":"DrawFlame",
+		"flameRadius": 0,
+		"flameRadiusIn": 0,
+		"flameRadiusMag": 0,
+		"flameRadiusInMag": 0}
+			]
+	},
+	"consumes": {
+	"power": 2.5,
+	"items": {	"items": [
+	{ "item": "coal", "amount": 2 },
+	{ "item": "sand", "amount": 5 }	]
+		}
+	},
+	"requirements": [
+		{ "item": "copper", "amount":100 },
+		{ "item": "lead", "amount": 85 },
+		{ "item": "graphite", "amount": 35 }
+		],
+	"category": "crafting",
+	"ambientSound":"smelter",
+	"research": "silicon-smelter"
+}

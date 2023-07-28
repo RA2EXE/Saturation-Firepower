@@ -1,0 +1,24 @@
+{
+	"name": "区块超速穹顶",
+	"description": "放在该地区中央，为该地区提供少量加速，不可提升效率",
+	"type": "OverdriveProjector",
+	"health": 1800,
+	"size": 4,
+	"range": 7200,
+	"speedBoost": 1.5,
+	"phaseRangeBoost":0,
+	"speedBoostPhase":0,
+	"hasBoost":false,
+	"consumes": {
+		"power": 12
+	},
+	"requirements": [
+	{ "item":"lead","amount":330},	
+	{ "item":"silicon","amount":230},
+	{ "item":"硅钢","amount":180},
+	{ "item":"plastanium","amount":220},		
+	{ "item":"surge-alloy","amount":180},
+	{ "item":"二级协议","amount":3}],
+	"category": "effect",
+	"research":"裂位超速穹顶"
+}

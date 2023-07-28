@@ -1,0 +1,20 @@
+{
+	"name":"干扰",
+	"speedMultiplier":0.3,
+	"healthMultiplier":0.98,
+	"reloadMultiplier":0.5,
+	"effectChance":0.5,
+	"effect":{	"type": "ParticleEffect",
+	"particles": 1,  
+	"baseLength": 0,
+	"length":16,
+	"lifetime": 10,
+	"line": true,
+	"lenFrom": 10,
+	"lenTo":0,
+	"strokeFrom": 1,
+	"strokeTo": 0,
+	"colorFrom": "97FFA8",
+	"colorTo": "97FFA8",
+	"cone":360 }
+}

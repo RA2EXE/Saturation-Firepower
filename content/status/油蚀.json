@@ -1,0 +1,28 @@
+{
+"name":"油蚀",
+	"damage": 1.2,
+	"speedMultiplier":0.4,
+	"effectChance":0.6,
+	"opposites": [
+		"wet",
+		"freezing",
+		"修复"
+	],
+	"transitionDamage": 30,
+	"affinities": [
+		"burning",
+		"shocked",
+		"blasted",
+		"melting"
+	],
+	"effect":{	"type": "ParticleEffect",
+	"particles": 1,  
+	"baseLength": 10,
+	"length":8,
+	"lifetime": 20,
+	"sizeFrom": 1,
+	"sizeTo": 0,
+	"colorFrom": "333333",
+	"colorTo": "333333",
+	"cone":360 }
+}

@@ -1,0 +1,39 @@
+{
+	"type": "PointDefenseTurret",
+	"name": "消去",
+	"description": "大型拦截装置。击毁来袭的子弹或导弹。需要持续冷却供应。",
+	"size": 5,
+	"health": 5300,
+	"range": 488,
+	"hasPower": true,
+	"rotateSpeed": 20,
+	"bulletDamage": 330,
+	"retargetTime":5.5,
+	//如果你要高效拦截的话，上下这俩家伙记得相等
+	//如果你要来一波奇妙操作的话，上面往死里提升，下面往死里下降
+	"reload": 4,
+	//45装弹6连发1间隔，Java实现
+	//"shoot":{"shots":6,"shotDelay":1},
+	"consumes": {
+		"power": 105,
+		"liquid": {
+			"liquid": "cryofluid",
+			"amount": 2
+		}
+	},
+	"liquidCapacity": 20,
+	"requirements": [
+		"silicon/520","镄/1500",
+		"硅钢/900","泰勒合金/800",
+		"裂位能/2000","二级协议/35"
+	],
+	//忒麻麻的，点防炮不能用drawer，报错了
+	"category": "turret",
+	"research": {
+		"parent": "折跃",
+		"objectives": [
+			{"type": "SectorComplete","preset": "断层带"},
+			{"type": "SectorComplete","preset": "风沙谷"}
+		]
+	}
+}

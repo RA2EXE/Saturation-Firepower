@@ -1,0 +1,122 @@
+{
+	"type": "ImpactReactor",
+	"name": "裂爆反应堆",
+	"size": 4,
+	"health": 10500,
+	"liquidCapacity": 500,
+	"itemCapacity": 60,
+	"warmupSpeed": 0.001,
+	"hasItems": true,
+	"hasLiquids": true,
+	"outputsPower": true,
+	"powerProduction": 660,
+	"itemDuration": 36000,
+	"lightColor": "FFFFFF",
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawPlasma",
+				"plasma1": "BFFFDB",
+				"plasma2": "25C9AB"
+			},
+			"DrawDefault",
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "cryofluid"
+			}
+		]
+	},
+	"destroyBullet": {
+		"type": "BasicBulletType",
+		"splashDamageRadius": 480,
+		"splashDamage": 6000,
+		"makeFire": true,
+		"hitEffect": {
+			"type": "WaveEffect",
+			"lifetime": 40,
+			"sizeFrom": 40,
+			"sizeTo": 480,
+			"strokeFrom": 30,
+			"strokeTo": 0,
+			"colorFrom": "EEC591",
+			"colorTo": "ffffffff"
+		},
+		"despawnEffect": {
+			"type": "ParticleEffect",
+			"particles": 1,
+			"sizeFrom": 380,
+			"sizeTo": 0,
+			"length": 0,
+			"baseLength": 0,
+			"lifetime": 100,
+			"colorFrom": "EEC591",
+			"colorTo": "ffffffff",
+			"cone": 360
+		},
+		"trailColor": "FFFFFF",
+		"backColor": "FF5B5BFF",
+		"frontColor": "E3E3E3",
+		"width": 0,
+		"height": 0,
+		"speed": 0,
+		"lifetime": 2,
+		"hitSound": "DBZ1"
+	},
+	"consumes": {
+		"power": 5,
+		"liquid": {
+			"liquid": "cryofluid",
+			"amount": 3
+		},
+		"items": {"items": ["thorium/18","blast-compound/18"]}
+	},
+	"requirements": [
+		{
+			"item": "lead",
+			"amount": 1000
+		},
+		{
+			"item": "graphite",
+			"amount": 400
+		},
+		{
+			"item": "metaglass",
+			"amount": 400
+		},
+		{
+			"item": "镄",
+			"amount": 780
+		},
+		{
+			"item": "silicon",
+			"amount": 750
+		},
+		{
+			"item": "titanium",
+			"amount": 650
+		},
+		{
+			"item": "surge-alloy",
+			"amount": 300
+		},
+		{
+			"item": "硅钢",
+			"amount": 450
+		},
+		{
+			"item": "泰勒合金",
+			"amount": 250
+		},
+		{
+			"item": "三级协议",
+			"amount": 12
+		}
+	],
+	"category": "power",
+	"research": "镄反应堆"
+}

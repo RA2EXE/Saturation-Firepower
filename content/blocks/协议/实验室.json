@@ -1,0 +1,36 @@
+{
+	"type": "GenericCrafter",
+	"name": "实验室",
+	"description": "提供初期广泛科技研究。\n[red]不要急于求成[white]，科研不是短时间内可以成功的",
+	"outputItem": "一级协议/1",
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawFlame",
+				"flameRadius": 2,
+				"flameRadiusIn": 0.5,
+				"flameColor": "25C9ABFF"
+			},
+			"DrawDefault"
+		]
+	},
+	"size": 2,
+	"canOverdrive": false,
+	"health": 360,
+	"itemCapacity": 25,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 3000,
+	"consumes": {
+		"power": 10
+	},
+	"requirements": [
+		"lead/80",
+		"silicon/60",
+		"titanium/50"
+	],
+	"category": "effect",
+	"research": "silicon-smelter"
+}

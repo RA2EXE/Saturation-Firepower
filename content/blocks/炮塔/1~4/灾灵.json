@@ -1,0 +1,177 @@
+{
+	"type": "ItemTurret",
+	"name": "灾灵",
+	"health": 4320,
+	"armor": 8,
+	"size": 4,
+	"reload": 15,
+	"range": 315,
+	"maxAmmo": 300,
+	"recoilTime": 20,
+	"recoil": 4,
+	"cooldownTime": 80,
+	"shoot": {
+		"shots": 9,
+		"shotDelay": 5.6,
+		"type": "ShootAlternate",
+		"barrels": 3,
+		"spread": 6
+	},
+	"ammoUseEffect": "casing3Double",
+	"ammoPerShot": 2,
+	"consumeAmmoOnce":false,
+	"targetGround": true,
+	"targetAir": true,
+	"consumes": {
+		"coolant": {
+			"amount": 2,
+			"optional": true
+		}
+	},
+    "coolantMultiplier": 0.5,
+	"liquidCapacity": 360,
+	"inaccuracy": 3.5,
+	"shake": 3,
+	"shootSound": "shootBig",
+	"rotateSpeed": 8.5,
+	"ammoTypes": {
+		"pyratite": {
+			"speed": 10,
+			"damage": 75,
+			"splashDamageRadius": 35,
+			"splashDamage": 30,
+			"knockback": 2,
+			"pierceArmor": true,
+			"makeFire": true,
+			"status": "burning",
+			"statusDuration": 600,
+			"lifetime": 30,
+			"pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 4,
+			"incendChance": 0.3,
+			"incendSpread": 16,
+			"incendAmount": 3,
+			"backColor": "FF8C00",
+			"frontColor": "FFB90F",
+			"width": 16,
+			"height": 20,
+			"ammoMultiplier": 3,
+			"despawnEffect": "flakExplosionBig",
+			"hitEffect": "flakExplosionBig",
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke"
+		},
+		"blast-compound": {
+			"speed": 10,
+			"damage": 35,
+			"splashDamageRadius": 50,
+			"splashDamage": 75,
+			"knockback": 2.5,
+			"status": "blasted",
+			"statusDuration": 60,
+			"lifetime": 30,
+			"pierce": true,
+			"pierceArmor": true,
+			"pierceBuilding": true,
+			"pierceCap": 2,
+			"width": 16,
+			"height": 20,
+			"ammoMultiplier": 4,
+			"despawnEffect": "flakExplosionBig",
+			"hitEffect": "flakExplosionBig",
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke"
+		},
+		"graphite": {
+			"speed": 10,
+			"damage": 70,
+			"knockback": 2.3,
+			"reloadMultiplier": 1.1,
+			"lifetime": 30,
+			"pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 4,
+			"width": 16,
+			"height": 20,
+			"ammoMultiplier": 3,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke"
+		},
+		"thorium": {
+			"speed": 11,
+			"damage": 135,
+			"lifetime": 28,
+			"knockback": 0.6,
+			"pierce": true,
+			"pierceArmor": true,
+			"pierceBuilding": true,
+			"pierceCap": 8,
+			"width": 18,
+			"height": 23,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"ammoMultiplier": 3
+		},
+		"裂位能": {
+			"type": "PointBulletType",
+			"damage": 45,
+			"trailEffect": "none",
+			"despawnEffect": "instBomb",
+			"hitEffect": "instBomb",
+			"hitSound": "plasmaboom",
+			"pierceArmor": true,
+			"status":"崩溃",
+			"statusDuration":54,
+			"speed": 30,
+			"lifetime": 60,
+			"splashDamageRadius": 35,
+			"splashDamage": 55,
+			"ammoMultiplier": 6
+		},
+		"硅钢": {
+			"speed": 9,
+			"damage": 65,
+			"lifetime": 35,
+			"knockback": 1,
+			"pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 4,
+			"status": "unmoving",
+			"statusDuration": 20,
+			"width": 16,
+			"height": 20,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"ammoMultiplier": 6
+		}
+	},
+	"requirements": [
+		{
+			"item": "copper",
+			"amount": 950
+		},
+		{
+			"item": "graphite",
+			"amount": 325
+		},
+		{
+			"item": "plastanium",
+			"amount": 230
+		},
+		{
+			"item": "surge-alloy",
+			"amount": 300
+		},
+		{
+			"item": "镄",
+			"amount": 480
+		},
+		{
+			"item": "二级协议",
+			"amount": 0
+		}
+	],
+	"category": "turret",
+	"research": "穿云"
+}

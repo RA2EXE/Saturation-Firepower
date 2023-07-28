@@ -1,0 +1,216 @@
+{
+	"health": 48000,
+	"details": "搭载修复光束与纳米导弹",
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 5000
+	},
+	"weapons": [
+		{
+			"name": "O枪",
+			"reload": 22,
+			"x": -20,
+			"y": 16,
+			"shoot": {
+				"shots": 3,
+				"shotDelay": 3
+			},
+			"rotate": true,
+			"rotateSpeed": 9,
+			"inaccuracy": 3,
+			"shootSound": "lasershoot",
+			"bullet": {
+				"type": "LaserBoltBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8FF",
+				"healPercent": 7,
+				"damage": 21,
+				"pierce": true,
+				"pierceCap": 3,
+				"collidesTeam": true,
+				"speed": 7,
+				"lifetime": 45,
+				"width": 2.5,
+				"height": 10
+			}
+		},
+		{
+			"name": "O枪",
+			"reload": 60,
+			"x": 26,
+			"y": 14,
+			"shoot": {
+				"shots": 4,
+				"shotDelay": 4
+			},
+			"rotate": true,
+			"rotateSpeed": 9,
+			"inaccuracy": 3,
+			"shootSound": "lasershoot",
+			"bullet": {
+				"type": "LaserBoltBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8FF",
+				"healPercent": 6,
+				"damage": 23,
+				"pierce": true,
+				"pierceCap": 3,
+				"collidesTeam": true,
+				"speed": 7,
+				"lifetime": 45,
+				"width": 3,
+				"height": 10
+			}
+		},
+		{
+			"name": "O枪",
+			"reload": 12,
+			"x": -20,
+			"y": -32,
+			"shoot": {
+				"shots": 3,
+				"shotDelay": 3
+			},
+			"rotate": true,
+			"rotateSpeed": 9,
+			"inaccuracy": 3,
+			"shootSound": "lasershoot",
+			"bullet": {
+				"type": "LaserBoltBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8FF",
+				"healPercent": 7,
+				"damage": 21,
+				"pierce": true,
+				"pierceCap": 3,
+				"collidesTeam": true,
+				"speed": 7,
+				"lifetime": 45,
+				"width": 2.5,
+				"height": 10
+			}
+		},
+		{
+			"name": "O枪",
+			"reload": 60,
+			"x": 26,
+			"y": -30,
+			"shoot": {
+				"shots": 4,
+				"shotDelay": 4
+			},
+			"rotate": true,
+			"rotateSpeed": 9,
+			"inaccuracy": 3,
+			"shootSound": "lasershoot",
+			"bullet": {
+				"type": "LaserBoltBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8FF",
+				"healPercent": 6,
+				"damage": 23,
+				"pierce": true,
+				"pierceCap": 3,
+				"collidesTeam": true,
+				"speed": 7,
+				"lifetime": 45,
+				"width": 3,
+				"height": 10
+			}
+		},
+		{
+			"name": "要塞2",
+			"reload": 80,
+			"x": 24,
+			"y": -8,
+			"shootY": 6,
+			"xRand": 4,
+			"shoot": {
+				"shots": 2,
+				"shotDelay": 8,
+				"type": "ShootHelix",
+				"mag": 1,
+				"scl": 3
+			},
+			"rotate": true,
+			"rotateSpeed": 3,
+			"alternate": true,
+			"inaccuracy": 30,
+			"shootSound": "missile",
+			"bullet": {
+				"type": "MissileBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8FF",
+				"healPercent": 10,
+				"status": "拆解",
+				"statusDuration": 60,
+				"damage": 22,
+				"splashDamageRadius": 45,
+				"splashDamage": 26,
+				"homingPower": 0.06,
+				"homingRange": 100,
+				"trailLength": 8,
+				"trailWidth": 3,
+				"trailColor": "97FFA8FF",
+				"sprite": "missile-large",
+				"shrinkY": 0,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 6,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 30,
+					"baseLength": 0,
+					"lifetime": 65,
+					"colorFrom": "97FFA8ff",
+					"colorTo": "97FFA800",
+					"cone": 60
+				},
+				"smokeEffect": {
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 1,
+					"sizeTo": 16,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "97FFA8AA",
+					"colorTo": "97FFA8AA"
+				},
+				"hitSound": "plasmaboom",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 6,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 30,
+							"baseLength": 20,
+							"lifetime": 45,
+							"colorFrom": "97FFA8AA",
+							"colorTo": "97FFA890",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 15,
+							"sizeFrom": 0,
+							"sizeTo": 49,
+							"strokeFrom": 4,
+							"strokeTo": 0,
+							"colorFrom": "97FFA8ff",
+							"colorTo": "97FFA890"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"collidesTeam": true,
+				"speed": 4,
+				"lifetime": 80,
+				"width": 12,
+				"height": 12
+			}
+		}
+	]
+}

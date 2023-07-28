@@ -1,0 +1,107 @@
+{
+	"reload": 20,
+	"range": 200,
+	"shoot": {
+		"shots": 2,
+		"shotDelay": 5
+	},
+	"ammoUseEffect": "casing2",
+	"inaccuracy": 17,
+	"rotateSpeed": 12,
+	"shake": 0.5,
+	"targetGround": false,
+	"ammoTypes": {
+		"lead": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 4,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 9,
+			"height": 10,
+			"damage": 3,
+			"splashDamage": 40,
+			"splashDamageRadius": 15,
+			"reloadMultiplier": 1,
+			"hitEffect": "flakExplosion",
+			"despawnEffect": "flakExplosion"
+		},
+		"scrap": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 5,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 9,
+			"height": 10,
+			"damage": 3,
+			"splashDamage": 27,
+			"splashDamageRadius": 15,
+			"reloadMultiplier": 0.7,
+			"hitEffect": "flakExplosion",
+			"despawnEffect": "flakExplosion"
+		},
+		"metaglass": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 5,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 9,
+			"height": 10,
+			"damage": 3,
+			"splashDamage": 33,
+			"splashDamageRadius": 20,
+			"hitEffect": "flakExplosion",
+			"despawnEffect": "flakExplosion",
+			"fragBullets": 7,
+			"fragBullet": {
+				"type": "BasicBulletType",
+				"collidesAir": false,
+				"despawnEffect": "none",
+				"width": 4,
+				"height": 4,
+				"damage": 7,
+				"lifetime": 30,
+				"speed": 1.5
+			}
+		},
+		"blast-compound": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 5,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 9,
+			"height": 10,
+			"damage": 3,
+			"splashDamage": 55,
+			"splashDamageRadius": 35,
+			"reloadMultiplier": 0.5,
+			"hitEffect": "flakExplosionBig",
+			"despawnEffect": "flakExplosionBig"
+		},
+		"硅钢": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 4,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 9,
+			"height": 10,
+			"damage": 3,
+			"splashDamage": 23,
+			"splashDamageRadius": 20,
+			"reloadMultiplier": 1,
+			"status": "unmoving",
+			"statusDuration": 80,
+			"hitEffect": "flakExplosion",
+			"despawnEffect": "flakExplosion"
+		}
+	},
+	"requirements": [
+		{
+			"item": "copper",
+			"amount": 95
+		},
+		{
+			"item": "lead",
+			"amount": 75
+		}
+	]
+}

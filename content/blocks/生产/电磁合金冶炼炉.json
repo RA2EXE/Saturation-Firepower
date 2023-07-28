@@ -1,0 +1,51 @@
+{
+	"type": "GenericCrafter",
+	"name": "电磁合金冶炼炉",
+	"outputItem": { "item": "surge-alloy", "amount": 3},
+	"size": 4,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 70,
+	"itemCapacity": 30,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+		"DrawDefault",
+		{"type":"DrawFlame",
+		"flameRadius": 0,
+		"flameRadiusIn": 0,
+		"flameRadiusMag": 0,
+		"flameRadiusInMag": 0,
+		"flameColor":"F2E770"}
+		]
+	},
+	"craftEffect":{
+		"type": "ParticleEffect",
+		"particles": 4,
+		"baseLength": 6,
+		"length":12,
+		"region":"饱和火力-菱形",
+		"lifetime": 25,
+		"sizeFrom": 10,
+		"sizeTo": 0,
+		"colorFrom": "F2E77050",
+		"colorTo": "F2E770",
+		"cone":360 },
+	"consumes": {
+	"power":9,
+	"items": {"items": [
+	"copper/8","lead/10","silicon/8","titanium/6"
+		]
+  }
+ },
+"requirements": [
+	"lead/110","silicon/35",
+	"硅钢/25","thorium/70",
+	"一级协议/0"
+	],
+	"category": "crafting",
+	"ambientSound":"smelter",
+	"ambientSoundVolume":0.88,
+	"research": "alloy-smelter"
+}

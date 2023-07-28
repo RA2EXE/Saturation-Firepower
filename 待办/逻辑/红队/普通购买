@@ -1,0 +1,294 @@
+fetch build 铜墙 5 0 @copper-wall-large
+sensor x 铜墙 @x
+sensor y 铜墙 @y
+op mul xx x 10
+op add 位置 y xx
+jump 36 equal 位置 4007.5
+jump 44 equal 位置 3937.5
+jump 52 equal 位置 3867.5
+jump 60 equal 位置 3797.5
+jump 68 equal 位置 3727.5
+jump 77 equal 位置 3999.5
+jump 85 equal 位置 3929.5
+jump 93 equal 位置 3859.5
+jump 101 equal 位置 3789.5
+jump 109 equal 位置 3719.5
+jump 118 equal 位置 3991.5
+jump 126 equal 位置 3921.5
+jump 134 equal 位置 3851.5
+jump 142 equal 位置 3881.5
+jump 150 equal 位置 3811.5
+jump 159 equal 位置 3983.5
+jump 167 equal 位置 3913.5
+jump 175 equal 位置 3843.5
+jump 183 equal 位置 3773.5
+jump 191 equal 位置 3703.5
+jump 120 equal 位置 3973.5
+jump 128 equal 位置 3903.5
+jump 136 equal 位置 3833.5
+jump 144 equal 位置 3763.5
+jump 152 equal 位置 3693.5
+jump 161 equal 位置 3965.5
+jump 169 equal 位置 3895.5
+jump 177 equal 位置 3825.5
+jump 185 equal 位置 3755.5
+jump 193 equal 位置 3685.5
+end
+print 尖刀
+read 物料 cell1 0
+read 消耗 cell2 0
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 0
+jump 282 always x false
+print 战锤
+read 物料 cell1 0
+read 消耗 cell2 1
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 1
+jump 282 always x false
+print 堡垒
+read 物料 cell1 0
+read 消耗 cell2 2
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 2
+jump 282 always x false
+print 权杖
+read 物料 cell1 0
+read 消耗 cell2 3
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 3
+jump 282 always x false
+print 王座
+read 物料 cell1 0
+read 消耗 cell2 4
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 4
+jump 282 always x false
+end
+print 新星
+read 物料 cell1 0
+read 消耗 cell2 5
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 5
+jump 282 always x false
+print 恒星
+read 物料 cell1 0
+read 消耗 cell2 6
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 6
+jump 282 always x false
+print 耀星
+read 物料 cell1 0
+read 消耗 cell2 7
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 7
+jump 282 always x false
+print 灾星
+read 物料 cell1 0
+read 消耗 cell2 8
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 8
+jump 282 always x false
+print 死星
+read 物料 cell1 0
+read 消耗 cell2 9
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 9
+jump 282 always x false
+end
+print 爬虫
+read 物料 cell1 0
+read 消耗 cell2 10
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 10
+jump 282 always x false
+print 毒蛛
+read 物料 cell1 0
+read 消耗 cell2 11
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 11
+jump 282 always x false
+print 血蛭
+read 物料 cell1 0
+read 消耗 cell2 12
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 12
+jump 282 always x false
+print 毒蛊
+read 物料 cell1 0
+read 消耗 cell2 13
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 13
+jump 282 always x false
+print 天蝎
+read 物料 cell1 0
+read 消耗 cell2 14
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 14
+jump 282 always x false
+end
+print 冲锋
+read 物料 cell1 0
+read 消耗 cell2 15
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 15
+jump 282 always x false
+print 突袭
+read 物料 cell1 0
+read 消耗 cell2 16
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 16
+jump 282 always x false
+print 轰炸
+read 物料 cell1 0
+read 消耗 cell2 17
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 17
+jump 282 always x false
+print 反击
+read 物料 cell1 0
+read 消耗 cell2 18
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 18
+jump 282 always x false
+print 斩首
+read 物料 cell1 0
+read 消耗 cell2 19
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 19
+jump 282 always x false
+end
+print 星辉
+read 物料 cell1 0
+read 消耗 cell2 20
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 20
+jump 282 always x false
+print 天垠
+read 物料 cell1 0
+read 消耗 cell2 21
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 21
+jump 282 always x false
+print 苍穹
+read 物料 cell1 0
+read 消耗 cell2 22
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 22
+jump 282 always x false
+print 月影
+read 物料 cell1 0
+read 消耗 cell2 23
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 23
+jump 282 always x false
+print 日食
+read 物料 cell1 0
+read 消耗 cell2 24
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 24
+jump 282 always x false
+end
+print 多云
+read 物料 cell1 0
+read 消耗 cell2 25
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 25
+jump 282 always x false
+print 霜雪
+read 物料 cell1 0
+read 消耗 cell2 26
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 26
+jump 282 always x false
+print 燃空
+read 物料 cell1 0
+read 消耗 cell2 27
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 27
+jump 282 always x false
+print 飓风
+read 物料 cell1 0
+read 消耗 cell2 28
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 28
+jump 282 always x false
+print 雷暴
+read 物料 cell1 0
+read 消耗 cell2 29
+jump 286 lessThan 物料 消耗
+op sub 物料 物料 消耗
+write 物料 cell1 0
+set 工厂位 29
+jump 282 always x false
+end
+read 产量 cell3 工厂位
+op add 产量 产量 1
+write 产量 cell3 工厂位
+jump 292 always x false
+setblock block @message x y 5 0
+getblock building 块 x y
+print "[red]你认真的？"
+print "\n[yellow]要我无中生有一个给你看看吗？"
+printflush 块
+end
+setblock block @air x y @derelict 0
+setblock block @air x y @derelict 0

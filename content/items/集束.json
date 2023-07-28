@@ -1,0 +1,11 @@
+{
+	"name": "集束炸药",
+	"description": "对碰撞及其敏感的弹药，易燃易爆。",
+	"color": "D85555FF",
+	"alwaysUnlocked":false,
+	"hardness":1,
+	"radioactivity": 0,
+	"explosiveness": 3.8,
+	"flammability": 0.85,
+	"research": "blast-compound"
+}

@@ -1,0 +1,14 @@
+{
+	"name": "莱普合金",
+	"description": "相对硬度极高的合金。用于先进装甲，弹药与高强度钻头",
+	"details":"热不变形，冷不变硬，抗旱防潮，结实耐糙，绝对可靠",
+	"cost":9,
+	"hardness":10,
+	"color": "5C5D79",
+	"healthScaling": 3,
+	"alwaysUnlocked":false,
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"research": "铬"
+}

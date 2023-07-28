@@ -1,0 +1,327 @@
+{
+	"type": "PowerTurret",
+	"name": "天拳防御平台",
+	"buildVisibility": "campaignOnly",
+	"health": 18800,
+	"armor": 22,
+	"size": 4,
+	"reload": 550,
+	"range": 940,
+	"recoilTime": 180,
+	"recoil": 4,
+	"shootSound": "missileLarge",
+	"insulated": true,
+	"absorbLasers": true,
+	"drawer": {
+		"type": "DrawTurret",
+		"basePrefix": "防御平台-",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"under": true,
+				"x": 0,
+				"y": 0,
+				"suffix": "-弹",
+				"progress": "reload",
+				"moveY": -12,
+				"moves": [
+					{
+						"progress": "warmup",
+						"y": 3
+					}
+				]
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"x": 0,
+				"y": 0,
+				"suffix": "-侧",
+				"moveX": 2,
+				"moveY": 2,
+				"moveRot": -9,
+				"moves": [
+					{
+						"progress": "recoil",
+						"y": -2,
+						"rot": -7
+					}
+				]
+			}
+		]
+	},
+	"minWarmup": 0.98,
+	"shootY": 8,
+	"shootEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 32,
+				"interp": "fastSlow",
+				"sizeFrom": 12,
+				"sizeTo": 0,
+				"length": 125,
+				"baseLength": 0,
+				"lifetime": 123,
+				"colorFrom": "EEC591FF",
+				"colorTo": "ffffff",
+				"cone": 40
+			},
+			{
+				"type": "WaveEffect",
+				"lifetime": 22,
+				"sizeFrom": 0,
+				"sizeTo": 100,
+				"strokeFrom": 18,
+				"strokeTo": 0,
+				"colorFrom": "EEC59180",
+				"colorTo": "ffffff80"
+			}
+		]
+	},
+	"smokeEffect": {
+		"type": "ParticleEffect",
+		"particles": 9,
+		"interp": "pow10Out",
+		"sizeInterp": "pow5In",
+		"sizeFrom": 5,
+		"sizeTo": 0,
+		"length": 40,
+		"baseLength": 0,
+		"lifetime": 65,
+		"colorFrom": "73737390",
+		"colorTo": "FFFFFF90",
+		"cone": 23
+	},
+	"targetGround": true,
+	"targetAir": true,
+	"canOverdrive": false,
+	"accurateDelay": false,
+	"inaccuracy": 0,
+	"rotateSpeed": 1.25,
+	"shootType": {
+		"type": "BasicBulletType",
+		"damage": 780,
+		"status": "绝判",
+		"statusDuration": 360,
+		"splashDamageRadius": 280,
+		"splashDamage": 1800,
+		"ammoMultiplier": 1,
+		"buildingDamageMultiplier": 1.12,
+		"collides": false,
+		"absorbable": false,
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 99999,
+					"sizeTo": 99999,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 66,
+					"colorFrom": "00000018",
+					"colorTo": "00000000",
+					"layer": 99,
+					"cone": 360
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 80,
+					"sizeTo": 240,
+					"sizeInterp": "pow5Out",
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 22.5,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC59188",
+					"cone": 360
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 240,
+					"sizeTo": 0,
+					"sizeInterp": "pow10In",
+					"length": 0,
+					"baseLength": 0,
+					"startDelay": 22,
+					"lifetime": 105,
+					"colorFrom": "EEC59188",
+					"colorTo": "EEC59188",
+					"cone": 360
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 23,
+					"sizeFrom": 23,
+					"sizeTo": 0,
+					"length": 280,
+					"baseLength": 8,
+					"startDelay": 22,
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"lifetime": 135,
+					"colorFrom": "EEC59180",
+					"colorTo": "EEC591AA",
+					"cone": 360
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 82,
+					"line": true,
+					"strokeFrom": 5.2,
+					"strokeTo": 0,
+					"interp": "pow5Out",
+					"lenFrom": 94,
+					"lenTo": 0,
+					"length": 360,
+					"baseLength": 8,
+					"lifetime": 25,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591",
+					"cone": 360
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 0,
+					"sizeTo": 350,
+					"strokeFrom": 30,
+					"strokeTo": 12,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC59180"
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 85,
+					"sizeFrom": 0,
+					"sizeTo": 280,
+					"strokeFrom": 30,
+					"strokeTo": 0,
+					"interp": "circleOut",
+					"colorFrom": "EEC591FF",
+					"colorTo": "EEC591FF"
+				},
+				{
+					"type": "WaveEffect",
+					"startDelay": 8,
+					"lifetime": 85,
+					"sizeFrom": 0,
+					"sizeTo": 280,
+					"strokeFrom": 30,
+					"strokeTo": 0,
+					"interp": "circleOut",
+					"colorFrom": "EEC591FF",
+					"colorTo": "EEC591FF"
+				},
+				{
+					"type": "WaveEffect",
+					"startDelay": 15,
+					"lifetime": 85,
+					"sizeFrom": 0,
+					"sizeTo": 280,
+					"strokeFrom": 30,
+					"strokeTo": 0,
+					"interp": "circleOut",
+					"colorFrom": "EEC591FF",
+					"colorTo": "EEC591FF"
+				}
+			]
+		},
+		"hitShake": 33,
+		"despawnEffect": {
+			"type": "WaveEffect",
+			"lifetime": 40,
+			"sizeFrom": 40,
+			"sizeTo": 360,
+			"strokeFrom": 30,
+			"strokeTo": 0,
+			"colorFrom": "EEC591",
+			"colorTo": "ffffffff"
+		},
+		"smokeEffect": "bigShockwave",
+		"makeFire": true,
+		"pierce": true,
+		"pierceBuilding": true,
+		"scaleLife": true,
+		"sprite": "饱和火力-大导弹",
+		"trailLength": 35,
+		"trailWidth": 3,
+		"trailColor": "EEC591",
+		"trailChance": 0,
+		"trailInterval": 3,
+		"trailEffect": {
+			"type": "ParticleEffect",
+			"particles": 4,
+			"sizeFrom": 6,
+			"sizeTo": 0,
+			"lifetime": 105,
+			"interp": "pow10Out",
+			"sizeInterp": "pow5In",
+			"baseLength": 0,
+			"cone": 20,
+			"length": -55,
+			"colorFrom": "EEC591",
+			"colorTo": "EEC59180",
+			"layer": 110
+		},
+		"trailRotation": true,
+		"backColor": "FF5B5B",
+		"frontColor": "EEC591",
+		"shrinkY": 0,
+		"width": 16,
+		"height": 66,
+		"speed": 3,
+		"lifetime": 126,
+		"hitSoundVolume": 3,
+		"hitSound": "DBZ1",
+		"parts": [
+			{
+				"type": "HaloPart",
+				"sides": 3,
+				"shapes": 3,
+				"y": 10,
+				"color": "EEC591",
+				"colorTo": "FF5B5B",
+				"tri": true,
+				"radius": 8,
+				"radiusTo": 8,
+				"triLength": 15,
+				"triLengthTo": 5,
+				"haloRadius": 60,
+				"haloRadiusTo": 30,
+				"haloRotateSpeed": -2
+			},
+			{
+				"type": "HaloPart",
+				"shapeRotation": 180,
+				"sides": 3,
+				"shapes": 3,
+				"y": 10,
+				"color": "EEC591",
+				"colorTo": "FF5B5B",
+				"tri": true,
+				"radius": 8,
+				"radiusTo": 8,
+				"triLength": 48,
+				"triLengthTo": 8,
+				"haloRadius": 60,
+				"haloRadiusTo": 30,
+				"haloRotateSpeed": -2
+			}
+		]
+	},
+	"requirements": [
+		"镄/15000",
+		"metaglass/5000",
+		"silicon/15000",
+		"泰勒合金/10000"
+	],
+	"category": "turret"
+}

@@ -1,0 +1,29 @@
+{
+	"details":"安装更可靠的制导系统",
+	"buildSpeed": 1,
+	"range":140,
+	"weapons":[
+	{"name": "O枪",
+	"reload":30, 
+	"top":false,
+	"x": 4,  "y": -3.5, 
+	"rotate": false,
+	"inaccuracy": 5,
+	"shootSound": "missile",
+	"alternate": true,
+	"bullet":{
+	"type":"MissileBulletType",
+	"healPercent":5,   
+	"frontColor":"FFFFFF",	
+	"backColor":"97FFA8FF",
+	"trailColor":"97FFA8FF",	
+	"damage":12,
+	"hitEffect":"none",
+	"hitSound":"none",
+	"despawnEffect":"none",
+	"collidesTeam":true,  
+	"speed":4,	"lifetime":56,
+	"width":9,	 "height":10
+	}	}
+	]
+}

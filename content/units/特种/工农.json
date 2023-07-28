@@ -1,0 +1,194 @@
+{
+	"type": "payload",
+	"payloadCapacity": 576,
+	"name": "工农",
+	"speed": 2.32,
+	"drag": 0.018,
+	"accel": 0.03,
+	"rotateSpeed": 2.5,
+	"immunities": [
+		"electrified",
+		"干扰"
+	],
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 3000
+	},
+	"hitSize": 28,
+	"buildRange": 288,
+	"buildSpeed": 3.5,
+	"buildBeamOffset": 11,
+	"flying": true,
+	"faceTarget": true,
+	"health": 2100,
+	"armor": 9,
+	"engineOffset": 16,
+	"engineSize": 2.8,
+	"trailLength":4,
+	"engines": [
+		{
+			"x": -6,
+			"y": -14,
+			"radius": 1.8,
+			"rotation": -112.5
+		},
+		{
+			"x": 6,
+			"y": -14,
+			"radius": 1.8,
+			"rotation": -67.5
+		}
+	],
+	"research": {
+		"parent": "特种工厂",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "迫降区"
+			}
+		]
+	},
+	"itemOffsetY": 1,
+	"mineSpeed": 11,
+	"mineTier": 4,
+	"mineRange": 70,
+	"isEnemy": true,
+	"abilities": [
+		{
+			"type": "StatusFieldAbility",
+			"duration": 50,
+			"reload": 120,
+			"range": 60,
+			"applyEffect": "none",
+			"activeEffect": {
+				"type": "WaveEffect",
+				"lifetime": 30,
+				"sizeFrom": 60,
+				"sizeTo": 60,
+				"strokeFrom": 1,
+				"strokeTo": 0,
+				"colorFrom": "97FFA8FF",
+				"colorTo": "ffffff"
+			},
+			"effect": "修复"
+		}
+	],
+	"weapons": [
+		{
+			"name": "工农1",
+			"reload": 15,
+			"x": 9,
+			"y": -2,
+			"shootY": 6,
+			"rotate": false,
+			"alternate": true,
+			"inaccuracy": 0,
+			"layerOffset": -0.01,
+			"shootSound": "lasershoot",
+			"bullet": {
+				"type": "MissileBulletType",
+				"reflectable": false,
+				"keepVelocity": false,
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8FF",
+				"healPercent": 8,
+				"status": "拆解",
+				"statusDuration": 10,
+				"damage": 36,
+				"splashDamageRadius": 20,
+				"splashDamage": 36,
+				"homingPower": 0.5,
+				"homingRange": 16,
+				"trailLength": 3,
+				"trailWidth": 3,
+				"trailColor": "97FFA8FF",
+				"trailEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"sizeFrom": 1.68,
+					"sizeTo": 0,
+					"lifetime": 95,
+					"interp": "pow5Out",
+					"sizeInterp": "pow5In",
+					"baseLength": 0,
+					"length": 10,
+					"colorFrom": "97FFA8FF",
+					"colorTo": "97FFA8FF",
+					"layer": 110
+				},
+				"sprite": "circle-bullet",
+				"shrinkY": 0,
+				"shootEffect": "none",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"sizeFrom": 3,
+							"sizeTo": 0,
+							"length": 25,
+							"baseLength": 0,
+							"lifetime": 25,
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA890",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 1,
+							"sizeTo": 25,
+							"strokeFrom": 4,
+							"strokeTo": 0,
+							"colorFrom": "97FFA8ff",
+							"colorTo": "97FFA890"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"collidesTeam": true,
+				"speed": 9.6,
+				"lifetime": 25,
+				"width": 6,
+				"height": 9
+			}
+		},
+		{
+			"name": "工农2",
+			"reload": 120,
+			"x": 0,
+			"y": 0,
+			"shootY": 12,
+			"rotate": false,
+			"top": false,
+			"recoil": 3.25,
+			"inaccuracy": 0,
+			"mirror": false,
+			"shootSound": "laser",
+			"continuous": true,
+			"shake": 2,
+			"bullet": {
+				"type": "LaserBulletType",
+				"healPercent": 16,
+				"recoil": 0.12,
+				"damage": 95,
+				"knockback": 20,
+				"status": "干扰",
+				"statusDuration": 60,
+				"collidesTeam": true,
+				"sideAngle": 135,
+				"sideWidth": 1.35,
+				"sideLength": 45,
+				"shootEffect": "bigShockwave",
+				"colors": [
+					"7CF38990",
+					"97FFA880",
+					"FFFFFF"
+				],
+				"width": 15,
+				"length": 250
+			}
+		}
+	]
+}

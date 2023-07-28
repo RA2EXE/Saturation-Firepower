@@ -1,0 +1,14 @@
+{
+	"type": "Conveyor",
+	"name": "合成传送带",
+	"description": "向前方运输物品，比基础传输带快一些",
+	"health": 45,
+	"requirements": [
+	{"item": "copper", "amount": 1},
+	{"item": "lead", "amount": 1}
+	],
+	"category": "distribution",
+	"research":"conveyor",
+	"speed": 0.08,
+	"displayedSpeed": 8
+}

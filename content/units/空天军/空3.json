@@ -1,0 +1,159 @@
+{
+	"type": "flying",
+	"name": "燃空",
+	"speed": 2.6,
+	"drag": 0.02,
+	"accel": 0.03,
+	"rotateSpeed": 5,
+	"immunities": [
+		"unmoving",
+		"freezing"
+	],
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 500
+	},
+	"ammoCapacity": 500,
+	"hitSize": 24,
+	"flying": true,
+	"health": 1700,
+	"armor": 6,
+	"engineOffset": 12,
+	"engineSize": 3.5,
+	"trailLength": 6,
+	"itemCapacity": 30,
+	"faceTarget": true,
+	"circleTarget": true,
+	"research": "空2",
+	"requirements": {
+		"block": "multiplicative-reconstructor",
+		"previous": "空2"
+	},
+	"weapons": [
+		{
+			"name": "燃空1",
+			"reload": 4.8,
+			"shootStatusDuration": 5,
+			"shootStatus": "标记",
+			"x": 4,
+			"y": 5,
+			"top": false,
+			"rotate": false,
+			"inaccuracy": 1,
+			"layerOffset": -0.01,
+			"shootSound": "JG1",
+			"alternate": true,
+			"minShootVelocity": 0.5,
+			"shootCone": 5,
+			"bullet": {
+				"type": "RailBulletType",
+				"damage": 20,
+				"pierce": false,
+				"pierceEffect": "none",
+				"pointEffectSpace": 4,
+				"pointEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"line": true,
+					"randLength": false,
+					"lenFrom": 4.3,
+					"lenTo": 4.3,
+					"strokeFrom": 3,
+					"strokeTo": 0,
+					"length": 0,
+					"baseLength": 1,
+					"lifetime": 3,
+					"colorFrom": "FF8C00",
+					"colorTo": "FF8C00",
+					"cone": 0
+				},
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 5,
+					"lifetime": 10,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"colorFrom": "FF8C00",
+					"colorTo": "FF8C00"
+				},
+				"status": "burning",
+				"statusDuration": 180,
+				"length": 144
+			}
+		},
+		{
+			"name": "燃空2",
+			"x": 0,
+			"y": 0,
+			"reload": 160,
+			"shoot": {
+				"shots": 5,
+				"shotDelay": 6,
+				"type": "ShootBarrel",
+				"barrels": [
+					4,3,0,
+					-4,3,0
+				]
+			},
+			"inaccuracy": 6,
+			"rotate": false,
+			"mirror": false,
+			"shootSound": "missile",
+			"shootCone": 80,
+			"ignoreRotation": true,
+			"minShootVelocity": 0.5,
+			"bullet": {
+				"type": "BombBulletType",
+				"maxRange": 60,
+				"splashDamageRadius": 35,
+				"splashDamage": 40,
+				"incendAmount": 2,
+				"incendSpread": 30,
+				"incendChance": 0.06,
+				"makeFire": true,
+				"width": 8,
+				"height": 8,
+				"lifetime": 30,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 30,
+							"baseLength": 10,
+							"lifetime": 25,
+							"colorFrom": "FF8C00",
+							"colorTo": "ffffff",
+							"cone": 360
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 15,
+							"sizeFrom": 1,
+							"sizeTo": 30,
+							"strokeFrom": 4,
+							"strokeTo": 0,
+							"colorFrom": "FF8C00",
+							"colorTo": "FF8C00"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"sprite": "missile-large",
+				"shrinkY": 0.5,
+				"shrinkX": 0.5,
+				"backColor": "FF8C00",
+				"frontColor": "FFFFFF",
+				"status": "burning",
+				"statusDuration": 180
+			}
+		}
+	]
+}

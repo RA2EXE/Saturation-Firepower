@@ -1,0 +1,94 @@
+{
+	"type": "ConsumeGenerator",
+	"name": "弧裂反应堆",
+	"size": 6,
+	"health": 8800,
+	"hasLiquids": true,
+	"hasItems": true,
+	"itemDuration": 840,
+	"powerProduction": 194.9,
+	"itemCapacity": 20,
+	"liquidCapacity": 40,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			//{"type": "DrawPlasma","plasma1": "FFF1D2","plasma2": "EEC591"},
+			{
+				"type":"DrawArcSmelt",
+				"midColor":"FFF1D2",
+				"flameColor":"EEC591",
+				"flameRad":7,
+				"circleSpace":3,
+				"flameRadiusScl":10,
+				"flameRadiusMag":1,
+				"circleStroke":1,
+				"alpha":0.48,
+				"particles": 33,
+				"particleLife":17,
+				"particleRad":20,
+				"particleStroke":0.34,
+				"particleLen":6
+			},
+			{
+				"type":"DrawArcSmelt",
+				"midColor":"EEC591",
+				"flameColor":"EEC591",
+				"flameRad":0,
+				"flameRadiusScl":9,
+				"flameRadiusMag":1,
+				"circleSpace":16,
+				"circleStroke":2,
+				"alpha":0.78,
+				"particles": 16,
+				"particleLife":46.5,
+				"particleRad":20,
+				"particleStroke":0.87,
+				"particleLen":6
+			},
+			{
+				"type":"DrawArcSmelt",
+				"midColor":"FEEBB3",
+				"flameColor":"EEC591",
+				"flameRad":3,
+				"flameRadiusScl":20,
+				"flameRadiusMag":0.56,
+				"circleSpace":17,
+				"circleStroke":0.9,
+				"alpha":0.8,
+				"particles": 11,
+				"particleLife":98,
+				"particleRad":20,
+				"particleStroke":1.5,
+				"particleLen":9
+			},
+			"DrawDefault",
+			{"type": "DrawLiquidRegion",
+			"drawLiquid": "纳米流体"}
+			//DrawCrucibleFlame，nnd是用来做聚变的特效
+		]
+	},
+	"generateEffect": "generatespark",
+	"consumes": {
+		"itemRadioactive":{},
+		"items": {
+			"items": ["裂位能/10","镄/10"]},
+		"liquid": "纳米流体/0.9"
+	},
+	"requirements": [
+		"lead/1200",
+		"silicon/1200",
+		"metaglass/400",
+		"硅钢/770",
+		"镄/750",
+		"纳米核/800",
+		"裂位能/800"
+	],
+	"ambientSound": "techloop",
+	"ambientSoundVolume": 0.06,
+	"category": "power",
+	"research": "镄反应堆"
+}

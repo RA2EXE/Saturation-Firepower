@@ -1,0 +1,47 @@
+{
+"name":"高速掘进机" ,
+"description":"耐高温处理强化钻头，放在含矿渣的地形上可以钻探矿渣。\n[red]务必放置于含矿渣的地形上！",
+"details":"若是你愿意，掘地也可以",
+"type": "AttributeCrafter",
+"health": 250,
+"size": 3,
+"hasPower": true,
+"hasLiquids": true,
+"liquidCapacity": 60,
+"updateEffect":"redgeneratespark",
+"drawer":{
+	"type":"DrawMulti",
+	"drawers":[
+	{
+		"type":"DrawRegion",
+		"suffix":"-底"
+	},
+		{"type":"DrawLiquidRegion",
+		"drawLiquid":"slag",
+		"suffix":"-液体"},
+{"type":"DrawRegion",
+"suffix":"-转",
+"spinSprite":true,
+"rotateSpeed":8.6},
+{"type":"DrawRegion",
+"suffix":"-转2",
+"spinSprite":true,
+"rotateSpeed":-0.8},
+	"DrawDefault"
+]},
+	"requirements": [
+		{"item": "thorium", "amount": 45},
+		{"item": "graphite", "amount": 60},
+		{"item": "metaglass", "amount":80},
+		{"item": "硅钢", "amount":35}
+],
+"consumes": { "power": 8 },
+"outputLiquid": {"liquid": "slag", "amount": 0.8},
+"baseEfficiency": 0,
+"maxBoost":2.5,
+"boostScale":0.35,
+"minEfficiency":-1,
+"attribute": "heat",
+"category": "production",
+"research": "water-extractor"
+}

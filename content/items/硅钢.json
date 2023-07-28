@@ -1,0 +1,15 @@
+{
+	"name": "硅钢",
+	"description": "拥有优良的导磁性能。用作高级导体与干扰性瘫痪弹药",
+	"details":"BOSS漏了都能救",
+	"hardness":3,
+	"cost":3.5,
+	"healthScaling": 0.8,
+	"alwaysUnlocked":false,
+	"color": "7595D2FF",
+	"radioactivity": 0,
+	"explosiveness": 0,
+	"flammability": 0,
+	"charge":0.45,
+	"research": "plastanium"
+}

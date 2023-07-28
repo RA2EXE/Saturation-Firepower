@@ -1,0 +1,36 @@
+{
+	"type":"ForceProjector",
+	"name":"铁幕",
+	"description":"实验性不稳定防御建筑\n生成一个小范围兆瓦级护盾，消耗大量电力。",
+	"health":1500,
+	"size":2,
+	"radius":96,
+	"canOverdrive": false,
+	"shieldHealth": 3000,
+	"phaseRadiusBoost":0,
+	"cooldownNormal":2.5,
+	"cooldownLiquid":1.36,
+	"cooldownBrokenBase":1,
+	"coolantConsumption":0.1,
+	"absorbEffect":{
+		"type": "ParticleEffect",
+		"particles": 1,
+		"sizeFrom": 0,
+		"sizeTo": 13,
+		"length": 0,
+		"baseLength": 0,
+		"sizeInterp":"pow10Out",
+		"lifetime": 20,
+		"layer":120,
+		"colorFrom": "000000",
+		"colorTo": "00000000"},
+	"consumes":{
+		"power":8
+		},
+	"requirements":[
+	"lead/200","silicon/240","硅钢/70","plastanium/85","泰勒合金/40"
+		],
+	"itemCapacity":1,
+	"research": "force-projector",
+	"category": "effect"
+}

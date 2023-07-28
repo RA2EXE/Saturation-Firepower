@@ -1,0 +1,38 @@
+{
+	"type": "GenericCrafter",
+	"name": "熔炼炉",
+	"outputLiquid": { "liquid": "slag", "amount": 0.4},
+	"size": 2,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 15,
+	"itemCapacity": 20,
+	"liquidCapacity": 60,
+	"drawer":{
+		"type":"DrawMulti",
+		"drawers":[
+			"DrawDefault",
+	{"type":"DrawLiquidRegion",
+	"drawLiquid":"slag",
+	"suffix":"-liquid"}
+	]},
+	"updateEffect": "smeltsmoke",
+	"consumes": {
+	"power":2,
+	"items": {
+	 "items": [
+		{ "item": "scrap", "amount": 2}
+	]
+  }
+ },
+"requirements": [
+		{"item": "copper", "amount": 95},	
+		{ "item": "lead", "amount": 95},
+		{ "item": "metaglass", "amount": 70 },
+		{"item": "graphite","amount":75}
+	],
+	"category": "crafting",
+	"ambientSound":"smelter",
+	"research": "melter"
+}

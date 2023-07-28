@@ -1,0 +1,62 @@
+{
+	"name": "殁火",
+	"damage": 16.6,
+	"speedMultiplier": 0.8,
+	"reloadMultiplier":0.76,
+	"damageMultiplier":0.85,
+	"opposites": ["wet","freezing"],
+	"affinities":["tarred","油蚀"],
+	"transitionDamage":22,
+	"effectChance": 1,
+	"effect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 4,
+				"baseLength": 0,
+				"length": 13,
+				"lifetime": 19,
+				"spin": -3,
+				"layer":110,
+				"sizeInterp": "fastSlow",
+				"region": "饱和火力-三角形",
+				"sizeFrom": 1,
+				"sizeTo": 0,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5BA8",
+				"cone": 360
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 6,
+				"baseLength": 0,
+				"length": 16,
+				"lifetime": 19,
+				"layer":110,
+				"sizeInterp": "fastSlow",
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5BA8",
+				"cone": 360
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 3,
+				"baseLength": 0,
+				"length": 16,
+				"startDelay":19,
+				"lifetime": 60,
+				"layer":80,
+				"interp": "pow10Out",
+				"sizeInterp":"pow5In",
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"colorFrom": "FF5B5BA8",
+				"colorTo": "585858A8",
+				"cone": 360
+			}
+		]
+	}
+}

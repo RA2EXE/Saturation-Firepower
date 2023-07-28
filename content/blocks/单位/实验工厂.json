@@ -1,0 +1,120 @@
+{
+	"type": "UnitFactory",
+	"name": "实验工厂",
+	"size":13,
+	"consumes":{
+		"power":600
+	},
+	"plans":[
+	{ "unit": "陆战6", "time": 18480,
+	"requirements": [
+		"silicon/3800","镄/870",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "空战6", "time": 18480,
+	"requirements": [
+		"silicon/3800","titanium/870",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "海战6", "time": 18480,
+	"requirements": [
+		"silicon/3800","metaglass/870",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "爬爬6", "time": 18480,
+	"requirements": [
+		"silicon/3800","titanium/870",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "路辅6", "time": 18480,
+	"requirements": [
+		"silicon/3800","纳米核/800",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "空辅6", "time": 18480,
+	"requirements": [
+		"silicon/3800","纳米核/800",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "海辅6", "time": 18480,
+	"requirements": [
+		"silicon/3800","纳米核/880",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "碎辰", "time": 19200,
+	"requirements": [
+		"silicon/4000","plastanium/2000",
+		"泰勒合金/1500","裂位能/3000",
+		"二级协议/20","三级协议/50"
+	]},
+	{ "unit": "陆6", "time": 18480,
+	"requirements": [
+		"silicon/3800","镄/880",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "空6", "time": 18480,
+	"requirements": [
+		"silicon/3800","titanium/880",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]},
+	{ "unit": "海6", "time": 18480,
+	"requirements": [
+		"silicon/3800","metaglass/880",
+		"硅钢/800","plastanium/2100",
+		"surge-alloy/1300",
+		"裂位能/820","泰勒合金/730",
+		"二级协议/20"
+	]}
+	],
+	"requirements": [
+		"lead/5000",
+		"silicon/5000",
+		"纳米核/2000",
+		"裂位能/2000",
+		"镄/5000",
+		"泰勒合金/2000",
+		"二级协议/200",
+		"三级协议/140"
+	],
+	"category":"units",
+	"canOverdrive": true,
+	"research": {
+		"parent": "T6单位重构厂",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "第五战区"
+			},
+			{
+				"type": "SectorComplete",
+				"preset": "星稀山脉"
+			}
+			]}
+}

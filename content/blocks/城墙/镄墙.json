@@ -1,0 +1,15 @@
+{
+	"name": "镄墙",
+	"description": "坚硬且致密，耐温差，耐酸碱，耐打击，相当可靠。",
+	"type": "Wall",
+	"health": 2400,
+	"armor":15,
+	"size": 1,
+	"absorbLasers":true,
+	"requirements": [
+	{ "item": "镄", "amount": 24}
+	],
+	"buildCostMultiplier": 0.85,
+	"category": "defense",
+	"research": "前哨基地"
+}

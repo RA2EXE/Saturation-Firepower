@@ -1,0 +1,11 @@
+{
+"name":"煤供应点",
+"itemDrop":"coal",
+"type":"Floor",
+"description":"无限量供应，用于非自然环境地图",
+"playerUnmineable":true,
+"mapColor":"FFFFFF",
+"isLiquid":false,
+"useColor":true,
+"variants":0
+}
