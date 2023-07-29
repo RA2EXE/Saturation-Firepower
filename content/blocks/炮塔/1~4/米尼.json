@@ -37,6 +37,7 @@
 			"speed": 13,
 			"lifetime": 21.53,
 			"damage": 33,
+			"knockback": 0.25,
 			"width": 8,
 			"height": 13,
 			"ammoMultiplier": 4,
