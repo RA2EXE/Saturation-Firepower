@@ -70,6 +70,7 @@
 		"泰勒合金": {
 			"splashDamageRadius": 240,
 			"splashDamage": 2200,
+			"splashDamagePierce": true,
 			"speed": 20,
 			"damage": 500,
 			"width": 128,
@@ -275,36 +276,19 @@
 				"lightningColor": "25C9ABFF",
 				"speed": 5,
 				"lifetime": 90,
+				"splashDamagePierce": true,
 				"splashDamageRadius": 160,
 				"splashDamage": 280
 			}
 		}
 	},
 	"requirements": [
-		{
-			"item": "plastanium",
-			"amount": 1400
-		},
-		{
-			"item": "裂位能",
-			"amount": 1200
-		},
-		{
-			"item": "镄",
-			"amount": 1300
-		},
-		{
-			"item": "泰勒合金",
-			"amount": 950
-		},
-		{
-			"item": "二级协议",
-			"amount": 50
-		},
-		{
-			"item": "三级协议",
-			"amount": 15
-		}
+		"plastanium/1400",
+		"裂位能/1200",
+		"镄/1300",
+		"泰勒合金/950",
+		"二级协议/50",
+		"三级协议/15"
 	],
 	"category": "turret",
 	"research": "战研"

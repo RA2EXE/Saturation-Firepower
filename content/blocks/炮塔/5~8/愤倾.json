@@ -157,6 +157,8 @@
 		"damage": 18,
 		"splashDamageRadius": 85,
 		"splashDamage": 20,
+		"splashDamagePierce": true,
+		"scaledSplashDamage": true,
 		"buildingDamageMultiplier": 0.18,
 		"radius": 85,
 		"ammoMultiplier": 1,

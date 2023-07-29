@@ -123,8 +123,8 @@
 					"baseLength":0,
 					"lifetime": 19,
 					"colorFrom": "FF5B5B",
-					"colorTo": "FF5B5B",
-					"cone": 360},
+					"colorTo": "FF5B5B"
+				},
 				"despawnEffect":"none",
 				"trailSpacing": 9,
 				"trailEffect": {

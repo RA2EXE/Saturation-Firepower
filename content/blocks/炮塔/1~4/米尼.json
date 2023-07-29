@@ -4,7 +4,7 @@
 	"health": 2200,
 	"armor": 5,
 	"size": 3,
-	"reload": 4,
+	"reload": 6,
 	"range": 280,
 	"maxAmmo": 300,
 	"shoot": {
@@ -37,6 +37,8 @@
 			"speed": 13,
 			"lifetime": 21.53,
 			"damage": 33,
+			"splashDamage": 12,
+			"splashDamageRadius": 8,
 			"knockback": 0.25,
 			"width": 8,
 			"height": 13,
