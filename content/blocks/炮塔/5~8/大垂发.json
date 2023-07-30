@@ -528,7 +528,7 @@
 				"hitSound": "explosion",
 				"hitSoundVolume": 3,
 				"speed": 6,
-				"lifetime": 44,
+				"lifetime": 76,
 				"width": 26,
 				"height": 96,
 				"sprite": "饱和火力-大导弹",
@@ -550,8 +550,6 @@
 				},
 				"trailRotation": true,
 				"hitShake": 8,
-				"ammoMultiplier": 1,
-				"reloadMultiplier": 0.85,
 				"hitEffect": "none",
 				"despawnEffect": {
 					"type": "MultiEffect",
@@ -583,15 +581,16 @@
 						}
 					]
 				},
-				"bulletInterval": 5,
+				"bulletInterval": 8,
+				"intervalDelay": 8,
 				"intervalBullets": 1,
-				"intervalRandomSpread": 40,
+				"intervalRandomSpread": 0,
 				"intervalAngle": -90,
 				"intervalBullet": {
 					"type": "MissileBulletType",
-					"damage": 100,
-					"splashDamageRadius": 45,
-					"splashDamage": 56,
+					"damage": 220,
+					"splashDamageRadius": 48,
+					"splashDamage": 80,
 					"status": "崩溃",
 					"statusDuration": 60,
 					"scaledSplashDamage": true,
@@ -645,13 +644,13 @@
 						"colorTo": "EEC591"
 					},
 					"hitSound": "laser",
-					"fragBullets": 1,
+					"fragBullets": 3,
 					"fragRandomSpread": 0,
 					"fragBullet": {
 						"type": "LaserBulletType",
 						"pierceArmor": true,
 						"status": "崩溃",
-						"statusDuration": 60,
+						"statusDuration": 90,
 						"hitEffect": {
 							"type": "ParticleEffect",
 							"particles": 5,
@@ -670,9 +669,9 @@
 							"EEC591"
 						],
 						"despawnEffect": "none",
-						"damage": 100,
+						"damage": 160,
 						"width": 15,
-						"length": 200,
+						"length": 260,
 						"lifetime": 20
 					}
 				}

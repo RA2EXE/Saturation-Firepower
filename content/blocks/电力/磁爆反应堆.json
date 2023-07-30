@@ -1,8 +1,6 @@
 {
 	"type": "ImpactReactor",
 	"name": "磁爆反应堆",
-	"description": "每分钟更换一次线圈，绝缘设施和超压导体，务必完善绝缘处理！",
-	"details": "高压！勿近！[red]电压舱一旦被摧毁会导致失导毁灭性爆炸！",
 	"size": 8,
 	"health": 42000,
 	"warmupSpeed": 0.002,
@@ -16,7 +14,7 @@
 	"explosionShakeDuration":500,
 	"explosionRadius": 1600,
 	"explosionDamage": 80000,
-	//"buildVisibility":"campaignOnly",
+	"buildVisibility":"campaignOnly",
 	"lightColor": "c0ecff",
 	"explodeSound":"explosionbig",
 	"explodeEffect": {

@@ -6,7 +6,7 @@
 	"hasPower": true,
 	"hasLiquids": false,
 	"hasItems": true,
-	"craftTime": 13,
+	"craftTime": 20,
 	"itemCapacity": 8,
 	"drawer": {
 		"type": "DrawMulti",
@@ -34,7 +34,7 @@
 		}
 	},
 	"requirements": [
-		"镄/100",
+		"镄/200",
 		"泰勒合金/35",
 		"纳米核/220",
 		"二级协议/1"
