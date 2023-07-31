@@ -5,6 +5,7 @@
 	"version":"3.1.1",
 	"minGameVersion":"144",
 	"repo":"RA2EXE/Saturation-Firepower",
+	"hideInBrowser": true,
 	"description":"以压倒性火力，制衡天下之模组。
 模组一群：181108928
 或者前往Github查看火力最新状态
