@@ -22,6 +22,7 @@
 	"immunities": [
 		"shocked",
 		"electrified",
+		"unmoving",
 		"干扰"
 	],
 	"abilities": [
@@ -47,7 +48,7 @@
 			"shootY": 11,
 			"rotate": true,
 			"alternate": true,
-			"rotateSpeed": 9,
+			"rotateSpeed": 3,
 			"shake": 2,
 			"shootSound": "laser",
 			"shoot": {
@@ -69,9 +70,9 @@
 					"sizeTo": 0,
 					"length": 13,
 					"baseLength": 0,
-					"sizeInterp": "pow5In",
+					"sizeInterp": "pow3In",
 					"interp": "pow5Out",
-					"lifetime": 60,
+					"lifetime": 20,
 					"colorFrom": "c0ecff",
 					"colorTo": "c0ecffA8"
 				},
@@ -83,7 +84,7 @@
 				"width": 10,
 				"height": 10,
 				"speed": 8,
-				"lifetime": 40,
+				"lifetime": 45,
 				"damage": 45,
 				"status": "unmoving",
 				"statusDuration": 10,
@@ -122,6 +123,17 @@
 							"lifetime": 60,
 							"colorFrom": "585858",
 							"colorTo": "585858"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 6,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 35,
+							"baseLength": 30,
+							"lifetime": 60,
+							"colorFrom": "c0ecff",
+							"colorTo": "87ceeb"
 						},
 						{
 							"type": "WaveEffect",

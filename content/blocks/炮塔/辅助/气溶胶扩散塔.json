@@ -1,7 +1,7 @@
 {
 	"type": "ItemTurret",
+	"playerControllable":false,
 	"name": "气溶胶扩散塔",
-	"description": "裂爆液体桶并将其扩散到射程范围内，使用水桶、冷冻液桶时可以灭火。",
 	"health": 3300,
 	"size": 6,
 	"reload": 180,

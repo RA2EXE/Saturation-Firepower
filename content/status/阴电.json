@@ -1,17 +1,18 @@
 {
-	"name":"阴电",
+	"name": "阴电",
 	"damage": 0.3,
-	"healthMultiplier":1.35,
-	"speedMultiplier":0.55,
-	"effectChance":0.8,
-	"effect":{	"type": "ParticleEffect",
-	"particles": 2,  
-	"baseLength": 16,
-	"length":-16,
-	"lifetime": 10,
-	"sizeFrom": 1,
-	"sizeTo": 0,
-	"colorFrom": "#EFDDFF",
-	"colorTo": "#EFDDFF",
-	"cone":360 }
+	"healthMultiplier": 1.35,
+	"speedMultiplier": 0.66,
+	"effectChance": 0.8,
+	"effect": {
+		"type": "ParticleEffect",
+		"particles": 2,
+		"baseLength": 16,
+		"length": -16,
+		"lifetime": 10,
+		"sizeFrom": 1,
+		"sizeTo": 0,
+		"colorFrom": "#EFDDFF",
+		"colorTo": "#EFDDFF"
+	}
 }

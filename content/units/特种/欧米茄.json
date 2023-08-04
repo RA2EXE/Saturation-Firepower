@@ -6,7 +6,8 @@
 	"drag": 0.03,
 	"rotateSpeed": 6,
 	"speed": 3.8,
-	"itemCapacity": 10000,
+	//地图用，发mod前记得删！！！
+	//"itemCapacity": 10000,
 	//"speed": 10,
 	"immunities": [
 		"sapped","slow","unmoving",

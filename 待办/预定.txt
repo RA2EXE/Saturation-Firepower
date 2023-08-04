@@ -143,6 +143,116 @@ overdrive场，overclock场-5秒-5格-3间隔
 	//"buildVisibility": "campaignOnly",
 	//"buildVisibility": "editorOnly",
 
+	{
+			"name": "广寒-测试",
+			"x": 0,
+			"reload": 300,
+			"shootY": 60,
+			"mirror": false,
+			"top": false,
+			"rotate": true,
+			"rotateSpeed": 0.6,
+			"shootSound": "torch",
+			"alwaysContinuous": true,
+			"minWarmup":0.9,
+			"parts":[
+				{
+					"type": "ShapePart",
+					"stroke": 1,
+					"strokeTo": 0,
+					"color": "97FFA8",
+					"colorTo": "97FFA800",
+					"circle": true,
+					"hollow": true,
+					"radius": 60,
+					"radiusTo": 60,
+					"layer": 89.9
+				},
+				{
+					"type": "ShapePart",
+					"stroke": 0,
+					"strokeTo": 2,
+					"color": "97FFA800",
+					"colorTo": "97FFA8",
+					"circle": true,
+					"hollow": true,
+					"radius": 60,
+					"radiusTo": 60,
+					"layer": 110
+				},
+				{
+					"type": "HaloPart",
+					"progress": "warmup",
+					"rotateSpeed": 0,
+					"shapes": 6,
+					"color": "97FFA8",
+					"colorTo": "FFFFFF",
+					"layer": 89.9,
+					"tri": false,
+					"sides": 4,
+					"radius": 8,
+					"radiusTo": 0,
+					"haloRadius": 63,
+					"haloRadiusTo": 63,
+					"haloRotation": 0,
+					"haloRotateSpeed": 0.3
+				},
+				{
+					"type": "ShapePart",
+					"y": 61,
+					"color": "97FFA880",
+					"colorTo": "97FFA8",
+					"circle": true,
+					"hollow": false,
+					"radius": 2,
+					"radiusTo": 10,
+					"layer": 110
+				}
+			],
+			"bullet": {
+				"type": "ContinuousLaserBulletType",
+				"colors": [
+					"7CF38990",
+					"97FFA880",
+					"FFFFFF"
+				],
+				"length": 280,
+				"width": 7,
+				"knockback": 0.15,
+				"statusDuration": 110,
+				"status": "干扰",
+				"damage": 66,
+				"incendChance": 0,
+				"makeFire": true,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 4,
+					"sizeFrom": 3.3,
+					"sizeTo": 0,
+					"interp": "pow10Out",
+					"sizeInterp": "pow5In",
+					"length": 88,
+					"baseLength": 0,
+					"lifetime": 32,
+					"colorFrom": "7CF389",
+					"colorTo": "7CF389B8",
+					"cone": 13
+				},
+				"smokeEffect": "none",
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"lifetime": 20,
+					"sizeFrom": 2,
+					"sizeTo": 0,
+					"interp": "pow3Out",
+					"sizeInterp": "pow3In",
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8"
+				}
+			}
+		}
+
 立宪-矿区
 地星-战区
 盘龙-矿区

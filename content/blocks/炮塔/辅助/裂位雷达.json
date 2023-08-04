@@ -1,7 +1,7 @@
 {
 	"type": "PowerTurret",
+	"playerControllable":false,
 	"name": "裂位雷达",
-	"description": "使用高能粒子束持续照射并标记敌人，辅助炮台瞄准。被标记的单位会试图摆脱",
 	"health": 2600,
 	"size":5,
 	"reload": 120,

@@ -1,7 +1,7 @@
 {
 	"type": "PowerTurret",
+	"playerControllable":false,
 	"name": "短波雷达",
-	"description": "每3秒扫描并标记100单位距离内的敌人，辅助炮台瞄准。被标记的单位会试图摆脱",
 	"health": 550,
 	"size":4,
 	"reload": 180,
@@ -76,11 +76,11 @@
 	"status":"标记"
 	},
 	"requirements": [
-		{ "item": "copper", "amount": 350},
-		{ "item": "metaglass", "amount":160},	
-		{ "item": "silicon", "amount": 250},
-		{ "item": "硅钢", "amount": 70},
-		{ "item": "二级协议", "amount": 3 } 
+		"copper/350",
+		"metaglass/160",	
+		"silicon/250",
+		"硅钢/70",
+		"二级协议/3"
 	],
 	"category": "effect",
 	"research": "高斯"

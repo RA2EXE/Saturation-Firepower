@@ -10,11 +10,11 @@
 	"maxAmmo": 600,
 	"recoilTime": 10,
 	"recoil": 1,
-	"unitSort":"weakest",
-	"shoot":{
-		"type":"ShootAlternate",
-		"barrels":2,
-		"spread":6
+	"unitSort": "weakest",
+	"shoot": {
+		"type": "ShootAlternate",
+		"barrels": 2,
+		"spread": 6
 	},
 	"shake": 1.5,
 	"liquidCapacity": 30,
@@ -93,8 +93,7 @@
 		"titanium": {
 			"speed": 9,
 			"lifetime": 22.22,
-			"damage": 19,
-			"reloadMultiplier": 0.7,
+			"damage": 16,
 			"width": 8,
 			"height": 10,
 			"ammoMultiplier": 6,
@@ -102,9 +101,8 @@
 		},
 		"thorium": {
 			"speed": 8,
-			"damage": 28,
+			"damage": 19,
 			"lifetime": 25,
-			"reloadMultiplier": 0.7,
 			"width": 10,
 			"height": 11,
 			"shootEffect": "shootBig",
@@ -112,18 +110,9 @@
 		}
 	},
 	"requirements": [
-		{
-			"item": "copper",
-			"amount": 200
-		},
-		{
-			"item": "graphite",
-			"amount": 75
-		},
-		{
-			"item": "titanium",
-			"amount": 80
-		}
+		"copper/200",
+		"graphite/75",
+		"titanium/80"
 	],
 	"category": "turret",
 	"research": "多管炮"
