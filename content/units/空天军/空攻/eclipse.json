@@ -27,15 +27,15 @@
 				"damage": 21,
 				"status": "blasted",
 				"statusDuration": 120,
-				"smokeEffect": "shootBig",
+				"shootEffect": "shootBig",
 				"splashDamageRadius": 40,
 				"splashDamage": 95,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
 				"ammoMultiplier": 6,
-				"lightningDamage": 8,
-				"lightning": 3,
-				"lightningLength": 3
+				"lightningDamage": 11,
+				"lightning": 2,
+				"lightningLength": 7
 			}
 		},
 		{
@@ -62,15 +62,15 @@
 				"damage": 20,
 				"status": "blasted",
 				"statusDuration": 120,
-				"smokeEffect": "shootBig",
+				"shootEffect": "shootBig",
 				"splashDamageRadius": 40,
 				"splashDamage": 95,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
 				"ammoMultiplier": 6,
-				"lightningDamage": 8,
-				"lightning": 3,
-				"lightningLength": 3
+				"lightningDamage": 11,
+				"lightning": 2,
+				"lightningLength": 7
 			}
 		},
 		{

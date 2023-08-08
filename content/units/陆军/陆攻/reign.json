@@ -6,11 +6,11 @@
 	"weapons": [
 		{
 			"name": "根除",
-			"reload": 43,
+			"reload": 38,
 			"shake": 3,
 			"shoot": {
 				"shots": 4,
-				"shotDelay": 3
+				"shotDelay": 2
 			},
 			"recoil": 5,
 			"x": 21.5,
@@ -33,10 +33,9 @@
 				"shootEffect": "shootBig",
 				"smokeEffect": "shootBigSmoke",
 				"width": 13,
-				"height": 35,
+				"height": 34,
 				"hitSound": "explosion",
 				"hitEffect": "flakExplosion",
-				"despawnEffect": "flakExplosion",
 				"fragBullets": 4,
 				"fragRandomSpread": 30,
 				"fragBullet": {
@@ -62,6 +61,7 @@
 			"reload": 70,
 			"rotate": true,
 			"rotateSpeed": 9,
+			"top":true,
 			"shoot": {
 				"shots": 5,
 				"shotDelay": 1

@@ -2,10 +2,10 @@
 	"name": "饱和火力",
 	"displayName":"饱和火力",
 	"author":"RA2",
-	"version":"3.1.1",
-	"minGameVersion":"144",
+	"version":"BE-3.1.1",
+	"minGameVersion":"999",
 	"repo":"RA2EXE/Saturation-Firepower",
-	"hideInBrowser": true,
+	"hideInBrowser": false,
 	"description":"以压倒性火力，制衡天下之模组。
 模组一群：181108928
 或者前往Github查看火力最新状态
