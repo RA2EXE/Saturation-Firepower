@@ -11,7 +11,7 @@
 	},
 	"ammoCapacity": 400,
 	"hitSize": 12,
-	"buildSpeed": 0.5,
+	"buildSpeed": 0.35,
 	"flying": true,
 	"faceTarget": true,
 	"health": 380,

@@ -11,7 +11,7 @@
 		"silicon/50",
 		"metaglass/30",
 		"硅钢/35",
-		"一级协议/1"
+		"一级协议/0"
 	],
 	"consumes": {
 		"power": 2.29

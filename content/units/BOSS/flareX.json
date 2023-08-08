@@ -146,6 +146,8 @@
 				"trailColor":"FF5B5B",
 				"backColor": "FF5B5B",
 				"frontColor": "FF5B5B",
+				"suppressionRange": 60,
+				"suppressionDuration": 100,
 				"status": "碎解",
 				"statusDuration": 100
 			}
@@ -159,7 +161,7 @@
 				"type":"shootSpread",
 				"shots": 2
 			},
-			"inaccuracy": 180,
+			"inaccuracy": 100,
 			"rotate": false,
 			"mirror": false,
 			"shootSound": "mineDeploy",
@@ -170,8 +172,10 @@
 			"bullet": {
 				"type": "BombBulletType",
 				"speed":8,
-				"drag":0.12,
+				"drag":0.1,
 				"maxRange": 10,
+				"suppressionRange": 100,
+				"suppressionDuration": 600,
 				"buildingDamageMultiplier": 1.5,
 				"splashDamageRadius": 40,
 				"splashDamage": 86,

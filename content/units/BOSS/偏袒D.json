@@ -106,13 +106,15 @@
 			"shootStatus": "绝判",
 			"mirror": false,
 			"shootOnDeath": true,
-			"controllable": false,
-			"autoTarget": true,
-			"shoot": {
+			"noAttack":true,
+			//"controllable": false,
+			//"autoTarget": true,
+			"autoTarget": false,
+			/*"shoot": {
 				"shots":3,
 				"type": "ShootPattern",
 				"firstShotDelay": 480
-			},
+			},*/
 			"bullet": {
 				"type":"BasicBulletType",
 				"scaledSplashDamage":true,

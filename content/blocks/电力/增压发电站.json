@@ -42,26 +42,11 @@
 		"liquid": "water/0.8"
 	},
 	"requirements": [
-		{
-			"item": "titanium",
-			"amount": 320
-		},
-		{
-			"item": "lead",
-			"amount": 260
-		},
-		{
-			"item": "metaglass",
-			"amount": 80
-		},
-		{
-			"item": "silicon",
-			"amount": 230
-		},
-		{
-			"item": "硅钢",
-			"amount": 80
-		}
+		"titanium/320",
+		"lead/260",
+		"metaglass/80",
+		"silicon/230",
+		"硅钢/80"
 	],
 	"ambientSound": "smelter",
 	"ambientSoundVolume": 0.06,

@@ -113,6 +113,7 @@
 				"powerDamageScl": 3,
 				"powerSclDecrease": 0.88,
 				"suppressionRange": 120,
+				"suppressionDuration": 1500,
 				"radius": 68,
 				"status": "slow",
 				"statusDuration": 600,

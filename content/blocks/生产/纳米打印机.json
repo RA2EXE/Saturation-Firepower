@@ -41,5 +41,13 @@
 	],
 	"category": "crafting",
 	"ambientSound": "techloop",
-	"research": "纳米组装机"
+	"research": {
+		"parent": "纳米组装机",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "火山岛"
+			}
+		]
+	}
 }

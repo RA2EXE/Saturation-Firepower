@@ -11,7 +11,6 @@
 	},
 	"ammoCapacity": 300,
 	"hitSize": 8,
-	"buildSpeed": 0.25,
 	"flying": true,
 	"faceTarget": true,
 	"drawMinimap": false,

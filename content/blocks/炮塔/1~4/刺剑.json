@@ -1,7 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "刺剑",
-	"description": "扫射前方大片面积，击穿敌人与护盾",
 	"health": 3250,
 	"size": 3,
 	"reload": 28,
@@ -33,7 +32,7 @@
 			"reloadMultiplier": 1.2,
 			"width": 20,
 			"length": 170,
-			"damage": 150,
+			"damage": 125,
 			"ammoMultiplier": 2,
 			"pierce": true
 		},
@@ -75,18 +74,9 @@
 		}
 	},
 	"requirements": [
-		{
-			"item": "graphite",
-			"amount": 50
-		},
-		{
-			"item": "硅钢",
-			"amount": 70
-		},
-		{
-			"item": "镄",
-			"amount": 130
-		}
+		"graphite/80",
+		"硅钢/90",
+		"镄/220"
 	],
 	"category": "turret",
 	"research": "阔刀"

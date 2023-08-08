@@ -87,7 +87,7 @@ SFlib.addToResearch(中央盆地, {
 
 const 第五战区 = new SectorPreset("第五战区", TBLY, 5);
 第五战区.description = "第五军团遭到了敌人的猛烈反扑，但敌人不全力进攻，只拖延时间的行为及其反常。有大批机械化部队扑向这里，迅速解决敌人继续推进。\n[red]我们只有一次机会！";
-第五战区.difficulty = 12;
+第五战区.difficulty = 14;
 第五战区.alwaysUnlocked = false;
 第五战区.addStartingItems = true;
 第五战区.captureWave = 100;
@@ -101,10 +101,10 @@ SFlib.addToResearch(第五战区, {
 
 const 火山岛 = new SectorPreset("火山岛", TBLY, 13);
 火山岛.description = "海军先遣队在火山口附近建立了一个基地，这里可开采矿物并不多。分离出矿渣中的矿物质，在其余部队赶来之前，消灭追兵并建立基地";
-火山岛.difficulty = 10;
+火山岛.difficulty = 13;
 火山岛.alwaysUnlocked = false;
 火山岛.addStartingItems = true;
-火山岛.captureWave = 150;
+火山岛.captureWave = 115;
 火山岛.localizedName = "火山岛";
 exports.火山岛 = 火山岛;
 SFlib.addToResearch(火山岛, {

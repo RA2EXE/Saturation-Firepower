@@ -24,7 +24,7 @@
 			"ejectEffect": "casing4",
 			"bullet": {
 				"status": "blasted",
-				"damage": 97,
+				"damage": 103,
 				"pierceArmor": true,
 				"pierce": true,
 				"pierceCap": 10,
@@ -40,7 +40,7 @@
 				"fragBullets": 4,
 				"fragRandomSpread": 30,
 				"fragBullet": {
-					"damage": 26,
+					"damage": 33,
 					"width": 10,
 					"height": 10,
 					"pierce": true,
@@ -50,7 +50,7 @@
 					"lifetime": 10,
 					"hitSound": "explosion",
 					"hitEffect": "flakExplosion",
-					"splashDamage": 25,
+					"splashDamage": 19,
 					"splashDamageRadius": 16
 				}
 			}
@@ -75,7 +75,7 @@
 				"status": "blasted",
 				"damage": 25,
 				"splashDamageRadius": 35,
-				"splashDamage": 35,
+				"splashDamage": 55,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
 				"width": 9,
