@@ -18,7 +18,7 @@
 			},
 			{
 				"type": "DrawCultivator",
-				"buddles": 100,
+				"bubbles": 50,
 				"sides": 16,
 				"spread": 30,
 				"strokeMin": 0.1,

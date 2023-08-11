@@ -4,7 +4,7 @@
 	"speedMultiplier": 0.75,
 	"dragMultiplier": 1.35,
 	"emitLight":true,
-	"lightRadius": 10,
+	"lightRadius": 16,
 	"lightColor":"F7A77EA0",
 	"walkEffect": {
 		"type": "ParticleEffect",
