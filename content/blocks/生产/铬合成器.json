@@ -2,7 +2,6 @@
 	"type": "GenericCrafter",
 	"health": 360,
 	"name": "铬合成器",
-	"description": "在服务器合成铬\n[red]临时工具！",
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
@@ -10,10 +9,7 @@
 			"DrawFlame"
 		]
 	},
-	"outputItem": {
-		"item": "铬",
-		"amount": 1
-	},
+	"outputItem": "铬/1",
 	"research": {
 		"parent": "镄合成器",
 		"objectives": [
@@ -32,12 +28,10 @@
 	"consumes": {
 		"power": 6,
 		"liquid": "slag/0.1",
-		"items": {
-			"items": [
-				"plastanium/5",
-				"镄/1"
-			]
-		}
+		"items": [
+			"plastanium/5",
+			"镄/1"
+		]
 	},
 	"requirements": [
 		"plastanium/35",

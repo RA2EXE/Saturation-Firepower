@@ -24,16 +24,16 @@
 	"armor": 9,
 	"engineOffset": 16,
 	"engineSize": 2.8,
-	"trailLength":4,
+	"trailLength": 5,
 	"engines": [
 		{
-			"x": -6,
+			"x": -6.5,
 			"y": -14,
 			"radius": 1.8,
 			"rotation": -112.5
 		},
 		{
-			"x": 6,
+			"x": 6.5,
 			"y": -14,
 			"radius": 1.8,
 			"rotation": -67.5
@@ -43,8 +43,8 @@
 		"parent": "特种工厂",
 		"objectives": [
 			{
-				"type": "SectorComplete",
-				"preset": "迫降区"
+				"type": "OnSector",
+				"preset": "荒芜矿区"
 			}
 		]
 	},
@@ -67,7 +67,7 @@
 				"sizeTo": 60,
 				"strokeFrom": 1,
 				"strokeTo": 0,
-				"colorFrom": "97FFA8FF",
+				"colorFrom": "97FFA8",
 				"colorTo": "ffffff"
 			},
 			"effect": "修复"
@@ -85,12 +85,28 @@
 			"inaccuracy": 0,
 			"layerOffset": -0.01,
 			"shootSound": "lasershoot",
+			"shootWarmupSpeed": 0.1,
+			"minWarmup": 0.98,
+			"parts": [
+				{
+					"type": "RegionPart",
+					"progress": "warmup",
+					"x": -9,
+					"y": -8,
+					"rotation": -60,
+					"mirror": false,
+					"suffix": "-管",
+					"moveX": 9,
+					"moveY": 8,
+					"moveRot": 60
+				}
+			],
 			"bullet": {
 				"type": "MissileBulletType",
 				"reflectable": false,
 				"keepVelocity": false,
 				"frontColor": "FFFFFF",
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"healPercent": 8,
 				"status": "拆解",
 				"statusDuration": 10,
@@ -101,7 +117,7 @@
 				"homingRange": 16,
 				"trailLength": 3,
 				"trailWidth": 3,
-				"trailColor": "97FFA8FF",
+				"trailColor": "97FFA8",
 				"trailEffect": {
 					"type": "ParticleEffect",
 					"particles": 3,
@@ -112,8 +128,8 @@
 					"sizeInterp": "pow5In",
 					"baseLength": 0,
 					"length": 10,
-					"colorFrom": "97FFA8FF",
-					"colorTo": "97FFA8FF",
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
 					"layer": 110
 				},
 				"sprite": "circle-bullet",
@@ -141,7 +157,7 @@
 							"sizeTo": 25,
 							"strokeFrom": 4,
 							"strokeTo": 0,
-							"colorFrom": "97FFA8ff",
+							"colorFrom": "97FFA8",
 							"colorTo": "97FFA890"
 						}
 					]
@@ -180,7 +196,23 @@
 				"sideAngle": 135,
 				"sideWidth": 1.35,
 				"sideLength": 45,
-				"shootEffect": "bigShockwave",
+				"smokeEffect": "bigShockwave",
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"line": true,
+					"particles": 9,
+					"lenFrom": 10,
+					"lenTo": 0,
+					"strokeFrom": 1,
+					"strokeTo": 1,
+					"baseLength": 240,
+					"length": 0,
+					"sizeInterp":"pow3In",
+					"lifetime": 20,
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
+					"cone": 0
+				},
 				"colors": [
 					"7CF38990",
 					"97FFA880",

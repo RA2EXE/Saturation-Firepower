@@ -1,8 +1,6 @@
 {
 	"type": "RegenProjector",
 	"name": "区块建筑监测站",
-	"description": "监测所在区块内建筑状态，并定期修复受损建筑，加装纳米核可以增加修复频率",
-	"details": "被摧毁后释放残余纳米机器人修复附近任何单位与建筑",
 	"health": 1800,
 	"size": 4,
 	"range": 1500,
@@ -48,7 +46,7 @@
 		]
 	},
 	"consumes": {
-		"power": 12,
+		"power": 20,
 		"items": {
 			"items": [
 				"纳米核/10"
@@ -134,7 +132,7 @@
 		"硅钢/200",
 		"plastanium/230",
 		"surge-alloy/120",
-		"纳米核/300",
+		"纳米核/500",
 		"一级协议/5"
 	],
 	"category": "effect",

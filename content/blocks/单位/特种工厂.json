@@ -84,12 +84,12 @@
 		},
 		{
 			"unit": "工农",
-			"time": 2800,
+			"time": 3000,
 			"requirements": [
-				"titanium/80",
-				"silicon/230",
-				"硅钢/60",
-				"纳米核/20"
+				"titanium/300",
+				"silicon/250",
+				"硅钢/80",
+				"纳米核/80"
 			]
 		},
 		{

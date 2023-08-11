@@ -1,7 +1,6 @@
 {
 	"type": "MendProjector",
 	"name": "纳米修复投射器",
-	"description": "定期修复受损建筑，修复频率较快，使用纳米核可以提高修复效率",
 	"health": 450,
 	"size": 3,
 	"range": 280,
@@ -14,7 +13,7 @@
 		"power": 6,
 		"items": {
 			"items": [
-				"纳米核/1"
+				"纳米核/3"
 			],
 			"booster": true,
 			"optional": true
@@ -24,7 +23,7 @@
 		"titanium/120",
 		"plastanium/50",
 		"surge-alloy/50",
-		"纳米核/50",
+		"纳米核/150",
 		"一级协议/2"
 	],
 	"category": "effect",

@@ -34,44 +34,20 @@
 		"power": 8,
 		"items": {
 			"items": [
-				{
-					"item": "thorium",
-					"amount": 4
-				},
-				{
-					"item": "sand",
-					"amount": 20
-				},
-				{
-					"item": "裂位能",
-					"amount": 1
-				}
+				"thorium/4",
+				"sand/20",
+				"裂位能/1"
 			]
 		}
 	},
 	"requirements": [
-		{
-			"item": "镄",
-			"amount": 45
-		},
-		{
-			"item": "silicon",
-			"amount": 65
-		},
-		{
-			"item": "硅钢",
-			"amount": 45
-		},
-		{
-			"item": "裂位能",
-			"amount": 8
-		},
-		{
-			"item": "二级协议",
-			"amount": 0
-		}
+		"镄/45",
+		"silicon/65",
+		"硅钢/45",
+		"裂位能/8",
+		"二级协议/0"
 	],
-	"ambientSound":"techloop",
+	"ambientSound": "techloop",
 	"category": "crafting",
 	"research": "激发器"
 }

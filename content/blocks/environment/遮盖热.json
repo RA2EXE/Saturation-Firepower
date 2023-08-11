@@ -1,0 +1,28 @@
+{
+	"type": "floor",
+	"name": "供热型区域遮盖层",
+	"speedMultiplier": 0.75,
+	"dragMultiplier": 1.35,
+	"emitLight":true,
+	"lightRadius": 10,
+	"lightColor":"F7A77EA0",
+	"walkEffect": {
+		"type": "ParticleEffect",
+		"particles": 3,
+		"sizeInterp":"pow3In",
+		"interp":"pow3Out",
+		"sizeFrom": 2,
+		"sizeTo": 0,
+		"length": 17,
+		"baseLength": 0,
+		"lifetime": 30,
+		"colorFrom": "FFF1D2",
+		"colorTo": "FF8C0080"
+	},
+	"damageTaken": 5,
+	"status": "崩溃",
+	"attributes":{
+		"heat": 2
+	},
+	"variants":2
+}

@@ -24,8 +24,7 @@
 			"bullet": {
 				"type": "ShrapnelBulletType",
 				"pierceArmor": true,
-				"damage": 90,
-				"lifetime": 15,
+				"damage": 110,
 				"length": 100,
 				"width": 20,
 				"serrationLenScl": 7,
@@ -33,7 +32,7 @@
 				"serrationFadeOffset": 0,
 				"serrations": 10,
 				"serrationWidth": 6,
-				"statusDuration": 300,
+				"statusDuration": 60,
 				"status": "sapped",
 				"fromColor": "A278E31FF",
 				"toColor": "665C9FFF",
@@ -44,7 +43,7 @@
 					"length": 45,
 					"baseLength": 0,
 					"lifetime": 15,
-					"colorFrom": "A278E1FF",
+					"colorFrom": "A278E1",
 					"colorTo": "665C9FFF",
 					"cone": 60
 				},
@@ -75,14 +74,14 @@
 				"width": 25,
 				"height": 25,
 				"frontColor": "ffffff",
-				"backColor": "A278E1FF",
+				"backColor": "A278E1",
 				"collidesTiles": true,
 				"ammoMultiplier": 4,
 				"damage": 45,
 				"splashDamageRadius": 80,
 				"splashDamage": 92,
 				"hitShake": 10,
-				"lightningColor": "A278E1FF",
+				"lightningColor": "A278E1",
 				"lightningDamage": 70,
 				"lightning": 5,
 				"lightningLength": 14,
@@ -108,7 +107,7 @@
 							"sizeTo": 80,
 							"strokeFrom": 3,
 							"strokeTo": 0,
-							"colorFrom": "A278E1FF",
+							"colorFrom": "A278E1",
 							"colorTo": "ffffff"
 						}
 					]
@@ -125,13 +124,13 @@
 					"width": 19,
 					"height": 19,
 					"frontColor": "ffffff",
-					"backColor": "A278E1FF",
+					"backColor": "A278E1",
 					"collidesTiles": false,
 					"splashDamageRadius": 50,
 					"splashDamage": 75,
 					"knockback": 1,
 					"hitShake": 5,
-					"lightningColor": "A278E1FF",
+					"lightningColor": "A278E1",
 					"lightningDamage": 30,
 					"lightning": 3,
 					"lightningLength": 7,
@@ -157,7 +156,7 @@
 								"sizeTo": 50,
 								"strokeFrom": 2,
 								"strokeTo": 0,
-								"colorFrom": "A278E1FF",
+								"colorFrom": "A278E1",
 								"colorTo": "ffffff"
 							}
 						]

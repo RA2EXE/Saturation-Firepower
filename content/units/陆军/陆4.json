@@ -26,6 +26,7 @@
 	"rotateSpeed": 1.5,
 	"itemCapacity": 35,
 	"faceTarget": false,
+	"immunities":["burning","shocked"],
 	"targetFlags": [
 		"repair",
 		"turret"

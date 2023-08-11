@@ -1,51 +1,57 @@
 {
 	"type": "GenericCrafter",
 	"name": "孢子冲压机",
-	"outputLiquid": { "liquid": "oil", "amount": 0.6},
-"drawer": {
+	"outputLiquid": "oil/0.9",
+	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
-	{"type": "DrawRegion",
-	"suffix": "-bottom"},
-	{"type":"DrawPistons",
-	"sinMag":1},
-	"DrawDefault",
-	{"type": "DrawLiquidRegion",
-	"drawLiquid": "oil"},
-	{"type": "DrawRegion",
-	"suffix": "-top"}
-	]},
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawPistons",
+				"sinMag": 1
+			},
+			"DrawDefault",
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "oil"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-top"
+			}
+		]
+	},
 	"size": 3,
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
 	"craftTime": 30,
 	"itemCapacity": 20,
-    "liquidCapacity": 90,
+	"liquidCapacity": 30,
 	"updateEffect": {
-    "type": "ParticleEffect",
-        "particles": 3,
-        "sizeFrom": 3,
-        "sizeTo": 0,
-        "length": 15,
-        "baseLength": 10,
-        "lifetime": 10,
-        "colorFrom": "E3E3E390",
-        "colorTo": "ffffff",
-        "cone": 360
-            },
+		"type": "ParticleEffect",
+		"particles": 3,
+		"sizeFrom": 3,
+		"sizeTo": 0,
+		"length": 15,
+		"baseLength": 10,
+		"lifetime": 10,
+		"colorFrom": "E3E3E390",
+		"colorTo": "ffffff"
+	},
 	"consumes": {
-    "power":6,
-    "items": {
-	 "items": [
-	    { "item": "spore-pod", "amount": 3}
-	]
-  }
- },
-"requirements": [
-		{ "item": "titanium", "amount": 45},
-		{ "item": "metaglass", "amount": 20 },
-		{"item": "silicon","amount":35}
+		"power": 6,
+		"items": [
+			"spore-pod/3"
+		]
+	},
+	"requirements": [
+		"titanium/45",
+		"metaglass/20",
+		"silicon/35"
 	],
 	"category": "crafting",
 	"research": "spore-press"

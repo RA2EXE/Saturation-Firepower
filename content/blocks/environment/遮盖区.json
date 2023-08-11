@@ -1,0 +1,11 @@
+{
+	"type": "floor",
+	"name": "供给型区域遮盖层",
+	"speedMultiplier": 1.3,
+	"attributes":{
+		"oil": 2,
+		"water": 2,
+		"spores": 2
+	},
+	"variants": 7
+}

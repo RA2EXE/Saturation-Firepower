@@ -42,5 +42,13 @@
 	],
 	"category": "crafting",
 	"ambientSound": "techloop",
-	"research": "硅钢冶炼炉"
+	"research": {
+		"parent": "硅钢冶炼炉",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "荒芜矿区"
+			}
+		]
+	}
 }

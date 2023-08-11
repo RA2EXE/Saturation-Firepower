@@ -92,7 +92,7 @@
 				"lightningDamage": 45,
 				"lightning": 5,
 				"lightningLength": 3,
-				"lightningLengthRand": 9,
+				"lightningLengthRand": 3,
 				"lightningColor": "c0ecff",
 				"splashDamageRadius": 48,
 				"splashDamage": 73,

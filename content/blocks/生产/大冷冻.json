@@ -2,22 +2,26 @@
 	"type": "GenericCrafter",
 	"name": "大型冷冻机",
 	"health": 360,
-	"outputLiquid": {"liquid": "cryofluid", "amount": 0.6},
+	"outputLiquid": {
+		"liquid": "cryofluid",
+		"amount": 0.6
+	},
 	"itemCapacity": 14,
 	"size": 3,
-	"drawer":{
-		"type":"DrawMulti",
-		"drawers":[
-		{
-		"type":"DrawRegion",
-		"suffix":"-bottom"
-		},
-		{
-		"type":"DrawLiquidTile",
-		"drawLiquid":"cryofluid"
-		},
-		"DrawDefault"
-	]},
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "cryofluid"
+			},
+			"DrawDefault"
+		]
+	},
 	"hasItems": true,
 	"hasLiquids": true,
 	"outputsLiquid": true,
@@ -27,19 +31,18 @@
 	"updateEffect": "freezing",
 	"consumes": {
 		"power": 3,
-	"items": {
-	"items": [
-	{ "item": "titanium", "amount": 1 }	]	},
-	"liquid": 
-	{"liquid": "water", "amount": 0.6 }
-		},
+		"items": [
+			"titanium/1"
+		],
+		"liquid": "water/0.6"
+	},
 	"requirements": [
-	{ "item": "lead", "amount": 70 },
-	{ "item": "thorium", "amount": 60 },
-	{ "item": "metaglass", "amount": 40},
-	{ "item": "silicon", "amount": 40 },
-	{"item": "硅钢","amount":75},
-	{ "item": "一级协议", "amount": 0 }
+		"lead/70",
+		"thorium/60",
+		"metaglass/40",
+		"silicon/40",
+		"硅钢/75",
+		"一级协议/0"
 	],
 	"category": "crafting",
 	"research": "cryofluid-mixer"

@@ -3,7 +3,7 @@
 	"name": "纳米风暴",
 	"health": 2300,
 	"size": 3,
-	"reload": 360,
+	"reload": 320,
 	"range": 400,
 	"shoot": {
 		"shots": 2,
@@ -16,14 +16,14 @@
 	"canOverdrive": false,
 	"inaccuracy": 20,
 	"velocityRnd": 0.2,
-	"rotateSpeed": 2,
+	"rotateSpeed": 3,
 	"shake": 1,
 	"shootSound": "laser",
 	"shootEffect": "hitEmpSpark",
 	"consumes": {
 		"power": 3
 	},
-	"ammoPerShot": 2,
+	"ammoPerShot": 4,
 	"ammoTypes": {
 		"纳米核": {
 			"type": "ArtilleryBulletType",
@@ -95,7 +95,7 @@
 		"lead/135",
 		"silicon/85",
 		"plastanium/110",
-		"纳米核/50",
+		"纳米核/150",
 		"一级协议/0"
 	],
 	"category": "effect",

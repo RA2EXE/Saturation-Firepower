@@ -110,7 +110,7 @@
 					"cone": 360
 				},
 				"buildingDamageMultiplier": 0.68,
-				"damage": 19,
+				"damage": 18,
 				"width": 7,
 				"height": 10,
 				"speed": 9,
@@ -169,7 +169,7 @@
 					"cone": 360
 				},
 				"buildingDamageMultiplier": 0.68,
-				"damage": 25,
+				"damage": 21,
 				"width": 7,
 				"height": 10,
 				"speed": 9,
@@ -257,11 +257,11 @@
 					]
 				},
 				"despawnEffect": "none",
-				"drag": -0.005,
+				"drag": -0.01,
 				"width": 6,
 				"height": 6,
 				"speed": 8,
-				"lifetime": 30
+				"lifetime": 28
 			}
 		}
 	]

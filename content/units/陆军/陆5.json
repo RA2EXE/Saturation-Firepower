@@ -36,6 +36,7 @@
 	"rotateSpeed": 1.22,
 	"itemCapacity": 45,
 	"faceTarget": false,
+	"immunities":["burning","shocked","崩溃"],
 	"targetFlags": [
 		"core",
 		"turret"

@@ -6,7 +6,7 @@
 	"size": 3,
 	"reload": 6,
 	"range": 280,
-	"maxAmmo": 300,
+	"maxAmmo": 150,
 	"shoot": {
 		"type": "ShootAlternate",
 		"barrels": 2,
@@ -15,10 +15,10 @@
 	"recoilTime": 25,
 	"recoil": 2.88,
 	"shake": 2.5,
-	"coolantMultiplier": 100,
+	"coolantMultiplier": 2000,
 	"consumes": {
 		"coolant": {
-			"amount": 0.01,
+			"amount": 0.001,
 			"optional": true
 		}
 	},

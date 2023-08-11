@@ -1,7 +1,5 @@
 {
 	"name": "最高协议",
-	"description": "进行建筑之前请确定你已被授权该协议",
-	"details":"最高建造指挥已授权",
 	"hardness": 0,
 	"cost":1,
 	"color": "FF0000",

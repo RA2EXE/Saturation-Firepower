@@ -302,7 +302,7 @@
 		},
 		{
 			"name": "地动1",
-			"reload": 12,
+			"reload": 3,
 			"recoil": 1,
 			"x": 43,
 			"y": 0,
@@ -311,11 +311,9 @@
 			"controllable": false,
 			"autoTarget": true,
 			"shootSound": "missile",
-			"alternate": true,
+			"alternate": false,
 			"shootY": 6.5,
 			"shoot": {
-				"shots": 3,
-				"shotDelay": 2,
 				"type": "ShootAlternate",
 				"barrels": 2,
 				"spread": 3
@@ -361,13 +359,13 @@
 					]
 				},
 				"collidesGround": false,
-				"damage": 63,
-				"lifetime": 20,
-				"speed": 16,
+				"damage": 83,
+				"lifetime": 2,
+				"speed": 160,
 				"splashDamageRadius": 30,
-				"splashDamage": 78,
+				"splashDamage": 58,
 				"status": "freezing",
-				"statusDuration": 300,
+				"statusDuration": 120,
 				"shootEffect": {
 					"type": "WaveEffect",
 					"lifetime": 9,
