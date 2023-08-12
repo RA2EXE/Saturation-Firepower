@@ -1,7 +1,7 @@
 {
 	"type": "UnitFactory",
 	"name": "特种工厂",
-	"health": 2800,
+	"health": 3000,
 	"size": 5,
 	"consumes": {
 		"power": 18,

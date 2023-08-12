@@ -11,6 +11,7 @@
 	"baseRotateSpeed": 1.38,
 	"health": 480600,
 	"canBoost": true,
+	"riseSpeed": 0.005,
 	"engineOffset": 28,
 	"engineSize":24,
 	"boostMultiplier": 2.68,

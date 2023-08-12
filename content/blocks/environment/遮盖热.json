@@ -19,7 +19,7 @@
 		"colorFrom": "FFF1D2",
 		"colorTo": "FF8C0080"
 	},
-	"damageTaken": 5,
+	"damageTaken": 8,
 	"status": "崩溃",
 	"attributes":{
 		"heat": 2

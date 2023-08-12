@@ -1,0 +1,23 @@
+{
+	"type": "tether",
+	"name": "组装无人机",
+	"defaultController": "AssemblerAI",
+	"speed": 0.95,
+	"drag": 0.06,
+	"accel": 0.09,
+	"rotateSpeed": 2.5,
+	"hitSize": 12,
+	"buildBeamOffset": 6,
+	"flying": true,
+	"faceTarget": false,
+	"useUnitCap": true,
+	"health": 160,
+	"engineOffset": 5,
+	"engineSize": 3,
+	"isEnemy": false,
+	"hidden": true,
+	"createWreck": false,
+	"allowedInPayloads": false,
+	"logicControllable": false,
+	"playerControllable": false
+}

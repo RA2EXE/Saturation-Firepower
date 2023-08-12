@@ -1,0 +1,11 @@
+{
+"name":"纳米供应点",
+"itemDrop":"纳米核",
+"type":"Floor",
+"description":"无限量供应，用于非自然环境地图",
+"playerUnmineable":true,
+"mapColor":"FFFFFF",
+"isLiquid":false,
+"useColor":true,
+"variants":0
+}

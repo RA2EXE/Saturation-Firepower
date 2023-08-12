@@ -63,8 +63,8 @@
 			"shootSound": "mediumCannon",
 			"shake": 8,
 			"bullet": {
-				"damage": 220,
-				"splashDamage": 125,
+				"damage": 250,
+				"splashDamage": 135,
 				"splashDamageRadius": 55,
 				"buildingDamageMultiplier": 3,
 				"speed": 31,
@@ -162,8 +162,7 @@
 								"baseLength": 0,
 								"lifetime": 15,
 								"colorFrom": "FEEBB3",
-								"colorTo": "ffffff",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							},
 							{
 								"type": "WaveEffect",
@@ -179,10 +178,12 @@
 					},
 					"hitSound": "laser",
 					"collides": false,
+					"damage": 250,
 					"splashDamageRadius": 40,
 					"splashDamage": 85,
+					"buildingDamageMultiplier": 2.25,
 					"lifetime": 10,
-					"speed": 6
+					"speed": 8
 				},
 				"despawnEffect": "bigShockwave"
 			},

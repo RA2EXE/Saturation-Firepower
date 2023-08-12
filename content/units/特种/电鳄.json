@@ -12,12 +12,13 @@
 		"干扰"
 	],
 	"name": "电鳄",
-	"rotateSpeed": 0.9,
-	"speed": 0.78,
-	"boostMultiplier": 0.8,
+	"rotateSpeed": 1.5,
+	"speed": 1.2,
+	"boostMultiplier": 0.85,
+	"canBoost": true,
+	"riseSpeed": 0.015,
 	"engineOffset": 18,
 	"engineSize": 7,
-	"canBoost": true,
 	"accel": 0.05,
 	"drag": 0.04,
 	"hitSize": 40,
@@ -26,22 +27,70 @@
 		"totalPower": 12000
 	},
 	"ammoCapacity": 50,
-	"health": 23500,
+	"health": 28000,
 	"armor": 16,
 	"itemCapacity": 0,
 	"faceTarget": true,
-	"fogRadius": 30,
+	"fogRadius": 40,
 	"abilities": [
 		{
 			"type":"RegenAbility",
-			"percentAmount": 0.002
+			"percentAmount": 0.005
+		},		
+		{
+			"type": "ShieldRegenFieldAbility",
+			"amount": 50,
+			"max": 2500,
+			"reload": 60,
+			"range": 50,
+			"applyEffect": "none",
+			"activeEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "WaveEffect",
+						"interp": "circleOut",
+						"lifetime": 50,
+						"sizeFrom": 6,
+						"sizeTo": 55,
+						"strokeFrom": 8,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3A8",
+						"colorTo": "FEEBB3"
+					},
+					{
+						"type": "WaveEffect",
+						"interp": "circleOut",
+						"startDelay": 5,
+						"lifetime": 50,
+						"sizeFrom": 5,
+						"sizeTo": 55,
+						"strokeFrom": 8,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3A8",
+						"colorTo": "FEEBB3"
+					},
+					{
+						"type": "WaveEffect",
+						"interp": "circleOut",
+						"startDelay": 10,
+						"lifetime": 46,
+						"sizeFrom": 5,
+						"sizeTo": 55,
+						"strokeFrom": 7,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3A8",
+						"colorTo": "FEEBB3"
+					}
+				]
+			}
 		},
 		{
 			"type": "ShieldArcAbility",
-			"radius": 30,
+			"radius": 32,
 			"width": 6,
-			"max": 3200,
-			"regen": 8,
+			"max": 3600,
+			"regen": 10,
 			"cooldown": 300,
 			"angle": 110
 		},
@@ -85,7 +134,7 @@
 		},
 		{
 			"type": "MoveEffectAbility",
-			"minVelocity": 0.63,
+			"minVelocity": 1.025,
 			"interval": 8,
 			"effect": {
 				"type": "MultiEffect",
@@ -134,6 +183,25 @@
 					}
 				]
 			}
+		},
+		{
+			"type": "MoveEffectAbility",
+			"minVelocity": 1.32,
+			"interval": 3,
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 2,
+				"sizeFrom": 2.25,
+				"sizeTo": 0,
+				"lifetime": 30,
+				"interp": "pow5Out",
+				"sizeInterp": "pow10In",
+				"baseLength": 0,
+				"length": 30,
+				"layer": 60,
+				"colorFrom": "FEEBB3",
+				"colorTo": "FEEBB3"
+			}
 		}
 	],
 	"parts": [
@@ -169,19 +237,19 @@
 			"shootStatus": "overclock",
 			"shootStatusDuration": 20,
 			"recoil": 0,
-			"recoilTime": 11,
+			"recoilTime": 20,
 			"x": 0,
 			"y": -4,
 			"rotate": true,
 			"rotateSpeed": 1,
-			"shootCone": 8,
+			"shootCone": 12,
 			"mirror": false,
 			"inaccuracy": 3,
 			"shootSound": "laser",
 			"shake": 1,
 			"layerOffset": 0.001,
 			"minWarmup": 0.88,
-			"shootY": 24,
+			"shootY": 23.5,
 			"shoot": {
 				"type": "ShootBarrel",
 				"barrels": [
@@ -235,7 +303,7 @@
 					"y": -13,
 					"shapes": 3,
 					"haloRotateSpeed": 0.8,
-					"shapeRotation":30,
+					"shapeRotation": 50,
 					"color": "FEEBB3",
 					"layer":110,
 					"tri": true,
@@ -244,7 +312,7 @@
 					"radiusTo": 3,
 					"triLength": 2,
 					"triLengthTo": 6,
-					"haloRadius": 0,
+					"haloRadius": 1.5,
 					"haloRadiusTo": 4
 				},
 				{
@@ -262,15 +330,15 @@
 			"velocityRnd": 0.06,
 			"bullet": {
 				"type": "BasicBulletType",
-				"damage": 155,
-				"splashDamageRadius": 55,
+				"damage": 135,
+				"splashDamageRadius": 56,
 				"splashDamage": 122,
-				"lightningDamage": 75,
-				"lightning": 2,
-				"lightningLength": 6,
+				"lightningDamage": 42,
+				"lightning": 3,
+				"lightningLength": 7,
 				"lightningLengthRand": 3,
-				"speed": 14,
-				"lifetime": 18.5,
+				"speed": 15,
+				"lifetime": 28,
 				"hitShake": 3,
 				"width": 12,
 				"height": 18,

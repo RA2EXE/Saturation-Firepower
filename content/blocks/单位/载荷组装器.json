@@ -21,7 +21,7 @@
 	],
 	"category": "units",
 	"research": {
-		"parent": "阔野管理中心",
+		"parent": "特种工厂",
 		"objectives": [
 			{
 				"type": "OnSector",
