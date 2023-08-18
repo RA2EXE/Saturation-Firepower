@@ -13,7 +13,7 @@ Here is the Git location of the [Saturation-Firepower] module for Mindustry!
 
 # 模组讨论区
 QQ：【[mindustry]饱和火力】：https://jq.qq.com/?_wv=1027&k=lzXXr2ED
-Discord：https://discord.com/channels/1043406606634856511/1043406606634856513
+Discord：https://discord.gg/Y7NhHfku
 欢迎来此提出建议与反馈
 
 # 服务器/Sever location:
