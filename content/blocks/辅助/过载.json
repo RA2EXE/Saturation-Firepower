@@ -93,8 +93,8 @@
 	"colorTo": "FF5B5B00"
 		}
 	]},
-			"backColor": "FF5B5BFF",
-			"frontColor": "FF5B5BFF",
+			"backColor": "FF5B5B",
+			"frontColor": "FF5B5B",
 			"width": 0,"height": 0,
 			"collides":false,
 			"hittable":false,

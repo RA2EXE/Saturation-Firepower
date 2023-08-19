@@ -1,8 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "扩散轨道炮",
-	"description": "发射集束能量弹，毁灭目标周边区域",
-	"details": "为什么不试试EU的连续轨道炮呢？",
 	"health": 10700,
 	"size": 8,
 	"shootSound": "release",
@@ -10,14 +8,14 @@
 	"canOverdrive": false,
 	"range": 800,
 	"fogRadiusMultiplier": 0.35,
-	"coolantMultiplier": 0.5,
+	"coolantMultiplier": 0.75,
 	"recoilTime": 100,
 	"recoil": 8,
-	"maxAmmo": 30,
+	"maxAmmo": 45,
 	"cooldownTime": 120,
 	"consumes": {
 		"coolant": {
-			"amount": 3,
+			"amount": 3.5,
 			"optional": true
 		}
 	},
@@ -25,10 +23,19 @@
 		"type": "DrawTurret",
 		"parts": [
 			{
+				"type": "RegionPart",
+				"mirror": false,
+				"under": true,
+				"suffix": "-中",
+				"progress": "recoil",
+				"heatProgress": "recoil",
+				"moveY": -10
+			},
+			{
 				"type": "ShapePart",
 				"progress": "warmup",
 				"y": -24,
-				"color": "25C9ABFF",
+				"color": "25C9AB",
 				"circle": true,
 				"hollow": false,
 				"radius": 0,
@@ -42,7 +49,7 @@
 				"rotateSpeed": 0,
 				"sides": 3,
 				"shapes": 4,
-				"color": "25C9ABFF",
+				"color": "25C9AB",
 				"tri": true,
 				"hollow": true,
 				"stroke": 0,
@@ -60,28 +67,30 @@
 	},
 	"targetGround": true,
 	"targetAir": true,
-	"ammoUseEffect": "smokeCloud",
+	"ammoUseEffect": "none",
 	"inaccuracy": 0,
-	"ammoPerShot": 30,
+	"ammoPerShot": 40,
 	"shake": 20,
 	"liquidCapacity": 300,
 	"rotateSpeed": 2,
 	"ammoTypes": {
 		"泰勒合金": {
+			"type": "BasicBulletType",
 			"splashDamageRadius": 240,
 			"splashDamage": 2200,
 			"splashDamagePierce": true,
 			"speed": 20,
+			"lifetime": 40,
 			"damage": 500,
 			"width": 128,
 			"height": 128,
-			"hitSize": 100,
+			"hitSize": 50,
 			"spin": 10,
 			"lightningDamage": 87,
 			"lightning": 8,
 			"lightningLength": 33,
 			"lightningLengthRand": 20,
-			"lightningColor": "25C9ABFF",
+			"lightningColor": "25C9AB",
 			"status": "干扰",
 			"statusDuration": 180,
 			"sprite": "饱和火力-海胆",
@@ -91,11 +100,22 @@
 			"shrinkX": 0,
 			"hitShake": 20,
 			"hitSound": "DBZ1",
-			"ammoMultiplier": 1,
-			"lifetime": 40,
-			"backColor": "25C9ABFF",
+			"backColor": "25C9AB",
 			"frontColor": "FFFFFF",
-			"trailColor": "25C9ABFF",
+			"trailColor": "25C9AB",
+			"trailChance": 0,
+			"trailInterval": 2,
+			"trailEffect": {
+				"type": "WaveEffect",
+				"interp": "circleOut",
+				"lifetime": 30,
+				"sizeFrom": 4,
+				"sizeTo": 46,
+				"strokeFrom": 6,
+				"strokeTo": 0,
+				"colorFrom": "25C9AB",
+				"colorTo": "BFFFDB"
+			},
 			"hitEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -107,7 +127,7 @@
 						"length": 135,
 						"baseLength": 33,
 						"lifetime": 35,
-						"colorFrom": "25C9ABFF",
+						"colorFrom": "25C9AB",
 						"colorTo": "FFFFFF",
 						"cone": 360
 					},
@@ -123,7 +143,7 @@
 						"baseLength": 53,
 						"lifetime": 32,
 						"colorFrom": "FFFFFF",
-						"colorTo": "25C9ABFF",
+						"colorTo": "25C9AB",
 						"cone": 360
 					},
 					{
@@ -133,7 +153,7 @@
 						"sizeTo": 240,
 						"strokeFrom": 45,
 						"strokeTo": 0,
-						"colorFrom": "25C9ABFF",
+						"colorFrom": "25C9AB",
 						"colorTo": "ffffff"
 					},
 					{
@@ -143,7 +163,7 @@
 						"sizeTo": 78,
 						"strokeFrom": 8,
 						"strokeTo": 0,
-						"colorFrom": "25C9ABFF",
+						"colorFrom": "25C9AB",
 						"colorTo": "ffffff"
 					}
 				]
@@ -156,37 +176,39 @@
 						"particles": 12,
 						"line": true,
 						"strokeFrom": 5,
-						"strokeTo": 0,
-						"lenFrom": 0,
-						"lenTo": 24,
-						"length": 43,
-						"baseLength": 3,
+						"strokeTo": 3,
+						"lenFrom": 26,
+						"lenTo": 0,
+						"interp": "pow10Out",
+						"sizeInterp": "pow3In",
+						"length": 93,
+						"baseLength": 0,
 						"lifetime": 55,
-						"colorFrom": "25C9ABFF",
-						"colorTo": "25C9ABFF",
+						"colorFrom": "25C9AB",
+						"colorTo": "25C9AB",
 						"cone": 60
 					},
 					{
 						"type": "ParticleEffect",
 						"particles": 1,
-						"sizeFrom": 20,
+						"sizeFrom": 8,
 						"sizeTo": 80,
 						"length": 0,
 						"baseLength": 0,
 						"lifetime": 58,
-						"colorFrom": "25C9AB20",
-						"colorTo": "FFFFFF00",
-						"cone": 360
+						"sizeInterp": "pow3Out",
+						"colorFrom": "25C9AB80",
+						"colorTo": "FFFFFF00"
 					},
 					{
 						"type": "WaveEffect",
-						"lifetime": 10,
+						"lifetime": 20,
 						"sizeFrom": 5,
 						"sizeTo": 80,
-						"strokeFrom": 3,
+						"strokeFrom": 10,
 						"strokeTo": 0,
-						"colorFrom": "BFFFDBFF",
-						"colorTo": "25C9ABFF"
+						"colorFrom": "BFFFDB",
+						"colorTo": "25C9AB"
 					}
 				]
 			},
@@ -200,7 +222,7 @@
 				"sprite": "circle-bullet",
 				"shrinkY": 0,
 				"hitShake": 8,
-				"backColor": "25C9ABFF",
+				"backColor": "25C9AB",
 				"frontColor": "FFFFFF",
 				"hitEffect": {
 					"type": "MultiEffect",
@@ -225,29 +247,20 @@
 							"length": 35,
 							"baseLength": 133,
 							"lifetime": 35,
-							"colorFrom": "25C9ABFF",
+							"colorFrom": "25C9AB",
 							"colorTo": "FFFFFF",
 							"cone": 360
 						},
 						{
 							"type": "WaveEffect",
-							"lifetime": 30,
+							"lifetime": 45,
+							"interp": "circleOut",
 							"sizeFrom": 0,
 							"sizeTo": 160,
-							"strokeFrom": 11,
+							"strokeFrom": 13,
 							"strokeTo": 0,
-							"colorFrom": "25C9ABFF",
-							"colorTo": "ffffff"
-						},
-						{
-							"type": "WaveEffect",
-							"lifetime": 10,
-							"sizeFrom": 1,
-							"sizeTo": 78,
-							"strokeFrom": 8,
-							"strokeTo": 0,
-							"colorFrom": "25C9ABFF",
-							"colorTo": "ffffff"
+							"colorFrom": "25C9AB",
+							"colorTo": "25C9AB"
 						}
 					]
 				},
@@ -263,7 +276,7 @@
 					"baseLength": 3,
 					"lifetime": 22,
 					"colorFrom": "FFFFFF",
-					"colorTo": "25C9ABFF",
+					"colorTo": "25C9AB",
 					"cone": 360
 				},
 				"collides": false,
@@ -273,12 +286,190 @@
 				"lightning": 3,
 				"lightningLength": 18,
 				"lightningLengthRand": 9,
-				"lightningColor": "25C9ABFF",
+				"lightningColor": "25C9AB",
 				"speed": 5,
 				"lifetime": 90,
 				"splashDamagePierce": true,
 				"splashDamageRadius": 160,
 				"splashDamage": 280
+			}
+		},
+		"裂位能": {
+			"type": "BasicBulletType",
+			"rangeChange": -112,
+			"damage": 2600,
+			"splashDamageRadius": 80,
+			"splashDamage": 800,
+			"pierce": true,
+			"pierceCap": 3,
+			"drag": -0.06,
+			"speed": 8,
+			"lifetime": 30,
+			"dmage": 500,
+			"width": 32,
+			"height": 56,
+			"status": "崩溃",
+			"statusDuration": 160,
+			"sprite": "饱和火力-透彻",
+			"trailLength": 9,
+			"trailWidth": 5.5,
+			"shrinkY": 0,
+			"shrinkX": 0,
+			"hitShake": 20,
+			"hitSound": "plasmaboom",
+			"hitSoundVolume": 3,
+			"reloadMultiplier": 0.8,
+			"ammoMultiplier": 1,
+			"backColor": "EEC591",
+			"frontColor": "FFFFFF",
+			"trailColor": "EEC591",
+			"trailChance": 1,
+			"trailEffect": {
+				"type": "WaveEffect",
+				"interp": "circleOut",
+				"lifetime": 15,
+				"sizeFrom": 4,
+				"sizeTo": 30,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "EEC591",
+				"colorTo": "FFFFFF"
+			},
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 30,
+						"interp": "pow10Out",
+						"sizeInterp": "pow10In",
+						"sizeFrom": 15,
+						"sizeTo": 0,
+						"length": 220,
+						"baseLength": 0,
+						"lifetime": 60,
+						"colorFrom": "FFFFFF",
+						"colorTo": "EEC591"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 66,
+						"line": true,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"strokeFrom": 8,
+						"strokeTo": 0,
+						"lenFrom": 55,
+						"lenTo": 0,
+						"length": 330,
+						"baseLength": 53,
+						"lifetime": 32,
+						"colorFrom": "FFFFFF",
+						"colorTo": "EEC591"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 16,
+						"sizeFrom": 1,
+						"sizeTo": 560,
+						"strokeFrom": 20,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "EEC591"
+					}
+				]
+			},
+			"despawnEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeInterp": "pow10Out",
+						"sizeFrom": 0,
+						"sizeTo": 180,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 20,
+						"colorFrom": "FFFFFF",
+						"colorTo": "EEC591"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeInterp": "pow5In",
+						"sizeFrom": 180,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"startDelay": 18,
+						"lifetime": 60,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591A8"
+					}
+				]
+			},
+			"shootEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"strokeFrom": 5,
+						"strokeTo": 3,
+						"lenFrom": 26,
+						"lenTo": 0,
+						"interp": "pow10Out",
+						"sizeInterp": "pow3In",
+						"length": 93,
+						"baseLength": 0,
+						"lifetime": 55,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591",
+						"cone": 60
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 8,
+						"sizeTo": 80,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 58,
+						"sizeInterp": "pow3Out",
+						"colorFrom": "EEC59180",
+						"colorTo": "FFFFFF00"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 20,
+						"sizeFrom": 5,
+						"sizeTo": 80,
+						"strokeFrom": 10,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "EEC591"
+					}
+				]
+			},
+			"smokeEffect": "smokeCloud",
+			"fragBullets": 46,
+			"fragBullet": {
+				"type": "PointBulletType",
+				"trailEffect": "none",
+				"hitEffect": "instHit",
+				"speed": 40,
+				"lifetime": 8,
+				"damage": 867,
+				"lightningDamage": 133,
+				"lightning": 1,
+				"lightningLength": 15,
+				"lightningLengthRand": 5,
+				"lightningColor": "EEC591",
+				"splashDamageRadius": 55,
+				"splashDamage": 50,
+				"hitShake": 2
 			}
 		}
 	},

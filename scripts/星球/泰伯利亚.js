@@ -10,7 +10,7 @@ TBLY.generator = extend(SerpuloPlanetGenerator, {
 });
 TBLY.cloudMeshLoader = prov(() => new MultiMesh(
 	new HexSkyMesh(TBLY, 2, 0.15, 0.14, 5, Color.valueOf("25C9AB80"), 2, 0.42, 1, 0.43),
-	new HexSkyMesh(TBLY, 3, 0.6, 0.15, 5, Color.valueOf("25C9ABFF"), 2, 0.42, 1.2, 0.45)
+	new HexSkyMesh(TBLY, 3, 0.6, 0.15, 5, Color.valueOf("25C9AB"), 2, 0.42, 1.2, 0.45)
 ));
 TBLY.generator = new SerpuloPlanetGenerator();
 TBLY.visible = TBLY.accessible = TBLY.alwaysUnlocked = true;

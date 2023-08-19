@@ -128,7 +128,7 @@
 	"trailWidth":1.3,
 	"trailEffect":"none",
 	"trailColor":"FFFFFF",
-	"backColor":"FF5B5BFF",
+	"backColor":"FF5B5B",
 	"frontColor":"E3E3E3",
 	"speed": 1.6,
 	"drag":-0.1,
@@ -165,7 +165,7 @@
 	"trailWidth":1.2,
 	"trailEffect":"none",
 	"trailColor":"FFFFFF",
-	"backColor":"FF5B5BFF",
+	"backColor":"FF5B5B",
 	"frontColor":"E3E3E3", 
 	"width": 10,	"height": 45,
 	"speed": 4,	"lifetime": 90 }}

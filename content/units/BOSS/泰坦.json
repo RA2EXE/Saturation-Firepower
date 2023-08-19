@@ -1,5 +1,7 @@
 {
 	"type": "mech",
+	"healColor":"FF5B5B",
+	"outlineColor":"383848",
 	"name": "泰坦",
 	"description": "信息缺失！",
 	"details": "信息缺失！",
@@ -68,8 +70,8 @@
 						"sizeTo": 60,
 						"strokeFrom": 4,
 						"strokeTo": 0,
-						"colorFrom": "FF5B5BFF",
-						"colorTo": "FF5B5BFF"
+						"colorFrom": "FF5B5B",
+						"colorTo": "FF5B5B"
 					}
 				]
 			},
@@ -214,7 +216,7 @@
 							"length": 150,
 							"baseLength": 35,
 							"lifetime": 45,
-							"colorFrom": "FF5B5BFF",
+							"colorFrom": "FF5B5B",
 							"colorTo": "ffffff",
 							"cone": 360
 						},
@@ -237,8 +239,8 @@
 							"sizeTo": 145,
 							"strokeFrom": 8,
 							"strokeTo": 0,
-							"colorFrom": "FF5B5BFF",
-							"colorTo": "FF5B5BFF"
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B"
 						}
 					]
 				},
@@ -249,11 +251,11 @@
 				"speed": 60,
 				"lifetime": 50,
 				"drag": 0.1,
-				"backColor": "FF5B5BFF",
+				"backColor": "FF5B5B",
 				"frontColor": "FFFFFF",
 				"trailLength": 9,
 				"trailWidth": 2,
-				"trailColor": "FF5B5BFF"
+				"trailColor": "FF5B5B"
 			}
 		}
 	]

@@ -1,21 +1,34 @@
 {
 	"type": "GenericCrafter",
-	"health": 360,
+	"health": 500,
 	"name": "铬合成器",
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
 			"DrawDefault",
-			"DrawFlame"
+			{
+				"type": "DrawGlowRegion",
+				"glowScale": 8,
+				"alpha": 0.8
+			},
+			{
+				"type": "DrawFlame",
+				"flameRadius": 0,
+				"flameRadiusIn": 0,
+				"flameRadiusMag": 0,
+				"flameRadiusInMag": 0,
+				"flameColor": "FFD197"
+			}
 		]
 	},
-	"outputItem": "铬/1",
+	"craftEffect": "smeltsmoke",
+	"outputItem": "铬/2",
 	"research": {
 		"parent": "镄合成器",
 		"objectives": [
 			{
 				"type": "SectorComplete",
-				"preset": "灭绝"
+				"preset": "火山岛"
 			}
 		]
 	},
@@ -24,19 +37,18 @@
 	"hasPower": true,
 	"hasLiquids": false,
 	"hasItems": true,
-	"craftTime": 50,
+	"craftTime": 45,
 	"consumes": {
 		"power": 6,
-		"liquid": "slag/0.1",
 		"items": [
-			"plastanium/5",
-			"镄/1"
+			"裂位能/2",
+			"镄/3"
 		]
 	},
 	"requirements": [
 		"plastanium/35",
-		"surge-alloy/15",
-		"镄/10",
+		"泰勒合金/15",
+		"镄/50",
 		"二级协议/0"
 	],
 	"ambientSound": "smelter",

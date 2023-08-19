@@ -48,8 +48,8 @@
 		"colorTo": "EEC591"}]}
 		},
 	"requirements": [
-	{ "item": "thorium", "amount":16 },
-	{ "item": "裂位能", "amount":8 }
+		"thorium/16",
+		"裂位能/8"
 	],
 	"category": "defense",
 	"research": "裂位墙"

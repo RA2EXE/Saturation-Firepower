@@ -2,23 +2,24 @@
 	"type": "GenericCrafter",
 	"name": "硝化反应器",
 	"health": 360,
-	"outputLiquid": {"liquid": "硝化重油", "amount": 0.3},
+	"outputLiquid": "硝化重油/0.3",
 	"itemCapacity": 10,
 	"size": 3,
-	"drawer":{
-	    "type":"DrawMulti",
-	    "drawers":[
-	    {
-	    "type":"DrawRegion",
-	    "suffix":"-bottom"
-	    },
-	    {
-	       "type":"DrawLiquidTile",
-	    "drawLiquid":"硝化重油"
-	    },
-	    "DrawDefault"
-	]},
-    "hasItems": true,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "硝化重油"
+			},
+			"DrawDefault"
+		]
+	},
+	"hasItems": true,
 	"hasLiquids": true,
 	"outputsLiquid": true,
 	"hasPower": true,
@@ -26,19 +27,15 @@
 	"craftTime": 60,
 	"consumes": {
 		"power": 5,
-	"items": {
-	"items": [
-	{ "item": "spore-pod", "amount": 1}	]	},
-	"liquid": 
-	{"liquid": "oil", "amount": 0.3 }
-		},
+		"items": ["spore-pod/1"],
+		"liquid": "oil/0.3"
+	},
 	"requirements": [
-	{ "item": "plastanium", "amount": 85 },
-	{ "item": "metaglass", "amount": 60 },
-	{ "item": "silicon", "amount": 80},
-	{"item": "硅钢","amount":50},
-	{ "item": "纳米核", "amount": 30 },
-	{ "item": "一级协议", "amount": 0 }
+		"plastanium/85",
+		"metaglass/60",
+		"铬/80",
+		"纳米核/80",
+		"一级协议/0"
 	],
 	"category": "crafting",
 	"research": "激活器"

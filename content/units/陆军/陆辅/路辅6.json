@@ -65,7 +65,15 @@
 	"rotateSpeed": 0.8,
 	"faceTarget": true,
 	"singleTarget":true,
-	"research": "corvus",
+	"research": {
+		"parent": "corvus",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "第五战区"
+			}
+		]
+	},
 	"weapons":[
 		{
 			"name": "地星1",

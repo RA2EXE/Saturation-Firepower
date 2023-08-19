@@ -1,0 +1,39 @@
+{
+	"type": "PowerNode",
+	"name": "镀层装甲节点",
+	"health": 1800,
+	"armor": 22,
+	"size": 3,
+	"maxNodes": 25,
+	"laserRange": 22,
+	"laserScale": 0.5,
+	"research": "power-node-large",
+	"laserColor2": "5f6a89",
+	"placeableLiquid": true,
+	"requirements": [
+		"silicon/15",
+		"metaglass/10",
+		"铬/10",
+		"裂位能/5"
+	],
+	"destroyBullet": {
+		"splashDamage": 60,
+		"splashDamageRadius": 40,
+		"lightningColor": "EEC591",
+		"lightningDamage": 45,
+		"lightning": 4,
+		"lightningLength": 25,
+		"collides": false,
+		"instantDisappear": true,
+		"pierceArmor": true,
+		"hittable": false,
+		"absorbable": false,
+		"status": "崩溃",
+		"statusDuration": 30,
+		"hitSound": "plasmaboom",
+		"hitSoundVolume": 0.4,
+		"hitShake": 4,
+		"hitEffect": "instBomb"
+	},
+	"category": "power"
+}

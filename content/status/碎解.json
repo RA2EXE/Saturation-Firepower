@@ -15,7 +15,7 @@
 	"region":"饱和火力-三角形",
 	"sizeFrom": 4,
 	"sizeTo": 0,
-	"colorFrom": "FF5B5BFF",
+	"colorFrom": "FF5B5B",
 	"colorTo": "ffffff",
 	"cone":360 }
 }

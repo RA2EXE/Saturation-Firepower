@@ -16,7 +16,15 @@
 	"armor": 30,
 	"rotateSpeed": 1.2,
 	"itemCapacity": 100,
-	"research": "eclipse",
+	"research": {
+		"parent": "eclipse",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "第五战区"
+			}
+		]
+	},
 	"weapons": [
 		{
 			"name": "余晖1",

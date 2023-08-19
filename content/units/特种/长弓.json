@@ -342,7 +342,7 @@
 	},
 	"trailRotation": true,
 	"trailColor":"FFFFFF",
-	"backColor":"FF5B5BFF",
+	"backColor":"FF5B5B",
 	"frontColor":"E3E3E3",
 	"drag":-0.01,
 	"width": 13,	"height": 55,

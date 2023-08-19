@@ -114,24 +114,10 @@
 			"status": "unmoving",
 			"statusDuration": 10
 		},
-		"裂位能": {
-			"type": "PointBulletType",
-			"pierceArmor": true,
-			"trailEffect": "none",
-			"despawnEffect": "instBomb",
-			"hitEffect": "instBomb",
-			"speed": 30,
-			"lifetime": 60,
-			"splashDamageRadius": 35,
-			"splashDamage": 55,
-			"status": "崩溃",
-			"statusDuration": 360,
-			"hitSound": "plasmaboom",
-			"ammoMultiplier": 4
-		},
 		"集束": {
 			"type": "ArtilleryBulletType",
-			"speed": 2,
+			"rangeChange": 30,
+			"speed": 2.5,
 			"lifetime": 80,
 			"width": 15,
 			"height": 15,

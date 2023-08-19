@@ -3,7 +3,7 @@
 	"health": 360,
 	"name": "镄合成器",
 	"outputItem": "镄/1",
-	"itemCapacity": 20,
+	"itemCapacity": 10,
 	"size": 2,
 	"hasPower": true,
 	"hasItems": true,
@@ -21,7 +21,14 @@
 		"type": "DrawMulti",
 		"drawers": [
 			"DrawDefault",
-			"DrawFlame"
+			{
+				"type": "DrawFlame",
+				"flameRadius": 0,
+				"flameRadiusIn": 0,
+				"flameRadiusMag": 0,
+				"flameRadiusInMag": 0,
+				"flameColor": "FFD197"
+			}
 		]
 	},
 	"craftEffect": "smeltsmoke",

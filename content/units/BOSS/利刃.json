@@ -1,5 +1,7 @@
 {
 	"type": "flying",
+	"healColor":"FF5B5B",
+	"outlineColor":"383848",
 	"name": "利刃",
 	"description": "信息缺失！",
 	"details": "信息缺失！",
@@ -9,11 +11,19 @@
 	"flying": true,
 	"engineLayer":110,
 	"engines": [
-		{	"x": -16,"y":-36,
-		"radius": 4,"rotation": 90},
-		{	"x": 16,"y": -36,
-		"radius": 4,"rotation": 90}
-		],
+		{
+			"x": -16,
+			"y": -36,
+			"radius": 4,
+			"rotation": 90
+		},
+		{
+			"x": 16,
+			"y": -36,
+			"radius": 4,
+			"rotation": 90
+		}
+	],
 	"engineOffset": 24,
 	"engineSize": 9,
 	"hitSize": 58,
@@ -30,24 +40,24 @@
 	],
 	"rotateSpeed": 1.2,
 	"ammoCapacity": 99999,
-	"itemCapacity": 1000,
 	"abilities": [
-		{"type":"RepairFieldAbility",
-		"amount":530,
-		"reload":330,
-		"range":150,
-		"healEffect":"none",
-		"activeEffect":{
-			"type": "WaveEffect",
-			"lifetime": 35,
-			"sizeFrom": 0,
-			"sizeTo": 152,
-			"strokeFrom": 16,
-			"interp":"circleOut",
-			"strokeTo": 0,
-			"colorFrom": "FFFFFF",
-			"colorTo": "FF5B5B"
-		}
+		{
+			"type": "RepairFieldAbility",
+			"amount": 530,
+			"reload": 330,
+			"range": 150,
+			"healEffect": "none",
+			"activeEffect": {
+				"type": "WaveEffect",
+				"lifetime": 35,
+				"sizeFrom": 0,
+				"sizeTo": 152,
+				"strokeFrom": 16,
+				"interp": "circleOut",
+				"strokeTo": 0,
+				"colorFrom": "FFFFFF",
+				"colorTo": "FF5B5B"
+			}
 		},
 		{
 			"type": "ForceFieldAbility",
@@ -60,7 +70,7 @@
 		{
 			"type": "ForceFieldAbility",
 			"sides": 5,
-			"rotation":180,
+			"rotation": 180,
 			"radius": 150,
 			"regen": 100,
 			"max": 12000,
@@ -424,8 +434,9 @@
 			"y": 8,
 			"reload": 80,
 			"mirror": true,
-			"rotate": true,
-			"rotateSpeed": 0,
+			"rotate": false,
+			"controllable": false,
+			"autoTarget": true,
 			"shoot": {
 				"shots": 8,
 				"shotDelay": 5,
@@ -443,10 +454,10 @@
 			},
 			"shootSound": "missile",
 			"inaccuracy": 2,
-			"shootCone": 180,
+			"shootCone": 360,
 			"bullet": {
 				"type": "FlakBulletType",
-				"damage": 75,
+				"damage": 115,
 				"knockback": -6,
 				"shrinkY": 0,
 				"status": "unmoving",
@@ -469,10 +480,9 @@
 					"type": "ParticleEffect",
 					"particles": 4,
 					"sizeFrom": 4,
-					"sizeTo": 1,
+					"sizeTo": 0,
 					"length": 30,
 					"lifetime": 30,
-					"lightOpacity": 0,
 					"interp": "circleOut",
 					"sizeInterp": "pow5In",
 					"colorFrom": "FF5B5B",
@@ -503,22 +513,27 @@
 			"shootCone":100,
 			"minWarmup": 0.9,
 			"shootWarmupSpeed": 0.022,
+			"shoot": {
+				"shots": 3,
+				"shotDelay": 16
+			},
 			"bullet": {
-				"keepVelocity":false,
-				"speed":0,
-				"hitShake":8,
-				"shootEffect":{
-				"type": "WaveEffect",
-				"interp":"circleOut",
-				"lifetime": 11,
-				"sizeFrom": 0,
-				"sizeTo": 70,
-				"strokeFrom": 40,
-				"strokeTo": 16,
-				"colorFrom": "FF5B5B",
-				"colorTo": "FF5B5B00"},
-			"smokeEffect":"shootSmallFlame",
-			"spawnUnit":"利刃2导弹"
+				"keepVelocity": false,
+				"speed": 0,
+				"hitShake": 8,
+				"shootEffect": {
+					"type": "WaveEffect",
+					"interp": "circleOut",
+					"lifetime": 11,
+					"sizeFrom": 0,
+					"sizeTo": 70,
+					"strokeFrom": 40,
+					"strokeTo": 16,
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B00"
+				},
+				"smokeEffect": "shootSmallFlame",
+				"spawnUnit": "利刃2导弹"
 			}
 		}
 	]

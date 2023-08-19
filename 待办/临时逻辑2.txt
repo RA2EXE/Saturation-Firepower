@@ -1,52 +1,35 @@
-"hitEffect": {
-					"type": "MultiEffect",
-					"effects": [
-						{
-							"type": "ParticleEffect",
-							"particles": 1,
-							"sizeFrom": 末段圈内径,
-							"sizeTo": 末段圈内径,
-							"sizeInterp": "pow5In",
-							"length": 0,
-							"baseLength": 0,
-							"lifetime": 跟末段圈同步,
-							"colorFrom": "76D081A8",
-							"colorTo": "76D08100"
-						},
-						{
-							"type": "WaveEffect",
-							"lifetime": 10,
-							"sizeFrom": 末段圈内径,
-							"sizeTo": 2~3倍实际杀伤大小,
-							"strokeFrom": 12,
-							"strokeTo": 18,//如果可以的话，做一下边缘模糊
-							"colorFrom": "76D081AA",
-							"colorTo": "E3E3E3"//用臭猫深色变出的半透明能更好的模拟冲击波（json的爹
-						},
-                        {
-							"type": "ParticleEffect",
-							"particles": 16,
-							"sizeFrom": 28~32波动？,//具体大小我看不出来，大概是末段的内径的30%~40%
-					    	"sizeTo": 0,
-							"sizeInterp": "pow10In",
-							"interp": "pow5Out",
-							"length": 末段外径+30差不多,
-							"baseLength": 0,
-							"lifetime": 末段+120,
-							"colorFrom": "76D081A8",
-							"colorTo": "76D08180",
-							"cone": 360
-						},
-					]
-				},
-            "hitEffect": {
-				"type": "WaveEffect",
-				"lifetime": 30,
-				"sizeFrom": 0,
-				"sizeTo": 160,
-				"strokeFrom": 8,
-				"strokeTo": 0,
-				"interp": "circleOut",
-				"colorFrom": "76D081",
-				"colorTo": "76D081"
-			},
+wait 3
+ubind @oct
+read y cell1 1
+read x cell1 0
+read X cell1 2
+read Y cell1 3
+jump 9 always x false
+read X cell1 4
+read Y cell1 5
+ucontrol move x y 0 0 0
+ucontrol within x y 30 j 0
+jump 9 notEqual j 1
+ucontrol build x y @饱和火力-裂位收容块 0 0
+getlink 块 1
+jump 12 strictEqual 块 null
+ucontrol move x y 0 0 0
+ucontrol payTake 0 0 0 0 0
+sensor P @unit @payloadCount
+jump 15 equal P 0
+ucontrol move X Y 0 0 0
+ucontrol payDrop 0 0 0 0 0
+sensor P @unit @payloadCount
+jump 19 notEqual P 0
+op add 换块 换块 1
+op mod 换 换块 2
+jump 30 equal 换 0
+ucontrol build x y @饱和火力-装甲收容块 0 0
+getlink 块 1
+jump 26 strictEqual 块 null
+jump 15 always x false
+op add 换厂 换厂 1
+op mod 换 换厂 2
+jump 7 equal 换 1
+jump 4 equal 换 0
+jump 2 always x false

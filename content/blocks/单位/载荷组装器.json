@@ -8,6 +8,7 @@
 	"maxBlockSize": 4,
 	"size": 6,
 	"buildSpeed": 0.35,
+	"liquidCapacity": 30,
 	"filter":["裂位收容块","装甲收容块"],
 	"consumes": {
 		"power": 10,
@@ -16,7 +17,7 @@
 	"requirements": [
 		"silicon/450",
 		"莱普合金/600",
-		"纳米核/200",
+		"纳米核/500",
 		"二级协议/1"
 	],
 	"category": "units",

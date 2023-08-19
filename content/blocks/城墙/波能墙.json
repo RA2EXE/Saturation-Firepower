@@ -1,6 +1,5 @@
 {
 	"name": "波能墙",
-	"description": "收集敌人的攻击产生的动能与热能，并在之后反射。",
 	"type": "Wall",
 	"armor":13,
 	"lightningChance":0.1,

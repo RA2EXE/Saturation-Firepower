@@ -20,7 +20,15 @@
 	"drownTimeMultiplier": 6,
 	"hovering": true,
 	"allowLegStep": true,
-	"research": "toxopid",
+	"research": {
+		"parent": "toxopid",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "荒芜矿区"
+			}
+		]
+	},
 	"weapons": [
 		{
 			"name": "盘龙3",

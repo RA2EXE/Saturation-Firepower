@@ -62,7 +62,15 @@
 			"cooldown": 1330
 		}
 	],
-	"research": "navanax",
+	"research": {
+		"parent": "navanax",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "火山岛"
+			}
+		]
+	},
 	"weapons": [
 		{
 			"name": "罗汉2",

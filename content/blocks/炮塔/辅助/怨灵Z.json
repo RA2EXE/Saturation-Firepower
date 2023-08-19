@@ -62,7 +62,6 @@
 	"ammoTypes": {
 		"裂位能": {
 			"type": "BasicBulletType",
-			"reloadMultiplier": 0.5,
 			"damage": 85.5,
 			"rangeChange": 88,
 			"inaccuracy": 2,

@@ -1,8 +1,9 @@
 {
 	"type": "missile",
 	"template": "MissileUnitType",
+	"outlineColor":"383848",
 	"name": "利刃2导弹",
-	"homingDelay": 100,
+	"homingDelay": 90,
 	"speed": 6,
 	"lifetime": 290,
 	"rotateSpeed": 3,
@@ -11,7 +12,7 @@
 	"hidden": true,
 	"missileAccelTime": 100,
 	"hitSize": 18,
-	"health": 3000,
+	"health": 3600,
 	"armor": 35,
 	"fogRadius": 8,
 	"engineColor": "FF5B5B",
@@ -27,17 +28,18 @@
 			"effect": {
 				"type": "ParticleEffect",
 				"particles": 4,
-				"sizeFrom": 8,
+				"sizeFrom": 5,
 				"sizeTo": 0,
-				"length": 16,
-				"lifetime": 80,
+				"length": 33,
+				"lifetime": 60,
 				"interp": "pow10Out",
-				"sizeInterp": "pow5In",
-				"colorFrom": "FF5B5B40",
-				"colorTo": "FF5B5B40",
-				"cone": 360
+				"sizeInterp": "pow10In",
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5B",
+				"cone": 28
 			},
-			"interval": 5,
+			"interval": 3,
+			"rotateEffect": true,
 			"y": -8,
 			"color": "FF5B5B"
 		}
@@ -45,8 +47,6 @@
 	"weapons": [
 		{
 			"name": "自爆",
-			"shootStatusDuration": 100,
-			"shootStatus": "绝判",
 			"x": 0,
 			"y": 0,
 			"reload": 1,

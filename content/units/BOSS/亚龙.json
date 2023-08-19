@@ -1,5 +1,7 @@
 {
 	"type": "flying",
+	"healColor":"FF5B5B",
+	"outlineColor":"383848",
 	"name": "亚龙",
 	"description": "信息缺失！",
 	"details": "信息缺失！",

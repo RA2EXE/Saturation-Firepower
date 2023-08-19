@@ -32,7 +32,15 @@
 	"armor": 33,
 	"engineOffset": 0,
 	"engineSize": 0,
-	"research": "oct",
+	"research": {
+		"parent": "oct",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "第五战区"
+			}
+		]
+	},
 	"lowAltitude": true,
 	"engines": [
 		{

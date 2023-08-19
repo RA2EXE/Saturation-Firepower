@@ -159,6 +159,7 @@
 				},
 				"hitEffect": "hitEmpSpark",
 				"despawnEffect": "none",
+				"shootEffect":"shootHeal",
 				"healPercent": 3,
 				"damage": 35,
 				"pierce": true,

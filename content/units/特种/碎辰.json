@@ -1,7 +1,6 @@
 {
 	"type": "legs",
 	"name": "碎辰",
-	"description": "只攻击指定目标，发射超视距弹道能量弹，[gold]有概率强行突破力场直接攻入内部。\n[gray]装甲厚重但几乎没有近战自保能力。",
 	"fogRadius":150,
 	"legSplashDamage":8888,
 	"legSplashRange":13,
@@ -36,10 +35,6 @@
 	"research": {
 		"parent": "实验工厂",
 		"objectives": [
-			{"type": "SectorComplete",
-				"preset": "第五战区"},
-			{"type": "SectorComplete",
-				"preset": "火山岛"},
 			{"type": "SectorComplete",
 				"preset": "灭绝"}
 				]},

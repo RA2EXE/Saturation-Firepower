@@ -51,7 +51,7 @@
 				"strokeFrom": 4,
 				"strokeTo": 0,
 				"colorFrom": "FFFFFF",
-				"colorTo": "FF5B5BFF"
+				"colorTo": "FF5B5B"
 			},
 			{
 				"type": "WaveEffect",
@@ -89,8 +89,8 @@
 					"baseLength": 8,
 					"lifetime": 110,
 					"interp": "fastSlow",
-					"colorFrom": "FF5B5BFF",
-					"colorTo": "FF5B5BFF",
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B",
 					"cone": 360
 				},
 				{
@@ -100,8 +100,8 @@
 					"sizeTo": 500,
 					"strokeFrom": 16,
 					"strokeTo": 0,
-					"colorFrom": "FF5B5BFF",
-					"colorTo": "FF5B5BFF"
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B"
 				},
 				{
 					"type": "WaveEffect",
@@ -110,8 +110,8 @@
 					"sizeTo": 500,
 					"strokeFrom": 48,
 					"strokeTo": 0,
-					"colorFrom": "FF5B5BFF",
-					"colorTo": "FF5B5BFF"
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B"
 				}
 			]
 		},
@@ -144,7 +144,7 @@
 						"length": 55,
 						"baseLength": 39,
 						"lifetime": 95,
-						"colorFrom": "FF5B5BFF",
+						"colorFrom": "FF5B5B",
 						"colorTo": "ffffff",
 						"cone": 360
 					},
@@ -155,8 +155,8 @@
 						"sizeTo": 88,
 						"strokeFrom": 6,
 						"strokeTo": 0,
-						"colorFrom": "FF5B5BFF",
-						"colorTo": "FF5B5BFF"
+						"colorFrom": "FF5B5B",
+						"colorTo": "FF5B5B"
 					}
 				]
 			}
@@ -212,7 +212,7 @@
 								"length": 55,
 								"baseLength": 39,
 								"lifetime": 35,
-								"colorFrom": "FF5B5BFF",
+								"colorFrom": "FF5B5B",
 								"colorTo": "ffffff",
 								"cone": 360
 							},
@@ -223,8 +223,8 @@
 								"sizeTo": 88,
 								"strokeFrom": 6,
 								"strokeTo": 0,
-								"colorFrom": "FF5B5BFF",
-								"colorTo": "FF5B5BFF"
+								"colorFrom": "FF5B5B",
+								"colorTo": "FF5B5B"
 							}
 						]
 					},

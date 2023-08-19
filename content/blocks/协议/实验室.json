@@ -10,7 +10,7 @@
 				"type": "DrawFlame",
 				"flameRadius": 2,
 				"flameRadiusIn": 0.5,
-				"flameColor": "25C9ABFF"
+				"flameColor": "25C9AB"
 			},
 			"DrawDefault"
 		]

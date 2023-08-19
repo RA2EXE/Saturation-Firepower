@@ -1,6 +1,5 @@
 {
 	"name": "莱普合金墙",
-	"description": "坚硬，接地，耐温差，耐酸碱，耐打击。",
 	"type": "Wall",
 	"health": 10500,
 	"armor":29,

@@ -59,7 +59,7 @@
 		"ammoMultiplier": 1,
 		"colors": [
 			"25C9ABA8",
-			"25C9ABFF",
+			"25C9AB",
 			"FFFFFF"
 		],
 		"smokeEffect": "smokeCloud",
@@ -73,7 +73,7 @@
 					"sizeTo": 0,
 					"strokeFrom": 0,
 					"strokeTo": 6,
-					"colorFrom": "25C9ABFF",
+					"colorFrom": "25C9AB",
 					"colorTo": "BFFFDBFF"
 				},
 				{
@@ -87,7 +87,7 @@
 					"length": 200,
 					"baseLength": -180,
 					"lifetime": 70,
-					"colorFrom": "25C9ABFF",
+					"colorFrom": "25C9AB",
 					"colorTo": "BFFFDBFF",
 					"cone": 360
 				},
@@ -99,7 +99,7 @@
 					"length": 0,
 					"baseLength": -0,
 					"lifetime": 80,
-					"colorFrom": "25C9ABFF",
+					"colorFrom": "25C9AB",
 					"colorTo": "BFFFDBFF",
 					"cone": 360
 				},
@@ -136,7 +136,7 @@
 					"lifetime":60,
 					"interp":"pow5Out",
 					"sizeInterp":"pow5In",
-					"colorFrom": "25C9ABFF",
+					"colorFrom": "25C9AB",
 					"colorTo": "BFFFDBFF",
 					"cone": 360
 				},
@@ -153,7 +153,7 @@
 					"lifetime": 22,
 					"interp":"pow5Out",
 					"sizeInterp":"pow5Out",
-					"colorFrom": "25C9ABFF",
+					"colorFrom": "25C9AB",
 					"colorTo": "BFFFDBFF",
 					"cone": 36
 				}]}

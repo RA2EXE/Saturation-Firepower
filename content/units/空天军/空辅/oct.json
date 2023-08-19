@@ -21,6 +21,7 @@
 			"shootSound": "lasershoot",
 			"bullet": {
 				"type": "LaserBoltBulletType",
+				"shootEffect":"shootHeal",
 				"frontColor": "FFFFFF",
 				"backColor": "97FFA8FF",
 				"healPercent": 7,
@@ -49,6 +50,7 @@
 			"shootSound": "lasershoot",
 			"bullet": {
 				"type": "LaserBoltBulletType",
+				"shootEffect":"shootHeal",
 				"frontColor": "FFFFFF",
 				"backColor": "97FFA8FF",
 				"healPercent": 6,
@@ -77,6 +79,7 @@
 			"shootSound": "lasershoot",
 			"bullet": {
 				"type": "LaserBoltBulletType",
+				"shootEffect":"shootHeal",
 				"frontColor": "FFFFFF",
 				"backColor": "97FFA8FF",
 				"healPercent": 7,
@@ -105,6 +108,7 @@
 			"shootSound": "lasershoot",
 			"bullet": {
 				"type": "LaserBoltBulletType",
+				"shootEffect":"shootHeal",
 				"frontColor": "FFFFFF",
 				"backColor": "97FFA8FF",
 				"healPercent": 6,

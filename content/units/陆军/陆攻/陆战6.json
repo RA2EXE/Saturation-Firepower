@@ -16,7 +16,15 @@
 	"immunities": [
 		"disarmed"
 	],
-	"research": "reign",
+	"research": {
+		"parent": "reign",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "荒芜矿区"
+			}
+		]
+	},
 	"weapons": [
 		{
 			"name": "立宪1",

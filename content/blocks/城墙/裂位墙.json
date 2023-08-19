@@ -48,8 +48,8 @@
 		"colorTo": "EEC591"}]}
 		},
 	"requirements": [
-	{ "item": "thorium", "amount":4 },
-	{ "item": "裂位能", "amount":2 }
+		"thorium/4",
+		"裂位能/2"
 	],
 	"category": "defense",
 	"research": "phase-wall-large"

@@ -61,7 +61,15 @@
 	],
 	"faceTarget": false,
 	"circleTarget": true,
-	"research": "空5",
+	"research": {
+		"parent": "空5",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "风沙谷"
+			}
+		]
+	},
 	"weapons": [
 		{
 			"name": "电默",

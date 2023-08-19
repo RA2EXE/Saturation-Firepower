@@ -86,6 +86,7 @@
 	"ammoTypes": {
 		"集束": {
 			"type": "ArtilleryBulletType",
+			"inaccuracy": 3,
 			"speed": 25,
 			"lifetime": 41,
 			"width": 22,

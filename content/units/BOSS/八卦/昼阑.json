@@ -144,7 +144,7 @@
 				"pierceArmor": true,
 				"colors": [
 					"25C9ABA8",
-					"25C9ABFF",
+					"25C9AB",
 					"FFFFFF"
 				],
 				"shootEffect": {
@@ -182,7 +182,7 @@
 							"sizeTo": 0,
 							"strokeFrom": 0,
 							"strokeTo": 10,
-							"colorFrom": "25C9ABFF",
+							"colorFrom": "25C9AB",
 							"colorTo": "BFFFDB"
 						},
 						{
@@ -193,7 +193,7 @@
 							"sizeTo": 0,
 							"strokeFrom": 0,
 							"strokeTo": 10,
-							"colorFrom": "25C9ABFF",
+							"colorFrom": "25C9AB",
 							"colorTo": "BFFFDB"
 						},
 						{
@@ -205,7 +205,7 @@
 							"sizeTo": 0,
 							"strokeFrom": 0,
 							"strokeTo": 10,
-							"colorFrom": "25C9ABFF",
+							"colorFrom": "25C9AB",
 							"colorTo": "BFFFDB"
 						},
 						{
@@ -217,7 +217,7 @@
 							"sizeTo": 0,
 							"strokeFrom": 0,
 							"strokeTo": 10,
-							"colorFrom": "25C9ABFF",
+							"colorFrom": "25C9AB",
 							"colorTo": "BFFFDB"
 						},
 						{

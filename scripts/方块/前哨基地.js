@@ -29,7 +29,7 @@ const 前哨基地 = extend(CoreBlock, "前哨基地", {
 		draw() {
 			this.super$draw();
 			Draw.z(Layer.effect);
-			Lines.stroke(2, Color.valueOf("FF5B5BFF"));
+			Lines.stroke(2, Color.valueOf("FF5B5B"));
 			Draw.alpha(kill ? 1 : Vars.state.teams.cores(this.team).size > 8 ? 1 : 0);
 			Lines.arc(this.x, this.y, 16, time * (6 / num) / 360, 90);
 		}

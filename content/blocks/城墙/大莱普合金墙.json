@@ -1,6 +1,5 @@
 {
 	"name": "大型莱普合金墙",
-	"description": "坚硬，接地，耐温差，耐酸碱，耐打击。占据多个方块",
 	"type": "Wall",
 	"health": 42000,
 	"armor":29,
