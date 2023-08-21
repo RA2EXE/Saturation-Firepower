@@ -1,0 +1,117 @@
+{
+	"type": "tank",
+	"template": "TankUnitType",
+	"healFlash":false,
+	"treadFrames": 16,
+	"treadPullOffset": 8,
+	"crushDamage": 2,
+	"treadRects": [
+		{
+			"x": -60,
+			"y": -76,
+			"width": 24,
+			"height": 152
+		}
+	],
+	"immunities": [
+		"shocked",
+		"burning",
+		"electrified",
+		"sapped",
+		"崩溃",
+		"修复",
+		"抢修",
+		"干扰",
+		"绝判",
+		"毁灭"
+	],
+	"name": "两栖装甲运载车",
+	"rotateSpeed": 0.7,
+	"speed": 0.55,
+	"accel": 0.08,
+	"drag": 0.08,
+	"hitSize": 32,
+	"ammoType": "titanium",
+	"ammoCapacity": 80,
+	"hovering": true,
+	"canDrown": false,
+	"health": 15000,
+	"armor": 36,
+	"itemCapacity": 2000,
+	"faceTarget": false,
+	"itemOffsetY":15,
+	"fogRadius": 30,
+	"weapons": [
+		{
+			"name": "运载车1",
+			"reload": 16.17,
+			"recoil": 1,
+			"x": 0,
+			"y": -3,
+			"shootY": 10,
+			"rotate": true,
+			"rotateSpeed": 6,
+			"mirror": false,
+			"inaccuracy": 1.8,
+			"shootSound": "bolt",
+			"alternate": false,
+			"bullet": {
+				"damage": 85,
+				"speed": 6,
+				"status": "崩溃",
+				"statusDuration": 400,
+				"buildingDamageMultiplier": 0.3,
+				"lifetime": 60,
+				"width": 8,
+				"height": 12,
+				"frontColor": "FFFFFF",
+				"backColor": "FEEBB3",
+				"trailLength": 12,
+				"trailWidth": 2,
+				"trailColor": "FEEBB3",
+				"shootEffect":"shootBig2",
+				"smokeEffect":"shootBigSmoke",
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 25,
+					"baseLength": 0,
+					"lifetime": 15,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				}
+			}
+		}
+	],
+	"deathExplosionEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "WaveEffect",
+				"interp": "circleOut",
+				"lifetime": 45,
+				"sizeFrom": 0,
+				"sizeTo": 78,
+				"sides": 8,
+				"strokeFrom": 7,
+				"strokeTo": 0,
+				"colorFrom": "FEEBB3",
+				"colorTo": "FEEBB3"
+			},
+			{
+				"type": "WaveEffect",
+				"interp": "circleOut",
+				"lifetime": 45,
+				"sizeFrom": 0,
+				"sizeTo": 90,
+				"sides": 8,
+				"strokeFrom": 9,
+				"strokeTo": 0,
+				"colorFrom": "FEEBB3",
+				"colorTo": "FEEBB3"
+			}
+		]
+	}
+}

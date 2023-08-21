@@ -2,9 +2,7 @@
 	"type": "GenericCrafter",
 	"health": 360,
 	"name": "大型硫混合器",
-	"outputItem": {
-	"item": "pyratite", "amount": 5
-	},
+	"outputItem": "pyratite/5",
 	"itemCapacity": 20,
 	"size": 3,
 	"hasPower": true,
@@ -12,18 +10,18 @@
 	"hasItems": true,
 	"craftTime": 80,
 	"consumes": {
-	"power": 2,
-	"items": {
+		"power": 2,
 		"items": [
-	{ "item": "coal", "amount": 5 },
-	{ "item": "lead", "amount": 10 },
-	{ "item": "sand", "amount": 10 }
-	]	}	},
+			"coal/5",
+			"lead/10",
+			"sand/10"
+		]
+	},
 	"requirements": [
-	{ "item": "copper", "amount": 100 },
-	{ "item": "lead", "amount": 50 },
-	{ "item": "titanium", "amount": 20 },
-	{ "item": "一级协议", "amount": 0 }
+		"copper/100",
+		"lead/50",
+		"titanium/20",
+		"一级协议/0"
 	],
 	"category": "crafting",
 	"research": "pyratite-mixer"

@@ -36,12 +36,10 @@
 	},
 	"consumes": {
 		"power": 10,
-		"items": {
-			"items": [
-				"镄/1",
-				"铬/1"
-			]
-		}
+		"items": [
+			"镄/1",
+			"铬/1"
+		]
 	},
 	"requirements": [
 		"镄/80",

@@ -14,6 +14,17 @@
 	"recoil": 3,
 	"xRand": 2,
 	"recoilTime":20,
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"suffix": "-管",
+				"moveY": -2
+			}
+		]
+	},
 	"shootEffect":  {
 	"type": "ParticleEffect",
 	"particles": 9,

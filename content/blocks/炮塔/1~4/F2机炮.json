@@ -37,8 +37,7 @@
 			"lifetime": 30.76,
 			"width": 6,
 			"height": 9,
-			"ammoMultiplier": 2,
-			"shootEffect": "shootBig"
+			"ammoMultiplier": 2
 		},
 		"lead": {
 			"speed": 6.5,
@@ -52,8 +51,7 @@
 			"lifetime": 30.76,
 			"width": 6,
 			"height": 9,
-			"ammoMultiplier": 2,
-			"shootEffect": "shootBig"
+			"ammoMultiplier": 2
 		},
 		"graphite": {
 			"speed": 6.5,
@@ -62,8 +60,7 @@
 			"lifetime": 30.76,
 			"width": 7,
 			"height": 10,
-			"ammoMultiplier": 4,
-			"shootEffect": "shootBig"
+			"ammoMultiplier": 4
 		},
 		"pyratite": {
 			"speed": 6.5,
@@ -75,8 +72,7 @@
 			"frontColor": "FFB90F",
 			"width": 6,
 			"height": 9,
-			"ammoMultiplier": 4,
-			"shootEffect": "shootBig"
+			"ammoMultiplier": 4
 		},
 		"silicon": {
 			"speed": 6.5,
@@ -85,7 +81,6 @@
 			"lifetime": 30.76,
 			"width": 6,
 			"height": 11,
-			"shootEffect": "shootBig",
 			"homingRange": 80,
 			"homingPower": 0.08,
 			"ammoMultiplier": 5
@@ -97,7 +92,7 @@
 			"width": 8,
 			"height": 10,
 			"ammoMultiplier": 6,
-			"shootEffect": "shootBig"
+			"shootEffect":"shootBig"
 		},
 		"thorium": {
 			"speed": 8,
@@ -105,8 +100,8 @@
 			"lifetime": 25,
 			"width": 10,
 			"height": 11,
-			"shootEffect": "shootBig",
-			"ammoMultiplier": 6
+			"ammoMultiplier": 6,
+			"shootEffect":"shootBig"
 		}
 	},
 	"requirements": [

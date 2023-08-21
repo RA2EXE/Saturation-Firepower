@@ -9,19 +9,22 @@
 	"walkEffect": {
 		"type": "ParticleEffect",
 		"particles": 3,
-		"sizeInterp":"pow3In",
-		"interp":"pow3Out",
-		"sizeFrom": 2,
+		"sizeInterp":"pow5In",
+		"interp":"pow5Out",
+		"sizeFrom": 2.5,
 		"sizeTo": 0,
 		"length": 17,
 		"baseLength": 0,
 		"lifetime": 30,
 		"colorFrom": "FFF1D2",
-		"colorTo": "FF8C0080"
+		"colorTo": "FFD197"
 	},
 	"damageTaken": 8,
 	"status": "崩溃",
 	"attributes":{
+		"oil": -2,
+		"water": -2,
+		"spores": -2,
 		"heat": 2
 	},
 	"variants":2

@@ -1,5 +1,6 @@
 {
 	"type": "GenericCrafter",
+	"health": 160,
 	"name": "高压粉碎机",
 	"outputItem": {
 		"item": "sand",

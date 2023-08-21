@@ -2,9 +2,9 @@
 	"type": "flying",
 	"name": "雷鸣",
 	"speed": 2,
-	"drag": 0.02,
+	"drag": 0.04,
 	"accel": 0.05,
-	"rotateSpeed": 8,
+	"rotateSpeed": 5,
 	"ammoType": {
 		"type": "PowerAmmoType",
 		"totalPower": 1000
@@ -14,8 +14,8 @@
 	"flying": true,
 	"health": 1800,
 	"armor": 22,
-	"engineOffset": 13,
-	"engineSize": 5,
+	"engineOffset": 14,
+	"engineSize": 4.5,
 	"research": {
 		"parent": "特种工厂",
 		"objectives": [
@@ -168,9 +168,6 @@
 				"spin": 10,
 				"hitSize": 15,
 				"sprite": "large-bomb",
-				"trailLength": 2,
-				"trailWidth": 5,
-				"trailColor": "FEEBB3",
 				"frontColor": "FEEBB3",
 				"backColor": "FEEBB3",
 				"speed": 3,

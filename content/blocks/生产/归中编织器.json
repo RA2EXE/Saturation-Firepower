@@ -1,6 +1,5 @@
 {
 	"type": "GenericCrafter",
-	"health": 360,
 	"name": "归中编织器",
 	"outputItem": {
 		"item": "phase-fabric",

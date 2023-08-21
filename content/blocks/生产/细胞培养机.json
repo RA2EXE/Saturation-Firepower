@@ -34,10 +34,7 @@
 	"name": "细胞培养机",
 	"itemCapacity": 100,
 	"liquidCapacity": 72,
-	"outputItem": {
-		"item": "spore-pod",
-		"amount": 11
-	},
+	"outputItem": "spore-pod/11",
 	"attribute": "spores",
 	"type": "AttributeCrafter",
 	"category": "production",

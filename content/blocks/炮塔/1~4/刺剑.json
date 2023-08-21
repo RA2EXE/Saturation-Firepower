@@ -43,11 +43,12 @@
 			"length": 200,
 			"damage": 150,
 			"width": 20,
-			"fromColor": "FF69B4",
-			"toColor": "FF69B4",
+			"fromColor": "f9a3c7",
+			"toColor": "f9a3c7",
 			"ammoMultiplier": 4,
 			"pierce": true,
-			"shootEffect": "thoriumShoot"
+			"shootEffect": "thoriumShoot",
+			"smokeEffect": "thoriumShoot"
 		},
 		"镄": {
 			"type": "ShrapnelBulletType",

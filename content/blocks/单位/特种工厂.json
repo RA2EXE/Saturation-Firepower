@@ -138,9 +138,9 @@
 			"unit": "攻城锤",
 			"time": 1800,
 			"requirements": [
-				"silicon/80",
-				"graphite/50",
-				"硅钢/20"
+				"silicon/160",
+				"graphite/160",
+				"硅钢/80"
 			]
 		},
 		{
@@ -157,9 +157,10 @@
 			"unit": "雷鸣",
 			"time": 3000,
 			"requirements": [
-				"silicon/60",
-				"titanium/50",
-				"plastanium/20"
+				"silicon/220",
+				"titanium/80",
+				"plastanium/80",
+				"phase-fabric/40"
 			]
 		}
 	],

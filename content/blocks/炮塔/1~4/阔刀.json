@@ -1,7 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "阔刀",
-	"description": "强大的短程破片炮塔，有效击退单位，对建筑效果甚微",
 	"health": 2750,
 	"armor":8,
 	"size": 3,

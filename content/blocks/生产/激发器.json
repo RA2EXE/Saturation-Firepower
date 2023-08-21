@@ -1,32 +1,45 @@
 {
 	"type": "GenericCrafter",
 	"name": "激发器",
-	"outputItem": { "item": "裂位能", "amount": 1 },
+	"health": 240,
+	"outputItem": "裂位能/1",
 	"size": 2,
 	"hasPower": true,
 	"hasLiquids": false,
 	"hasItems": true,
 	"craftTime": 120,
 	"itemCapacity": 10,
-	"updateEffect":{"type": "WaveEffect",
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawFade",
+				"scale": 2,
+				"alpha": 0.98
+			}
+		]
+	},
+	"updateEffect": {
+		"type": "WaveEffect",
 		"lifetime": 10,
 		"sizeFrom": 0,
 		"sizeTo": 12,
 		"strokeFrom": 2,
 		"strokeTo": 0,
-		"colorFrom": "FFF1D2FF",
-		"colorTo": "FFD197FF"},
+		"colorFrom": "FFF1D2",
+		"colorTo": "FFD197"
+	},
 	"consumes": {
-	"power":6,
-	"items": {	 "items": [
- { "item": "phase-fabric", "amount": 1}	]
-  } },
-"requirements": [
-	{ "item": "silicon", "amount": 65 },
-	{ "item": "plastanium", "amount": 25 },
-	{ "item": "thorium", "amount": 45 },
-	{ "item": "二级协议", "amount": 0 }
-
+		"power": 6,
+		"items": [
+			"phase-fabric/1"
+		]
+	},
+	"requirements": [
+		"silicon/65",
+		"plastanium/25",
+		"二级协议/0"
 	],
 	"category": "crafting",
 	"research": "前沿实验室"

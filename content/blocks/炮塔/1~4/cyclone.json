@@ -14,7 +14,7 @@
 			"hitEffect": "flakExplosion",
 			"fragBullets": 4,
 			"fragBullet": {
-				"type": "FlakBulletType",
+				"type": "BasicBulletType",
 				"despawnEffect": "none",
 				"width": 5,
 				"height": 12,
@@ -93,6 +93,7 @@
 		},
 		"硅钢": {
 			"type": "FlakBulletType",
+			"backColor": "7595D2",
 			"speed": 4,
 			"lifetime": 50,
 			"width": 6,

@@ -49,9 +49,9 @@
 		]
 	},
 	"requirements": [
-		"titanium/45",
-		"metaglass/20",
-		"silicon/35"
+		"silicon/40",
+		"硅钢/45",
+		"plastanium/30"
 	],
 	"category": "crafting",
 	"research": "spore-press"

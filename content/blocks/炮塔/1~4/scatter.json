@@ -54,7 +54,7 @@
 			"fragBullets": 7,
 			"fragBullet": {
 				"type": "BasicBulletType",
-				"collidesAir": false,
+				"collidesGround": false,
 				"despawnEffect": "none",
 				"width": 4,
 				"height": 4,

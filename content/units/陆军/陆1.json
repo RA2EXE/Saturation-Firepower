@@ -1,8 +1,6 @@
 {
 	"type": "tank",
 	"name": "冲锋",
-	"description": "攻击附近所有敌人。向附近敌人发射大口径子弹。",
-	"details": "[red]冲锋号已吹响！",
 	"squareShape": true,
 	"omniMovement": false,
 	"rotateMoveFirst": false,
@@ -15,21 +13,6 @@
 	"drag": 0.08,
 	"accel": 0.1,
 	"itemCapacity": 5,
-	"treadPullOffset": 3,
-	"treadRects": [
-		{
-			"x": 4,
-			"y": 2.75,
-			"width": 2,
-			"height": 4.5
-		},
-		{
-			"x": 4,
-			"y": -4.5,
-			"width": 2,
-			"height": 4.5
-		}
-	],
 	"faceTarget": false,
 	"research": "nova",
 	/*"requirements": {

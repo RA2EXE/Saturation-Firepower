@@ -33,11 +33,7 @@
 	"liquidCapacity": 20,
 	"consumes": {
 		"power": 1,
-		"liquid": {
-			"liquid": "water",
-			"amount": 0.2,
-			"booster": false
-		}
+		"liquid": "water/0.2"
 	},
 	"requirements": [
 		"copper/35",

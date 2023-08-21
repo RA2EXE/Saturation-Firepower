@@ -1,49 +1,50 @@
 {
 	"type": "GenericCrafter",
 	"name": "泰勒合金冶炼厂",
-	"outputItem": { "item": "泰勒合金", "amount": 1},
+	"outputItem": "泰勒合金/1",
 	"size": 3,
 	"hasPower": true,
 	"hasLiquids": false,
 	"hasItems": true,
 	"craftTime": 100,
 	"itemCapacity": 20,
-	"drawer":{
-		"type":"DrawMulti",
-		"drawers":[
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
 			"DrawDefault",
-	{"type":"DrawFlame",
-	"flameColor":"25C9AB"}
-			]
+			{
+				"type": "DrawFlame",
+				"flameColor": "25C9AB"
+			}
+		]
 	},
-	"craftEffect":{
+	"craftEffect": {
 		"type": "ParticleEffect",
 		"particles": 5,
 		"baseLength": 1,
-		"length":13,
-		"region":"饱和火力-菱形",
+		"length": 13,
+		"region": "饱和火力-菱形",
 		"lifetime": 22,
 		"sizeFrom": 5,
 		"sizeTo": 0,
 		"colorFrom": "25C9AB",
 		"colorTo": "25C9AB",
-		"cone":360 },
+		"cone": 360
+	},
 	"consumes": {
-	"power":8,
-	"items": {
-	"items": [
-	{ "item": "硅钢", "amount": 1},
-	{ "item": "surge-alloy", "amount": 1}
-			]
-  }
- },
-"requirements": [
-		{ "item": "lead", "amount": 85},
-		{ "item": "silicon", "amount": 65 },
-		{ "item": "surge-alloy", "amount": 45 },
-		{ "item": "一级协议", "amount": 0 }
+		"power": 8,
+		"items": [
+			"硅钢/1",
+			"surge-alloy/1"
+		]
+	},
+	"requirements": [
+		"lead/85",
+		"silicon/65",
+		"surge-alloy/45",
+		"一级协议/0"
 	],
 	"category": "crafting",
-	"ambientSound":"smelter",
+	"ambientSound": "smelter",
 	"research": "alloy-smelter"
 }

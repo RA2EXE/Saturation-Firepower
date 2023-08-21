@@ -20,26 +20,21 @@
 		"shotDelay": 2
 	},
 	"drawer": {
-		"type": "DrawMulti",
-		"drawers": [
+		"type": "DrawTurret",
+		"parts": [
 			{
-				"type": "DrawTurret",
-				"parts": [
-					{
-						"type": "RegionPart",
-						"mirror": false,
-						"suffix": "-前",
-						"under": true,
-						"moveY": -4
-					},
-					{
-						"type": "RegionPart",
-						"mirror": true,
-						"suffix": "-后",
-						"under": true,
-						"moveY": -3.5
-					}
-				]
+				"type": "RegionPart",
+				"mirror": false,
+				"suffix": "-前",
+				"under": true,
+				"moveY": -4
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"suffix": "-后",
+				"under": true,
+				"moveY": -3.5
 			}
 		]
 	},
@@ -442,7 +437,7 @@
 				"status": "拆解",
 				"statusDuration": 300,
 				"splashDamageRadius": 100,
-				"range":100,
+				"range": 100,
 				"splashDamage": 3,
 				"width": 0,
 				"height": 0,
@@ -452,10 +447,10 @@
 				"speed": 1,
 				"hitSound": "plasmaboom",
 				"hitEffect": {
-					"type":"WrapEffect",
-					"effect":"dynamicSpikes",
-					"color":"76D081",
-					"rotation":100
+					"type": "WrapEffect",
+					"effect": "dynamicSpikes",
+					"color": "76D081",
+					"rotation": 100
 				},
 				"despawnEffect": "none"
 			}
@@ -551,5 +546,6 @@
 				"type": "OnSector",
 				"preset": "第五战区"
 			}
-			]}
+		]
+	}
 }

@@ -1,10 +1,7 @@
 {
 	"type": "GenericCrafter",
 	"name": "硅钢冶炼炉",
-	"outputItem": {
-		"item": "硅钢",
-		"amount": 1
-	},
+	"outputItem": "硅钢/1",
 	"size": 2,
 	"hasPower": true,
 	"hasItems": true,
@@ -14,18 +11,19 @@
 		"type": "DrawMulti",
 		"drawers": [
 			"DrawDefault",
-			"DrawFlame"
+			{
+				"type": "DrawFlame",
+				"flameColor": "e1e4c8"
+			}
 		]
 	},
 	"craftEffect": "smeltsmoke",
 	"consumes": {
 		"power": 1.5,
-		"items": {
-			"items": [
-				"titanium/1",
-				"silicon/1"
-			]
-		}
+		"items": [
+			"titanium/1",
+			"silicon/1"
+		]
 	},
 	"requirements": [
 		"lead/45",

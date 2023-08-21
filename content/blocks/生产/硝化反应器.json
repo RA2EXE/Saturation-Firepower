@@ -1,7 +1,6 @@
 {
 	"type": "GenericCrafter",
 	"name": "硝化反应器",
-	"health": 360,
 	"outputLiquid": "硝化重油/0.3",
 	"itemCapacity": 10,
 	"size": 3,
