@@ -44,7 +44,8 @@
 	"armor": 36,
 	"itemCapacity": 0,
 	"faceTarget": false,
-	"fogRadius": 80,
+	"lightRadius": 60,
+	"fogRadius": 30,
 	"targetAir":false,
 	"parts": [
 		{

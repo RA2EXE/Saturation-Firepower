@@ -19,48 +19,43 @@
 	"unitSort": "strongest",
 	"cooldownTime": 90,
 	"drawer": {
-		"type": "DrawMulti",
-		"drawers": [
+		"type": "DrawTurret",
+		"parts": [
 			{
-				"type": "DrawTurret",
-				"parts": [
-					{
-						"type": "RegionPart",
-						"mirror": false,
-						"x": 0,
-						"y": 0,
-						"suffix": "-3",
-						"under": true,
-						"heatProgress": "recoil",
-						"heatColor": "7CF38990",
-						"moveX": 0,
-						"moveY": 8
-					},
-					{
-						"type": "RegionPart",
-						"mirror": true,
-						"x": 0,
-						"y": 0,
-						"suffix": "-1",
-						"layer": 50,
-						"heatProgress": "recoil",
-						"heatColor": "7CF38990",
-						"moveX": 3.5,
-						"moveY": 0
-					},
-					{
-						"type": "RegionPart",
-						"mirror": false,
-						"x": 0,
-						"y": 0,
-						"suffix": "-2",
-						"heatProgress": "recoil",
-						"heatColor": "7CF38990",
-						"layer": 50,
-						"moveX": 0,
-						"moveY": -4.25
-					}
-				]
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-3",
+				"under": true,
+				"heatProgress": "recoil",
+				"heatColor": "7CF38990",
+				"moveX": 0,
+				"moveY": 8
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 0,
+				"y": 0,
+				"suffix": "-1",
+				"layer": 50,
+				"heatProgress": "recoil",
+				"heatColor": "7CF38990",
+				"moveX": 3.5,
+				"moveY": 0
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"x": 0,
+				"y": 0,
+				"suffix": "-2",
+				"heatProgress": "recoil",
+				"heatColor": "7CF38990",
+				"layer": 50,
+				"moveX": 0,
+				"moveY": -4.25
 			}
 		]
 	},

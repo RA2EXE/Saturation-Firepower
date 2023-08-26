@@ -36,6 +36,8 @@
 	],
 	"engineOffset": 16,
 	"engineSize": 5.5,
+	"lightRadius": 60,
+	"fogRadius": 20,
 	"weapons": [
 		{
 			"name": "欧米茄1",

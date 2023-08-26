@@ -69,7 +69,8 @@
 		]
 	},
 	"breakable":false,
-	"buildVisibility":"sandboxOnly",
-	//"buildVisibility":"editorOnly",
+	"buildCostMultiplier": 100,
+	//"buildVisibility":"sandboxOnly",
+	"buildVisibility":"editorOnly",
 	"category": "crafting"
 }

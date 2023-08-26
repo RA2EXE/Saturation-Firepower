@@ -252,3 +252,62 @@ overdrive场，overclock场-5秒-5格-3间隔
 			}
 		}
 
+		{
+			"name": "工农2",
+			"reload": 300,
+			"x": 0,
+			"y": 0,
+			"shootY": 15,
+			"rotate": false,
+			"top": false,
+			"recoil": 3.25,
+			"inaccuracy": 0,
+			"mirror": false,
+			"shootSound": "torch",
+			"alwaysContinuous": true,
+			"shootWarmupSpeed": 0.125,
+			"minWarmup": 0.98,
+			"bullet": {
+				"type": "ContinuousFlameBulletType",
+				"recoil": 0.022,
+				"lifetime": 8,
+				"knockback": 5,
+				"damage": 6,
+				"incendChance": 0,
+				"healPercent": 0.2,
+				"status": "干扰",
+				"statusDuration": 60,
+				"collidesTeam": true,
+				"sideAngle": 135,
+				"sideWidth": 1.35,
+				"sideLength": 45,
+				"smokeEffect": "bigShockwave",
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"line": true,
+					"particles": 9,
+					"lenFrom": 10,
+					"lenTo": 0,
+					"strokeFrom": 1,
+					"strokeTo": 1,
+					"baseLength": 240,
+					"length": 0,
+					"sizeInterp":"pow3In",
+					"lifetime": 20,
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
+					"cone": 0
+				},
+				"lightColor":"97FFA8",
+				"flareColor":"97FFA8",
+				"hitColor":"97FFA8",
+				"colors": [
+					"7CF38990",
+					"97FFA880",
+					"97FFA8",
+					"FFFFFF"
+				],
+				"length": 160,
+				"width": 3
+			}
+		}

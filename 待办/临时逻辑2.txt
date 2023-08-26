@@ -1,28 +1,25 @@
-read E cell1 4
-jump 0 notEqual E 1
-op rand a 187 b
-op add y 6 a
-read P cell1 0
-jump -1 lessThan P 1
-spawn @饱和火力-偏袒A 800 y 180 2 pt
-op sub P P 1
-write P cell1 0
-jump 5 notEqual P 0
-read P cell1 1
-jump -1 lessThan P 1
-spawn @饱和火力-偏袒A 800 y 180 2 pt
-op sub P P 1
-write P cell1 0
-jump 5 notEqual P 0
-read P cell1 2
-jump -1 lessThan P 1
-spawn @饱和火力-偏袒A 800 y 180 2 pt
-op sub P P 1
-write P cell1 0
-jump 5 notEqual P 0
-read P cell1 3
-jump -1 lessThan P 1
-spawn @饱和火力-偏袒A 800 y 180 2 pt
-op sub P P 1
-write P cell1 0
-jump 5 notEqual P 0
+read 开炮 cell1 0
+jump 0 notEqual 开炮 1
+set 次数 0
+op rand a 40 31
+op add x a 80
+op rand b 55 31
+op add y b 195
+op rand d 1000 195
+op add 伤害 d 3000
+op rand X @mapw 228
+op sub X1 X x
+op sub Y1 420 y
+op div K X1 Y1
+set Y1 420
+op sub Y1 Y1 1
+op sub X X K
+explosion 2 X Y1 5 0 true true false
+jump 14 greaterThan Y1 y
+explosion 1 x y 30 0 true true false
+explosion 2 x y 5 伤害 true true false
+op rand t 1.5 b
+wait t
+wait 3
+op add i i 1
+jump 20 lessThan i 3

@@ -12,7 +12,7 @@
 	],
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 3000
+		"totalPower": 6000
 	},
 	"hitSize": 28,
 	"buildRange": 288,
@@ -22,6 +22,7 @@
 	"faceTarget": true,
 	"health": 2100,
 	"armor": 9,
+	"itemCapacity": 150,
 	"engineOffset": 16,
 	"engineSize": 2.8,
 	"trailLength": 5,
@@ -52,7 +53,8 @@
 	"mineSpeed": 11,
 	"mineTier": 4,
 	"mineRange": 70,
-	"isEnemy": true,
+	"lightRadius": 60,
+	"lightColor": "97FFA8",
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",
@@ -207,7 +209,7 @@
 					"strokeTo": 1,
 					"baseLength": 240,
 					"length": 0,
-					"sizeInterp":"pow3In",
+					"sizeInterp": "pow3In",
 					"lifetime": 20,
 					"colorFrom": "97FFA8",
 					"colorTo": "97FFA8",

@@ -6,6 +6,9 @@
 	"drag": 0.06,
 	"accel": 0.09,
 	"rotateSpeed": 2.5,
+	"lightRadius": 60,
+	"lightColor": "97FFA8",
+	"fogRadius": 25,
 	"immunities": [
 		"electrified",
 		"干扰",

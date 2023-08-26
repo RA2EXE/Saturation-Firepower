@@ -32,7 +32,7 @@
 		"colorTo": "7595D2"
 	},
 	"consumes": {
-		"power": 5,
+		"power": 7,
 		"items": [
 			"titanium/3",
 			"silicon/3"

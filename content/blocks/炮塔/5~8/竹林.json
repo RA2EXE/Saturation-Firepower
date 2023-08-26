@@ -284,8 +284,7 @@
 						"baseLength": 13,
 						"lifetime": 22,
 						"colorFrom": "585858",
-						"colorTo": "585858",
-						"cone": 360
+						"colorTo": "585858"
 					},
 					{
 						"type": "WaveEffect",
@@ -553,8 +552,7 @@
 								"baseLength": 73,
 								"lifetime": 45,
 								"colorFrom": "FEEBB3",
-								"colorTo": "FEEBB3",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							},
 							{
 								"type": "ParticleEffect",
@@ -566,8 +564,7 @@
 								"baseLength": 1,
 								"lifetime": 16,
 								"colorFrom": "FFFFFF",
-								"colorTo": "FEEBB3",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							},
 							{
 								"type": "WaveEffect",
@@ -822,7 +819,7 @@
 						"effects": [
 							{
 								"type": "ParticleEffect",
-								"particles": 92,
+								"particles": 36,
 								"line": true,
 								"strokeFrom": 10,
 								"strokeTo": 0,
@@ -832,20 +829,18 @@
 								"baseLength": 30,
 								"lifetime": 30,
 								"colorFrom": "BFFFDBFF",
-								"colorTo": "BFFFDBFF",
-								"cone": 360
+								"colorTo": "BFFFDBFF"
 							},
 							{
 								"type": "ParticleEffect",
-								"particles": 42,
+								"particles": 26,
 								"sizeFrom": 10,
 								"sizeTo": 0,
 								"length": 163,
 								"baseLength": 3,
 								"lifetime": 90,
 								"colorFrom": "BFFFDBFF",
-								"colorTo": "BFFFDBFF",
-								"cone": 360
+								"colorTo": "BFFFDBFF"
 							},
 							{
 								"type": "ParticleEffect",
@@ -856,8 +851,7 @@
 								"baseLength": 0,
 								"lifetime": 90,
 								"colorFrom": "BFFFDB90",
-								"colorTo": "BFFFDB00",
-								"cone": 360
+								"colorTo": "BFFFDB00"
 							},
 							{
 								"type": "WaveEffect",

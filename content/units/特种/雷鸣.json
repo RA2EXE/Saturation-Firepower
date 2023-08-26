@@ -7,13 +7,16 @@
 	"rotateSpeed": 5,
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 1000
+		"totalPower": 8000
 	},
-	"ammoCapacity": 300,
+	"ammoCapacity": 60,
 	"hitSize": 30,
 	"flying": true,
 	"health": 1800,
 	"armor": 22,
+	"lightRadius": 60,
+	"lightColor": "FEEBB3",
+	"fogRadius": 25,
 	"engineOffset": 14,
 	"engineSize": 4.5,
 	"research": {

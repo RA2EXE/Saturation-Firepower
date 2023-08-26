@@ -305,7 +305,6 @@
 			"drag": -0.06,
 			"speed": 8,
 			"lifetime": 30,
-			"dmage": 500,
 			"width": 32,
 			"height": 56,
 			"status": "崩溃",

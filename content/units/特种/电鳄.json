@@ -31,7 +31,9 @@
 	"armor": 16,
 	"itemCapacity": 0,
 	"faceTarget": true,
-	"fogRadius": 40,
+	"fogRadius": 38,
+	"lightRadius": 80,
+	"lightColor": "FEEBB3",
 	"abilities": [
 		{
 			"type":"RegenAbility",

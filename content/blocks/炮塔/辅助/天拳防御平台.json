@@ -1,8 +1,9 @@
 {
 	"type": "PowerTurret",
 	"name": "天拳防御平台",
+	"unitSort": "strongest",
 	"buildVisibility": "campaignOnly",
-	"health": 18800,
+	"health": 28000,
 	"armor": 22,
 	"size": 4,
 	"reload": 550,
@@ -12,6 +13,9 @@
 	"shootSound": "missileLarge",
 	"insulated": true,
 	"absorbLasers": true,
+	"shootWarmupSpeed": 0.08,
+	"warmupMaintainTime": 600,
+	"minWarmup": 0.9,
 	"drawer": {
 		"type": "DrawTurret",
 		"basePrefix": "防御平台-",
@@ -52,7 +56,6 @@
 			}
 		]
 	},
-	"minWarmup": 0.98,
 	"shootY": 8,
 	"shootEffect": {
 		"type": "MultiEffect",
@@ -126,8 +129,7 @@
 					"lifetime": 66,
 					"colorFrom": "00000018",
 					"colorTo": "00000000",
-					"layer": 99,
-					"cone": 360
+					"layer": 99
 				},
 				{
 					"type": "ParticleEffect",
@@ -139,8 +141,7 @@
 					"baseLength": 0,
 					"lifetime": 22.5,
 					"colorFrom": "EEC591",
-					"colorTo": "EEC59188",
-					"cone": 360
+					"colorTo": "EEC59188"
 				},
 				{
 					"type": "ParticleEffect",
@@ -153,8 +154,7 @@
 					"startDelay": 22,
 					"lifetime": 105,
 					"colorFrom": "EEC59188",
-					"colorTo": "EEC59188",
-					"cone": 360
+					"colorTo": "EEC59188"
 				},
 				{
 					"type": "ParticleEffect",
@@ -168,8 +168,7 @@
 					"sizeInterp": "pow10In",
 					"lifetime": 135,
 					"colorFrom": "EEC59180",
-					"colorTo": "EEC591AA",
-					"cone": 360
+					"colorTo": "EEC591AA"
 				},
 				{
 					"type": "ParticleEffect",
@@ -184,8 +183,7 @@
 					"baseLength": 8,
 					"lifetime": 25,
 					"colorFrom": "EEC591",
-					"colorTo": "EEC591",
-					"cone": 360
+					"colorTo": "EEC591"
 				},
 				{
 					"type": "WaveEffect",
@@ -317,11 +315,7 @@
 			}
 		]
 	},
-	"requirements": [
-		"镄/15000",
-		"metaglass/5000",
-		"silicon/15000",
-		"泰勒合金/10000"
-	],
+	"buildCostMultiplier": 150,
+	"requirements": [],
 	"category": "turret"
 }

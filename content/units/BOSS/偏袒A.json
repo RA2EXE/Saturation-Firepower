@@ -81,7 +81,7 @@
 				"lightningDamage": 68,
 				"lightningColor": "EEC591",
 				"lightning": 2,
-				"lightningLength": 7,
+				"lightningLength": 3,
 				"lightningLengthRand": 5,
 				"buildingDamageMultiplier": 0.43,
 				"sprite": "missile-large",
@@ -173,8 +173,7 @@
 					"baseLength": 0,
 					"lifetime": 95,
 					"colorFrom": "EEC591FF",
-					"colorTo": "EEC59100",
-					"cone": 360
+					"colorTo": "EEC59100"
 				}
 			}
 		}

@@ -256,7 +256,7 @@
 		"intervalRandomSpread": 0,
 		"intervalAngle": 0,
 		"intervalBullet":{
-			"type": "BaiscBulletType",
+			"type": "BasicBulletType",
 			"weaveScale": 7,
 			"weaveMag": 3,
 			"speed": 0.5,

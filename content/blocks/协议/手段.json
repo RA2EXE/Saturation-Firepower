@@ -1,7 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "最终手段",
-	"description": "[yellow]呼叫一次[red]无视敌我的轨道轰炸[yellow]毁灭附近的区域。[white]检测范围小，需要机载投放。\n[yellow]需要5秒开机准备时间。",
 	"health": 830,
 	"size": 2,
 	"reload": 280,

@@ -40,6 +40,7 @@
 	"itemCapacity": 2000,
 	"faceTarget": false,
 	"itemOffsetY":15,
+	"lightRadius": 60,
 	"fogRadius": 30,
 	"weapons": [
 		{

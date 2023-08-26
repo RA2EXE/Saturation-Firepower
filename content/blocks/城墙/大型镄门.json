@@ -1,0 +1,15 @@
+{
+	"type": "AutoDoor",
+	"health": 12000,
+	"armor":10,
+	"size": 2,
+	"insulated":true,
+	"absorbLasers":true,
+	"requirements": [
+		"镄/80",
+		"silicon/40",
+		"plastanium/80"
+	],
+	"research": "大镄墙",
+	"category": "defense"
+}

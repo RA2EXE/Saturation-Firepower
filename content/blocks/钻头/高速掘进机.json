@@ -1,7 +1,7 @@
 {
 	"name": "高速掘进机",
 	"type": "AttributeCrafter",
-	"health": 250,
+	"health": 450,
 	"size": 3,
 	"hasPower": true,
 	"hasLiquids": true,
@@ -41,12 +41,12 @@
 		"硅钢/35"
 	],
 	"consumes": {
-		"power": 8
+		"power": 6
 	},
-	"outputLiquid": "slag/0.8",
+	"outputLiquid": "slag/0.75",
 	"baseEfficiency": 0,
-	"maxBoost": 2.5,
-	"boostScale": 0.35,
+	"maxBoost": 6,
+	"boostScale": 0.334,
 	"minEfficiency": -1,
 	"attribute": "heat",
 	"category": "production",
