@@ -2,6 +2,7 @@
 	"type": "payload",
 	"payloadCapacity": 5184,
 	"name": "广寒",
+	"controller": "FlyingFollowAI",
 	"speed": 0.81,
 	"drag": 0.03,
 	"accel": 0.02,

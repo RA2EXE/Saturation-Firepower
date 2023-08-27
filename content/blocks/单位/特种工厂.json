@@ -136,9 +136,10 @@
 		},
 		{
 			"unit": "攻城锤",
-			"time": 1800,
+			"time": 2100,
 			"requirements": [
 				"silicon/160",
+				"titanium/80",
 				"graphite/160",
 				"硅钢/80"
 			]

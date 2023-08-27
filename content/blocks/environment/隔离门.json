@@ -5,6 +5,7 @@
 	"size": 2,
 	"requirements": [],
 	"buildCostMultiplier":15,
+	"rebuildable": false,
 	"buildVisibility":"editorOnly",
 	"category": "defense"
 }

@@ -1,16 +1,19 @@
 {
 	"type": "ItemBridge",
 	"name": "裂位传送塔",
-	"description": "跨越任何地形传送物品，比布桥更快，更远",
-	"health": 80,
+	"health": 130,
 	"range": 36,
 	"transportTime":1,
 	"consumes": {"power": 0.5},
+	"arrowSpacing": 8,
+	"arrowOffset": 4,
+	"arrowTimeScl": 12,
+	"bridgeWidth": 8,
 	"requirements": [
-	{ "item": "thorium", "amount": 15 },
-	{ "item": "silicon", "amount": 10 },
-	{ "item": "硅钢", "amount":  5},
-	{ "item": "裂位能", "amount":  5}
+		"thorium/25",
+		"silicon/15",
+		"硅钢/5",
+		"裂位能/5"
 	],
 	"category": "distribution",	
 	"research": "phase-conveyor"

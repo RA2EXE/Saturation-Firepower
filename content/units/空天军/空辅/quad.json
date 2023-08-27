@@ -21,6 +21,7 @@
 			"rotate": true,
 			"mirror": false,
 			"reload": 160,
+			"x": 0,
 			"shoot": {
 				"shots": 3,
 				"shotDelay": 25

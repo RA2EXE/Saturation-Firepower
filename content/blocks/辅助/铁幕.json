@@ -25,17 +25,13 @@
 		"colorTo": "00000000"
 	},
 	"consumes": {
-		"power": 10,
-		"coolant": {
-			"amount": 0.2,
-			"optional": true
-		}
+		"power": 10
 	},
 	"requirements": [
 		"镄/200",
 		"silicon/240",
 		"plastanium/90",
-		"泰勒合金/160"
+		"泰勒合金/80"
 	],
 	"itemCapacity": 1,
 	"research": "force-projector",

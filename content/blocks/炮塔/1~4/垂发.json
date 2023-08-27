@@ -195,7 +195,7 @@
 			"type": "MissileBulletType",
 			"buildingDamageMultiplier": 0.3,
 			"splashDamageRadius": 32,
-			"splashDamage": 35,
+			"splashDamage": 36,
 			"status": "burning",
 			"statusDuration": 600,
 			"speed": 5,

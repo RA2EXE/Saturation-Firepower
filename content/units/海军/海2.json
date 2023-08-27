@@ -1,7 +1,6 @@
 {
 	"type": "naval",
 	"name": "北斗",
-	"description": "发射小型巡航导弹与冲击束，使用汲取光束修复自身。\n配备巡航系统，拥有更大的视野范围。",
 	"speed":0.95,	
 	"rotateSpeed":1.4,
 	"ammoType":"graphite",

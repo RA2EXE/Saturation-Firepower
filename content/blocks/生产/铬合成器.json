@@ -41,9 +41,10 @@
 	"consumes": {
 		"power": 6,
 		"items": [
-			"裂位能/2",
+			"裂位能/1",
 			"镄/3"
-		]
+		],
+		"liquid": "slag/0.2"
 	},
 	"requirements": [
 		"plastanium/35",

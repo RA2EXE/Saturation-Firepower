@@ -28,7 +28,7 @@
 	},
 	"ammoCapacity": 50,
 	"health": 28000,
-	"armor": 16,
+	"armor": 14,
 	"itemCapacity": 0,
 	"faceTarget": true,
 	"fogRadius": 38,

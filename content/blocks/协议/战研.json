@@ -26,7 +26,7 @@
 				"type": "DrawPistons",
 				"sinMag": -35,
 				"lenOffset": 13,
-				"angleOffset":90,
+				"angleOffset": 90,
 				"sinScl": 5.53,
 				"sides": 2
 			},
@@ -107,7 +107,7 @@
 		"width": 36,
 		"height": 36,
 		"speed": 0,
-		"lifetime": 540,
+		"lifetime": 380,
 		"collides": false,
 		"absorbable": false,
 		"hitShake": 60,
@@ -192,6 +192,14 @@
 		"intervalBullet": {
 			"width": 0,
 			"height": 0,
+			"collides": false,
+			"lightningDamage": 210,
+			"lightning": 6,
+			"lightningLength": 32,
+			"lightningLengthRand": 18,
+			"lightningColor": "c4ffdeA8",
+			"splashDamageRadius": 120,
+			"splashDamage": 1200,
 			"hitEffect": "none",
 			"despawnEffect": {
 				"type": "WrapEffect",
@@ -234,7 +242,7 @@
 				"lightning": 3,
 				"lightningLength": 8,
 				"lightningLengthRand": 3,
-				"lightningColor": "EEC591",
+				"lightningColor": "c4ffdeA8",
 				"splashDamageRadius": 88,
 				"splashDamage": 580,
 				"hitShake": 20,
@@ -257,6 +265,76 @@
 					"sparkLen": 22
 				}
 			}
+		},
+		"fragLifeMin": 0.3,
+		"fragVelocityMin": 1,
+		"fragBullets": 110,
+		"fragBullet": {
+			"type": "PointBulletType",
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 3,
+				"length": 8,
+				"baseLength": 0,
+				"lifetime": 180,
+				"interp": "pow5Out",
+				"sizeInterp": "pow5In",
+				"colorFrom": "25C9AB",
+				"colorTo": "25C9AB88",
+				"sizeFrom": 4,
+				"sizeTo": 0
+			},
+			"trailSpacing": 9,
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 4,
+						"baseLength": 8,
+						"length": 80,
+						"region": "饱和火力-菱形",
+						"lifetime": 120,
+						"sizeFrom": 26,
+						"sizeTo": 0,
+						"interp": "pow5Out",
+						"sizeInterp": "pow10In",
+						"colorFrom": "25C9AB",
+						"colorTo": "BFFFDB88"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"baseLength": 0,
+						"length": 0,
+						"lifetime": 90,
+						"sizeFrom": 20,
+						"sizeTo": 0,
+						"sizeInterp": "pow5In",
+						"colorFrom": "25C9AB",
+						"colorTo": "BFFFDB"
+					}
+				]
+			},
+			"despawnEffect": {
+				"type": "WaveEffect",
+				"lifetime": 30,
+				"interp": "circleOut",
+				"sizeFrom": 0,
+				"sizeTo": 80,
+				"strokeFrom": 12,
+				"strokeTo": 0,
+				"colorFrom": "25C9AB",
+				"colorTo": "BFFFDB"
+			},
+			"hitSound": "explosion",
+			"hitSoundVolume": 3,
+			"splashDamageRadius": 80,
+			"splashDamage": 35,
+			"lifetime": 50,
+			"speed": 10,
+			"status": "干扰",
+			"statusDuration": 120
 		}
 	},
 	"category": "effect",

@@ -5,17 +5,10 @@
 	"update": "true",
 	"hasItems": "true",
 	"type": "Unloader",
-	"description": "慢速卸载临近方块中的指定物品",
 	"name": "机械卸载器",
 	"requirements": [
-		{
-			"item": "copper",
-			"amount": 20
-		},
-		{
-			"item": "lead",
-			"amount": 35
-		}
+		"copper/20",
+		"lead/20"
 	],
 	"category": "effect",
 	"research": "铜铅带"

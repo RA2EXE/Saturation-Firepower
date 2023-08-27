@@ -1,8 +1,6 @@
 {
 	"type": "naval",
 	"name": "参宿",
-	"description": "发射小口径炮弹和中程制导鱼雷。",
-	"details":"机动性能优秀，常用作巡航单位，能够高效清理落单的敌方船只",
 	"speed":1.35,
 	"rotateSpeed":3,
 	"ammoType":"graphite",

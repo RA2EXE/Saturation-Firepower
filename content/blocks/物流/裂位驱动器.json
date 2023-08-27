@@ -1,6 +1,5 @@
 {
 	"name": "裂位驱动器",
-	"description": "超远距离发送物品包，收集一定物品后将其发射到另一个裂位驱动器中。",
 	"type": "MassDriver",
 	"size": 4,
 	"hasItems": true,

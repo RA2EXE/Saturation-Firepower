@@ -1,7 +1,6 @@
 {
 	"type": "naval",
 	"name": "罗星",
-	"description": "安装通用垂直发射单元，发射小型质子炮弹与弹道导弹。",
 	"speed":0.8,
 	"rotateSpeed":1,
 	"ammoType":"thorium",

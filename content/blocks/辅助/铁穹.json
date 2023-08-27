@@ -1,21 +1,21 @@
 {
-	"type":"ForceProjector",
-	"name":"铁穹",
-	"health":13500,
-	"size":5,
-	"radius":360,
+	"type": "ForceProjector",
+	"name": "铁穹",
+	"health": 13500,
+	"size": 5,
+	"radius": 360,
 	"squareSprite": false,
 	"canOverdrive": false,
-	"shieldHealth": 22000,
-	"phaseRadiusBoost":0,
-	"phaseShieldBoost":10000,
-	"cooldownNormal":6,
-	"cooldownLiquid":3,
-	"liquidCapacity": 300,
-	"cooldownBrokenBase":3,
-	"itemCapacity":20,
-	"coolantConsumption":0.5,
-	"absorbEffect":{
+	"shieldHealth": 28000,
+	"phaseRadiusBoost": 0,
+	"phaseShieldBoost": 10000,
+	"cooldownNormal": 7,
+	"cooldownLiquid": 2.5,
+	"cooldownBrokenBase": 3,
+	"coolantConsumption": 0.5,
+	"liquidCapacity": 60,
+	"itemCapacity": 20,
+	"absorbEffect": {
 		"type": "ParticleEffect",
 		"particles": 1,
 		"sizeFrom": 5,
@@ -23,17 +23,20 @@
 		"length": 0,
 		"baseLength": 0,
 		"lifetime": 180,
+		"sizeInterp": "pow3In",
 		"colorFrom": "FEEBB3",
-		"colorTo": "FEEBB300"},
-	"consumes":{"power":16},
-	"requirements":[
-	{ "item":"lead","amount":800},
-	{ "item":"silicon","amount":650},
-	{ "item":"plastanium","amount":650},
-	{ "item":"硅钢","amount":500},
-	{ "item":"surge-alloy","amount":350},
-	{ "item":"泰勒合金","amount":150},
-	{ "item":"二级协议","amount":1}
+		"colorTo": "FEEBB300"
+	},
+	"consumes": {
+		"power": 16
+	},
+	"requirements": [
+		"lead/800",
+		"镄/650",
+		"plastanium/460",
+		"硅钢/650",
+		"泰勒合金/500",
+		"二级协议/1"
 	],
 	"research": "铁幕",
 	"category": "effect"

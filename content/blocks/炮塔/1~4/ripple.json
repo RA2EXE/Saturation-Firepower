@@ -55,7 +55,7 @@
 		"blast-compound": {
 			"type": "ArtilleryBulletType",
 			"knockback": 0.8,
-			"speed": 2,
+			"speed": 3,
 			"lifetime": 80,
 			"sprite": "shell",
 			"width": 14,
