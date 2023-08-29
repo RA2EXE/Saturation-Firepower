@@ -1,7 +1,6 @@
 {
 	"type": "NuclearReactor",
 	"name": "镄反应堆",
-	"description": "利用镄的强烈放射性产生能量，需要持续冷却液供给，过热或被摧毁会导致剧烈爆炸。",
 	"size": 3,
 	"health": 1500,
 	"liquidCapacity": 30,

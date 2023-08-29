@@ -6,6 +6,7 @@
 	"legMoveSpace": 1.4,
 	"hovering": true,
 	"canDrown": false,
+	"legContinuousMove": true,
 	"name": "攻城锤",
 	"speed": 1,
 	"hitSize": 18,

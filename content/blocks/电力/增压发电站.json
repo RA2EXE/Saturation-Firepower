@@ -1,7 +1,6 @@
 {
 	"type": "ConsumeGenerator",
 	"name": "增压励磁发电站",
-	"description": "大型励磁发电机，利用内产磁场更快发电。",
 	"size": 3,
 	"health": 400,
 	"hasLiquids": true,

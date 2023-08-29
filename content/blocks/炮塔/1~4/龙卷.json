@@ -620,7 +620,7 @@
 			"intervalBullet": {
 				"type": "BasicBulletType",
 				"damage": 15,
-				"splashDamageRadius": 45,
+				"splashDamageRadius": 40,
 				"splashDamage": 35,
 				"status": "blasted",
 				"speed": 6,
@@ -634,7 +634,7 @@
 				"height": 16,
 				"hitShake": 2,
 				"hitSound": "explosion",
-				"hitEffect": "flakExplosionBig",
+				"hitEffect": "blastExplosion",
 				"despawnEffect": "none"
 			}
 		},

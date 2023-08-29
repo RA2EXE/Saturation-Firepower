@@ -303,7 +303,7 @@
 			}
 		},
 		{
-			"name": "长弓0",
+			"name": "长弓3",
 			"type": "PointDefenseWeapon",
 			"x": 4,
 			"y": -17,
@@ -323,7 +323,7 @@
 			}
 		},
 		{
-			"name": "长弓0",
+			"name": "长弓3",
 			"type": "PointDefenseWeapon",
 			"x": 5,
 			"y": 4,

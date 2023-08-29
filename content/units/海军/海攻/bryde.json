@@ -1,5 +1,5 @@
 {
-	"health": 2000,
+	"health": 2100,
 	"details": "换用集束爆破弹头，更新导弹系统",
 	"weapons": [
 		{
@@ -8,7 +8,7 @@
 			"x": 0,
 			"y": -3.5,
 			"shootY": 8,
-			"recoil": 0,
+			"recoil": 3,
 			"mirror": false,
 			"rotate": true,
 			"rotateSpeed": 2,
@@ -33,12 +33,12 @@
 				"fragLifeMin": 0.5,
 				"fragBullet": {
 					"type": "ArtilleryBulletType",
-					"despawnEffect": "massiveExplosion",
+					"despawnEffect": "blastExplosion",
 					"status": "blasted",
 					"width": 8,
 					"height": 9,
-					"splashDamageRadius": 40,
-					"splashDamage": 35,
+					"splashDamageRadius": 35,
+					"splashDamage": 38,
 					"lifetime": 10,
 					"speed": 3
 				}

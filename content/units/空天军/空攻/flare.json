@@ -11,7 +11,7 @@
 	"health": 150,
 	"weapons": [
 		{
-			"name": "none",
+			"name": "星辉1",
 			"shoot": {
 				"shots":8,
 				"shotDelay": 3

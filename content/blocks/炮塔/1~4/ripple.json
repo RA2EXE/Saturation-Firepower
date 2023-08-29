@@ -87,7 +87,7 @@
 			"fragBullet": {
 				"type": "BasicBulletType",
 				"speed": 2.5,
-				"damage": 10,
+				"damage": 12,
 				"width": 10,
 				"height": 12,
 				"shrinkY": 1,
@@ -133,15 +133,15 @@
 			"fragLifeMin": 0.3,
 			"fragBullets": 5,
 			"fragBullet": {
-				"despawnEffect": "flakExplosionBig",
+				"hitEffect": "blastExplosion",
 				"status": "blasted",
 				"width": 8,
 				"height": 9,
 				"backColor": "D85555FF",
 				"frontColor": "FE7777FF",
 				"damage": 9,
-				"splashDamageRadius": 30,
-				"splashDamage": 35,
+				"splashDamageRadius": 35,
+				"splashDamage": 38,
 				"lifetime": 20,
 				"speed": 1.5
 			}

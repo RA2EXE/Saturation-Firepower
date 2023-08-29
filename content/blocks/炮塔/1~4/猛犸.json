@@ -128,7 +128,7 @@
 			"fragBullets": 5,
 			"fragBullet": {
 				"pierceArmor": true,
-				"despawnEffect": "flakExplosionBig",
+				"hitEffect": "blastExplosion",
 				"status": "blasted",
 				"statusDuration": 60,
 				"width": 8,
@@ -136,8 +136,8 @@
 				"backColor": "D85555FF",
 				"frontColor": "FE7777FF",
 				"damage": 8,
-				"splashDamageRadius": 40,
-				"splashDamage": 45,
+				"splashDamageRadius": 35,
+				"splashDamage": 40,
 				"lifetime": 20,
 				"speed": 1.5
 			}

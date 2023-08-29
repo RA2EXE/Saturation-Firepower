@@ -8,7 +8,7 @@
 	"ammoCapacity": 80,
 	"weapons": [
 		{
-			"name": "none",
+			"name": "天垠1",
 			"minShootVelocity": 1.5,
 			"reload": 85,
 			"shoot": {

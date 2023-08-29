@@ -25,14 +25,30 @@
 	"armor": 12,
 	"range": 320,
 	"engines": [
-		{"x": -13,"y": -15,
-		"radius": 2.5,"rotation": -135},
-		{"x": 13,"y": -15,
-		"radius": 2.5,"rotation": -45},
-		{"x": -16.5,"y": -9.5,
-		"radius": 2,"rotation": -135},
-		{"x": 16.5,"y": -9.5,
-		"radius": 2,"rotation": -45}
+		{
+			"x": -13,
+			"y": -15,
+			"radius": 2.5,
+			"rotation": -135
+		},
+		{
+			"x": 13,
+			"y": -15,
+			"radius": 2.5,
+			"rotation": -45
+		},
+		{
+			"x": -16.5,
+			"y": -9.5,
+			"radius": 2,
+			"rotation": -135
+		},
+		{
+			"x": 16.5,
+			"y": -9.5,
+			"radius": 2,
+			"rotation": -45
+		}
 	],
 	"engineOffset": 16,
 	"engineSize": 5.5,

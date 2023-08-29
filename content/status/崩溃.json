@@ -2,7 +2,7 @@
 "name":"崩溃",
 	"damage":2,
 	"healthMultiplier":0.95,
-	"speedMultiplier":0.6,
+	"speedMultiplier":0.86,
 	"effectChance":0.1,
 	"effect":{"type": "MultiEffect",
 	"effects": [

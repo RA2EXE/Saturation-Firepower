@@ -82,7 +82,7 @@ overdrive场，overclock场-5秒-5格-3间隔
 		}
 	],
 
-"shootEffect": "shootPyraFlame",
+				"shootEffect": "shootPyraFlame",
 				"smokeEffect": {
 					"type": "ParticleEffect",
 					"particles": 5,
@@ -142,7 +142,7 @@ overdrive场，overclock场-5秒-5格-3间隔
 	//"buildVisibility": "campaignOnly",
 	//"buildVisibility": "editorOnly",
 
-	{
+		{
 			"name": "广寒-测试",
 			"x": 0,
 			"reload": 300,
@@ -311,3 +311,6 @@ overdrive场，overclock场-5秒-5格-3间隔
 				"width": 3
 			}
 		}
+
+亚龙-3预设图
+伯劳-2预设图

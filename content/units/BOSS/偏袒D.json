@@ -96,7 +96,7 @@
 			"maxRange":240}
 		},
 		{
-			"name": "殉爆",
+			"name": "偏袒5",
 			"reload": 500,
 			"shootCone": 360,
 			"rotate": false,
@@ -281,7 +281,7 @@
 			}
 		},
 		{
-			"name": "殉爆",
+			"name": "偏袒5",
 			"reload": 60,
 			"shootCone": 360,
 			"rotate": false,

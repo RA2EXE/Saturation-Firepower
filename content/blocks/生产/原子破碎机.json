@@ -23,6 +23,15 @@
 				"drawLiquid": "slag"
 			},
 			{
+				"type": "DrawSpikes",
+				"rotateSpeed": -4.5,
+				"amount": 6,
+				"stroke": 1,
+				"length": 8,
+				"radius": 2,
+				"color": "EEC591"
+			},
+			{
 				"type": "DrawRegion",
 				"suffix": "-转",
 				"spinSprite": true,
