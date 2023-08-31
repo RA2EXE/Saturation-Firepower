@@ -71,7 +71,7 @@
 	"faceTarget": false,
 	"lowAltitude": true,
 	"rotateSpeed": 0.3,
-	"itemCapacity": 1000,
+	"itemCapacity": 0,
 	"targetFlags": [
 		"factory",
 		"core"

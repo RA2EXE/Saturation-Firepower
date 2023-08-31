@@ -423,6 +423,7 @@
 			"flakInterval": 8,
 			"explodeRange": 430,
 			"absorbable": false,
+			"hittable": false,
 			"damage": 62,
 			"splashDamage": 80,
 			"splashDamageRadius": 30,

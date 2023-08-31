@@ -284,6 +284,7 @@
 			"lifetime": 90,
 			"width": 13,
 			"height": 44,
+			"hittable": false,
 			"pierceArmor": true,
 			"status": "崩溃",
 			"statusDuration": 104,

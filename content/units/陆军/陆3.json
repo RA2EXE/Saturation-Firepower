@@ -24,7 +24,7 @@
 	"health": 1850,
 	"armor": 11,
 	"rotateSpeed": 2,
-	"itemCapacity": 45,
+	"itemCapacity": 0,
 	"faceTarget": false,
 	"research": "陆2",
 	"requirements": {

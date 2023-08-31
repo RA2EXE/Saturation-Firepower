@@ -300,6 +300,8 @@
 			"damage": 2600,
 			"splashDamageRadius": 80,
 			"splashDamage": 800,
+			"absorbable": false,
+			"hittable": false,
 			"pierce": true,
 			"pierceCap": 3,
 			"drag": -0.06,

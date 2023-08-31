@@ -331,6 +331,7 @@
 			"recoil": 3,
 			"layerOffset": 0.05,
 			"rotate": false,
+			"shootCone": 5,
 			"top": false,
 			"inaccuracy": 0,
 			"alternate": true,

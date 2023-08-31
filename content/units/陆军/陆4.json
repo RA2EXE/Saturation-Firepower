@@ -24,7 +24,7 @@
 	"health": 25600,
 	"armor": 22,
 	"rotateSpeed": 1.5,
-	"itemCapacity": 35,
+	"itemCapacity": 0,
 	"faceTarget": false,
 	"immunities":["burning","shocked"],
 	"targetFlags": [

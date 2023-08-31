@@ -15,7 +15,7 @@
 	"hitSize": 59,
 	"faceTarget": true,
 	"lowAltitude": true,
-	"health": 42800,
+	"health": 40000,
 	"armor": 18,
 	"buildSpeed": 3.85,
 	"buildBeamOffset": 25,

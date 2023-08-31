@@ -1,5 +1,6 @@
 {
 	"name": "强攻",
+	"color": "FF5B5B",
 	"damageMultiplier": 2,
 	"healthMultiplier": 2,
 	"speedMultiplier": 1.3,

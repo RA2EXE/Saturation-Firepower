@@ -1,5 +1,6 @@
 {
 	"name": "阴电",
+	"color": "#EFDDFF",
 	"damage": 0.3,
 	"healthMultiplier": 1.35,
 	"speedMultiplier": 0.66,

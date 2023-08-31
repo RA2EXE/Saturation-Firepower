@@ -70,6 +70,7 @@
 			"lifetime": 26,
 			"width": 18,
 			"height": 50,
+			"hittable": false,
 			"absorbable": false,
 			"pierce": true,
 			"pierceCap": 5,

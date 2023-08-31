@@ -1,7 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "疆土",
-	"description": "发射重型轨道炮弹，精确轰炸敌对建筑。\n[red]对单位毁伤效果极差！",
 	"health": 18000,
 	"armor": 37,
 	"insulated": true,

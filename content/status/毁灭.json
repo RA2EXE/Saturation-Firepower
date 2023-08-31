@@ -1,5 +1,6 @@
 {
 	"name":"毁灭",
+	"color": "FF5B5B",
 	"damage": 50,
 	"show":false,
 	"damageMultiplier":5,

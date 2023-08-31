@@ -34,7 +34,7 @@
 	"health": 42500,
 	"armor": 28,
 	"rotateSpeed": 1.22,
-	"itemCapacity": 45,
+	"itemCapacity": 30,
 	"faceTarget": false,
 	"immunities":["burning","shocked","崩溃"],
 	"targetFlags": [

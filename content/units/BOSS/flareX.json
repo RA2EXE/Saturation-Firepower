@@ -75,7 +75,7 @@
 	],
 	"weapons": [
 		{
-			"name": "flareX1",
+			"name": "麦芒1",
 			"x": 0,
 			"y": 0,
 			"reload": 60,
@@ -153,7 +153,7 @@
 			}
 		},
 		{
-			"name": "flareX2",
+			"name": "麦芒2",
 			"x": 0,
 			"y": 0,
 			"reload": 55,

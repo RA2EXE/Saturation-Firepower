@@ -17,7 +17,7 @@
 	"ammoCapacity": 1600,
 	"hitSize": 35,
 	"flying": true,
-	"health": 22500,
+	"health": 20500,
 	"armor": 12,
 	"itemCapacity": 0,
 	"engines": [

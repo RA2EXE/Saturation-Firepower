@@ -120,6 +120,8 @@
 			"lifetime": 26,
 			"width": 9,
 			"height": 23,
+			"hittable": false,
+			"absorbable": false,
 			"pierceArmor": true,
 			"backColor": "EEC591",
 			"frontColor": "E3E3E3",
@@ -148,7 +150,7 @@
 			"smokeEffect": {
 				"type": "ParticleEffect",
 				"particles": 4,
-				"interp":"pow5Out",
+				"interp": "pow5Out",
 				"sizeInterp": "pow5In",
 				"sizeFrom": 3,
 				"sizeTo": 0,

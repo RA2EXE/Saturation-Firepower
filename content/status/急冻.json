@@ -1,5 +1,6 @@
 {
 	"name": "急冻",
+	"color": "c0ecff",
 	"damage": 1.26,
 	"healthMultiplier":0.75,
 	"speedMultiplier": 0.58,

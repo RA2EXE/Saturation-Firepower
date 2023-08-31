@@ -1,7 +1,7 @@
 {
 	"type": "ItemTurret",
 	"name": "猛犸",
-	"health": 2000,
+	"health": 1200,
 	"size": 2,
 	"reload": 60,
 	"shootSound": "artillery",

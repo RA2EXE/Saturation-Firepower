@@ -3,7 +3,7 @@
 	"name": "余晖",
 	"ammoType": "surge-alloy",
 	"ammoCapacity": 1400,
-	"speed": 0.95,
+	"speed": 0.92,
 	"drag": 0.05,
 	"accel": 0.04,
 	"flying": true,
@@ -12,10 +12,9 @@
 	"hitSize": 70,
 	"faceTarget": true,
 	"lowAltitude": true,
-	"health": 160000,
-	"armor": 30,
-	"rotateSpeed": 1.2,
-	"itemCapacity": 100,
+	"health": 148000,
+	"armor": 33,
+	"rotateSpeed": 0.88,
 	"research": {
 		"parent": "eclipse",
 		"objectives": [
@@ -28,8 +27,13 @@
 	"weapons": [
 		{
 			"name": "余晖1",
-			"reload": 10,
-			"shootY": 7,
+			"reload": 33,
+			"shoot": {
+				"shots": 3,
+				"shotDelay": 3
+			},
+			"shootY": 10.5,
+			"recoil": 2,
 			"x": 8,
 			"y": 24,
 			"rotate": true,
@@ -55,7 +59,7 @@
 				"splashDamageRadius": 45,
 				"splashDamage": 95,
 				"hitSound": "explosion",
-				"shootEffect": "shootBig",
+				"shootEffect": "shootBig2",
 				"smokeEffect": "shootBigSmoke",
 				"hitEffect": "flakExplosionBig",
 				"fragBullets": 3,
@@ -82,8 +86,13 @@
 		},
 		{
 			"name": "余晖1",
-			"reload": 15,
-			"shootY": 7,
+			"reload": 30,
+			"shoot": {
+				"shots": 3,
+				"shotDelay": 3
+			},
+			"shootY": 10.5,
+			"recoil": 2,
 			"x": 32,
 			"y": -28,
 			"rotate": true,
@@ -109,7 +118,7 @@
 				"splashDamageRadius": 45,
 				"splashDamage": 95,
 				"hitSound": "explosion",
-				"shootEffect": "shootBig",
+				"shootEffect": "shootBig2",
 				"smokeEffect": "shootBigSmoke",
 				"hitEffect": "flakExplosionBig",
 				"fragBullets": 3,

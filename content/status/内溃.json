@@ -1,5 +1,6 @@
 {
 	"name": "内溃",	
+	"color": "666484",
 	"permanent":true,
 	"healthMultiplier":0.9,
 	"speedMultiplier":0.8,

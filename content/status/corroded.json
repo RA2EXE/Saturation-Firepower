@@ -1,0 +1,18 @@
+{
+	"damage": 2.5,
+	"healthMultiplier": 0.9,
+	"effectChance": 0.6,
+	"effect": {
+		"type": "ParticleEffect",
+		"particles": 3,
+		"baseLength": 0,
+		"length": 16,
+		"interp":"pow10Out",
+		"sizeInterp":"pow10Out",
+		"lifetime": 60,
+		"sizeFrom": 1,
+		"sizeTo": 6,
+		"colorFrom": "a0b46e",
+		"colorTo": "a0b46e80"
+	}
+}

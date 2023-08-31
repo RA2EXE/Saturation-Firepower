@@ -16,7 +16,7 @@
 	"drag": 0.08,
 	"accel": 0.1,
 	"rotateSpeed": 3,
-	"itemCapacity": 30,
+	"itemCapacity": 0,
 	"faceTarget": false,
 	"research": "陆1",
 	"requirements": {

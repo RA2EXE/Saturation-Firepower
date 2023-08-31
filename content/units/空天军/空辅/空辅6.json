@@ -30,7 +30,7 @@
 	"flying": true,
 	"faceTarget": false,
 	"health": 150000,
-	"armor": 33,
+	"armor": 30,
 	"engineOffset": 0,
 	"engineSize": 0,
 	"research": {

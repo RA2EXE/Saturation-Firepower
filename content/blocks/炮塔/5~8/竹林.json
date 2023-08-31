@@ -407,6 +407,8 @@
 			}
 		},
 		"裂位能": {
+			"absorbable": false,
+			"hittable": false,
 			"splashDamageRadius": 75,
 			"splashDamage": 95,
 			"speed": 3,

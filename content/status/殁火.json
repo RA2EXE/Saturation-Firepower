@@ -1,5 +1,6 @@
 {
 	"name": "殁火",
+	"color": "FF5B5B",
 	"damage": 16.6,
 	"speedMultiplier": 0.8,
 	"reloadMultiplier":0.76,

@@ -1,5 +1,6 @@
 {
 	"name":"抢修",
+	"color": "97FFA8",
 	"damage":-18,
 	"healthMultiplier":1.35,
 	"effectChance":1,
@@ -29,7 +30,6 @@
 		"lenFrom": 20,
 		"lenTo": 0,
 		"colorFrom": "97FFA8",
-		"colorTo": "97FFA8",
-		"cone": 360
+		"colorTo": "97FFA8"
 	}
 }

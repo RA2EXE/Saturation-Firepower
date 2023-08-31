@@ -1,5 +1,6 @@
 {
 	"name": "失衡",
+	"color": "BFFFDB",
 	"show":false,
 	"damageMultiplier":-0.05,
 	"speedMultiplier": -1.28,

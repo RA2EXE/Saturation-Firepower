@@ -149,6 +149,7 @@
 		},
 		"裂位能": {
 			"type": "BasicBulletType",
+			"hittable": false,
 			"damage": 240,
 			"rangeChange": 45,
 			"pierce": true,

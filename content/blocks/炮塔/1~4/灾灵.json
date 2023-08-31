@@ -127,6 +127,7 @@
 			"pierce":true,
 			"pierceCap": 3,
 			"pierceArmor": true,
+			"hittable": false,
 			"sprite": "饱和火力-透彻",
 			"backColor": "EEC591",
 			"frontColor": "E3E3E3",
