@@ -1,14 +1,14 @@
 {
 	"details": "升级火炮射击系统与弹药，安装更强劲的激光发生器",
-	"health": 45000,
+	"health": 43200,
 	"armor": 24,
 	"weapons": [
 		{
 			"name": "死神1",
-			"reload": 28,
+			"reload": 30,
 			"shoot": {
-				"shots": 2,
-				"shotDelay": 6
+				"shots": 3,
+				"shotDelay": 4
 			},
 			"shootY": 9,
 			"x": 11,
@@ -24,26 +24,26 @@
 				"lifetime": 60,
 				"width": 10,
 				"height": 12,
-				"damage": 21,
+				"damage": 25,
 				"status": "blasted",
 				"statusDuration": 120,
 				"shootEffect": "shootBig",
 				"splashDamageRadius": 40,
-				"splashDamage": 95,
+				"splashDamage": 98,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
 				"ammoMultiplier": 6,
-				"lightningDamage": 11,
+				"lightningDamage": 14,
 				"lightning": 2,
 				"lightningLength": 7
 			}
 		},
 		{
 			"name": "死神1",
-			"reload": 30,
+			"reload": 36,
 			"shoot": {
-				"shots": 2,
-				"shotDelay": 6
+				"shots": 3,
+				"shotDelay": 4
 			},
 			"shootY": 9,
 			"x": 20,
@@ -59,16 +59,16 @@
 				"lifetime": 60,
 				"width": 10,
 				"height": 12,
-				"damage": 20,
+				"damage": 24,
 				"status": "blasted",
 				"statusDuration": 120,
 				"shootEffect": "shootBig",
 				"splashDamageRadius": 40,
-				"splashDamage": 95,
+				"splashDamage": 98,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
 				"ammoMultiplier": 6,
-				"lightningDamage": 11,
+				"lightningDamage": 14,
 				"lightning": 2,
 				"lightningLength": 7
 			}
@@ -87,7 +87,7 @@
 			"shootSound": "laser",
 			"bullet": {
 				"type": "LaserBulletType",
-				"damage": 160,
+				"damage": 255,
 				"sideAngle": 20,
 				"sideWidth": 1,
 				"sideLength": 88,
@@ -98,7 +98,9 @@
 					"FFFFFF"
 				],
 				"width": 25,
-				"length": 320
+				"length": 360,
+				"status": "melting",
+				"statusDuration": 90
 			}
 		}
 	]

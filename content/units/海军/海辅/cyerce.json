@@ -1,5 +1,5 @@
 {
-	"health": 1900,
+	"health": 2000,
 	"details": "更高的载弹量，更强的修理能力，同时搭载声波系统，但能量分配可能会出现问题",
 	"rotateSpeed": 2.43,
 	"range": 240,
@@ -40,7 +40,7 @@
 				"type": "BasicBulletType",
 				"height": 16,
 				"width": 10,
-				"damage": 30,
+				"damage": 33,
 				"shrinkY": 0,
 				"weaveScale": 8,
 				"weaveMag": 1,

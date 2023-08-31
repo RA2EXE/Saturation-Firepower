@@ -17,8 +17,6 @@
 	"lowAltitude": true,
 	"health": 40000,
 	"armor": 18,
-	"buildSpeed": 3.85,
-	"buildBeamOffset": 25,
 	"rotateSpeed": 1.2,
 	"immunities": [
 		"shocked",

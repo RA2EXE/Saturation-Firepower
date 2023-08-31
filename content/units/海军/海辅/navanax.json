@@ -1,5 +1,5 @@
 {
-	"health": 48000,
+	"health": 47500,
 	"details": "升级极限电容以及新型电磁脉冲炮，搭载小型侵蚀光束",
 	"weapons": [
 		{
@@ -20,12 +20,12 @@
 			"cooldownTime": 200,
 			"bullet": {
 				"type": "ContinuousLaserBulletType",
-				"damage": 36,
+				"damage": 42,
 				"knockback": 1,
 				"status": "拆解",
 				"statusDuration": 120,
 				"width": 4.3,
-				"length": 110,
+				"length": 125,
 				"colors": [
 					"97FFA890",
 					"97FFA880",
@@ -107,12 +107,12 @@
 			"cooldownTime": 200,
 			"bullet": {
 				"type": "ContinuousLaserBulletType",
-				"damage": 36,
+				"damage": 42,
 				"knockback": 1,
 				"status": "拆解",
 				"statusDuration": 120,
 				"width": 4.3,
-				"length": 110,
+				"length": 125,
 				"colors": [
 					"97FFA890",
 					"97FFA880",
@@ -194,12 +194,12 @@
 			"cooldownTime": 200,
 			"bullet": {
 				"type": "ContinuousLaserBulletType",
-				"damage": 36,
+				"damage": 45,
 				"knockback": 1,
 				"status": "拆解",
 				"statusDuration": 120,
 				"width": 4.3,
-				"length": 110,
+				"length": 125,
 				"colors": [
 					"97FFA890",
 					"97FFA880",
@@ -281,12 +281,12 @@
 			"cooldownTime": 200,
 			"bullet": {
 				"type": "ContinuousLaserBulletType",
-				"damage": 36,
+				"damage": 45,
 				"knockback": 1,
 				"status": "拆解",
 				"statusDuration": 120,
 				"width": 4.3,
-				"length": 110,
+				"length": 125,
 				"colors": [
 					"97FFA890",
 					"97FFA880",
@@ -373,17 +373,17 @@
 				"healPercent": 20,
 				"speed": 17,
 				"lifetime": 21,
-				"damage": 67,
+				"damage": 47,
 				"radius": 100,
-				"splashDamageRadius": 100,
-				"splashDamage": 70,
+				"splashDamageRadius": 80,
+				"splashDamage": 84,
 				"timeIncrease": 3,
 				"powerDamageScl": 3,
-				"unitDamageScl": 0.88,
+				"unitDamageScl": 0.9,
 				"hitUnits": true,
 				"scaleLife": true,
 				"status": "electrified",
-				"statusDuration": 480,
+				"statusDuration": 180,
 				"frontColor": "97FFA8FF",
 				"backColor": "97FFA8FF",
 				"trailLength": 20,
@@ -501,8 +501,10 @@
 					"hitSound": "plasmaboom",
 					"despawnEffect": "massiveExplosion",
 					"hitEffect": "greenBomb",
-					"splashDamage": 33,
-					"splashDamageRadius": 50
+					"splashDamage": 30,
+					"splashDamageRadius": 50,
+					"status": "干扰",
+					"statusDuration": 10
 				}
 			}
 		}

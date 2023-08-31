@@ -14,7 +14,7 @@
 	"shake":8,
 	"bullet":{	
 	"type":"RailBulletType",
-	"damage":1850,
+	"damage":1880,
 	"pierce": true,	
 	"pierceBuilding":true,
 	"pierceEffect":"railHit",
@@ -22,8 +22,8 @@
 	"hitEffect":"massiveExplosion",
 	"shootEffect":"railShoot",
 	"smokeEffect":"smokeCloud",
-	"pierceDamageFactor":0.2,
-	"length":784,
+	"pierceDamageFactor":0.33,
+	"length":750,
 	"despawnEffect":"bigShockwave"
 	}	}
 	]

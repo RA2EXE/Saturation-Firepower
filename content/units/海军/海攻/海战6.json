@@ -10,8 +10,8 @@
 	"waveTrailX": 25,
 	"waveTrailY": -46,
 	"trailScl": 5,
-	"health": 144000,
-	"armor": 35,
+	"health": 150000,
+	"armor": 45,
 	"faceTarget": false,
 	"research": "omura",
 	"weapons": [
