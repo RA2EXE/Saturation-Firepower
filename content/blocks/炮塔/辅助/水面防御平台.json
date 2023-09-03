@@ -245,7 +245,7 @@
 		"speed": 3,
 		"lifetime": 90
 	},
-	"buildCostMultiplier": 100,
+	"buildCostMultiplier": 1000,
 	"requirements": [],
 	"category": "turret"
 }

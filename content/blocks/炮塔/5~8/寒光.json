@@ -1,0 +1,129 @@
+{
+	"type": "ContinuousTurret",
+	"name": "寒光",
+	"unitSort": "strongest",
+	"health": 12000,
+	"size": 6,
+	"shootSound": "laser",
+	"loopSound": "laserbeam",
+	"loopSoundVolume": 1.5,
+	"shake": 1.5,
+	"recoil": 0,
+	"cooldownTime": 20,
+	"canOverdrive": false,
+	"reload": 12,
+	"xRand": 1.5,
+	"aimChangeSpeed": 5.5,
+	"rotateSpeed": 1.5,
+	"range": 420,
+	"shootCone": 360,
+	"consumes": {
+		"power": 45,
+		"liquid": "纳米流体/1.75"
+	},
+	"shootY": 20,
+	"shootType": {
+		"type": "PointLaserBulletType",
+		"sprite": "饱和火力-寒光束",
+		"status": "急冻",
+		"statusDuration": 90,
+		"oscScl": 2.5,
+		"oscMag": 0.05,
+		"beamEffect": {
+			"type": "ParticleEffect",
+			"interp":"pow5Out",
+			"particles": 6,
+			"sizeFrom": 2.6,
+			"sizeTo": 10,
+			"length": 20,
+			"baseLength": 0,
+			"lifetime": 30,
+			"colorFrom": "c0ecff",
+			"colorTo": "c0ecff00"
+		},
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 3,
+					"baseLength": 0,
+					"length": 40,
+					"lifetime": 9,
+					"line": true,
+					"lenFrom": 16,
+					"lenTo": 50,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "FFFFFF",
+					"colorTo": "c0ecff"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 3,
+					"startDelay": 2.5,
+					"baseLength": 0,
+					"length": 40,
+					"lifetime": 10,
+					"line": true,
+					"lenFrom": 16,
+					"lenTo": 50,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "FFFFFF",
+					"colorTo": "c0ecff"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 3,
+					"startDelay": 5,
+					"baseLength": 0,
+					"length": 40,
+					"lifetime": 10,
+					"line": true,
+					"lenFrom": 16,
+					"lenTo": 50,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "FFFFFF",
+					"colorTo": "c0ecff"
+				},
+				{
+					"type": "ParticleEffect",
+					"region":"饱和火力-菱形",
+					"particles": 5,
+					"interp": "pow3Out",
+					"sizeInterp": "pow3In",
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 46,
+					"baseLength": 0,
+					"lifetime": 60,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				}
+			]
+		},
+		"beamEffectInterval": 2,
+		"beamEffectSize": 1,
+		"damage": 260,
+		"damageInterval": 10,
+		"hitShake": 3,
+		"hitColor": "c0ecff",
+		"color": "c0ecff",
+		"drawSize": 420
+	},
+	"category": "turret",
+	"research": {
+		"parent": "冰风暴",
+		//"objectives": [{"type": "SectorComplete","preset": "暴风雪岭"}]
+	},
+	"requirements": [
+		"镄/1500",
+		"metaglass/870",
+		"纳米核/800",
+		"裂位能/600",
+		"泰勒合金/1200",
+		"三级协议/15"
+	]
+}

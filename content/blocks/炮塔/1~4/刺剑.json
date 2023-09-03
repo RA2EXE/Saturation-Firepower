@@ -33,34 +33,31 @@
 			"width": 20,
 			"length": 170,
 			"damage": 125,
-			"ammoMultiplier": 2,
-			"pierce": true
+			"ammoMultiplier": 2
 		},
 		"thorium": {
 			"type": "ShrapnelBulletType",
 			"reloadMultiplier": 1,
-			"rangeChange":10,
+			"rangeChange": 10,
 			"length": 200,
 			"damage": 150,
 			"width": 20,
 			"fromColor": "f9a3c7",
 			"toColor": "f9a3c7",
 			"ammoMultiplier": 4,
-			"pierce": true,
 			"shootEffect": "thoriumShoot",
 			"smokeEffect": "thoriumShoot"
 		},
 		"镄": {
 			"type": "ShrapnelBulletType",
 			"reloadMultiplier": 1,
-			"rangeChange":40,
+			"rangeChange": 40,
 			"length": 230,
 			"damage": 180,
 			"width": 20,
 			"fromColor": "dedede",
 			"toColor": "aaaaaa",
 			"ammoMultiplier": 6,
-			"pierce": true,
 			"shootEffect": {
 				"type": "ParticleEffect",
 				"particles": 9,

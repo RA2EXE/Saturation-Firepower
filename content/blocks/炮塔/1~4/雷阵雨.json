@@ -246,23 +246,7 @@
 		"graphite/120",
 		"silicon/50",
 		"硅钢/60",
-		"plastanium/40",
-		{
-			"item": "graphite",
-			"amount": 85
-		},
-		{
-			"item": "silicon",
-			"amount": 60
-		},
-		{
-			"item": "titanium",
-			"amount": 90
-		},
-		{
-			"item": "plastanium",
-			"amount": 30
-		}
+		"plastanium/40"
 	],
 	"category": "turret",
 	"research": "长枪"

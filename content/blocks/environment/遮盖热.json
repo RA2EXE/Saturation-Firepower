@@ -22,9 +22,9 @@
 	"damageTaken": 8,
 	"status": "崩溃",
 	"attributes":{
-		"oil": -2,
-		"water": -2,
-		"spores": -2,
+		"oil": -20,
+		"water": -20,
+		"spores": -20,
 		"heat": 2
 	},
 	"variants":2

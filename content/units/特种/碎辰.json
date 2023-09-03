@@ -28,10 +28,10 @@
 	"hitSize": 60,
 	"targetAir": false,
 	"targetGround": false,
+	"faceTarget": true,
 	"health": 24500,
 	"armor": 350,
 	"itemCapacity": 0,
-	"faceTarget": true,
 	"research": {
 		"parent": "实验工厂",
 		"objectives": [
@@ -95,7 +95,6 @@
 			]},
 			"shake":15,
 			"mirror": false,
-			"top": false,
 			"rotate": false,
 			"autoTarget": false,
 			"shootY": 34,
@@ -103,7 +102,6 @@
 			"inaccuracy": 0,
 			"shootSound": "largeCannon",
 			"recoil":6,
-			"alternate": true,
 			"bullet": {
 				"type": "BasicBulletType",
 				"buildingDamageMultiplier":3,

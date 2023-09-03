@@ -43,6 +43,7 @@
 	],
 	"category": "crafting",
 	"ambientSound": "techloop",
+	"ambientSoundVolume": 0.5,
 	"research": {
 		"parent": "硅钢冶炼炉",
 		"objectives": [

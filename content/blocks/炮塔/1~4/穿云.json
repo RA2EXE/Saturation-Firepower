@@ -5,7 +5,7 @@
 	"health": 3400,
 	"armor": 4,
 	"size": 3,
-	"reload": 100,
+	"reload": 80,
 	"range": 280,
 	"maxAmmo": 24,
 	"recoilTime": 40,

@@ -57,9 +57,10 @@
 		"硅钢/90",
 		"裂位能/40",
 		"铬/150",
-		"二级协议/0"
+		"二级协议/2"
 	],
 	"category": "crafting",
 	"ambientSound": "smelter",
+	"ambientSoundVolume": 0.88,
 	"research": "电磁合金冶炼炉"
 }

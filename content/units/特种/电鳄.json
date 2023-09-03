@@ -2,10 +2,12 @@
 	"type": "hover",
 	"flying": false,
 	"hovering": true,
-	"healFlash":false,
+	"healFlash": false,
 	"immunities": [
 		"shocked",
 		"burning",
+		"spore-slowed",
+		"corroded",
 		"electrified",
 		"sapped",
 		"崩溃",
@@ -27,6 +29,10 @@
 		"totalPower": 12000
 	},
 	"ammoCapacity": 50,
+	"targetFlags": [
+		"unitAssembler",
+		"drill"
+	],
 	"health": 28000,
 	"armor": 14,
 	"itemCapacity": 0,
@@ -36,9 +42,9 @@
 	"lightColor": "FEEBB3",
 	"abilities": [
 		{
-			"type":"RegenAbility",
+			"type": "RegenAbility",
 			"percentAmount": 0.005
-		},		
+		},
 		{
 			"type": "ShieldRegenFieldAbility",
 			"amount": 50,
@@ -307,7 +313,7 @@
 					"haloRotateSpeed": 0.8,
 					"shapeRotation": 50,
 					"color": "FEEBB3",
-					"layer":110,
+					"layer": 110,
 					"tri": true,
 					"hollow": false,
 					"radius": 1,
@@ -320,8 +326,8 @@
 				{
 					"type": "ShapePart",
 					"y": -13.5,
-					"color":"FEEBB3",
-					"layer":110,
+					"color": "FEEBB3",
+					"layer": 110,
 					"circle": true,
 					"hollow": false,
 					"radius": 2,

@@ -20,7 +20,7 @@
 			"bullet": {
 				"type": "LaserBoltBulletType",
 				"frontColor": "FFFFFF",
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"healPercent": 5.5,
 				"damage": 17,
 				"collidesTeam": true,

@@ -103,11 +103,11 @@
 				"collidesTeam": true,
 				"status": "electrified",
 				"statusDuration": 600,
-				"frontColor": "97FFA8FF",
-				"backColor": "97FFA8FF",
+				"frontColor": "97FFA8",
+				"backColor": "97FFA8",
 				"trailLength": 46,
 				"trailWidth": 2,
-				"trailColor": "97FFA8FF",
+				"trailColor": "97FFA8",
 				"shootEffect": {
 					"type": "MultiEffect",
 					"effects": [
@@ -118,7 +118,7 @@
 							"sizeTo": 30,
 							"strokeFrom": 3,
 							"strokeTo": 0,
-							"colorFrom": "97FFA8FF",
+							"colorFrom": "97FFA8",
 							"colorTo": "ffffff"
 						},
 						{
@@ -129,7 +129,7 @@
 							"length": 45,
 							"baseLength": 0,
 							"lifetime": 35,
-							"colorFrom": "97FFA8FF",
+							"colorFrom": "97FFA8",
 							"colorTo": "ffffff",
 							"cone": 360
 						}
@@ -149,7 +149,7 @@
 							"length": 60,
 							"baseLength": 5,
 							"lifetime": 15,
-							"colorFrom": "97FFA8FF",
+							"colorFrom": "97FFA8",
 							"colorTo": "ffffff",
 							"cone": 360
 						},
@@ -160,8 +160,8 @@
 							"sizeTo": 65,
 							"strokeFrom": 6,
 							"strokeTo": 0,
-							"colorFrom": "97FFA8FF",
-							"colorTo": "97FFA8FF"
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA8"
 						}
 					]
 				}

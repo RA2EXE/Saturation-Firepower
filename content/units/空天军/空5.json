@@ -15,7 +15,7 @@
 	"hitSize": 59,
 	"faceTarget": true,
 	"lowAltitude": true,
-	"health": 40000,
+	"health": 38000,
 	"armor": 18,
 	"rotateSpeed": 1.2,
 	"immunities": [
@@ -27,7 +27,7 @@
 	"abilities": [
 		{
 			"type": "ForceFieldAbility",
-			"radius": 80,
+			"radius": 82,
 			"regen": 6,
 			"max": 3500,
 			"cooldown": 300

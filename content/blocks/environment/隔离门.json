@@ -4,8 +4,8 @@
 	"health": 24000,
 	"size": 2,
 	"requirements": [],
-	"buildCostMultiplier":15,
+	"buildCostMultiplier": 50,
 	"rebuildable": false,
-	"buildVisibility":"editorOnly",
+	"buildVisibility": "editorOnly",
 	"category": "defense"
 }

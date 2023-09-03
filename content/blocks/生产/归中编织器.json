@@ -47,6 +47,7 @@
 		"二级协议/0"
 	],
 	"ambientSound": "techloop",
+	"ambientSoundVolume": 0.56,
 	"category": "crafting",
 	"research": "激发器"
 }

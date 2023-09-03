@@ -67,6 +67,7 @@
 		},
 		"硅钢": {
 			"type": "MissileBulletType",
+			"frontColor": "FFFFFF",
 			"backColor":"7595D2",
 			"trailColor":"7595D2",
 			"speed": 4.1,
@@ -117,6 +118,78 @@
 				"lifetime": 20,
 				"speed": 2.5,
 				"drag": 0.005
+			}
+		},
+		"裂位能": {
+			"type": "MissileBulletType",
+			"frontColor": "FFFFFF",
+			"backColor": "EEC591",
+			"trailColor": "EEC591",
+			"hittable": false,
+			"absorbable": false,
+			"pierceArmor": true,
+			"speed": 5,
+			"lifetime": 64,
+			"damage": 18,
+			"status": "崩溃",
+			"statusDuration": 30,
+			"reloadMultiplier": 0.667,
+			"ammoMultiplier":8,
+			"width": 8,
+			"height": 8,
+			"hitEffect": {
+				"type": "WrapEffect",
+				"effect": "dynamicSpikes",
+				"color": "EEC591",
+				"rotation": 18
+			},
+			"despawnEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeInterp": "pow5In",
+				"sizeFrom": 2,
+				"sizeTo": 0,
+				"length": 0,
+				"baseLength": 0,
+				"lifetime": 25,
+				"colorFrom": "EEC591",
+				"colorTo": "FEEBB3"
+			},
+			"shootEffect": "none",
+			"hitSound": "laser",
+			"hitSoundVolume": 0.3,
+			"splashDamageRadius": 16,
+			"splashDamage": 34,
+			"lightningColor": "EEC591",
+			"lightningDamage": 12,
+			"lightning": 2,
+			"lightningLength": 6,
+			"lightningLengthRand": 5,
+			"fragBullets": 1,
+			"fragRandomSpread": 0,
+			"fragBullet": {
+				"type": "ShrapnelBulletType",
+				"pierceArmor": true,
+				"status": "崩溃",
+				"statusDuration": 20,
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 5,
+					"line": true,
+					"interp": "pow5Out",
+					"sizeInterp": "pow5In",
+					"length": 7,
+					"baseLength": 0,
+					"lifetime": 20,
+					"colorFrom": "ffffff",
+					"colorTo": "EEC591"
+				},
+				"fromColor":"ffffff",
+				"toColor":"EEC591",
+				"despawnEffect": "none",
+				"damage": 52,
+				"width": 8,
+				"length": 72
 			}
 		}
 	}

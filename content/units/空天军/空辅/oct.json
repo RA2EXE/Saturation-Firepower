@@ -24,7 +24,7 @@
 			"bullet": {
 				"type": "LaserBoltBulletType",
 				"frontColor": "FFFFFF",
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"healPercent": 4,
 				"damage": 25,
 				"pierce": true,
@@ -52,7 +52,7 @@
 			"bullet": {
 				"type": "LaserBoltBulletType",
 				"frontColor": "FFFFFF",
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"healPercent": 5,
 				"damage": 20,
 				"pierce": true,
@@ -80,7 +80,7 @@
 			"bullet": {
 				"type": "LaserBoltBulletType",
 				"frontColor": "FFFFFF",
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"healPercent": 3,
 				"damage": 24,
 				"pierce": true,
@@ -108,7 +108,7 @@
 			"bullet": {
 				"type": "LaserBoltBulletType",
 				"frontColor": "FFFFFF",
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"healPercent": 5,
 				"damage": 18,
 				"pierce": true,
@@ -142,7 +142,7 @@
 			"bullet": {
 				"type": "MissileBulletType",
 				"frontColor": "FFFFFF",
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"healPercent": 15,
 				"status": "拆解",
 				"statusDuration": 90,
@@ -153,7 +153,7 @@
 				"homingRange": 110,
 				"trailLength": 8,
 				"trailWidth": 3,
-				"trailColor": "97FFA8FF",
+				"trailColor": "97FFA8",
 				"sprite": "missile-large",
 				"shrinkY": 0,
 				"shootEffect": {
@@ -164,7 +164,7 @@
 					"length": 30,
 					"baseLength": 0,
 					"lifetime": 65,
-					"colorFrom": "97FFA8ff",
+					"colorFrom": "97FFA8",
 					"colorTo": "97FFA800",
 					"cone": 60
 				},
@@ -201,7 +201,7 @@
 							"sizeTo": 49,
 							"strokeFrom": 4,
 							"strokeTo": 0,
-							"colorFrom": "97FFA8ff",
+							"colorFrom": "97FFA8",
 							"colorTo": "97FFA890"
 						}
 					]

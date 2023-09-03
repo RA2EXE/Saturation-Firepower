@@ -30,7 +30,7 @@ TBLY.iconColor = Color.valueOf("25C9AB"),
 TBLY.hiddenItems.addAll(Items.erekirItems).removeAll(Items.serpuloItems);
 
 const 迫降区 = new SectorPreset("迫降区", TBLY, 1);
-迫降区.description = "";
+迫降区.description = "我们选择了一个敌人偏远的储存区进行突袭，夺下这个地区";
 迫降区.difficulty = 2;
 迫降区.alwaysUnlocked = false;
 迫降区.addStartingItems = true;

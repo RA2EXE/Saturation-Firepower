@@ -33,9 +33,8 @@
 		
 	},
 	"requirements": [
-		"copper/100",
-		"lead/85",
-		"graphite/35"
+		"graphite/50",
+		"titanium/50"
 	],
 	"category": "crafting",
 	"ambientSound": "smelter",

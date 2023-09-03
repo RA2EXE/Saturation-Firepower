@@ -54,9 +54,9 @@
 	"shrinkY":0,
 	"trailLength":10,
 	"trailWidth":4,
-	"trailColor":"BFFFDBFF",
+	"trailColor":"BFFFDB",
 	"frontColor":"FFFFFF",
-	"backColor":"BFFFDBFF",
+	"backColor":"BFFFDB",
 	"width": 13,	"height": 13,
 	"hitSound":"plasmaboom",
 	"hitEffect":{
@@ -110,7 +110,7 @@
 		"baseLength": -80,
 		"lifetime": 45,
 		"colorFrom": "FFFFFF",
-		"colorTo": "BFFFDBFF",
+		"colorTo": "BFFFDB",
 		"cone": 360
 		   },
 		   {     
@@ -122,7 +122,7 @@
 		"baseLength": -0,
 		"lifetime": 51,
 		"colorFrom": "FFFFFF",
-		"colorTo": "BFFFDBFF",
+		"colorTo": "BFFFDB",
 		"cone": 360
 		   }
 		]},
@@ -137,8 +137,8 @@
 		"length": 18,
 		"baseLength": 0,
 		"lifetime": 20,
-		"colorFrom": "BFFFDBFF",
-		"colorTo": "BFFFDBFF",
+		"colorFrom": "BFFFDB",
+		"colorTo": "BFFFDB",
 		"cone": 360
 		   },
 	"despawnEffect":"none",
@@ -148,7 +148,7 @@
 	"shrinkY":0,
 	"trailLength":2,
 	"trailWidth":1.88,
-	"trailColor":"BFFFDBFF",
+	"trailColor":"BFFFDB",
 	"frontColor":"BFFFDB",
 	"backColor":"BFFFDB",
 	"damage":8,

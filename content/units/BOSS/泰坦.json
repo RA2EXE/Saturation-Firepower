@@ -1,10 +1,8 @@
 {
 	"type": "mech",
-	"healColor":"FF5B5B",
-	"outlineColor":"383848",
+	"healColor": "FF5B5B",
+	"outlineColor": "383848",
 	"name": "泰坦",
-	"description": "信息缺失！",
-	"details": "信息缺失！",
 	"immunities": [
 		"blasted",
 		"burning",
@@ -44,8 +42,8 @@
 		},
 		{
 			"type": "ShieldRegenFieldAbility",
-			"amount": 60,
-			"max": 6000,
+			"amount": 360,
+			"max": 20000,
 			"reload": 60,
 			"range": 160,
 			"applyEffect": {
@@ -60,15 +58,15 @@
 						"baseLength": 0,
 						"lifetime": 30,
 						"colorFrom": "FF5B5B55",
-						"colorTo": "FF5B5B00",
-						"cone": 360
+						"colorTo": "FF5B5B00"
 					},
 					{
 						"type": "WaveEffect",
-						"lifetime": 22,
+						"lifetime": 32,
+						"interp": "circleOut",
 						"sizeFrom": 0,
 						"sizeTo": 60,
-						"strokeFrom": 4,
+						"strokeFrom": 9,
 						"strokeTo": 0,
 						"colorFrom": "FF5B5B",
 						"colorTo": "FF5B5B"
@@ -77,10 +75,11 @@
 			},
 			"activeEffect": {
 				"type": "WaveEffect",
+				"interp": "circleOut",
 				"lifetime": 42,
 				"sizeFrom": 0,
 				"sizeTo": 160,
-				"strokeFrom": 10,
+				"strokeFrom": 12,
 				"strokeTo": 0,
 				"colorFrom": "FEEBB355",
 				"colorTo": "FEEBB355"
@@ -182,9 +181,8 @@
 			"x": 32,
 			"y": 16,
 			"shoot": {
-				"type": "ShootSpread",
 				"shots": 5,
-				"spread": 0
+				"shotDelay": 2
 			},
 			"shake": 3,
 			"recoil": 1,
@@ -203,22 +201,23 @@
 				"statusDuration": 600,
 				"shootEffect": "none",
 				"smokeEffect": "none",
-				"width": 13,
+				"width": 16,
 				"height": 20,
+				"weaveMag": 3,
+				"weaveScale": 5,
 				"hitEffect": {
 					"type": "MultiEffect",
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 15,
-							"sizeFrom": 12,
+							"particles": 12,
+							"sizeFrom": 15,
 							"sizeTo": 0,
 							"length": 150,
 							"baseLength": 35,
 							"lifetime": 45,
 							"colorFrom": "FF5B5B",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						},
 						{
 							"type": "ParticleEffect",
@@ -229,8 +228,7 @@
 							"baseLength": 0,
 							"lifetime": 65,
 							"colorFrom": "FF5B5B50",
-							"colorTo": "FF5B5B00",
-							"cone": 360
+							"colorTo": "FF5B5B00"
 						},
 						{
 							"type": "WaveEffect",
@@ -249,13 +247,13 @@
 				"shrinkX": 0.1,
 				"shrinkY": 0.2,
 				"speed": 60,
-				"lifetime": 50,
+				"lifetime": 30,
 				"drag": 0.1,
 				"backColor": "FF5B5B",
 				"frontColor": "FFFFFF",
 				"trailLength": 9,
-				"trailWidth": 2,
-				"trailColor": "FF5B5B"
+				"trailWidth": 8,
+				"trailColor": "FF5B5B80"
 			}
 		}
 	]

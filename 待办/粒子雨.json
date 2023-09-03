@@ -1,0 +1,20 @@
+{
+	"name": "高能粒子雨",
+	"type": "RainWeather",
+	"attributes":{
+		"water": -0.2,
+		"spores": -2
+	},
+	"particleRegion": "particle",
+	"noiseColor": "c0ecff",
+	"density": 1600,
+	"useWindVector": true,
+	"drawNoise": true,
+	"sound": "spark",
+	"soundVol": 0,
+	"soundVolOscMag": 1.5,
+	"soundVolOscScl": 1100,
+	"soundVolMin": 0.02,
+	"statusDuration": 3,
+	"status": "unmoving"
+}

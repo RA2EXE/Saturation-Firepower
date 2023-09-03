@@ -8,7 +8,7 @@
 	"hasItems": true,
 	"craftTime": 60,
 	"itemCapacity": 20,
-	"liquidCapacity": 20,
+	"liquidCapacity": 40,
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
@@ -20,20 +20,16 @@
 	"updateEffect": "plasticburn",
 	"consumes": {
 		"power": 7,
-		"liquid": {
-			"liquid": "oil",
-			"amount": 0.5,
-			"booster": false
-		},
+		"liquid": "oil/0.5",
 		"items": [
 			"titanium/5"
 		]
 	},
 	"requirements": [
 		"graphite/100",
-		"silicon/90",
 		"thorium/80",
-		"硅钢/40",
+		"plastanium/50",
+		"硅钢/90",
 		"一级协议/0"
 	],
 	"category": "crafting",

@@ -1,0 +1,106 @@
+{
+	"type": "tank",
+	"template": "TankUnitType",
+	"healFlash": false,
+	"treadFrames": 16,
+	"treadPullOffset": 8,
+	"crushDamage": 90,
+	"treadRects": [
+		{
+			"x": -0,
+			"y": -6,
+			"width": 36,
+			"height": 384
+		}
+	],
+	"immunities": [
+		"shocked",
+		"burning",
+		"electrified",
+		"sapped",
+		"overdrive",
+		"overclock",
+		"崩溃",
+		"修复",
+		"抢修",
+		"干扰",
+		"强化",
+		"强攻",
+		"绝判",
+		"毁灭"
+	],
+	"name": "地质锤远程火箭炮系统",
+	"rotateSpeed": 0.6,
+	"speed": 0.45,
+	"accel": 0.08,
+	"drag": 0.08,
+	"hitSize": 160,
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 3600000
+	},
+	"ammoCapacity": 18,
+	"health": 25000,
+	"armor": 15,
+	"itemCapacity": 0,
+	"faceTarget": false,
+	"lightRadius": 80,
+	"fogRadius": 40,
+	"targetAir": false,
+	"targetGround": false,
+	"weapons": [
+		{
+			"name": "地质锤1",
+			//"reload": 10800,
+			"reload": 800,
+			"shoot": {
+				"shots": 6,
+				"shotDelay": 40
+			},
+			"xRand": 64,
+			"x": 0,
+			"y": 0,
+			"shootY": 86,
+			"rotate": true,
+			"rotateSpeed": 0.125,
+			"shootCone": 0.025,
+			"mirror": false,
+			"recoil": 0,
+			"inaccuracy": 0,
+			"shootSound": "missileLaunch",
+			"shake": 11,
+			"autoTarget": false,
+			"bullet": {
+				"keepVelocity": false,
+				"speed": 0,
+				"hitShake": 8,
+				"shootEffect": {
+					"type": "WaveEffect",
+					"interp": "circleOut",
+					"lifetime": 80,
+					"sizeFrom": 0,
+					"sizeTo": 160,
+					"strokeFrom": 20,
+					"strokeTo": 0,
+					"colorFrom": "BFFFDB",
+					"colorTo": "BFFFDB"
+				},
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 16,
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"sizeFrom": 9,
+					"sizeTo": 0,
+					"length": 112,
+					"baseLength": 0,
+					"lifetime": 130,
+					"colorFrom": "BFFFDBAA",
+					"colorTo": "BFFFDBAA",
+					"cone": 15
+				},
+				"spawnUnit": "地质锤-火箭"
+			}
+		}
+	]
+}

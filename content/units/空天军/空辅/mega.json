@@ -16,7 +16,7 @@
 				"sizeTo": 30,
 				"strokeFrom": 1.3,
 				"strokeTo": 0,
-				"colorFrom": "97FFA8FF",
+				"colorFrom": "97FFA8",
 				"colorTo": "97FFA800"
 			},
 			"effect": "修复"
@@ -35,8 +35,8 @@
 			"bullet": {
 				"type": "LaserBoltBulletType",
 				"shootEffect":"shootHeal",
-				"frontColor": "97FFA8FF",
-				"backColor": "97FFA8FF",
+				"frontColor": "97FFA8",
+				"backColor": "97FFA8",
 				"healPercent": 6,
 				"damage": 13,
 				"pierce": true,
@@ -44,7 +44,7 @@
 				"collidesTeam": true,
 				"trailLength": 3,
 				"trailWidth": 1.3,
-				"trailColor": "97FFA8FF",
+				"trailColor": "97FFA8",
 				"speed": 8,
 				"lifetime": 21.875,
 				"width": 2,
@@ -63,8 +63,8 @@
 			"bullet": {
 				"type": "LaserBoltBulletType",
 				"shootEffect":"shootHeal",
-				"frontColor": "97FFA8FF",
-				"backColor": "97FFA8FF",
+				"frontColor": "97FFA8",
+				"backColor": "97FFA8",
 				"healPercent": 4,
 				"damage": 11,
 				"pierce": true,
@@ -72,7 +72,7 @@
 				"collidesTeam": true,
 				"trailLength": 3,
 				"trailWidth": 1.3,
-				"trailColor": "97FFA8FF",
+				"trailColor": "97FFA8",
 				"speed": 8.2,
 				"lifetime": 21.875,
 				"width": 2,

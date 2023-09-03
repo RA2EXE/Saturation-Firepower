@@ -139,7 +139,7 @@
 			"sparkLen": 26
 		}
 	},
-	"buildCostMultiplier": 100,
+	"buildCostMultiplier": 1000,
 	"requirements": [],
 	"category": "turret"
 }

@@ -1,6 +1,5 @@
 {
 	"name": "螺旋压缩机",
-	"description": "新型四重液压机，以极快的速度处理材料",
 	"health": 1800,
 	"size": 4,
 	"hasPower": true,

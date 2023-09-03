@@ -72,7 +72,7 @@
 	},
 	"weapons": [
 		{
-			"name": "电默",
+			"name": "地动2",
 			"minShootVelocity": 0.1,
 			"x": 0,
 			"y": 0,
@@ -143,8 +143,7 @@
 					"strokeFrom": 1,
 					"strokeTo": 0,
 					"colorFrom": "c0ecff",
-					"colorTo": "c0ecff",
-					"cone": 360
+					"colorTo": "c0ecff"
 				},
 				"applyEffect": "none",
 				"shootEffect": "none",
@@ -209,7 +208,7 @@
 			}
 		},
 		{
-			"name": "燃烧弹",
+			"name": "地动3",
 			"minShootVelocity": 0.1,
 			"x": 0,
 			"y": 0,
@@ -306,6 +305,30 @@
 						}
 					]
 				}
+			}
+		},
+		{
+			"name": "地动4",
+			"reload": 300,
+			"x": 35,
+			"y": -16,
+			"rotate": true,
+			"alternate": true,
+			"autoTarget": true,
+			"rotateSpeed": 5,
+			"inaccuracy": 15,
+			"shootCone": 360,
+			"shootSound": "click",
+			"shootStatus": "修复",
+			"shootStatusDuration": 120,
+			"bullet": {
+				"type": "FlakBulletType",
+				"keepVelocity": false,
+				"collidesGround": false,
+				"smokeEffect": "none",
+				"hitEffect": "none",
+				"despawnEffect": "none",
+				"spawnUnit": "地动诱饵"
 			}
 		},
 		{
@@ -427,30 +450,6 @@
 					"colorTo": "c0ecff",
 					"cone": 360
 				}
-			}
-		},
-		{
-			"name": "诱饵",
-			"reload": 300,
-			"x": 35,
-			"y": -16,
-			"rotate": true,
-			"alternate": true,
-			"autoTarget": true,
-			"rotateSpeed": 5,
-			"inaccuracy": 15,
-			"shootCone": 360,
-			"shootSound": "click",
-			"shootStatus": "修复",
-			"shootStatusDuration": 80,
-			"bullet": {
-				"type": "FlakBulletType",
-				"keepVelocity": false,
-				"collidesGround": false,
-				"smokeEffect": "none",
-				"hitEffect": "none",
-				"despawnEffect": "none",
-				"spawnUnit": "地动诱饵"
 			}
 		}
 	]

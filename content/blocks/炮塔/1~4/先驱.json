@@ -29,7 +29,7 @@
 		"type": "BasicBulletType",
 		"damage": 11,
 		"frontColor": "FFFFFF",
-		"backColor": "BFFFDBFF",
+		"backColor": "BFFFDB",
 		"width": 3,
 		"height": 3,
 		"status": "干扰",
@@ -47,7 +47,7 @@
 			"strokeFrom": 1,
 			"strokeTo": 0,
 			"colorFrom": "FFFFFF",
-			"colorTo": "BFFFDBFF"
+			"colorTo": "BFFFDB"
 		},
 		"despawnEffect": {
 			"type": "WaveEffect",
@@ -57,7 +57,7 @@
 			"strokeFrom": 1,
 			"strokeTo": 0,
 			"colorFrom": "FFFFFF",
-			"colorTo": "BFFFDBFF"
+			"colorTo": "BFFFDB"
 		}
 	},
 	"shootEffect": {
@@ -68,7 +68,7 @@
 		"strokeFrom": 1,
 		"strokeTo": 0,
 		"colorFrom": "FFFFFF",
-		"colorTo": "BFFFDBFF"
+		"colorTo": "BFFFDB"
 	},
 	"consumes": {
 		"power": 1.55,

@@ -71,6 +71,7 @@
 			}
 		]
 	},
+	"forceMultiTarget": true,
 	"weapons": [
 		{
 			"name": "罗汉2",

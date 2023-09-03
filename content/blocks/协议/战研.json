@@ -186,7 +186,7 @@
 		},
 		"splashDamageRadius": 500,
 		"splashDamage": 15000,
-		"bulletInterval": 2,
+		"bulletInterval": 1.75,
 		"intervalBullets": 2,
 		"intervalSpread": 10,
 		"intervalBullet": {
@@ -194,7 +194,7 @@
 			"height": 0,
 			"collides": false,
 			"lightningDamage": 210,
-			"lightning": 6,
+			"lightning": 5,
 			"lightningLength": 32,
 			"lightningLengthRand": 18,
 			"lightningColor": "c4ffdeA8",

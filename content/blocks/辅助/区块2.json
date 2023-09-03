@@ -73,12 +73,12 @@
 			"sizeTo": 160,
 			"strokeFrom": 6,
 			"strokeTo": 0,
-			"colorFrom": "97FFA8FF",
-			"colorTo": "97FFA8FF"
+			"colorFrom": "97FFA8",
+			"colorTo": "97FFA8"
 		},
 		"hitEffect": "none",
 		"frontColor": "FFFFFF",
-		"backColor": "97FFA8FF",
+		"backColor": "97FFA8",
 		"shootEffect": "none",
 		"smokeEffect": "none",
 		"fragLifeMin": 1,
@@ -97,11 +97,11 @@
 			"collidesTeam": true,
 			"status": "electrified",
 			"statusDuration": 600,
-			"frontColor": "97FFA8FF",
-			"backColor": "97FFA8FF",
+			"frontColor": "97FFA8",
+			"backColor": "97FFA8",
 			"trailLength": 6,
 			"trailWidth": 2,
-			"trailColor": "97FFA8FF",
+			"trailColor": "97FFA8",
 			"shootEffect": "none",
 			"smokeEffect": "none",
 			"hitSound": "none",
@@ -112,8 +112,8 @@
 				"sizeTo": 15,
 				"strokeFrom": 6,
 				"strokeTo": 0,
-				"colorFrom": "97FFA8FF",
-				"colorTo": "97FFA8FF"
+				"colorFrom": "97FFA8",
+				"colorTo": "97FFA8"
 			},
 			"hitEffect": {
 				"type": "WaveEffect",
@@ -122,8 +122,8 @@
 				"sizeTo": 15,
 				"strokeFrom": 6,
 				"strokeTo": 0,
-				"colorFrom": "97FFA8FF",
-				"colorTo": "97FFA8FF"
+				"colorFrom": "97FFA8",
+				"colorTo": "97FFA8"
 			}
 		}
 	},

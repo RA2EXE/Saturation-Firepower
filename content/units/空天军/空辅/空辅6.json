@@ -83,7 +83,7 @@
 				"sizeTo": 240,
 				"strokeFrom": 8,
 				"strokeTo": 0,
-				"colorFrom": "97FFA8FF",
+				"colorFrom": "97FFA8",
 				"colorTo": "97FFA800"
 			},
 			"effect": "抢修"
@@ -240,7 +240,7 @@
 				"status": "拆解",
 				"statusDuration": 60,
 				"collidesTeam": false,
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"frontColor": "ffffff",
 				"mixColorTo": "ffffff",
 				"hitSound": "plasmaboom",

@@ -43,9 +43,10 @@
 		"硅钢/80",
 		"镄/120",
 		"裂位能/35",
-		"一级协议/0"
+		"一级协议/3"
 	],
 	"category": "crafting",
 	"ambientSound": "smelter",
+	"ambientSoundVolume": 0.65,
 	"research": "硅钢冶炼炉"
 }

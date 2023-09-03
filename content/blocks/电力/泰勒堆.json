@@ -11,7 +11,6 @@
 	"outputsPower": true,
 	"powerProduction": 660,
 	"itemDuration": 36000,
-	"lightColor": "FFFFFF",
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
@@ -35,37 +34,137 @@
 		"type": "BasicBulletType",
 		"splashDamageRadius": 480,
 		"splashDamage": 6000,
+		"instantDisappear": true,
 		"makeFire": true,
+		"hitShake": 50,
 		"hitEffect": {
 			"type": "WaveEffect",
-			"lifetime": 40,
-			"sizeFrom": 40,
-			"sizeTo": 480,
+			"lifetime": 60,
+			"sizeFrom": 20,
+			"sizeTo": 530,
 			"strokeFrom": 30,
 			"strokeTo": 0,
-			"colorFrom": "EEC591",
-			"colorTo": "ffffffff"
+			"interp": "circleOut",
+			"colorFrom": "FFFFFF",
+			"colorTo": "EEC591"
 		},
 		"despawnEffect": {
-			"type": "ParticleEffect",
-			"particles": 1,
-			"sizeFrom": 380,
-			"sizeTo": 0,
-			"length": 0,
-			"baseLength": 0,
-			"lifetime": 100,
-			"colorFrom": "EEC591",
-			"colorTo": "ffffffff",
-			"cone": 360
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 60,
+					"sizeFrom": 60,
+					"sizeTo": 0,
+					"length": 480,
+					"baseLength": 0,
+					"lifetime": 480,
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"colorFrom": "FFFFFFBE",
+					"colorTo": "EEC591"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 10,
+					"sizeTo": 480,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 12,
+					"sizeInterp": "pow10Out",
+					"colorFrom": "FFFFFF",
+					"colorTo": "EEC591"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"startDelay": 9,
+					"sizeFrom": 480,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 60,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
+				}
+			]
 		},
 		"trailColor": "FFFFFF",
 		"backColor": "FF5B5B",
 		"frontColor": "E3E3E3",
 		"width": 0,
 		"height": 0,
-		"speed": 0,
-		"lifetime": 2,
-		"hitSound": "DBZ1"
+		"hitSound": "DBZ1",
+		"hitSoundVolume": 3,
+		"status":"绝判",
+		"statusDuration": 265,
+		"fragBullets": 60,
+		"fragLifeMin": 0.15,
+		"fragLifeMax": 1.1,
+		"fragBullet": {
+			"type": "BasicBulletType",
+			"collides": false,
+			"hittable": false,
+			"absorbable": false,
+			"splashDamage": 800,
+			"splashDamageRadius": 180,
+			"status":"崩溃",
+			"statusDuration": 1200,
+			"speed": 30,
+			"drag": 0.1,
+			"hitShake": 50,
+			"lifetime": 240,
+			"hitSound": "explosionbig",
+			"hitSoundVolume": 10,
+			"width": 30,
+			"height": 30,
+			"shrinkY": 0,
+			"sprite": "circle-bullet",
+			"trailLength": 18,
+			"trailWidth": 2.25,
+			"trailColor": "EEC59190",
+			"hitEffect": {
+				"type": "WaveEffect",
+				"lifetime": 35,
+				"interp": "circleOut",
+				"sizeFrom": 40,
+				"sizeTo": 230,
+				"strokeFrom": 30,
+				"strokeTo": 0,
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591"
+			},
+			"despawnEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 10,
+						"sizeTo": 180,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 12,
+						"sizeInterp": "pow10Out",
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"startDelay": 9,
+						"sizeFrom": 180,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 15,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591"
+					}
+				]
+			}
+		}
 	},
 	"consumes": {
 		"power": 5,
@@ -73,49 +172,18 @@
 			"liquid": "cryofluid",
 			"amount": 3
 		},
-		"items": {"items": ["thorium/18","blast-compound/18"]}
+		"items": [
+			"thorium/50",
+			"blast-compound/50"
+		]
 	},
 	"requirements": [
-		{
-			"item": "lead",
-			"amount": 1000
-		},
-		{
-			"item": "graphite",
-			"amount": 400
-		},
-		{
-			"item": "metaglass",
-			"amount": 400
-		},
-		{
-			"item": "镄",
-			"amount": 780
-		},
-		{
-			"item": "silicon",
-			"amount": 750
-		},
-		{
-			"item": "titanium",
-			"amount": 650
-		},
-		{
-			"item": "surge-alloy",
-			"amount": 300
-		},
-		{
-			"item": "硅钢",
-			"amount": 450
-		},
-		{
-			"item": "泰勒合金",
-			"amount": 250
-		},
-		{
-			"item": "三级协议",
-			"amount": 12
-		}
+		"lead/1200",
+		"metaglass/800",
+		"镄/780",
+		"硅钢/1200",
+		"泰勒合金/700",
+		"三级协议/0"
 	],
 	"category": "power",
 	"research": "镄反应堆"

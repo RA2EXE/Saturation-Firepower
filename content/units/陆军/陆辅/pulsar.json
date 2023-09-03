@@ -21,8 +21,8 @@
 			"bullet": {
 				"type": "LightningBulletType",
 				"damage": 16,
-				"lightningColor": "97FFA8FF",
-				"hitColor": "97FFA8FF",
+				"lightningColor": "97FFA8",
+				"hitColor": "97FFA8",
 				"lightningLength": 8,
 				"lightningLengthRand": 6,
 				"shootEffect": "shootHeal",

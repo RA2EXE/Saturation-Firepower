@@ -51,6 +51,7 @@
 		"sideWidth": 2,
 		"sideLength": 400,
 		"damage": 1048,
+		"buildingDamageMultiplier": 0.125,
 		"lifetime": 88,
 		"pierceArmor":true,
 		"collidesAir": true,
@@ -74,7 +75,7 @@
 					"strokeFrom": 0,
 					"strokeTo": 6,
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDBFF"
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -88,7 +89,7 @@
 					"baseLength": -180,
 					"lifetime": 70,
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDBFF",
+					"colorTo": "BFFFDB",
 					"cone": 360
 				},
 				{
@@ -100,7 +101,7 @@
 					"baseLength": -0,
 					"lifetime": 80,
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDBFF",
+					"colorTo": "BFFFDB",
 					"cone": 360
 				},
 				{
@@ -137,7 +138,7 @@
 					"interp":"pow5Out",
 					"sizeInterp":"pow5In",
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDBFF",
+					"colorTo": "BFFFDB",
 					"cone": 360
 				},
 				{
@@ -154,7 +155,7 @@
 					"interp":"pow5Out",
 					"sizeInterp":"pow5Out",
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDBFF",
+					"colorTo": "BFFFDB",
 					"cone": 36
 				}]}
 	},

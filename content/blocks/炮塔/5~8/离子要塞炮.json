@@ -1,8 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "离子要塞炮",
-	"description": "锁定敌人，充能后发射一道蓄能波束，摧毁目标附近的敌人",
-	"details": "随着战事的进行，敌人的军工厂已经全部动员完毕，防线压力大幅增加，我们正需这样一款维护简单威力强大的防御性炮台。",
 	"targetAir": false,
 	"targetGround": true,
 	"health": 3650,
@@ -39,10 +37,9 @@
 	"chargeSound": "lasercharge",
 	"shootType": {
 		"type": "PointBulletType",
-		"damage": 5480,
 		"lifetime": 90,
 		"speed": 100,
-		"collidesAir": true,
+		"damage": 5480,
 		"splashDamageRadius": 80,
 		"splashDamage": 5400,
 		"ammoMultiplier": 1,
@@ -60,8 +57,7 @@
 					"baseLength": -100,
 					"lifetime": 70,
 					"colorFrom": "F2FF9C",
-					"colorTo": "F2FF9C",
-					"cone": 360
+					"colorTo": "F2FF9C"
 				},
 				{
 					"type": "ParticleEffect",
@@ -72,10 +68,22 @@
 					"baseLength": -0,
 					"lifetime": 76,
 					"colorFrom": "F2FF9C",
-					"colorTo": "F2FF9C",
-					"cone": 360
+					"colorTo": "F2FF9C"
 				}
 			]
+		},
+		"smokeEffect": {
+			"type": "ParticleEffect",
+			"particles": 10,
+			"sizeFrom": 8,
+			"interp":"pow5Out",
+			"sizeInterp":"pow10In",
+			"sizeTo": 0,
+			"length": 60,
+			"baseLength": 0,
+			"lifetime": 125,
+			"colorFrom": "F2FF9C80",
+			"colorTo": "F2FF9C40"
 		},
 		"despawnEffect": {
 			"type": "ParticleEffect",
@@ -89,20 +97,6 @@
 			"colorTo": "F2FF9C",
 			"cone": 60
 		},
-		"smokeEffect": {
-			"type": "ParticleEffect",
-			"particles": 10,
-			"sizeFrom": 8,
-			"interp":"pow5Out",
-			"sizeInterp":"pow10In",
-			"sizeTo": 0,
-			"length": 60,
-			"baseLength": 0,
-			"lifetime": 125,
-			"colorFrom": "F2FF9C80",
-			"colorTo": "F2FF9C40",
-			"cone": 360
-		},
 		"hitEffect": {
 			"type": "MultiEffect",
 			"effects": [
@@ -115,8 +109,7 @@
 					"baseLength": -0,
 					"lifetime": 55,
 					"colorFrom": "F2FF9C",
-					"colorTo": "F2FF9C",
-					"cone": 360
+					"colorTo": "F2FF9C"
 				},
 				{
 					"type": "WaveEffect",
@@ -137,8 +130,7 @@
 					"baseLength": 0,
 					"lifetime": 20,
 					"colorFrom": "F2FF9C",
-					"colorTo": "F2FF9C",
-					"cone": 360
+					"colorTo": "F2FF9C"
 				}
 			]
 		},

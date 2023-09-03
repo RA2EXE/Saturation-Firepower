@@ -29,7 +29,7 @@
 				"colors": [
 					"97FFA890",
 					"97FFA880",
-					"97FFA8FF"
+					"97FFA8"
 				],
 				"hitEffect": {
 					"type": "ParticleEffect",
@@ -42,8 +42,8 @@
 					"length": 1,
 					"baseLength": 8,
 					"lifetime": 8,
-					"colorFrom": "97FFA8FF",
-					"colorTo": "97FFA8FF",
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
 					"cone": 80
 				},
 				"lifetime": 90,
@@ -61,8 +61,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -75,8 +75,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -116,7 +116,7 @@
 				"colors": [
 					"97FFA890",
 					"97FFA880",
-					"97FFA8FF"
+					"97FFA8"
 				],
 				"hitEffect": {
 					"type": "ParticleEffect",
@@ -129,8 +129,8 @@
 					"length": 1,
 					"baseLength": 8,
 					"lifetime": 8,
-					"colorFrom": "97FFA8FF",
-					"colorTo": "97FFA8FF",
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
 					"cone": 80
 				},
 				"lifetime": 90,
@@ -148,8 +148,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -162,8 +162,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -203,7 +203,7 @@
 				"colors": [
 					"97FFA890",
 					"97FFA880",
-					"97FFA8FF"
+					"97FFA8"
 				],
 				"hitEffect": {
 					"type": "ParticleEffect",
@@ -216,8 +216,8 @@
 					"length": 1,
 					"baseLength": 8,
 					"lifetime": 8,
-					"colorFrom": "97FFA8FF",
-					"colorTo": "97FFA8FF",
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
 					"cone": 80
 				},
 				"lifetime": 90,
@@ -235,8 +235,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -249,8 +249,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -290,7 +290,7 @@
 				"colors": [
 					"97FFA890",
 					"97FFA880",
-					"97FFA8FF"
+					"97FFA8"
 				],
 				"hitEffect": {
 					"type": "ParticleEffect",
@@ -303,8 +303,8 @@
 					"length": 1,
 					"baseLength": 8,
 					"lifetime": 8,
-					"colorFrom": "97FFA8FF",
-					"colorTo": "97FFA8FF",
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
 					"cone": 80
 				},
 				"lifetime": 90,
@@ -322,8 +322,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -336,8 +336,8 @@
 					{
 						"type": "LightningBulletType",
 						"damage": 44,
-						"lightningColor": "97FFA8FF",
-						"hitColor": "97FFA8FF",
+						"lightningColor": "97FFA8",
+						"hitColor": "97FFA8",
 						"lightningLength": 20,
 						"lightningLengthRand": 8,
 						"healPercent": 2,
@@ -384,11 +384,11 @@
 				"scaleLife": true,
 				"status": "electrified",
 				"statusDuration": 180,
-				"frontColor": "97FFA8FF",
-				"backColor": "97FFA8FF",
+				"frontColor": "97FFA8",
+				"backColor": "97FFA8",
 				"trailLength": 20,
 				"trailWidth": 6,
-				"trailColor": "97FFA8FF",
+				"trailColor": "97FFA8",
 				"trailChance": 0.33,
 				"trailInterval": 8,
 				"trailRotation": true,
@@ -424,8 +424,8 @@
 					"length": 80,
 					"baseLength": 3,
 					"lifetime": 22,
-					"colorFrom": "97FFA8FF",
-					"colorTo": "97FFA8FF",
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
 					"cone": 360
 				},
 				"hitEffect": {
@@ -438,8 +438,8 @@
 							"sizeTo": 100,
 							"strokeFrom": 6,
 							"strokeTo": 0,
-							"colorFrom": "97FFA8FF",
-							"colorTo": "97FFA8FF"
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA8"
 						},
 						{
 							"type": "ParticleEffect",
@@ -495,7 +495,7 @@
 					"lifetime": 20,
 					"healPercent": 2,
 					"splashDamagePierce": true,
-					"backColor": "97FFA8FF",
+					"backColor": "97FFA8",
 					"frontColor": "ffffff",
 					"mixColorTo": "ffffff",
 					"hitSound": "plasmaboom",

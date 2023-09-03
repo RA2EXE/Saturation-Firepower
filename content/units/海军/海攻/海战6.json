@@ -198,7 +198,7 @@
 				"fragLifeMin": 1,
 				"fragVelocityMin": 1,
 				"fragBullet": {
-					"type": "BaiscBuletType",
+					"type": "BasicBulletType",
 					"collides": false,
 					"hittable": false,
 					"absorbable": false,

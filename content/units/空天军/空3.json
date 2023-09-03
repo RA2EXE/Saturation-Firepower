@@ -102,6 +102,8 @@
 			"mirror": false,
 			"shootSound": "missile",
 			"shootCone": 80,
+			"controllable": false,
+			"autoTarget": true,
 			"ignoreRotation": true,
 			"minShootVelocity": 0.5,
 			"bullet": {
@@ -111,10 +113,10 @@
 				"splashDamage": 40,
 				"incendAmount": 2,
 				"incendSpread": 30,
-				"incendChance": 0.06,
+				"incendChance": 0.3,
 				"makeFire": true,
-				"width": 8,
-				"height": 8,
+				"width": 9,
+				"height": 9,
 				"lifetime": 30,
 				"shootEffect": "none",
 				"smokeEffect": "none",
@@ -152,7 +154,7 @@
 				"backColor": "FF8C00",
 				"frontColor": "FFFFFF",
 				"status": "burning",
-				"statusDuration": 180
+				"statusDuration": 600
 			}
 		}
 	]

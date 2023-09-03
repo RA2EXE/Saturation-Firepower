@@ -47,10 +47,9 @@
 		}
 	},
 	"requirements": [
-		"lead/110",
-		"silicon/35",
-		"硅钢/25",
-		"thorium/70",
+		"thorium/110",
+		"硅钢/50",
+		"泰勒合金/30",
 		"一级协议/0"
 	],
 	"category": "crafting",

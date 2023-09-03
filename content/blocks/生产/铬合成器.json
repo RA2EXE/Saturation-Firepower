@@ -33,6 +33,7 @@
 		]
 	},
 	"itemCapacity": 20,
+	"liquidCapacity": 40,
 	"size": 3,
 	"hasPower": true,
 	"hasLiquids": false,
@@ -48,9 +49,10 @@
 	},
 	"requirements": [
 		"plastanium/35",
-		"泰勒合金/15",
-		"镄/50",
-		"二级协议/0"
+		"镄/80",
+		"纳米核/50",
+		"泰勒合金/25",
+		"二级协议/2"
 	],
 	"ambientSound": "smelter",
 	"category": "crafting"

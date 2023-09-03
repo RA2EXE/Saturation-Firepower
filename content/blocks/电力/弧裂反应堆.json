@@ -2,7 +2,7 @@
 	"type": "ConsumeGenerator",
 	"name": "弧裂反应堆",
 	"size": 6,
-	"health": 8800,
+	"health": 28000,
 	"hasLiquids": true,
 	"hasItems": true,
 	"itemDuration": 840,
@@ -92,7 +92,7 @@
 		"裂位能/800"
 	],
 	"ambientSound": "techloop",
-	"ambientSoundVolume": 0.06,
+	"ambientSoundVolume": 0.5,
 	"category": "power",
 	"research": "镄反应堆"
 }

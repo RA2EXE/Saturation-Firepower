@@ -24,7 +24,7 @@
 			},
 			{
 				"type": "DrawSpikes",
-				"rotateSpeed": -4.5,
+				"rotateSpeed": 4.5,
 				"amount": 6,
 				"stroke": 1,
 				"length": 8,
@@ -58,7 +58,8 @@
 		"纳米核/200",
 		"裂位能/80"
 	],
-	"ambientSound": "hum",
+	"ambientSound": "pulse",
+	"ambientSoundVolume": 0.3,
 	"category": "crafting",
 	"research": {
 		"parent": "separator",

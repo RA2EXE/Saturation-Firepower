@@ -1,0 +1,21 @@
+{
+	"name": "腐蚀性尘降风",
+	"type": "ParticleWeather",
+	"attrs":{"spores": -0.5},
+	"particleRegion": "饱和火力-菱形",
+	"color": "a0b46e",
+	"useWindVector": false,
+	"minAlpha": 0.8,
+	"maxAlpha": 0.15,
+	"sizeMax": 10,
+	"sizeMin": 3,
+	"density": 3000,
+	"opacityMultiplier": 0.4,
+	"baseSpeed": 2.1,
+	"yspeed": -0.8,
+	"xspeed": -0.02,
+	"force": 0,
+	"duration": 7,
+	"statusDuration": 10,
+	"status": "corroded"
+}

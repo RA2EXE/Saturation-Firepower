@@ -37,22 +37,18 @@
 							"length": 45,
 							"baseLength": 3,
 							"lifetime": 35,
-							"colorFrom": "737373FF",
-							"colorTo": "737373FF",
-							"cone": 360
+							"colorFrom": "737373",
+							"colorTo": "737373"
 						},
 						{
 							"type": "ParticleEffect",
 							"particles": 32,
 							"line": true,
-							"sizeFrom": 9,
-							"sizeTo": 0,
 							"length": 53,
 							"baseLength": 20,
 							"lifetime": 22,
 							"colorFrom": "FFFFFF",
-							"colorTo": "FFE176FF",
-							"cone": 360
+							"colorTo": "FFE176"
 						},
 						{
 							"type": "WaveEffect",
@@ -61,7 +57,7 @@
 							"sizeTo": 70,
 							"strokeFrom": 4,
 							"strokeTo": 0,
-							"colorFrom": "FFE176FF",
+							"colorFrom": "FFE176",
 							"colorTo": "ffffff"
 						}
 					]

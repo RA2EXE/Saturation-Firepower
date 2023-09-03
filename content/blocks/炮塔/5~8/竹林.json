@@ -1,8 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "竹林",
-	"description": "利用裂位能预设近真空轨道后释放近炸游弋弹群进行轰炸。[red]需要大量电力与冷冻液支持运行！",
-	"details": "[yellow]王 的 问 候 ！",
 	"health": 18500,
 	"size": 8,
 	"reload": 340,
@@ -735,7 +733,7 @@
 				"length": 0,
 				"baseLength": 0,
 				"lifetime": 20,
-				"colorFrom": "BFFFDBFF",
+				"colorFrom": "BFFFDB",
 				"colorTo": "BFFFDB00",
 				"cone": 0
 			},
@@ -748,7 +746,7 @@
 				"strokeFrom": 4,
 				"strokeTo": 1,
 				"colorFrom": "BFFFDB80",
-				"colorTo": "BFFFDBFF"
+				"colorTo": "BFFFDB"
 			},
 			"trailSpacing": 10,
 			"trailEffect": {
@@ -805,13 +803,13 @@
 					"width": 80,
 					"height": 80,
 					"drag": -0.016,
-					"trailLength": 10,
-					"trailWidth": 6,
+					"trailLength": 16,
+					"trailWidth": 4.4,
 					"trailColor": "BFFFDBa0",
 					"hitShake": 20,
 					"sprite": "饱和火力-海胆",
-					"backColor": "BFFFDBFF",
-					"frontColor": "BFFFDBFF",
+					"backColor": "BFFFDB",
+					"frontColor": "BFFFDB",
 					"status": "干扰",
 					"statusDuration": 190,
 					"splashDamageRadius": 150,
@@ -831,8 +829,8 @@
 								"length": 203,
 								"baseLength": 30,
 								"lifetime": 30,
-								"colorFrom": "BFFFDBFF",
-								"colorTo": "BFFFDBFF"
+								"colorFrom": "BFFFDB",
+								"colorTo": "BFFFDB"
 							},
 							{
 								"type": "ParticleEffect",
@@ -842,8 +840,8 @@
 								"length": 163,
 								"baseLength": 3,
 								"lifetime": 90,
-								"colorFrom": "BFFFDBFF",
-								"colorTo": "BFFFDBFF"
+								"colorFrom": "BFFFDB",
+								"colorTo": "BFFFDB"
 							},
 							{
 								"type": "ParticleEffect",
@@ -858,13 +856,13 @@
 							},
 							{
 								"type": "WaveEffect",
-								"lifetime": 30,
+								"lifetime": 15,
 								"sizeFrom": 0,
-								"sizeTo": 160,
-								"strokeFrom": 6,
+								"sizeTo": 230,
+								"strokeFrom": 19,
 								"strokeTo": 0,
-								"colorFrom": "BFFFDBFF",
-								"colorTo": "BFFFDBFF"
+								"colorFrom": "BFFFDB",
+								"colorTo": "BFFFDB"
 							}
 						]
 					},
@@ -879,7 +877,7 @@
 				"length": 0,
 				"baseLength": 0,
 				"lifetime": 55,
-				"colorFrom": "BFFFDBFF",
+				"colorFrom": "BFFFDB",
 				"colorTo": "BFFFDB00",
 				"cone": 0
 			}

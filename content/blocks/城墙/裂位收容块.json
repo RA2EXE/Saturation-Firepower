@@ -123,7 +123,7 @@
 	},
 	"category": "defense",
 	"research": {
-		"parent": "战争实验室",
+		"parent": "战研",
 		"objectives": [
 			{
 				"type": "SectorComplete",

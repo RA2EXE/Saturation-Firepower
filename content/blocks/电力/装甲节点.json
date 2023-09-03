@@ -14,7 +14,8 @@
 		"silicon/15",
 		"metaglass/10",
 		"铬/10",
-		"裂位能/5"
+		"裂位能/5",
+		"一级协议/0"
 	],
 	"destroyBullet": {
 		"splashDamage": 60,

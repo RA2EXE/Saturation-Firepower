@@ -1,5 +1,6 @@
 {
 	"name": "怨灵Z",
+	"health": 1,
 	"armor":22,
 	"size": 8,
 	"reload": 5,
@@ -53,8 +54,6 @@
 	"ammoPerShot": 3,
 	"targetGround": true,
 	"targetAir": true,
-	"coolantMultiplier": 0.5,
-	"liquidCapacity": 120,
 	"inaccuracy": 2,
 	"shake": 5,
 	"shootSound": "shootBig",
@@ -237,5 +236,5 @@
 			}
 		}
 	},
-	"buildVisibility":"editorOnly"
+	"buildVisibility":"hidden"
 }

@@ -31,7 +31,7 @@
 				"sizeTo": 80,
 				"strokeFrom": 3,
 				"strokeTo": 0,
-				"colorFrom": "BFFFDBFF",
+				"colorFrom": "BFFFDB",
 				"colorTo": "25C9AB"
 			},
 			"despawnEffect": {
@@ -42,7 +42,7 @@
 				"length": 100,
 				"baseLength": 0,
 				"lifetime": 13,
-				"colorFrom": "BFFFDBFF",
+				"colorFrom": "BFFFDB",
 				"colorTo": "25C9AB",
 				"cone": 60
 			},
@@ -57,7 +57,7 @@
 						"length": 0,
 						"baseLength": 0,
 						"lifetime": 30,
-						"colorFrom": "BFFFDBFF",
+						"colorFrom": "BFFFDB",
 						"colorTo": "25C9AB",
 						"cone": 60
 					},
@@ -68,7 +68,7 @@
 						"sizeTo": 80,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "BFFFDBFF",
+						"colorFrom": "BFFFDB",
 						"colorTo": "25C9AB"
 					}
 				]
@@ -86,7 +86,7 @@
 				"lenTo": 11,
 				"strokeFrom": 8,
 				"strokeTo": 0,
-				"colorFrom": "BFFFDBFF",
+				"colorFrom": "BFFFDB",
 				"colorTo": "25C9AB",
 				"cone": 0
 			},
@@ -98,7 +98,7 @@
 			"status": "干扰",
 			"statusDuration": 90,
 			"hitSound": "DBZ1",
-			"splashDamageRadius": 80,
+			"splashDamageRadius": 60,
 			"splashDamage": 2350,
 			"fragBullets": 3,
 			"fragBullet": {
@@ -115,7 +115,7 @@
 					"lenTo": 9,
 					"strokeFrom": 5,
 					"strokeTo": 0,
-					"colorFrom": "BFFFDBFF",
+					"colorFrom": "BFFFDB",
 					"colorTo": "25C9AB",
 					"cone": 0
 				},
@@ -127,7 +127,7 @@
 					"length": 0,
 					"baseLength": 0,
 					"lifetime": 30,
-					"colorFrom": "BFFFDBFF",
+					"colorFrom": "BFFFDB",
 					"colorTo": "25C9AB",
 					"cone": 60
 				},

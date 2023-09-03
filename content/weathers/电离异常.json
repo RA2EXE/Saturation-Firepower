@@ -1,0 +1,21 @@
+{
+	"name": "电离层异常",
+	"type": "ParticleWeather",
+	"particleRegion": "circle-small",
+	"color": "c0ecff",
+	"noiseColor": "c0ecff",
+	"noisePath": "fog",
+	"drawNoise": true,
+	"sizeMax": 3,
+	"sizeMin": 2,
+	"density": 5000,
+	"statusGround": false,
+	"useWindVector": false,
+	"sound": "spark",
+	"soundVol": 4,
+	"soundVolMin": 0.5,
+	"soundVolOscMag": 1,
+	"soundVolOscScl": 10,
+	"statusDuration": 3,
+	"status": "unmoving"
+}

@@ -37,7 +37,7 @@
 				"width": 50,
 				"height": 50,
 				"maxRange": 50,
-				"backColor": "97FFA8FF",
+				"backColor": "97FFA8",
 				"frontColor": "ffffff",
 				"mixColorTo": "ffffff",
 				"hitSound": "plasmaboom",
@@ -56,7 +56,7 @@
 							"length": 80,
 							"baseLength": 8,
 							"lifetime": 30,
-							"colorFrom": "97FFA8FF",
+							"colorFrom": "97FFA8",
 							"colorTo": "ffffff",
 							"cone": 360
 						},
@@ -67,7 +67,7 @@
 							"sizeTo": 130,
 							"strokeFrom": 6,
 							"strokeTo": 0,
-							"colorFrom": "97FFA8FF",
+							"colorFrom": "97FFA8",
 							"colorTo": "ffffff"
 						}
 					]
@@ -80,7 +80,7 @@
 				"speed": 0,
 				"collides": false,
 				"healPercent": 15,
-				"lightningColor": "97FFA8FF",
+				"lightningColor": "97FFA8",
 				"lightningDamage": 15,
 				"lightning": 3,
 				"lightningLength": 15,
@@ -104,7 +104,7 @@
 					"lifetime": 20,
 					"drag": 0.2,
 					"healPercent": 5,
-					"backColor": "97FFA8FF",
+					"backColor": "97FFA8",
 					"frontColor": "ffffff",
 					"mixColorTo": "ffffff",
 					"hitSound": "plasmaboom",

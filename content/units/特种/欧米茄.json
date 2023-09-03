@@ -17,7 +17,7 @@
 	"ammoType": "thorium",
 	"ammoCapacity": 300,
 	"hitSize": 38,
-	"buildRange": 240,
+	"buildRange": 288,
 	"buildSpeed": 3,
 	"buildBeamOffset": 16,
 	"flying": true,
