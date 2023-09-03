@@ -173,10 +173,8 @@
 	"category": "turret",
 	"research": "战研",
 	"requirements": [
-		"copper/1800",
 		"metaglass/1500",
-		"silicon/750",
-		"硅钢/800",
+		"硅钢/1600",
 		"泰勒合金/500",
 		"裂位能/1400",
 		"二级协议/50",

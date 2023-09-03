@@ -535,8 +535,8 @@
 	"requirements": [
 		"thorium/580",
 		"graphite/300",
-		"硅钢/350",
-		"泰勒合金/130",
+		"硅钢/400",
+		"泰勒合金/150",
 		"二级协议/1"
 	],
 	"category": "turret",

@@ -114,10 +114,8 @@
 	},
 	"shootDuration": 250,
 	"requirements": [
-		"lead/800",
 		"metaglass/600",
-		"silicon/700",
-		"硅钢/550",
+		"硅钢/600",
 		"纳米核/300",
 		"surge-alloy/300",
 		"二级协议/0"

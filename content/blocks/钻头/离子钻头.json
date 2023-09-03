@@ -26,9 +26,9 @@
 	"requirements": [
 		"copper/30",
 		"graphite/40",
-		"硅钢/40 ",
-		"thorium/80 ",
-		"silicon/40"
+		"silicon/40",
+		"硅钢/45 ",
+		"thorium/80 "
 	],
 	"category": "production",
 	"research": "前哨基地"

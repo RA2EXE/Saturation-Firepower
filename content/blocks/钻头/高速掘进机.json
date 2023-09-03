@@ -38,7 +38,7 @@
 		"thorium/45",
 		"graphite/60",
 		"metaglass/80",
-		"硅钢/35"
+		"硅钢/80"
 	],
 	"consumes": {
 		"power": 6

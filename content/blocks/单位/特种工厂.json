@@ -88,7 +88,7 @@
 			"requirements": [
 				"titanium/300",
 				"silicon/250",
-				"硅钢/80",
+				"硅钢/100",
 				"纳米核/80"
 			]
 		},
@@ -150,7 +150,7 @@
 			"requirements": [
 				"silicon/180",
 				"graphite/90",
-				"硅钢/60",
+				"硅钢/80",
 				"石油桶/10"
 			]
 		},
@@ -168,9 +168,9 @@
 	"requirements": [
 		"titanium/300",
 		"silicon/360",
-		"硅钢/80",
-		"纳米核/20",
-		"plastanium/60",
+		"硅钢/400",
+		"纳米核/200",
+		"plastanium/120",
 		"二级协议/1"
 	],
 	"category": "units",

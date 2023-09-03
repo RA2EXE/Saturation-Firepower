@@ -1,6 +1,5 @@
 {
 	"name": "集束炸药",
-	"description": "对碰撞及其敏感的弹药，易燃易爆。",
 	"color": "D85555FF",
 	"alwaysUnlocked":false,
 	"hardness":1,

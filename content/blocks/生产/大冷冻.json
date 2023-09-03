@@ -37,11 +37,10 @@
 		"liquid": "water/0.6"
 	},
 	"requirements": [
-		"lead/70",
-		"thorium/60",
+		"thorium/150",
 		"metaglass/40",
 		"silicon/40",
-		"硅钢/75",
+		"硅钢/80",
 		"一级协议/0"
 	],
 	"category": "crafting",

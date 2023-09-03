@@ -1,6 +1,5 @@
 {
 	"name": "石油桶",
-	"description": "标准液体桶，内存60单位石油",
 	"color": "313131",
 	"alwaysUnlocked":false,
 	"radioactivity": 0,

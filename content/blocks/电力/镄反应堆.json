@@ -96,9 +96,8 @@
 		"lead/300",
 		"graphite/90",
 		"metaglass/60",
-		"镄/150",
-		"silicon/130",
-		"硅钢/90"
+		"镄/200",
+		"硅钢/150"
 	],
 	"category": "power",
 	"research": "thorium-reactor"

@@ -9,7 +9,7 @@
 	{ "unit": "陆战6", "time": 18480,
 	"requirements": [
 		"silicon/4000","镄/870",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -17,7 +17,7 @@
 	{ "unit": "空战6", "time": 18480,
 	"requirements": [
 		"silicon/4000","titanium/870",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -25,7 +25,7 @@
 	{ "unit": "海战6", "time": 18480,
 	"requirements": [
 		"silicon/4000","metaglass/870",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -33,7 +33,7 @@
 	{ "unit": "爬爬6", "time": 18480,
 	"requirements": [
 		"silicon/4000","titanium/870",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -41,7 +41,7 @@
 	{ "unit": "路辅6", "time": 18480,
 	"requirements": [
 		"silicon/4000","纳米核/800",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -49,7 +49,7 @@
 	{ "unit": "空辅6", "time": 18480,
 	"requirements": [
 		"silicon/4000","纳米核/800",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -57,7 +57,7 @@
 	{ "unit": "海辅6", "time": 18480,
 	"requirements": [
 		"silicon/4000","纳米核/880",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -71,7 +71,7 @@
 	{ "unit": "陆6", "time": 18480,
 	"requirements": [
 		"silicon/4000","镄/880",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -79,7 +79,7 @@
 	{ "unit": "空6", "time": 18480,
 	"requirements": [
 		"silicon/4000","titanium/880",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
@@ -87,7 +87,7 @@
 	{ "unit": "海6", "time": 18480,
 	"requirements": [
 		"silicon/4000","metaglass/880",
-		"硅钢/800","plastanium/2500",
+		"硅钢/900","plastanium/2500",
 		"surge-alloy/1500",
 		"裂位能/850","泰勒合金/800",
 		"二级协议/30"
