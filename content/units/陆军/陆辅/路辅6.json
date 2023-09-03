@@ -58,8 +58,8 @@
 	],
 	"speed": 0.3,
 	"hitSize": 52,
-	"health": 125000,
-	"armor": 25,
+	"health": 136000,
+	"armor": 28,
 	"rotateSpeed": 0.8,
 	"faceTarget": true,
 	"singleTarget": true,
@@ -75,13 +75,13 @@
 	"weapons": [
 		{
 			"name": "地星1",
-			"reload": 380,
+			"reload": 420,
 			"y": 0,
 			"x": 0,
 			"shootY": 24,
 			"shoot": {
-				"shots": 5,
-				"shotDelay": 6
+				"shots": 6,
+				"shotDelay": 5
 			},
 			"parts": [
 				{
@@ -129,7 +129,7 @@
 			"bullet": {
 				"type": "PointBulletType",
 				"healPercent": 9,
-				"damage": 40,
+				"damage": 20,
 				"lifetime": 8,
 				"speed": 87,
 				"hitSound": "none",
@@ -165,7 +165,7 @@
 				"fragVelocityMin": 1,
 				"fragBullet": {
 					"type": "PointBulletType",
-					"damage": 40,
+					"damage": 20,
 					"lifetime": 150,
 					"speed": 10,
 					"trailEffect": "none",
@@ -219,11 +219,12 @@
 					"fragVelocityMin": 1,
 					"fragBullet": {
 						"type": "BasicBulletType",
-						"damage": 176,
+						"damage": 250,
 						"speed": 15,
+						"buildingDamageMultiplier":1.5,
 						"lifetime": 100,
 						"spin": 2.3,
-						"healPercent": 12,
+						"healPercent": 24,
 						"shrinkX": 0.6,
 						"shrinkY": 0.6,
 						"width": 128,
@@ -258,7 +259,7 @@
 						"backColor": "97FFA8FF",
 						"frontColor": "97FFA8FF",
 						"splashDamageRadius": 150,
-						"splashDamage": 185,
+						"splashDamage": 420,
 						"hitSound": "plasmaboom",
 						"hitEffect": {
 							"type": "MultiEffect",
@@ -322,7 +323,7 @@
 		},
 		{
 			"name": "地星2",
-			"reload": 80,
+			"reload": 70,
 			"shootX": -3.5,
 			"shootY": 12,
 			"x": 28,
@@ -343,11 +344,11 @@
 				"backColor": "97FFA8FF",
 				"hitSound": "laser",
 				"healPercent": 11,
-				"damage": 98,
+				"damage": 100,
 				"status": "拆解",
-				"statusDuration": 100,
+				"statusDuration": 120,
 				"splashDamageRadius": 60,
-				"splashDamage": 67,
+				"splashDamage": 80,
 				"trailLength": 3,
 				"trailWidth": 1.5,
 				"trailColor": "97FFA8FF",
@@ -376,8 +377,8 @@
 				"spawnBullets": [
 					{
 						"type": "LaserBulletType",
-						"healPercent": 3.3,
-						"damage": 77,
+						"healPercent": 12,
+						"damage": 216,
 						"collidesTeam": true,
 						"sideAngle": 30,
 						"sideWidth": 0.8,
@@ -395,8 +396,8 @@
 					},
 					{
 						"type": "LaserBulletType",
-						"healPercent": 3.3,
-						"damage": 77,
+						"healPercent": 12,
+						"damage": 216,
 						"collidesTeam": true,
 						"sideAngle": 126,
 						"sideWidth": 1,

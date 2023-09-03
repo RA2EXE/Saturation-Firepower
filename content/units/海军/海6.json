@@ -9,8 +9,8 @@
 		"碎解",
 		"绝判"
 	],
-	"ammoType": "surge-alloy",
-	"ammoCapacity": 2300,
+	"ammoType": "裂位能",
+	"ammoCapacity": 200,
 	"hitSize": 100,
 	"trailLength": 200,
 	"waveTrailX": 30,
@@ -25,7 +25,7 @@
 	},
 	"weapons": [
 		{
-			"name": "重堂2",
+			"name": "对空3",
 			"type": "PointDefenseWeapon",
 			"x": 32,
 			"y": -40,
@@ -428,9 +428,9 @@
 				"hitUnits": true,
 				"unitDamageScl": 1.5,
 				"radius": 220,
-				"damage": 1000,
+				"damage": 2340,
 				"splashDamageRadius": 220,
-				"splashDamage": 350,
+				"splashDamage": 480,
 				"buildingDamageMultiplier": 1.65,
 				"speed": 3,
 				"drag": -0.05,

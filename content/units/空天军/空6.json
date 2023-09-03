@@ -20,10 +20,10 @@
 		"turret",
 		"core"
 	],
-	"ammoCapacity": 1200,
+	"ammoCapacity": 120,
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 10000
+		"totalPower": 22000
 	},
 	"flying": true,
 	"hitSize": 106,

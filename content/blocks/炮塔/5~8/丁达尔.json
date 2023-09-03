@@ -1,11 +1,9 @@
 {
 	"type": "PowerTurret",
 	"name": "丁达尔",
-	"description": "向敌方空中单位发射密集的穿透光束。火力逐渐加强。",
 	"targetAir": true,
 	"targetGround": false,
 	"health": 3500,
-	"armor":6,
 	"size": 6,
 	"shootSound": "JG1",
 	"shake": 0.5,
@@ -15,10 +13,10 @@
 	"cooldownTime": 20,
 	"shootY": 0,
 	"coolantMultiplier": 1,
-	"velocityRnd": 0.15,
+	"velocityRnd": 0.2,
 	"canOverdrive": false,
-	"reload": 8,
-	"xRand":1.5,
+	"reload": 12,
+	"xRand": 1.5,
 	"shoot": {
 		"shots": 12,
 		"shotDelay": 4,
@@ -32,21 +30,20 @@
 	},
 	"shootType": {
 		"type": "BasicBulletType",
-		"damage": 92,
+		"damage": 122,
 		"collidesGround": false,
-		"speed": 18,
+		"speed": 19,
 		"lifetime": 25,
 		"drag": 0.005,
 		"pierce": true,
-		"pierceArmor":true,
 		"pierceCap": 3,
 		"absorbable": false,
 		"frontColor": "FFFFFF",
 		"backColor": "FEEBB3",
-		"width": 5,
+		"width": 6,
 		"height": 25,
-		"trailLength": 2,
-		"trailWidth": 1.3,
+		"trailLength": 2.25,
+		"trailWidth": 1.6,
 		"trailColor": "FEEBB3",
 		"shrinkY": 0,
 		"shootEffect": {
@@ -75,18 +72,19 @@
 			"colorTo": "ffffff",
 			"cone": 60
 		},
-		"despawnEffect": 
-			{"type": "ParticleEffect",
+		"despawnEffect": {
+			"type": "ParticleEffect",
 			"particles": 1,
 			"sizeFrom": 1,
 			"sizeTo": 0,
 			"length": 0,
 			"baseLength": 0,
-			"lifetime":8,
+			"lifetime": 8,
 			"colorFrom": "FEEBB3",
 			"colorTo": "ffffff",
-			"cone": 360},
-	"ammoMultiplier": 1
+			"cone": 360
+		},
+		"ammoMultiplier": 1
 	},
 	"consumes": {
 		"power": 50,
@@ -108,8 +106,11 @@
 		]
 	},
 	"requirements": [
-		"silicon/660","metaglass/870",
-		"裂位能/450","plastanium/500",
-		"泰勒合金/430","二级协议/3"
+		"silicon/660",
+		"metaglass/870",
+		"裂位能/450",
+		"plastanium/500",
+		"泰勒合金/430",
+		"二级协议/3"
 	]
 }

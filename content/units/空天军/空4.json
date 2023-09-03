@@ -12,9 +12,9 @@
 	],
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 1000
+		"totalPower": 6600
 	},
-	"ammoCapacity": 1600,
+	"ammoCapacity": 260,
 	"hitSize": 35,
 	"flying": true,
 	"health": 20500,

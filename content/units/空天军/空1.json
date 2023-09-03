@@ -7,9 +7,9 @@
 	"rotateSpeed": 10,
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 100
+		"totalPower": 800
 	},
-	"ammoCapacity": 300,
+	"ammoCapacity": 120,
 	"hitSize": 8,
 	"flying": true,
 	"faceTarget": true,

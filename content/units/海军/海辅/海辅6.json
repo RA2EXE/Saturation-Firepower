@@ -11,7 +11,7 @@
 	],
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 5000
+		"totalPower": 50000
 	},
 	"ammoCapacity": 300,
 	"hitSize": 100,

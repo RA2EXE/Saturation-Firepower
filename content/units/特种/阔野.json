@@ -3,7 +3,7 @@
 	"name": "阔野",
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 50000
+		"totalPower": 150000
 	},
 	"ammoCapacity": 2300,
 	"speed": 0.783,

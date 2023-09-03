@@ -3,9 +3,9 @@
 	"name": "雷暴",
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 2200
+		"totalPower": 8000
 	},
-	"ammoCapacity": 1400,
+	"ammoCapacity": 70,
 	"speed": 0.8,
 	"drag": 0.05,
 	"accel": 0.04,
