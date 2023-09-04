@@ -1,8 +1,8 @@
 # 饱和火力
 ![logo](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/e39d7de5-09ea-4fd6-b815-674141e0557c)
 
-这里是饱和火力模组Git存储位置
-Here is the Git location of the [Saturation-Firepower] module for Mindustry!
+# WARNING
+Unstable beta! It may cause your game or phone crash, please switch to a stable released version in time!
 
 # 内容概述
 200+新方块，囊括各方各面！更多工厂、钻头、传输组件、防御设施、单位工厂！
