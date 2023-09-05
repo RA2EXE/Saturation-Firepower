@@ -1,7 +1,7 @@
 const myitems = require("物品");
 
 let range = 520; //俩圆半径，炮塔射程
-const 怨灵Z = extend(ItemTurret, "怨灵Z", {});
+const turretZ = extend(ItemTurret, "怨灵Z", {});
 const core = extend(CoreBlock, "最高指挥中心", {
 	drawPlace(x, y, rotation, valid) {
 		this.super$drawPlace(x, y, rotation, valid);
@@ -10,7 +10,7 @@ const core = extend(CoreBlock, "最高指挥中心", {
 });
 
 core.buildType = prov(() => {
-	const p = new BuildPayload(怨灵Z, Team.derelict); //这里写炮塔
+	const p = new BuildPayload(turretZ, Team.derelict); //这里写炮塔
 	return extend(CoreBlock.CoreBuild, core, {
 		updateTile() {
 			this.super$updateTile();

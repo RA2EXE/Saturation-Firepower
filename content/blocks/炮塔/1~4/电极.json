@@ -19,7 +19,6 @@
 						"x": 0,
 						"y": 0,
 						"suffix": "-1",
-						"layer": 51,
 						"drawRegion": false,
 						"heatProgress": "warmup",
 						"heatColor": "c0ecff"

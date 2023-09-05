@@ -3,7 +3,7 @@
 	"name": "工农A",
 	//"hidden":true,
 	//"playerControllable": false,
-	"CommandAI": "repairCommand",
+	//"": "repairCommand",
 	"speed": 2.46,
 	"rotateSpeed": 3.8,
 	"drag": 0.08,
@@ -111,7 +111,7 @@
 			"name": "工农A1",
 			"reload": 26,
 			"x": 0,
-			"y": 19.5,
+			"y": 18,
 			"mirror": false,
 			"rotate": false,
 			"top": false,
@@ -120,10 +120,21 @@
 			"shootSound": "laser",
 			"shake": 1,
 			"shoot": {
-				"type": "ShootAlternate",
-				"barrels": 2,
-				"shots": 3,
-				"spread": 8
+				"type": "ShootMulti",
+				"source": {
+				},
+				"dest": [
+					{
+						"type": "ShootSpread",
+						"shots": 2,
+						"spread": 0.5
+					},
+					{
+						"type": "ShootHelix",
+						"scl": 2,
+						"mag": 3
+					}
+				]
 			},
 			"ejectEffect": {
 				"type": "WaveEffect",
@@ -189,10 +200,10 @@
 			"rotate": false,
 			"shootCone": 180,
 			"alternate": true,
-			"inaccuracy": 8,
+			"inaccuracy": 15,
 			"layerOffset": -0.01,
 			"shootSound": "missile",
-			"shootWarmupSpeed": 0.1,
+			"shootWarmupSpeed": 0.15,
 			"minWarmup": 0.98,
 			"shoot": {
 				"shots": 3,
@@ -201,6 +212,7 @@
 			"velocityRnd": 0.4,
 			"bullet": {
 				"type": "MissileBulletType",
+				"keepVelocity": false,
 				"reflectable": false,
 				"frontColor": "FFFFFF",
 				"backColor": "97FFA8",
@@ -209,20 +221,20 @@
 				"collidesTeam": true,
 				"status": "拆解",
 				"statusDuration": 180,
-				"weaveMag": 2,
-				"weaveScale": 4,
+				"weaveMag": 3,
+				"weaveScale": 3,
 				"damage": 12,
 				"splashDamageRadius": 30,
 				"splashDamage": 18,
-				"homingDelay": 3,
-				"homingPower": 0.35,
+				"homingDelay": 15,
+				"homingPower": 0.3,
 				"homingRange": 42,
 				"speed": 9,
 				"lifetime": 37,
 				"width": 5,
 				"height": 5,
 				"trailLength": 10,
-				"trailWidth": 1,
+				"trailWidth": 2.2,
 				"trailColor": "97FFA8BA",
 				"shrinkY": 0,
 				"shootEffect": "none",
@@ -240,10 +252,7 @@
 							"smokes": 4,
 							"smokeColor": "ffffff",
 							"sparkColor": "97FFA8",
-							"sparks": 6,
-							"sparkRad": 35,
-							"sparkStroke": 1,
-							"sparkLen": 6
+							"sparks": 0
 						},
 						{
 							"type": "WaveEffect",

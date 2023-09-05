@@ -1,4 +1,4 @@
-const 前哨基地 = extend(CoreBlock, "前哨基地", {
+const CoreFrontline = extend(CoreBlock, "前哨基地", {
 	canBreak(tile) {
 		return Vars.state.teams.cores(tile.team()).size > 1;
 	},
@@ -10,9 +10,9 @@ const 前哨基地 = extend(CoreBlock, "前哨基地", {
 	}
 });
 
-前哨基地.buildType = prov(() => {
+CoreFrontline.buildType = prov(() => {
 	let kill = false, num = 1, time = 60 * num;
-	return extend(CoreBlock.CoreBuild, 前哨基地, {
+	return extend(CoreBlock.CoreBuild, CoreFrontline, {
 		updateTile() {
 			this.super$updateTile();
 			if (Vars.state.teams.cores(this.team).size > 9) kill = true;

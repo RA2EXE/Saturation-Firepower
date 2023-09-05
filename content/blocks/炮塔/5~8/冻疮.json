@@ -18,11 +18,11 @@
 	"shootCone": 180,
 	"consumes": {
 		"power": 45,
-		"liquid": "纳米流体/1.75"
+		"liquid": "纳米流体/2"
 	},
 	"shootY": 20,
 	"shoot": {
-		"shots": 2
+		"shots": 3
 	},
 	"shootType": {
 		"type": "PointLaserBulletType",
@@ -123,10 +123,10 @@
 	},
 	"requirements": [
 		"镄/1500",
-		"metaglass/870",
-		"纳米核/800",
-		"裂位能/600",
-		"泰勒合金/1200",
-		"三级协议/15"
+		"metaglass/880",
+		"纳米核/1100",
+		"裂位能/1800",
+		"泰勒合金/1500",
+		"三级协议/10"
 	]
 }

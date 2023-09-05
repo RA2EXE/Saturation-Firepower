@@ -94,6 +94,21 @@
 			"suffix": "-前",
 			"layerOffset": -0.001,
 			"moveY": -2
+		},
+		{
+			"type": "HaloPart",
+			"sides": 4,
+			"shapes": 1,
+			"rotateSpeed": 0.3,
+			"color": "97FFA8",
+			"layer": 110,
+			"tri": false,
+			"hollow": true,
+			"stroke": 1,
+			"strokeTo": 2,
+			"radius": 24,
+			"radiusTo": 16,
+			"haloRadius": 0
 		}
 	],
 	"weapons": [

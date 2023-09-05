@@ -166,11 +166,10 @@
 		}
 	],
 	"requirements": [
-		"titanium/300",
-		"silicon/360",
+		"thorium/360",
 		"硅钢/400",
 		"纳米核/200",
-		"plastanium/120",
+		"plastanium/100",
 		"二级协议/1"
 	],
 	"category": "units",
