@@ -11,7 +11,7 @@ const 前哨基地 = extend(CoreBlock, "前哨基地", {
 });
 
 前哨基地.buildType = prov(() => {
-	let kill = false, num = 1.5, time = 60 * num;
+	let kill = false, num = 1, time = 60 * num;
 	return extend(CoreBlock.CoreBuild, 前哨基地, {
 		updateTile() {
 			this.super$updateTile();

@@ -2,7 +2,8 @@
 	"type": "payload",
 	"payloadCapacity": 576,
 	"name": "工农",
-	"speed": 2.32,
+	"controller":"BuilderAI",
+	"speed": 2,
 	"drag": 0.018,
 	"accel": 0.03,
 	"rotateSpeed": 2.5,
@@ -14,6 +15,7 @@
 		"type": "PowerAmmoType",
 		"totalPower": 6000
 	},
+	"ammoCapacity": 60,
 	"hitSize": 28,
 	"buildRange": 288,
 	"buildSpeed": 3.5,
@@ -67,7 +69,7 @@
 				"lifetime": 30,
 				"sizeFrom": 60,
 				"sizeTo": 60,
-				"strokeFrom": 1,
+				"strokeFrom": 1.5,
 				"strokeTo": 0,
 				"colorFrom": "97FFA8",
 				"colorTo": "ffffff"

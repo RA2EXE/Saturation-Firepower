@@ -19,7 +19,7 @@
 			"lifetime": 70.27,
 			"damage": 10,
 			"splashDamageRadius": 30,
-			"splashDamage": 45,
+			"splashDamage": 50,
 			"ammoMultiplier": 5,
 			"hitEffect": "blastExplosion",
 			"despawnEffect": "blastExplosion",

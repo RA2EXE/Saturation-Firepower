@@ -22,6 +22,10 @@
 				"suffix": "-bottom"
 			},
 			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "纳米流体"
+			},
+			{
 				"type": "DrawArcSmelt",
 				"midColor": "FFF1D2",
 				"flameColor": "EEC591",
@@ -181,6 +185,7 @@
 	"requirements": [
 		"铬/260",
 		"泰勒合金/140",
+		"纳米核/200",
 		"裂位能/80",
 		"二级协议/0"
 	],

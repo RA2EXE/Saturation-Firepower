@@ -30,7 +30,7 @@
 				"particles": 33,
 				"particleLife": 17,
 				"particleRad": 20,
-				"particleStroke": 0.34,
+				"particleStroke": 0.5,
 				"particleLen": 6
 			},
 			{
@@ -46,7 +46,7 @@
 				"particles": 16,
 				"particleLife": 46.5,
 				"particleRad": 20,
-				"particleStroke": 0.87,
+				"particleStroke": 1,
 				"particleLen": 6
 			},
 			{
@@ -62,7 +62,7 @@
 				"particles": 11,
 				"particleLife": 98,
 				"particleRad": 20,
-				"particleStroke": 1.5,
+				"particleStroke": 1.8,
 				"particleLen": 9
 			},
 			"DrawDefault",

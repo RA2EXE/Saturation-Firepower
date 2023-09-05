@@ -147,7 +147,7 @@
 			"recoil": 0,
 			"bullet": {
 				"type": "PointBulletType",
-				"healPercent": 9,
+				"healPercent": 1.5,
 				"damage": 20,
 				"lifetime": 8,
 				"speed": 87,

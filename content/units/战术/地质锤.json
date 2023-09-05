@@ -1,6 +1,7 @@
 {
 	"type": "tank",
 	"template": "TankUnitType",
+	//"hidden": true,
 	"healFlash": false,
 	"treadFrames": 16,
 	"treadPullOffset": 8,
@@ -35,10 +36,7 @@
 	"accel": 0.08,
 	"drag": 0.08,
 	"hitSize": 160,
-	"ammoType": {
-		"type": "PowerAmmoType",
-		"totalPower": 3600000
-	},
+	"ammoType": "泰勒合金",
 	"ammoCapacity": 18,
 	"health": 25000,
 	"armor": 15,
@@ -51,18 +49,18 @@
 	"weapons": [
 		{
 			"name": "地质锤1",
-			//"reload": 10800,
-			"reload": 800,
+			/*"reload": 10800,
 			"shoot": {
 				"shots": 6,
 				"shotDelay": 40
-			},
-			"xRand": 64,
+			},*/
+			"reload": 40,
+			"xRand": 50,
 			"x": 0,
 			"y": 0,
 			"shootY": 86,
 			"rotate": true,
-			"rotateSpeed": 0.125,
+			"rotateSpeed": 0.25,
 			"shootCone": 0.025,
 			"mirror": false,
 			"recoil": 0,

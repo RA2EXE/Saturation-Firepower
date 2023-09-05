@@ -4,7 +4,6 @@
 	"health": 9600,
 	"armor":15,
 	"size": 2,
-	"absorbLasers":true,
 	"requirements": [
 	"镄/96" 
 	],

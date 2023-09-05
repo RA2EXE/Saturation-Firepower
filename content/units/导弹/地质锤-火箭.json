@@ -31,7 +31,7 @@
 	],
 	"speed": 7,
 	"missileAccelTime": 100,
-	"lifetime": 1800,
+	"lifetime": 1200,
 	"rotateSpeed": 0,
 	"outlineColor": "383848",
 	"deathSound": "Explosionbig",
@@ -54,15 +54,15 @@
 				"effects": [
 					{
 						"type": "ParticleEffect",
-						"particles": 4,
+						"particles": 2,
 						"region": "饱和火力-菱形",
 						"interp": "pow10Out",
 						"sizeInterp": "pow5In",
 						"sizeFrom": 9,
 						"sizeTo": 0,
-						"length": 56,
+						"length": 50,
 						"baseLength": 0,
-						"lifetime": 33,
+						"lifetime": 37,
 						"colorFrom": "BFFFDB",
 						"colorTo": "BFFFDB88",
 						"cone": 40
@@ -70,26 +70,47 @@
 					{
 						"type": "ParticleEffect",
 						"particles": 2,
-						"line": true,
-						"interp": "pow5Out",
-						"sizeInterp": "pow3In",
-						"strokeFrom": 2,
-						"strokeTo": 0,
-						"lenFrom": 38,
-						"lenTo": 0,
-						"length": 99,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"sizeFrom": 10,
+						"sizeTo": 0,
+						"length": 50,
 						"baseLength": 0,
-						"lifetime": 33,
+						"lifetime": 37,
 						"colorFrom": "BFFFDB",
-						"colorTo": "BFFFDB",
-						"cone": 13
+						"colorTo": "BFFFDB88",
+						"cone": 40
 					}
 				]
 			},
-			"minVelocity": 0,
+			"minVelocity": 0.5,
 			"rotation": 180,
 			"rotateEffect": true,
-			"interval": 3,
+			"interval": 4,
+			"y": -8
+		},
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 2,
+				"line": true,
+				"interp": "pow10Out",
+				"strokeFrom": 2.6,
+				"strokeTo": 2.3,
+				"lenFrom": 42,
+				"lenTo": 0,
+				"length": 88,
+				"baseLength": 0,
+				"lifetime": 80,
+				"colorFrom": "BFFFDB",
+				"colorTo": "BFFFDB",
+				"cone": 13
+			},
+			"minVelocity": 2,
+			"rotation": 180,
+			"rotateEffect": true,
+			"interval": 2,
 			"y": -8
 		},
 		{
@@ -106,7 +127,7 @@
 						"sizeTo": 46,
 						"length": 0,
 						"baseLength": 0,
-						"lifetime": 11,
+						"lifetime": 12,
 						"colorFrom": "BFFFDB",
 						"colorTo": "BFFFDBA8",
 						"cone": 0
@@ -130,7 +151,7 @@
 			"minVelocity": 3,
 			"rotation": -90,
 			"rotateEffect": true,
-			"interval": 10,
+			"interval": 15,
 			"y": -9
 		}
 	],
@@ -172,7 +193,7 @@
 							"length": 0,
 							"baseLength": 0,
 							"lifetime": 10,
-							"sizeInterp": "pow10Out",
+							"sizeInterp": "pow5Out",
 							"colorFrom": "BFFFDBA8",
 							"colorTo": "BFFFDB"
 						},

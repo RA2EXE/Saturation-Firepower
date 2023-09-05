@@ -28,12 +28,28 @@
 			}
 		]
 	},
+	"parts": [
+		{
+			"type": "RegionPart",
+			"mirror": false,
+			"suffix": "-下",
+			"moveY": 3,
+			"moves":[
+				{
+					"progress":"recoil",
+					"y": -2
+				}
+			]
+		}],
 	"weapons": [
 		{
 			"name": "雷鸣1",
 			"x": 0,
-			"y": 0,
+			"shootWarmupSpeed":0.13,
+			"minWarmup":0.9,
 			"reload": 48,
+			"shootStatus": "shielded",
+			"shootStatusDuration": 50,
 			"shoot": {
 				"shots": 3,
 				"shotDelay": 3,
@@ -50,31 +66,64 @@
 				"speed": 10,
 				"recoil": 0.3,
 				"lifetime": 30,
-				"width": 8,
+				"width": 12,
 				"height": 15,
 				"damage": 17,
 				"hitSize": 20,
-				"sprite": "circle-bullet",
 				"shrinkY": 0,
 				"knockback": 9,
-				"trailLength": 5,
-				"trailWidth": 2.3,
-				"trailColor": "FEEBB3",
 				"frontColor": "FEEBB3",
 				"backColor": "FEEBB3",
-				"shootEffect": "none",
+				"trailLength": 5,
+				"trailWidth": 2.25,
+				"trailColor": "FEEBB3AA",
 				"splashDamageRadius": 45,
 				"splashDamage": 65,
 				"hitShake": 2,
 				"chargeEffect": {
 					"type": "WaveEffect",
+					"interp":"circleOut",
 					"lifetime": 14,
-					"sizeFrom": 20,
+					"sizeFrom": 28,
 					"sizeTo": 0,
 					"strokeFrom": 0,
-					"strokeTo": 1,
+					"strokeTo": 1.25,
 					"colorFrom": "FEEBB390",
 					"colorTo": "FEEBB3"
+				},
+				"trailInterval": 1,
+				"trailRotation": true,
+				"trailEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"interp": "pow10Out",
+					"line": true,
+					"lenFrom": 18,
+					"lenTo": 0,
+					"strokeFrom": 1.5,
+					"strokeTo": 1,
+					"length": -45,
+					"baseLength": 0,
+					"lifetime": 40,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3",
+					"cone": 13
+				},
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 9,
+					"interp": "pow10Out",
+					"line": true,
+					"lenFrom": 18,
+					"lenTo": 0,
+					"strokeFrom": 1.5,
+					"strokeTo": 1,
+					"length": 45,
+					"baseLength": 0,
+					"lifetime": 40,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3",
+					"cone": 13
 				},
 				"hitEffect": {
 					"type": "MultiEffect",
@@ -105,17 +154,19 @@
 				},
 				"despawnEffect": "none",
 				"ammoMultiplier": 6,
-				"status": "blasted",
-				"statusDuration": 60,
-				"lightningDamage": 17,
+				"status": "shocked",
+				"lightningDamage": 18,
 				"lightning": 3,
-				"lightningLength": 7
+				"lightningLength": 6,
+				"lightningLengthRand": 4
 			}
 		},
 		{
 			"name": "雷鸣2",
 			"x": 0,
-			"y": 3,
+			"shootY": 3,
+			"shootWarmupSpeed":0.12,
+			"minWarmup":0.9,
 			"reload": 300,
 			"recoil": 0,
 			"inaccuracy": 0,
@@ -123,19 +174,20 @@
 			"mirror": false,
 			"shootSound": "laserblast",
 			"bullet": {
-				"damage": 35,
 				"shootEffect": {
 					"type": "ParticleEffect",
 					"particles": 9,
-					"sizeFrom": 3,
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"sizeFrom": 7,
 					"sizeTo": 0,
 					"length": 35,
 					"baseLength": 0,
-					"lifetime": 36,
+					"lifetime": 66,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
-					"cone": 60
+					"colorTo": "FEEBB3AA"
 				},
+				"smokeEffect": "none",
 				"despawnEffect": "none",
 				"hitEffect": {
 					"type": "MultiEffect",
@@ -178,8 +230,9 @@
 				"trailColor": "FEEBB3",
 				"speed": 3,
 				"lifetime": 120,
+				"damage": 80,
 				"splashDamageRadius": 80,
-				"splashDamage": 25,
+				"splashDamage": 20,
 				"pierce": true,
 				"status": "崩溃",
 				"statusDuration": 10,

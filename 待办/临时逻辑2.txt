@@ -1,79 +1,19 @@
-cutscene stop 100 100 0.06 0
-set time 3
-wait 1
-op sub time time 1
-print "[highlight]远程火力支援准备中： [white]"
-print time
-message mission 3
-jump 2 notEqual time 0
-print "[highlight]地质锤火箭炮准备就绪"
-print "[highlight]\n          "
-message notify 3
-wait 2
-print "[highlight]正在转移炮火指引权限于[stat]指挥车"
-message notify 3
-ubind @饱和火力-运载车-指
-sensor con @unit @controlled
-jump 20 equal con 2
-print "[highlight]远程火力就绪\n等待打击坐标"
-message mission 3
-jump 14 always x false
-print "[stat]远程火力指引启动"
-message mission 3
-sensor sx @unit @shootX
-sensor sy @unit @shootY
-sensor s @unit @shooting
-ubind @饱和火力-运载车-导
-ucontrol target sx sy 0 0 0
-jump 14 notEqual s 1
-op idiv sx sx 1
-op idiv sy sy 1
-print "[stat]炮火指引坐标已上传！\n坐标：（"
-print sx
-print "，"
-print sy
-print "）"
-print "\n请再次确定坐标！"
-message notify 3
-ubind @饱和火力-运载车-指
-sensor con @unit @controlled
-jump 75 notEqual con 2
-sensor SX @unit @shootX
-sensor SY @unit @shootY
-sensor s @unit @shooting
-jump 37 notEqual s 1
-op sub X SX sx
-op sub Y SY sy
-op abs X X b
-op abs Y Y b
-jump 72 greaterThanEq X 10
-jump 72 greaterThanEq Y 10
-print "[stat]坐标确认！\n[white]指定目的地：（"
-print sx
-print "，"
-print sy
-print "）"
-message notify 3
-print "[highlight]六发急速射就绪！"
-message toast 2
-set T 0
-ubind @饱和火力-运载车-导
-sensor dx @unit @x
-sensor dy @unit @y
-cutscene zoom 0.08 100 0.06 0
-cutscene pan dx dy 0.09 0
-ucontrol target sx sy 1 0 0
-op add T T 1
-wait 1
-jump 59 lessThanEq T 6
-cutscene zoom 0.05 100 0.06 0
-cutscene pan sx sy 0.003 0
-wait 3
+jump 2 greaterThan @waveNumber 15
 end
-print "[stat]坐标指引有误，炮火打击取消"
+print "[orange]雷达侦测到一支不明组成的队伍靠近！"
+message notify 3
+print "[orange]正在获取敌我识别码"
+message notify 3
+print "[orange]敌我识别码失效！\n准备应战！"
 message announce 3
-jump 14 always x false
-print "[stat]指引关闭，炮火打击取消"
-message announce 3
-jump 14 always x false
+op rand r 360 b
+spawn @饱和火力-空1 x y r 2 U
+status false 饱和火力-抢修 U 50
+status false 饱和火力-强攻 U 50
+op add i i 1
+op mul c @waveNumber 2.5
+jump 2 lessThan i c
+op rand T 120 b
+op add T 60 T
+wait T
 

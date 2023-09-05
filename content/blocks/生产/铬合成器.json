@@ -7,6 +7,11 @@
 		"drawers": [
 			"DrawDefault",
 			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "slag",
+				"suffix": "-liquid"
+			},
+			{
 				"type": "DrawGlowRegion",
 				"glowScale": 8,
 				"alpha": 0.8
@@ -36,7 +41,7 @@
 	"liquidCapacity": 40,
 	"size": 3,
 	"hasPower": true,
-	"hasLiquids": false,
+	"hasLiquids": true,
 	"hasItems": true,
 	"craftTime": 45,
 	"consumes": {

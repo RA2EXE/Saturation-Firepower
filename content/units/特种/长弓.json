@@ -19,7 +19,7 @@
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",
-			"duration": 44,
+			"duration": 65,
 			"reload": 400,
 			"range": 55,
 			"applyEffect": "none",
