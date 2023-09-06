@@ -35,7 +35,7 @@
 		"cone": 360
 	},
 	"consumes": {
-		"power": 10,
+		"power": 18,
 		"items": [
 			"镄/1",
 			"铬/1"

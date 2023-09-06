@@ -1,19 +1,14 @@
-jump 2 greaterThan @waveNumber 15
-end
-print "[orange]雷达侦测到一支不明组成的队伍靠近！"
-message notify 3
-print "[orange]正在获取敌我识别码"
-message notify 3
-print "[orange]敌我识别码失效！\n准备应战！"
-message announce 3
-op rand r 360 b
-spawn @饱和火力-空1 x y r 2 U
-status false 饱和火力-抢修 U 50
-status false 饱和火力-强攻 U 50
-op add i i 1
-op mul c @waveNumber 2.5
-jump 2 lessThan i c
-op rand T 120 b
-op add T 60 T
-wait T
-
+ubind @饱和火力-地质锤
+sensor x @unit @x
+sensor y @unit @y
+read zx cell1 1
+read zy cell1 2
+op sub dx zx x
+op sub dy zy y
+op div k dy dx
+op sub zx zx 0.5
+op mul dk k 0.5
+op sub zy zy dk
+effect trail zx zy 3.5 %eec591 
+jump 8 greaterThan zx x
+jump 1 always x false

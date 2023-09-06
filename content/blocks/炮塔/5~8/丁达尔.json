@@ -85,7 +85,7 @@
 		"ammoMultiplier": 1
 	},
 	"consumes": {
-		"power": 50,
+		"power": 80,
 		"coolant": {
 			"amount": 2,
 			"optional": true

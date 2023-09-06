@@ -46,15 +46,42 @@
 	"fogRadius": 40,
 	"targetAir": false,
 	"targetGround": false,
+	"parts": [
+		{
+			"type": "RegionPart",
+			"progress": "reload",
+			"mirror": false,
+			"suffix": "-火箭",
+			"under": true,
+			"moveY": 60
+		}
+	],
 	"weapons": [
 		{
 			"name": "地质锤1",
-			/*"reload": 10800,
+			//"reload": 10800,
+			"reload": 1440,
 			"shoot": {
 				"shots": 6,
 				"shotDelay": 40
-			},*/
-			"reload": 40,
+			},
+			"parts": [
+				{
+					"type": "HaloPart",
+					"shapeRotation": 0,
+					"shapes": 1,
+					"rotateSpeed": 0,
+					"color": "97FFA8",
+					"layer": 110,
+					"tri": true,
+					"hollow": false,
+					"triLength": 16,
+					"triLengthTo": 24,
+					"radius": 25,
+					"radiusTo": 50,
+					"haloRadius": 0
+				}
+			],
 			"xRand": 50,
 			"x": 0,
 			"y": 0,

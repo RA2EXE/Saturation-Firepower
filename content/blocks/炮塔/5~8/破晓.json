@@ -1,8 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "破晓",
-	"description": "脆弱的激光发生器，向指定方向发射一道爆破能量束，需要时间充能",
-	"details": "一道光，划破夜空。多门破晓射击时的光芒足以照亮天下，同时会给指挥系统带来极大负担",
 	"targetAir": true,
 	"targetGround": true,
 	"health": 2250,
@@ -80,17 +78,18 @@
 				{
 					"type": "ParticleEffect",
 					"particles": 35,
-					"strokeFrom": 1,
+					"strokeFrom": 0,
 					"strokeTo": 2,
 					"line": true,
+					"sizeInterp": "pow5Out",
+					"interp": "pow5In",
 					"lenFrom": 0,
-					"lenTo": 20,
+					"lenTo": 18,
 					"length": 200,
 					"baseLength": -180,
 					"lifetime": 70,
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -101,8 +100,7 @@
 					"baseLength": -0,
 					"lifetime": 80,
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -111,7 +109,7 @@
 					"strokeTo": 0,
 					"lenFrom": 0,
 					"lenTo": 40000,
-					"interp": "pow5In",
+					"sizeInterp": "pow5In",
 					"line": true,
 					"randLength": false,
 					"length": 0,
@@ -138,8 +136,7 @@
 					"interp":"pow5Out",
 					"sizeInterp":"pow5In",
 					"colorFrom": "25C9AB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -160,7 +157,7 @@
 				}]}
 	},
 	"consumes": {
-		"power": 70,
+		"power": 220,
 		"coolant": {
 			"amount": 1.5,
 			"optional": true

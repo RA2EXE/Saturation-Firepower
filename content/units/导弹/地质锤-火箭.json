@@ -64,7 +64,7 @@
 						"baseLength": 0,
 						"lifetime": 37,
 						"colorFrom": "BFFFDB",
-						"colorTo": "BFFFDB88",
+						"colorTo": "BFFFDBA8",
 						"cone": 40
 					},
 					{
@@ -78,7 +78,7 @@
 						"baseLength": 0,
 						"lifetime": 37,
 						"colorFrom": "BFFFDB",
-						"colorTo": "BFFFDB88",
+						"colorTo": "BFFFDB60",
 						"cone": 40
 					}
 				]
@@ -93,16 +93,17 @@
 			"type": "MoveEffectAbility",
 			"effect": {
 				"type": "ParticleEffect",
-				"particles": 2,
+				"particles": 3,
+				"interp":"pow5Out",
+				"sizeInterp":"pow3In",
 				"line": true,
-				"interp": "pow10Out",
 				"strokeFrom": 2.6,
-				"strokeTo": 2.3,
-				"lenFrom": 42,
+				"strokeTo": 1.6,
+				"lenFrom": 45,
 				"lenTo": 0,
-				"length": 88,
+				"length": 93,
 				"baseLength": 0,
-				"lifetime": 80,
+				"lifetime": 20,
 				"colorFrom": "BFFFDB",
 				"colorTo": "BFFFDB",
 				"cone": 13
@@ -151,7 +152,7 @@
 			"minVelocity": 3,
 			"rotation": -90,
 			"rotateEffect": true,
-			"interval": 15,
+			"interval": 10,
 			"y": -9
 		}
 	],

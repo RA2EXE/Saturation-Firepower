@@ -9,7 +9,7 @@
 	"speedBoostPhase": 0,
 	"hasBoost": false,
 	"consumes": {
-		"power": 12
+		"power": 25
 	},
 	"requirements": [
 		"lead/330",

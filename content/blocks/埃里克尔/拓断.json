@@ -1,8 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "拓断",
-	"description": "三重复进，以较低弹药利用率为代价，在短时间内倾泻大量火力。\n[yellow]务必保证弹药储备量充足！",
-	"details":"先开火，再瞄准！",
 	"health": 2330,
 	"size": 4,
 	"armor":8,
@@ -18,32 +16,40 @@
 	"warmupMaintainTime": 45,
 	"shootWarmupSpeed": 0.08,
 	"outlineColor":"2d2f39",
-	"drawer":{
-	"type":"DrawTurret",
-	"basePrefix":"reinforced-",
-	"parts":[
-		{
-			"type": "RegionPart",
-			"mirror": true,
-			"under":true,
-			"x":8,
-			"y":0.75,
-			"suffix": "-侧",
-			"moves": [{
-				"progress": "recoil",
-				"y": -2}],
-			"moveX": 2.5
-		},
-		{
-			"type": "RegionPart",
-			"mirror": false,
-			"under":true,
-			"suffix": "-前",
-			"moves": [{
-				"progress": "recoil",
-				"y": -2}],
-			"moveY": -2.5}
-	]},
+	"drawer": {
+		"type": "DrawTurret",
+		"basePrefix": "reinforced-",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"x": 8,
+				"y": 0.75,
+				"suffix": "-侧",
+				"moves": [
+					{
+						"progress": "recoil",
+						"y": -2
+					}
+				],
+				"moveX": 2.5
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"under": true,
+				"suffix": "-前",
+				"moves": [
+					{
+						"progress": "recoil",
+						"y": -2
+					}
+				],
+				"moveY": -2.5
+			}
+		]
+	},
 	"shootSound":"shootAlt",
 	"consumeAmmoOnce":false,
 	"shoot": {

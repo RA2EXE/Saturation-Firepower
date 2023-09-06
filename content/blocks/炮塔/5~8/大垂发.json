@@ -90,7 +90,7 @@
 	},
 	"canOverdrive": false,
 	"consumes": {
-		"power": 60,
+		"power": 180,
 		"liquid": "纳米流体/2"
 	},
 	"shootSound": "missileLaunch",

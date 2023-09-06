@@ -1,7 +1,6 @@
 {
 	"type": "LiquidTurret",
 	"name": "涡流",
-	"description": "使用涡轮增压器喷射液体，使用水作为弹药时能灭火",
 	"health": 1700,
 	"size": 3,
 	"shoot": {

@@ -27,7 +27,7 @@
 		"colorTo": "ffffff"
 	},
 	"consumes": {
-		"power": 6
+		"power": 35
 	},
 	"drawer": {
 		"type": "DrawMulti",

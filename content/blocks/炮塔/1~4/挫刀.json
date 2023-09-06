@@ -51,17 +51,8 @@
 	"category": "turret",
 	"research": "parallax",
 	"requirements": [
-		{
-			"item": "copper",
-			"amount": 85
-		},
-		{
-			"item": "titanium",
-			"amount": 60
-		},
-		{
-			"item": "silicon",
-			"amount": 70
-		}
+		"copper/85",
+		"titanium/60",
+		"silicon/70"
 	]
 }

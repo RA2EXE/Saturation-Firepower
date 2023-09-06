@@ -1,7 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "龙息",
-	"description": "使用电磁点火器喷射火焰焚烧任何靠近他的敌人。",
 	"health": 1400,
 	"size": 2,
 	"reload": 3,

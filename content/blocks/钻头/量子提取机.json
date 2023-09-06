@@ -6,7 +6,7 @@
 	"type": "BurstDrill",
 	"tier": 20,
 	"drillTime": 5,
-	"hardnessDrillMultiplier": 0,
+	//"getDrillTime":"铬/0.25",
 	"canOverdrive": false,
 	"arrowOffset": 0,
 	"arrowSpacing": 0,

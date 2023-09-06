@@ -3,6 +3,9 @@
 	"rotateSpeed": 3,
 	"fogRadiusMultiplier": 0.6888,
 	"canOverdrive": false,
+	"consumes": {
+		"power": 18
+	},
 	"ammoTypes": {
 		"surge-alloy": {
 			"type": "PointBulletType",

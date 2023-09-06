@@ -10,7 +10,7 @@
 	"phaseRangeBoost": 0,
 	"canOverdrive": false,
 	"consumes": {
-		"power": 6,
+		"power": 15,
 		"items": {
 			"items": [
 				"纳米核/3"

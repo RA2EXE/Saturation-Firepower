@@ -21,7 +21,7 @@
 	"shootSound": "laser",
 	"shootEffect": "hitEmpSpark",
 	"consumes": {
-		"power": 3
+		"power": 5
 	},
 	"ammoPerShot": 4,
 	"ammoTypes": {

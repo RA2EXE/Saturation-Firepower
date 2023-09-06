@@ -25,16 +25,34 @@
 			{
 				"type": "RegionPart",
 				"mirror": false,
-				"suffix": "-前",
 				"under": true,
-				"moveY": -4
+				"suffix": "-前",
+				"moveY": -8
 			},
 			{
 				"type": "RegionPart",
 				"mirror": true,
-				"suffix": "-后",
-				"under": true,
-				"moveY": -3.5
+				"under":false,
+				"x": 8,
+				"suffix": "-侧",
+				"moveX": 1,
+				"moveRot": -16,
+				"moves": [
+					{
+						"progress": "recoil",
+						"y": -1.5
+					}
+				],
+				"children": [
+					{
+						"type": "RegionPart",
+						"mirror": true,
+						"under": true,
+						"suffix": "-后",
+						"progress":"recoil",
+						"moveY": -2
+					}
+				]
 			}
 		]
 	},
@@ -43,19 +61,19 @@
 	"shootSound": "cannon",
 	"targetGround": true,
 	"targetAir": true,
-	"shootY": 13,
-	"xRand": 10,
+	"shootY": 6,
+	"xRand": 8,
 	"minRange": 240,
 	"coolantMultiplier": 0.5,
 	"liquidCapacity": 80,
 	"consumes": {
-		"power": 20,
+		"power": 40,
 		"coolant": {
 			"amount": 1,
 			"optional": true
 		}
 	},
-	"inaccuracy": 30,
+	"inaccuracy": 20,
 	"shootCone": 3,
 	"shake": 1,
 	"rotateSpeed": 2,
@@ -117,15 +135,15 @@
 			"shootEffect": "none",
 			"smokeEffect": {
 				"type": "ParticleEffect",
-				"particles": 3,
-				"sizeFrom": 3,
+				"particles": 5,
+				"sizeFrom": 4,
 				"sizeTo": 0,
-				"length": 18,
+				"length": 45,
 				"baseLength": 0,
 				"lifetime": 25,
 				"colorFrom": "7595D2",
 				"colorTo": "FFFFFF",
-				"cone": 60
+				"cone": 30
 			},
 			"damage": 13,
 			"splashDamageRadius": 30,
@@ -184,15 +202,15 @@
 			"shootEffect": "none",
 			"smokeEffect": {
 				"type": "ParticleEffect",
-				"particles": 3,
-				"sizeFrom": 3,
+				"particles": 5,
+				"sizeFrom": 4,
 				"sizeTo": 0,
-				"length": 18,
+				"length": 45,
 				"baseLength": 0,
 				"lifetime": 25,
 				"colorFrom": "FEEBB3",
 				"colorTo": "FFFFFF",
-				"cone": 60
+				"cone": 30
 			},
 			"damage": 33,
 			"lightningDamage": 22,
@@ -256,15 +274,15 @@
 			"shootEffect": "none",
 			"smokeEffect": {
 				"type": "ParticleEffect",
-				"particles": 3,
-				"sizeFrom": 3,
+				"particles": 5,
+				"sizeFrom": 4,
 				"sizeTo": 0,
-				"length": 18,
+				"length": 45,
 				"baseLength": 0,
 				"lifetime": 25,
 				"colorFrom": "FE7777FF",
 				"colorTo": "FFFFFF",
-				"cone": 60
+				"cone": 30
 			},
 			"damage": 13,
 			"splashDamageRadius": 55,
@@ -319,15 +337,15 @@
 			"shootEffect": "none",
 			"smokeEffect": {
 				"type": "ParticleEffect",
-				"particles": 3,
-				"sizeFrom": 3,
+				"particles": 5,
+				"sizeFrom": 4,
 				"sizeTo": 0,
-				"length": 18,
+				"length": 45,
 				"baseLength": 0,
 				"lifetime": 25,
 				"colorFrom": "EEC591",
 				"colorTo": "FFFFFF",
-				"cone": 60
+				"cone": 30
 			},
 			"hitShake": 3,
 			"damage": 28,
@@ -414,15 +432,15 @@
 			"shootEffect": "none",
 			"smokeEffect": {
 				"type": "ParticleEffect",
-				"particles": 3,
-				"sizeFrom": 3,
+				"particles": 5,
+				"sizeFrom": 4,
 				"sizeTo": 0,
-				"length": 18,
+				"length": 45,
 				"baseLength": 0,
 				"lifetime": 25,
 				"colorFrom": "76D081",
 				"colorTo": "FFFFFF",
-				"cone": 60
+				"cone": 30
 			},
 			"damage": 1,
 			"collidesTeam": true,
@@ -510,15 +528,15 @@
 			"shootEffect": "none",
 			"smokeEffect": {
 				"type": "ParticleEffect",
-				"particles": 3,
-				"sizeFrom": 3,
+				"particles": 5,
+				"sizeFrom": 4,
 				"sizeTo": 0,
-				"length": 18,
+				"length": 45,
 				"baseLength": 0,
 				"lifetime": 25,
 				"colorFrom": "BFFFDB",
 				"colorTo": "FFFFFF",
-				"cone": 60
+				"cone": 30
 			},
 			"damage": 36,
 			"status": "干扰",

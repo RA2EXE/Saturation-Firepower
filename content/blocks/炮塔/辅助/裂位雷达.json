@@ -18,12 +18,11 @@
 	"shootCone": 360,
 	"ammoUseEffect": "none",
 	"consumes": {
-		"power": 15
+		"power": 50
 	},
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
-			"DrawDefault",
 			{
 				"type": "DrawTurret",
 				"parts": [
@@ -67,6 +66,7 @@
 					}
 				]
 			},
+			"DrawDefault",
 			{
 				"type": "DrawRegion",
 				"suffix": "-面",

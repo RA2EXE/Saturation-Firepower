@@ -17,7 +17,7 @@
 	"range": 420,
 	"shootCone": 180,
 	"consumes": {
-		"power": 45,
+		"power": 98,
 		"liquid": "纳米流体/2"
 	},
 	"shootY": 20,

@@ -1,0 +1,30 @@
+setflag "数据" 0
+wait 3
+ubind @饱和火力-运载车-指
+print "[stat]战场数据链建立"
+message notify 3
+setflag "数据" 1
+sensor zx @unit @x
+sensor zy @unit @y
+write zx cell1 1
+write zy cell1 2
+jump 6 always x false
+
+
+
+getflag G "数据"
+jump 0 notEqual G 1
+ubind @饱和火力-地质锤
+sensor x @unit @x
+sensor y @unit @y
+read zx cell1 1
+read zy cell1 2
+op sub dx zx x
+op sub dy zy y
+op div k dy dx
+op sub zx zx 0.5
+op mul dk k 0.5
+op sub zy zy dk
+effect trail zx zy 3.5 %eec591 
+jump 10 greaterThan zx x
+jump 3 always x false
