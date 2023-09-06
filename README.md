@@ -11,8 +11,8 @@ Unstable beta! It may cause your game or phone crash, please switch to a stable 
 大量新地图（部分在建，最终将有30左右），更壮阔的战斗场景！更高难度的战斗！更强大的敌人！
 尽可能真实的战场环境与多样的战术选择。从教程开始到困难的主线战役，以及为挑战者准备的高难支线战役。
 
-# 模组讨论区
-QQ：【[mindustry]饱和火力】：https://jq.qq.com/?_wv=1027&k=lzXXr2ED
+# Community
+QQ Group：【[mindustry]饱和火力】：https://jq.qq.com/?_wv=1027&k=lzXXr2ED
 Discord：https://discord.gg/Y7NhHfku
 欢迎来此提出建议与反馈
 
