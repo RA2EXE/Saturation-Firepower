@@ -227,22 +227,6 @@
 				"lifetime": 1,
 				"speed": 16
 			}
-		},
-		"硅钢": {
-			"speed": 9,
-			"damage": 70,
-			"lifetime": 34,
-			"knockback": 1,
-			"pierce": true,
-			"pierceBuilding": true,
-			"pierceCap": 3,
-			"status": "unmoving",
-			"statusDuration": 15,
-			"width": 16,
-			"height": 20,
-			"shootEffect": "shootBig",
-			"smokeEffect": "shootBigSmoke",
-			"ammoMultiplier": 6
 		}
 	},
 	"requirements": [

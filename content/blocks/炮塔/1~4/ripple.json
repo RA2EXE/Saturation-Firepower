@@ -43,7 +43,7 @@
 			"ammoMultiplier": 4,
 			"damage": 24,
 			"splashDamageRadius": 18.75,
-			"splashDamage": 33,
+			"splashDamage": 45,
 			"frontColor": "f8ad42",
 			"backColor": "f68021",
 			"hitEffect": "blastExplosion",

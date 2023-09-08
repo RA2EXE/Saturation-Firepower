@@ -3,62 +3,85 @@
 	"type": "LaserTurret",
 	"size": 4,
 	"health": 4750,
-	"heatColor": "7CF38990",
 	"shootEffect": "none",
 	"shootSound": "laserbig",
 	"range": 240,
 	"reload": 400,
-	"coolantMultiplier": 2,
+	"coolantMultiplier": 0.335,
 	"liquidCapacity": 180,
 	"inaccuracy": 0,
-	"recoil": 3.5,
 	"rotateSpeed": 3.6,
 	"shake": 5,
 	"coolEffect": "steam",
 	"targetHealing": true,
 	"unitSort": "strongest",
-	"cooldownTime": 90,
+	"cooldownTime": 180,
+	"recoil": 3.5,
+	"recoilTime": 60,
+	"minWarmup": 0.89,
+	"warmupMaintainTime": 300,
+	"heatColor": "FF4040",
 	"drawer": {
 		"type": "DrawTurret",
 		"parts": [
 			{
 				"type": "RegionPart",
-				"mirror": false,
-				"x": 0,
-				"y": 0,
-				"suffix": "-3",
+				"mirror": true,
+				"x": 6.25,
+				"y": 2,
 				"under": true,
+				"suffix": "-散",
 				"heatProgress": "recoil",
-				"heatColor": "7CF38990",
-				"moveX": 0,
-				"moveY": 8
+				"moveX": 2.75,
+				"moveY": -8,
+				"moveRot": -55
 			},
 			{
 				"type": "RegionPart",
 				"mirror": true,
-				"x": 0,
-				"y": 0,
-				"suffix": "-1",
-				"layer": 50,
+				"x": 6.25,
+				"y": 2,
+				"under": true,
+				"suffix": "-散",
 				"heatProgress": "recoil",
-				"heatColor": "7CF38990",
-				"moveX": 3.5,
-				"moveY": 0
+				"moveX": 2.25,
+				"moveY": -5,
+				"moveRot": -40
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 6.25,
+				"y": 2,
+				"under": true,
+				"suffix": "-散",
+				"heatProgress": "recoil",
+				"moveX": 1.75,
+				"moveY": -2,
+				"moveRot": -22
 			},
 			{
 				"type": "RegionPart",
 				"mirror": false,
-				"x": 0,
-				"y": 0,
-				"suffix": "-2",
-				"heatProgress": "recoil",
-				"heatColor": "7CF38990",
-				"layer": 50,
-				"moveX": 0,
-				"moveY": -4.25
+				"under": true,
+				"suffix": "-前",
+				"progress": "reload",
+				"moveY": -8
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"suffix": "-侧",
+				"heatProgress": "warmup",
+				"heatColor": "FF4040",
+				"moveX": 8,
+				"moveY": 4,
+				"moveRot": -45
 			}
 		]
 	},
+	"shootY": 14,
 	"shootType": {
 		"type": "ContinuousLaserBulletType",
 		"hitEffect": {
@@ -73,14 +96,12 @@
 			"strokeFrom": 1.6,
 			"strokeTo": 0,
 			"colorFrom": "97FFA8",
-			"colorTo": "97FFA8",
-			"cone": 360
+			"colorTo": "97FFA8"
 		},
 		"shootEffect": {
 			"type": "ParticleEffect",
-			"particles": 0,
-			"sizeFrom": 10,
-			"sizeTo": 0,
+			"particles": 10,
+			"line": true,
 			"length": 0,
 			"baseLength": 0,
 			"lifetime": 300,
@@ -93,32 +114,31 @@
 		"incendChance": 0,
 		"incendSpread": 0,
 		"incendAmount": 0,
-		"hitSize": 8,
 		"collidesTeam": true,
-		"healPercent": 2,
+		"healPercent": 3,
 		"ammoMultiplier": 1,
-		"length": 250,
+		"hitSize": 8,
+		"length": 224,
+		"width": 6,
 		"damage": 300,
+		"lightColor": "76D081",
 		"colors": [
-			"7CF38990",
+			"7CF389A8",
 			"97FFA880",
+			"97FFA8",
 			"FFFFFF"
 		]
 	},
 	"consumes": {
 		"power": 48,
-		"coolant": {
-			"amount": 2.5,
-			"optional": true
-		}
+		"liquid": "纳米流体/1.5"
 	},
 	"shootDuration": 250,
 	"requirements": [
-		"metaglass/600",
 		"硅钢/600",
-		"纳米核/300",
-		"surge-alloy/300",
-		"二级协议/0"
+		"surge-alloy/600",
+		"纳米核/400",
+		"二级协议/2"
 	],
 	"category": "turret",
 	"research": "meltdown"

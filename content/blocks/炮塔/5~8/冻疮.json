@@ -107,9 +107,9 @@
 			]
 		},
 		"beamEffectInterval": 3,
-		"damage": 300,
+		"damage": 350,
 		"splashDamageRadius": 50,
-		"splashDamage": 300,
+		"splashDamage": 80,
 		"damageInterval": 15,
 		"hitShake": 3,
 		"hitColor": "c0ecff",

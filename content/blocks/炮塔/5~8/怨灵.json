@@ -364,6 +364,7 @@
 					}
 				]
 			},
+			"smokeEffect": "none",
 			"hitSound": "laser",
 			"status": "崩溃",
 			"statusDuration": 60,
@@ -584,7 +585,7 @@
 				"cone": 10
 			},
 			"ammoMultiplier": 3,
-			"fragBullets": 8,
+			"fragBullets": 4,
 			"fragRandomSpread": 60,
 			"fragBullet": {
 				"hitEffect": "none",

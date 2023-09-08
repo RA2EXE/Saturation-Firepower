@@ -57,7 +57,7 @@
 			"type": "ArtilleryBulletType",
 			"pierceArmor": true,
 			"speed": 4,
-			"reloadMultiplier": 1.4,
+			"reloadMultiplier": 2,
 			"lifetime": 70,
 			"width": 12,
 			"height": 12,

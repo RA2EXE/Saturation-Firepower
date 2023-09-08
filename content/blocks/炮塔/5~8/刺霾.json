@@ -150,7 +150,7 @@
 				"effects": [
 					{
 						"type": "WaveEffect",
-						"startDelay": 3,
+						"startDelay": 1.25,
 						"lifetime": 20,
 						"sizeFrom": 3,
 						"sizeTo": 24,
@@ -163,6 +163,7 @@
 					{
 						"type": "ParticleEffect",
 						"region": "饱和火力-菱形",
+						"startDelay": 1.25,
 						"particles": 6,
 						"sizeFrom": 6,
 						"sizeTo": 0,
@@ -278,7 +279,7 @@
 			"type": "BasicBulletType",
 			"collidesAir": false,
 			"rangeChange": 48,
-			"ammoMultiplier": 3,
+			"ammoMultiplier": 4,
 			"speed": 44,
 			"drag": 0.05,
 			"lifetime": 19,
@@ -304,7 +305,7 @@
 				"effects": [
 					{
 						"type": "WaveEffect",
-						"startDelay": 3,
+						"startDelay": 1.25,
 						"lifetime": 20,
 						"sizeFrom": 3,
 						"sizeTo": 24,
@@ -317,6 +318,7 @@
 					{
 						"type": "ParticleEffect",
 						"region": "饱和火力-菱形",
+						"startDelay": 1.25,
 						"particles": 6,
 						"sizeFrom": 6,
 						"sizeTo": 0,

@@ -1,5 +1,5 @@
 {
-	"details": "高效水冷系统，使用全威力弹。\n暂使用旧主要结构，可能导致部分稳定性缺失",
+	"details": "高效水冷系统，适配不同口径炮管并使用全威力弹。\n暂使用旧主要结构，可能导致部分稳定性缺失",
 	"scaledHealth": 250,
 	"armor": 8,
 	"size": 4,
@@ -64,6 +64,19 @@
 			"ammoMultiplier": 4,
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke"
+		},
+		"硅钢": {
+			"speed": 9,
+			"lifetime": 31.1,
+			"damage": 75,
+			"knockback": 0.5,
+			"status": "unmoving",
+			"statusDuration": 22,
+			"width": 15,
+			"height": 21,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"ammoMultiplier": 5
 		}
 	}
 }

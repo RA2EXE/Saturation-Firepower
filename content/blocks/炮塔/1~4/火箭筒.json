@@ -33,7 +33,7 @@
 		"pyratite": {
 			"type": "MissileBulletType",
 			"splashDamageRadius": 20,
-			"splashDamage": 35,
+			"splashDamage": 36,
 			"speed": 8,
 			"damage": 12,
 			"makeFire": true,

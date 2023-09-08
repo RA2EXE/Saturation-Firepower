@@ -106,7 +106,8 @@
 		"铬": {
 			"type": "BasicBulletType",
 			"rangeChange": 40,
-			"status": "内溃",
+			"status": "slow",
+			"statusDuration": 46,
 			"speed": 17,
 			"lifetime": 18.8,
 			"damage": 68,

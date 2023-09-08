@@ -47,7 +47,7 @@
 		},
 		"pyratite": {
 			"speed": 5,
-			"damage": 13,
+			"damage": 15,
 			"lifetime": 24,
 			"width": 7,
 			"height": 8,
