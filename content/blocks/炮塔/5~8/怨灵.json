@@ -91,7 +91,7 @@
 	"targetAir": true,
 	"consumes": {
 		"coolant": {
-			"amount": 6,
+			"amount": 5,
 			"optional": true
 		}
 	},
@@ -532,7 +532,7 @@
 		},
 		"铬": {
 			"speed": 21,
-			"damage": 200,
+			"damage": 188,
 			"status": "内溃",
 			"pierceArmor": true,
 			"lifetime": 25,
@@ -585,7 +585,7 @@
 				"cone": 10
 			},
 			"ammoMultiplier": 3,
-			"fragBullets": 4,
+			"fragBullets": 5,
 			"fragRandomSpread": 60,
 			"fragBullet": {
 				"hitEffect": "none",
@@ -600,11 +600,12 @@
 	},
 	"requirements": [
 		"thorium/3000",
-		"plastanium/2200",
-		"裂位能/1000",
+		"plastanium/2500",
+		"surge-alloy/1500",
+		"裂位能/500",
 		"镄/2000",
-		"二级协议/15",
-		"三级协议/5"
+		"二级协议/20",
+		"三级协议/8"
 	],
 	"category": "turret",
 	"research": {

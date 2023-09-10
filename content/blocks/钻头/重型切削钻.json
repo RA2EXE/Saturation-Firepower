@@ -1,0 +1,54 @@
+{
+	"name": "重型切削钻头",
+	"type": "Drill",
+	"size": 4,
+	"tier": 10,
+	"health": 1280,
+	"rotateSpeed": 0.5,
+	"warmupSpeed": 0.0015,
+	"itemCapacity": 10,
+	"liquidCapacity": 20,
+	"drawRim": false,
+	"drillTime": 80,
+	"drillEffect": "mineHuge",
+	"liquidBoostIntensity": 1,
+	"hardnessDrillMultiplier": 8,
+	"updateEffect": {
+		"type": "ParticleEffect",
+		"particles": 3,
+		"interp": "fastSlow",
+		"sizeFrom": 1,
+		"sizeTo": 9,
+		"length": 60,
+		"baseLength": 2,
+		"lifetime": 300,
+		"colorFrom": "EEC591",
+		"colorTo": "ffffff00",
+		"cone": 20
+	},
+	"consumes": {
+		"power": 13.5,
+		"liquid": {
+			"liquid": "纳米流体",
+			"amount": 0.15
+		}
+	},
+	"requirements": [
+		"镄/350",
+		"graphite/160",
+		"硅钢/300",
+		"纳米核/90",
+		"裂位能/200"
+	],
+	"category": "production",
+	"research": {
+		"parent": "离子钻头",
+		"objectives": [
+			"铬合成器",
+			{
+				"type": "SectorComplete",
+				"preset": "火山岛"
+			}
+		]
+	}
+}

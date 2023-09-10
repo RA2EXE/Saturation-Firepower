@@ -128,6 +128,7 @@
 			"type": "BasicBulletType",
 			"collidesAir": false,
 			"ammoMultiplier": 1,
+			"reloadMultiplier": 1.5,
 			"speed": 40,
 			"drag": 0.05,
 			"lifetime": 18,
@@ -209,7 +210,7 @@
 				"cone": 60
 			},
 			"hitSound": "shootSmite",
-			"hitSoundVolume": 3,
+			"hitSoundVolume": 1.5,
 			"despawnEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -262,7 +263,7 @@
 				"backColor": "666484",
 				"collidesAir": false,
 				"pierce": true,
-				"pierceCap": 3,
+				"pierceCap": 2,
 				"hitEffect": "none",
 				"status": "slow",
 				"statusDuration": 12,
@@ -292,11 +293,9 @@
 			"height": 27,
 			"shrinkY": 0.1,
 			"damage": 8247.33,
-			"status": "崩溃",
-			"statusDuration": 360,
 			"pierceArmor": true,
 			"pierce": true,
-			"pierceCap": 2,
+			"pierceCap": 3,
 			"hitShake": 6,
 			"trailChance": 1,
 			"trailInterval": 0.5,

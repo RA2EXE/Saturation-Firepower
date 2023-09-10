@@ -191,14 +191,16 @@
 				"collidesTeam": true,
 				"hitEffect": {
 					"type": "ParticleEffect",
-					"particles": 1,
+					"particles": 3,
 					"sizeFrom": 5,
 					"sizeTo": 0,
+					"length": 10,
 					"baseLength": 0,
-					"lifetime": 15,
+					"interp": "pow5Out",
+					"sizeInterp": "pow5In",
+					"lifetime": 35,
 					"colorFrom": "76D081",
-					"colorTo": "76D081",
-					"cone": 360
+					"colorTo": "76D081"
 				},
 				"shootEffect": "bigShockwave",
 				"colors": [

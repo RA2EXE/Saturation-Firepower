@@ -14,17 +14,36 @@ jump 6 always x false
 
 getflag G "数据"
 jump 0 notEqual G 1
-ubind @饱和火力-地质锤
-sensor x @unit @x
+ubind @饱和火力-运载车-榴
 sensor y @unit @y
+sensor x @unit @x
 read zx cell1 1
 read zy cell1 2
+set size 0
 op sub dx zx x
 op sub dy zy y
 op div k dy dx
-op sub zx zx 0.5
-op mul dk k 0.5
+op len 总长 dx dy
+op div d 总长 30
+op mul dk k d
+op abs dk dk d
+jump 20 greaterThan dx 0
+op add zx zx d
+jump 22 greaterThan dy 0
+op add zy zy dk
+jump 23 always x false
+op sub zx zx d
+jump 17 always x false
 op sub zy zy dk
-effect trail zx zy 3.5 %eec591 
-jump 10 greaterThan zx x
-jump 3 always x false
+op add size size 0.1
+op max size size 5
+effect trail zx zy size %eec591 
+op sub sx zx x
+op sub sy zy y
+op abs sx sx y
+op abs sy sy y
+jump 2 lessThanEq sx 1
+jump 2 lessThanEq sy 1
+jump 15 greaterThan sx 1
+jump 15 greaterThan sy 1
+

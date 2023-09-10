@@ -414,7 +414,7 @@
 		"carbide": {
 			"type": "BasicBulletType",
 			"rangeChange": 160,
-			"damage": 780,
+			"damage": 2160,
 			"buildingDamageMultiplier": 0.5,
 			"speed": 28.4,
 			"lifetime": 25,
@@ -442,7 +442,7 @@
 				"lifetime": 22,
 				"interp": "pow5Out",
 				"sizeInterp": "pow5In",
-				"colorFrom": "FEEBB3",
+				"colorFrom": "ffa166",
 				"colorTo": "FEEBB3AA"
 			},
 			"hitSound": "shotgun",
@@ -462,8 +462,8 @@
 						"length": 80,
 						"baseLength": 0,
 						"lifetime": 30,
-						"colorFrom": "FEEBB3",
-						"colorTo": "ffa166",
+						"colorFrom": "ffa166",
+						"colorTo": "FEEBB3",
 						"cone": 23
 					},
 					{
@@ -479,8 +479,8 @@
 						"length": -60,
 						"baseLength": 0,
 						"lifetime": 10,
-						"colorFrom": "FEEBB3",
-						"colorTo": "ffa166",
+						"colorFrom": "ffa166",
+						"colorTo": "FEEBB3",
 						"cone": 50
 					},
 					{
@@ -494,8 +494,8 @@
 						"length": 45,
 						"baseLength": 8,
 						"lifetime": 43,
-						"colorFrom": "FEEBB3",
-						"colorTo": "ffa166"
+						"colorFrom": "ffa166",
+						"colorTo": "FEEBB3"
 					},
 					{
 						"type": "WaveEffect",

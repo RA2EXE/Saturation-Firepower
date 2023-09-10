@@ -1,7 +1,7 @@
 {
 	"type": "missile",
 	"template": "MissileUnitType",
-	"loopSound":"torch",
+	"loopSound": "torch",
 	"loopSoundVolume": 2.5,
 	"name": "地质锤-火箭",
 	"immunities": [
@@ -47,6 +47,10 @@
 	"engineSize": 6,
 	"maxRange": 50,
 	"abilities": [
+		{
+			"type": "RegenAbility",
+			"percentAmount": 0.05
+		},
 		{
 			"type": "MoveEffectAbility",
 			"effect": {
@@ -94,8 +98,8 @@
 			"effect": {
 				"type": "ParticleEffect",
 				"particles": 3,
-				"interp":"pow5Out",
-				"sizeInterp":"pow3In",
+				"interp": "pow5Out",
+				"sizeInterp": "pow3In",
 				"line": true,
 				"strokeFrom": 2.6,
 				"strokeTo": 1.6,

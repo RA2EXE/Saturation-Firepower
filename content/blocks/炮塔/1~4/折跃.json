@@ -2,7 +2,7 @@
 	"type": "PointDefenseTurret",
 	"name": "折跃光束",
 	"size": 2,
-	"health": 380,
+	"health": 1380,
 	"range": 187,
 	"hasPower": true,
 	"shootLength": 10,

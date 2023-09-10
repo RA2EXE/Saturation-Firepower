@@ -146,7 +146,7 @@
 		]
 	},
 	"consumes": {
-		"power": 70,
+		"power": 80,
 		"coolant": {
 			"amount": 2,
 			"optional": true
@@ -226,7 +226,7 @@
 			"hitShake": 8,
 			"buildingDamageMultiplier": 0.2,
 			"status": "干扰",
-			"statusDuration": 128,
+			"statusDuration": 118,
 			"ammoMultiplier": 1,
 			"trailSpacing": 9,
 			"trailEffect": {
@@ -474,8 +474,8 @@
 	"requirements": [
 		"silicon/1000",
 		"硅钢/1500",
-		"镄/850",
-		"泰勒合金/550"
+		"镄/900",
+		"泰勒合金/1100"
 	],
 	"category": "turret",
 	"research": "穿云"

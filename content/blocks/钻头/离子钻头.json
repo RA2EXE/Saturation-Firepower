@@ -12,6 +12,7 @@
 	"drawRim": true,
 	"hasItems": true,
 	"drillTime": 32,
+	"drillEffect": "mineBig",
 	"updateEffect": "mineBig",
 	"liquidBoostIntensity": 1.6,
 	"consumes": {
@@ -27,8 +28,8 @@
 		"copper/30",
 		"graphite/40",
 		"silicon/40",
-		"硅钢/45 ",
-		"thorium/80 "
+		"硅钢/45",
+		"thorium/80"
 	],
 	"category": "production",
 	"research": "前哨基地"

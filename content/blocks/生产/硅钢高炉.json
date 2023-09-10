@@ -62,5 +62,13 @@
 	"category": "crafting",
 	"ambientSound": "smelter",
 	"ambientSoundVolume": 0.88,
-	"research": "电磁合金冶炼炉"
+	"research": {
+		"parent": "电磁合金冶炼炉",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "火山岛"
+			}
+		]
+	}
 }

@@ -8,8 +8,7 @@
 	"consumes": {
 		"power": 999999999
 	},
-	"areaSize": 5,
-	"category": "units",
+	"areaSize": -1,
 	"plans": [
 		{
 			"unit": "泰坦",

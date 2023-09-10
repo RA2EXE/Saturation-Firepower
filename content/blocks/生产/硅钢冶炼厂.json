@@ -48,5 +48,13 @@
 	"category": "crafting",
 	"ambientSound": "smelter",
 	"ambientSoundVolume": 0.65,
-	"research": "硅钢冶炼炉"
+	"research": {
+		"parent": "硅钢冶炼炉",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "雷鸣裂谷"
+			}
+		]
+	}
 }

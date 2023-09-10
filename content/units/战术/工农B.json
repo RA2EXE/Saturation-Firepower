@@ -18,7 +18,7 @@
 		"totalPower": 8000
 	},
 	"hitSize": 28,
-	"buildRange": 288,
+	"buildRange": 240,
 	"buildSpeed": 2,
 	"buildBeamOffset": 11,
 	"flying": true,

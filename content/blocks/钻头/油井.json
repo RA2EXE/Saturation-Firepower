@@ -1,6 +1,5 @@
 {
 "name":"石油深井" ,
-"description":"将抽水机耐高压处理并加强钻头强度，能够下掘石油",
 "type": "SolidPump",
 "health": 350,
 "size": 3,

@@ -1,6 +1,6 @@
 {
 	"name": "镄",
-	"cost":6,
+	"cost": 4,
 	"color": "DEDEDEFF",
 	"alwaysUnlocked":false,   
 	"hardness":7,

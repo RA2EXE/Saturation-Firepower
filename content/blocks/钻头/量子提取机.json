@@ -15,7 +15,6 @@
 	"displayFlow": true,
 	"placeableLiquid": true,
 	"squareSprite": false,
-	"warmupSpeed": 0.05,
 	"drillEffect": {
 		"type": "ParticleEffect",
 		"particles": 1,
@@ -198,7 +197,7 @@
 		"objectives": [
 			{
 				"type": "SectorComplete",
-				"preset": "荒芜矿区"
+				"preset": "星稀山脉"
 			}
 		]
 	}

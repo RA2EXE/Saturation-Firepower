@@ -19,7 +19,7 @@
 	},
 	"ammoCapacity": 120,
 	"hitSize": 28,
-	"buildRange": 240,
+	"buildRange": 180,
 	"buildSpeed": 1.5,
 	"buildBeamOffset": 11,
 	"flying": true,
