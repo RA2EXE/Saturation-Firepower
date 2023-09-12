@@ -72,8 +72,8 @@
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",
-			"duration": 60,
-			"reload": 30,
+			"duration": 70,
+			"reload": 60,
 			"range": 240,
 			"applyEffect": "none",
 			"activeEffect": {
@@ -96,7 +96,7 @@
 			"healPercent": 5,
 			"effectRadius": 14,
 			"sectors": 6,
-			"sectorRad": 0.12,
+			"sectorRad": 0.11,
 			"hitEffect": {
 				"type": "ParticleEffect",
 				"particles": 1,
@@ -114,14 +114,14 @@
 			"statusDuration": 360,
 			"x": 0,
 			"y": 0,
-			"maxTargets": 35
+			"maxTargets": 18
 		},
 		{
 			"type": "ShieldRegenFieldAbility",
 			"amount": 180,
 			"max": 1800,
 			"reload": 70,
-			"range": 240,
+			"range": 200,
 			"applyEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -134,8 +134,7 @@
 						"baseLength": 0,
 						"lifetime": 10,
 						"colorFrom": "76D081",
-						"colorTo": "76D08100",
-						"cone": 360
+						"colorTo": "76D08100"
 					},
 					{
 						"type": "WaveEffect",
@@ -151,13 +150,14 @@
 			},
 			"activeEffect": {
 				"type": "WaveEffect",
+				"interp":"circleOut",
 				"lifetime": 35,
 				"sizeFrom": 16,
 				"sizeTo": 240,
-				"strokeFrom": 10,
+				"strokeFrom": 15,
 				"strokeTo": 0,
-				"colorFrom": "76D0810A",
-				"colorTo": "76D08100"
+				"colorFrom": "76D081",
+				"colorTo": "76D081"
 			}
 		}
 	],
@@ -238,7 +238,9 @@
 				"height": 12,
 				"splashDamage": 65,
 				"splashDamageRadius": 100,
-				"hitSize": 80,
+				"homingDelay": 70,
+				"homingPower": 1,
+				"homingRange": 100,
 				"status": "拆解",
 				"statusDuration": 60,
 				"collidesTeam": false,
@@ -282,21 +284,20 @@
 				"drag": 0.03,
 				"lifetime": 100,
 				"speed": 8,
+				"fragRandomSpread": 10,
 				"fragBullets": 1,
-				"fragLifeMax": 2,
-				"fragLifeMin": 0,
 				"fragBullet": {
 					"type": "LaserBulletType",
-					"healPercent": 3,
+					"healPercent": 1.5,
 					"damage": 35,
 					"status": "shocked",
-					"statusDuration": 10,
 					"collidesTeam": true,
 					"hitEffect": "none",
 					"despawnEffect": "none",
 					"colors": [
 						"7CF38990",
-						"97FFA880",
+						"97FFA8A8",
+						"97FFA8",
 						"FFFFFF"
 					],
 					"width": 12,

@@ -15,6 +15,7 @@
 	"drillEffect": "mineBig",
 	"updateEffect": "mineBig",
 	"liquidBoostIntensity": 1.6,
+	"hardnessDrillMultiplier": 40,
 	"consumes": {
 		"power": 3,
 		"liquid": {

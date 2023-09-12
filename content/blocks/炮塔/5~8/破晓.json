@@ -1,8 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "破晓",
-	"targetAir": true,
-	"targetGround": true,
 	"health": 2250,
 	"size": 5,
 	"accurateDelay": false,

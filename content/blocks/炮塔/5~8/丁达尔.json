@@ -3,6 +3,7 @@
 	"name": "丁达尔",
 	"targetAir": true,
 	"targetGround": false,
+	"fogRadiusMultiplier": 0.45,
 	"health": 3800,
 	"size": 6,
 	"shootSound": "JG1",

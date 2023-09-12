@@ -1,7 +1,6 @@
 {
 	"type": "PointDefenseTurret",
 	"name": "消去",
-	"description": "大型拦截装置。击毁来袭的子弹或导弹。需要持续冷却供应。",
 	"size": 5,
 	"health": 5300,
 	"range": 488,
@@ -18,7 +17,7 @@
 		"power": 105,
 		"liquid": {
 			"liquid": "cryofluid",
-			"amount": 2
+			"amount": 1
 		}
 	},
 	"liquidCapacity": 20,
@@ -27,7 +26,7 @@
 		"硅钢/900","泰勒合金/800",
 		"裂位能/2000","二级协议/35"
 	],
-	//忒麻麻的，点防炮不能用drawer，报错了
+	//忒麻麻的，点防炮不能用drawer，[W]了
 	"category": "turret",
 	"research": {
 		"parent": "折跃",

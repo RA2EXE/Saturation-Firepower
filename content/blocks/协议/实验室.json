@@ -1,7 +1,6 @@
 {
 	"type": "GenericCrafter",
 	"name": "实验室",
-	"description": "提供初期广泛科技研究。\n[red]不要急于求成[white]，科研不是短时间内可以成功的",
 	"outputItem": "一级协议/1",
 	"drawer": {
 		"type": "DrawMulti",

@@ -15,7 +15,7 @@
 	"legSplashDamage":108,
 	"legSplashRange":15,
 	"name": "偏袒",
-	"fogRadius": 80,
+	"fogRadius": 40,
 	"rotateSpeed": 1.88,
 	"speed": 1.05,
 	"hitSize": 33,
@@ -35,32 +35,38 @@
 	"itemCapacity": 0,
 	"faceTarget": false,
 	"abilities": [
-		{"type": "ShieldArcAbility",
-		"radius": 30,
-		"width": 20,
-		"max": 3600,
-		"regen": 12,
-		"cooldown": 160,
-		"angle": 100,
-		"angleOffset": 0},
-		{"type": "ShieldArcAbility",
-		"whenShooting":false,
-		"radius": 35,
-		"width": 9,
-		"max": 2400,
-		"regen": 12,
-		"cooldown": 160,
-		"angle": 60,
-		"angleOffset": 120},
-		{"type": "ShieldArcAbility",
-		"whenShooting":false,
-		"radius": 35,
-		"width": 9,
-		"max": 2400,
-		"regen": 12,
-		"cooldown": 160,
-		"angle": 60,
-		"angleOffset": -120}
+		{
+			"type": "ShieldArcAbility",
+			"radius": 30,
+			"width": 20,
+			"max": 3600,
+			"regen": 12,
+			"cooldown": 160,
+			"angle": 100,
+			"angleOffset": 0
+		},
+		{
+			"type": "ShieldArcAbility",
+			"whenShooting": false,
+			"radius": 35,
+			"width": 9,
+			"max": 2400,
+			"regen": 12,
+			"cooldown": 160,
+			"angle": 60,
+			"angleOffset": 120
+		},
+		{
+			"type": "ShieldArcAbility",
+			"whenShooting": false,
+			"radius": 35,
+			"width": 9,
+			"max": 2400,
+			"regen": 12,
+			"cooldown": 160,
+			"angle": 60,
+			"angleOffset": -120
+		}
 	],
 	"weapons":[
 	{
@@ -183,8 +189,8 @@
 		],
 		"bullet": {
 			"type": "MissileBulletType",
-			"damage": 119,
-			"splashDamage": 328,
+			"damage": 120,
+			"splashDamage": 330,
 			"splashDamageRadius": 48,
 			"buildingDamageMultiplier": 2.3,
 			"sprite": "饱和火力-导弹",
@@ -355,8 +361,9 @@
 				"hitEffect": {
 					"type": "ParticleEffect",
 					"particles": 1,
-					"sizeFrom": 0,
-					"sizeTo": 35,
+					"sizeInterp":"pow5In",
+					"sizeFrom": 35,
+					"sizeTo": 0,
 					"length": 0,
 					"baseLength": 0,
 					"lifetime": 46,
@@ -369,8 +376,8 @@
 				"pierceArmor": true,
 				"hittable": false,
 				"absorbable": false,
-				"damage": 119,
-				"splashDamage": 328,
+				"damage": 120,
+				"splashDamage": 330,
 				"splashDamageRadius": 35
 			}
 		}

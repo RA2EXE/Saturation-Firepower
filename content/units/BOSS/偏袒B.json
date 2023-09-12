@@ -16,7 +16,7 @@
 	"legSplashDamage":108,
 	"legSplashRange":15,
 	"name": "偏袒",	
-	"fogRadius": 55,
+	"fogRadius": 40,
 	"rotateSpeed": 1.88,
 	"speed": 1.05,
 	"hitSize": 33,
@@ -38,11 +38,11 @@
 	"abilities": [
 		{
 			"type": "ShieldArcAbility",
-			"radius": 30,
-			"width": 20,
-			"max": 4800,
-			"regen": 12,
-			"cooldown": 60,
+			"radius": 32,
+			"width": 15,
+			"max": 6000,
+			"regen": 15,
+			"cooldown": 160,
 			"angle": 130,
 			"angleOffset": 0
 		},

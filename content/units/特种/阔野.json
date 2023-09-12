@@ -1038,9 +1038,10 @@
 			"shootSound": "lasercharge2",
 			"recoil": 0,
 			"rotateSpeed": 99,
-			"reload": 12,
-			"targetInterval": 10,
-			"targetSwitchInterval": 10,
+			"reload": 4,
+			"targetInterval": 4,
+			"targetSwitchInterval": 4,
+			"shoot":{"shots":2},
 			"bullet": {
 				"speed": 40,
 				"lifetime": 10,
@@ -1055,8 +1056,8 @@
 					"colorFrom": "ffffff",
 					"colorTo": "FEEBB3"
 				},
-				"maxRange": 360,
-				"damage": 180
+				"maxRange": 488,
+				"damage": 330
 			}
 		},
 		{

@@ -3,10 +3,19 @@
 "drillEffect": "mineHuge",
 "updateEffect": "explosion",
 "drillTime": 45,
+"consumes": {
+	"power": 4.5,
+	"liquid": {
+		"liquid": "water",
+		"amount": 0.1,
+		"booster": true,
+		"optional": true
+	}
+},
 "requirements": [
-		"copper/65",
-		"titanium/55",
-		"silicon/60",
-		"thorium/70"	
+		"copper/120",
+		"titanium/60",
+		"silicon/80",
+		"thorium/90"	
 	]
 }

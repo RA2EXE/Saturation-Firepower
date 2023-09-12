@@ -1,7 +1,6 @@
 {
 	"type": "GenericCrafter",
 	"name": "前沿实验室",
-	"description": "研究并改进尖端高级技术。\n[red]不要急于求成[white]，科研不是短时间内可以成功的",
 	"outputItem":"二级协议/1",
 	"size": 3,
 	"drawer": {
@@ -50,8 +49,8 @@
 	},
 	"requirements": [
 		"lead/220",
-		"silicon/150",
 		"thorium/180",
+		"硅钢/150",
 		"纳米核/80",
 		"一级协议/3"
 	],

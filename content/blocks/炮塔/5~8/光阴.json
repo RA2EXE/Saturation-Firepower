@@ -1,8 +1,7 @@
 {
 	"type": "PowerTurret",
 	"name": "光阴",
-	"description": "发射由纯能量包裹的重氢弹，造成小型聚变爆炸",
-	"details": "让氚核飞~",
+	"fogRadiusMultiplier": 0.45,
 	"targetAir": true,
 	"targetGround": true,
 	"armor": 6,

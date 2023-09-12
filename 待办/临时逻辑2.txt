@@ -1,14 +1,32 @@
-ubind @饱和火力-地质锤
-sensor x @unit @x
-sensor y @unit @y
-read zx cell1 1
-read zy cell1 2
-op sub dx zx x
-op sub dy zy y
-op div k dy dx
-op sub zx zx 0.5
-op mul dk k 0.5
-op sub zy zy dk
-effect trail zx zy 3.5 %eec591 
-jump 8 greaterThan zx x
-jump 1 always x false
+getflag A "援军"
+jump 0 notEqual A 0
+print "[orange]一支重型装甲部队已经抵达战场"
+message notify 3
+op rand xr 18 b
+op add x 146 xr
+set 点数 10
+jump 9 always x false
+op rand 出 10 b
+jump -1 lessThan 出 3
+jump -1 lessThan 出 6
+jump -1 lessThan 出 9
+spawn @饱和火力-陆6 x 1 90 @sharded U
+ubind U
+ucontrol autoPathfind 0 0 0 0 0
+op sub 点数 点数 1
+jump 8 always x false
+spawn @饱和火力-陆6 x 1 90 @sharded U
+ubind U
+ucontrol autoPathfind 0 0 0 0 0
+op sub 点数 点数 1
+jump 8 always x false
+spawn @饱和火力-陆6 x 1 90 @sharded U
+ubind U
+ucontrol autoPathfind 0 0 0 0 0
+op sub 点数 点数 1
+jump 8 always x false
+spawn @饱和火力-陆6 x 1 90 @sharded U
+ubind U
+ucontrol autoPathfind 0 0 0 0 0
+op sub 点数 点数 1
+jump 8 always x false
