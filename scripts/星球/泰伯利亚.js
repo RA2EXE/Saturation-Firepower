@@ -187,8 +187,8 @@ SFlib.addToResearch(星稀山脉, {
 	objectives: Seq.with(
 	new Objectives.SectorComplete(风沙谷))
 });
-/*
-const 急冻雾岭 = new SectorPreset("急冻雾岭", TBLY, 10);
+
+const 急冻雾岭 = new SectorPreset("急冻雾岭", TBLY, 65);
 急冻雾岭.description = "行动代号：“断钢锯”/n在此次对敌某集结点的突袭行动中缴获了数台重型机甲单位，这将对我方先进单位的研究突破有重要作用。\n此次撤离行动将由你指挥，敌人绝不会任由我部将之带走，\n数支敌我部队都在向你靠近，小心应对。坚守直到主力部队前来支援。";
 急冻雾岭.difficulty = 20;
 急冻雾岭.alwaysUnlocked = false;
@@ -201,7 +201,6 @@ SFlib.addToResearch(急冻雾岭, {
 	objectives: Seq.with(
 	new Objectives.SectorComplete(星稀山脉))
 });
-*/
 
 const 灭绝 = new SectorPreset("灭绝", TBLY, 78);
 灭绝.description = "北极基地群78号地区。这里是敌人的纵深腹地，外围防御火力异常凶猛，第五军团勉强撕开了一道裂口，并成功建立前进基地。\n外围友军正在逐步攻坚，一旦突破封锁便会立刻支援。\n[gold]这将是一场硬仗，祝你好运！";

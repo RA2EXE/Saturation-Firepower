@@ -825,10 +825,10 @@
 	"category": "turret",
 	"buildVisibility": "sandboxOnly",
 	"requirements": [
-		"镄/500000",
-		"silicon/300000",
-		"硅钢/220000",
-		"泰勒合金/100000",
-		"三级协议/980"
+		"镄/99e9",
+		"silicon/99e9",
+		"硅钢/99e9",
+		"泰勒合金/99e9",
+		"三级协议/99e9"
 	]
 }

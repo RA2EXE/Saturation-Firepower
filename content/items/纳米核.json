@@ -1,8 +1,8 @@
 {
 	"name": "纳米核",
-	"cost":3.5,
-	"hardness":9,
-	"alwaysUnlocked":false,
+	"cost": -0.75,
+	"hardness": 9,
+	"alwaysUnlocked": false,
 	"color": "76D081",
 	"radioactivity": 0,
 	"explosiveness": 0,

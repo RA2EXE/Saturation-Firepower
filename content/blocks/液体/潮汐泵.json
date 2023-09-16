@@ -1,7 +1,6 @@
 {
 	"type": "Pump",
 	"name": "潮汐泵",
-	"description": "究级液泵，引力工程学的奇迹",
 	"size": 4,
 	"drawer": {
 		"type": "DrawMulti",

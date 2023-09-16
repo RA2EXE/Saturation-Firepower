@@ -2,7 +2,7 @@
 	"type": "missile",
 	"template": "MissileUnitType",
 	"outlineColor":"383848",
-	"name": "利刃2导弹",
+	"name": "利刃-导弹",
 	"immunities": [
 		"burning","freezing","melting",
 		"disarmed","sapped","slow",
@@ -15,7 +15,7 @@
 	"lifetime": 290,
 	"rotateSpeed": 3,
 	"loopSoundVolume": 0.03,
-	"deathSound": "Explosionbig",
+	"deathSound": "explosionbig",
 	"hidden": true,
 	"missileAccelTime": 100,
 	"hitSize": 18,

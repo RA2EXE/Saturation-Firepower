@@ -34,8 +34,8 @@
 			},
 			"shootY": 10.5,
 			"recoil": 2,
-			"x": 8,
-			"y": 24,
+			"x": 16,
+			"y": 18,
 			"rotate": true,
 			"rotateSpeed": 2.3,
 			"shootSound": "shootBig",
@@ -94,7 +94,7 @@
 			"shootY": 10.5,
 			"recoil": 2,
 			"x": 32,
-			"y": -28,
+			"y": -16,
 			"rotate": true,
 			"rotateSpeed": 2.3,
 			"shootSound": "shootBig",
@@ -145,44 +145,54 @@
 		},
 		{
 			"name": "余晖2",
-			"reload": 30,
+			"reload": 130,
 			"x": 24,
 			"y": 0,
-			"shootY": 16,
-			"shoot": {
-				"type": "ShootSpread",
-				"shots": 3,
-				"spread": 10
-			},
-			"rotate": true,
-			"rotateSpeed": 1.5,
+			"rotate": false,
 			"inaccuracy": 0,
+			"shootCone": 60,
 			"alternate": true,
-			"shootSound": "shotgun",
+			"shootSound": "missileLaunch",
 			"shake": 5,
+			"parts":[
+				{
+					"type": "RegionPart",
+					"mirror": false,
+					"suffix": "-preview",
+					"progress": "reload",
+					"under": true,
+					"layerOffset": -0.001,
+					"moveX": -20,
+					"moveRot": 45
+				}
+			],
 			"bullet": {
-				"type": "ShrapnelBulletType",
-				"damage": 280,
-				"pierceArmor": true,
-				"knockback": 6,
-				"length": 150,
-				"width": 18,
-				"fromColor": "FFA05CFF",
-				"toColor": "D86E56FF",
-				"shootEffect": {
-					"type": "ParticleEffect",
-					"particles": 9,
-					"sizeFrom": 9,
-					"sizeTo": 0,
-					"line": true,
-					"length": 55,
-					"baseLength": 0,
-					"lifetime": 15,
-					"colorFrom": "FFA05CFF",
-					"colorTo": "D86E56FF",
-					"cone": 60
-				},
-				"smokeEffect": "bigShockwave"
+				"keepVelocity": false,
+				"speed": 0,
+				"shootEffect": "none",
+				"smokeEffect": "shootSmallFlame",
+				"spawnUnit": "余晖-导弹"
+			}
+		},
+		{
+			"name": "立宪2",
+			"type": "PointDefenseWeapon",
+			"x": 18,
+			"y": -20,
+			"rotate": true,
+			"recoil": 0,
+			"shootY": 8,
+			"rotateSpeed": 9,
+			"reload": 10,
+			"targetInterval": 10,
+			"targetSwitchInterval": 10,
+			"bullet": {
+				"speed": 25,
+				"lifetime": 10,
+				"shootEffect": "sparkShoot",
+				"hitEffect": "pointHit",
+				"maxRange": 250,
+				"damage": 90
 			}
 		},
 		{
@@ -190,7 +200,7 @@
 			"mirror": false,
 			"top": false,
 			"shake": 4,
-			"shootY": 32,
+			"shootY": 40,
 			"x": 0,
 			"y": 0,
 			"reload": 270,
@@ -201,7 +211,7 @@
 			"bullet": {
 				"type": "ContinuousLaserBulletType",
 				"damage": 240,
-				"width": 9,
+				"width": 6,
 				"length": 300,
 				"colors": [
 					"D86E56FF",

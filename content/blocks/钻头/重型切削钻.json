@@ -9,9 +9,9 @@
 	"itemCapacity": 10,
 	"liquidCapacity": 20,
 	"drawRim": false,
-	"drillTime": 80,
+	"drillTime": 320,
 	"drillEffect": "mineHuge",
-	"liquidBoostIntensity": 1,
+	"liquidBoostIntensity": 2,
 	"hardnessDrillMultiplier": 8,
 	"updateEffect": {
 		"type": "ParticleEffect",
@@ -30,12 +30,14 @@
 		"power": 13.5,
 		"liquid": {
 			"liquid": "纳米流体",
-			"amount": 0.15
+			"amount": 0.15,
+			"booster": true,
+			"optional": true
 		}
 	},
 	"requirements": [
 		"镄/350",
-		"graphite/160",
+		"graphite/200",
 		"硅钢/300",
 		"纳米核/90",
 		"裂位能/200"
