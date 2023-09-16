@@ -328,7 +328,7 @@
 	"category": "turret",
 	"research": {
 		"parent": "冰风暴",
-		//"objectives": [{"type": "SectorComplete","preset": "急冻雾岭"}]
+		"objectives": [{"type": "SectorComplete","preset": "急冻雾岭"}]
 	},
 	"requirements": [
 		"镄/1500",
