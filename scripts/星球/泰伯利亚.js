@@ -82,7 +82,7 @@ exports.中央盆地 = 中央盆地;
 SFlib.addToResearch(中央盆地, {
 	parent: "雷鸣裂谷",
 	objectives: Seq.with(
-	new Objectives.Research(雷鸣裂谷))
+	new Objectives.SectorComplete(雷鸣裂谷))
 });
 
 const 第五战区 = new SectorPreset("第五战区", TBLY, 5);
@@ -96,7 +96,7 @@ exports.第五战区 = 第五战区;
 SFlib.addToResearch(第五战区, {
 	parent: "中央盆地",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+	new Objectives.SectorComplete(中央盆地))
 });
 
 const 火山岛 = new SectorPreset("火山岛", TBLY, 13);
@@ -110,7 +110,7 @@ exports.火山岛 = 火山岛;
 SFlib.addToResearch(火山岛, {
 	parent: "中央盆地",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+	new Objectives.SectorComplete(中央盆地))
 });
 
 const 断层带 = new SectorPreset("断层带", TBLY, 16);
@@ -125,7 +125,7 @@ exports.断层带 = 断层带;
 SFlib.addToResearch(断层带, {
 	parent: "火山岛",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+	new Objectives.SectorComplete(火山岛))
 });
 
 /*
@@ -189,7 +189,7 @@ SFlib.addToResearch(星稀山脉, {
 });
 
 const 急冻雾岭 = new SectorPreset("急冻雾岭", TBLY, 65);
-急冻雾岭.description = "行动代号：“断钢锯”/n在此次对敌某集结点的突袭行动中缴获了数台重型机甲单位，这将对我方先进单位的研究突破有重要作用。\n此次撤离行动将由你指挥，敌人绝不会任由我部将之带走，\n数支敌我部队都在向你靠近，小心应对。坚守直到主力部队前来支援。";
+急冻雾岭.description = "[stat]分支难度警告：非主线战役，可不打。\n行动代号：“断钢锯”\n在此次对敌某集结点的突袭行动中缴获了数台重型机甲单位，这将对我方先进单位的研究突破有重要作用。\n此次撤离行动将由你指挥，敌人绝不会任由我部将之带走，\n数支敌我部队都在向你靠近，小心应对。坚守直到主力部队前来支援。";
 急冻雾岭.difficulty = 20;
 急冻雾岭.alwaysUnlocked = false;
 急冻雾岭.addStartingItems = true;
@@ -231,7 +231,7 @@ SFlib.addToResearch(惶恐滩, {
 	objectives: Seq.with(
 	new Objectives.SectorComplete(灭绝))
 });
-*/
+
 const 残兵败将 = new SectorPreset("残兵败将", TBLY, 9);
 残兵败将.description = "亚龙被击毁，他们没有逃跑的机会了。乘胜追击，摧毁这个基地，不要给敌人喘息的机会。";
 残兵败将.difficulty = 12;
@@ -243,7 +243,7 @@ exports.残兵败将 = 残兵败将;
 SFlib.addToResearch(残兵败将, {
 	parent: "灭绝",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+	new Objectives.SectorComplete(灭绝))
 });
 
 const 狭长冰谷 = new SectorPreset("狭长冰谷", TBLY, 10);
@@ -257,9 +257,9 @@ exports.狭长冰谷 = 狭长冰谷;
 SFlib.addToResearch(狭长冰谷, {
 	parent: "残兵败将",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+	new Objectives.SectorComplete(残兵败将))
 });
-
+*/
 
 
 
@@ -274,7 +274,7 @@ exports.火天路 = 火天路;
 SFlib.addToResearch(火天路, {
 	parent: "星稀山脉",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+	new Objectives.SectorComplete(星稀山脉))
 });
 
 const 实验种植地 = new SectorPreset("实验种植地", TBLY, 64);
@@ -288,5 +288,5 @@ exports.实验种植地 = 实验种植地;
 SFlib.addToResearch(实验种植地, {
 	parent: "星稀山脉",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+	new Objectives.SectorComplete(星稀山脉))
 });
