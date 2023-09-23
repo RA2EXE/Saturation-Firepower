@@ -1,7 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "挫刀",
-	"description": "中口径对空霰弹炮。与差扰光束协同可有效牵制空军。与冰风暴协作可造成极高伤害。",
 	"targetAir": true,
 	"targetGround": false,
 	"health": 350,

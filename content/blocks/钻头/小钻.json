@@ -1,12 +1,11 @@
 {
-	"name":"小型钻头",
+	"name": "小型钻头",
 	"type": "Drill",
-	"description":"不浪费每一点资源",
 	"size": 1,
 	"health": 90,
 	"tier": 3,
-	"drillTime": 300,   
-	"liquidBoostIntensity":2,
+	"drillTime": 300,
+	"liquidBoostIntensity": 2,
 	"canOverdrive": true,
 	"warmupSpeed": 0.02,
 	"drillEffect": "none",
@@ -23,9 +22,9 @@
 	},
 	"itemCapacity": 5,
 	"liquidCapacity": 5,
-	"requirements": [	
-   { "item": "copper", "amount": 5 },
-   { "item": "lead", "amount": 6 }
+	"requirements": [
+		"copper/5",
+		"lead/6"
 	],
 	"category": "production",
 	"research": "mechanical-drill"

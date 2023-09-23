@@ -1,6 +1,5 @@
 {
 	"type": "GenericCrafter",
-	"name": "化合硅冶炼台",
 	"outputItem": "silicon/8",
 	"size": 4,
 	"hasPower": true,

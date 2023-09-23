@@ -1,6 +1,5 @@
 {
 	"name": "相位超速器",
-	"description": "在一定范围内提供超速场，需要氢气。使用相位物可以提升加速倍率。",
 	"type": "OverdriveProjector",
 	"health": 1040,
 	"size": 3,
@@ -57,8 +56,8 @@
 					"sizeTo": 60,
 					"strokeFrom": 9,
 					"strokeTo": 0,
-					"colorFrom": "EEC591FF",
-					"colorTo": "EEC591FF"
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
 				}
 			]
 		},

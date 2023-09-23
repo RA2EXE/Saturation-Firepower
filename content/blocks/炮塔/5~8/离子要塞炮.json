@@ -1,7 +1,7 @@
 {
 	"type": "PowerTurret",
 	"name": "离子要塞炮",
-	"targetAir": false,
+	"targetAir": true,
 	"targetGround": true,
 	"health": 3650,
 	"armor": 8,
@@ -25,7 +25,7 @@
 	"shootEffect": {
 		"type": "ParticleEffect",
 		"particles": 1,
-		"sizeFrom": 15,
+		"sizeFrom": 10,
 		"sizeTo": 0,
 		"length": 0,
 		"baseLength": 0,
@@ -51,22 +51,37 @@
 				{
 					"type": "ParticleEffect",
 					"particles": 25,
+					"sizeInterp": "pow5Out",
+					"interp": "pow5In",
 					"sizeFrom": 0,
 					"sizeTo": 4,
 					"length": 100,
 					"baseLength": -100,
-					"lifetime": 70,
+					"lifetime": 60,
+					"colorFrom": "F2FF9C40",
+					"colorTo": "F2FF9C"
+				},
+				{
+					"type": "ParticleEffect",
+					"sizeInterp": "pow3In",
+					"particles": 1,
+					"sizeFrom": 0,
+					"sizeTo": 15,
+					"length": 0,
+					"baseLength": -0,
+					"lifetime": 56,
 					"colorFrom": "F2FF9C",
 					"colorTo": "F2FF9C"
 				},
 				{
 					"type": "ParticleEffect",
 					"particles": 1,
-					"sizeFrom": 0,
-					"sizeTo": 15,
+					"sizeFrom": 15,
+					"sizeTo": 10,
 					"length": 0,
 					"baseLength": -0,
-					"lifetime": 76,
+					"startDelay": 55,
+					"lifetime": 21,
 					"colorFrom": "F2FF9C",
 					"colorTo": "F2FF9C"
 				}
@@ -113,13 +128,13 @@
 				},
 				{
 					"type": "WaveEffect",
-					"lifetime": 25,
+					"lifetime": 13,
 					"sizeFrom": 5,
-					"sizeTo": 80,
-					"strokeFrom": 5,
+					"sizeTo": 150,
+					"strokeFrom": 50,
 					"strokeTo": 0,
 					"colorFrom": "F2FF9C",
-					"colorTo": "F2FF9C"
+					"colorTo": "F2FF9C40"
 				},
 				{
 					"type": "ParticleEffect",
@@ -136,17 +151,35 @@
 				"titanSmoke"
 			]
 		},
-		"hitColor":"F2FF9C",
+		"hitColor":"F2FF9CA0",
 		"trailSpacing": 12,
 		"trailEffect": {
 			"type": "MultiEffect",
 			"effects": [
 				{
 					"type": "ParticleEffect",
+					"sizeInterp": "pow5Out",
 					"particles": 1,
 					"length": 0,
 					"baseLength": 0.2,
-					"lifetime": 50,
+					"lifetime": 11,
+					"line": true,
+					"randLength": false,
+					"lenFrom": 13,
+					"lenTo": 13,
+					"strokeFrom": 0,
+					"strokeTo": 8.5,
+					"colorFrom": "F2FF9C",
+					"colorTo": "F2FF9C",
+					"cone": 0
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"length": 0,
+					"baseLength": 0.2,
+					"startDelay": 8.5,
+					"lifetime": 41.5,
 					"line": true,
 					"randLength": false,
 					"lenFrom": 13,
@@ -168,8 +201,7 @@
 					"baseLength": 0,
 					"lifetime": 55,
 					"colorFrom": "F2FF9C",
-					"colorTo": "F2FF9C",
-					"cone": 360
+					"colorTo": "F2FF9C"
 				}
 			]
 		},
@@ -178,20 +210,43 @@
 			"type": "PointBulletType",
 			"trailSpacing": 9,
 			"trailEffect": {
-				"type": "ParticleEffect",
-				"particles": 1,
-				"length": 0,
-				"baseLength": 1,
-				"lifetime": 20,
-				"line": true,
-				"randLength": false,
-				"lenFrom": 10,
-				"lenTo": 10,
-				"strokeFrom": 5,
-				"strokeTo": 0,
-				"colorFrom": "F2FF9CFF",
-				"colorTo": "F2FF9CFF",
-				"cone": 0
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"sizeInterp": "pow5Out",
+						"particles": 1,
+						"length": 0,
+						"baseLength": 1,
+						"lifetime": 10,
+						"line": true,
+						"randLength": false,
+						"lenFrom": 10,
+						"lenTo": 10,
+						"strokeFrom": 0,
+						"strokeTo": 5,
+						"colorFrom": "F2FF9C",
+						"colorTo": "F2FF9C",
+						"cone": 0
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"length": 0,
+						"baseLength": 1,
+						"startDelay": 8.5,
+						"lifetime": 11.5,
+						"line": true,
+						"randLength": false,
+						"lenFrom": 10,
+						"lenTo": 10,
+						"strokeFrom": 5,
+						"strokeTo": 0,
+						"colorFrom": "F2FF9C",
+						"colorTo": "F2FF9C",
+						"cone": 0
+					}
+				]
 			},
 			"lifetime": 8,
 			"speed": 10,
@@ -214,8 +269,7 @@
 						"baseLength": 0,
 						"lifetime": 21,
 						"colorFrom": "F2FF9C",
-						"colorTo": "F2FF9C",
-						"cone": 360
+						"colorTo": "F2FF9C"
 					},
 					{
 						"type": "ParticleEffect",
@@ -228,8 +282,8 @@
 						"lenTo": 0,
 						"strokeFrom": 3.3,
 						"strokeTo": 0,
-						"colorFrom": "F2FF9CFF",
-						"colorTo": "F2FF9CFF"
+						"colorFrom": "F2FF9C",
+						"colorTo": "F2FF9C"
 					}
 				]
 			},
@@ -237,7 +291,7 @@
 		}
 	},
 	"consumes": {
-		"power": 46,
+		"power": 55,
 		"coolant": {
 			"amount": 3,
 			"optional": true
@@ -252,13 +306,13 @@
 		"parent": "foreshadow",
 		"objectives": [
 			{
-				"type": "SectorComplete",
+				"type": "OnSector",
 				"preset": "荒芜矿区"
 			}
 		]
 	},
 	"requirements": [
-		"silicon/1250",
+		"silicon/2200",
 		"plastanium/880",
 		"硅钢/1500",
 		"surge-alloy/600",

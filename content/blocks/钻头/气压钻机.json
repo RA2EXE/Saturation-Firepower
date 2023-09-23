@@ -1,7 +1,6 @@
 {
 	"name": "气压钻机",
 	"type": "Drill",
-	"description": "利用大气压力推动大型钻头旋转",
 	"size": 4,
 	"health": 640,
 	"tier": 3,

@@ -145,7 +145,7 @@
 			"speed": 5,
 			"knockback": 0.7,
 			"sprite": "饱和火力-导弹",
-			"backColor": "FF8C00",
+			"backColor": "FFB90F",
 			"frontColor": "E3E3E3",
 			"trailEffect": "smoke",
 			"width": 10,

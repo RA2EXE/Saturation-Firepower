@@ -38,6 +38,7 @@
 	"hidden": true,
 	"hitSize": 26,
 	"health": 6800,
+	"armor": -10,
 	"fogRadius": 3,
 	"engineLayer": 110,
 	"engineColor": "BFFFDB",
@@ -178,7 +179,7 @@
 				"lightningDamage": 760,
 				"lightning": 4,
 				"lightningLength": 18,
-				"lightningLengthRand": 6,
+				"lightningLengthRand": 12,
 				"splashDamage": 12000,
 				"splashDamageRadius": 120,
 				"instantDisappear": true,
@@ -197,22 +198,22 @@
 							"sizeTo": 110,
 							"length": 0,
 							"baseLength": 0,
-							"lifetime": 10,
+							"lifetime": 8,
 							"sizeInterp": "pow5Out",
 							"colorFrom": "BFFFDBA8",
-							"colorTo": "BFFFDB"
+							"colorTo": "BFFFDBAA"
 						},
 						{
 							"type": "ParticleEffect",
 							"particles": 1,
-							"startDelay": 8.5,
+							"startDelay": 6.5,
 							"sizeFrom": 110,
 							"sizeTo": 0,
 							"length": 0,
 							"baseLength": 0,
 							"lifetime": 36,
-							"colorFrom": "BFFFDB",
-							"colorTo": "BFFFDB80"
+							"colorFrom": "BFFFDBAA",
+							"colorTo": "BFFFDB"
 						}
 					]
 				},

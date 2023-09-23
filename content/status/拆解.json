@@ -4,11 +4,7 @@
 	"damage": 3,
 	"speedMultiplier": 0.8,
 	"effectChance": 0.1,
-	"opposites": [
-		"burning",
-		"melting",
-		"修复"
-	],
+	//"opposites": ["burning","melting","修复"],
 	"effect": {
 		"type": "ParticleEffect",
 		"particles": 6,

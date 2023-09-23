@@ -1,7 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "冰风暴",
-	"description": "延缓敌人的攻势。与电光箭同时使用可能会降低效益。",
 	"targetAir": true,
 	"targetGround": true,
 	"health": 1200,

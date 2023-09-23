@@ -4,19 +4,7 @@
 	"damage": -4,
 	"healthMultiplier": 1.5,
 	"effectChance": 0.3,
-	"opposites": [
-		"burning",
-		"wet",
-		"sapped",
-		"freezing",
-		"melting",
-		"tarred",
-		"muddy",
-		"blasted",
-		"corroded",
-		"拆解",
-		"油蚀"
-	],
+	//"opposites": ["burning","wet","sapped","freezing","melting","tarred","muddy","blasted","corroded","拆解","油蚀"],
 	"effect": {
 		"type": "ParticleEffect",
 		"particles": 1,

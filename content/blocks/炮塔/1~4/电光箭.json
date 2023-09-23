@@ -1,7 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "电光箭",
-	"description": "使用激光二极管定向聚集能量打击敌人。",
 	"targetAir": true,
 	"targetGround": true,
 	"health": 1300,

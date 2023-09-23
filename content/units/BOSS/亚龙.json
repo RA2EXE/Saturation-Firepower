@@ -1958,7 +1958,7 @@
 									"length": 90,
 									"baseLength": 8,
 									"lifetime": 95,
-									"colorFrom": "EEC591FF",
+									"colorFrom": "EEC591",
 									"colorTo": "EEC59100",
 									"cone": 360
 								},
@@ -1969,7 +1969,7 @@
 									"sizeTo": 100,
 									"strokeFrom": 8,
 									"strokeTo": 0,
-									"colorFrom": "EEC591FF",
+									"colorFrom": "EEC591",
 									"colorTo": "EEC59100"
 								}
 							]

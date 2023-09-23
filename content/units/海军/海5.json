@@ -26,10 +26,10 @@
 			"mirror": false,
 			"reload": 880,
 			"shootSound": "missileLarge",
-			"rotate": true,
-			"rotateSpeed": 99,
+			"rotate": false,
 			"cooldownTime": 100,
-			"inaccuracy": 0,
+			"inaccuracy": 360,
+			"shootCone": 360,
 			"recoil": 0,
 			"bullet": {
 				"type": "BasicBulletType",
@@ -123,8 +123,8 @@
 							"sizeTo": 399,
 							"strokeFrom": 25,
 							"strokeTo": 0,
-							"colorFrom": "EEC591FF",
-							"colorTo": "EEC591FF"
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
 						},
 						{
 							"type": "WaveEffect",
@@ -134,8 +134,8 @@
 							"sizeTo": 399,
 							"strokeFrom": 25,
 							"strokeTo": 0,
-							"colorFrom": "EEC591FF",
-							"colorTo": "EEC591FF"
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
 						},
 						{
 							"type": "WaveEffect",
@@ -145,8 +145,8 @@
 							"sizeTo": 399,
 							"strokeFrom": 25,
 							"strokeTo": 0,
-							"colorFrom": "EEC591FF",
-							"colorTo": "EEC591FF"
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
 						}
 					]
 				},
@@ -159,7 +159,7 @@
 					"strokeFrom": 30,
 					"strokeTo": 0,
 					"colorFrom": "EEC591",
-					"colorTo": "ffffffff"
+					"colorTo": "FFFFFF"
 				},
 				"shootEffect": {
 					"type": "MultiEffect",
@@ -173,7 +173,7 @@
 							"length": 105,
 							"baseLength": 0,
 							"lifetime": 103,
-							"colorFrom": "EEC591FF",
+							"colorFrom": "EEC591",
 							"colorTo": "ffffff",
 							"cone": 40
 						},
@@ -221,11 +221,11 @@
 				"shrinkY": 0,
 				"width": 16,
 				"height": 66,
-				"speed": 2.2,
-				"lifetime": 300,
-				"homingDelay": 155,
+				"speed": 2.5,
+				"lifetime": 264,
+				"homingDelay": 15,
 				"homingRange": 180,
-				"homingPower": 0.02,
+				"homingPower": 0.15,
 				"hitSoundVolume": 6,
 				"hitSound": "DBZ1",
 				"parts": [

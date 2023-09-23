@@ -10,11 +10,11 @@
 
 ▲震-221-雷-（中苏）顽冥
 悬浮单位，前炮2*1，中主炮2*1，单位导弹1*1
-大型水陆图——防守压力在水，全时间下雨，炮塔工作效率大幅降低
-逼迫单位防守+雷暴/混沌一堆
+“雷师殿”环形湖接基地——防守压力在水，全时间下雨，炮伤*0.4667
+逼迫单位防守+雷暴/混沌一堆/强攻保护红涂装电鳄全面围攻
 
 ▲兑-211-水-（芭莎）坝煞
-海旗舰，副炮2*1，主炮1*1，
+海旗舰，副炮2*1，主炮1*1，超级点防1*1
 瀑布/水库类地图——初始建筑齐全，烈性攻坚-防守战
 大型单位工厂——RTS操控模式
 
@@ -25,7 +25,7 @@
 坦克，主炮1*2，副炮2*1，防空导弹2*1
 反植物地图——反制一切绿色系武器
 
-乾-111-天-西木
+▲乾-111-天-西木
 轨道战舰，天拳1，主炮1，火箭巢1
 山谷地图——空隙间隔较大——8次插入战场丢核弹/单位并继承掉血——对低速单位毁灭性打击
 急冻-减速减血
@@ -33,37 +33,17 @@
 <强度按位次排序变化>
 <确保干碎>
 
+军工河原
+左下或左上开局
 
+左下：
+武装型前哨基地-攻坚战
+提供单位：强攻类部队
 
+左上：
+重油夺取基地-破袭战
+提供单位：大范围杀伤性部队，尽可能提高误伤能力
 
-盘旋绕行
-"omniMovement": false,
-"rotateMoveFirst": true,
-
-legs
-草稿构架完毕，等待贴图规划
-铜锣-萧笛-琵琶-唢呐-震鼓-青钟-公谱
-
-overdrive场，overclock场-5秒-5格-3间隔
-
-绝判场-3秒-4.8格-8间隔
-音波武器-18格-贯穿单位-崩溃1秒
-
-（嘈嘈切切）
-3连发-36左右-左右射出弧线追踪-高弹速-击退
-
-强攻场-38秒永续-10格
-干扰场-对敌-23格
-
-助推3.86倍速
-正面护盾
-拳击附带强攻-4格
-地锤-25格地面AOE-建筑4倍
-
-反舰导弹Ⅰ：伤害1船，射程30，3速，装弹8秒
-反舰导弹Ⅱ：伤害1船，射程33，3.35速，装弹8秒 <2连发> <红色拖尾>
-舰炮Ⅰ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发>
-舰炮Ⅱ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发*2>
 
 "abilities": [
 		{
@@ -80,64 +60,7 @@ overdrive场，overclock场-5秒-5格-3间隔
 			"randAmount": 1,
 			"spread": 36
 		}
-	],
-
-				"shootEffect": "shootPyraFlame",
-				"smokeEffect": {
-					"type": "ParticleEffect",
-					"particles": 5,
-					"line": true,
-					"strokeFrom": 1.2,
-					"strokeTo": 0,
-					"lenFrom": 16,
-					"lenTo": 8,
-					"length": 76,
-					"baseLength": 0,
-					"lifetime": 12,
-					"colorFrom": "FFFFFF",
-					"colorTo": "FFE176FF",
-					"cone": 10
-				},
-				"hitEffect": {
-					"type": "ParticleEffect",
-					"particles": 4,
-					"lifetime": 10,
-					"sizeFrom": 3,
-					"sizeTo": 0,
-					"colorFrom": "FF8C00",
-					"colorTo": "FF8C00"
-				},
-				"despawnEffect": "none",
-
-		{
-			"name": "西木-f",
-			"x":34,
-			"y":-26,
-			"reload": 5,
-			//"display": false,
-			"mirror": true,
-			"rotate": false,
-			"shootSound": "none",
-			"alwaysShooting": true,
-			"continuous": true,
-			//"alwaysContinuous": true,
-			"alternate": false,
-			"minShootVelocity": 2.3,
-			"baseRotation": 180,
-			"bullet": {
-				"type": "ContinuousFlameBulletType",
-				"colors":["F19583","FEEBB3","FFF2D6","ffffff"],
-				"lightColor":"FEEBB3",
-				"length": 22,
-				"lifetime":800,
-				"statusDuration": 600,
-				"status": "崩溃",
-				"damage": 3,
-				"drawFlare": false,
-				"collides": false
-			}
-		}
-
+],
 
 	//"buildVisibility": "campaignOnly",
 	//"buildVisibility": "editorOnly",
@@ -252,65 +175,35 @@ overdrive场，overclock场-5秒-5格-3间隔
 			}
 		}
 
-		{
-			"name": "工农2",
-			"reload": 300,
-			"x": 0,
-			"y": 0,
-			"shootY": 15,
-			"rotate": false,
-			"top": false,
-			"recoil": 3.25,
-			"inaccuracy": 0,
-			"mirror": false,
-			"shootSound": "torch",
-			"alwaysContinuous": true,
-			"shootWarmupSpeed": 0.125,
-			"minWarmup": 0.98,
-			"bullet": {
-				"type": "ContinuousFlameBulletType",
-				"recoil": 0.022,
-				"lifetime": 8,
-				"knockback": 5,
-				"damage": 6,
-				"incendChance": 0,
-				"healPercent": 0.2,
-				"status": "干扰",
-				"statusDuration": 60,
-				"collidesTeam": true,
-				"sideAngle": 135,
-				"sideWidth": 1.35,
-				"sideLength": 45,
-				"smokeEffect": "bigShockwave",
-				"shootEffect": {
-					"type": "ParticleEffect",
-					"line": true,
-					"particles": 9,
-					"lenFrom": 10,
-					"lenTo": 0,
-					"strokeFrom": 1,
-					"strokeTo": 1,
-					"baseLength": 240,
-					"length": 0,
-					"sizeInterp":"pow3In",
-					"lifetime": 20,
-					"colorFrom": "97FFA8",
-					"colorTo": "97FFA8",
-					"cone": 0
-				},
-				"lightColor":"97FFA8",
-				"flareColor":"97FFA8",
-				"hitColor":"97FFA8",
-				"colors": [
-					"7CF38990",
-					"97FFA880",
-					"97FFA8",
-					"FFFFFF"
-				],
-				"length": 160,
-				"width": 3
-			}
-		}
-
 亚龙-3预设图
 伯劳-2预设图
+
+盘旋绕行
+"omniMovement": false,
+"rotateMoveFirst": true,
+
+legs
+草稿构架完毕，等待贴图规划
+铜锣-萧笛-琵琶-唢呐-震鼓-青钟-公谱
+
+overdrive场，overclock场-5秒-5格-3间隔
+
+绝判场-3秒-4.8格-8间隔
+音波武器-18格-贯穿单位-崩溃1秒
+
+（嘈嘈切切）
+3连发-36左右-左右射出弧线追踪-高弹速-击退
+
+强攻场-38秒永续-10格
+干扰场-对敌-23格
+
+助推3.86倍速
+正面护盾
+拳击附带强攻-4格
+地锤-25格地面AOE-建筑4倍
+
+反舰导弹Ⅰ：伤害1船，射程30，3速，装弹8秒
+反舰导弹Ⅱ：伤害1船，射程33，3.35速，装弹8秒 <2连发> <红色拖尾>
+舰炮Ⅰ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发>
+舰炮Ⅱ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发*2>
+

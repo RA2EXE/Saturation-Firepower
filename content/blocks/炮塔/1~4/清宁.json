@@ -124,7 +124,7 @@
 	},
 	"unitSort":"strongest",
 	"shootY": 10,
-	"heatColor": "FF4040",
+	"heatColor": "FF404040",
 	"cooldownTime": 180,
 	"shake": 8,
 	"inaccuracy": 16,

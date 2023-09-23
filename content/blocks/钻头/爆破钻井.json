@@ -58,13 +58,13 @@
 				"sizeTo": 38,
 				"strokeFrom": 2,
 				"strokeTo": 0,
-				"colorFrom": "FFFFFFFF",
+				"colorFrom": "FFFFFF",
 				"colorTo": "FFFFFF00"
 			}
 		]
 	},
 	"consumes": {
-		"power": 2.5,
+		"power": 6,
 		"liquid": {
 			"liquid": "water",
 			"amount": 0.2

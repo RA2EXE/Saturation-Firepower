@@ -9,7 +9,7 @@
 	"flying": true,
 	"engineOffset": 46,
 	"engineSize": 10,
-	"hitSize": 70,
+	"hitSize": 86,
 	"faceTarget": true,
 	"lowAltitude": true,
 	"health": 148000,

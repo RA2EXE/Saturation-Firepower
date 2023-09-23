@@ -1,8 +1,6 @@
 {
 	"type": "UnitAssembler",
 	"name": "阔野管理中心",
-	"description": "携带大量纳米机器人，分级建造方案，更快组装阔野战舰。\n可以修复附近的单位。\n[red]需要占用4台纳米组装无人机部署位！一旦部署位被占满，则失去建造阔野的能力！",
-	"details": " [red]最高建造权限已授权！\n[white]这是要塞数据库中的意外惊喜，这种新技术允许我们[yellow]也能[white]在相对较短的时间中建造大型单位\n[red]现在正是 破局之时！",
 	"size": 10,
 	"liquidCapacity": 120,
 	"consumes": {

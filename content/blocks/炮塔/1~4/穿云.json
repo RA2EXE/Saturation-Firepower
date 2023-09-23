@@ -7,15 +7,27 @@
 	"reload": 80,
 	"range": 280,
 	"maxAmmo": 24,
-	"recoilTime": 40,
-	"recoil": 3,
-	"cooldownTime": 90,
+	"recoilTime": 30,
+	"recoil": 1,
 	"shake": 3.5,
 	"consumes": {
 		"coolant": {
 			"amount": 0.3,
 			"optional": true
 		}
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"under": true,
+				"suffix": "-管",
+				"progress": "recoil",
+				"moveY": -4
+			}
+		]
 	},
 	"liquidCapacity": 40,
 	"shootSound": "artillery",

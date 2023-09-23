@@ -1,7 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "多管炮",
-	"description": "双管叠层版，可以在短时间内倾泻大量火力。",
 	"health": 500,
 	"size": 1,
 	"reload": 40,

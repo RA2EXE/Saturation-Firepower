@@ -4,18 +4,9 @@
 	"damage": 1.2,
 	"speedMultiplier": 0.4,
 	"effectChance": 0.6,
-	"opposites": [
-		"wet",
-		"freezing",
-		"修复"
-	],
-	"transitionDamage": 30,
-	"affinities": [
-		"burning",
-		"shocked",
-		"blasted",
-		"melting"
-	],
+	//"opposites": ["wet","freezing","修复"],
+	//"transitionDamage": 30,
+	//"affinities": ["burning","shocked","blasted","melting"],
 	"effect": {
 		"type": "ParticleEffect",
 		"particles": 1,

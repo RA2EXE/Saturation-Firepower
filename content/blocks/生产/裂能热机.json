@@ -1,0 +1,29 @@
+{
+	"type": "HeatProducer",
+	"attribute": "heat",
+	"name": "裂能热机",
+	"size": 4,
+	"hasItems": true,
+	"itemCapacity": 30,
+	"heatOutput": 40,
+	"craftTime": 3600,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			"DrawHeatOutput"
+		]
+	},
+	"rotateDraw": false,
+	"consumes": {
+		"power": 10,
+		"items": ["裂位能/10"]
+	},
+	"requirements": [],
+	"category": "crafting",
+	"ambientSound": "hum",
+	"ambientSoundVolume": 0.8,
+	"buildCostMultiplier": 1000,
+	"buildVisibility": "sandboxOnly",
+	"research": "裂能热机"
+}

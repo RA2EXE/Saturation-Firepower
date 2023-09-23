@@ -30,7 +30,7 @@
 	"craftTime": 60,
 	"updateEffect": "freezing",
 	"consumes": {
-		"power": 3,
+		"power": 4,
 		"items": [
 			"titanium/1"
 		],

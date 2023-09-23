@@ -41,7 +41,7 @@
 		"硅钢/80"
 	],
 	"consumes": {
-		"power": 6
+		"power": 7
 	},
 	"outputLiquid": "slag/0.75",
 	"baseEfficiency": 0,

@@ -6,11 +6,7 @@
 	"speedMultiplier": 1.3,
 	"reloadMultiplier": 1.5,
 	"effectChance": 0.5,
-	"affinities": [
-		"overdrive",
-		"shielded",
-		"修复"
-	],
+	//"affinities": ["overdrive","shielded","修复"],
 	"effect": {
 		"type": "ParticleEffect",
 		"particles": 3,

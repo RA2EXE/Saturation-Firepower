@@ -261,8 +261,8 @@
 						"length": 85,
 						"baseLength": 0,
 						"lifetime": 35,
-						"colorFrom": "EEC591FF",
-						"colorTo": "EEC591FF",
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591",
 						"cone": 70
 					},
 					{
@@ -273,7 +273,7 @@
 						"length": 0,
 						"baseLength": 0,
 						"lifetime": 50,
-						"colorFrom": "EEC591FF",
+						"colorFrom": "EEC591",
 						"colorTo": "EEC591F",
 						"cone": 360
 					},
@@ -297,7 +297,7 @@
 				"length": 0,
 				"baseLength": 0,
 				"lifetime": 180,
-				"colorFrom": "EEC591FF",
+				"colorFrom": "EEC591",
 				"colorTo": "EEC591F",
 				"cone": 360
 			},
@@ -312,7 +312,7 @@
 						"length": 0,
 						"baseLength": 0,
 						"lifetime": 180,
-						"colorFrom": "EEC591FF",
+						"colorFrom": "EEC591",
 						"colorTo": "EEC591F",
 						"cone": 360
 					},
@@ -341,8 +341,8 @@
 				"lenTo": 11,
 				"strokeFrom": 10,
 				"strokeTo": 0,
-				"colorFrom": "EEC591FF",
-				"colorTo": "EEC591FF",
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591",
 				"cone": 0
 			},
 			"trailSpacing": 10,
@@ -371,7 +371,7 @@
 				"lightningDamage": 98,
 				"lightning": 8,
 				"lightningLength": 18,
-				"lightningColor": "EEC591FF",
+				"lightningColor": "EEC591",
 				"pierceArmor": true,
 				"hitShake": 7,
 				"hitSound": "plasmaboom",
@@ -404,8 +404,8 @@
 							"baseLength": 0,
 							"lifetime": 45,
 							"sizeInterp": "pow5In",
-							"colorFrom": "EEC591FF",
-							"colorTo": "EEC591FF",
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591",
 							"cone": 360
 						},
 						{
@@ -415,8 +415,8 @@
 							"sizeTo": 66,
 							"strokeFrom": 3,
 							"strokeTo": 0,
-							"colorFrom": "EEC591FF",
-							"colorTo": "EEC591FF"
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
 						}
 					]
 				},

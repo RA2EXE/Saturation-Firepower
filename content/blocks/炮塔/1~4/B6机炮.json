@@ -1,7 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "B6机炮",
-	"description": "相较于原型，射击模式更改为精准的点射。",
 	"health": 960,
 	"size": 2,
 	"reload": 30,

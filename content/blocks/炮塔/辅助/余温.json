@@ -1,8 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "余温",
-	"description": "锁定，充能，消灭。",
-	"details": "首台具有快速射击能力的超巨型轨道炮，然而巨大的能耗严重限制了其应用空间",
 	"unitSort":"strongest",
 	"health": 150000,
 	"armor": 85,

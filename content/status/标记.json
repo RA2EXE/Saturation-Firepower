@@ -4,9 +4,7 @@
 	"healthMultiplier": 0.8,
 	"speedMultiplier": 1.8,
 	"reloadMultiplier": 0.8,
-	"opposites": [
-		"electrified"
-	],
+	//"opposites": ["electrified"],
 	"effectChance": 0.01,
 	"effect": {
 		"type": "WaveEffect",
@@ -15,7 +13,7 @@
 		"strokeTo": 1,
 		"sizeFrom": 10,
 		"sizeTo": 10,
-		"colorFrom": "ffffffff",
+		"colorFrom": "FFFFFF",
 		"colorTo": "ffffff00"
 	}
 }

@@ -1,8 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "方天",
-	"description": "向敌方战机发射两枚大装药量导弹或者穿透弹。",
-	"details": "离开索敌距离后导弹可以继续飞行一段距离，可以辅助制导。",
 	"health": 3850,
 	"size": 4,
 	"reload": 26,

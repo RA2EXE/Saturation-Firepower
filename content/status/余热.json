@@ -3,10 +3,7 @@
 	"color": "F2FF9C",
 	"damage": 120,
 	"transitionDamage": 10000,
-	"affinities": [
-		"余热",
-		"崩溃"
-	],
+	//"affinities": ["余热","崩溃"],
 	"effectChance": 1,
 	"effect": {
 		"type": "MultiEffect",

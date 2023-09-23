@@ -7,7 +7,7 @@
 	"fogRadiusMultiplier": 0.42,
 	"range": 670,
 	"maxAmmo": 60,
-	"heatColor": "FFD197FF",
+	"heatColor": "FFD197",
 	"canOverdrive": true,
 	"cooldownTime": 120,
 	"recoil": 2,

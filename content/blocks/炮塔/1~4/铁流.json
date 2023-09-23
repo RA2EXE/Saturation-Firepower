@@ -1,7 +1,6 @@
 {
 	"type": "LiquidTurret",
 	"name": "铁流",
-	"description": "将液体以高速度射出冲击敌人",
 	"health": 2500,
 	"size": 3,
 	"reload": 24,

@@ -69,7 +69,7 @@
 				"length": 125,
 				"baseLength": 0,
 				"lifetime": 123,
-				"colorFrom": "EEC591FF",
+				"colorFrom": "EEC591",
 				"colorTo": "ffffff",
 				"cone": 40
 			},
@@ -203,8 +203,8 @@
 					"strokeFrom": 30,
 					"strokeTo": 0,
 					"interp": "circleOut",
-					"colorFrom": "EEC591FF",
-					"colorTo": "EEC591FF"
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
 				},
 				{
 					"type": "WaveEffect",
@@ -215,8 +215,8 @@
 					"strokeFrom": 30,
 					"strokeTo": 0,
 					"interp": "circleOut",
-					"colorFrom": "EEC591FF",
-					"colorTo": "EEC591FF"
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
 				},
 				{
 					"type": "WaveEffect",
@@ -227,8 +227,8 @@
 					"strokeFrom": 30,
 					"strokeTo": 0,
 					"interp": "circleOut",
-					"colorFrom": "EEC591FF",
-					"colorTo": "EEC591FF"
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
 				}
 			]
 		},
@@ -241,7 +241,7 @@
 			"strokeFrom": 30,
 			"strokeTo": 0,
 			"colorFrom": "EEC591",
-			"colorTo": "ffffffff"
+			"colorTo": "FFFFFF"
 		},
 		"smokeEffect": "bigShockwave",
 		"makeFire": true,

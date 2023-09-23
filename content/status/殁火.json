@@ -5,8 +5,8 @@
 	"speedMultiplier": 0.8,
 	"reloadMultiplier":0.76,
 	"damageMultiplier":0.85,
-	"opposites": ["wet","freezing"],
-	"affinities":["tarred","油蚀"],
+	//"opposites": ["wet","freezing"],
+	//"affinities":["tarred","油蚀"],
 	"transitionDamage":22,
 	"effectChance": 1,
 	"effect": {

@@ -1,7 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "裂爆",
-	"description": "中型震爆武器，聚集能量团投向敌人造成短暂瘫痪。",
 	"targetAir": true,
 	"targetGround": true,
 	"health": 1700,

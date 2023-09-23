@@ -115,7 +115,7 @@
 							"interp": "pow5Out",
 							"sizeInterp": "pow5In",
 							"lifetime": 65,
-							"colorFrom": "EEC591FF",
+							"colorFrom": "EEC591",
 							"colorTo": "EEC591",
 							"cone": 360
 						},
@@ -172,7 +172,7 @@
 					"length": 0,
 					"baseLength": 0,
 					"lifetime": 95,
-					"colorFrom": "EEC591FF",
+					"colorFrom": "EEC591",
 					"colorTo": "EEC59100"
 				}
 			}

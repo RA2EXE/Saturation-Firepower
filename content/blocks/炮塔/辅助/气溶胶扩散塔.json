@@ -13,33 +13,46 @@
 	"drawer": {
 		"type": "DrawTurret",
 		"parts": [
-			{"type":"RegionPart",
-			"mirror":true,
-			"x":11,"y":11,
-			"suffix":"-前",
-			"under":true,
-			"moveX":2,
-			"moveY":2,
-			"moves":[{
-				"heatProgress": "recoil",
-				"heatColor": "FFD19780",
-				"progress":"recoil",
-				"x":4,"y":4
-			}]},
-			{"type":"RegionPart",
-			"mirror":true,
-			"x":11,"y":-11,
-			"suffix":"-后",
-			"under":true,
-			"moveX":2,
-			"moveY":-2,
-			"moves":[{
-				"heatProgress": "recoil",
-				"heatColor": "FFD19780",
-				"progress":"recoil",
-				"x":4,"y":-4
-			}]}
-		]},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 11,
+				"y": 11,
+				"suffix": "-前",
+				"under": true,
+				"moveX": 2,
+				"moveY": 2,
+				"moves": [
+					{
+						"heatProgress": "recoil",
+						"heatColor": "FFD19780",
+						"progress": "recoil",
+						"x": 4,
+						"y": 4
+					}
+				]
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 11,
+				"y": -11,
+				"suffix": "-后",
+				"under": true,
+				"moveX": 2,
+				"moveY": -2,
+				"moves": [
+					{
+						"heatProgress": "recoil",
+						"heatColor": "FFD19780",
+						"progress": "recoil",
+						"x": 4,
+						"y": -4
+					}
+				]
+			}
+		]
+	},
 	"minWarmup": 0.9,
 	"shake": 5,
 	"recoil": 0,

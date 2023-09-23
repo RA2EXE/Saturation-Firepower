@@ -38,13 +38,14 @@
 		"colorTo": "FEEBB3",
 		"cone": 30
 	},
+	"velocityRnd": 0.1,
 	"shootType": {
 		"type": "BasicBulletType",
 		"damage": 90,
 		"status": "崩溃",
 		"statusDuration": 18,
-		"lifetime": 45,
-		"speed": 15,
+		"lifetime": 48,
+		"speed": 13,
 		"width": 18,
 		"height": 24,
 		"hitSize": 40,
@@ -82,11 +83,12 @@
 				},
 				{
 					"type": "WaveEffect",
+					"interp":"circleIn",
 					"lifetime": 10,
 					"sizeFrom": 70,
-					"sizeTo": 0,
-					"strokeFrom": 3,
-					"strokeTo": 0,
+					"sizeTo": 8,
+					"strokeFrom": 2,
+					"strokeTo": 3,
 					"colorFrom": "FEEBB3",
 					"colorTo": "FEEBB3"
 				}
@@ -152,10 +154,11 @@
 					},
 					{
 						"type": "WaveEffect",
-						"lifetime": 25,
+						"interp":"circleOut",
+						"lifetime": 30,
 						"sizeFrom": 0,
 						"sizeTo": 66,
-						"strokeFrom": 3,
+						"strokeFrom": 6,
 						"strokeTo": 0,
 						"colorFrom": "FEEBB3",
 						"colorTo": "FEEBB3"
@@ -173,7 +176,15 @@
 		}
 	},
 	"category": "turret",
-	"research": "漫游",
+	"research": {
+		"parent": "漫游",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "荒芜矿区"
+			}
+		]
+	},
 	"requirements": [
 		"镄/520",
 		"metaglass/200",

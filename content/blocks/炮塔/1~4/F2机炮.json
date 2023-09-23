@@ -1,8 +1,6 @@
 {
 	"type": "ItemTurret",
 	"name": "F2机炮",
-	"description": "扫射敌人，相较于104年的机炮拥有'更大的'弹仓",
-	"details": "600发大弹仓，火力持久，久到离谱！",
 	"health": 960,
 	"size": 2,
 	"reload": 3,

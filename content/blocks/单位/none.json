@@ -1,7 +1,6 @@
 {
 	"type": "UnitAssembler",
 	"name": "none",
-	"description": "放boss用于改作弊mod造价",
 	"size": 5,
 	"buildVisibility": "debugOnly",
 	"canOverdrive": false,

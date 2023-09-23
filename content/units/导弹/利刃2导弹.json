@@ -23,7 +23,7 @@
 	"armor": 35,
 	"fogRadius": 8,
 	"engineColor": "FF5B5B",
-	"trailColor": "FF5B5B",
+	"trailColor": "FF5B5B50",
 	"trailLength": 35,
 	"engineLayer": 110,
 	"engineOffset": 8,
@@ -72,7 +72,16 @@
 				"status": "碎解",
 				"statusDuration": 600,
 				"hitShake": 15,
-				"shootEffect": "none",
+				"shootEffect":  {
+					"type": "MultiEffect",
+					"effects": [
+						"massiveExplosion",
+						{
+							"type":"WrapEffect",
+							"effect":"scatheExplosion",
+							"color":"FF5B5B"
+						}
+					]},
 				"smokeEffect": "none",
 				"despawnEffect": "none",
 				"hitEffect": {
@@ -89,13 +98,11 @@
 							"sizeInterp": "pow10Out",
 							"lifetime": 85,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B00",
-							"cone": 360
+							"colorTo": "FF5B5B00"
 						},
 						{
 							"type": "WaveEffect",
-							"interp": "circleOut",
-							"lifetime": 60,
+							"lifetime": 11,
 							"sizeFrom": 0,
 							"sizeTo": 70,
 							"strokeFrom": 10,

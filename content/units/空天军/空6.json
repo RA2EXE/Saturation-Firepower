@@ -261,7 +261,7 @@
 				"shrinkX": 0.8,
 				"makeFire": true,
 				"status": "burning",
-				"statusDuration": 600,
+				"statusDuration": 1200,
 				"incendAmount": 3,
 				"incendSpread": 86,
 				"incendChance": 1,

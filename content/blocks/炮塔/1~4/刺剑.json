@@ -14,15 +14,22 @@
 			"optional": true
 		}
 	},
+	"shootY": 0,
 	"shoot": {
 		"shots": 6,
-		"shotDelay": 4
+		"shotDelay": 4,
+		"type": "ShootBarrel",
+		"barrels": [
+			0,11,0,
+			4,9.5,0,
+			-4,9.5,0
+		]
 	},
 	"ammoPerShot": 6,
 	"shootSound": "shotgun",
 	"targetGround": true,
 	"targetAir": true,
-	"inaccuracy": 15,
+	"inaccuracy": 5,
 	"shake": 3,
 	"shootCone": 20,
 	"rotateSpeed": 9,
