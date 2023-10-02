@@ -15,10 +15,7 @@
 	//"shoot":{"shots":6,"shotDelay":1},
 	"consumes": {
 		"power": 105,
-		"liquid": {
-			"liquid": "cryofluid",
-			"amount": 1
-		}
+		"liquid": "cryofluid/1"
 	},
 	"liquidCapacity": 20,
 	"requirements": [

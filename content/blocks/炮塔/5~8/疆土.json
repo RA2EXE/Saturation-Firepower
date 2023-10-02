@@ -438,7 +438,7 @@
 		"parent": "猛犸",
 		"objectives": [
 			{
-				"type": "SectorComplete",
+				"type": "OnSector",
 				"preset": "灭绝"
 			}
 		]

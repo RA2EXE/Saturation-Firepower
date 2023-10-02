@@ -1,21 +1,20 @@
 {
 	"type": "PowerTurret",
-	"name": "热能要塞炮",
+	"name": "热能轨道防御平台",
 	"targetAir": true,
 	"targetGround": true,
 	"health": 58000,
 	"armor": 88,
 	"accurateDelay": false,
-	"moveWhileCharging": false,
 	"size": 8,
 	"shake": 20,
 	"inaccuracy": 0,
 	"recoil": 8,
-	"cooldownTime": 80,
+	"cooldownTime": 280,
 	"canOverdrive": false,
-	"recoilTime": 180,
+	"recoilTime": 80,
 	"unitSort": "strongest",
-	"reload": 240,
+	"reload": 280,
 	"rotateSpeed": 1.92,
 	"drawer": {
 		"type": "DrawTurret",
@@ -26,10 +25,28 @@
 				"mirror": true,
 				"under": true,
 				"suffix": "-管",
-				"moveY": 24
+				"moveY": 24,
+				"heatColor": "FF4040",
+				"children":[{
+					"type": "RegionPart",
+					"mirror": false,
+					"suffix": "-预热2",
+					"drawRegion": false,
+					"heatProgress": "warmup",
+					"heatColor": "FF4040"
+				}]
+			},
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"suffix": "-预热",
+				"drawRegion": false,
+				"heatProgress": "warmup",
+				"heatColor": "FF4040"
 			}
 		]
 	},
+	"heatColor": "FF4040",
 	"range": 880,
 	"shootY": 8,
 	"shootSound": "laserblast",
@@ -95,16 +112,30 @@
 				{
 					"type": "ParticleEffect",
 					"particles": 1,
-					"sizeFrom": 16,
+					"sizeFrom": 12,
 					"sizeInterp": "pow10In",
 					"randLength": false,
 					"sizeTo": 0,
 					"length": 0,
 					"baseLength": -4,
-					"lifetime": 55,
+					"lifetime": 60,
 					"colorFrom": "F2FF9C",
 					"colorTo": "F2FF9C",
 					"cone": 0
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 3,
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"sizeFrom": 30,
+					"sizeTo": 0,
+					"length": 160,
+					"baseLength": 0,
+					"lifetime": 350,
+					"colorFrom": "F2FF9C",
+					"colorTo": "E3E3E340",
+					"cone": 360
 				}
 			]
 		},
@@ -113,6 +144,7 @@
 			"particles": 16,
 			"region": "饱和火力-三角形",
 			"interp": "pow10Out",
+			"sizeInterp":"pow3In",
 			"spin": 16,
 			"sizeFrom": 22,
 			"sizeTo": 0,
@@ -143,7 +175,7 @@
 					"sizeInterp": "pow5In",
 					"length": 0,
 					"baseLength": 0,
-					"lifetime": 55,
+					"lifetime": 45,
 					"colorFrom": "F2FF9C",
 					"colorTo": "F2FF9C"
 				},
@@ -195,9 +227,9 @@
 		"spawnBullets": [
 			{
 				"type": "BasicBulletType",
-				"damage": 4500,
+				"damage": 7500,
 				"splashDamageRadius": 55,
-				"splashDamage": 3500,
+				"splashDamage": 5500,
 				"lifetime": 40,
 				"speed": 22,
 				"sprite": "饱和火力-透彻",
@@ -330,6 +362,7 @@
 				"trailEffect": "artilleryTrail",
 				"status": "余热",
 				"statusDuration": 30,
+				"damage": 500,
 				"splashDamageRadius": 50,
 				"splashDamage": 200,
 				"hitShake": 16,
@@ -382,12 +415,12 @@
 		}
 	},
 	"consumes": {
-		"power": 150
+		"power": 220
 	},
 	"heatRequirement": 40,
 	"maxHeatEfficiency": 3,
 	"category": "turret",
-	"research": "热要塞炮",
+	"research": "热轨道防御平台",
 	"buildCostMultiplier": 1000,
 	"buildVisibility": "sandboxOnly",
 	"requirements": []

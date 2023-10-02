@@ -76,17 +76,8 @@
 	"category": "turret",
 	"research": "电光箭",
 	"requirements": [
-		{
-			"item": "copper",
-			"amount": 90
-		},
-		{
-			"item": "lead",
-			"amount": 100
-		},
-		{
-			"item": "silicon",
-			"amount": 90
-		}
+		"copper/90",
+		"lead/100",
+		"silicon/90"
 	]
 }

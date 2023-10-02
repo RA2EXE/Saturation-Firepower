@@ -16,10 +16,11 @@
 				"lifetime": 60,
 				"spin": 5,
 				"interp": "fastSlow",
+				"sizeInterp":"pow3In",
 				"region": "饱和火力-星",
 				"sizeFrom": 16,
 				"sizeTo": 0,
-				"colorFrom": "ffffff",
+				"colorFrom": "F2FF9C",
 				"colorTo": "F2FF9C"
 			},
 			{

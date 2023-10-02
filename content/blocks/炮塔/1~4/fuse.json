@@ -9,9 +9,9 @@
 		"spread": 12.5
 	},
 	"requirements": [
-		"graphite/60",
-		"metaglass/50",
-		"硅钢/40",
+		"graphite/110",
+		"metaglass/60",
+		"硅钢/50",
 		"thorium/80"
 	],
 	"rotateSpeed": 8,

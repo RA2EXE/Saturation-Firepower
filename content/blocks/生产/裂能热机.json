@@ -1,6 +1,5 @@
 {
 	"type": "HeatProducer",
-	"attribute": "heat",
 	"name": "裂能热机",
 	"size": 4,
 	"hasItems": true,
@@ -16,10 +15,10 @@
 	},
 	"rotateDraw": false,
 	"consumes": {
-		"power": 10,
+		"power": 15,
 		"items": ["裂位能/10"]
 	},
-	"requirements": [],
+	"requirements": ["copper/99e9","lead/99e9"],
 	"category": "crafting",
 	"ambientSound": "hum",
 	"ambientSoundVolume": 0.8,

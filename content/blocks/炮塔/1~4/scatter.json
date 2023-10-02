@@ -25,20 +25,6 @@
 			"hitEffect": "flakExplosion",
 			"despawnEffect": "flakExplosion"
 		},
-		"scrap": {
-			"type": "FlakBulletType",
-			"ammoMultiplier": 5,
-			"speed": 6,
-			"lifetime": 34,
-			"width": 9,
-			"height": 10,
-			"damage": 3,
-			"splashDamage": 27,
-			"splashDamageRadius": 15,
-			"reloadMultiplier": 0.7,
-			"hitEffect": "flakExplosion",
-			"despawnEffect": "flakExplosion"
-		},
 		"metaglass": {
 			"type": "FlakBulletType",
 			"ammoMultiplier": 5,
@@ -47,11 +33,11 @@
 			"width": 9,
 			"height": 10,
 			"damage": 3,
-			"splashDamage": 33,
+			"splashDamage": 37,
 			"splashDamageRadius": 20,
 			"hitEffect": "flakExplosion",
 			"despawnEffect": "flakExplosion",
-			"fragBullets": 7,
+			"fragBullets": 6,
 			"fragBullet": {
 				"type": "BasicBulletType",
 				"collidesGround": false,
@@ -62,6 +48,20 @@
 				"lifetime": 30,
 				"speed": 1.5
 			}
+		},
+		"scrap": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 5,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 9,
+			"height": 10,
+			"damage": 3,
+			"splashDamage": 33,
+			"splashDamageRadius": 15,
+			"reloadMultiplier": 0.5,
+			"hitEffect": "flakExplosion",
+			"despawnEffect": "flakExplosion"
 		},
 		"blast-compound": {
 			"type": "FlakBulletType",
@@ -89,19 +89,13 @@
 			"splashDamageRadius": 20,
 			"reloadMultiplier": 1,
 			"status": "unmoving",
-			"statusDuration": 80,
+			"statusDuration": 20,
 			"hitEffect": "flakExplosion",
 			"despawnEffect": "flakExplosion"
 		}
 	},
 	"requirements": [
-		{
-			"item": "copper",
-			"amount": 95
-		},
-		{
-			"item": "lead",
-			"amount": 75
-		}
+		"copper/95",
+		"lead/75"
 	]
 }

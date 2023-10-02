@@ -1,0 +1,236 @@
+{
+	"type": "ItemTurret",
+	"name": "乾坤",
+	"health": 18000,
+	"size": 8,
+	"reload": 300,
+	"range": 660,
+	"shootCone": 2,
+	"recoilTime": 60,
+	"canOverdrive": false,
+	"recoil": 4,
+	"cooldownTime": 90,
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"suffix": "-管",
+				"under": true,
+				"recoilIndex": 0,
+				"heatProgress": "reload"
+			}
+		]
+	},
+	"accurateDelay": false,
+	"shoot": {
+		"type": "ShootPattern",
+		"firstShotDelay": 60
+	},
+	"ammoUseEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 1,
+				"line": true,
+				"interp": "pow10Out",
+				"sizeInterp": "pow5In",
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"lenFrom": 10,
+				"lenTo": 0,
+				"length": -48,
+				"baseLength": -10,
+				"randLength": false,
+				"lifetime": 74,
+				"colorFrom": "FFE176",
+				"colorTo": "737373",
+				"layer": 48
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 2,
+				"sizeFrom": 12,
+				"sizeTo": 0,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"length": -60,
+				"baseLength": 0,
+				"lifetime": 85,
+				"colorFrom": "73737390",
+				"colorTo": "73737350",
+				"layer": 49
+			}
+		]
+	},
+	"targetGround": true,
+	"targetAir": true,
+	"consumes": {
+		"power": 360,
+		"liquid": "cryofluid/1.5"
+	},
+	"liquidCapacity": 90,
+	"inaccuracy": 0.63,
+	"shake": 5,
+	"shootSound": "shootBig",
+	"rotateSpeed": 3.5,
+	"ammoPerShot": 20,
+	"ammoTypes": {
+		"莱普合金": {
+			"type": "BasicBulletType",
+			"collidesAir": false,
+			"rangeChange": 48,
+			"speed": 44,
+			"drag": 0.05,
+			"lifetime": 19,
+			"sprite": "missile-large",
+			"backColor": "9b9dcf",
+			"trailColor": "9b9dcfAA",
+			"trailLength": 12,
+			"trailWidth": 3,
+			"width": 18,
+			"height": 27,
+			"shrinkY": 0.1,
+			"damage": 8247.33,
+			"pierceArmor": true,
+			"pierce": true,
+			"pierceCap": 3,
+			"hitShake": 6,
+			"trailChance": 1,
+			"trailInterval": 0.5,
+			"trailEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "WaveEffect",
+						"startDelay": 1.25,
+						"lifetime": 20,
+						"sizeFrom": 3,
+						"sizeTo": 24,
+						"interp": "circleOut",
+						"strokeFrom": 6,
+						"strokeTo": 0,
+						"colorFrom": "ffffff",
+						"colorTo": "EEC59188"
+					},
+					{
+						"type": "ParticleEffect",
+						"region": "饱和火力-菱形",
+						"startDelay": 1.25,
+						"particles": 6,
+						"sizeFrom": 6,
+						"sizeTo": 0,
+						"length": 16,
+						"lifetime": 45,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"colorFrom": "9b9dcf",
+						"colorTo": "9b9dcf"
+					}
+				]
+			},
+			"shootEffect": "bigShockwave",
+			"smokeEffect": {
+				"type": "ParticleEffect",
+				"particles": 17,
+				"sizeFrom": 8,
+				"sizeTo": 0,
+				"interp": "pow10Out",
+				"sizeInterp": "pow5In",
+				"length": 75,
+				"baseLength": 3,
+				"lifetime": 100,
+				"colorFrom": "FF7055",
+				"colorTo": "9b9dcf",
+				"cone": 10
+			},
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"particles": 22,
+				"line": true,
+				"interp": "pow10Out",
+				"sizeInterp": "pow10In",
+				"strokeFrom": 5,
+				"strokeTo": 0,
+				"lenFrom": 23,
+				"lenTo": 0,
+				"length": 120,
+				"baseLength": 0,
+				"lifetime": 10,
+				"colorFrom": "FFE176",
+				"colorTo": "FFE176",
+				"cone": 60
+			},
+			"hitSound": "shootSmite",
+			"hitSoundVolume": 3,
+			"despawnSound": "explosion",
+			"despawnEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 7,
+						"sizeFrom": 16,
+						"sizeTo": 0,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"length": 85,
+						"baseLength": 3,
+						"layer": 99,
+						"lifetime": 180,
+						"colorFrom": "737373",
+						"colorTo": "73737380",
+						"cone": 30
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 14,
+						"sizeFrom": 9,
+						"sizeTo": 0,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"length": 85,
+						"baseLength": 3,
+						"layer": 99,
+						"lifetime": 180,
+						"colorFrom": "737373",
+						"colorTo": "73737380",
+						"cone": 30
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 0,
+						"sizeTo": 80,
+						"strokeFrom": 30,
+						"strokeTo": 10,
+						"colorFrom": "FFFFFF70",
+						"colorTo": "FFFFFF00"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		"镄/4600",
+		"硅钢/3300",
+		"莱普合金/1130",
+		"二级协议/220",
+		"三级协议/60"
+	],
+	"category": "turret",
+	"research": {
+		"parent": "刺霾",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "灭绝"
+			},
+			{
+				"type": "SectorComplete",
+				"preset": "星稀山脉"
+			}
+		]
+	}
+}

@@ -111,8 +111,8 @@
 		"裂位能": {
 			"type": "BasicBulletType",
 			"rangeChange": 30,
-			"damage": 80,
-			"splashDamageRadius": 35,
+			"damage": 70,
+			"splashDamageRadius": 42,
 			"splashDamage": 15,
 			"inaccuracy": 3,
 			"speed": 6,

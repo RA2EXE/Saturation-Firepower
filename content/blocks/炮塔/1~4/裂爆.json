@@ -87,8 +87,7 @@
 					"baseLength": 10,
 					"lifetime": 45,
 					"colorFrom": "BFFFDBd8",
-					"colorTo": "BFFFDBd0",
-					"cone": 360
+					"colorTo": "BFFFDBd0"
 				}
 			]
 		},

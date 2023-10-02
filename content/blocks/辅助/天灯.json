@@ -1,11 +1,10 @@
 {
 	"type": "LightBlock",
 	"name": "大型灯",
-	"description": "快速建立起一个警戒区域，有利于获取敌方动向。泰伯利亚的一天可真长啊",
 	"size": 2,
 	"health": 1200,
 	"brightness": 1.0,
-	"radius": 60,
+	"radius": 200,
 	"buildCostMultiplier": 0.5,
 	"consumes": {
 		"power": 1

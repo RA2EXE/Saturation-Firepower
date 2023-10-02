@@ -286,7 +286,22 @@ const 实验种植地 = new SectorPreset("实验种植地", TBLY, 64);
 实验种植地.localizedName = "实验种植地";
 exports.实验种植地 = 实验种植地;
 SFlib.addToResearch(实验种植地, {
-	parent: "星稀山脉",
+	parent: "火山岛",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(星稀山脉))
+	new Objectives.SectorComplete(火山岛))
 });
+/*
+const 阑珊子午线 = new SectorPreset("阑珊子午线", TBLY, 10);
+阑珊子午线.description = "";
+阑珊子午线.difficulty = 28;
+阑珊子午线.alwaysUnlocked = false;
+阑珊子午线.addStartingItems = true;
+阑珊子午线.captureWave = 70;
+阑珊子午线.localizedName = "阑珊子午线";
+exports.阑珊子午线 = 阑珊子午线;
+SFlib.addToResearch(阑珊子午线, {
+	parent: "溢裂要塞",
+	objectives: Seq.with(
+	new Objectives.SectorComplete(溢裂要塞))
+});
+*/

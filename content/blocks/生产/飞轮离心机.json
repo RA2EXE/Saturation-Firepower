@@ -24,7 +24,7 @@
 		},
 		"consumes": {
 			"power": 6,
-			"liquid": "oil/0.2"
+			"liquid": "oil/0.3"
 		},
 		"requirements": [
 			"graphite/80",

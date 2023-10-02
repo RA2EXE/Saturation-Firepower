@@ -169,21 +169,16 @@
 				"cone": 10
 			},
 			"hitEffect": {
-				"type": "MultiEffect",
-				"effects": [
-					{
-						"type": "ParticleEffect",
-						"particles": 4,
-						"sizeFrom": 3,
-						"sizeTo": 0,
-						"length": 16,
-						"baseLength": 0,
-						"lifetime": 16,
-						"colorFrom": "f8ad42",
-						"colorTo": "f68021",
-						"cone": 360
-					}
-				]
+				"type": "ParticleEffect",
+				"particles": 4,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 16,
+				"baseLength": 0,
+				"lifetime": 16,
+				"colorFrom": "f8ad42",
+				"colorTo": "f68021",
+				"cone": 360
 			},
 			"despawnEffect": "blastExplosion",
 			"bulletInterval": 0.3,

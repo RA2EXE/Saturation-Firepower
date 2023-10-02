@@ -26,8 +26,20 @@
 		{
 			"type": "ShapePart",
 			"stroke": 1,
+			"strokeTo": 3,
+			"color": "97FFA840",
+			"colorTo": "97FFA880",
+			"circle": true,
+			"hollow": true,
+			"radius": 160,
+			"radiusTo": 488,
+			"layer": 110
+		},
+		{
+			"type": "ShapePart",
+			"stroke": 1,
 			"strokeTo": 1,
-			"color": "97FFA8",
+			"color": "97FFA840",
 			"circle": true,
 			"hollow": true,
 			"radius": 160,
@@ -38,27 +50,28 @@
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",
-			"duration": 90,
+			"duration": 120,
 			"reload": 180,
 			"range": 160,
 			"applyEffect": "none",
 			"activeEffect": {
 				"type": "WaveEffect",
-				"lifetime": 30,
-				"sizeFrom": 160,
+				"interp": "circleOut",
+				"lifetime": 45,
+				"sizeFrom": 0,
 				"sizeTo": 160,
-				"strokeFrom": 3,
-				"strokeTo": 0,
+				"strokeFrom": 22,
+				"strokeTo": 1,
 				"colorFrom": "97FFA8",
-				"colorTo": "97FFA800"
+				"colorTo": "97FFA8"
 			},
 			"effect": "修复"
 		},
 		{
 			"type": "ForceFieldAbility",
 			"radius": 240,
-			"max": 7600,
-			"regen": 24,
+			"max": 8000,
+			"regen": 30,
 			"cooldown": 1330
 		}
 	],

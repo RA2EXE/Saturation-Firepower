@@ -1,0 +1,13 @@
+{
+	"name": "裂位引擎",
+	"type": "Thruster",
+	"health": 4000,
+	"size": 5,
+	"requirements": [
+		"镄/1400",
+		"裂位能/650"
+	],
+	"buildCostMultiplier": 100,
+	"buildVisibility":"sandboxOnly",
+	"category": "defense"
+}

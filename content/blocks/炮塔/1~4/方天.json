@@ -1,14 +1,14 @@
 {
 	"type": "ItemTurret",
 	"name": "方天",
-	"health": 3850,
+	"health": 5500,
 	"size": 4,
 	"reload": 26,
 	"range": 600,
 	"fogRadiusMultiplier": 0.5,
 	"maxAmmo": 20,
 	"ammoPerShot": 2,
-	"recoil": 3.3,
+	"recoil": 4,
 	"ammoUseEffect": {
 		"type": "ParticleEffect",
 		"particles": 9,
@@ -27,8 +27,9 @@
 	"shoot": {
 		"type": "ShootAlternate",
 		"barrels": 2,
-		"spread": 15
+		"spread": 18
 	},
+	"xRand": 4,
 	"consumes": {
 		"power": 11,
 		"coolant": {
@@ -41,33 +42,34 @@
 	"targetAir": true,
 	"hasLiquids": true,
 	"inaccuracy": 7.77,
-	"shootCone": 80,
+	"shootCone": 270,
 	"shake": 4,
-	"rotateSpeed": 4.5,
+	"rotateSpeed": 0.85,
 	"ammoTypes": {
 		"blast-compound": {
 			"type": "FlakBulletType",
+			"damage": 33,
 			"splashDamageRadius": 64,
-			"splashDamage": 225,
+			"splashDamage": 255,
 			"knockback": 16,
 			"hitSize": 50,
 			"shrinkY": 0,
 			"hitSound": "explosionbig",
+			"hitSoundVolume": 2,
 			"speed": 6,
 			"lifetime": 135,
-			"damage": 22,
 			"status": "blasted",
 			"homingDelay": 15,
-			"homingPower": 0.06,
+			"homingPower": 0.08,
 			"homingRange": 120,
-			"width": 12,
-			"height": 50,
+			"width": 15,
+			"height": 55,
 			"sprite": "饱和火力-导弹",
 			"backColor": "FF7055",
 			"frontColor": "E3E3E3",
-			"trailLength": 3,
-			"trailWidth": 1.5,
-			"trailColor": "FFFFFF",
+			"trailLength": 40,
+			"trailWidth": 2,
+			"trailColor": "FFFFFF88",
 			"trailChance": 1,
 			"trailInterval": 16,
 			"trailEffect": {
@@ -76,7 +78,6 @@
 				"length": 16,
 				"baseLength": 1,
 				"lifetime": 45,
-				"cone": 360,
 				"colorFrom": "E3E3E380",
 				"colorTo": "E3E3E380",
 				"sizeFrom": 3,
@@ -85,7 +86,8 @@
 			"hitShake": 5,
 			"ammoMultiplier": 4,
 			"reloadMultiplier": 1.7,
-			"smokeEffect": "shootSmallFlame",
+			"shootEffect": "shootTitan",
+			"smokeEffect": "shootPyraFlame",
 			"hitEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -97,9 +99,8 @@
 						"length": 35,
 						"baseLength": 43,
 						"lifetime": 35,
-						"colorFrom": "737373FF",
-						"colorTo": "737373FF",
-						"cone": 360
+						"colorFrom": "737373",
+						"colorTo": "737373"
 					},
 					{
 						"type": "ParticleEffect",
@@ -111,8 +112,7 @@
 						"baseLength": 33,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "FFE176FF",
-						"cone": 360
+						"colorTo": "FFE176FF"
 					},
 					{
 						"type": "WaveEffect",
@@ -129,29 +129,32 @@
 		},
 		"surge-alloy": {
 			"type": "FlakBulletType",
+			"damage": 50,
+			"splashDamageRadius": 40,
+			"splashDamage": 250,
 			"lightningDamage": 38,
-			"lightning": 2,
-			"lightningLength": 15,
-			"lightningLengthRand": 5,
+			"lightning": 5,
+			"lightningLength": 6,
+			"lightningLengthRand": 2,
 			"shrinkY": 0,
 			"speed": 7,
-			"damage": 20,
 			"hitSize": 30,
 			"homingDelay": 15,
-			"homingPower": 0.065,
+			"homingPower": 0.09,
 			"homingRange": 120,
 			"lifetime": 115,
 			"hitSound": "explosion",
-			"width": 12,
-			"height": 50,
+			"hitSoundVolume": 5,
+			"width": 16,
+			"height": 56,
 			"ammoMultiplier": 6,
 			"hitShake": 3,
 			"sprite": "饱和火力-导弹",
 			"backColor": "EEEE00",
 			"frontColor": "E3E3E3",
-			"trailLength": 3,
-			"trailWidth": 1.5,
-			"trailColor": "FFFFFF",
+			"trailLength": 40,
+			"trailWidth": 2,
+			"trailColor": "FFFFFF88",
 			"trailChance": 1,
 			"trailInterval": 16,
 			"trailEffect": {
@@ -160,13 +163,13 @@
 				"length": 16,
 				"baseLength": 1,
 				"lifetime": 45,
-				"cone": 360,
 				"colorFrom": "E3E3E380",
 				"colorTo": "E3E3E380",
 				"sizeFrom": 3,
 				"sizeTo": 0
 			},
-			"shootEffect": "shootSmallFlame",
+			"shootEffect": "shootTitan",
+			"smokeEffect": "shootPyraFlame",
 			"hitEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -179,8 +182,7 @@
 						"baseLength": 33,
 						"lifetime": 35,
 						"colorFrom": "EEEE00AA",
-						"colorTo": "737373FF",
-						"cone": 360
+						"colorTo": "737373"
 					},
 					{
 						"type": "ParticleEffect",
@@ -192,8 +194,7 @@
 						"baseLength": 43,
 						"lifetime": 22,
 						"colorFrom": "EEEE00",
-						"colorTo": "FFE176FF",
-						"cone": 360
+						"colorTo": "FFE176FF"
 					},
 					{
 						"type": "WaveEffect",
@@ -206,35 +207,31 @@
 						"colorTo": "ffffff"
 					}
 				]
-			},
-			"splashDamageRadius": 40,
-			"splashDamage": 230
+			}
 		},
 		"镄": {
-			"type": "FlakBulletType",
+			"type": "BasicBulletType",
+			"collidesGround": false,
 			"status": "melting",
 			"statusDuration": 180,
 			"speed": 10,
-			"damage": 266,
-			"splashDamageRadius": 8,
-			"splashDamage": 9,
-			"pierce": true,
+			"damage": 340,
 			"pierceArmor": true,
-			"pierceCap": 4,
 			"hitShake": 2,
 			"homingDelay": 15,
 			"homingPower": 0.12,
 			"homingRange": 160,
 			"lifetime": 88,
 			"hitSound": "shotgun",
-			"width": 12,
-			"height": 52,
+			"hitSoundVolume": 0.2,
+			"width": 15,
+			"height": 53,
 			"shrinkY": 0,
 			"ammoMultiplier": 1,
 			"sprite": "饱和火力-落雁",
 			"backColor": "DEDEDEFF",
 			"frontColor": "E3E3E3",
-			"trailLength": 4,
+			"trailLength": 20,
 			"trailWidth": 1.7,
 			"trailColor": "FFFFFF",
 			"trailChance": 1,
@@ -252,7 +249,8 @@
 				"sizeFrom": 1,
 				"sizeTo": 5
 			},
-			"shootEffect": "shootSmallFlame",
+			"shootEffect": "shootTitan",
+			"smokeEffect": "shootPyraFlame",
 			"hitEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -264,9 +262,8 @@
 						"length": 33,
 						"baseLength": 6,
 						"lifetime": 25,
-						"colorFrom": "737373FF",
-						"colorTo": "737373FF",
-						"cone": 360
+						"colorFrom": "737373",
+						"colorTo": "737373"
 					},
 					{
 						"type": "ParticleEffect",
@@ -299,8 +296,8 @@
 	},
 	"requirements": [
 		"copper/560",
-		"silicon/350",
-		"硅钢/140",
+		"graphite/500",
+		"硅钢/400",
 		"plastanium/170",
 		"二级协议/0"
 	],

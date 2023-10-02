@@ -1,6 +1,7 @@
 {
 	"type": "ItemTurret",
 	"name": "刺剑",
+	"unitSort": "weakest",
 	"health": 3250,
 	"size": 3,
 	"reload": 28,

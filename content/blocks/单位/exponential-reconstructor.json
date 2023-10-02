@@ -1,8 +1,7 @@
 {
 	"liquidCapacity":90,
 	"consumes": {
-		"power": 20,
-		"liquid": "cryofluid/1"
+		"power": 20
 	},
 	"requirements": [
 		"lead/2000",
