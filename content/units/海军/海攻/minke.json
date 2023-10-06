@@ -13,29 +13,29 @@
 			"inaccuracy": 8,
 			"alternate": true,
 			"ejectEffect": "casing1",
-			"shootSound":"shoot",
+			"shootSound": "shoot",
 			"bullet": {
 				"type": "FlakBulletType",
 				"ammoMultiplier": 5,
 				"speed": 6,
-				"lifetime": 34,
+				"lifetime": 41.6,
 				"width": 9,
 				"height": 10,
 				"damage": 3,
 				"splashDamage": 33,
 				"splashDamageRadius": 20,
 				"hitEffect": "flakExplosion",
-				"despawnEffect": "flakExplosion",
 				"fragBullets": 7,
 				"fragBullet": {
 					"type": "BasicBulletType",
 					"collidesGround": false,
 					"despawnEffect": "none",
-					"width": 4,
-					"height": 4,
-					"damage": 7,
-					"lifetime": 30,
-					"speed": 1.5
+					"width": 5,
+					"height": 12,
+					"shrinkY": 1,
+					"damage": 5,
+					"lifetime": 20,
+					"speed": 3
 				}
 			}
 		},

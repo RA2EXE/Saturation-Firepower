@@ -5,7 +5,7 @@
 	"armor": 46,
 	"size": 8,
 	"reload": 6,
-	"range": 520,
+	"range": 456,
 	"maxAmmo": 32,
 	"shootCone": 35,
 	"recoilTime": 18,
@@ -105,7 +105,7 @@
 		"硅钢": {
 			"type": "BasicBulletType",
 			"speed": 17,
-			"lifetime": 30,
+			"lifetime": 26.8,
 			"width": 16,
 			"height": 21,
 			"damage": 105,
@@ -159,13 +159,12 @@
 				"cone": 10
 			},
 			"hitEffect": "flakExplosionBig",
-			"despawnEffect": "flakExplosionBig",
 			"ammoMultiplier": 1
 		},
 		"thorium": {
 			"speed": 21,
 			"damage": 293.75,
-			"lifetime": 25,
+			"lifetime": 21.7,
 			"knockback": 4,
 			"pierce": true,
 			"pierceArmor": true,
@@ -217,12 +216,13 @@
 				"colorTo": "ffffff",
 				"cone": 10
 			},
+			"hitEffect": "hitBulletBig",
 			"ammoMultiplier": 1
 		},
 		"surge-alloy": {
 			"type": "BasicBulletType",
 			"speed": 17,
-			"lifetime": 30,
+			"lifetime": 26.8,
 			"knockback": 8,
 			"width": 18,
 			"height": 22,
@@ -290,7 +290,7 @@
 			"inaccuracy": 2,
 			"ammoMultiplier": 2,
 			"speed": 20,
-			"lifetime": 26,
+			"lifetime": 27.2,
 			"width": 18,
 			"height": 50,
 			"absorbable": false,
@@ -462,7 +462,7 @@
 		"镄": {
 			"speed": 26,
 			"damage": 352.5,
-			"lifetime": 20,
+			"lifetime": 17.5,
 			"knockback": 0.65,
 			"pierce": true,
 			"pierceArmor": true,
@@ -515,6 +515,7 @@
 				"colorTo": "ffffff",
 				"cone": 10
 			},
+			"hitEffect": "hitBulletBig",
 			"ammoMultiplier": 3,
 			"fragBullets": 4,
 			"fragRandomSpread": 30,
@@ -535,7 +536,7 @@
 			"damage": 188,
 			"status": "内溃",
 			"pierceArmor": true,
-			"lifetime": 25,
+			"lifetime": 21.7,
 			"knockback": 11,
 			"width": 20,
 			"height": 25,
@@ -584,6 +585,7 @@
 				"colorTo": "ffffff",
 				"cone": 10
 			},
+			"hitEffect": "hitBulletBig",
 			"ammoMultiplier": 3,
 			"fragBullets": 5,
 			"fragRandomSpread": 60,

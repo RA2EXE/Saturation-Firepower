@@ -1,0 +1,131 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"name": "敲门砖",
+	"armor": 33,
+	"speed": 11.6,
+	"lifetime": 35,
+	"drag": 0.1,
+	"rotateSpeed": 0,
+	"hitSize": 10,
+	"health": 1200,
+	"hidden": true,
+	"deathSound": "explosionbig",
+	"immunities":["sapped","unmoving","disarmed","electrified","干扰","崩溃"],
+	"engineColor": "FF5B5B",
+	"trailColor": "FF5B5B",
+	"trailLength": 12,
+	"engineLayer": 110,
+	"engineOffset": 10,
+	"engineSize": 3,
+	"abilities": [
+		{
+			"type": "StatusFieldAbility",
+			"duration": 6,
+			"reload": 30,
+			"range": 1,
+			"applyEffect": "none",
+			"activeEffect": {
+				"type": "WaveEffect",
+				"interp": "circleOut",
+				"lifetime": 10,
+				"sizeFrom": 0,
+				"sizeTo": 45,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5B"
+			},
+			"effect": "invincible"
+		}
+	],
+	"maxRange": 45,
+	"weapons": [
+		{
+			"name": "敲门砖1",
+			"reload": 60,
+			"x": 0,
+			"mirror": false,
+			"rotate": true,
+			"shake": 10,
+			"shootSound": "none",
+			"shootOnDeath": true,
+			"shootCone": 360,
+			"bullet": {
+				"instantDisappear": true,
+				"hitSound": "titanExplosion",
+				"killShooter": true,
+				"pierceArmor": true,
+				"collides":false,
+				"splashDamageRadius": 45,
+				"splashDamage": 1500,
+				"buildingDamageMultiplier": 6,
+				"status": "碎解",
+				"statusDuration": 1200,
+				"suppressionRange": 380,
+				"suppressionDuration": 1200,
+				"hitShake": 8,
+				"shootEffect": "massiveExplosion",
+				"smokeEffect": "massiveExplosion",
+				"despawnEffect": "massiveExplosion",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type":"WrapEffect",
+							"effect":"dynamicSpikes",
+							"color":"FF5B5B",
+							"rotation": 380
+						},
+						{
+							"type": "WaveEffect",
+							"interp":"circleOut",
+							"lifetime": 20,
+							"sizeFrom": 0,
+							"sizeTo": 380,
+							"strokeFrom": 22,
+							"strokeTo": 10,
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B00"
+						},
+						{
+							"type":"WrapEffect",
+							"effect":"dynamicSpikes",
+							"color":"FF5B5B",
+							"rotation": 45
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 26,
+							"sizeFrom": 10,
+							"sizeTo": 0,
+							"length": 65,
+							"baseLength": 0,
+							"lifetime": 120,
+							"interp": "fastSlow",
+							"sizeInterp": "pow5In",
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B50"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 92,
+							"line": true,
+							"strokeFrom": 8,
+							"strokeTo": 0,
+							"lenFrom": 35,
+							"lenTo": 0,
+							"length": 400,
+							"baseLength": 33,
+							"lifetime": 42,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "FFFFFF",
+							"colorTo": "FF5B5B"
+						}
+					]
+				}
+			}
+		}
+	]
+}

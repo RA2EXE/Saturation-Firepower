@@ -1,11 +1,10 @@
 {
 	"type": "Prop",
-	"name": "地面隔离层",
+	"name": "废弃金属块",
 	"variants": 2,
 	"buildCostMultiplier": 0.1,
 	"requirements": [
-		"镄/100",
-		"裂位能/50"
+		"镄/200"
 	],
 	"buildVisibility": "editorOnly"
 }

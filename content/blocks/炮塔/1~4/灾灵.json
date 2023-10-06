@@ -48,7 +48,8 @@
 			"height": 20,
 			"ammoMultiplier": 3,
 			"shootEffect": "shootBig",
-			"smokeEffect": "shootBigSmoke"
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig"
 		},
 		"thorium": {
 			"speed": 11,
@@ -63,6 +64,7 @@
 			"height": 23,
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig",
 			"ammoMultiplier": 3
 		},
 		"pyratite": {
@@ -87,7 +89,6 @@
 			"width": 16,
 			"height": 20,
 			"ammoMultiplier": 3,
-			"despawnEffect": "flakExplosionBig",
 			"hitEffect": "flakExplosionBig",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke"
@@ -107,7 +108,6 @@
 			"width": 16,
 			"height": 20,
 			"ammoMultiplier": 4,
-			"despawnEffect": "flakExplosionBig",
 			"hitEffect": "flakExplosionBig",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke"
@@ -124,7 +124,7 @@
 			"lifetime": 31,
 			"width": 9,
 			"height": 23,
-			"pierce":true,
+			"pierce": true,
 			"pierceCap": 3,
 			"pierceArmor": true,
 			"hittable": false,

@@ -5,9 +5,10 @@
 	"size": 5,
 	"requirements": [
 		"镄/1400",
+		"硅钢/800",
 		"裂位能/650"
 	],
-	"buildCostMultiplier": 100,
+	"buildCostMultiplier": 0.5,
 	"buildVisibility":"sandboxOnly",
 	"category": "defense"
 }

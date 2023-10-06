@@ -57,7 +57,8 @@
 			"width": 9,
 			"height": 13,
 			"ammoMultiplier": 5,
-			"shootEffect": "shootBig"
+			"shootEffect": "shootBig",
+			"hitEffect": "hitBulletBig"
 		},
 		"pyratite": {
 			"type": "BasicBulletType",
@@ -87,7 +88,8 @@
 			"height": 15,
 			"ammoMultiplier": 4,
 			"shootEffect": "shootBig",
-			"smokeEffect": "shootBigSmoke"
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig"
 		},
 		"镄": {
 			"type": "BasicBulletType",
@@ -101,7 +103,8 @@
 			"height": 15,
 			"ammoMultiplier": 6,
 			"shootEffect": "shootBig",
-			"smokeEffect": "shootBigSmoke"
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig"
 		},
 		"铬": {
 			"type": "BasicBulletType",
@@ -116,7 +119,8 @@
 			"height": 15,
 			"ammoMultiplier": 6,
 			"shootEffect": "shootBig",
-			"smokeEffect": "shootBigSmoke"
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig"
 		}
 	},
 	"requirements": [

@@ -6,7 +6,6 @@
 	"lifetime": 200,
 	"rotateSpeed": 2.2,
 	"loopSoundVolume": 0.03,
-	"deathSound": "explosionbig",
 	"hidden": true,
 	"missileAccelTime": 30,
 	"homingDelay": 30,
@@ -52,6 +51,7 @@
 			"shake": 10,
 			"shootSound": "none",
 			"shootOnDeath": true,
+			"shootCone": 360,
 			"bullet": {
 				"collides":false,
 				"instantDisappear": true,

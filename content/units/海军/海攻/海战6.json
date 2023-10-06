@@ -48,8 +48,8 @@
 				"trailWidth": 2.5,
 				"width": 12,
 				"height": 13,
-				"speed": 8,
-				"lifetime": 58.5
+				"speed": 6,
+				"lifetime": 78.5
 			}
 		},
 		{
@@ -75,7 +75,7 @@
 				"splashDamage": 43,
 				"homingDelay": 38.5,
 				"homingRange": 60,
-				"homingPower": 0.22,
+				"homingPower": 0.3,
 				"shootEffect": "shootBig2",
 				"smokeEffect": "shootSmallFlame",
 				"hitEffect": "plasticExplosion",
@@ -84,8 +84,8 @@
 				"trailWidth": 2.5,
 				"width": 12,
 				"height": 13,
-				"speed": 6,
-				"lifetime": 78.5,
+				"speed": 8,
+				"lifetime": 58.5,
 				"frontColor": "cbd97f",
 				"fragBullets": 8,
 				"fragBullet": {

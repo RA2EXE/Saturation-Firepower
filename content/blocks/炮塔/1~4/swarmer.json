@@ -170,7 +170,7 @@
 			"hitSound": "laser",
 			"hitSoundVolume": 0.1,
 			"splashDamageRadius": 16,
-			"splashDamage": 34,
+			"splashDamage": 22,
 			"lightningColor": "EEC591",
 			"lightningDamage": 12,
 			"lightning": 2,
@@ -198,7 +198,7 @@
 				"fromColor":"EEC591",
 				"toColor":"EEC59180",
 				"despawnEffect": "none",
-				"damage": 52,
+				"damage": 42,
 				"width": 8,
 				"length": 72
 			}

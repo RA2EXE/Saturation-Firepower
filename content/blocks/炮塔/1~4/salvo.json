@@ -72,12 +72,14 @@
 			"damage": 18,
 			"homingPower": 0.1,
 			"reloadMultiplier": 1.67,
-			"ammoMultiplier": 5
+			"ammoMultiplier": 5,
+			"hitEffect": "hitBulletBig"
 		},
 		"thorium": {
 			"type": "BasicBulletType",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig",
 			"width": 12,
 			"height": 19,
 			"speed": 17,

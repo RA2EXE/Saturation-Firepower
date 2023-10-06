@@ -1,0 +1,78 @@
+{
+	"type": "legs",
+	"name": "敲门砖",
+	"armor": 40,
+	"speed": 1.36,
+	"drag": 0.1,
+	"rotateSpeed": 1.52,
+	"hitSize": 18,
+	"health": 3200,
+	"stepShake": 0,
+	"legCount": 6,
+	"legLength": 18,
+	"legGroupSize": 3,
+	"lockLegBase": true,
+	"legContinuousMove": true,
+	"legExtension": -3,
+	"legBaseOffset": 7,
+	"legMaxLength": 1.1,
+	"legMinLength": 0.2,
+	"legLengthScl": 0.95,
+	"legForwardScl": 0.9,
+	"legMoveSpace": 1,
+	"immunities":["sapped","unmoving","disarmed","electrified","干扰","崩溃"],
+	"drownTimeMultiplier": 6,
+	"hovering": true,
+	"allowLegStep": true,
+	"range": 410,
+	"abilities": [
+		{
+			"type": "StatusFieldAbility",
+			"duration": 6,
+			"reload": 30,
+			"range": 1,
+			"applyEffect": "none",
+			"activeEffect": {
+				"type": "WaveEffect",
+				"interp": "circleOut",
+				"lifetime": 10,
+				"sizeFrom": 0,
+				"sizeTo": 45,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5B"
+			},
+			"effect": "invincible"
+		}
+	],
+	"weapons": [
+		{
+			"name": "敲门砖1",
+			"reload": 120,
+			"x": 0,
+			"mirror": false,
+			"rotate": false,
+			"inaccuracy": 0,
+			"shootCone": 100,
+			"ejectEffect": "none",
+			"shootSound": "missileLaunch",
+			"shootStatusDuration": 180,
+			"shootStatus": "slow",
+			"minWarmup": 0.9,
+			"shootWarmupSpeed": 0.05,
+			"shoot": {
+				"type": "ShootPattern",
+				"firstShotDelay": 180
+			},
+			"bullet": {
+				"killShooter": true,
+				"keepVelocity": false,
+				"hitShake": 8,
+				"speed": 0,
+				"shootEffect": "massiveExplosion",
+				"spawnUnit": "敲门砖-弹"
+			}
+		}
+	]
+}

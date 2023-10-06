@@ -264,7 +264,7 @@ SFlib.addToResearch(狭长冰谷, {
 
 
 const 火天路 = new SectorPreset("火天路", TBLY, 48);
-火天路.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]阔野生产试验基地-熔岩区，该处地质活动比较频繁，同时该处的矿物质丰度很高，能源储备充裕。\n整理手头资源，尽可能协助第二军团进行阔野的生产理论研究，不要使用高能量反应的武器，避免被敌方探测。";
+火天路.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]阔野生产试验基地-熔岩区，该处地质活动比较频繁，同时该处的矿物质丰度很高，能源储备充裕。\n整理手头资源，尽可能协助第二军团进行阔野的生产理论研究，不要使用高能量反应的器械，避免被敌方探测。";
 火天路.difficulty = 22;
 火天路.alwaysUnlocked = false;
 火天路.addStartingItems = true;

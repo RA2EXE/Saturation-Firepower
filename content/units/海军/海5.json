@@ -6,10 +6,10 @@
 	"ammoType": "surge-alloy",
 	"ammoCapacity": 1200,
 	"hitSize": 60,
-	"trailLength": 70,
+	"trailLength": 80,
 	"waveTrailX": 20,
 	"waveTrailY": -24,
-	"trailScl": 3.5,
+	"trailScl": 4.5,
 	"health": 44800,
 	"armor": 14,
 	"faceTarget": false,
@@ -625,7 +625,7 @@
 					"lifetime": 26,
 					"colorFrom": "FEEBB3",
 					"colorTo": "FEEBB3",
-					"cone": 15
+					"cone": 10
 				},
 				"smokeEffect": "bigShockwave",
 				"hitSound": "plasmaboom",

@@ -155,7 +155,7 @@
 				]
 			},
 			"minVelocity": 3,
-			"rotation": -90,
+			"rotation": 0,
 			"rotateEffect": true,
 			"interval": 10,
 			"y": -9
