@@ -115,9 +115,8 @@
 			"splashDamageRadius": 42,
 			"splashDamage": 15,
 			"inaccuracy": 3,
-			"speed": 6,
-			"drag": -0.02,
-			"lifetime": 26,
+			"speed": 24.5,
+			"lifetime": 7.87,
 			"width": 9,
 			"height": 23,
 			"hittable": false,
@@ -132,19 +131,21 @@
 				"type": "WrapEffect",
 				"effect": "dynamicSpikes",
 				"color": "EEC591",
-				"rotation": 35
+				"rotation": 42
 			},
 			"despawnEffect": {
 				"type": "ParticleEffect",
-				"particles": 1,
-				"sizeInterp": "pow5In",
-				"sizeFrom": 6,
+				"particles": 6,
+				"sizeFrom": 8,
 				"sizeTo": 0,
-				"length": 0,
+				"length": 60,
 				"baseLength": 0,
-				"lifetime": 50,
+				"lifetime": 60,
+				"interp": "fastSlow",
+				"sizeInterp": "pow5In",
 				"colorFrom": "FEEBB3",
-				"colorTo": "FEEBB3"
+				"colorTo": "FEEBB350",
+				"cone": 20
 			},
 			"shootEffect": "shootBig",
 			"smokeEffect": {

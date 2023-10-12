@@ -173,6 +173,7 @@
 		"silicon": {
 			"ammoMultiplier": 1,
 			"smokeEffect": "shootSmallFlame",
+			"speed": 0,
 			"spawnUnit": "缉踪导弹"
 		}
 	},

@@ -94,7 +94,8 @@
 	"itemCapacity": 1800,
 	"research": {
 		"parent": "阔野管理中心",
-		"requirements": ["三级协议/8000"]
+		"objectives": [{"type": "SectorComplete","preset": "溢裂要塞"}],
+		"requirements": ["三级协议/1000"]
 	},
 	"abilities": [
 		{

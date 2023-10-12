@@ -33,6 +33,7 @@
 		"metaglass": {
 			"type": "FlakBulletType",
 			"ammoMultiplier": 5,
+			"reloadMultiplier": 0.7,
 			"speed": 6,
 			"lifetime": 36,
 			"width": 6,

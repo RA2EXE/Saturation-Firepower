@@ -2,7 +2,6 @@
 	"type": "Constructor",
 	"name": "载荷组装器",
 	"health": 2000,
-	"breakable":false,
 	"canOverdrive": false,
 	"minBlockSize": 4,
 	"maxBlockSize": 4,

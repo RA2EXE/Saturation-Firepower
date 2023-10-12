@@ -105,7 +105,7 @@
 					{
 						"type": "ParticleEffect",
 						"particles": 1,
-						"startDelay": 1.5,
+						"startDelay": 1,
 						"region": "饱和火力-箭头",
 						"sizeInterp": "pow5Out",
 						"sizeFrom": 0,
@@ -120,7 +120,7 @@
 					{
 						"type": "ParticleEffect",
 						"particles": 1,
-						"startDelay": 4.5,
+						"startDelay": 3.5,
 						"region": "饱和火力-箭头",
 						"sizeFrom": 36,
 						"sizeTo": 0,
@@ -139,7 +139,7 @@
 			"smokeEffect": {
 				"type": "ParticleEffect",
 				"particles": 17,
-				"sizeFrom": 8,
+				"sizeFrom": 11,
 				"sizeTo": 0,
 				"interp": "pow10Out",
 				"sizeInterp": "pow5In",
@@ -147,25 +147,94 @@
 				"baseLength": 3,
 				"lifetime": 100,
 				"colorFrom": "FF7055",
-				"colorTo": "9b9dcf",
+				"colorTo": "9b9dcfDB",
 				"cone": 10
 			},
 			"hitEffect": {
-				"type": "ParticleEffect",
-				"particles": 22,
-				"line": true,
-				"interp": "pow10Out",
-				"sizeInterp": "pow10In",
-				"strokeFrom": 5,
-				"strokeTo": 0,
-				"lenFrom": 23,
-				"lenTo": 0,
-				"length": 120,
-				"baseLength": 0,
-				"lifetime": 10,
-				"colorFrom": "FFE176",
-				"colorTo": "FFE176",
-				"cone": 60
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 36,
+						"line": true,
+						"interp": "fastSlow",
+						"sizeInterp": "pow3In",
+						"strokeFrom": 2,
+						"strokeTo": 0,
+						"lenFrom": 13,
+						"lenTo": 0,
+						"length": -90,
+						"baseLength": 0,
+						"lifetime": 22,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFE176",
+						"cone": 90
+					},
+					{
+						"type": "ParticleEffect",
+						"region": "饱和火力-菱形",
+						"startDelay": 1,
+						"particles": 3,
+						"sizeFrom": 12,
+						"sizeTo": 0,
+						"length": 66,
+						"lifetime": 45,
+						"interp": "pow5Out",
+						"sizeInterp": "pow10In",
+						"colorFrom": "9b9dcf",
+						"colorTo": "9b9dcfdd"
+					},
+					{
+						"type": "ParticleEffect",
+						"region": "饱和火力-菱形",
+						"startDelay": 1,
+						"particles": 6,
+						"sizeFrom": 9,
+						"sizeTo": 0,
+						"length": 66,
+						"lifetime": 45,
+						"interp": "pow5Out",
+						"sizeInterp": "pow10In",
+						"colorFrom": "9b9dcf",
+						"colorTo": "9b9dcfbb"
+					},
+					{
+						"type": "ParticleEffect",
+						"startDelay": 1.1,
+						"particles": 22,
+						"line": true,
+						"interp": "pow10Out",
+						"sizeInterp": "pow10In",
+						"strokeFrom": 3.3,
+						"strokeTo": 0,
+						"lenFrom": 20,
+						"lenTo": 0,
+						"length": 90,
+						"baseLength": 0,
+						"lifetime": 18,
+						"colorFrom": "FFE176",
+						"colorTo": "FFE176",
+						"cone": 40
+					},
+					{
+						"type": "ParticleEffect",
+						"startDelay": 0.88,
+						"particles": 8,
+						"line": true,
+						"interp": "pow10Out",
+						"sizeInterp": "pow10In",
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"lenFrom": 33,
+						"lenTo": 0,
+						"length": 128,
+						"baseLength": 0,
+						"lifetime": 22,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFE176",
+						"cone": 10
+					}
+				]
 			},
 			"hitSound": "shootSmite",
 			"hitSoundVolume": 3,
@@ -214,6 +283,20 @@
 						"colorTo": "FFFFFF00"
 					}
 				]
+			},
+			"fragRandomSpread": 0,
+			"fragRandomAngel": 180,
+			"fragBullets": 1,
+			"fragBullet": {
+				"despawnEffect": "none",
+				"width": 16,
+				"height": 22,
+				"shrinkY": 2,
+				"damage": 19497,
+				"backColor": "9b9dcfDF",
+				"frontColor": "9b9dcf",
+				"lifetime": 15,
+				"speed": 15
 			}
 		}
 	},

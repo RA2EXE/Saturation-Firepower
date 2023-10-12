@@ -3,19 +3,20 @@
 	"name": "拓断",
 	"health": 2330,
 	"size": 4,
-	"armor":8,
+	"armor": 8,
 	"reload": 44,
 	"range": 223.6,
-	"coolantMultiplier":3,
+	"coolantMultiplier": 3,
 	"consumes": {
-		"coolant":{
-	"amount": 0.5,
-	"optional":true}
+		"coolant": {
+			"amount": 0.5,
+			"optional": true
+		}
 	},
 	"minWarmup": 0.6,
 	"warmupMaintainTime": 45,
 	"shootWarmupSpeed": 0.08,
-	"outlineColor":"2d2f39",
+	"outlineColor": "2d2f39",
 	"drawer": {
 		"type": "DrawTurret",
 		"basePrefix": "reinforced-",
@@ -50,61 +51,75 @@
 			}
 		]
 	},
-	"shootSound":"shootAlt",
-	"consumeAmmoOnce":false,
+	"shootSound": "shootAlt",
+	"consumeAmmoOnce": false,
 	"shoot": {
 		"shots": 6,
-		"shotDelay":13,
-		"type":"ShootBarrel",
-		"barrels":[
-			0,12,0,
-			6.75,0,0,
-			-6.75,0,0
+		"shotDelay": 13,
+		"type": "ShootBarrel",
+		"barrels": [
+			0,
+			12,
+			0,
+			6.75,
+			0,
+			0,
+			-6.75,
+			0,
+			0
 		]
 	},
-	"shootY":0,
+	"shootY": 0,
 	"ammoUseEffect": "none",
 	"inaccuracy": 1,
 	"rotateSpeed": 1,
-	"shootCone":360,
+	"shootCone": 360,
 	"shake": 1,
-	"maxAmmo":24,
+	"maxAmmo": 24,
 	"ammoPerShot": 2,
 	"recoilTime": 22,
-	"recoil":3,
+	"recoil": 3,
 	"ammoTypes": {
 		"beryllium": {
-			"type":"BasicBulletType",
+			"type": "BasicBulletType",
 			"damage": 72,
-			"buildingDamageMultiplier":0.33,
-			"ammoMultiplier":1,
-			"knockback":1.1,
+			"buildingDamageMultiplier": 0.33,
+			"ammoMultiplier": 1,
+			"knockback": 1.1,
 			"speed": 12,
 			"lifetime": 18.666667,
 			"width": 13,
 			"height": 22,
-			"pierce": true,	
-			"pierceBuilding":true,
-			"pierceCap":3,
-			"backColor":"b1dd7e",
-			"frontColor":"ffffff",
+			"pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 3,
+			"backColor": "b1dd7e",
+			"frontColor": "ffffff",
 			"trailColor": "b1dd7e",
 			"trailLength": 11,
 			"trailWidth": 2.2,
-			"hitEffect":{
-			"type": "ParticleEffect",
-			"particles": 5,
-			"strokeFrom": 3,
-			"strokeTo": 0,
-			"lenFrom": 18,
-			"lenTo": 0,
-			"line": true,
-			"length": 32,
-			"baseLength": 0,
-			"lifetime": 20,
-			"colorFrom": "b1dd7e",
-			"colorTo": "b1dd7e",
-			"cone":30},
+			"hitColor": "b1dd7e",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"hitBulletColor",
+					{
+						"type": "ParticleEffect",
+						"particles": 5,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"lenFrom": 18,
+						"lenTo": 0,
+						"line": true,
+						"length": 32,
+						"baseLength": 0,
+						"lifetime": 20,
+						"colorFrom": "b1dd7e",
+						"colorTo": "b1dd7e",
+						"cone": 30
+					}
+				]
+			},
 			"shootEffect": {
 				"type": "ParticleEffect",
 				"particles": 6,
@@ -120,12 +135,12 @@
 				"colorTo": "b1dd7e",
 				"cone": 16
 			},
-			"despawnEffect":{
+			"despawnEffect": {
 				"type": "ParticleEffect",
-				"region":"饱和火力-菱形",
+				"region": "饱和火力-菱形",
 				"particles": 3,
-				"sizeFrom":3,
-				"sizeTo":0,
+				"sizeFrom": 3,
+				"sizeTo": 0,
 				"interp": "pow10Out",
 				"sizeInterp": "pow5In",
 				"length": 13,
@@ -134,40 +149,48 @@
 				"colorFrom": "b1dd7e",
 				"colorTo": "b1dd7e"
 			},
-			"smokeEffect":"shootBigSmoke"
-			},
+			"smokeEffect": "shootBigSmoke"
+		},
 		"tungsten": {
-			"type":"BasicBulletType",
+			"type": "BasicBulletType",
 			"damage": 96.8,
-			"buildingDamageMultiplier":0.33,
-			"knockback":1.5,
+			"buildingDamageMultiplier": 0.33,
+			"knockback": 1.5,
 			"speed": 12,
-			"lifetime":22.3,
-			"rangeChange":44,
+			"lifetime": 22.3,
+			"rangeChange": 44,
 			"width": 13,
 			"height": 23,
-			"pierce": true,	
-			"pierceBuilding":true,
-			"pierceCap":3,
-			"backColor":"768a9a",
-			"frontColor":"ffffff",
+			"pierce": true,
+			"pierceBuilding": true,
+			"pierceCap": 3,
+			"backColor": "768a9a",
+			"frontColor": "ffffff",
 			"trailColor": "768a9a",
 			"trailLength": 11,
 			"trailWidth": 2.3,
-			"hitEffect":{
-			"type": "ParticleEffect",
-			"particles": 5,
-			"strokeFrom": 3,
-			"strokeTo": 0,
-			"lenFrom": 18,
-			"lenTo": 0,
-			"line": true,
-			"length": 32,
-			"baseLength": 0,
-			"lifetime": 20,
-			"colorFrom": "768a9a",
-			"colorTo": "768a9a",
-			"cone":30},
+			"hitColor": "768a9a",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"hitBulletColor",
+					{
+						"type": "ParticleEffect",
+						"particles": 5,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"lenFrom": 18,
+						"lenTo": 0,
+						"line": true,
+						"length": 32,
+						"baseLength": 0,
+						"lifetime": 20,
+						"colorFrom": "768a9a",
+						"colorTo": "768a9a",
+						"cone": 30
+					}
+				]
+			},
 			"shootEffect": {
 				"type": "ParticleEffect",
 				"particles": 6,
@@ -183,12 +206,12 @@
 				"colorTo": "768a9a",
 				"cone": 16
 			},
-			"despawnEffect":{
+			"despawnEffect": {
 				"type": "ParticleEffect",
-				"region":"饱和火力-菱形",
+				"region": "饱和火力-菱形",
 				"particles": 3,
-				"sizeFrom":3,
-				"sizeTo":0,
+				"sizeFrom": 3,
+				"sizeTo": 0,
 				"interp": "pow10Out",
 				"sizeInterp": "pow5In",
 				"length": 13,
@@ -197,40 +220,48 @@
 				"colorFrom": "768a9a",
 				"colorTo": "768a9a"
 			},
-			"smokeEffect":"shootBigSmoke"
-			},
+			"smokeEffect": "shootBigSmoke"
+		},
 		"thorium": {
-			"type":"BasicBulletType",
+			"type": "BasicBulletType",
 			"damage": 126.3,
-			"buildingDamageMultiplier":0.33,
+			"buildingDamageMultiplier": 0.33,
 			"speed": 15,
-			"lifetime":17.84,
-			"rangeChange":44,
+			"lifetime": 17.84,
+			"rangeChange": 44,
 			"width": 14,
 			"height": 22.5,
-			"pierce": true,	
-			"pierceBuilding":true,
+			"pierce": true,
+			"pierceBuilding": true,
 			"pierceArmor": true,
-			"pierceCap":3,
-			"backColor":"f9a3c7",
-			"frontColor":"ffffff",
+			"pierceCap": 3,
+			"backColor": "f9a3c7",
+			"frontColor": "ffffff",
 			"trailColor": "f9a3c7",
 			"trailLength": 11,
 			"trailWidth": 2.4,
-			"hitEffect":{
-			"type": "ParticleEffect",
-			"particles": 5,
-			"strokeFrom": 3,
-			"strokeTo": 0,
-			"lenFrom": 18,
-			"lenTo": 0,
-			"line": true,
-			"length": 32,
-			"baseLength": 0,
-			"lifetime": 20,
-			"colorFrom": "f9a3c7",
-			"colorTo": "f9a3c7",
-			"cone":30},
+			"hitColor": "f9a3c7",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"hitBulletColor",
+					{
+						"type": "ParticleEffect",
+						"particles": 5,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"lenFrom": 18,
+						"lenTo": 0,
+						"line": true,
+						"length": 32,
+						"baseLength": 0,
+						"lifetime": 20,
+						"colorFrom": "f9a3c7",
+						"colorTo": "f9a3c7",
+						"cone": 30
+					}
+				]
+			},
 			"shootEffect": {
 				"type": "ParticleEffect",
 				"particles": 6,
@@ -246,12 +277,12 @@
 				"colorTo": "f9a3c7",
 				"cone": 16
 			},
-			"despawnEffect":{
+			"despawnEffect": {
 				"type": "ParticleEffect",
-				"region":"饱和火力-菱形",
+				"region": "饱和火力-菱形",
 				"particles": 3,
-				"sizeFrom":3,
-				"sizeTo":0,
+				"sizeFrom": 3,
+				"sizeTo": 0,
 				"interp": "pow10Out",
 				"sizeInterp": "pow5In",
 				"length": 13,
@@ -260,12 +291,14 @@
 				"colorFrom": "f9a3c7",
 				"colorTo": "f9a3c7"
 			},
-			"smokeEffect":"shootBigSmoke"
-			}
+			"smokeEffect": "shootBigSmoke"
+		}
 	},
 	"requirements": [
-		"graphite/360","silicon/250",
-		"beryllium/380","oxide/45",
+		"graphite/360",
+		"silicon/250",
+		"beryllium/380",
+		"oxide/45",
 		"tungsten/180"
 	],
 	"category": "turret",

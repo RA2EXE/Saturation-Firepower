@@ -12,8 +12,8 @@
 	"hidden": true,
 	"deathSound": "explosionbig",
 	"immunities":["sapped","unmoving","disarmed","electrified","干扰","崩溃"],
-	"engineColor": "FF5B5B",
-	"trailColor": "FF5B5B",
+	"engineColor": "A278E1",
+	"trailColor": "A278E1",
 	"trailLength": 12,
 	"engineLayer": 110,
 	"engineOffset": 10,
@@ -33,7 +33,7 @@
 				"sizeTo": 45,
 				"strokeFrom": 8,
 				"strokeTo": 0,
-				"colorFrom": "FF5B5B",
+				"colorFrom": "A278E1",
 				"colorTo": "FF5B5B"
 			},
 			"effect": "invincible"
@@ -60,7 +60,7 @@
 				"splashDamageRadius": 45,
 				"splashDamage": 1500,
 				"buildingDamageMultiplier": 6,
-				"status": "碎解",
+				"status": "sapped",
 				"statusDuration": 1200,
 				"suppressionRange": 380,
 				"suppressionDuration": 1200,
@@ -74,7 +74,7 @@
 						{
 							"type":"WrapEffect",
 							"effect":"dynamicSpikes",
-							"color":"FF5B5B",
+							"color":"A278E1",
 							"rotation": 380
 						},
 						{
@@ -85,13 +85,13 @@
 							"sizeTo": 380,
 							"strokeFrom": 22,
 							"strokeTo": 10,
-							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B00"
+							"colorFrom": "A278E1",
+							"colorTo": "A278E100"
 						},
 						{
 							"type":"WrapEffect",
 							"effect":"dynamicSpikes",
-							"color":"FF5B5B",
+							"color":"A278E1",
 							"rotation": 45
 						},
 						{
@@ -104,8 +104,8 @@
 							"lifetime": 120,
 							"interp": "fastSlow",
 							"sizeInterp": "pow5In",
-							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B50"
+							"colorFrom": "A278E1",
+							"colorTo": "A278E150"
 						},
 						{
 							"type": "ParticleEffect",
@@ -121,7 +121,7 @@
 							"interp": "fastSlow",
 							"sizeInterp": "pow3In",
 							"colorFrom": "FFFFFF",
-							"colorTo": "FF5B5B"
+							"colorTo": "A278E1"
 						}
 					]
 				}

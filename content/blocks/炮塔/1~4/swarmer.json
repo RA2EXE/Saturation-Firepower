@@ -135,8 +135,7 @@
 			"width": 5,
 			"height": 5,
 			"shrinkY": 0,
-			//"speed": 24.5,
-			//"lifetime": 10,
+			
 			"homingDelay": 28.5,
 			"homingPower": 1,
 			"homingRange": 90,

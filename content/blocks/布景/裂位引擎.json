@@ -9,6 +9,6 @@
 		"裂位能/650"
 	],
 	"buildCostMultiplier": 0.5,
-	"buildVisibility":"sandboxOnly",
+	"buildVisibility":"editorOnly",
 	"category": "defense"
 }

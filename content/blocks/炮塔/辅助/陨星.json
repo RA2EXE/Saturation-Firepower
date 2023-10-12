@@ -5,7 +5,7 @@
 	"size": 5,
 	"reload": 980,
 	"fogRadiusMultiplier":0.3,
-	"range": 1000,
+	"range": 450,
 	"maxAmmo": 20,
 	"recoilTime": 180,
 	"recoil": 8,
@@ -34,8 +34,9 @@
 			"type": "BasicBulletType",
 			"ammoMultiplier": 1,
 			"speed": 25,
-			"lifetime": 160,
-			"width": 15,
+			"drag": 0.017,
+			"lifetime": 90,
+			"width": 23,
 			"height": 45,
 			"damage": 58200,
 			"pierce": true,
@@ -55,14 +56,28 @@
 				"colorFrom": "FFFFFF",
 				"colorTo": "ffffff"
 			},
+			"smokeEffect":{
+				"type": "ParticleEffect",
+				"particles": 17,
+				"sizeFrom": 11,
+				"sizeTo": 0,
+				"lifetime": 120,
+				"interp": "pow10Out",
+				"sizeInterp": "pow3In",
+				"baseLength": 0,
+				"length": 45,
+				"cone": 16,
+				"colorFrom": "EEC591A8",
+				"colorTo": "FFFFFF80"
+			},
 			"hitEffect": "instHit",
 			"despawnEffect": "none"
 		}
 	},
 	"requirements": [
-		"镄/25000","blast-compound/50000"
+		"镄/25000",
+		"blast-compound/50000"
 	],
 	"buildVisibility": "sandboxOnly",
-	"category": "turret",
-	"research": "陨星"
+	"category": "turret"
 }
