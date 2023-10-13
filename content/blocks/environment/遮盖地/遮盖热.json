@@ -27,5 +27,6 @@
 		"spores": -20,
 		"heat": 2
 	},
+	"blendGroup": "遮盖",
 	"variants":2
 }

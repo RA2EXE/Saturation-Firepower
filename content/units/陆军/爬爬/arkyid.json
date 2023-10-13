@@ -27,8 +27,8 @@
 				"statusDuration": 200,
 				"status": "sapped",
 				"damage": 38,
-				"color": "A278E1FF",
-				"lightColor": "A278E1FF",
+				"color": "A278E1",
+				"lightColor": "A278E1",
 				"hitColor": "bf92f9",
 				"despawnEffect": "none"
 			}
@@ -57,8 +57,8 @@
 				"statusDuration": 200,
 				"status": "sapped",
 				"damage": 40,
-				"color": "A278E1FF",
-				"lightColor": "A278E1FF",
+				"color": "A278E1",
+				"lightColor": "A278E1",
 				"hitColor": "bf92f9",
 				"despawnEffect": "none"
 			}
@@ -87,8 +87,8 @@
 				"statusDuration": 200,
 				"status": "sapped",
 				"damage": 42,
-				"color": "A278E1FF",
-				"lightColor": "A278E1FF",
+				"color": "A278E1",
+				"lightColor": "A278E1",
 				"hitColor": "bf92f9",
 				"despawnEffect": "none"
 			}
@@ -115,10 +115,10 @@
 				"width": 16,
 				"height": 19,
 				"frontColor": "ffffff",
-				"backColor": "A278E1FF",
+				"backColor": "A278E1",
 				"trailLength": 6,
 				"trailWidth": 3.3,
-				"trailColor": "A278E1FF",
+				"trailColor": "A278E1",
 				"scaleLife": true,
 				"ammoMultiplier": 4,
 				"damage": 45,
@@ -126,7 +126,7 @@
 				"splashDamage": 75,
 				"knockback": 1,
 				"hitShake": 5,
-				"lightningColor": "A278E1FF",
+				"lightningColor": "A278E1",
 				"lightningDamage": 13,
 				"lightning": 3,
 				"lightningLength": 14,
@@ -153,7 +153,7 @@
 							"sizeTo": 80,
 							"strokeFrom": 2,
 							"strokeTo": 0,
-							"colorFrom": "A278E1FF",
+							"colorFrom": "A278E1",
 							"colorTo": "ffffff"
 						}
 					]

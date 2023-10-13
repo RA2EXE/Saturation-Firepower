@@ -6,7 +6,7 @@
 	"drag": 0.1,
 	"rotateSpeed": 1.52,
 	"hitSize": 18,
-	"health": 3200,
+	"health": 3600,
 	"stepShake": 0,
 	"legCount": 6,
 	"legLength": 18,
@@ -25,6 +25,8 @@
 	"hovering": true,
 	"allowLegStep": true,
 	"range": 410,
+	"outlineColor":"383848",
+	"groundLayer": 49,
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",
@@ -46,6 +48,45 @@
 			"effect": "invincible"
 		}
 	],
+	"parts":[
+		{
+			"type": "RegionPart",
+			"mirror": true,
+			"under": true,
+			"layerOffset": -0.001,
+			"moveX": 7,
+			"moveY": -10.25,
+			"moveRot": -150,
+			"suffix": "-弹-展",
+			"heatProgress": "warmup",
+			"heatColor": "A278E1"
+		},
+		{
+			"type": "RegionPart",
+			"mirror": true,
+			"under": true,
+			"layerOffset": -0.001,
+			"moveX": 8,
+			"moveY": -7.25,
+			"moveRot": -120,
+			"suffix": "-弹-展",
+			"heatProgress": "warmup",
+			"heatColor": "A278E1"
+		},
+		{
+			"type": "RegionPart",
+			"mirror": true,
+			"under": true,
+			"layerOffset": -0.001,
+			"moveX": 8,
+			"moveY": -4.25,
+			"moveRot": -90,
+			"suffix": "-弹-展",
+			"heatProgress": "warmup",
+			"heatColor": "A278E1"
+		}
+	],
+	"faceTarget": true,
 	"weapons": [
 		{
 			"name": "敲门砖1",
@@ -54,7 +95,7 @@
 			"mirror": false,
 			"rotate": false,
 			"inaccuracy": 0,
-			"shootCone": 100,
+			"shootCone": 4,
 			"ejectEffect": "none",
 			"shootSound": "missileLaunch",
 			"shootStatusDuration": 180,
@@ -65,14 +106,44 @@
 				"type": "ShootPattern",
 				"firstShotDelay": 180
 			},
+			"parts": [{
+				"type": "RegionPart",
+				"mirror": true,
+				"suffix": "-侧",
+				"progress":"charge",
+				"moveX": 3,
+				"moveRot": -10
+				}],
 			"bullet": {
 				"killShooter": true,
 				"keepVelocity": false,
 				"hitShake": 8,
 				"speed": 0,
 				"shootEffect": "massiveExplosion",
+				"smokeEffect":{
+					"type": "ParticleEffect",
+					"particles": 26,
+					"sizeFrom": 8,
+					"sizeTo": 0,
+					"length": 65,
+					"baseLength": 0,
+					"lifetime": 100,
+					"interp": "fastSlow",
+					"sizeInterp": "pow5In",
+					"colorFrom": "A278E1",
+					"colorTo": "A278E1"
+				},
 				"spawnUnit": "敲门砖-弹"
 			}
 		}
-	]
+	],
+	"research": {
+		"parent": "攻城锤",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "迫降区"
+			}
+		]
+	}
 }

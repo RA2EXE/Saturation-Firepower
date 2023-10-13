@@ -1,0 +1,13 @@
+{
+	"type": "floor",
+	"name": "硬化地面",
+	//"rotate": true,
+	"speedMultiplier": 1.3,
+	"dragMultiplier": 1.25,
+	"attributes":{
+		"oil": -0.125,
+		"water": -0.125
+	},
+	"blendGroup": "硬化地",
+	"variants": 0
+}

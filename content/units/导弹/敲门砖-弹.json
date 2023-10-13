@@ -8,7 +8,7 @@
 	"drag": 0.1,
 	"rotateSpeed": 0,
 	"hitSize": 10,
-	"health": 1200,
+	"health": 2000,
 	"hidden": true,
 	"deathSound": "explosionbig",
 	"immunities":["sapped","unmoving","disarmed","electrified","干扰","崩溃"],
@@ -16,8 +16,8 @@
 	"trailColor": "A278E1",
 	"trailLength": 12,
 	"engineLayer": 110,
-	"engineOffset": 10,
-	"engineSize": 3,
+	"engineOffset": 16,
+	"engineSize": 4,
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",
@@ -40,6 +40,66 @@
 		}
 	],
 	"maxRange": 45,
+	"parts": [
+		{
+			"type": "RegionPart",
+			"outlineColor": "383848",
+			"mirror": true,
+			"under": true,
+			"layerOffset": -0.001,
+			"x": 7,
+			"y": -10.25,
+			"rotation": -150,
+			"suffix": "-展",
+			"children":[{
+				"type":"RegionPart",
+				"suffix":"-展-glow",
+				"layerOffset": 0.1,
+				"blending": "additive",
+				"color":"A278E1",
+				"outline":false
+			}]
+		},
+		{
+			"type": "RegionPart",
+			"outlineColor": "383848",
+			"mirror": true,
+			"under": true,
+			"layerOffset": -0.001,
+			"x": 8,
+			"y": -7.25,
+			"rotation": -120,
+			"suffix": "-展",
+			"children":[{
+				"type":"RegionPart",
+				"suffix":"-展-glow",
+				"layerOffset": 0.1,
+				"blending": "additive",
+				"color":"A278E1",
+				"outline":false
+			}]
+		},
+		{
+			"type": "RegionPart",
+			"outlineColor": "383848",
+			"mirror": true,
+			"under": true,
+			"layerOffset": -0.001,
+			"x": 8,
+			"y": -4.25,
+			"rotation": -90,
+			"suffix": "-展",
+			"children":[{
+				"type":"RegionPart",
+				"suffix":"-展-glow",
+				"layerOffset": 0.1,
+				"blending": "additive",
+				"color":"A278E1",
+				"outline":false
+			}]
+		}
+	],
+	"outlineColor": "383848",
 	"weapons": [
 		{
 			"name": "敲门砖1",
@@ -57,8 +117,9 @@
 				"killShooter": true,
 				"pierceArmor": true,
 				"collides":false,
+				"damage": 3000,
 				"splashDamageRadius": 45,
-				"splashDamage": 1500,
+				"splashDamage": 1200,
 				"buildingDamageMultiplier": 6,
 				"status": "sapped",
 				"statusDuration": 1200,

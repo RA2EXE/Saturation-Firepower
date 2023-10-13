@@ -181,6 +181,7 @@
 				"cone": 360
 			},
 			"despawnEffect": "blastExplosion",
+			"intervalDelay": 4,
 			"bulletInterval": 0.3,
 			"intervalBullets": 1,
 			"intervalBullet": {

@@ -253,6 +253,7 @@
 			"status": "余热",
 			"statusDuration": 20,
 			"buildingDamageMultiplier": 0.8,
+			"damage": 50,
 			"splashDamageRadius": 8,
 			"splashDamage": 7,
 			"hitShake": 1,

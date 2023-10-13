@@ -163,6 +163,16 @@
 				"plastanium/80",
 				"phase-fabric/40"
 			]
+		},
+		{
+			"unit": "敲门砖",
+			"time": 3300,
+			"requirements": [
+				"silicon/420",
+				"thorium/360",
+				"plastanium/100",
+				"二级协议/1"
+			]
 		}
 	],
 	"requirements": [

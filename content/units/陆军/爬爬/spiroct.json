@@ -24,8 +24,8 @@
 				"statusDuration": 150,
 				"status": "sapped",
 				"damage": 25,
-				"color": "A278E1FF",
-				"lightColor": "A278E1FF",
+				"color": "A278E1",
+				"lightColor": "A278E1",
 				"hitColor": "bf92f9",
 				"despawnEffect": "none"
 			}
@@ -52,8 +52,8 @@
 				"statusDuration": 300,
 				"status": "sapped",
 				"damage": 23,
-				"color": "A278E1FF",
-				"lightColor": "A278E1FF",
+				"color": "A278E1",
+				"lightColor": "A278E1",
 				"hitColor": "bf92f9",
 				"despawnEffect": "none"
 			}

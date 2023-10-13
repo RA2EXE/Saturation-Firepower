@@ -16,7 +16,7 @@
 	"consumes": {
 		"power": 2.29
 	},
-	"pumpAmount": 0.3,
+	"pumpAmount": 0.31,
 	"rotateSpeed": 1.3,
 	"result": "water",
 	"baseEfficiency": 1,

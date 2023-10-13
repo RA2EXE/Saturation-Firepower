@@ -64,7 +64,7 @@
 		"speed": 0
 	},
 	"category": "effect",
-	"research": "shockMine",
+	"research": "shock-mine",
 	"requirements": [
 		"titanium/10",
 		"泰勒合金/5"

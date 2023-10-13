@@ -17,7 +17,7 @@
 		"碎解","阳电","阴电","油蚀","余热"
 	],
 	"ammoCapacity": 500,
-	"hitSize": 20,
+	"hitSize": 17,
 	"flying": true,
 	"health": 4200,
 	"armor": 22,
@@ -25,10 +25,18 @@
 	"engineOffset": 12,
 	"engineSize": 3.5,
 	"engines": [
-		{	"x": -5.5,"y":-9.7,
-		"radius": 1.8, "rotation": -112.5},
-		{	"x": 5.5,"y": -9.7,
-		"radius": 1.8, "rotation": -67.5}
+		{
+			"x": -5.5,
+			"y": -9.7,
+			"radius": 1.8,
+			"rotation": -112.5
+		},
+		{
+			"x": 5.5,
+			"y": -9.7,
+			"radius": 1.8,
+			"rotation": -67.5
+		}
 	],
 	"faceTarget": true,
 	"circleTarget": true,

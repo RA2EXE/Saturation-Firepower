@@ -3,7 +3,6 @@
 	"type": "AutoDoor",
 	"health": 24000,
 	"size": 2,
-	"requirements": [],
 	"buildCostMultiplier": 50,
 	"rebuildable": false,
 	"buildVisibility": "editorOnly",

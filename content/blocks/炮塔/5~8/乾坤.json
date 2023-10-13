@@ -95,7 +95,7 @@
 			"hitSize": 36,
 			"damage": 19497,
 			"pierce": true,
-			"konckback": 162,
+			"knockback": 162,
 			"hitShake": 7,
 			"trailChance": 0,
 			"trailInterval": 1,
@@ -133,7 +133,6 @@
 					}
 				]
 			},
-			"rotation": 0,
 			"trailRotation": true,
 			"shootEffect": "bigShockwave",
 			"smokeEffect": {
@@ -285,7 +284,7 @@
 				]
 			},
 			"fragRandomSpread": 0,
-			"fragRandomAngel": 180,
+			"fragAngle": 180,
 			"fragBullets": 1,
 			"fragBullet": {
 				"despawnEffect": "none",

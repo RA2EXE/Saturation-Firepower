@@ -6,7 +6,8 @@
 	"lightColor": "7CF38980",
 	"playerUnmineable": true,
 	"useColor": true,
-	"speedMultiplier": 1.3,
+	"speedMultiplier": 1.125,
+	"dragMultiplier": 0.95,
 	"statusDuration": 10,
 	"walkEffect": {
 		"type": "ParticleEffect",

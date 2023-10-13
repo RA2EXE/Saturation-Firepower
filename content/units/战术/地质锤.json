@@ -1,7 +1,7 @@
 {
 	"type": "tank",
 	"template": "TankUnitType",
-	//"hidden": true,
+	"hidden": true,
 	"healFlash": false,
 	"treadFrames": 16,
 	"treadPullOffset": 8,

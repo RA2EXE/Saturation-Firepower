@@ -1,10 +1,12 @@
 {
 	"type": "Prop",
 	"name": "废弃金属块",
-	"variants": 2,
+	"variants": 4,
 	"buildCostMultiplier": 0.1,
 	"requirements": [
+		"scrap/1500",
 		"镄/200"
 	],
+	"breakSound":"break",
 	"buildVisibility": "editorOnly"
 }

@@ -1,11 +1,13 @@
 {
 	"type": "floor",
 	"name": "区域遮盖层",
-	"speedMultiplier": 1.3,
+	"speedMultiplier": 1.125,
+	"dragMultiplier": 0.95,
 	"attributes":{
 		"oil": 1,
 		"water": 0.25,
 		"spores": 0.25
 	},
+	"blendGroup": "遮盖",
 	"variants": 0
 }

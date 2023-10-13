@@ -4,8 +4,10 @@
 	"variants": 2,
 	"buildCostMultiplier": 0.1,
 	"requirements": [
+		"metaglass/150",
 		"镄/100",
 		"裂位能/50"
 	],
+	"breakSound":"break",
 	"buildVisibility": "editorOnly"
 }

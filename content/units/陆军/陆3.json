@@ -11,8 +11,6 @@
 		}
 	],
 	"name": "轰炸",
-	"description": "向远程地面目标发射50枚温压弹，对建筑破拆效果极佳。",
-	"details": "发射前需要架起，需要提防敌人的远程打击与空中力量",
 	"speed": 1.3,
 	"hitSize": 20,
 	"ammoType": "blast-compound",

@@ -67,7 +67,7 @@
 	"shootSound": "laser",
 	"shootEffect": {
 		"type": "ParticleEffect",
-		"particles": 1,
+		"particles": 7,
 		"sizeFrom": 9,
 		"sizeTo": 0,
 		"line": true,

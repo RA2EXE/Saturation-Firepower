@@ -80,10 +80,10 @@
 				"splashDamage": 130,
 				"knockback": 16,
 				"frontColor": "665C9FFF",
-				"backColor": "A278E1FF",
+				"backColor": "A278E1",
 				"trailLength": 80,
 				"trailWidth": 6,
-				"trailColor": "A278E1FF",
+				"trailColor": "A278E1",
 				"hitEffect": {
 					"type": "MultiEffect",
 					"effects": [
@@ -106,7 +106,7 @@
 							"sizeTo": 40,
 							"strokeFrom": 2,
 							"strokeTo": 0,
-							"colorFrom": "A278E1FF",
+							"colorFrom": "A278E1",
 							"colorTo": "ffffff"
 						}
 					]
@@ -137,7 +137,7 @@
 							"length": 75,
 							"baseLength": 0,
 							"lifetime": 15,
-							"colorFrom": "A278E1FF",
+							"colorFrom": "A278E1",
 							"colorTo": "ffffff",
 							"cone": 360
 						},
@@ -148,7 +148,7 @@
 							"sizeTo": 60,
 							"strokeFrom": 4,
 							"strokeTo": 0,
-							"colorFrom": "A278E1FF",
+							"colorFrom": "A278E1",
 							"colorTo": "ffffff"
 						}
 					]
@@ -202,10 +202,10 @@
 					"splashDamage": 27,
 					"knockback": 3,
 					"frontColor": "665C9FFF",
-					"backColor": "A278E1FF",
+					"backColor": "A278E1",
 					"trailLength": 10,
 					"trailWidth": 2,
-					"trailColor": "A278E1FF",
+					"trailColor": "A278E1",
 					"hitEffect": {
 						"type": "MultiEffect",
 						"effects": [
@@ -231,7 +231,7 @@
 								"sizeTo": 30,
 								"strokeFrom": 2,
 								"strokeTo": 0,
-								"colorFrom": "A278E1FF",
+								"colorFrom": "A278E1",
 								"colorTo": "ffffff"
 							}
 						]
@@ -278,8 +278,8 @@
 				"statusDuration": 60,
 				"status": "sapped",
 				"damage": 92,
-				"color": "A278E1FF",
-				"lightColor": "A278E1FF",
+				"color": "A278E1",
+				"lightColor": "A278E1",
 				"hitColor": "bf92f9",
 				"despawnEffect": "none"
 			}
@@ -311,8 +311,8 @@
 				"statusDuration": 60,
 				"status": "sapped",
 				"damage": 98,
-				"color": "A278E1FF",
-				"lightColor": "A278E1FF",
+				"color": "A278E1",
+				"lightColor": "A278E1",
 				"hitColor": "bf92f9",
 				"despawnEffect": "none"
 			}
@@ -361,7 +361,7 @@
 					"length": 55,
 					"baseLength": 0,
 					"lifetime": 15,
-					"colorFrom": "A278E1FF",
+					"colorFrom": "A278E1",
 					"colorTo": "665C9FFF",
 					"cone": 60
 				},
