@@ -135,6 +135,6 @@
 		}
 	},
 	"buildCostMultiplier": 0.5,
-	//"buildVisibility":"editorOnly",
+	"buildVisibility":"editorOnly",
 	"category": "defense"
 }
