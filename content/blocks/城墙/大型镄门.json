@@ -1,12 +1,12 @@
 {
 	"type": "AutoDoor",
-	"health": 12000,
+	"health": 9800,
 	"armor":10,
 	"size": 2,
 	"insulated":true,
 	"absorbLasers":true,
 	"requirements": [
-		"镄/80",
+		"镄/88",
 		"silicon/40",
 		"plastanium/80"
 	],

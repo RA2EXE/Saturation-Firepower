@@ -1,9 +1,9 @@
 {
-	"name":"抢修",
+	"name": "抢修",
 	"color": "97FFA8",
-	"damage":-18,
-	"healthMultiplier":1.35,
-	"effectChance":1,
+	"damage": -18,
+	"healthMultiplier": 1.35,
+	"effectChance": 1,
 	//"opposites": ["burning","wet","sapped","freezing","melting","tarred","muddy","blasted","corroded","拆解","油蚀"],
 	"effect": {
 		"type": "ParticleEffect",
@@ -13,9 +13,11 @@
 		"lifetime": 10,
 		"line": true,
 		"strokeFrom": 2,
-		"strokeTo": 0,
+		"strokeTo": 1.8,
 		"lenFrom": 20,
 		"lenTo": 0,
+		"interp": "fastSlow",
+		"sizeInterp": "pow3In",
 		"colorFrom": "97FFA8",
 		"colorTo": "97FFA8"
 	}

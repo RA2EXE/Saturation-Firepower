@@ -26,10 +26,8 @@
 			"mirror": false,
 			"reload": 880,
 			"shootSound": "missileLarge",
-			"rotate": false,
-			"cooldownTime": 100,
-			"inaccuracy": 360,
-			"shootCone": 360,
+			"rotate": true,
+			"inaccuracy": 30,
 			"recoil": 0,
 			"bullet": {
 				"type": "BasicBulletType",

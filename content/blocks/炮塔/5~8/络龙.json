@@ -1,6 +1,6 @@
 {
 	"type": "ItemTurret",
-	"name": "乾坤",
+	"name": "络龙",
 	"health": 18000,
 	"size": 8,
 	"reload": 300,
@@ -147,7 +147,7 @@
 				"lifetime": 100,
 				"colorFrom": "FF7055",
 				"colorTo": "9b9dcfDB",
-				"cone": 10
+				"cone": 13
 			},
 			"hitEffect": {
 				"type": "MultiEffect",
@@ -294,7 +294,7 @@
 				"damage": 19497,
 				"backColor": "9b9dcfDF",
 				"frontColor": "9b9dcf",
-				"lifetime": 15,
+				"lifetime": 8,
 				"speed": 15
 			}
 		}

@@ -1,0 +1,35 @@
+{
+	"type": "ConsumeGenerator",
+	"name": "缓冲引擎",
+	"size": 2,
+	"health": 280,
+	"hasItems": true,
+	"itemDuration": 120,
+	"powerProduction": 8,
+	"itemCapacity": 10,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawGlowRegion",
+				"glowScale": 4,
+				"alpha": 0.9
+			}
+		]
+	},
+	"generateEffect": "blastExplosion",
+	"consumes": {
+		"itemExplosive":{}
+	},
+	"requirements": [
+		"lead/90",
+		"metaglass/80",
+		"thorium/80",
+		"硅钢/70"
+	],
+	"ambientSound": "explosion",
+	"ambientSoundVolume": 1.5,
+	"category": "power",
+	"research": "combustion-generator"
+}

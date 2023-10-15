@@ -110,9 +110,15 @@
 				"type": "RegionPart",
 				"mirror": true,
 				"suffix": "-侧",
-				"progress":"charge",
-				"moveX": 3,
-				"moveRot": -10
+				"progress":"warmup",
+				"moveX": 3.5,
+				"moveRot": -35,
+				"moves":[{
+					"progress":"charge",
+					"x": 0.5,
+					"y": -2,
+					"rot": -10
+				}]
 				}],
 			"bullet": {
 				"killShooter": true,
@@ -120,18 +126,37 @@
 				"hitShake": 8,
 				"speed": 0,
 				"shootEffect": "massiveExplosion",
-				"smokeEffect":{
-					"type": "ParticleEffect",
-					"particles": 26,
-					"sizeFrom": 8,
-					"sizeTo": 0,
-					"length": 65,
-					"baseLength": 0,
-					"lifetime": 100,
-					"interp": "fastSlow",
-					"sizeInterp": "pow5In",
-					"colorFrom": "A278E1",
-					"colorTo": "A278E1"
+				"smokeEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 16,
+							"sizeFrom": 9,
+							"sizeTo": 0,
+							"length": 65,
+							"baseLength": 0,
+							"lifetime": 88,
+							"interp": "fastSlow",
+							"sizeInterp": "slowFast",
+							"colorFrom": "A278E180",
+							"colorTo": "A278E1AA"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 36,
+							"sizeFrom": 7,
+							"sizeTo": 0,
+							"length": -77,
+							"baseLength": 0,
+							"lifetime": 60,
+							"interp": "pow10Out",
+							"sizeInterp": "pow10In",
+							"colorFrom": "A278E1",
+							"colorTo": "A278E1",
+							"cone": 25
+						}
+					]
 				},
 				"spawnUnit": "敲门砖-弹"
 			}

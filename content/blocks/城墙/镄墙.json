@@ -1,7 +1,7 @@
 {
 	"name": "镄墙",
 	"type": "Wall",
-	"health": 2400,
+	"health": 2450,
 	"armor":15,
 	"size": 1,
 	"requirements": [

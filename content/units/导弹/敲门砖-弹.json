@@ -7,7 +7,7 @@
 	"lifetime": 35,
 	"drag": 0.1,
 	"rotateSpeed": 0,
-	"hitSize": 10,
+	"hitSize": 13,
 	"health": 2000,
 	"hidden": true,
 	"deathSound": "explosionbig",
@@ -53,7 +53,7 @@
 			"suffix": "-展",
 			"children":[{
 				"type":"RegionPart",
-				"suffix":"-展-glow",
+				"suffix":"-展-heat",
 				"layerOffset": 0.1,
 				"blending": "additive",
 				"color":"A278E1",
@@ -72,7 +72,7 @@
 			"suffix": "-展",
 			"children":[{
 				"type":"RegionPart",
-				"suffix":"-展-glow",
+				"suffix":"-展-heat",
 				"layerOffset": 0.1,
 				"blending": "additive",
 				"color":"A278E1",
@@ -91,7 +91,7 @@
 			"suffix": "-展",
 			"children":[{
 				"type":"RegionPart",
-				"suffix":"-展-glow",
+				"suffix":"-展-heat",
 				"layerOffset": 0.1,
 				"blending": "additive",
 				"color":"A278E1",

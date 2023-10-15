@@ -169,8 +169,9 @@
 			"time": 3300,
 			"requirements": [
 				"silicon/420",
+				"硅钢/120",
 				"thorium/360",
-				"plastanium/100",
+				"blast-compound/100",
 				"二级协议/1"
 			]
 		}

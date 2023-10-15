@@ -83,10 +83,41 @@
 				"instantDisappear": true,
 				"hitSound": "plasmaboom",
 				"hitEffect": {
-					"type":"WrapEffect",
-					"effect":"dynamicSpikes",
-					"color":"76D081",
-					"rotation":160
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "WrapEffect",
+							"effect": "dynamicSpikes",
+							"color": "76D081",
+							"rotation": 160
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 23,
+							"sizeFrom": 1.2,
+							"sizeTo": 0,
+							"length": 160,
+							"baseLength": 8,
+							"lifetime": 100,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "76D081",
+							"colorTo": "76D081"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 23,
+							"sizeFrom": 1,
+							"sizeTo": 0,
+							"length": 160,
+							"baseLength": 8,
+							"lifetime": 100,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "76D081",
+							"colorTo": "76D081"
+						}
+					]
 				},
 				"despawnEffect": "hitEmpSpark"
 			}
