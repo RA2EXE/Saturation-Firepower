@@ -35,7 +35,6 @@
 			},
 			{
 				"type": "HaloPart",
-				"progress": "warmup",
 				"rotateSpeed": 0,
 				"shapeRotation": 180,
 				"x": 24,
@@ -57,7 +56,6 @@
 			},
 			{
 				"type": "HaloPart",
-				"progress": "warmup",
 				"rotateSpeed": 0,
 				"shapeRotation": 0,
 				"x": 24,
@@ -79,7 +77,6 @@
 			},
 			{
 				"type": "HaloPart",
-				"progress": "warmup",
 				"rotateSpeed": 0,
 				"shapeRotation": 180,
 				"x": -24,
@@ -101,7 +98,6 @@
 			},
 			{
 				"type": "HaloPart",
-				"progress": "warmup",
 				"rotateSpeed": 0,
 				"shapeRotation": 0,
 				"x": -24,

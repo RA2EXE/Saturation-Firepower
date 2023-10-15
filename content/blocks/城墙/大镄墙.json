@@ -2,12 +2,13 @@
 	"name": "大型镄墙",
 	"type": "Wall",
 	"health": 9800,
-	"armor":15,
+	"armor":14,
 	"size": 2,
+	"absorbLasers":true,
 	"requirements": [
-	"镄/96" 
+		"镄/64" 
 	],
-	"buildCostMultiplier": 0.85,
+	"buildCostMultiplier": 0.65,
 	"category": "defense",
 	"research": "镄墙"
 }

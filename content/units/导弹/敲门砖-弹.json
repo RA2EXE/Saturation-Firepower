@@ -43,7 +43,6 @@
 	"parts": [
 		{
 			"type": "RegionPart",
-			"outlineColor": "383848",
 			"mirror": true,
 			"under": true,
 			"layerOffset": -0.001,
@@ -62,7 +61,6 @@
 		},
 		{
 			"type": "RegionPart",
-			"outlineColor": "383848",
 			"mirror": true,
 			"under": true,
 			"layerOffset": -0.001,
@@ -81,7 +79,6 @@
 		},
 		{
 			"type": "RegionPart",
-			"outlineColor": "383848",
 			"mirror": true,
 			"under": true,
 			"layerOffset": -0.001,

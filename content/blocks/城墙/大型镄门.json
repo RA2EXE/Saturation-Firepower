@@ -6,10 +6,11 @@
 	"insulated":true,
 	"absorbLasers":true,
 	"requirements": [
-		"镄/88",
+		"镄/64",
 		"silicon/40",
 		"plastanium/80"
 	],
+	"buildCostMultiplier": 0.85,
 	"research": "大镄墙",
 	"category": "defense"
 }
