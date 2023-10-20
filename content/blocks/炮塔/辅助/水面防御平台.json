@@ -245,7 +245,14 @@
 		"speed": 3,
 		"lifetime": 90
 	},
-	"buildCostMultiplier": 1000,
-	"requirements": [],
+	"breakable":false,
+	"rebuildable":false,
+	"requirements": [
+	"镄/14000",
+	"铬/12000",
+	"裂位能/8400",
+	"泰勒合金/6400",
+	"集束/12500"
+	],
 	"category": "turret"
 }

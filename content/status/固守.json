@@ -1,0 +1,39 @@
+{
+	"name": "固守",
+	"color": "a2a2a2",
+	"permanent": true,
+	//"show":false,
+	"healthMultiplier": 8,
+	"speedMultiplier": 0,
+	"reloadMultiplier": 1.5,
+	"effectChance": 0.06,
+	"effect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 1,  
+				"baseLength": 0,
+				"length": 0,
+				"lifetime": 20,
+				"sizeInterp":"pow5Out",
+				"sizeFrom": 0,
+				"sizeTo": 6,
+				"colorFrom": "a2a2a2",
+				"colorTo": "a2a2a2"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 1,  
+				"startDelay": 18,
+				"baseLength": 0,
+				"length": 0,
+				"lifetime": 160,
+				"sizeFrom": 6,
+				"sizeTo": 0,
+				"colorFrom": "a2a2a2",
+				"colorTo": "a2a2a2"
+			}
+		]
+	}
+}

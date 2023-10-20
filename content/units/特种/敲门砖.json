@@ -9,7 +9,7 @@
 	"health": 3600,
 	"stepShake": 0,
 	"legCount": 6,
-	"legLength": 18,
+	"legLength": 19.5,
 	"legGroupSize": 3,
 	"lockLegBase": true,
 	"legContinuousMove": true,

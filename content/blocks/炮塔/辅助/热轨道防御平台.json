@@ -14,7 +14,7 @@
 	"canOverdrive": false,
 	"recoilTime": 80,
 	"unitSort": "strongest",
-	"reload": 280,
+	"reload": 300,
 	"rotateSpeed": 1.92,
 	"drawer": {
 		"type": "DrawTurret",
@@ -27,14 +27,16 @@
 				"suffix": "-管",
 				"moveY": 24,
 				"heatColor": "FF4040",
-				"children":[{
-					"type": "RegionPart",
-					"mirror": false,
-					"suffix": "-预热2",
-					"drawRegion": false,
-					"heatProgress": "warmup",
-					"heatColor": "FF4040"
-				}]
+				"children": [
+					{
+						"type": "RegionPart",
+						"mirror": false,
+						"suffix": "-预热2",
+						"drawRegion": false,
+						"heatProgress": "warmup",
+						"heatColor": "FF4040"
+					}
+				]
 			},
 			{
 				"type": "RegionPart",
@@ -144,7 +146,7 @@
 			"particles": 16,
 			"region": "饱和火力-三角形",
 			"interp": "pow10Out",
-			"sizeInterp":"pow3In",
+			"sizeInterp": "pow3In",
 			"spin": 16,
 			"sizeFrom": 22,
 			"sizeTo": 0,
@@ -415,13 +417,21 @@
 		}
 	},
 	"consumes": {
-		"power": 220
+		"power": 432
 	},
 	"heatRequirement": 40,
 	"maxHeatEfficiency": 3,
 	"category": "turret",
 	"research": "热轨道防御平台",
-	"buildCostMultiplier": 1000,
 	"buildVisibility": "sandboxOnly",
-	"requirements": []
+	"breakable": false,
+	"rebuildable": false,
+	"requirements": [
+		"纳米核/9600",
+		"裂位能/13300",
+		"硅钢/7600",
+		"泰勒合金/11200",
+		"莱普合金/7500",
+		"三级协议/320"
+	]
 }

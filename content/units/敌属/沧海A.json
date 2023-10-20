@@ -1,0 +1,210 @@
+{
+	"type": "naval",
+	"name": "沧海",
+	"speed": 0.57,
+	"rotateSpeed": 1,
+	"ammoType": "thorium",
+	"ammoCapacity": 2000,
+	"hitSize": 60,
+	"trailLength": 40,
+	"waveTrailX": 8,
+	"waveTrailY": -8,
+	"trailScl": 2.5,
+	"health": 120000,
+	"armor": 46,
+	"immunities":[
+		"blasted","burning","electrified",
+		"freezing","melting","disarmed",
+		"sapped","shocked","slow",
+		"tarred","unmoving","wet",
+		"spore-slowed","corroded",
+		"标记","裂位标记","崩溃","干扰"],
+	"faceTarget": false,
+	"requirements": {
+		"block": "multiplicative-reconstructor",
+		"previous": "海2"
+	},
+	"weapons": [
+		{
+			"name": "芭莎-舰炮",
+			"reload": 50,
+			"x": 0,
+			"y": 22,
+			"shootY": 3,
+			"rotate": true,
+			"rotateSpeed": 3.4,
+			"mirror": false,
+			"inaccuracy": 0,
+			"shootSound": "laser",
+			"alternate": true,
+			"ejectEffect": "casing3",
+			"bullet": {
+				"type": "BasicBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "FF5B5B",
+				"trailLength": 18,
+				"trailWidth": 2,
+				"trailColor": "FF5B5BA0",
+				"status": "碎解",
+				"statusDuration": 120,
+				"damage": 288,
+				"splashDamageRadius": 22,
+				"splashDamage": 180,
+				"scaleLife": true,
+				"width": 9,
+				"height": 24,
+				"speed": 12,
+				"lifetime": 25,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 5,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 25,
+					"baseLength": 0,
+					"lifetime": 25,
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B",
+					"cone": 30
+				},
+				"smokeEffect": "shootBig",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"sizeFrom": 5,
+							"sizeTo": 0,
+							"length": 30,
+							"baseLength": 0,
+							"lifetime": 25,
+							"interp": "fastSlow",
+							"sizeInterp": "pow5In",
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B"
+						},
+						{
+							"type": "WaveEffect",
+							"interp":"circleOut",
+							"lifetime": 10,
+							"sizeFrom": 0,
+							"sizeTo": 30,
+							"strokeFrom": 8,
+							"strokeTo": 0,
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B"
+						}
+					]
+				},
+				"hitSound": "laser",
+				"hitShake": 2,
+				"despawnEffect": "none"
+			}
+		},
+		{
+			"name": "芭莎-导弹",
+			"x": 0,
+			"y": -24,
+			"rotate": true,
+			"rotateSpeed": 3.4,
+			"mirror": false,
+			"inaccuracy": 0,
+			"shootSound": "missile",
+			"reload": 76,
+			"shootY": 0,
+			"range": 700,
+			"shoot": {
+				"type": "ShootBarrel",
+				"barrels": [
+					-3,6.5,0,
+					3,6.5,0
+				],
+				"shots": 4,
+				"shotDelay": 2
+			},
+			"xRand": 2,
+			"bullet": {
+			"type": "FlakBulletType",
+			"damage": 50,
+			"splashDamageRadius": 40,
+			"splashDamage": 250,
+			"lightningDamage": 38,
+			"lightning": 5,
+			"lightningLength": 6,
+			"lightningLengthRand": 2,
+			"shrinkY": 0,
+			"speed": 16,
+			"homingDelay": 8,
+			"homingPower": 0.1,
+			"homingRange": 120,
+			"lifetime": 90,
+			"hitSound": "explosion",
+			"hitSoundVolume": 5,
+			"width": 13,
+			"height": 46,
+			"hitShake": 3,
+			"sprite": "饱和火力-落雁",
+			"backColor": "FF5B5B",
+			"frontColor": "E3E3E3",
+			"trailLength": 40,
+			"trailWidth": 2,
+			"trailColor": "FFFFFF88",
+			"trailChance": 0.45,
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 3,
+				"length": 11,
+				"baseLength": 1,
+				"lifetime": 45,
+				"interp":"pow10Out",
+				"colorFrom": "E3E3E380",
+				"colorTo": "E3E3E380",
+				"sizeFrom": 3,
+				"sizeTo": 0
+			},
+			"shootEffect": "shootTitan",
+			"smokeEffect": "shootPyraFlame",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 10,
+						"sizeFrom": 10,
+						"sizeTo": 0,
+						"length": 5,
+						"baseLength": 33,
+						"lifetime": 35,
+						"colorFrom": "FF5B5BAA",
+						"colorTo": "737373"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"sizeFrom": 9,
+						"sizeTo": 0,
+						"length": 13,
+						"baseLength": 43,
+						"lifetime": 22,
+						"colorFrom": "FF5B5B",
+						"colorTo": "FFE176FF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 43,
+						"strokeFrom": 8,
+						"strokeTo": 0,
+						"colorFrom": "FF5B5B",
+						"colorTo": "ffffff"
+					}
+				]
+			}
+		
+			}
+		}
+	]
+}

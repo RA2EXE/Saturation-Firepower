@@ -6,5 +6,10 @@
 	"buildCostMultiplier": 50,
 	"rebuildable": false,
 	"buildVisibility": "editorOnly",
-	"category": "defense"
+	"category": "defense",
+	"requirements": [
+		"镄/640",
+		"硅钢/800",
+		"裂位能/500"
+	]
 }

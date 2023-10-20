@@ -1,8 +1,6 @@
 {
 	"type": "PowerTurret",
 	"name": "零丁",
-	"description": "从'灭绝'行动中缴获的实验性原型武器。",
-	"details": "威力巨大，但这并不是一个好消息，敌人可能已经掌握了相关技术，尽快研究它",
 	"unitSort": "strongest",
 	"targetAir": true,
 	"targetGround": false,
@@ -825,10 +823,12 @@
 	"category": "turret",
 	"buildVisibility": "sandboxOnly",
 	"requirements": [
-		"镄/99e9",
-		"silicon/99e9",
-		"硅钢/99e9",
-		"泰勒合金/99e9",
-		"三级协议/99e9"
+		"镄/48000",
+		"纳米核/64000",
+		"silicon/40000",
+		"硅钢/45000",
+		"泰勒合金/60000",
+		"莱普合金/60000",
+		"三级协议/960"
 	]
 }

@@ -261,8 +261,35 @@ SFlib.addToResearch(狭长冰谷, {
 });
 */
 
+/*
+const 地图变量名 = new SectorPreset("灭绝", TBLY, 78);
+地图变量名.description = "";
+地图变量名.difficulty = 20;
+地图变量名.alwaysUnlocked = false;
+地图变量名.addStartingItems = true;
+地图变量名.captureWave = 0;
+地图变量名.localizedName = "灭绝";
+exports.地图变量名 = 地图变量名;
+SFlib.addToResearch(地图变量名, {
+	parent: "科技树位置=地图名",
+	objectives: Seq.with(
+	new Objectives.SectorComplete(星稀山脉))
+});
 
-
+const 溃堤海口 = new SectorPreset("溃堤海口", TBLY, 48);
+溃堤海口.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]-泰伯利亚赤道南侧，拉乌达洋某处河流集群入海口。此处峡谷年代久远，长年累月的冲刷甚至使峭壁之下产生了入海口三角洲。\n第二军团已于此处建立5条坝式水力能源站，敌舰队正在附近聚集，保护能源站并剿灭所有敌人。";
+溃堤海口.difficulty = 20;
+溃堤海口.alwaysUnlocked = false;
+溃堤海口.addStartingItems = true;
+溃堤海口.captureWave = 90;
+溃堤海口.localizedName = "溃堤海口";
+exports.溃堤海口 = 溃堤海口;
+SFlib.addToResearch(溃堤海口, {
+	parent: "断层带",
+	objectives: Seq.with(
+	new Objectives.SectorComplete(断层带))
+});
+*/
 const 火天路 = new SectorPreset("火天路", TBLY, 48);
 火天路.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]阔野生产试验基地-熔岩区，该处地质活动比较频繁，同时该处的矿物质丰度很高，能源储备充裕。\n整理手头资源，尽可能协助第二军团进行阔野的生产理论研究，不要使用高能量反应的器械，避免被敌方探测。";
 火天路.difficulty = 22;

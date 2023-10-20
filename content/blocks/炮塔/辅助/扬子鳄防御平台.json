@@ -139,7 +139,13 @@
 			"sparkLen": 26
 		}
 	},
-	"buildCostMultiplier": 1000,
-	"requirements": [],
+	"requirements": [
+	"镄/12000",
+	"铬/9000",
+	"裂位能/15000",
+	"泰勒合金/8000"
+	],
+	"breakable":false,
+	"rebuildable":false,
 	"category": "turret"
 }
