@@ -4,9 +4,6 @@
 	"health": 6000,
 	"size": 6,
 	"reload": 60,
-	//"reload": 20,没↓有↑力↑量↓（哭腔
-	//"reload": 12,你妈的太够用了，够用过头了，对敌人对自己都太tm够用了
-	//"reload": 68,前狼想要取回他的原始力量，很强大且够用
 	"range": 0,
 	"maxAmmo": 36,
 	"ammoPerShot": 6,
@@ -393,10 +390,9 @@
 			}
 		},
 		"镄": {
-			"type": "FlakBulletType",
-			"damage": 780,
-			"splashDamageRadius": 35,
-			"splashDamage": 80,
+			"type": "BasicBulletType",
+			"collidesGround": false,
+			"damage": 860,
 			"pierceArmor": true,
 			"hitSize": 35,
 			"shrinkY": 0,
@@ -477,7 +473,7 @@
 				"colorTo": "FFE176FF",
 				"cone": 50
 			},
-			"despawnEffect": "none"
+			"despawnEffect": "blastExplosion"
 		}
 	},
 	"requirements": [

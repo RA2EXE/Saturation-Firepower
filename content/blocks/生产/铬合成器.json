@@ -52,6 +52,7 @@
 		],
 		"liquid": "slag/0.2"
 	},
+	"researchCostMultiplier": 0.8,
 	"requirements": [
 		"plastanium/35",
 		"镄/80",

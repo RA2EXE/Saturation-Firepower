@@ -5,7 +5,8 @@
 	//"show":false,
 	"healthMultiplier": 8,
 	"speedMultiplier": 0,
-	"reloadMultiplier": 1.5,
+	"damageMultiplier": 10,
+	"reloadMultiplier": 1.85,
 	"effectChance": 0.06,
 	"effect": {
 		"type": "MultiEffect",

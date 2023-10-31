@@ -125,8 +125,7 @@
 				"smokeEffect": "none",
 				"hitEffect": "hitLancer",
 				"despawnEffect": "none",
-				"status": "shocked",
-				"statusDuration": 10
+				"status": "shocked"
 			}
 		}
 	]

@@ -41,6 +41,7 @@
 			]
 		}
 	},
+	"researchCostMultiplier": 0.3,
 	"requirements": [
 		"thorium/20",
 		"silicon/25",

@@ -1,7 +1,6 @@
 {
 	"details": "优化射击方式以提高稳定性，换装新分裂弹头与导弹发射器",
-	"armor": 22,
-	"rotateSpeed": 2.2,
+	"armor": 26,
 	"health": 42000,
 	"weapons": [
 		{

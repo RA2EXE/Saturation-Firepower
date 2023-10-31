@@ -453,8 +453,7 @@
 		"lead/190",
 		"graphite/70",
 		"硅钢/90",
-		"plastanium/50",
-		"二级协议/0"
+		"plastanium/50"
 	],
 	"researchCostMultiplier": 0.45,
 	"category": "turret",

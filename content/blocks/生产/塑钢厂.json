@@ -12,6 +12,18 @@
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "oil"
+			},
+			{
+				"type": "DrawPistons",
+				"sinMag": 1
+			},
 			"DrawDefault",
 			"DrawFade"
 		]

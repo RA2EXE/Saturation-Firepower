@@ -20,7 +20,7 @@
 	"engineOffset": 14,
 	"engineSize": 4.5,
 	"research": {
-		"parent": "特种工厂",
+		"parent": "工农",
 		"objectives": [
 			{
 				"type": "SectorComplete",

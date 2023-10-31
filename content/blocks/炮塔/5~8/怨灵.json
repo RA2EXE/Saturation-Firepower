@@ -594,7 +594,7 @@
 				"width": 9,
 				"height": 10,
 				"damage": 56.25,
-				"knockback": 3,
+				"knockback": 4,
 				"lifetime": 6,
 				"speed": 21
 			}

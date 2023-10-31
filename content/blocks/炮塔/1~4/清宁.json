@@ -293,6 +293,7 @@
 	"range": 475,
 	"category": "turret",
 	"research": "裂爆",
+	"researchCostMultiplier": 0.4,
 	"requirements": [
 		"titanium/800",
 		"硅钢/800",

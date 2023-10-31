@@ -207,6 +207,7 @@
 	"range": 500,
 	"category": "turret",
 	"research": "裂爆",
+	"researchCostMultiplier": 0.4,
 	"requirements": [
 		"lead/300",
 		"metaglass/100",

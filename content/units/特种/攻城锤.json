@@ -13,7 +13,7 @@
 	"ammoCapacity": 15,
 	"ammoType": "graphite",
 	"targetAir": false,
-	"health": 2050,
+	"health": 1950,
 	"armor": 8,
 	"drag": 0.2,
 	"rotateSpeed": 2.5,

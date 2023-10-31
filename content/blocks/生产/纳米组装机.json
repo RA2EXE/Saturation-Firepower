@@ -48,8 +48,8 @@
 		"parent": "硅钢冶炼炉",
 		"objectives": [
 			{
-				"type": "OnSector",
-				"preset": "荒芜矿区"
+				"type": "SectorComplete",
+				"preset": "迫降区"
 			}
 		]
 	}

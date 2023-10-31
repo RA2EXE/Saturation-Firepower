@@ -75,24 +75,24 @@
 			"name": "玄武2",
 			"x": 0,
 			"y": 0,
-			"inaccuracy": 360,
+			"inaccuracy": 180,
 			"shoot": {
 				"shots": 3,
 				"shotDelay": 8
 			},
 			"shootCone": 360,
 			"shootSound": "missile",
-			"rotate": false,
+			"mirror": false,
 			"reload": 100,
 			"controllable": false,
 			"autoTarget": true,
 			"bullet": {
 				"height": 15,
-				"width": 8,
+				"width": 9,
 				"damage": 80,
 				"shrinkY": 0,
 				"absorbable": false,
-				"homingDelay": 15,
+				"homingDelay": 10,
 				"homingPower": 0.08,
 				"homingRange": 300,
 				"healPercent": 8,
@@ -130,8 +130,7 @@
 							"baseLength": 0,
 							"lifetime": 35,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						}
 					]
 				},
@@ -143,18 +142,33 @@
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 9,
-							"sizeFrom": 5,
+							"particles": 12,
+							"sizeFrom": 1.2,
 							"sizeTo": 0,
-							"length": 60,
+							"length": 80,
 							"baseLength": 5,
-							"lifetime": 15,
+							"lifetime": 60,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "97FFA8"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"sizeFrom": 2,
+							"sizeTo": 0,
+							"length": 80,
+							"baseLength": 5,
+							"lifetime": 60,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA8"
 						},
 						{
 							"type": "WaveEffect",
+							"interp": "circleOut",
 							"lifetime": 13,
 							"sizeFrom": 2,
 							"sizeTo": 65,

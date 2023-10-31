@@ -94,7 +94,7 @@
 						{
 							"type": "ParticleEffect",
 							"particles": 23,
-							"sizeFrom": 1.2,
+							"sizeFrom": 1.5,
 							"sizeTo": 0,
 							"length": 160,
 							"baseLength": 8,
@@ -107,7 +107,7 @@
 						{
 							"type": "ParticleEffect",
 							"particles": 23,
-							"sizeFrom": 1,
+							"sizeFrom": 1.2,
 							"sizeTo": 0,
 							"length": 160,
 							"baseLength": 8,

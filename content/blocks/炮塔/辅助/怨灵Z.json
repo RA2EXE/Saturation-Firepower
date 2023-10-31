@@ -56,11 +56,13 @@
 	"targetAir": true,
 	"inaccuracy": 2,
 	"shake": 5,
+	"destroyEffect": "none",
 	"shootSound": "shootBig",
 	"rotateSpeed": 3.5,
 	"ammoTypes": {
 		"裂位能": {
 			"type": "BasicBulletType",
+			"killShooter": true,
 			"damage": 85.5,
 			"rangeChange": 88,
 			"inaccuracy": 2,

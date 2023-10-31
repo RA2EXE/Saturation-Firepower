@@ -51,6 +51,22 @@
 重油夺取基地-破袭战
 提供单位：大范围杀伤性部队，尽可能提高误伤能力
 
+"shoot": {
+		"type": "ShootMulti",
+		"source": {},
+		"dest": [
+			{
+				"type": "ShootHelix",
+				"scl": 8,
+				"mag": 2
+			},
+			{
+				"type": "ShootSine",
+				"scl": -4,
+				"mag": 20
+			}
+		]
+	},
 
 "abilities": [
 		{

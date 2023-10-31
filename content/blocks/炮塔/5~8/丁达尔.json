@@ -104,6 +104,7 @@
 			}
 		]
 	},
+	"researchCostMultiplier": 0.5,
 	"requirements": [
 		"silicon/660",
 		"metaglass/870",

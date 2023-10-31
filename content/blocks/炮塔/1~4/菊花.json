@@ -32,7 +32,7 @@
 			{
 				"type": "RegionPart",
 				"mirror": true,
-				"under":false,
+				"under": false,
 				"x": 8,
 				"suffix": "-侧",
 				"moveX": 1,
@@ -49,7 +49,7 @@
 						"mirror": true,
 						"under": true,
 						"suffix": "-后",
-						"progress":"recoil",
+						"progress": "recoil",
 						"moveY": -2
 					}
 				]
@@ -471,7 +471,19 @@
 					"color": "76D081",
 					"rotation": 100
 				},
-				"despawnEffect": "none"
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 15,
+					"sizeFrom": 1.3,
+					"sizeTo": 0,
+					"length": 100,
+					"baseLength": 8,
+					"lifetime": 100,
+					"interp": "fastSlow",
+					"sizeInterp": "pow3In",
+					"colorFrom": "76D081",
+					"colorTo": "76D081"
+				}
 			}
 		},
 		"泰勒合金": {
@@ -557,6 +569,7 @@
 		"泰勒合金/150",
 		"二级协议/1"
 	],
+	"researchCostMultiplier": 0.4,
 	"category": "turret",
 	"research": {
 		"parent": "雷阵雨",

@@ -142,6 +142,7 @@
 				{
 					"type": "ShrapnelBulletType",
 					"instantDisappear": true,
+					"knockback": 8,
 					"fromColor": "8da1e3",
 					"toColor": "8da1e3",
 					"hitColor": "8da1e3",

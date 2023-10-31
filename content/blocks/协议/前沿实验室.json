@@ -55,5 +55,11 @@
 		"一级协议/3"
 	],
 	"category": "effect",
-	"research": "实验室"
+	"research": {
+		"parent": "实验室",
+		"objectives": [
+			"镄反应堆",
+			"激发器"
+		]
+	}
 }

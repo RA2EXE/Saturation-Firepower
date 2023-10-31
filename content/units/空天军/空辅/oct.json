@@ -39,6 +39,7 @@
 		{
 			"name": "O枪",
 			"reload": 56,
+			"controllable": false,
 			"x": 26,
 			"y": 14,
 			"shoot": {
@@ -95,6 +96,7 @@
 		{
 			"name": "O枪",
 			"reload": 56,
+			"controllable": false,
 			"x": 26,
 			"y": -30,
 			"shoot": {

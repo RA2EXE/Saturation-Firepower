@@ -41,6 +41,7 @@
 		"plastanium/25",
 		"二级协议/0"
 	],
+	"researchCostMultiplier": 0.3,
 	"category": "crafting",
-	"research": "前沿实验室"
+	"research": "phase-weaver"
 }

@@ -118,6 +118,7 @@
 			}
 		]
 	},
+	"researchCostMultiplier": 0.4,
 	"requirements": [
 		"metaglass/70",
 		"silicon/200",

@@ -765,6 +765,7 @@
 		"surge-alloy/20",
 		"二级协议/0"
 	],
+	"researchCostMultiplier": 0.4,
 	"category": "turret",
 	"research": "阔刀"
 }

@@ -1,6 +1,10 @@
 {
 	"shootEffect": "shootBig",
 	"smokeEffect": "shootBigSmoke",
+	"shoot": {
+		"type": "ShootSpread",
+		"shots": 5
+	},
 	"ammoTypes": {
 		"graphite": {
 			"type": "ArtilleryBulletType",

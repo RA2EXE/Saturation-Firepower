@@ -7,6 +7,7 @@
 	"rebuildable": false,
 	"squareSprite": false,
 	"hasLiquids": true,
+	"researchCostMultiplier": 0.5,
 	"results": [
 		"一级协议/29",
 		"二级协议/8",

@@ -49,7 +49,7 @@
 	"ambientSound": "smelter",
 	"ambientSoundVolume": 0.65,
 	"research": {
-		"parent": "硅钢冶炼炉",
+		"parent": "前沿实验室",
 		"objectives": [
 			{
 				"type": "SectorComplete",

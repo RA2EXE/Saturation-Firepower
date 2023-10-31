@@ -185,6 +185,7 @@
 			}
 		]
 	},
+	"researchCostMultiplier": 0.5,
 	"requirements": [
 		"镄/520",
 		"metaglass/200",
