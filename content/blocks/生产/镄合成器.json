@@ -41,12 +41,12 @@
 			]
 		}
 	},
-	"researchCostMultiplier": 0.3,
+	"researchCostMultiplier": 0.5,
 	"requirements": [
 		"thorium/20",
 		"silicon/25",
 		"硅钢/20",
-		"二级协议/0"
+		"一级协议/0"
 	],
 	"ambientSound": "smelter",
 	"category": "crafting"

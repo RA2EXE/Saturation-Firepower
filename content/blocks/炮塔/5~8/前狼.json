@@ -13,7 +13,6 @@
 	"minWarmup": 0.89,
 	"shootWarmupSpeed": 0.05,
 	"cooldownTime": 160,
-	"heatColor": "FF705580",
 	"drawer": {
 		"type": "DrawTurret",
 		"parts": [
@@ -24,7 +23,7 @@
 				"y": -4,
 				"suffix": "-侧",
 				"heatProgress": "warmup",
-				"heatColor": "FF705580",
+				"heatColor": "FF404080",
 				"under": true,
 				"moveX": 8,
 				"moveY": -2,
@@ -37,11 +36,21 @@
 				"y": -2,
 				"suffix": "-侧",
 				"heatProgress": "warmup",
-				"heatColor": "FF705580",
+				"heatColor": "FF404080",
 				"under": true,
 				"moveX": 8,
 				"moveY": -2,
 				"moveRot": -15
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 8,
+				"y": 0,
+				"suffix": "-侧",
+				"heatProgress": "warmup",
+				"heatColor": "FF404080",
+				"moveX": 8
 			},
 			{
 				"type": "HaloPart",
@@ -61,17 +70,6 @@
 				"haloRotation": 0,
 				"haloRotateSpeed": 0,
 				"layer": 110
-			},
-			{
-				"type": "RegionPart",
-				"mirror": true,
-				"x": 8,
-				"y": 0,
-				"suffix": "-侧",
-				"heatProgress": "warmup",
-				"heatColor": "FF705580",
-				"layer": 50,
-				"moveX": 8
 			}
 		]
 	},

@@ -39,9 +39,8 @@
 	"requirements": [
 		"silicon/65",
 		"plastanium/25",
-		"二级协议/0"
+		"一级协议/0"
 	],
-	"researchCostMultiplier": 0.3,
 	"category": "crafting",
 	"research": "phase-weaver"
 }
