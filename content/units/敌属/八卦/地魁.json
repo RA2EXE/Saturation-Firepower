@@ -3,6 +3,7 @@
 	"name": "地魁",
 	"healColor":"FF5B5B",
 	"outlineColor":"383848",
+	"dpsEstimate": 0,
 	"squareShape": true,
 	"hovering": true,
 	"omniMovement": false,

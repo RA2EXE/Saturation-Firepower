@@ -718,6 +718,7 @@
 		},
 		{
 			"name": "伯劳2",
+			"display": false,
 			"reload": 64,
 			"shootY": 96,
 			"x": 88,
@@ -1174,6 +1175,7 @@
 		},
 		{
 			"name": "伯劳3",
+			"display": false,
 			"x": 24,
 			"y": -88,
 			"reload": 35,
@@ -1211,6 +1213,7 @@
 		},
 		{
 			"name": "伯劳3",
+			"display": false,
 			"x": 40,
 			"y": 72,
 			"reload": 25,
@@ -1248,6 +1251,7 @@
 		},
 		{
 			"name": "伯劳3",
+			"display": false,
 			"x": 45,
 			"y": -56,
 			"reload": 20,

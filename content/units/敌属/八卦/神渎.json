@@ -3,6 +3,7 @@
 	"name": "神渎",
 	"healColor":"FF5B5B",
 	"outlineColor":"383848",
+	"dpsEstimate": 0,
 	"hitSize": 88,
 	"canDrown": false,
 	"armor": 136,
@@ -177,6 +178,7 @@
 		},
 		{
 			"name": "神渎2",
+			"display": false,
 			"reload": 0.6,
 			"recoil": 2,
 			"x": 51,
@@ -228,6 +230,7 @@
 		},
 		{
 			"name": "神渎0",
+			"display": false,
 			"reload": 550,
 			"x": 0,
 			"y": 19,

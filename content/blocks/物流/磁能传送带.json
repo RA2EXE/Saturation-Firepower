@@ -1,9 +1,7 @@
 {
 	"type": "Conveyor",
 	"name": "磁能传送带",
-	"description": "在传送带内部产生磁场来快速输送物品",
-	"details": "[red]瞬间失磁会导致剧烈爆炸与小范围瘫痪性磁能脉冲",
-	"health": 90,
+	"health": 110,
 	"baseExplosiveness": 5,
 	"hasShadow": true,
 	"destroyBullet": {

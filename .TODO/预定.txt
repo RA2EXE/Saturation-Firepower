@@ -85,6 +85,10 @@
 		}
 ],
 
+"display": false,
+隐藏武器
+"dpsEstimate": 000,
+面板预估DPS
 	//"buildVisibility": "campaignOnly",
 	//"buildVisibility": "editorOnly",
 

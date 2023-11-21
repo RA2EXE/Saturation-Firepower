@@ -14,7 +14,7 @@
 	"accel": 0.1,
 	"itemCapacity": 5,
 	"faceTarget": false,
-	"research": "nova",
+	"research": "dagger",
 	/*"requirements": {
 		"block": "ground-factory",
 		"time": 1800,

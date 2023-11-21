@@ -76,7 +76,6 @@
 				"width": 0,
 				"height": 0,
 				"damage": 15,
-				"keepVelocity": true,
 				"trailEffect": "none",
 				"backColor": "76D081",
 				"frontColor": "FFFFFF",

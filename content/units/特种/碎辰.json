@@ -146,10 +146,9 @@
 					"interp": "fastSlow",
 					"baseLength": 0,
 					"lifetime": 105,
-					"cone": 360,
 					"colorFrom": "FEEBB3",
 					"colorTo": "FEEBB3",
-					"sizeFrom": 6,
+					"sizeFrom": 7,
 					"sizeTo": 0
 				},
 				"lightningDamage": 2350,

@@ -4,6 +4,7 @@
 	"payloadCapacity": 3600,
 	"healColor":"FF5B5B",
 	"outlineColor":"383848",
+	"dpsEstimate": 0,
 	"speed": 1.88,
 	"drag": 0.04,
 	"accel": 0.06,

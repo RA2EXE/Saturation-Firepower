@@ -30,7 +30,7 @@
 		{
 			"name": "霜雪1",
 			"x": 0,
-			"y": 0,
+			"mirror": false,
 			"shootY": 3.5,
 			"reload": 17,
 			"rotate": false,

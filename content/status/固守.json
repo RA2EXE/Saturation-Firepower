@@ -5,7 +5,7 @@
 	//"show":false,
 	"healthMultiplier": 8,
 	"speedMultiplier": 0,
-	"damageMultiplier": 10,
+	"damageMultiplier": 5,
 	"reloadMultiplier": 1.85,
 	"effectChance": 0.06,
 	"effect": {

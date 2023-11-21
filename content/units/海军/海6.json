@@ -21,7 +21,7 @@
 	"faceTarget": false,
 	"research": {
 		"parent": "海5",
-		//"objectives": [{"type": "SectorComplete","preset": "军工河源"}]
+		//"objectives": [{"type": "SectorComplete","preset": "map8zz"}]
 	},
 	"weapons": [
 		{

@@ -29,6 +29,10 @@
 			}
 		]
 	},
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 22000
+	},
 	"weapons": [
 		{
 			"name": "盘龙3",

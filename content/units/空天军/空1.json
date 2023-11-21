@@ -77,9 +77,9 @@
 		{
 			"name": "多云2",
 			"x": 0,
-			"y": 0,
 			"reload": 40,
 			"shootSound": "missile",
+			"mirror": false,
 			"bullet": {
 				"damage": 8,
 				"sprite": "circle-bullet",

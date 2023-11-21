@@ -27,7 +27,7 @@
 	],
 	"ammoType": {
 		"type": "PowerAmmoType",
-		"totalPower": 5000
+		"totalPower": 50000
 	},
 	"abilities": [
 		{

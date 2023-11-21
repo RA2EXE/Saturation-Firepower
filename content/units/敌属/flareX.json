@@ -65,7 +65,7 @@
 			"type": "StatusFieldAbility",
 			"duration": 660,
 			"reload": 300,
-			"range": 16,
+			"range": 4,
 			"applyEffect":"none",
 			"activeEffect": {
 				"type": "WaveEffect",
@@ -163,25 +163,18 @@
 		{
 			"name": "麦芒2",
 			"x": 0,
-			"y": 0,
-			"reload": 55,
-			"shoot": {
-				"type":"shootSpread",
-				"shots": 2
-			},
+			"display": false,
+			"reload": 30,
 			"inaccuracy": 100,
 			"rotate": false,
 			"mirror": false,
 			"shootSound": "mineDeploy",
 			"shootCone": 360,
 			"ignoreRotation": true,
-			"velocityRnd":1,
 			"minShootVelocity": 0.3,
 			"bullet": {
 				"type": "BombBulletType",
-				"speed":8,
-				"drag":0.1,
-				"maxRange": 10,
+				"maxRange": 40,
 				"suppressionRange": 100,
 				"suppressionDuration": 600,
 				"buildingDamageMultiplier": 1.5,
@@ -190,7 +183,7 @@
 				"makeFire": true,
 				"width": 10,
 				"height": 10,
-				"lifetime": 45,
+				"lifetime": 33,
 				"shootEffect": "none",
 				"smokeEffect": "none",
 				"hitEffect":  {

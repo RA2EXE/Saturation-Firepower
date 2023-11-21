@@ -451,8 +451,7 @@
 								"baseLength": 0,
 								"lifetime": 360,
 								"colorFrom": "FEEBB380",
-								"colorTo": "FEEBB350",
-								"cone": 360
+								"colorTo": "FEEBB350"
 							},
 							{
 								"type": "ParticleEffect",
@@ -466,14 +465,13 @@
 								"baseLength": 0,
 								"lifetime": 33,
 								"colorFrom": "FEEBB3",
-								"colorTo": "FEEBB3",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							},
 							{
 								"type": "WaveEffect",
-								"lifetime": 35,
+								"lifetime": 30,
 								"sizeFrom": 0,
-								"sizeTo": 200,
+								"sizeTo": 300,
 								"strokeFrom": 10,
 								"strokeTo": 0,
 								"colorFrom": "FEEBB3",
@@ -481,10 +479,10 @@
 							},
 							{
 								"type": "WaveEffect",
-								"lifetime": 35,
+								"lifetime": 30,
 								"startDelay": 10,
 								"sizeFrom": 0,
-								"sizeTo": 180,
+								"sizeTo": 280,
 								"strokeFrom": 10,
 								"strokeTo": 0,
 								"colorFrom": "FEEBB3",
@@ -492,10 +490,10 @@
 							},
 							{
 								"type": "WaveEffect",
-								"lifetime": 35,
+								"lifetime": 30,
 								"startDelay": 20,
 								"sizeFrom": 0,
-								"sizeTo": 170,
+								"sizeTo": 270,
 								"strokeFrom": 10,
 								"strokeTo": 0,
 								"colorFrom": "FEEBB3",

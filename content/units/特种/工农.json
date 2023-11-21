@@ -3,6 +3,7 @@
 	"payloadCapacity": 576,
 	"name": "工农",
 	"controller":"BuilderAI",
+	//"defaultCommand": "rebuildCommand",
 	"speed": 2,
 	"drag": 0.018,
 	"accel": 0.03,
@@ -80,6 +81,7 @@
 	"weapons": [
 		{
 			"name": "工农1",
+			"display": false,
 			"reload": 15,
 			"x": 9,
 			"y": -2,

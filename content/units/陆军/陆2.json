@@ -1,7 +1,6 @@
 {
 	"type": "tank",
 	"name": "突袭",
-	"description": "攻击附近所有敌人。发射高爆火箭，重装速度较慢。\n密封舱室，可以跨越水域。",
 	"squareShape": true,
 	"omniMovement": false,
 	"rotateMoveFirst": false,

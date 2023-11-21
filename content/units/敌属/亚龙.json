@@ -1063,6 +1063,7 @@
 		},
 		{
 			"name": "利刃1",
+			"display": false,
 			"type": "PointDefenseWeapon",
 			"x": 36,
 			"y": 36,
@@ -1084,6 +1085,7 @@
 		},
 		{
 			"name": "利刃1",
+			"display": false,
 			"type": "PointDefenseWeapon",
 			"x": 72,
 			"y": 0,
@@ -1105,6 +1107,7 @@
 		},
 		{
 			"name": "利刃1",
+			"display": false,
 			"type": "PointDefenseWeapon",
 			"x": 70,
 			"y": 48,
@@ -1126,6 +1129,7 @@
 		},
 		{
 			"name": "利刃1",
+			"display": false,
 			"type": "PointDefenseWeapon",
 			"x": 80,
 			"y": -96,
@@ -1572,7 +1576,7 @@
 		{
 			"name": "空间导弹",
 			"x": 0,
-			"y": 0,
+			"display": false,
 			"reload": 2160,
 			"mirror": false,
 			"rotate": false,

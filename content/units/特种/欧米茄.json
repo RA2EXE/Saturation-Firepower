@@ -1,14 +1,11 @@
 {
 	"type": "flying",
 	"name": "欧米茄",
-	"description": "保护最高指挥中心。拥有快速建造能力与强劲的迎敌系统。搭载穿甲燃烧弹，中程狗斗弹与热熔射线系统",
-	"accel": 0.05,
-	"drag": 0.03,
 	"rotateSpeed": 6,
-	"speed": 3.8,
+	//"speed": 3.8,
 	//地图用，发mod前记得删！！！
-	//"itemCapacity": 10000,
-	//"speed": 10,
+	"itemCapacity": 10000,
+	"speed": 10,
 	"immunities": [
 		"sapped","slow","unmoving",
 		"spore-slowed","corroded","electrified",
@@ -83,8 +80,7 @@
 					"baseLength": 5,
 					"lifetime": 15,
 					"colorFrom": "FF8C0080",
-					"colorTo": "FF8C0080",
-					"cone": 360
+					"colorTo": "FF8C0080"
 				},
 				"despawnEffect": "none",
 				"makeFire": true,
