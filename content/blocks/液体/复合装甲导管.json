@@ -14,6 +14,7 @@
 		"硅钢/1",
 		"镄/1"
 	],
+	"bridgeReplacement": "裂位导管塔",
 	"category": "liquid",
 	"research":"plated-conduit"
 }

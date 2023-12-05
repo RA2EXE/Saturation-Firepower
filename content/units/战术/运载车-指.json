@@ -44,7 +44,7 @@
 	"itemCapacity": 0,
 	"faceTarget": false,
 	"lightRadius": 200,
-	"fogRadius": 60,
+	"fogRadius": 40,
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",

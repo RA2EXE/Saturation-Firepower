@@ -2,6 +2,6 @@
 	"speed": 0.2,
 	"displayedSpeed": 20,
 	"displayFlow":true,
-	"placeableLiquid": true
-	
+	"placeableLiquid": true,
+	"junctionReplacement":"inverted-sorter"
 }

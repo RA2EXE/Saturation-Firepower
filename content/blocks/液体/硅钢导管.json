@@ -10,6 +10,7 @@
 		"metaglass/2",
 		"硅钢/1"
 	],
+	"bridgeReplacement": "phase-conduit",
 	"category": "liquid",
 	"research": "pulse-conduit"
 }

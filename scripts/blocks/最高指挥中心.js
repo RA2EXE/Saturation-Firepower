@@ -1,4 +1,4 @@
-const myitems = require("物品");
+const myitems = require("SFitems");
 
 let range = 520; //俩圆半径，炮塔射程
 const turretZ = extend(ItemTurret, "怨灵Z", {});

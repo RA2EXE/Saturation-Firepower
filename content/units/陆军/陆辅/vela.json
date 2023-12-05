@@ -43,8 +43,7 @@
 					"strokeFrom": 1.6,
 					"strokeTo": 0,
 					"colorFrom": "97FFA8",
-					"colorTo": "97FFA8",
-					"cone": 360
+					"colorTo": "97FFA8"
 				},
 				"shootEffect": {
 					"type": "ParticleEffect",
@@ -80,28 +79,30 @@
 					"effects": [
 						{
 							"type": "WaveEffect",
-							"lifetime": 60,
+							"lifetime": 40,
 							"sizeFrom": 90,
 							"sizeTo": 0,
 							"strokeFrom": 0,
 							"strokeTo": 8,
+							"interp":"circleIn",
 							"colorFrom": "7CF389",
 							"colorTo": "7CF389"
 						},
 						{
 							"type": "ParticleEffect",
 							"particles": 33,
-							"baseLength": 80,
-							"length": -80,
-							"lifetime": 60,
+							"baseLength": -80,
+							"length": 80,
+							"lifetime": 40,
 							"line": true,
-							"lenFrom": 20,
-							"lenTo": 0,
+							"lenFrom": 0,
+							"lenTo": 10,
 							"strokeFrom": 1,
-							"strokeTo": 1,
+							"strokeTo": 1.5,
+							"interp":"pow5In",
+							"sizeInterp": "pow3Out",
 							"colorFrom": "ffffff",
-							"colorTo": "97FFA8",
-							"cone": 360
+							"colorTo": "97FFA8"
 						}
 					]
 				},

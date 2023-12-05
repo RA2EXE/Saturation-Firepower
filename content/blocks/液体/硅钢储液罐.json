@@ -5,6 +5,7 @@
 	"health": 3600,
 	"liquidCapacity": 6000,
 	"insulated":true,
+	//"variants": 2,
 	"requirements": [
 		"lead/70",
 		"metaglass/220",

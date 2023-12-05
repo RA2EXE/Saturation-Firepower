@@ -3,7 +3,6 @@
 	"name": "默途",
 	"outlineColor":"383848",
 	"controller": "FlyingAI",
-	"uncontrollable": true,
 	//"playerControllable": false,
 	"autoFindTarget":true,
 	"speed": 3.8,
@@ -66,7 +65,7 @@
 		{
 			"type": "ForceFieldAbility",
 			"radius": 20,
-			"regen": 12,
+			"regen": 8,
 			"max": 2990,
 			"cooldown": 480
 		}

@@ -22,6 +22,7 @@
 		"硅钢/330",
 		"thorium/200"
 	],
+	"buildCostMultiplier": 0.95,
 	"floating": true,
 	"ambientSound": "hum",
 	"attribute": "heat",

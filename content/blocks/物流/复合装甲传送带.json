@@ -13,6 +13,8 @@
 	],
 	"category": "distribution",
 	"research": "armored-conveyor",
+	"bridgeReplacement": "裂位传送塔",
+	"junctionReplacement": "inverted-sorter",
 	"speed": 0.20,
 	"displayedSpeed": 20,
 	"displayFlow": true,

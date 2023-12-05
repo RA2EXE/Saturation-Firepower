@@ -17,7 +17,7 @@
 		"totalPower": 6000
 	},
 	"ammoCapacity": 60,
-	"hitSize": 28,
+	"hitSize": 24,
 	"buildRange": 288,
 	"buildSpeed": 3.5,
 	"buildBeamOffset": 11,

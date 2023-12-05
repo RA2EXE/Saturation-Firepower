@@ -33,6 +33,8 @@
 	],
 	"category": "distribution",
 	"research": "armored-conveyor",
+	"bridgeReplacement": "phase-conveyor",
+	"junctionReplacement": "inverted-sorter",
 	"speed": 0.60,
 	"displayedSpeed": 60
 }

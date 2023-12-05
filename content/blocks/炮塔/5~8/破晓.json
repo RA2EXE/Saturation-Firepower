@@ -34,9 +34,9 @@
 	"chargeSound": "lasercharge",
 	"shootType": {
 		"type": "LaserBulletType",
-		"lightningSpacing": 42,
+		"lightningSpacing": 32,
 		"lightningLength": 8,
-		"lightningDelay": 1.25,
+		"lightningDelay": 1.7,
 		"lightningLengthRand": 6,
 		"lightningAngleRand": 90,
 		"lightningDamage": 550,

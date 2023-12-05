@@ -6,7 +6,7 @@
 	"hasLiquids": true,
 	"hasItems": true,
 	"itemDuration": 15,
-	"powerProduction": 44,
+	"powerProduction": 38.5,
 	"itemCapacity": 20,
 	"liquidCapacity": 200,
 	"drawer": {
@@ -38,13 +38,13 @@
 	"consumes": {
 		"itemFlammable":{},
 		"itemExplode":{},
-		"liquid": "water/0.8"
+		"liquid": "water/0.6"
 	},
 	"requirements": [
-		"titanium/320",
-		"lead/260",
+		"lead/200",
+		"titanium/220",
 		"metaglass/80",
-		"silicon/230",
+		"silicon/130",
 		"硅钢/80"
 	],
 	"ambientSound": "smelter",

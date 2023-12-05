@@ -79,6 +79,7 @@
 		"硝化重油": {
 			"type": "LiquidBulletType",
 			"liquid": "硝化重油",
+			"status": "油蚀",
 			"statusDuration": 240,
 			"lifetime": 49,
 			"speed": 4,

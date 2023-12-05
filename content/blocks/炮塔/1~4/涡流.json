@@ -8,7 +8,7 @@
 		"shotDelay": 3
 	},
 	"reload": 0.6,
-	"range": 240,
+	"range": 220,
 	"recoilTime": 10,
 	"recoil": 1,
 	"targetGround": true,
@@ -19,7 +19,7 @@
 	"consumes": {
 		"power": 3
 	},
-	"liquidCapacity": 300,
+	"liquidCapacity": 200,
 	"ammoTypes": {
 		"纳米流体": {
 			"type": "LiquidBulletType",
@@ -107,8 +107,7 @@
 	},
 	"requirements": [
 		"plastanium/70",
-		"metaglass/100",
-		"silicon/80",
+		"metaglass/80",
 		"thorium/130",
 		"硅钢/80",
 		"一级协议/0"

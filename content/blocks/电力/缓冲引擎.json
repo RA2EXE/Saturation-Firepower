@@ -23,10 +23,10 @@
 		"itemExplosive":{}
 	},
 	"requirements": [
-		"lead/90",
 		"metaglass/80",
 		"thorium/80",
-		"硅钢/70"
+		"硅钢/70",
+		"水桶/5"
 	],
 	"ambientSound": "explosion",
 	"ambientSoundVolume": 1.5,

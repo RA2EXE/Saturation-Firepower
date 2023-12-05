@@ -4,7 +4,7 @@
 	"health": 2200,
 	"armor": 5,
 	"size": 3,
-	"reload": 6,
+	"reload": 4.5,
 	"range": 280,
 	"maxAmmo": 150,
 	"shoot": {
@@ -15,7 +15,7 @@
 	"recoilTime": 25,
 	"recoil": 2.88,
 	"shake": 2.5,
-	"coolantMultiplier": 2000,
+	"coolantMultiplier": 1000,
 	"consumes": {
 		"coolant": {
 			"amount": 0.001,

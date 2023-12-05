@@ -1,7 +1,7 @@
 {
 	"type": "ItemTurret",
 	"name": "长枪",
-	"health": 1300,
+	"health": 830,
 	"size": 3,
 	"reload": 35,
 	"range": 328,
@@ -75,6 +75,7 @@
 			"knockback": 2,
 			"width": 15,
 			"height": 40,
+			"ammoMultiplier": 1,
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [

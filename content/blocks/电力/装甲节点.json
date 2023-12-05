@@ -17,6 +17,7 @@
 		"裂位能/5",
 		"一级协议/0"
 	],
+	"buildCostMultiplier": 0.5,
 	"destroyBullet": {
 		"splashDamage": 60,
 		"splashDamageRadius": 40,

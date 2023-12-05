@@ -4,7 +4,7 @@
 	"health": 42000,
 	"weapons": [
 		{
-			"name": "根除",
+			"name": "根除1",
 			"reload": 38,
 			"shake": 3,
 			"shoot": {
@@ -54,33 +54,35 @@
 			}
 		},
 		{
-			"name": "苍穹1",
+			"name": "根除2",
 			"x": 8,
 			"y": -8,
-			"reload": 70,
+			"reload": 14,
 			"rotate": true,
 			"rotateSpeed": 9,
 			"top":true,
 			"shoot": {
-				"shots": 5,
-				"shotDelay": 1
+				"type":"shootSpread",
+				"spread": 12,
+				"shots": 3
 			},
-			"alternate": true,
+			"alternate": false,
 			"shootSound": "missile",
 			"inaccuracy": 15,
 			"shootCone": 30,
 			"bullet": {
 				"type": "MissileBulletType",
+				"homingPower": 0.03,
 				"status": "blasted",
-				"damage": 25,
-				"splashDamageRadius": 35,
+				"damage": 23,
+				"splashDamageRadius": 45,
 				"splashDamage": 55,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
-				"width": 9,
-				"height": 20,
-				"speed": 8,
-				"lifetime": 30
+				"width": 10,
+				"height": 13,
+				"speed": 6,
+				"lifetime": 45
 			}
 		}
 	]

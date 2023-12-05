@@ -1,6 +1,6 @@
 const library = require("base/library");
-const myliquids = require("液体");
-const myitems = require("物品");
+const myliquids = require("SFliquids");
+const myitems = require("SFitems");
 const 螺旋压缩机 = library.MultiCrafter(GenericCrafter, GenericCrafter.GenericCrafterBuild, "螺旋压缩机", [
 	{
 		input: {
