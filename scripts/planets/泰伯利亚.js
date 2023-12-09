@@ -48,11 +48,11 @@ SFlib.addToResearch(map1pj, {
 });
 
 const map2hw = new SectorPreset("荒芜矿区", TBLY, 2);
-map2hw.description = "看看我们找到了什么？一个资源富饶的大矿区，坏消息是敌人也发现了这里，还有我们。既然不能隐秘行事了，那就放开了去做吧。";
+map2hw.description = "雷达摧毁晚了一步，我们被发现了，大批敌人正在赶来。接管后勤基地，迅速巩固防御并开发这里，保护雷达等待我们与其他军团取得联系。";
 map2hw.difficulty = 2;
 map2hw.alwaysUnlocked = false;
 map2hw.addStartingItems = true;
-map2hw.captureWave = 100;
+map2hw.captureWave = 101;
 map2hw.localizedName = "荒芜矿区";
 exports.map2hw = map2hw;
 SFlib.addToResearch(map2hw, {

@@ -40,6 +40,7 @@
 		"itemExplode":{},
 		"liquid": "water/0.6"
 	},
+	"buildCostMultiplier": 0.95,
 	"requirements": [
 		"lead/200",
 		"titanium/220",

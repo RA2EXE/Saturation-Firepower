@@ -1,0 +1,7 @@
+getflag s "失败"
+jump 0 notEqual s 1
+ubind @饱和火力-工农
+sensor x @unit @x
+sensor y @unit @y
+op sub y y 10
+ucontrol pathfind x y 0 0 0

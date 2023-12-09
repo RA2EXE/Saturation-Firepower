@@ -2,7 +2,7 @@
 	"type": "NuclearReactor",
 	"name": "镄反应堆",
 	"size": 3,
-	"health": 1500,
+	"health": 1600,
 	"liquidCapacity": 30,
 	"itemCapacity": 25,
 	"hasItems": true,
@@ -92,12 +92,13 @@
 		"liquid":"cryofluid/0.1",
 		"items": ["镄/1"]
 	},
+	"buildCostMultiplier": 0.9,
 	"requirements": [
 		"lead/300",
 		"graphite/90",
 		"metaglass/60",
-		"镄/200",
-		"硅钢/150"
+		"镄/180",
+		"硅钢/110"
 	],
 	"category": "power",
 	"research": "thorium-reactor"

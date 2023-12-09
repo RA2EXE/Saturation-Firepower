@@ -10,7 +10,7 @@
 	"rotateMoveFirst": false,
 	"speed": 0.48,
 	"rotateSpeed": 0.53,
-	"crushDamage": 60,
+	"crushDamage": 90,
 	"hitSize": 120,
 	"immunities": [
 		"blasted","burning","electrified",
