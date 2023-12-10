@@ -52,7 +52,7 @@ map2hw.description = "雷达摧毁晚了一步，我们被发现了，大批敌�
 map2hw.difficulty = 2;
 map2hw.alwaysUnlocked = false;
 map2hw.addStartingItems = true;
-map2hw.captureWave = 101;
+map2hw.captureWave = 100;
 map2hw.localizedName = "荒芜矿区";
 exports.map2hw = map2hw;
 SFlib.addToResearch(map2hw, {
