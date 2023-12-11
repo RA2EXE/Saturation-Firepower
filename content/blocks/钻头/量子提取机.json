@@ -25,8 +25,7 @@
 		"baseLength": 30,
 		"lifetime": 300,
 		"colorFrom": "EEC591",
-		"colorTo": "ffffff00",
-		"cone": 360
+		"colorTo": "ffffff00"
 	},
 	"destroyBullet": {
 		"type": "BasicBulletType",
@@ -46,8 +45,7 @@
 					"baseLength": 29,
 					"lifetime": 25,
 					"colorFrom": "FEEBB3A0",
-					"colorTo": "ffffff",
-					"cone": 360
+					"colorTo": "ffffff"
 				},
 				{
 					"type": "WaveEffect",
@@ -130,8 +128,7 @@
 						"baseLength": 0,
 						"lifetime": 25,
 						"colorFrom": "FEEBB3A0",
-						"colorTo": "ffffff",
-						"cone": 360
+						"colorTo": "ffffff"
 					},
 					{
 						"type": "WaveEffect",

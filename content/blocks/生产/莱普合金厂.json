@@ -31,8 +31,7 @@
 		"sizeFrom": 5,
 		"sizeTo": 0,
 		"colorFrom": "5C5D79",
-		"colorTo": "5C5D79",
-		"cone": 360
+		"colorTo": "5C5D79"
 	},
 	"consumes": {
 		"power": 18,

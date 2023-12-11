@@ -189,8 +189,7 @@
 			"baseLength": 0,
 			"lifetime": 45,
 			"colorFrom": "FFFFFF80",
-			"colorTo": "BFFFDB00",
-			"cone": 360
+			"colorTo": "BFFFDB00"
 		},
 		"hitEffect": {
 			"type": "ExplosionEffect",
@@ -225,8 +224,7 @@
 				"baseLength": 0,
 				"lifetime": 44,
 				"colorFrom": "BFFFDB",
-				"colorTo": "BFFFDB",
-				"cone": 360
+				"colorTo": "BFFFDB"
 			},
 			"despawnEffect": {
 				"type": "WaveEffect",

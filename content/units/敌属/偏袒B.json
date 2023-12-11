@@ -125,8 +125,7 @@
 							"sizeInterp": "pow5In",
 							"lifetime": 95,
 							"colorFrom": "EEC59180",
-							"colorTo": "EEC591",
-							"cone": 360
+							"colorTo": "EEC591"
 						},
 						{
 							"type": "WaveEffect",
@@ -184,8 +183,7 @@
 					"baseLength": 0,
 					"lifetime": 95,
 					"colorFrom": "EEC591",
-					"colorTo": "EEC59100",
-					"cone": 360
+					"colorTo": "EEC59100"
 				}
 			},
 			"ejectEffect": {
@@ -203,8 +201,7 @@
 						"layer": 60,
 						"lifetime": 95,
 						"colorFrom": "73737390",
-						"colorTo": "73737390",
-						"cone": 360
+						"colorTo": "73737390"
 					},
 					{
 						"type": "WaveEffect",

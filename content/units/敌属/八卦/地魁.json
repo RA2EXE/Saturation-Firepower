@@ -93,8 +93,7 @@
 				"baseLength": 0,
 				"lifetime": 35,
 				"colorFrom": "FF5B5B",
-				"colorTo": "FF5B5B00",
-				"cone": 360
+				"colorTo": "FF5B5B00"
 			}}
 	],
 	"weapons": [
@@ -136,8 +135,7 @@
 		"sizeInterp": "pow5In",
 		"lifetime": 85,
 		"colorFrom": "FF5B5B80",
-		"colorTo": "FF5B5B",
-		"cone": 360},
+		"colorTo": "FF5B5B"},
 		{"type": "ParticleEffect",
 		"particles": 32,
 		"line":true,
@@ -151,8 +149,7 @@
 		"baseLength": 20,
 		"lifetime": 16,
 		"colorFrom": "FF5B5B",
-		"colorTo": "FF5B5B",
-		"cone": 360
+		"colorTo": "FF5B5B"
 		},
 		{"type": "WaveEffect",
 		"lifetime": 16,
@@ -258,8 +255,7 @@
 							"sizeInterp": "pow5In",
 							"lifetime": 95,
 							"colorFrom": "FF5B5B80",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -273,8 +269,7 @@
 							"baseLength": 0,
 							"lifetime": 16,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "WaveEffect",
@@ -332,8 +327,7 @@
 					"baseLength": 0,
 					"lifetime": 95,
 					"colorFrom": "FF5B5B",
-					"colorTo": "FF5B5B00",
-					"cone": 360
+					"colorTo": "FF5B5B00"
 				}
 			}
 		},
@@ -522,8 +516,7 @@
 							"baseLength": 0,
 							"lifetime": 35,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -536,8 +529,7 @@
 							"baseLength": 0,
 							"lifetime": 35,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -550,8 +542,7 @@
 							"baseLength": 0,
 							"lifetime": 35,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "WaveEffect",

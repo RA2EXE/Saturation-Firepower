@@ -219,8 +219,7 @@
 			"strokeFrom": 2,
 			"strokeTo": 0,
 			"colorFrom": "BFFFDB",
-			"colorTo": "BFFFDB",
-			"cone": 360
+			"colorTo": "BFFFDB"
 		},
 		"despawnEffect": {
 			"type": "ParticleEffect",

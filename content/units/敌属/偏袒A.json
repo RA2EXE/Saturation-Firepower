@@ -114,8 +114,7 @@
 							"sizeInterp": "pow5In",
 							"lifetime": 65,
 							"colorFrom": "EEC591",
-							"colorTo": "EEC591",
-							"cone": 360
+							"colorTo": "EEC591"
 						},
 						{
 							"type": "WaveEffect",

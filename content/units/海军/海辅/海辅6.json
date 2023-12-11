@@ -157,8 +157,7 @@
 							"baseLength": 0,
 							"lifetime": 30,
 							"colorFrom": "97FFA8",
-							"colorTo": "97FFA8",
-							"cone": 360
+							"colorTo": "97FFA8"
 						},
 						{
 							"type": "WaveEffect",
@@ -245,8 +244,7 @@
 							"baseLength": 0,
 							"lifetime": 30,
 							"colorFrom": "97FFA8",
-							"colorTo": "97FFA8",
-							"cone": 360
+							"colorTo": "97FFA8"
 						},
 						{
 							"type": "WaveEffect",
@@ -346,8 +344,7 @@
 							"baseLength": 130,
 							"lifetime": 35,
 							"colorFrom": "97FFA880",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						},
 						{
 							"type": "ParticleEffect",
@@ -358,8 +355,7 @@
 							"baseLength": 0,
 							"lifetime": 15,
 							"colorFrom": "97FFA880",
-							"colorTo": "97FFA800",
-							"cone": 360
+							"colorTo": "97FFA800"
 						},
 						{
 							"type": "ParticleEffect",
@@ -373,8 +369,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						}
 					]
 				},
@@ -501,8 +496,7 @@
 							"baseLength": 130,
 							"lifetime": 35,
 							"colorFrom": "97FFA880",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						},
 						{
 							"type": "ParticleEffect",
@@ -513,8 +507,7 @@
 							"baseLength": 0,
 							"lifetime": 15,
 							"colorFrom": "97FFA880",
-							"colorTo": "97FFA800",
-							"cone": 360
+							"colorTo": "97FFA800"
 						},
 						{
 							"type": "ParticleEffect",
@@ -528,8 +521,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						}
 					]
 				},
@@ -656,8 +648,7 @@
 							"baseLength": 130,
 							"lifetime": 35,
 							"colorFrom": "97FFA880",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						},
 						{
 							"type": "ParticleEffect",
@@ -668,8 +659,7 @@
 							"baseLength": 0,
 							"lifetime": 15,
 							"colorFrom": "97FFA880",
-							"colorTo": "97FFA800",
-							"cone": 360
+							"colorTo": "97FFA800"
 						},
 						{
 							"type": "ParticleEffect",
@@ -683,8 +673,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						}
 					]
 				},

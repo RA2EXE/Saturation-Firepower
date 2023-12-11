@@ -128,8 +128,7 @@
 						"baseLength": 33,
 						"lifetime": 35,
 						"colorFrom": "25C9AB",
-						"colorTo": "FFFFFF",
-						"cone": 360
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "ParticleEffect",
@@ -143,8 +142,7 @@
 						"baseLength": 53,
 						"lifetime": 32,
 						"colorFrom": "FFFFFF",
-						"colorTo": "25C9AB",
-						"cone": 360
+						"colorTo": "25C9AB"
 					},
 					{
 						"type": "WaveEffect",
@@ -236,8 +234,7 @@
 							"baseLength": 0,
 							"lifetime": 18,
 							"colorFrom": "25C9AB80",
-							"colorTo": "FFFFFF00",
-							"cone": 360
+							"colorTo": "FFFFFF00"
 						},
 						{
 							"type": "ParticleEffect",
@@ -248,8 +245,7 @@
 							"baseLength": 133,
 							"lifetime": 35,
 							"colorFrom": "25C9AB",
-							"colorTo": "FFFFFF",
-							"cone": 360
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",
@@ -276,8 +272,7 @@
 					"baseLength": 3,
 					"lifetime": 22,
 					"colorFrom": "FFFFFF",
-					"colorTo": "25C9AB",
-					"cone": 360
+					"colorTo": "25C9AB"
 				},
 				"collides": false,
 				"status": "干扰",
@@ -309,8 +304,6 @@
 			"lifetime": 30,
 			"width": 32,
 			"height": 56,
-			"status": "崩溃",
-			"statusDuration": 160,
 			"sprite": "饱和火力-透彻",
 			"trailLength": 9,
 			"trailWidth": 5.5,
@@ -460,6 +453,8 @@
 				"type": "PointBulletType",
 				"trailEffect": "none",
 				"hitEffect": "instHit",
+				"status": "裂位标记",
+				"statusDuration": 60,
 				"speed": 40,
 				"lifetime": 8,
 				"damage": 867,
@@ -470,7 +465,56 @@
 				"lightningColor": "EEC591",
 				"splashDamageRadius": 55,
 				"splashDamage": 50,
-				"hitShake": 2
+				"hitShake": 2,
+				"fragLifeMin": 0.5,
+				"fragLifeMax": 1.5,
+				"fragVelocityMax": 0,
+				"fragBullets": 3,
+				"fragBullet": {
+					"lifetime": 60,
+					"height": 8,
+					"width": 8,
+					"shrinkY": 0.1,
+					"shrinkX": 0.1,
+					"sprite":"circle-bullet",
+					"collides": false,
+					"hittable": false,
+					"absorbable": false,
+					"status": "崩溃",
+					"statusDuration": 180,
+					"splashDamageRadius": 55,
+					"splashDamage": 133,
+					"hitShake": 1,
+					"hitSound": "plasmaboom",
+					"hitEffect": {
+						"type": "MultiEffect",
+						"effects": [
+							{
+								"type": "ParticleEffect",
+								"particles": 1,
+								"sizeFrom": 27.5,
+								"sizeTo": 0,
+								"length": 0,
+								"baseLength": 0,
+								"lifetime": 60,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3a8"
+							},
+							{
+								"type": "WaveEffect",
+								"interp": "circleOut",
+								"lifetime": 30,
+								"sizeFrom": 10,
+								"sizeTo": 70,
+								"strokeFrom": 10,
+								"strokeTo": 0,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							}
+						]
+					},
+					"despawnEffect": "none"
+				}
 			}
 		}
 	},

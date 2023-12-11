@@ -16,39 +16,37 @@
 			"type": "MultiEffect",
 			"effects": [
 				{
-"type": "ParticleEffect",
-"particles": 16,
-"sizeFrom": 9,
-"sizeTo": 0,
-"length": 100,
-"baseLength": 30,
-"lifetime": 45,
-"colorFrom": "737373FF",
-"colorTo": "737373FF",
-"cone": 360
+					"type": "ParticleEffect",
+					"particles": 16,
+					"sizeFrom": 9,
+					"sizeTo": 0,
+					"length": 100,
+					"baseLength": 30,
+					"lifetime": 45,
+					"colorFrom": "737373FF",
+					"colorTo": "737373FF"
 				},
 				{
-"type": "ParticleEffect",
-"particles": 12,
-"line": true,
-"sizeFrom": 8,
-"sizeTo": 0,
-"length": 160,
-"baseLength": 8,
-"lifetime": 22,
-"colorFrom": "FFFFFF",
-"colorTo": "FFE176FF",
-"cone": 360
+					"type": "ParticleEffect",
+					"particles": 12,
+					"line": true,
+					"sizeFrom": 8,
+					"sizeTo": 0,
+					"length": 160,
+					"baseLength": 8,
+					"lifetime": 22,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FFE176FF"
 				},
 				{
-"type": "WaveEffect",
-"lifetime": 10,
-"sizeFrom": 1,
-"sizeTo": 170,
-"strokeFrom": 6,
-"strokeTo": 0,
-"colorFrom": "FFE176FF",
-"colorTo": "ffffff"
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 1,
+					"sizeTo": 170,
+					"strokeFrom": 6,
+					"strokeTo": 0,
+					"colorFrom": "FFE176FF",
+					"colorTo": "ffffff"
 				}
 			]
 		},

@@ -143,8 +143,7 @@
 							"baseLength": 43,
 							"lifetime": 35,
 							"colorFrom": "A278E180",
-							"colorTo": "A278E100",
-							"cone": 360
+							"colorTo": "A278E100"
 						},
 						{
 							"type": "WaveEffect",

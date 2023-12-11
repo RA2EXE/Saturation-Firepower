@@ -116,8 +116,7 @@
 					"baseLength": -80,
 					"lifetime": 45,
 					"colorFrom": "FFFFFF",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -128,8 +127,7 @@
 					"baseLength": -0,
 					"lifetime": 51,
 					"colorFrom": "FFFFFF",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				}
 			]
 		},
@@ -145,8 +143,7 @@
 				"baseLength": 0,
 				"lifetime": 20,
 				"colorFrom": "BFFFDB",
-				"colorTo": "BFFFDB",
-				"cone": 360
+				"colorTo": "BFFFDB"
 			},
 			"despawnEffect": "none",
 			"sprite": "circle-bullet",

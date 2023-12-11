@@ -56,8 +56,7 @@
 				"strokeFrom": 1,
 				"strokeTo": 0,
 				"colorFrom": "#FFEFB2",
-				"colorTo": "#FFEFB2",
-				"cone": 360
+				"colorTo": "#FFEFB2"
 			},
 			"applyEffect": "none",
 			"speed": 14,
@@ -164,8 +163,7 @@
 				"sizeFrom": 1,
 				"sizeTo": 0,
 				"colorFrom": "#EFDDFF",
-				"colorTo": "#EFDDFF",
-				"cone": 360
+				"colorTo": "#EFDDFF"
 			},
 			"applyEffect": "none",
 			"speed": 14,

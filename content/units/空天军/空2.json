@@ -88,8 +88,7 @@
 							"baseLength": 3,
 							"lifetime": 15,
 							"colorFrom": "c0ecff",
-							"colorTo": "c0ecff",
-							"cone": 360
+							"colorTo": "c0ecff"
 						}
 					]
 				},
@@ -110,8 +109,7 @@
 					"baseLength": 35,
 					"lifetime": 55,
 					"colorFrom": "c0ecff",
-					"colorTo": "c0ecff",
-					"cone": 360
+					"colorTo": "c0ecff"
 				},
 				"shootEffect": {
 					"type": "WaveEffect",
@@ -138,8 +136,7 @@
 							"lifetime": 25,
 							"interp": "pow5Out",
 							"colorFrom": "c0ecff",
-							"colorTo": "c0ecff",
-							"cone": 360
+							"colorTo": "c0ecff"
 						},
 						{
 							"type": "WaveEffect",
@@ -162,8 +159,7 @@
 					"baseLength": 0,
 					"lifetime": 26,
 					"colorFrom": "c0ecff",
-					"colorTo": "c0ecff",
-					"cone": 360
+					"colorTo": "c0ecff"
 				}
 			}
 		}

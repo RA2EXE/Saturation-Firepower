@@ -122,8 +122,7 @@
 				"baseLength": 0,
 				"lifetime": 15,
 				"colorFrom": "FF5B5B",
-				"colorTo": "FF5B5B",
-				"cone": 360
+				"colorTo": "FF5B5B"
 			},
 			"smokeEffect": "none",
 			"hitEffect": {
@@ -228,8 +227,7 @@
 						"sizeInterp": "pow5In",
 						"lifetime": 85,
 						"colorFrom": "EEC59180",
-						"colorTo": "EEC591",
-						"cone": 360
+						"colorTo": "EEC591"
 					},
 					{
 						"type": "ParticleEffect",
@@ -240,8 +238,7 @@
 						"baseLength": 0,
 						"lifetime": 8,
 						"colorFrom": "EEC591",
-						"colorTo": "EEC591",
-						"cone": 360
+						"colorTo": "EEC591"
 					},
 					{
 						"type": "ParticleEffect",
@@ -253,8 +250,7 @@
 						"lifetime": 9,
 						"startDelay": 8.5,
 						"colorFrom": "EEC591",
-						"colorTo": "EEC591",
-						"cone": 360
+						"colorTo": "EEC591"
 					},
 					{
 						"type": "ParticleEffect",
@@ -270,8 +266,7 @@
 						"baseLength": 30,
 						"lifetime": 16,
 						"colorFrom": "EEC591",
-						"colorTo": "EEC591",
-						"cone": 360
+						"colorTo": "EEC591"
 					},
 					{
 						"type": "WaveEffect",
@@ -310,8 +305,7 @@
 				"baseLength": 0,
 				"lifetime": 105,
 				"colorFrom": "EEC591",
-				"colorTo": "EEC591",
-				"cone": 360
+				"colorTo": "EEC591"
 			},
 			"trailChance": 1,
 			"trailRotation": true,

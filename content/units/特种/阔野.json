@@ -117,8 +117,7 @@
 				"baseLength": 0,
 				"lifetime": 15,
 				"colorFrom": "ffffff",
-				"colorTo": "FEEBB3",
-				"cone": 360
+				"colorTo": "FEEBB3"
 			},
 			"damageEffect": "chainLightning",
 			"status": "slow",
@@ -205,8 +204,7 @@
 					"baseLength": 0,
 					"lifetime": 180,
 					"colorFrom": "FEEBB3",
-					"colorTo": "FEEBB300",
-					"cone": 360
+					"colorTo": "FEEBB300"
 				},
 				"smokeEffect": "bigShockwave",
 				"chargeEffect": {
@@ -222,8 +220,7 @@
 							"baseLength": 0,
 							"lifetime": 130,
 							"colorFrom": "FEEBB300",
-							"colorTo": "FEEBB3",
-							"cone": 360
+							"colorTo": "FEEBB3"
 						},
 						{
 							"type": "WaveEffect",
@@ -285,8 +282,7 @@
 							"baseLength": 0,
 							"lifetime": 70,
 							"colorFrom": "FEEBB300",
-							"colorTo": "FEEBB3",
-							"cone": 360
+							"colorTo": "FEEBB3"
 						},
 						{
 							"type": "ParticleEffect",
@@ -299,8 +295,7 @@
 							"startDelay": 68,
 							"lifetime": 33,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FEEBB390",
-							"cone": 360
+							"colorTo": "FEEBB390"
 						},
 						{
 							"type": "WaveEffect",
@@ -345,8 +340,7 @@
 							"lifetime": 70,
 							"layer": 120,
 							"colorFrom": "00000000",
-							"colorTo": "000000",
-							"cone": 360
+							"colorTo": "000000"
 						},
 						{
 							"type": "ParticleEffect",
@@ -360,8 +354,7 @@
 							"lifetime": 33,
 							"layer": 120,
 							"colorFrom": "000000",
-							"colorTo": "000000",
-							"cone": 360
+							"colorTo": "000000"
 						},
 						{
 							"type": "WaveEffect",
@@ -538,8 +531,7 @@
 									"baseLength": 0,
 									"lifetime": 60,
 									"colorFrom": "FEEBB3",
-									"colorTo": "FEEBB3",
-									"cone": 360
+									"colorTo": "FEEBB3"
 								},
 								{
 									"type": "WaveEffect",
@@ -743,8 +735,7 @@
 							"sizeFrom": 150,
 							"sizeTo": 0,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FEEBB3",
-							"cone": 360
+							"colorTo": "FEEBB3"
 						},
 						{
 							"type": "ParticleEffect",
@@ -757,8 +748,7 @@
 							"baseLength": 35,
 							"lifetime": 15,
 							"colorFrom": "FEEBB3A8",
-							"colorTo": "FEEBB3A8",
-							"cone": 360
+							"colorTo": "FEEBB3A8"
 						},
 						{
 							"type": "WaveEffect",

@@ -32,8 +32,7 @@
 		"sizeFrom": 10,
 		"sizeTo": 0,
 		"colorFrom": "F2E77050",
-		"colorTo": "F2E770",
-		"cone": 360
+		"colorTo": "F2E770"
 	},
 	"consumes": {
 		"power": 9,

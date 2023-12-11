@@ -177,8 +177,7 @@
 				"baseLength": 0,
 				"lifetime": 16,
 				"colorFrom": "f8ad42",
-				"colorTo": "f68021",
-				"cone": 360
+				"colorTo": "f68021"
 			},
 			"despawnEffect": "blastExplosion",
 			"intervalDelay": 4,

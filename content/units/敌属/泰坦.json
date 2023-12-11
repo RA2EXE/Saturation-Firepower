@@ -23,7 +23,7 @@
 	"mechSideSway": 0.7,
 	"mechFrontSway": 2.1,
 	"hitSize": 75,
-	"health": 250000,
+	"health": 357000,
 	"armor": 230,
 	"rotateSpeed": 1.5,
 	"hovering": true,

@@ -28,8 +28,7 @@
 		"sizeFrom": 5,
 		"sizeTo": 0,
 		"colorFrom": "25C9AB",
-		"colorTo": "25C9AB",
-		"cone": 360
+		"colorTo": "25C9AB"
 	},
 	"consumes": {
 		"power": 8,

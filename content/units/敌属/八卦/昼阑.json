@@ -171,8 +171,7 @@
 					"baseLength": 0,
 					"lifetime": 360,
 					"colorFrom": "25C9AB80",
-					"colorTo": "BFFFDB50",
-					"cone": 360
+					"colorTo": "BFFFDB50"
 				},
 				"chargeEffect": {
 					"type": "MultiEffect",
@@ -236,8 +235,7 @@
 							"baseLength": -180,
 							"lifetime": 80,
 							"colorFrom": "25C9AB",
-							"colorTo": "BFFFDB",
-							"cone": 360
+							"colorTo": "BFFFDB"
 						},
 						{
 							"type": "ParticleEffect",
@@ -248,8 +246,7 @@
 							"baseLength": -0,
 							"lifetime": 120,
 							"colorFrom": "25C9AB",
-							"colorTo": "BFFFDB",
-							"cone": 360
+							"colorTo": "BFFFDB"
 						},
 						{
 							"type": "ParticleEffect",
@@ -643,8 +640,7 @@
 					"baseLength": 0,
 					"lifetime": 25,
 					"colorFrom": "BFFFDB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				"maxRange": 560,
 				"damage": 225
@@ -676,8 +672,7 @@
 					"baseLength": 0,
 					"lifetime": 25,
 					"colorFrom": "BFFFDB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				"maxRange": 560,
 				"damage": 225

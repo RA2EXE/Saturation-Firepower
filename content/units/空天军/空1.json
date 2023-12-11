@@ -64,8 +64,7 @@
 					"baseLength": 0,
 					"lifetime": 8,
 					"colorFrom": "c0ecff",
-					"colorTo": "c0ecff",
-					"cone": 360
+					"colorTo": "c0ecff"
 				},
 				"damage": 10,
 				"width": 3,

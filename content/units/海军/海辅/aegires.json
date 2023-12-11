@@ -18,8 +18,7 @@
 				"baseLength": 0,
 				"lifetime": 25,
 				"colorFrom": "76D081",
-				"colorTo": "76D081",
-				"cone": 360
+				"colorTo": "76D081"
 			},
 			"damageEffect": "chainLightning",
 			"status": "electrified",

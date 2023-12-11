@@ -195,8 +195,7 @@
 								"baseLength": 9,
 								"lifetime": 15,
 								"colorFrom": "FF5B5B",
-								"colorTo": "ffffff",
-								"cone": 360
+								"colorTo": "ffffff"
 							},
 							{
 								"type": "WaveEffect",
@@ -247,8 +246,7 @@
 									"baseLength": 29,
 									"lifetime": 15,
 									"colorFrom": "FF5B5B",
-									"colorTo": "ffffff",
-									"cone": 360
+									"colorTo": "ffffff"
 								},
 								{
 									"type": "WaveEffect",
@@ -320,8 +318,7 @@
 							"baseLength": 130,
 							"lifetime": 40,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -332,8 +329,7 @@
 							"baseLength": 303,
 							"lifetime": 120,
 							"colorFrom": "FF5B5B0A",
-							"colorTo": "FF5B5B00",
-							"cone": 360
+							"colorTo": "FF5B5B00"
 						},
 						{
 							"type": "ParticleEffect",
@@ -344,8 +340,7 @@
 							"baseLength": 0,
 							"lifetime": 32,
 							"colorFrom": "FF5B5B80",
-							"colorTo": "FF5B5B00",
-							"cone": 360
+							"colorTo": "FF5B5B00"
 						},
 						{
 							"type": "WaveEffect",
@@ -516,8 +511,7 @@
 								"baseLength": 0,
 								"lifetime": 32,
 								"colorFrom": "FF5B5B",
-								"colorTo": "FF5B5B",
-								"cone": 360
+								"colorTo": "FF5B5B"
 							},
 							{
 								"type": "WaveEffect",
@@ -572,8 +566,7 @@
 									"baseLength": 0,
 									"lifetime": 32,
 									"colorFrom": "FF5B5B",
-									"colorTo": "FF5B5B",
-									"cone": 360
+									"colorTo": "FF5B5B"
 								},
 								{
 									"type": "WaveEffect",
@@ -628,8 +621,7 @@
 										"baseLength": 0,
 										"lifetime": 32,
 										"colorFrom": "FF5B5B",
-										"colorTo": "FF5B5B",
-										"cone": 360
+										"colorTo": "FF5B5B"
 									},
 									{
 										"type": "WaveEffect",
@@ -674,8 +666,7 @@
 							"baseLength": 30,
 							"lifetime": 30,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -686,8 +677,7 @@
 							"baseLength": 23,
 							"lifetime": 32,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -698,8 +688,7 @@
 							"baseLength": 0,
 							"lifetime": 32,
 							"colorFrom": "FF5B5B80",
-							"colorTo": "FF5B5B00",
-							"cone": 360
+							"colorTo": "FF5B5B00"
 						},
 						{
 							"type": "WaveEffect",
@@ -836,8 +825,7 @@
 								"baseLength": 0,
 								"lifetime": 32,
 								"colorFrom": "FF5B5B",
-								"colorTo": "FF5B5B",
-								"cone": 360
+								"colorTo": "FF5B5B"
 							},
 							{
 								"type": "WaveEffect",
@@ -892,8 +880,7 @@
 									"baseLength": 0,
 									"lifetime": 32,
 									"colorFrom": "FF5B5B",
-									"colorTo": "FF5B5B",
-									"cone": 360
+									"colorTo": "FF5B5B"
 								},
 								{
 									"type": "WaveEffect",
@@ -948,8 +935,7 @@
 										"baseLength": 0,
 										"lifetime": 32,
 										"colorFrom": "FF5B5B",
-										"colorTo": "FF5B5B",
-										"cone": 360
+										"colorTo": "FF5B5B"
 									},
 									{
 										"type": "WaveEffect",
@@ -994,8 +980,7 @@
 							"baseLength": 30,
 							"lifetime": 30,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -1006,8 +991,7 @@
 							"baseLength": 23,
 							"lifetime": 32,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -1018,8 +1002,7 @@
 							"baseLength": 0,
 							"lifetime": 32,
 							"colorFrom": "FF5B5B80",
-							"colorTo": "FF5B5B00",
-							"cone": 360
+							"colorTo": "FF5B5B00"
 						},
 						{
 							"type": "WaveEffect",
@@ -1106,8 +1089,7 @@
 							"baseLength": 0,
 							"lifetime": 10,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B00",
-							"cone": 360
+							"colorTo": "FF5B5B00"
 						}
 					]
 				},
@@ -1129,8 +1111,7 @@
 							"baseLength": 15,
 							"lifetime": 15,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -1141,8 +1122,7 @@
 							"baseLength": 35,
 							"lifetime": 19,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "ParticleEffect",
@@ -1156,8 +1136,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "FF5B5B",
-							"colorTo": "FF5B5B",
-							"cone": 360
+							"colorTo": "FF5B5B"
 						},
 						{
 							"type": "WaveEffect",
@@ -1311,8 +1290,7 @@
 					"baseLength": 0,
 					"lifetime": 25,
 					"colorFrom": "ffffff",
-					"colorTo": "FEEBB3",
-					"cone": 360
+					"colorTo": "FEEBB3"
 				},
 				"maxRange": 600,
 				"damage": 220
@@ -1354,8 +1332,7 @@
 					"baseLength": 0,
 					"lifetime": 25,
 					"colorFrom": "ffffff",
-					"colorTo": "FEEBB3",
-					"cone": 360
+					"colorTo": "FEEBB3"
 				},
 				"maxRange": 600,
 				"damage": 220

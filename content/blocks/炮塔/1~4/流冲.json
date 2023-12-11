@@ -100,8 +100,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff",
-						"cone": 360
+						"colorTo": "ffffff"
 					},
 					{
 						"type": "WaveEffect",
@@ -174,8 +173,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff",
-						"cone": 360
+						"colorTo": "ffffff"
 					},
 					{
 						"type": "WaveEffect",
@@ -249,8 +247,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff",
-						"cone": 360
+						"colorTo": "ffffff"
 					},
 					{
 						"type": "WaveEffect",
@@ -323,8 +320,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff",
-						"cone": 360
+						"colorTo": "ffffff"
 					},
 					{
 						"type": "WaveEffect",
@@ -399,8 +395,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff",
-						"cone": 360
+						"colorTo": "ffffff"
 					},
 					{
 						"type": "WaveEffect",

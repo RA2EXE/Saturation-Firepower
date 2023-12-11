@@ -95,8 +95,7 @@
 				"baseLength": 0,
 				"lifetime": 18,
 				"colorFrom": "596ab8",
-				"colorTo": "596ab8",
-				"cone": 360
+				"colorTo": "596ab8"
 			},
 			"puddleSize": 10,
 			"orbSize": 6.2,
@@ -125,8 +124,7 @@
 				"baseLength": 0,
 				"lifetime": 18,
 				"colorFrom": "ffa166",
-				"colorTo": "ffa166",
-				"cone": 360
+				"colorTo": "ffa166"
 			},
 			"puddleSize": 10,
 			"orbSize": 6.2,
@@ -156,8 +154,7 @@
 				"baseLength": 0,
 				"lifetime": 18,
 				"colorFrom": "313131",
-				"colorTo": "313131",
-				"cone": 360
+				"colorTo": "313131"
 			},
 			"puddleSize": 10,
 			"orbSize": 6.2,
@@ -186,8 +183,7 @@
 				"baseLength": 0,
 				"lifetime": 18,
 				"colorFrom": "6ecdec",
-				"colorTo": "6ecdec",
-				"cone": 360
+				"colorTo": "6ecdec"
 			},
 			"puddleSize": 10,
 			"orbSize": 6.2,
@@ -216,8 +212,7 @@
 				"baseLength": 0,
 				"lifetime": 18,
 				"colorFrom": "76D081",
-				"colorTo": "76D081",
-				"cone": 360
+				"colorTo": "76D081"
 			},
 			"puddleSize": 10,
 			"orbSize": 6.2,

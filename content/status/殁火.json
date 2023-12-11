@@ -25,8 +25,7 @@
 				"sizeFrom": 1,
 				"sizeTo": 0,
 				"colorFrom": "FF5B5B",
-				"colorTo": "FF5B5BA8",
-				"cone": 360
+				"colorTo": "FF5B5BA8"
 			},
 			{
 				"type": "ParticleEffect",
@@ -39,8 +38,7 @@
 				"sizeFrom": 3,
 				"sizeTo": 0,
 				"colorFrom": "FF5B5B",
-				"colorTo": "FF5B5BA8",
-				"cone": 360
+				"colorTo": "FF5B5BA8"
 			},
 			{
 				"type": "ParticleEffect",
@@ -55,8 +53,7 @@
 				"sizeFrom": 3,
 				"sizeTo": 0,
 				"colorFrom": "FF5B5BA8",
-				"colorTo": "585858A8",
-				"cone": 360
+				"colorTo": "585858A8"
 			}
 		]
 	}

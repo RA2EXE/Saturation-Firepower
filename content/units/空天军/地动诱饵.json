@@ -74,8 +74,7 @@
 							"baseLength": 0,
 							"lifetime": 25,
 							"colorFrom": "c0ecff",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						},
 						{
 							"type": "WaveEffect",
@@ -98,8 +97,7 @@
 					"baseLength": 0,
 					"lifetime": 8,
 					"colorFrom": "c0ecff",
-					"colorTo": "ffffff",
-					"cone": 360
+					"colorTo": "ffffff"
 				},
 				"sprite": "circle-bullet",
 				"trailChance": 0.1,

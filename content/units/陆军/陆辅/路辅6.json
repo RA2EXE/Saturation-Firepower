@@ -201,8 +201,7 @@
 								"baseLength": 0,
 								"lifetime": 20,
 								"colorFrom": "97FFA8",
-								"colorTo": "ffffff00",
-								"cone": 360
+								"colorTo": "ffffff00"
 							},
 							{
 								"type": "ParticleEffect",
@@ -442,8 +441,7 @@
 							"baseLength": 0,
 							"lifetime": 20,
 							"colorFrom": "97FFA8",
-							"colorTo": "97FFA8",
-							"cone": 360
+							"colorTo": "97FFA8"
 						},
 						{
 							"type": "ParticleEffect",
@@ -457,8 +455,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "97FFA8",
-							"cone": 360
+							"colorTo": "97FFA8"
 						},
 						{
 							"type": "WaveEffect",

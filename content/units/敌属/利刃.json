@@ -28,8 +28,8 @@
 	"engineSize": 9,
 	"hitSize": 58,
 	"targetAir": true,
-	"health": 357000,
-	"armor": 68,
+	"health": 250000,
+	"armor": 54,
 	"targetFlags": ["turret"],
 	"immunities": [
 		"blasted","burning","electrified",
@@ -120,8 +120,7 @@
 					"baseLength": 0,
 					"lifetime": 11,
 					"colorFrom": "FEEBB3",
-					"colorTo": "FEEBB3",
-					"cone": 360
+					"colorTo": "FEEBB3"
 				},
 				"speed": 30,
 				"lifetime": 16,
@@ -145,8 +144,7 @@
 							"baseLength": 28,
 							"lifetime": 25,
 							"colorFrom": "FEEBB380",
-							"colorTo": "FEEBB300",
-							"cone": 360
+							"colorTo": "FEEBB300"
 						},
 						{
 							"type": "ParticleEffect",
@@ -160,8 +158,7 @@
 							"baseLength": 0,
 							"lifetime": 22,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FEEBB3",
-							"cone": 360
+							"colorTo": "FEEBB3"
 						},
 						{
 							"type": "WaveEffect",
@@ -182,8 +179,7 @@
 							"baseLength": 0,
 							"lifetime": 35,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FEEBB3",
-							"cone": 360
+							"colorTo": "FEEBB3"
 						}
 					]
 				},
@@ -230,8 +226,7 @@
 								"baseLength": 0,
 								"lifetime": 11,
 								"colorFrom": "FEEBB3",
-								"colorTo": "FEEBB3",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							},
 							{
 								"type": "ParticleEffect",
@@ -245,8 +240,7 @@
 								"baseLength": 2,
 								"lifetime": 10,
 								"colorFrom": "FEEBB3",
-								"colorTo": "FEEBB3",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							}
 						]
 					},
@@ -294,8 +288,7 @@
 					"baseLength": 0,
 					"lifetime": 11,
 					"colorFrom": "FEEBB3",
-					"colorTo": "FEEBB3",
-					"cone": 360
+					"colorTo": "FEEBB3"
 				},
 				"speed": 30,
 				"lifetime": 16,
@@ -319,8 +312,7 @@
 							"baseLength": 28,
 							"lifetime": 25,
 							"colorFrom": "FEEBB380",
-							"colorTo": "FEEBB300",
-							"cone": 360
+							"colorTo": "FEEBB300"
 						},
 						{
 							"type": "ParticleEffect",
@@ -334,8 +326,7 @@
 							"baseLength": 0,
 							"lifetime": 22,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FEEBB3",
-							"cone": 360
+							"colorTo": "FEEBB3"
 						},
 						{
 							"type": "WaveEffect",
@@ -356,8 +347,7 @@
 							"baseLength": 0,
 							"lifetime": 35,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FEEBB3",
-							"cone": 360
+							"colorTo": "FEEBB3"
 						}
 					]
 				},
@@ -404,8 +394,7 @@
 								"baseLength": 0,
 								"lifetime": 11,
 								"colorFrom": "FEEBB3",
-								"colorTo": "FEEBB3",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							},
 							{
 								"type": "ParticleEffect",
@@ -419,8 +408,7 @@
 								"baseLength": 2,
 								"lifetime": 10,
 								"colorFrom": "FEEBB3",
-								"colorTo": "FEEBB3",
-								"cone": 360
+								"colorTo": "FEEBB3"
 							}
 						]
 					},

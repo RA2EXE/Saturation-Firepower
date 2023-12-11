@@ -97,7 +97,6 @@
 				"lifetime": 125,
 				"colorFrom": "73737390",
 				"colorTo": "73737350",
-				"cone": 360,
 				"layer": 41
 			},
 			{
@@ -112,7 +111,6 @@
 				"lifetime": 125,
 				"colorFrom": "73737390",
 				"colorTo": "73737350",
-				"cone": 360,
 				"layer": 41
 			}
 		]

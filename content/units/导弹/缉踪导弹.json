@@ -95,8 +95,7 @@
 							"region": "饱和火力-菱形",
 							"lifetime": 85,
 							"colorFrom": "c0ecff",
-							"colorTo": "c0ecff00",
-							"cone": 360
+							"colorTo": "c0ecff00"
 						},
 						{
 							"type": "WaveEffect",
@@ -137,8 +136,7 @@
 								"region": "饱和火力-菱形",
 								"lifetime": 25,
 								"colorFrom": "c0ecff",
-								"colorTo": "c0ecff",
-								"cone": 360
+								"colorTo": "c0ecff"
 							},
 							{
 								"type": "WaveEffect",
@@ -161,8 +159,7 @@
 						"baseLength": 0,
 						"lifetime": 8,
 						"colorFrom": "c0ecff",
-						"colorTo": "c0ecff",
-						"cone": 360
+						"colorTo": "c0ecff"
 					},
 					"sprite": "circle-bullet",
 					"frontColor": "FFFFFF",

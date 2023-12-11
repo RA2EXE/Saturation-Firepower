@@ -389,8 +389,7 @@
 							"lifetime": 18,
 							"layer": 120,
 							"colorFrom": "c0ecff",
-							"colorTo": "c0ecff",
-							"cone": 360
+							"colorTo": "c0ecff"
 						}
 					]
 				},
@@ -428,8 +427,7 @@
 							"lifetime": 25,
 							"interp": "pow5Out",
 							"colorFrom": "c0ecff",
-							"colorTo": "c0ecff",
-							"cone": 360
+							"colorTo": "c0ecff"
 						},
 						{
 							"type": "WaveEffect",
@@ -452,8 +450,7 @@
 					"baseLength": 0,
 					"lifetime": 33,
 					"colorFrom": "c0ecff",
-					"colorTo": "c0ecff",
-					"cone": 360
+					"colorTo": "c0ecff"
 				}
 			}
 		}

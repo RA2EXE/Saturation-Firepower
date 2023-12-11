@@ -197,8 +197,7 @@
 							"baseLength": 0,
 							"lifetime": 15,
 							"colorFrom": "BFFFDB",
-							"colorTo": "25C9AB",
-							"cone": 360
+							"colorTo": "25C9AB"
 						},
 						{
 							"type": "WaveEffect",
@@ -261,8 +260,7 @@
 			"baseLength": 0,
 			"lifetime": 120,
 			"colorFrom": "BFFFDB",
-			"colorTo": "BFFFDB",
-			"cone": 360
+			"colorTo": "BFFFDB"
 		},
 		"hitEffect": {
 			"type": "MultiEffect",
@@ -277,8 +275,7 @@
 					"baseLength": 1200,
 					"lifetime": 140,
 					"colorFrom": "BFFFDB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -291,8 +288,7 @@
 					"startDelay": 14,
 					"lifetime": 140,
 					"colorFrom": "BFFFDB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -305,8 +301,7 @@
 					"startDelay": 29,
 					"lifetime": 140,
 					"colorFrom": "BFFFDB",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -318,8 +313,7 @@
 					"baseLength": 0,
 					"lifetime": 150,
 					"colorFrom": "25C9AB00",
-					"colorTo": "BFFFDB",
-					"cone": 360
+					"colorTo": "BFFFDB"
 				},
 				{
 					"type": "ParticleEffect",
@@ -332,8 +326,7 @@
 					"startDelay": 145,
 					"lifetime": 33,
 					"colorFrom": "BFFFDB",
-					"colorTo": "25C9AB",
-					"cone": 360
+					"colorTo": "25C9AB"
 				},
 				{
 					"type": "WaveEffect",
@@ -377,8 +370,7 @@
 					"lifetime": 190,
 					"colorFrom": "00000000",
 					"colorTo": "000000A8",
-					"layer": 99,
-					"cone": 360
+					"layer": 99
 				},
 				{
 					"type": "ParticleEffect",
@@ -391,8 +383,7 @@
 					"lifetime": 150,
 					"layer": 120,
 					"colorFrom": "00000000",
-					"colorTo": "000000",
-					"cone": 360
+					"colorTo": "000000"
 				},
 				{
 					"type": "ParticleEffect",
@@ -406,8 +397,7 @@
 					"lifetime": 33,
 					"layer": 120,
 					"colorFrom": "000000",
-					"colorTo": "000000",
-					"cone": 360
+					"colorTo": "000000"
 				},
 				{
 					"type": "ParticleEffect",
@@ -422,8 +412,7 @@
 					"baseLength": 0,
 					"lifetime": 30,
 					"colorFrom": "25C9AB",
-					"colorTo": "FFFFFF",
-					"cone": 360
+					"colorTo": "FFFFFF"
 				},
 				{
 					"type": "WaveEffect",
@@ -519,8 +508,7 @@
 						"baseLength": 150,
 						"lifetime": 490,
 						"colorFrom": "BFFFDB50",
-						"colorTo": "BFFFDB50",
-						"cone": 360
+						"colorTo": "BFFFDB50"
 					},
 					{
 						"type": "ParticleEffect",
@@ -533,8 +521,7 @@
 						"lifetime": 480,
 						"colorFrom": "000000FF",
 						"colorTo": "00000000",
-						"layer": 220,
-						"cone": 360
+						"layer": 220
 					},
 					{
 						"type": "ParticleEffect",
@@ -583,8 +570,7 @@
 						"startDelay": 480,
 						"lifetime": 360,
 						"colorFrom": "BFFFDB50",
-						"colorTo": "BFFFDB50",
-						"cone": 360
+						"colorTo": "BFFFDB50"
 					},
 					{
 						"type": "WaveEffect",
@@ -713,8 +699,7 @@
 								"baseLength": 10,
 								"lifetime": 66,
 								"colorFrom": "BFFFDB",
-								"colorTo": "BFFFDB00",
-								"cone": 360
+								"colorTo": "BFFFDB00"
 							},
 							{
 								"type": "WaveEffect",
@@ -777,8 +762,7 @@
 					"baseLength": 0,
 					"lifetime": 360,
 					"colorFrom": "25C9AB10",
-					"colorTo": "BFFFDB10",
-					"cone": 360
+					"colorTo": "BFFFDB10"
 				},
 				"hitEffect": {
 					"type": "ParticleEffect",

@@ -122,8 +122,7 @@
 							"baseLength": 8,
 							"lifetime": 35,
 							"colorFrom": "FEEBB3",
-							"colorTo": "ffffff",
-							"cone": 360
+							"colorTo": "ffffff"
 						},
 						{
 							"type": "WaveEffect",
@@ -178,8 +177,7 @@
 					"baseLength": 0,
 					"lifetime": 65,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
-					"cone": 360
+					"colorTo": "ffffff"
 				}
 			}
 		}

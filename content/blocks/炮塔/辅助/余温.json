@@ -843,8 +843,7 @@
 				"baseLength": 3,
 				"lifetime": 22,
 				"colorFrom": "F2FF9C",
-				"colorTo": "F2FF9C00",
-				"cone": 360
+				"colorTo": "F2FF9C00"
 			},
 			"collides": false,
 			"lightningDamage": 160,
@@ -1029,8 +1028,7 @@
 							"baseLength": 0,
 							"lifetime": 18,
 							"colorFrom": "F2FF9C",
-							"colorTo": "F2FF9C",
-							"cone": 360
+							"colorTo": "F2FF9C"
 						},
 						{
 							"type": "WaveEffect",

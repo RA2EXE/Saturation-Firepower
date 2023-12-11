@@ -46,8 +46,7 @@
 					"region": "饱和火力-菱形",
 					"lifetime": 25,
 					"colorFrom": "EEC591A0",
-					"colorTo": "ffffff",
-					"cone": 360
+					"colorTo": "ffffff"
 				},
 				{
 					"type": "WaveEffect",
@@ -110,8 +109,7 @@
 						"sizeFrom": 4,
 						"sizeTo": 0,
 						"colorFrom": "EEC591",
-						"colorTo": "EEC591",
-						"cone": 360
+						"colorTo": "EEC591"
 					},
 					{
 						"type": "ParticleEffect",
@@ -122,8 +120,7 @@
 						"sizeFrom": 8,
 						"sizeTo": 0,
 						"colorFrom": "EEC591",
-						"colorTo": "EEC591",
-						"cone": 360
+						"colorTo": "EEC591"
 					}
 				]
 			},

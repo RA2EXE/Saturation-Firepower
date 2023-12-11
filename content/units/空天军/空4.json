@@ -106,8 +106,7 @@
 					"baseLength": 0,
 					"lifetime": 8,
 					"colorFrom": "c0ecff",
-					"colorTo": "c0ecff",
-					"cone": 360
+					"colorTo": "c0ecff"
 				},
 				"buildingDamageMultiplier": 0.68,
 				"damage": 18,
@@ -165,8 +164,7 @@
 					"baseLength": 0,
 					"lifetime": 8,
 					"colorFrom": "c0ecff",
-					"colorTo": "c0ecff",
-					"cone": 360
+					"colorTo": "c0ecff"
 				},
 				"buildingDamageMultiplier": 0.68,
 				"damage": 21,

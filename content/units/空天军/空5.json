@@ -205,8 +205,7 @@
 					"baseLength": 20,
 					"lifetime": 150,
 					"colorFrom": "585858",
-					"colorTo": "585858A8",
-					"cone": 360
+					"colorTo": "585858A8"
 				},
 				"trailChance": 0,
 				"trailInterval":2,
@@ -252,8 +251,7 @@
 								"baseLength": 20,
 								"lifetime": 60,
 								"colorFrom": "585858",
-								"colorTo": "585858",
-								"cone": 360
+								"colorTo": "585858"
 							},
 							{
 								"type": "WaveEffect",
