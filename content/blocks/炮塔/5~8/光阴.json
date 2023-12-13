@@ -122,7 +122,7 @@
 			"buildingDamageMultiplier": 2,
 			"splashDamageRadius": 66.4,
 			"splashDamage": 225,
-			"hitShake": 7,
+			"hitShake": 5,
 			"hitSound": "plasmaboom",
 			"hitEffect": {
 				"type": "MultiEffect",
@@ -185,7 +185,7 @@
 			}
 		]
 	},
-	"researchCostMultiplier": 0.5,
+	"researchCostMultiplier": 0.35,
 	"requirements": [
 		"镄/520",
 		"metaglass/200",
