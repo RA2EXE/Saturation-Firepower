@@ -71,16 +71,14 @@
 				"suffix": "-轨",
 				"mirror": true,
 				"under": true,
-				"progress":{
-					"type":"warmup",
-					"interp":"pow10Out"
-				},
 				"x": 9,
 				"y": 18.5,
 				"rotation": 180,
 				"moveX": -1,
 				"moveY": 5.5,
-				"moveRot": 180
+				"moveRot": 180,
+				"moves":[{"progress":"recoil",
+				"y": -8}]
 			},
 			{
 				"type": "RegionPart",
