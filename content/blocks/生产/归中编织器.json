@@ -3,7 +3,7 @@
 	"name": "归中编织器",
 	"outputItem": {
 		"item": "phase-fabric",
-		"amount": 3
+		"amount": 4
 	},
 	"itemCapacity": 40,
 	"size": 3,
@@ -30,7 +30,7 @@
 	},
 	"craftTime": 60,
 	"consumes": {
-		"power": 8,
+		"power": 8.75,
 		"items": {
 			"items": [
 				"thorium/4",
