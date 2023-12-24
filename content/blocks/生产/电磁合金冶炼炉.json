@@ -25,13 +25,13 @@
 	"craftEffect": {
 		"type": "ParticleEffect",
 		"particles": 4,
-		"baseLength": 6,
-		"length": 12,
+		"baseLength": 2,
+		"length": 20,
 		"region": "饱和火力-菱形",
 		"lifetime": 25,
 		"sizeFrom": 10,
 		"sizeTo": 0,
-		"colorFrom": "F2E77050",
+		"colorFrom": "F2E77080",
 		"colorTo": "F2E770"
 	},
 	"consumes": {

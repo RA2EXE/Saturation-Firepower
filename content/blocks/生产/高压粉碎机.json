@@ -8,7 +8,7 @@
 	},
 	"size": 2,
 	"hasPower": true,
-	"hasLiquids": true,
+	"hasLiquids": false,
 	"hasItems": true,
 	"craftTime": 10,
 	"itemCapacity": 20,

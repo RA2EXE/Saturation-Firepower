@@ -599,10 +599,11 @@
 			}
 		}
 	},
+	"researchCostMultiplier": 0.3,
 	"requirements": [
 		"plastanium/3200",
 		"surge-alloy/1600",
-		"镄/4000",
+		"镄/2500",
 		"二级协议/20",
 		"三级协议/8"
 	],

@@ -1,7 +1,7 @@
 {
 	"type": "ItemTurret",
 	"name": "灾灵",
-	"health": 4320,
+	"health": 3400,
 	"armor": 8,
 	"size": 4,
 	"reload": 18,

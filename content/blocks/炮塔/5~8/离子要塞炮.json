@@ -37,8 +37,8 @@
 	"chargeSound": "lasercharge",
 	"shootType": {
 		"type": "PointBulletType",
-		"lifetime": 90,
-		"speed": 100,
+		"lifetime": 50,
+		"speed": 50,
 		"damage": 5480,
 		"splashDamageRadius": 80,
 		"splashDamage": 5400,
@@ -301,7 +301,7 @@
 	"coolantMultiplier": 0.5,
 	"reload": 680,
 	"rotateSpeed": 2.35,
-	"range": 650,
+	"range": 530,
 	"category": "turret",
 	"research": {
 		"parent": "foreshadow",

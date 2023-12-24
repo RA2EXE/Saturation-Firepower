@@ -32,7 +32,7 @@
 			"type": "StatusFieldAbility",
 			"duration": 6,
 			"reload": 30,
-			"range": 1,
+			"range": -1,
 			"applyEffect": "none",
 			"activeEffect": {
 				"type": "WaveEffect",

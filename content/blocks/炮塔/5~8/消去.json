@@ -27,6 +27,7 @@
 	],
 	//忒麻麻的，点防炮不能用drawer，[W]了
 	"category": "turret",
+	"researchCostMultiplier": 0.4,
 	"research": {
 		"parent": "折跃",
 		"objectives": [

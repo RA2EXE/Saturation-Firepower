@@ -23,7 +23,7 @@
 			"type": "StatusFieldAbility",
 			"duration": 6,
 			"reload": 30,
-			"range": 1,
+			"range": -1,
 			"applyEffect": "none",
 			"activeEffect": {
 				"type": "WaveEffect",
@@ -113,7 +113,6 @@
 				"hitSound": "titanExplosion",
 				"killShooter": true,
 				"pierceArmor": true,
-				"collides":false,
 				"damage": 3000,
 				"splashDamageRadius": 45,
 				"splashDamage": 1200,

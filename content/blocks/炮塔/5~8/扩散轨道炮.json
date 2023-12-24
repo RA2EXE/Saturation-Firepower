@@ -518,6 +518,7 @@
 			}
 		}
 	},
+	"researchCostMultiplier": 0.5,
 	"requirements": [
 		"plastanium/1400",
 		"裂位能/1200",

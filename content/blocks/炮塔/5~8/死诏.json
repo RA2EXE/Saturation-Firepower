@@ -225,7 +225,7 @@
 			"hitShake": 8,
 			"buildingDamageMultiplier": 0.2,
 			"status": "干扰",
-			"statusDuration": 118,
+			"statusDuration": 100,
 			"ammoMultiplier": 1,
 			"trailSpacing": 9,
 			"trailEffect": {

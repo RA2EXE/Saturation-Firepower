@@ -474,6 +474,7 @@
 			"despawnEffect": "blastExplosion"
 		}
 	},
+	"researchCostMultiplier": 0.5,
 	"requirements": [
 		"thorium/1300",
 		"silicon/650",

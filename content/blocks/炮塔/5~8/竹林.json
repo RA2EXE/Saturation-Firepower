@@ -867,6 +867,7 @@
 			}
 		}
 	},
+	"researchCostMultiplier": 0.5,
 	"requirements": [
 		"硅钢/3600",
 		"镄/2000",

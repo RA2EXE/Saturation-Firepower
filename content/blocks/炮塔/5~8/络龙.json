@@ -679,6 +679,7 @@
 		"三级协议/60"
 	],
 	"category": "turret",
+	"researchCostMultiplier": 0.8,
 	"research": {
 		"parent": "刺霾",
 		"objectives": [
