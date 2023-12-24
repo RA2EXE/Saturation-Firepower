@@ -73,6 +73,7 @@
 			"top": false,
 			"bullet": {
 				"type":"BasicBulletType",
+				"reflectable": false,
 				"shrinkY": 0,
 				"frontColor": "FFFFFF",
 				"backColor": "c0ecff",
@@ -131,6 +132,7 @@
 			"top": false,
 			"bullet": {
 				"type":"BasicBulletType",
+				"reflectable": false,
 				"shrinkY": 0,
 				"frontColor": "FFFFFF",
 				"backColor": "c0ecff",
@@ -196,6 +198,7 @@
 			"velocityRnd": 0.1,
 			"bullet": {
 				"type":"MissileBulletType",
+				"reflectable": false,
 				"trailLength": 5,
 				"trailWidth": 3,
 				"trailColor": "c0ecff",

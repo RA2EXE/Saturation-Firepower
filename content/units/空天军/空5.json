@@ -162,6 +162,7 @@
 			"shootCone": 10,
 			"bullet": {
 				"type": "BasicBulletType",
+				"reflectable": false,
 				"collides": false,
 				"scaleLife": true,
 				"splashDamageRadius": 200,

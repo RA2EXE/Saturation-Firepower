@@ -8,13 +8,13 @@
 	"drag": 0.1,
 	"rotateSpeed": 0,
 	"hitSize": 13,
-	"health": 2000,
+	"health": 1800,
 	"hidden": true,
 	"deathSound": "explosionbig",
 	"immunities":["sapped","unmoving","disarmed","electrified","干扰","崩溃"],
 	"engineColor": "A278E1",
 	"trailColor": "A278E1",
-	"trailLength": 12,
+	"trailLength": 14,
 	"engineLayer": 110,
 	"engineOffset": 16,
 	"engineSize": 4,
@@ -37,6 +37,47 @@
 				"colorTo": "FF5B5B"
 			},
 			"effect": "invincible"
+		},
+		{
+			"type": "MoveEffectAbility",
+			"minVelocity": 5,
+			"rotation": 0,
+			"rotateEffect": true,
+			"interval": 3,
+			"y": -8,
+			"effect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"region": "饱和火力-箭头",
+						"sizeInterp": "pow5Out",
+						"sizeFrom": 0,
+						"sizeTo": 18,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 8,
+						"colorFrom": "A278E1",
+						"colorTo": "A278E1",
+						"cone": 0
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"startDelay": 6,
+						"region": "饱和火力-箭头",
+						"sizeFrom": 18,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 10,
+						"colorFrom": "A278E1",
+						"colorTo": "A278E1",
+						"cone": 0
+					}
+				]
+			}
 		}
 	],
 	"maxRange": 45,

@@ -137,6 +137,7 @@
 			"shootSound": "lasershoot",
 			"bullet": {
 				"type": "BasicBulletType",
+				"reflectable": false,
 				"keepVelocity": false,
 				"sprite": "missile-large",
 				"drag": -0.1,

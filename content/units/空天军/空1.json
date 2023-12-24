@@ -39,6 +39,7 @@
 			"rotate": false,
 			"shootSound": "JG1",
 			"bullet": {
+				"reflectable": false,
 				"sprite": "circle-bullet",
 				"shrinkY": 0,
 				"frontColor": "FFFFFF",
@@ -81,6 +82,7 @@
 			"mirror": false,
 			"bullet": {
 				"damage": 8,
+				"reflectable": false,
 				"sprite": "circle-bullet",
 				"shrinkY": 0,
 				"frontColor": "FFFFFF",
