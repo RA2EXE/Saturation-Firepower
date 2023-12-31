@@ -2,8 +2,8 @@
 ![logo](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/e39d7de5-09ea-4fd6-b815-674141e0557c)
 
 # WARNING
-·Unstable beta! It may cause your game or phone crash, please switch to a stable released version in time!
-
+·Unstable beta! 
+Unfortunately, this mod doesn't work on English devices, I'll translate to the English version after completing the whole mod
 # 内容概述
 ·200+新方块，囊括各方各面！更多工厂、钻头、传输组件、防御设施、单位工厂！
 ·50+形态各异的功能不同的炮塔，火力全开！
