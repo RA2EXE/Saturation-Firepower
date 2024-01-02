@@ -2,7 +2,6 @@
 	"type": "StackConveyor",
 	"name": "硅钢传送带",
 	"health": 110,
-	"insulated":true,
 	"requirements": [
 	"lead/2",
 	"silicon/1",
