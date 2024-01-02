@@ -1,20 +1,20 @@
-# 饱和火力
+# 饱和火力/Saturation Firepower
 ![logo](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/e39d7de5-09ea-4fd6-b815-674141e0557c)
 
 # WARNING
 ·Unstable beta! 
 Unfortunately, this mod doesn't work on English devices, I'll translate to the English version after completing the whole mod
 # 内容概述
-·200+新方块，囊括各方各面！更多工厂、钻头、传输组件、防御设施、单位工厂！
-·50+形态各异的功能不同的炮塔，火力全开！
-·40+新单位，以及对原版单位的全面升级！船新的游戏体验！
-·大量新地图（部分在建，最终将有30左右），更壮阔的战斗场景！更高难度的战斗！更强大的敌人！
-·尽可能真实的战场环境与多样的战术选择。从教程开始到困难的主线战役，以及为挑战者准备的高难支线战役。
+·200+New blocks, covering all aspects! More factories, drills, transmission components, defenses and unit factories！
+·50+Turrets with different shapes and functions, full firepower！
+·40+New units, and comprehensive upgrades to the original units! Download a new gaming experience！
+·A large number of new maps (some are under construction, there will eventually be about 30), and more spectacular battle scenes! More difficult battles! Stronger enemies！
+·The most realistic battlefield environment and various tactical options. Start with the tutorial and progress to the difficult main campaign, as well as difficult side campaigns for challengers.
 
 # Community
 ·QQ Group：【[mindustry]饱和火力】：https://jq.qq.com/?_wv=1027&k=lzXXr2ED
 ·Discord：https://discord.gg/Y7NhHfku
-欢迎来此提出建议与反馈
+Suggestions and feedback are welcome here.
 
 # 服务器/Sever location:
 mdtbaohe.work:43252
