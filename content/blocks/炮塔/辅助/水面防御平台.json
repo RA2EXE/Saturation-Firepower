@@ -80,10 +80,9 @@
 		"reflectable": false,
 		"damage": 350,
 		"splashDamageRadius": 90,
-		"splashDamage": 880,
+		"splashDamage": 1260,
 		"makeFire": true,
 		"status": "blasted",
-		"statusDuration": 60,
 		"homingDelay": 15,
 		"homingRange": 320,
 		"homingPower": 0.042,
@@ -142,7 +141,7 @@
 					"type": "ParticleEffect",
 					"particles": 40,
 					"line": true,
-					"strokeFrom": 2,
+					"strokeFrom": 2.5,
 					"strokeTo": 2,
 					"lenFrom": 44,
 					"lenTo": 0,
@@ -243,12 +242,6 @@
 	},
 	"breakable":false,
 	"rebuildable":false,
-	"requirements": [
-	"镄/14000",
-	"铬/12000",
-	"裂位能/8400",
-	"泰勒合金/6400",
-	"集束/12500"
-	],
+	//"requirements": ["metaglass/24000","镄/14000","裂位能/8400","泰勒合金/6400","集束/12500"],
 	"category": "turret"
 }

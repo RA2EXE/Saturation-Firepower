@@ -1,25 +1,51 @@
 {
 	"type": "ImpactReactor",
-	"name": "磁爆反应堆",
+	"name": "磁暴反应堆",
 	"size": 8,
 	"health": 42000,
-	"warmupSpeed": 0.002,
+	"warmupSpeed": 0.004,
 	"hasItems": true,
-	"itemCapacity": 1400,
+	"itemCapacity": 2000,
 	"hasLiquids": false,
 	"rebuildable": false,
 	"outputsPower": true,
-	"powerProduction": 6400,
+	"powerProduction": 9600,
 	"itemDuration": 3600,
 	"explosionShakeDuration": 500,
 	"explosionRadius": 1600,
 	"explosionDamage": 80000,
-	"buildVisibility": "campaignOnly",
-	"lightColor": "c0ecff",
 	"explodeSound": "explosionbig",
 	"explodeEffect": {
 		"type": "MultiEffect",
 		"effects": [
+			/*{
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeInterp": "pow10Out",
+				"region": "饱和火力-年",
+				"startDelay": 500,
+				"sizeFrom": 0,
+				"sizeTo": 400,
+				"length": 0,
+				"baseLength": 0,
+				"lifetime": 100,
+				"colorFrom": "c0ecff",
+				"colorTo": "FF5B5B"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeInterp": "pow10In",
+				"region": "饱和火力-年",
+				"startDelay": 600,
+				"sizeFrom": 400,
+				"sizeTo": 0,
+				"length": 0,
+				"baseLength": 0,
+				"lifetime": 9999,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5B"
+			},*/
 			{
 				"type": "ParticleEffect",
 				"particles": 1,
@@ -88,6 +114,33 @@
 		"despawnEffect": {
 			"type": "MultiEffect",
 			"effects": [
+				/*{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeInterp": "pow10Out",
+					"region": "饱和火力-年",
+					"sizeFrom": 0,
+					"sizeTo": 2000,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 100,
+					"colorFrom": "c0ecff",
+					"colorTo": "FF5B5B"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeInterp": "pow10In",
+					"region": "饱和火力-年",
+					"startDelay": 100,
+					"sizeFrom": 2000,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 999,
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B"
+				},*/
 				{
 					"type": "WaveEffect",
 					"lifetime": 90,
@@ -436,17 +489,42 @@
 			}
 		}
 	},
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawPlasma",
+				"plasma1": "c0ecff",
+				"plasma2": "c0ecff"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-top",
+				"rotateSpeed": 0,
+				"rotation": 0
+			},
+			"DrawDefault"
+		]
+	},
 	"consumes": {
 		"power": 800,
 		"items": {
 			"items": [
-				"copper/700",
-				"lead/700",
-				"plastanium/350",
-				"泰勒合金/50"
+				"copper/1000",
+				"lead/1000",
+				"plastanium/500",
+				"泰勒合金/70"
 			]
 		}
 	},
+	"buildCostMultiplier": 1000,
+	"buildVisibility": "campaignOnly",
+	"breakable":false,
+	/*
 	"requirements": [
 		"metaglass/13000",
 		"plastanium/8600",
@@ -457,7 +535,6 @@
 		"泰勒合金/2600",
 		"莱普合金/1500",
 		"三级协议/50"
-	],
-	"category": "power",
-	"research": "泰勒堆"
+	],*/
+	"category": "power"
 }

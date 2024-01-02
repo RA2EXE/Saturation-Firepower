@@ -1,3 +1,4 @@
 {
-	"speed": 9
+	"speed": 9,
+	"placeableLiquid":true
 }

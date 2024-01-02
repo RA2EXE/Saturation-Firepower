@@ -112,11 +112,11 @@
 			"type": "BasicBulletType",
 			"rangeChange": 30,
 			"damage": 70,
-			"splashDamageRadius": 42,
-			"splashDamage": 15,
+			"splashDamageRadius": 15,
+			"splashDamage": 42,
 			"inaccuracy": 3,
 			"speed": 24.5,
-			"lifetime": 7.87,
+			"lifetime": 9.1,
 			"width": 9,
 			"height": 23,
 			"hittable": false,
@@ -131,7 +131,7 @@
 				"type": "WrapEffect",
 				"effect": "dynamicSpikes",
 				"color": "EEC591",
-				"rotation": 42
+				"rotation": 15
 			},
 			"despawnEffect": {
 				"type": "ParticleEffect",

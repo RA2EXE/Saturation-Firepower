@@ -4,6 +4,7 @@
 	"health": 830,
 	"size": 2,
 	"reload": 280,
+	"insulated": true,
 	"canOverdrive": false,
 	"absorbLasers":true,
 	"range": 160,

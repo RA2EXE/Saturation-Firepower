@@ -1,0 +1,48 @@
+{
+	"speedMultiplier": 0.7,
+	"healthMultiplier": 0.75,
+	"damageMultiplier": 0.9,
+	"effectChance": 0.1,
+	"effect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 1,
+				"baseLength": 10,
+				"length": 0,
+				"lifetime": 15,
+				"sizeInterp": "pow3Out",
+				"sizeFrom": 1,
+				"sizeTo": 5,
+				"colorFrom": "A278E1",
+				"colorTo": "A278E100"
+			},
+			{
+				"type": "ParticleEffect",
+				"region":"饱和火力-菱形",
+				"particles": 1,
+				"baseLength": 0,
+				"length": 0,
+				"lifetime": 35,
+				"sizeFrom": 0,
+				"sizeTo": 1.75,
+				"colorFrom": "A278E1",
+				"colorTo": "A278E1"
+			},
+			{
+				"type": "ParticleEffect",
+				"region":"饱和火力-菱形",
+				"startDelay": 35,
+				"particles": 1,
+				"baseLength": 0,
+				"length": 0,
+				"lifetime": 35,
+				"sizeFrom": 1.75,
+				"sizeTo": 0,
+				"colorFrom": "A278E1",
+				"colorTo": "A278E1"
+			}
+		]
+	}
+}
