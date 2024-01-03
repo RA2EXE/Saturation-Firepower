@@ -4,7 +4,7 @@
 	"weapons": [
 		{
 			"name": "巫妖1",
-			"reload": 6,
+			"reload": 7,
 			"shootY": 7,
 			"x": 10,
 			"y": 0,
@@ -24,7 +24,7 @@
 		},
 		{
 			"name": "巫妖2",
-			"reload": 70,
+			"reload": 50,
 			"x": 18,
 			"y": 8,
 			"shootY": 6,
@@ -33,15 +33,15 @@
 				"shotDelay": 1
 			},
 			"rotate": true,
-			"inaccuracy": 8,
+			"inaccuracy": 10,
 			"alternate": true,
 			"shootSound": "missile",
 			"ejectEffect": "casing1",
 			"bullet": {
 				"type": "MissileBulletType",
-				"damage": 15,
+				"damage": 18,
 				"splashDamageRadius": 35,
-				"splashDamage": 35,
+				"splashDamage": 37,
 				"status": "blasted",
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
@@ -54,7 +54,7 @@
 		},
 		{
 			"name": "巫妖2",
-			"reload": 80,
+			"reload": 75,
 			"x": -18,
 			"y": -9,
 			"shootY": 6,
@@ -63,15 +63,15 @@
 				"shotDelay": 1
 			},
 			"rotate": true,
-			"inaccuracy": 8,
+			"inaccuracy": 10,
 			"alternate": true,
 			"shootSound": "missile",
 			"ejectEffect": "casing1",
 			"bullet": {
 				"type": "MissileBulletType",
-				"damage": 15,
+				"damage": 20,
 				"splashDamageRadius": 35,
-				"splashDamage": 35,
+				"splashDamage": 42,
 				"status": "blasted",
 				"statusDuration": 60,
 				"hitEffect": "flakExplosionBig",

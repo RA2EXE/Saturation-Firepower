@@ -4,6 +4,7 @@
 	"size": 8,
 	"health": 42000,
 	"warmupSpeed": 0.004,
+	"squareSprite": false,
 	"hasItems": true,
 	"itemCapacity": 2000,
 	"hasLiquids": false,
@@ -503,9 +504,13 @@
 			},
 			{
 				"type": "DrawRegion",
-				"suffix": "-top",
-				"rotateSpeed": 0,
-				"rotation": 0
+				"suffix": "-rotate",
+				"spinSprite": true,
+				"rotateSpeed": -1.25
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-top"
 			},
 			"DrawDefault"
 		]

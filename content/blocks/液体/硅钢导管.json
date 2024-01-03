@@ -3,7 +3,7 @@
 	"name": "硅钢导管",
 	"health": 100,
 	"liquidCapacity":32,
-	"liquidPressure": 2, 
+	"liquidPressure": 3.7, 
 	"insulated":true,
 	"requirements": [
 		"lead/1",
