@@ -139,12 +139,7 @@
 			"sparkLen": 26
 		}
 	},
-	"requirements": [
-	"镄/12000",
-	"铬/9000",
-	"裂位能/15000",
-	"泰勒合金/8000"
-	],
+	//"requirements": ["镄/12000","铬/9000","裂位能/15000","泰勒合金/8000"],
 	"breakable":false,
 	"rebuildable":false,
 	"category": "turret"

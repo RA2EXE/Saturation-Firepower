@@ -48,7 +48,7 @@
 		"speed": 13,
 		"width": 18,
 		"height": 24,
-		"hitSize": 40,
+		"hitSize": 30,
 		"frontColor": "FFFFFF",
 		"backColor": "FEEBB3",
 		"trailLength": 8,
@@ -112,6 +112,13 @@
 		"fragLifeMin": 1,
 		"fragBullets": 1,
 		"fragBullet": {
+			"sprite":"circle-bullet",
+			"height": 2,
+			"width": 2,
+			"frontColor": "FFFFFF",
+			"backColor": "FEEBB3",
+			"shrinkX": 1.2,
+			"shrinkY": 1.2,
 			"lifetime": 15,
 			"speed": 0,
 			"collides": false,
@@ -119,9 +126,8 @@
 			"absorbable": false,
 			"status": "崩溃",
 			"statusDuration": 120,
-			"buildingDamageMultiplier": 2,
 			"splashDamageRadius": 66.4,
-			"splashDamage": 225,
+			"splashDamage": 337.5,
 			"hitShake": 5,
 			"hitSound": "plasmaboom",
 			"hitEffect": {
@@ -169,7 +175,7 @@
 		}
 	},
 	"consumes": {
-		"power": 120,
+		"power": 90,
 		"coolant": {
 			"amount": 1.75,
 			"optional": true

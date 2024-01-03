@@ -6,7 +6,7 @@
 	"shootEffect": "none",
 	"shootSound": "laserbig",
 	"range": 240,
-	"reload": 350,
+	"reload": 330,
 	"coolantMultiplier": 0.335,
 	"liquidCapacity": 180,
 	"inaccuracy": 0,
@@ -133,7 +133,22 @@
 			"97FFA880",
 			"97FFA8",
 			"FFFFFF"
-		]
+		],
+		"fragRandomSpread": 30,
+		"fragBullets": 1,
+		"fragBullet": {
+			"hitEffect": "none",
+			"despawnEffect": "none",
+			"absorbable": false,
+			"hittable": false,
+			"collides": false,
+			"pierceArmor": true,
+			"instantDisappear": true,
+			"status": "corroded",
+			"statusDuration": 180,
+			"splashDamageRadius": 16,
+			"splashDamage": 6
+		}
 	},
 	"consumes": {
 		"power": 48,

@@ -84,6 +84,19 @@
 				"lifetime": 60,
 				"colorFrom": "DEDEDE",
 				"colorTo": "DEDEDE"
+			},
+			{
+				"type": "ParticleEffect",
+				"region":"饱和火力-福",
+				"particles": 1,
+				"sizeFrom": 400,
+				"sizeTo": 0,
+				"sizeInterp":"pow10In",
+				"length": 0,
+				"baseLength": 0,
+				"lifetime": 600,
+				"colorFrom": "FFFFFF",
+				"colorTo": "FF5B5B"
 			}
 		]
 	},

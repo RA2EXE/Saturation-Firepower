@@ -40,7 +40,7 @@
 	"consumes": {
 	"power":3,
 	"liquid":"hydrogen/0.05",
-	"items": {"items": ["sand/8"] }},
+	"items": ["sand/8"]},
 	"requirements": [
 		"beryllium/100",
 		"graphite/75",

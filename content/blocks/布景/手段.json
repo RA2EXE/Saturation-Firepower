@@ -4,10 +4,13 @@
 	"health": 830,
 	"size": 2,
 	"reload": 280,
+	"insulated": true,
 	"canOverdrive": false,
 	"absorbLasers":true,
 	"range": 160,
+	"breakable":false,
 	"rebuildable": false,
+	"buildVisibility": "editorOnly",
 	"inaccuracy": 0,
 	"rotateSpeed": 99,
 	"shootSound": "none",
@@ -249,22 +252,6 @@
 				}
 			}
 		}
-	},
-	"requirements": [
-		"lead/50",
-		"silicon/30",
-		"纳米核/50",
-		"泰勒合金/50",
-		"三级协议/30"
-	],
-	"research": {
-		"parent": "战研",
-		"objectives": [
-			{
-				"type": "SectorComplete",
-				"preset": "第五战区"
-			}
-		]
 	},
 	"category": "effect"
 }

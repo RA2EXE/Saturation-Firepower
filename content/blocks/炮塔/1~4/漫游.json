@@ -12,21 +12,11 @@
 	"recoil": 3,
 	"xRand": 2,
 	"recoilTime": 20,
-	"drawer": {
-		"type": "DrawTurret",
-		"parts": [
-			{
-				"type": "RegionPart",
-				"mirror": false,
-				"suffix": "-管",
-				"moveY": -2
-			}
-		]
-	},
+	"heatColor": "FF4040",
 	"shootEffect": {
 		"type": "ParticleEffect",
-		"particles": 9,
-		"sizeFrom": 2,
+		"particles": 7,
+		"sizeFrom": 3,
 		"sizeTo": 0,
 		"length": 40,
 		"baseLength": 0,
@@ -42,16 +32,16 @@
 		"damage": 100,
 		"speed": 10,
 		"lifetime": 35,
-		"splashDamageRadius": 40,
+		"splashDamageRadius": 30,
 		"splashDamage": 135,
 		"statusDuration": 60,
 		"status": "崩溃",
 		"ammoMultiplier": 1,
 		"buildingDamageMultiplier": 3,
-		"frontColor": "FEEBB3",
-		"backColor": "FFFFFF",
+		"frontColor": "FFFFFF",
+		"backColor": "FEEBB3",
 		"trailLength": 16,
-		"trailWidth": 1.5,
+		"trailWidth": 1.2,
 		"trailColor": "FEEBB3",
 		"hitSound": "plasmaboom",
 		"despawnEffect": "none",

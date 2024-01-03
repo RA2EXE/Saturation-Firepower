@@ -315,12 +315,7 @@
 			}
 		]
 	},
-	"requirements": [
-		"镄/12000",
-		"铬/8000",
-		"裂位能/16500",
-		"泰勒合金/8000"
-	],
+	//"requirements": ["镄/12000","铬/8000","裂位能/16500","泰勒合金/8000"],
 	"breakable":false,
 	"rebuildable":false,
 	"category": "turret"

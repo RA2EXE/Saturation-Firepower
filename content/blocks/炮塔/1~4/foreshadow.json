@@ -9,6 +9,7 @@
 	"ammoTypes": {
 		"surge-alloy": {
 			"type": "PointBulletType",
+			"trailSpacing": 19,
 			"hitEffect": "instHit",
 			"smokeEffect": "smokeCloud",
 			"trailEffect": "instTrail",
@@ -99,7 +100,7 @@
 			"lifetime": 60,
 			"ammoMultiplier": 1,
 			"status": "干扰",
-			"statusDuration": 90,
+			"statusDuration": 30,
 			"hitSound": "DBZ1",
 			"splashDamageRadius": 60,
 			"splashDamage": 2350,

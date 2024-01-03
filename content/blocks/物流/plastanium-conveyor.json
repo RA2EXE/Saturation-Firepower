@@ -1,4 +1,10 @@
 {
-  "placableLiquid":true,
-  "displayFlow":true
+	"placableLiquid":true,
+	"displayFlow":true,
+	"requirements":[
+		"graphite/1",
+		"metaglass/1",
+		"silicon/1",
+		"plastanium/1"
+	]
 }
