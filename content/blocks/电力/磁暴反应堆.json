@@ -151,7 +151,7 @@
 					"strokeFrom": 120,
 					"strokeTo": 1,
 					"colorFrom": "c0ecff",
-					"colorTo": "ffffff"
+					"colorTo": "FFFFFF"
 				},
 				{
 					"type": "ParticleEffect",
@@ -216,13 +216,16 @@
 		"lightningColor": "c0ecff",
 		"splashDamageRadius": 1600,
 		"splashDamage": 80000,
-		"fragBullets": 180,
+		"fragBullets": 120,
 		"fragVelocityMin": 1,
-		"fragLifeMin": 0.2,
+		"fragLifeMin": 0.92,
 		"fragLifeMax": 1,
+		"fragRandomSpread": 0,
+		"fragSpread": 3,
 		"fragBullet": {
 			"type": "BasicBulletType",
 			"pierce": true,
+			"pierceBuilding": true,
 			"sprite": "circle-bullet",
 			"trailChance": 0.05,
 			"trailEffect": {
@@ -258,16 +261,16 @@
 			"shrinkY": 0,
 			"hitShake": 10,
 			"hitSound": "plasmaboom",
+			"hitSoundVolume": 1.5,
 			"frontColor": "c0ecff",
 			"backColor": "c0ecff",
 			"trailColor": "c0ecff",
 			"width": 26,
 			"height": 26,
 			"speed": 5,
-			"lifetime": 320,
+			"lifetime": 360,
 			"damage": 550,
 			"absorbable": false,
-			"collides": false,
 			"lightningDamage": 800,
 			"lightning": 5,
 			"lightningLength": 35,
@@ -329,6 +332,38 @@
 						"rotation": 105
 					}
 				]
+			},
+			"bulletInterval": 10,
+			"intervalBullets": 1,
+			"intervalBullet": {
+				"type": "BasicBulletType",
+				"sprite": "circle-bullet",
+				"instantDisappear": true,
+				"hitShake": 5,
+				"hitSound": "plasmaboom",
+				"hitSoundVolume": 0.5,
+				"frontColor": "c0ecff",
+				"backColor": "c0ecff",
+				"trailColor": "c0ecff",
+				"width": 26,
+				"height": 26,
+				"absorbable": false,
+				"collides": false,
+				"lightningDamage": 800,
+				"lightning": 1,
+				"lightningLength": 4,
+				"lightningColor": "c0ecff",
+				"splashDamageRadius": 105,
+				"splashDamage": 800,
+				"despawnEffect": "none",
+				"hitColor":"c0ecff",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						"titanExplosion",
+						"titanExplosion"
+					]
+				}
 			}
 		},
 		"bulletInterval": 4,
@@ -528,7 +563,7 @@
 	},
 	"buildCostMultiplier": 1000,
 	"buildVisibility": "campaignOnly",
-	"breakable":false,
+	"breakable": false,
 	/*
 	"requirements": [
 		"metaglass/13000",

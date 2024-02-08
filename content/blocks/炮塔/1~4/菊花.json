@@ -146,7 +146,11 @@
 			},
 			"damage": 13,
 			"splashDamageRadius": 30,
-			"splashDamage": 30
+			"splashDamage": 30,
+			"lightningDamage": 8,
+			"lightning": 2,
+			"lightningLength": 3,
+			"lightningColor": "7595D2"
 		},
 		"surge-alloy": {
 			"type": "MissileBulletType",
@@ -288,6 +292,7 @@
 			"fragBullets": 5,
 			"fragBullet": {
 				"despawnEffect": "flakExplosionBig",
+				"scaledSplashDamage": true,
 				"status": "blasted",
 				"width": 8,
 				"height": 9,
@@ -547,13 +552,13 @@
 			},
 			"damage": 36,
 			"status": "干扰",
-			"statusDuration": 83,
+			"statusDuration": 23,
 			"splashDamageRadius": 69.6,
 			"splashDamage": 83,
 			"lightningDamage": 33,
 			"lightning": 4,
-			"lightningLength": 8,
-			"lightningLengthRand": 9,
+			"lightningLength": 5,
+			"lightningLengthRand": 8,
 			"lightningColor": "BFFFDB"
 		}
 	},

@@ -70,7 +70,7 @@
 				"baseLength": 0,
 				"lifetime": 123,
 				"colorFrom": "EEC591",
-				"colorTo": "ffffff",
+				"colorTo": "FFFFFF",
 				"cone": 40
 			},
 			{
@@ -81,7 +81,7 @@
 				"strokeFrom": 18,
 				"strokeTo": 0,
 				"colorFrom": "EEC59180",
-				"colorTo": "ffffff80"
+				"colorTo": "FFFFFF80"
 			}
 		]
 	},

@@ -22,7 +22,7 @@
 		"strokeFrom": 3,
 		"strokeTo": 0,
 		"colorFrom": "FFFFFF",
-		"colorTo": "ffffff"
+		"colorTo": "FFFFFF"
 	},
 	"targetGround": true,
 	"targetAir": true,
@@ -54,7 +54,7 @@
 				"strokeFrom": 3,
 				"strokeTo": 0,
 				"colorFrom": "FFFFFF",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			"smokeEffect":{
 				"type": "ParticleEffect",

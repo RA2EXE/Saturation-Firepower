@@ -1,39 +1,39 @@
 {
 	"name": "固守",
 	"color": "a2a2a2",
-	"permanent": true,
+	"permanent": false,
 	//"show":false,
-	"healthMultiplier": 8,
+	"healthMultiplier": 3.5,
 	"speedMultiplier": 0,
-	"damageMultiplier": 5,
-	"reloadMultiplier": 1.85,
+	"damageMultiplier": 2,
+	"reloadMultiplier": 5,
 	"effectChance": 0.06,
 	"effect": {
 		"type": "MultiEffect",
 		"effects": [
 			{
-				"type": "ParticleEffect",
-				"particles": 1,  
-				"baseLength": 0,
-				"length": 0,
-				"lifetime": 20,
-				"sizeInterp":"pow5Out",
-				"sizeFrom": 0,
-				"sizeTo": 6,
-				"colorFrom": "a2a2a2",
-				"colorTo": "a2a2a2"
+				"type": "WrapEffect",
+				"effect": "colorSparkBig",
+				"color": "a2a2a2",
+				"rotation": 0
 			},
 			{
-				"type": "ParticleEffect",
-				"particles": 1,  
-				"startDelay": 18,
-				"baseLength": 0,
-				"length": 0,
-				"lifetime": 160,
-				"sizeFrom": 6,
-				"sizeTo": 0,
-				"colorFrom": "a2a2a2",
-				"colorTo": "a2a2a2"
+				"type": "WrapEffect",
+				"effect": "colorSparkBig",
+				"color": "a2a2a2",
+				"rotation": 180
+			},
+			{
+				"type": "WrapEffect",
+				"effect": "colorSparkBig",
+				"color": "a2a2a2",
+				"rotation": 90
+			},
+			{
+				"type": "WrapEffect",
+				"effect": "colorSparkBig",
+				"color": "a2a2a2",
+				"rotation": -90
 			}
 		]
 	}

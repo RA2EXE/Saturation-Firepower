@@ -14,7 +14,7 @@
 		"totalPower": 50000
 	},
 	"ammoCapacity": 300,
-	"hitSize": 100,
+	"hitSize": 90,
 	"trailLength": 160,
 	"waveTrailX": 23.25,
 	"waveTrailY": -40,
@@ -136,7 +136,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "97FFA8",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"smokeEffect": "none",
@@ -223,7 +223,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "97FFA8",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"smokeEffect": "none",
@@ -317,7 +317,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "97FFA8",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"smokeEffect": "none",
@@ -344,7 +344,7 @@
 							"baseLength": 130,
 							"lifetime": 35,
 							"colorFrom": "97FFA880",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "ParticleEffect",
@@ -369,7 +369,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -407,7 +407,7 @@
 						"baseLength": 0,
 						"lifetime": 35,
 						"colorFrom": "97FFA8",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				}
 			}
@@ -469,7 +469,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "97FFA8",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"smokeEffect": "none",
@@ -496,7 +496,7 @@
 							"baseLength": 130,
 							"lifetime": 35,
 							"colorFrom": "97FFA880",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "ParticleEffect",
@@ -521,7 +521,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -559,7 +559,7 @@
 						"baseLength": 0,
 						"lifetime": 35,
 						"colorFrom": "97FFA8",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				}
 			}
@@ -621,7 +621,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "97FFA8",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"smokeEffect": "none",
@@ -648,7 +648,7 @@
 							"baseLength": 130,
 							"lifetime": 35,
 							"colorFrom": "97FFA880",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "ParticleEffect",
@@ -673,7 +673,7 @@
 							"sizeFrom": 130,
 							"sizeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -711,7 +711,7 @@
 						"baseLength": 0,
 						"lifetime": 35,
 						"colorFrom": "97FFA8",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				}
 			}

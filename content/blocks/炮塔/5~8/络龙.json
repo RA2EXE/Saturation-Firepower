@@ -599,7 +599,7 @@
 				]
 			},
 			"fragRandomSpread": 0,
-			"fragAngle": 180,
+			"fragAngle": 0,
 			"fragBullets": 1,
 			"fragBullet": {
 				"despawnEffect": "none",
@@ -647,7 +647,7 @@
 				{
 					"type": "BasicBulletType",
 					"speed": 40,
-					"lifetime": 11,
+					"lifetime": 12.25,
 					"drag": 0.007,
 					"sprite": "missile-large",
 					"backColor": "9b9dcf",
@@ -664,8 +664,18 @@
 					"knockback": 162,
 					"hitShake": 7,
 					"hitSound": "shotgun",
-					"hitEffect": "none",
-					"despawnEffect": "none"
+					"hitEffect": {
+						"type": "WrapEffect",
+						"effect": "dynamicSpikes",
+						"color": "9b9dcf",
+						"rotation": 60
+					},
+					"despawnEffect": {
+						"type": "WrapEffect",
+						"effect": "dynamicSpikes",
+						"color": "9b9dcf",
+						"rotation": 60
+					}
 				}
 			]
 		}

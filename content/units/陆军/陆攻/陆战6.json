@@ -59,7 +59,7 @@
 				"trailWidth": 3.3,
 				"trailColor": "FFA05C",
 				"backColor": "FFA05C",
-				"frontColor": "ffffff",
+				"frontColor": "FFFFFF",
 				"width": 14,
 				"height": 33,
 				"hitEffect": {
@@ -74,7 +74,7 @@
 					"baseLength": 0,
 					"lifetime": 10,
 					"colorFrom": "FFA05C",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"despawnEffect": "flakExplosionBig"

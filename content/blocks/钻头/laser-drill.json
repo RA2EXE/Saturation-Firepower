@@ -12,7 +12,7 @@
         "length": 20,
         "baseLength": 0,
         "lifetime": 10,
-        "colorFrom": "ffffff",
-        "colorTo": "ffffff"
+        "colorFrom": "FFFFFF",
+        "colorTo": "FFFFFF"
     }
 }

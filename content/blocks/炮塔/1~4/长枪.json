@@ -118,7 +118,7 @@
 						"strokeFrom": 8,
 						"strokeTo": 0,
 						"colorFrom": "FFE176",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -290,6 +290,7 @@
 					"shootPyraFlame",
 					"shootPyraFlame"
 				]},
+			"scaledSplashDamage": true,
 			"damage": 33,
 			"splashDamageRadius": 20,
 			"splashDamage": 45,

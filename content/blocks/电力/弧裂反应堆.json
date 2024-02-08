@@ -1,14 +1,14 @@
 {
 	"type": "ConsumeGenerator",
-	"name": "弧裂反应堆",
+	"name": "弧形裂变堆",
 	"size": 6,
 	"health": 28000,
 	"hasLiquids": true,
 	"hasItems": true,
-	"itemDuration": 840,
-	"powerProduction": 220,
+	"itemDuration": 39,
+	"powerProduction": 550,
 	"itemCapacity": 20,
-	"liquidCapacity": 40,
+	"liquidCapacity": 60,
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
@@ -75,24 +75,25 @@
 	},
 	"generateEffect": "generatespark",
 	"consumes": {
-		"items": [
-			"镄/10",
-			"裂位能/10"
-		],
 		"itemRadioactive": {},
 		"liquid": "纳米流体/0.9"
 	},
 	"requirements": [
-		"lead/1200",
-		"silicon/1200",
 		"metaglass/400",
-		"硅钢/700",
-		"镄/750",
-		"纳米核/800",
+		"镄/1280",
+		"硅钢/1700",
+		"纳米核/1000",
 		"裂位能/800"
 	],
+	"buildCostMultiplier": 0.88,
 	"ambientSound": "techloop",
 	"ambientSoundVolume": 0.5,
 	"category": "power",
-	"research": "镄反应堆"
+	"research": {
+		"research": "镄反应堆",
+		"objectives": [
+			{"type": "SectorComplete","preset": "荒芜矿区"}
+		]
+	}
+	
 }

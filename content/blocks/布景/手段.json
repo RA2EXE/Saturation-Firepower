@@ -55,7 +55,7 @@
 				"strokeFrom": 3,
 				"strokeTo": 0,
 				"colorFrom": "FFFFFF",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			}
 		]
 	},
@@ -140,7 +140,7 @@
 						"baseLength": 39,
 						"lifetime": 95,
 						"colorFrom": "FF5B5B",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -208,7 +208,7 @@
 								"baseLength": 39,
 								"lifetime": 35,
 								"colorFrom": "FF5B5B",
-								"colorTo": "ffffff"
+								"colorTo": "FFFFFF"
 							},
 							{
 								"type": "ParticleEffect",

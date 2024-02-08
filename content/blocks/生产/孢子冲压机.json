@@ -40,7 +40,7 @@
 		"baseLength": 10,
 		"lifetime": 10,
 		"colorFrom": "E3E3E390",
-		"colorTo": "ffffff"
+		"colorTo": "FFFFFF"
 	},
 	"consumes": {
 		"power": 6,

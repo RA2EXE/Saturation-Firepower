@@ -413,7 +413,7 @@
 		"lifetime": 70,
 		"interp": "pow10Out",
 		"colorFrom": "F2FF9CAA",
-		"colorTo": "ffffff40",
+		"colorTo": "FFFFFF40",
 		"cone": 50
 	},
 	"chargeSound": "lasercharge",
@@ -817,7 +817,7 @@
 						"strokeFrom": 11,
 						"strokeTo": 0,
 						"colorFrom": "F2FF9C",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -827,7 +827,7 @@
 						"strokeFrom": 8,
 						"strokeTo": 0,
 						"colorFrom": "F2FF9C",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			},

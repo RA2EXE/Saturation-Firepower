@@ -93,7 +93,7 @@
 					"lightOpacity": 0.2,
 					"interp": "circleOut",
 					"sizeInterp": "pow10In",
-					"colorFrom": "ffffff",
+					"colorFrom": "FFFFFF",
 					"colorTo": "78787870",
 					"cone": 10
 				},
@@ -158,7 +158,7 @@
 					"lightOpacity": 0.2,
 					"interp": "circleOut",
 					"sizeInterp": "pow10In",
-					"colorFrom": "ffffff",
+					"colorFrom": "FFFFFF",
 					"colorTo": "78787870",
 					"cone": 10
 				},

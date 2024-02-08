@@ -106,7 +106,7 @@
 				"baseLength": 0,
 				"lifetime": 10,
 				"colorFrom": "FF8C00",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			"hitColor": "FF8C00",
 			"despawnEffect": "hitBulletColor",
@@ -140,7 +140,7 @@
 				"baseLength": 0,
 				"lifetime": 10,
 				"colorFrom": "8da1e3",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			"hitColor": "8da1e3",
 			"despawnEffect": "hitBulletColor",
@@ -174,7 +174,7 @@
 				"baseLength": 0,
 				"lifetime": 10,
 				"colorFrom": "f9a3c7",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			"hitColor": "f9a3c7",
 			"despawnEffect": "hitBulletColor",

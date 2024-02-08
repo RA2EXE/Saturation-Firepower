@@ -73,7 +73,7 @@
 				"lifetime": 98,
 				"width": 25,
 				"height": 25,
-				"frontColor": "ffffff",
+				"frontColor": "FFFFFF",
 				"backColor": "A278E1",
 				"collidesTiles": true,
 				"ammoMultiplier": 4,
@@ -107,7 +107,7 @@
 							"strokeFrom": 3,
 							"strokeTo": 0,
 							"colorFrom": "A278E1",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -122,7 +122,7 @@
 					"lifetime": 90,
 					"width": 19,
 					"height": 19,
-					"frontColor": "ffffff",
+					"frontColor": "FFFFFF",
 					"backColor": "A278E1",
 					"collidesTiles": false,
 					"splashDamageRadius": 50,
@@ -155,7 +155,7 @@
 								"strokeFrom": 2,
 								"strokeTo": 0,
 								"colorFrom": "A278E1",
-								"colorTo": "ffffff"
+								"colorTo": "FFFFFF"
 							}
 						]
 					},

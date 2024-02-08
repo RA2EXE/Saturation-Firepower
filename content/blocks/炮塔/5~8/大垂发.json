@@ -114,7 +114,7 @@
 				"layer": 50,
 				"interp": "pow10Out",
 				"sizeInterp": "pow5In",
-				"colorFrom": "ffffff80",
+				"colorFrom": "FFFFFF80",
 				"colorTo": "78787870"
 			},
 			{
@@ -128,7 +128,7 @@
 				"layer": 50,
 				"interp": "pow10Out",
 				"sizeInterp": "pow5In",
-				"colorFrom": "ffffff80",
+				"colorFrom": "FFFFFF80",
 				"colorTo": "78787870"
 			},
 			{
@@ -140,7 +140,7 @@
 				"strokeTo": 0,
 				"interp": "circleOut",
 				"colorFrom": "EEC591",
-				"colorTo": "ffffff70"
+				"colorTo": "FFFFFF70"
 			}
 		]
 	},
@@ -350,6 +350,7 @@
 			"fragBullets": 16,
 			"fragBullet": {
 				"type": "BasicBulletType",
+				"scaledSplashDamage": true,
 				"hitEffect": {
 					"type": "MultiEffect",
 					"effects": [
@@ -646,7 +647,7 @@
 							"length": 25,
 							"baseLength": 0,
 							"lifetime": 35,
-							"colorFrom": "ffffff",
+							"colorFrom": "FFFFFF",
 							"colorTo": "EEC591"
 						},
 						"colors": [

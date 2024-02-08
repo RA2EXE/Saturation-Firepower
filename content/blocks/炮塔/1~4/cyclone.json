@@ -195,6 +195,7 @@
 				"width": 8,
 				"height": 9,
 				"damage": 8,
+				"scaledSplashDamage": true,
 				"splashDamageRadius": 35,
 				"splashDamage": 38,
 				"lifetime": 20,

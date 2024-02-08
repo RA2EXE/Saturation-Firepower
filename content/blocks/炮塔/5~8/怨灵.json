@@ -20,12 +20,8 @@
 				"suffix": "-管l",
 				"under": true,
 				"recoilIndex": 0,
-				"moves": [
-					{
-						"progress": "recoil",
-						"y": -6
-					}
-				],
+				"moveY": -6,
+				"progress": "recoil",
 				"heatProgress": "recoil"
 			},
 			{
@@ -33,12 +29,8 @@
 				"suffix": "-管r",
 				"under": true,
 				"recoilIndex": 1,
-				"moves": [
-					{
-						"progress": "recoil",
-						"y": -6
-					}
-				],
+				"moveY": -6,
+				"progress": "recoil",
 				"heatProgress": "recoil"
 			}
 		]
@@ -86,12 +78,12 @@
 			}
 		]
 	},
-	"ammoPerShot": 4,
+	"ammoPerShot": 3,
 	"targetGround": true,
 	"targetAir": true,
 	"consumes": {
 		"coolant": {
-			"amount": 5,
+			"amount": 4.5,
 			"optional": true
 		}
 	},
@@ -129,8 +121,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -140,8 +132,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -154,8 +146,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "flakExplosionBig",
@@ -187,8 +179,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -198,8 +190,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -212,8 +204,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "hitBulletBig",
@@ -256,8 +248,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -316,7 +308,7 @@
 						"baseLength": 9,
 						"lifetime": 15,
 						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -358,8 +350,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -384,7 +376,7 @@
 							"baseLength": 9,
 							"lifetime": 15,
 							"colorFrom": "FEEBB3",
-							"colorTo": "ffffff",
+							"colorTo": "FFFFFF",
 							"cone": 40
 						},
 						{
@@ -427,7 +419,7 @@
 								"baseLength": 9,
 								"lifetime": 15,
 								"colorFrom": "FEEBB3",
-								"colorTo": "ffffff",
+								"colorTo": "FFFFFF",
 								"cone": 40
 							},
 							{
@@ -485,8 +477,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -496,8 +488,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -510,8 +502,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "hitBulletBig",
@@ -555,8 +547,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -566,8 +558,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -580,8 +572,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "hitBulletBig",

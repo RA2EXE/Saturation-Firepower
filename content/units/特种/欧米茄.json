@@ -2,10 +2,10 @@
 	"type": "flying",
 	"name": "欧米茄",
 	"rotateSpeed": 6,
-	"speed": 3.8,
+	//"speed": 3.8,
 	//地图用，发mod前记得删！！！
-	//"itemCapacity": 10000,
-	//"speed": 10,
+	"itemCapacity": 10000,
+	"speed": 10,
 	"immunities": [
 		"sapped","slow","unmoving",
 		"spore-slowed","corroded","electrified",
@@ -176,7 +176,7 @@
 					"baseLength": 0,
 					"lifetime": 30,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 30
 				},
 				"status": "melting",

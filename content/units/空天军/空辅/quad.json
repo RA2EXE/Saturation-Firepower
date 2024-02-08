@@ -38,8 +38,8 @@
 				"height": 50,
 				"maxRange": 50,
 				"backColor": "97FFA8",
-				"frontColor": "ffffff",
-				"mixColorTo": "ffffff",
+				"frontColor": "FFFFFF",
+				"mixColorTo": "FFFFFF",
 				"hitSound": "plasmaboom",
 				"hitShake": 8,
 				"collidesAir": false,
@@ -57,7 +57,7 @@
 							"baseLength": 8,
 							"lifetime": 30,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",
@@ -67,7 +67,7 @@
 							"strokeFrom": 6,
 							"strokeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -104,8 +104,8 @@
 					"drag": 0.2,
 					"healPercent": 5,
 					"backColor": "97FFA8",
-					"frontColor": "ffffff",
-					"mixColorTo": "ffffff",
+					"frontColor": "FFFFFF",
+					"mixColorTo": "FFFFFF",
 					"hitSound": "plasmaboom",
 					"despawnEffect": "massiveExplosion",
 					"hitEffect": "greenBomb",

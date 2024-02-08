@@ -20,6 +20,7 @@
 				"colorFrom": "76D081",
 				"colorTo": "76D081"
 			},
+			"sameTypeHealMult": 0.5,
 			"damageEffect": "chainLightning",
 			"status": "electrified",
 			"shootSound": "spark",
@@ -118,7 +119,7 @@
 							"strokeFrom": 3,
 							"strokeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "ParticleEffect",
@@ -129,7 +130,7 @@
 							"baseLength": 0,
 							"lifetime": 35,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},

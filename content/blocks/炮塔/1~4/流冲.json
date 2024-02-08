@@ -53,7 +53,7 @@
 			"damage": 33,
 			"sprite": "missile-large",
 			"backColor": "596ab8",
-			"frontColor": "ffffff",
+			"frontColor": "FFFFFF",
 			"trailLength": 6,
 			"trailWidth": 2,
 			"trailColor": "596ab8",
@@ -84,8 +84,8 @@
 				"length": 35,
 				"baseLength": 0,
 				"lifetime": 18,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none",
@@ -100,7 +100,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -109,8 +109,8 @@
 						"sizeTo": 35,
 						"strokeFrom": 4,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -126,7 +126,7 @@
 			"damage": 33,
 			"sprite": "missile-large",
 			"backColor": "ffa166",
-			"frontColor": "ffffff",
+			"frontColor": "FFFFFF",
 			"trailLength": 6,
 			"trailWidth": 2,
 			"trailColor": "ffa166",
@@ -157,8 +157,8 @@
 				"length": 35,
 				"baseLength": 0,
 				"lifetime": 18,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none",
@@ -173,7 +173,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -182,8 +182,8 @@
 						"sizeTo": 35,
 						"strokeFrom": 4,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -199,7 +199,7 @@
 			"damage": 33,
 			"sprite": "missile-large",
 			"backColor": "313131",
-			"frontColor": "ffffff",
+			"frontColor": "FFFFFF",
 			"trailLength": 6,
 			"trailWidth": 2,
 			"trailColor": "313131",
@@ -231,8 +231,8 @@
 				"length": 35,
 				"baseLength": 0,
 				"lifetime": 18,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none",
@@ -247,7 +247,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -256,8 +256,8 @@
 						"sizeTo": 35,
 						"strokeFrom": 4,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -273,7 +273,7 @@
 			"damage": 33,
 			"sprite": "missile-large",
 			"backColor": "6ecdec",
-			"frontColor": "ffffff",
+			"frontColor": "FFFFFF",
 			"trailLength": 6,
 			"trailWidth": 2,
 			"trailColor": "6ecdec",
@@ -304,8 +304,8 @@
 				"length": 35,
 				"baseLength": 0,
 				"lifetime": 18,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none",
@@ -320,7 +320,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -329,8 +329,8 @@
 						"sizeTo": 35,
 						"strokeFrom": 4,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -346,7 +346,7 @@
 			"damage": 33,
 			"sprite": "missile-large",
 			"backColor": "76D081",
-			"frontColor": "ffffff",
+			"frontColor": "FFFFFF",
 			"trailLength": 6,
 			"trailWidth": 2,
 			"trailColor": "76D081",
@@ -379,8 +379,8 @@
 				"length": 35,
 				"baseLength": 0,
 				"lifetime": 18,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none",
@@ -395,7 +395,7 @@
 						"baseLength": 8,
 						"lifetime": 22,
 						"colorFrom": "FFFFFF",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -404,8 +404,8 @@
 						"sizeTo": 35,
 						"strokeFrom": 4,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			}

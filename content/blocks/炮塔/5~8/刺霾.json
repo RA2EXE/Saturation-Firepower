@@ -156,7 +156,7 @@
 						"interp": "circleOut",
 						"strokeFrom": 6,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
+						"colorFrom": "FFFFFF",
 						"colorTo": "EEC59188"
 					},
 					{
@@ -309,7 +309,7 @@
 						"interp": "circleOut",
 						"strokeFrom": 6,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
+						"colorFrom": "FFFFFF",
 						"colorTo": "EEC59188"
 					},
 					{
@@ -411,13 +411,11 @@
 		}
 	},
 	"requirements": [
-		"镄/2500",
-		"silicon/880",
-		"blast-compound/500",
-		"裂位能/500",
-		"莱普合金/850",
-		"二级协议/75",
-		"三级协议/15"
+		"镄/2200",
+		"blast-compound/550",
+		"裂位能/530",
+		"莱普合金/400",
+		"三级协议/18"
 	],
 	"category": "turret",
 	"research": "怨灵"

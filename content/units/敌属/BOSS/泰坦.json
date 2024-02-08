@@ -141,7 +141,7 @@
 					"baseLength": 0,
 					"lifetime": 10,
 					"colorFrom": "FFE176",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"hitEffect": {
@@ -156,7 +156,7 @@
 					"baseLength": 0,
 					"lifetime": 10,
 					"colorFrom": "FFE176",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"shootEffect": {
@@ -168,8 +168,8 @@
 					"length": 35,
 					"baseLength": 0,
 					"lifetime": 25,
-					"colorFrom": "ffffff",
-					"colorTo": "ffffff",
+					"colorFrom": "FFFFFF",
+					"colorTo": "FFFFFF",
 					"cone": 60
 				},
 				"smokeEffect": "bigShockwave"
@@ -217,7 +217,7 @@
 							"baseLength": 35,
 							"lifetime": 45,
 							"colorFrom": "FF5B5B",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "ParticleEffect",

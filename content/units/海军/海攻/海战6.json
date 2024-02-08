@@ -5,7 +5,7 @@
 	"rotateSpeed": 0.71,
 	"ammoType": "裂位能",
 	"ammoCapacity": 200,
-	"hitSize": 90,
+	"hitSize": 80,
 	"trailLength": 160,
 	"waveTrailX": 25,
 	"waveTrailY": -46,
@@ -130,7 +130,7 @@
 					"length": 65,
 					"baseLength": 59,
 					"lifetime": 35,
-					"colorFrom": "ffffff",
+					"colorFrom": "FFFFFF",
 					"colorTo": "FEEBB3",
 					"cone": 30
 				},

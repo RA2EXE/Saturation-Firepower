@@ -27,7 +27,7 @@
 					"baseLength": 9,
 					"lifetime": 15,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 70
 				},
 				{
@@ -63,7 +63,7 @@
 						"baseLength": 9,
 						"lifetime": 15,
 						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff",
+						"colorTo": "FFFFFF",
 						"cone": 40
 					},
 					{
@@ -106,7 +106,7 @@
 							"baseLength": 9,
 							"lifetime": 15,
 							"colorFrom": "FEEBB3",
-							"colorTo": "ffffff",
+							"colorTo": "FFFFFF",
 							"cone": 40
 						},
 						{

@@ -103,6 +103,7 @@
 		"裂位能/800",
 		"二级协议/50"
 	],
+	"buildCostMultiplier": 0.8,
 	"destroyBullet": {
 		"type": "BasicBulletType",
 		"width": 36,

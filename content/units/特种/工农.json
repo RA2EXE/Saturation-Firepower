@@ -5,8 +5,8 @@
 	"controller":"BuilderAI",
 	//"defaultCommand": "rebuildCommand",
 	"speed": 2,
-	"drag": 0.018,
-	"accel": 0.03,
+	"drag": 0.03,
+	"accel": 0.04,
 	"rotateSpeed": 2.5,
 	"immunities": [
 		"electrified",
@@ -28,7 +28,6 @@
 	"itemCapacity": 150,
 	"engineOffset": 16,
 	"engineSize": 2.8,
-	"trailLength": 5,
 	"engines": [
 		{
 			"x": -6.5,
@@ -73,7 +72,7 @@
 				"strokeFrom": 1.5,
 				"strokeTo": 0,
 				"colorFrom": "97FFA8",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			"effect": "修复"
 		}

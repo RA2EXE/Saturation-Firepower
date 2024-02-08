@@ -51,7 +51,7 @@
 			"damage": 33,
 			"splashDamageRadius": 64,
 			"splashDamage": 255,
-			"knockback": 16,
+			"knockback": 10,
 			"hitSize": 50,
 			"shrinkY": 0,
 			"hitSound": "explosionbig",
@@ -122,7 +122,7 @@
 						"strokeFrom": 8,
 						"strokeTo": 0,
 						"colorFrom": "FFE176FF",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -204,7 +204,7 @@
 						"strokeFrom": 8,
 						"strokeTo": 0,
 						"colorFrom": "EEEE00",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -288,7 +288,7 @@
 						"strokeFrom": 0,
 						"strokeTo": 0,
 						"colorFrom": "EEEE00",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			}

@@ -11,7 +11,7 @@
 	],
 	"ammoType": "裂位能",
 	"ammoCapacity": 200,
-	"hitSize": 100,
+	"hitSize": 90,
 	"trailLength": 200,
 	"waveTrailX": 30,
 	"waveTrailY": -40,
@@ -99,7 +99,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 40
 				},
 				"smokeEffect": "none",
@@ -209,7 +209,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 40
 				},
 				"smokeEffect": "none",
@@ -319,7 +319,7 @@
 					"baseLength": 0,
 					"lifetime": 35,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 40
 				},
 				"smokeEffect": "none",
@@ -581,7 +581,7 @@
 							"sizeFrom": 300,
 							"sizeTo": 0,
 							"colorFrom": "FEEBB3",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",
