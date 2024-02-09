@@ -218,9 +218,10 @@
 			"knockback": 8,
 			"width": 18,
 			"height": 22,
-			"damage": 175,
+			"pierceArmor": true,
+			"damage": 155,
 			"splashDamageRadius": 38,
-			"splashDamage": 127.5,
+			"splashDamage": 120,
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [
