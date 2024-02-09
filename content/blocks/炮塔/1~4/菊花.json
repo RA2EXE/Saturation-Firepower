@@ -3,9 +3,9 @@
 	"name": "菊花",
 	"health": 1300,
 	"size": 4,
-	"reload": 26,
-	"fogRadiusMultiplier": 0.42,
-	"range": 670,
+	"reload": 30,
+	"fogRadiusMultiplier": 0.48,
+	"range": 600,
 	"maxAmmo": 60,
 	"heatColor": "FFD197",
 	"canOverdrive": true,
@@ -16,7 +16,7 @@
 	"warmupMaintainTime": 45,
 	"unitSort": "farthest",
 	"shoot": {
-		"shots": 5,
+		"shots": 4,
 		"shotDelay": 2
 	},
 	"drawer": {
@@ -56,7 +56,7 @@
 			}
 		]
 	},
-	"ammoPerShot": 5,
+	"ammoPerShot": 3,
 	"ammoUseEffect": "none",
 	"shootSound": "cannon",
 	"targetGround": true,
@@ -88,7 +88,7 @@
 			"speed": 15,
 			"weaveMag": 2,
 			"weaveScale": 3,
-			"lifetime": 43,
+			"lifetime": 40,
 			"homingDelay": 10,
 			"homingPower": 0.08,
 			"homingRange": 80,
@@ -144,10 +144,10 @@
 				"colorTo": "FFFFFF",
 				"cone": 30
 			},
-			"damage": 13,
+			"damage": 15,
 			"splashDamageRadius": 30,
-			"splashDamage": 30,
-			"lightningDamage": 8,
+			"splashDamage": 32,
+			"lightningDamage": 9,
 			"lightning": 2,
 			"lightningLength": 3,
 			"lightningColor": "7595D2"
@@ -160,7 +160,7 @@
 			"speed": 15,
 			"weaveMag": 2,
 			"weaveScale": 3,
-			"lifetime": 43,
+			"lifetime": 40,
 			"homingDelay": 10,
 			"homingPower": 0.08,
 			"homingRange": 80,
@@ -214,13 +214,13 @@
 				"colorTo": "FFFFFF",
 				"cone": 30
 			},
-			"damage": 33,
-			"lightningDamage": 22,
+			"damage": 36,
+			"lightningDamage": 24,
 			"lightning": 2,
 			"lightningLength": 9,
 			"lightningLengthRand": 4,
-			"splashDamageRadius": 48,
-			"splashDamage": 72
+			"splashDamageRadius": 50,
+			"splashDamage": 76
 		},
 		"集束": {
 			"type": "MissileBulletType",
@@ -232,7 +232,7 @@
 			"speed": 13,
 			"weaveMag": 2,
 			"weaveScale": 3,
-			"lifetime": 50.53,
+			"lifetime": 46.15,
 			"homingDelay": 10,
 			"homingPower": 0.08,
 			"homingRange": 80,
@@ -285,9 +285,9 @@
 				"colorTo": "FFFFFF",
 				"cone": 30
 			},
-			"damage": 13,
-			"splashDamageRadius": 55,
-			"splashDamage": 30,
+			"damage": 15,
+			"splashDamageRadius": 60,
+			"splashDamage": 32,
 			"fragLifeMin": 0.3,
 			"fragBullets": 5,
 			"fragBullet": {
@@ -298,9 +298,9 @@
 				"height": 9,
 				"backColor": "D85555FF",
 				"frontColor": "FE7777FF",
-				"damage": 9,
-				"splashDamageRadius": 45,
-				"splashDamage": 48,
+				"damage": 4,
+				"splashDamageRadius": 42,
+				"splashDamage": 56,
 				"lifetime": 20,
 				"speed": 1.5
 			}
@@ -318,7 +318,7 @@
 			"rangeChange": 160,
 			"weaveMag": 2,
 			"weaveScale": 2,
-			"lifetime": 24,
+			"lifetime": 23,
 			"knockback": 8,
 			"hittable": false,
 			"absorbable": false,
@@ -350,9 +350,9 @@
 				"cone": 30
 			},
 			"hitShake": 3,
-			"damage": 28,
+			"damage": 30,
 			"splashDamageRadius": 45,
-			"splashDamage": 35,
+			"splashDamage": 36,
 			"fragBullets": 2,
 			"fragRandomSpread": 30,
 			"fragBullet": {
@@ -376,7 +376,7 @@
 					"trailEffect": "none",
 					"despawnEffect": "none",
 					"splashDamageRadius": 45,
-					"splashDamage": 25,
+					"splashDamage": 34,
 					"speed": 50,
 					"lifetime": 1
 				}
@@ -390,7 +390,7 @@
 			"speed": 15,
 			"weaveMag": 2,
 			"weaveScale": 3,
-			"lifetime": 43,
+			"lifetime": 40,
 			"scaleLife": true,
 			"ammoMultiplier": 15,
 			"status": "干扰",
@@ -447,7 +447,7 @@
 			"collidesTeam": true,
 			"healPercent": 2,
 			"splashDamageRadius": 35,
-			"splashDamage": 5,
+			"splashDamage": 8,
 			"fragBullets": 1,
 			"fragBullet": {
 				"type": "EmpBulletType",
@@ -496,7 +496,7 @@
 			"speed": 16,
 			"weaveMag": 2,
 			"weaveScale": 3,
-			"lifetime": 50.8,
+			"lifetime": 47.5,
 			"homingDelay": 10,
 			"homingPower": 0.08,
 			"homingRange": 80,
@@ -550,12 +550,12 @@
 				"colorTo": "FFFFFF",
 				"cone": 30
 			},
-			"damage": 36,
+			"damage": 38,
 			"status": "干扰",
-			"statusDuration": 23,
+			"statusDuration": 30,
 			"splashDamageRadius": 69.6,
-			"splashDamage": 83,
-			"lightningDamage": 33,
+			"splashDamage": 88,
+			"lightningDamage": 36,
 			"lightning": 4,
 			"lightningLength": 5,
 			"lightningLengthRand": 8,
@@ -566,7 +566,7 @@
 		"thorium/580",
 		"graphite/300",
 		"硅钢/500",
-		"泰勒合金/150",
+		"泰勒合金/125",
 		"二级协议/1"
 	],
 	"researchCostMultiplier": 0.4,

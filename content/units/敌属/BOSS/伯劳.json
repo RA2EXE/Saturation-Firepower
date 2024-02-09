@@ -3,6 +3,7 @@
 	"healColor": "FF5B5B",
 	"outlineColor": "383848",
 	"name": "伯劳",
+	"hidden": true,
 	"description": "信息缺失！",
 	"details": "信息缺失！",
 	"legCount": 8,

@@ -14,9 +14,9 @@
 	"liquidCapacity": 60,
 	"canOverdrive": false,
 	"recoilTime": 100,
-	"reload": 92,
+	"reload": 82,
 	"rotateSpeed": 2,
-	"range": 700,
+	"range": 672,
 	"shoot": {
 		"shots": 6,
 		"shotDelay": 2,
@@ -128,7 +128,7 @@
 			"statusDuration": 120,
 			"scaledSplashDamage": true,
 			"splashDamageRadius": 66.4,
-			"splashDamage": 337.5,
+			"splashDamage": 357.5,
 			"hitShake": 5,
 			"hitSound": "plasmaboom",
 			"hitEffect": {

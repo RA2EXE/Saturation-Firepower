@@ -2,7 +2,7 @@
 	"type": "PowerTurret",
 	"name": "扬子鳄防御平台",
 	"unitSort": "strongest",
-	"buildVisibility": "campaignOnly",
+	"buildVisibility": "sandboxOnly",
 	"health": 28000,
 	"armor": 33,
 	"size": 4,
@@ -139,7 +139,7 @@
 			"sparkLen": 26
 		}
 	},
-	//"requirements": ["镄/12000","铬/9000","裂位能/15000","泰勒合金/8000"],
+	//"requirements": ["镄/14000","铬/14000","裂位能/20000","泰勒合金/8000"],
 	"breakable":false,
 	"rebuildable":false,
 	"category": "turret"

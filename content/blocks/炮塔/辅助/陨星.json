@@ -74,10 +74,10 @@
 			"despawnEffect": "none"
 		}
 	},
-	"requirements": [
+	/*"requirements": [
 		"镄/25000",
 		"blast-compound/50000"
-	],
+	],*/
 	"buildVisibility": "sandboxOnly",
 	"category": "turret"
 }

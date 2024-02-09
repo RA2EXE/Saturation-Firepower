@@ -308,20 +308,3 @@ overdrive场，overclock场-5秒-5格-3间隔
 反舰导弹Ⅱ：伤害1船，射程33，3.35速，装弹8秒 <2连发> <红色拖尾>
 舰炮Ⅰ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发>
 舰炮Ⅱ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发*2>
-
-wait 3
-print "某"
-message announce 0.3
-print "某处"
-message announce 0.3
-print "某处沿"
-message announce 0.3
-print "某处沿海"
-message announce 0.3
-print "某处沿海山"
-message announce 0.3
-print "某处沿海山岭"
-message announce 3
-wait 3
-setflag "J1" true
-stop

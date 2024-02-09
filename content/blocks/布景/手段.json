@@ -253,5 +253,12 @@
 			}
 		}
 	},
+	"requirements": [
+		"silicon/500",
+		"纳米核/200",
+		"泰勒合金/200",
+		"三级协议/30"
+	],
+	"buildCostMultiplier": 1000,
 	"category": "effect"
 }

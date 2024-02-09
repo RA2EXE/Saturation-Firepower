@@ -1,6 +1,6 @@
 {
 	"details": "装载多弹头EMP航空炸弹",
-	"health": 18800,
+	"health": 19600,
 	"speed": 1.4,
 	"rotateSpeed": 2,
 	"accel": 0.065,
@@ -85,7 +85,7 @@
 				"lightningLength": 15,
 				"status": "electrified",
 				"statusDuration": 120,
-				"splashDamage": 90,
+				"splashDamage": 100,
 				"splashDamageRadius": 120,
 				"fragBullets": 3,
 				"fragLifeMin": 0.7,
@@ -109,7 +109,7 @@
 					"hitSound": "plasmaboom",
 					"despawnEffect": "massiveExplosion",
 					"hitEffect": "greenBomb",
-					"splashDamage": 60,
+					"splashDamage": 65,
 					"splashDamageRadius": 80
 				}
 			}

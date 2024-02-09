@@ -5,8 +5,8 @@
 	"armor": 46,
 	"size": 8,
 	"reload": 6,
-	"range": 456,
-	"maxAmmo": 32,
+	"range": 520,
+	"maxAmmo": 36,
 	"shootCone": 35,
 	"recoilTime": 18,
 	"canOverdrive": false,
@@ -97,7 +97,7 @@
 		"硅钢": {
 			"type": "BasicBulletType",
 			"speed": 17,
-			"lifetime": 26.8,
+			"lifetime":28,
 			"width": 16,
 			"height": 21,
 			"damage": 105,
@@ -156,7 +156,7 @@
 		"thorium": {
 			"speed": 21,
 			"damage": 293.75,
-			"lifetime": 21.7,
+			"lifetime": 23,
 			"knockback": 4,
 			"pierce": true,
 			"pierceArmor": true,
@@ -214,14 +214,13 @@
 		"surge-alloy": {
 			"type": "BasicBulletType",
 			"speed": 17,
-			"lifetime": 26.8,
+			"lifetime": 28,
 			"knockback": 8,
 			"width": 18,
 			"height": 22,
-			"pierceArmor": true,
-			"damage": 155,
+			"damage": 175,
 			"splashDamageRadius": 38,
-			"splashDamage": 120,
+			"splashDamage": 127.5,
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -291,7 +290,7 @@
 			"pierceCap": 5,
 			"pierceArmor": true,
 			"sprite": "饱和火力-透彻",
-			"backColor": "E3E3E3",
+			"backColor": "EEC591",
 			"frontColor": "EEC591",
 			"trailLength": 6,
 			"trailWidth": 4,
@@ -454,7 +453,7 @@
 		"镄": {
 			"speed": 26,
 			"damage": 352.5,
-			"lifetime": 17.5,
+			"lifetime": 18,
 			"knockback": 0.65,
 			"pierce": true,
 			"pierceArmor": true,
@@ -528,7 +527,7 @@
 			"damage": 188,
 			"status": "内溃",
 			"pierceArmor": true,
-			"lifetime": 21.7,
+			"lifetime": 22,
 			"knockback": 11,
 			"width": 20,
 			"height": 25,
@@ -598,7 +597,7 @@
 		"surge-alloy/1600",
 		"镄/2500",
 		"二级协议/20",
-		"三级协议/8"
+		"三级协议/10"
 	],
 	"category": "turret",
 	"research": {

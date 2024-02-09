@@ -39,9 +39,9 @@
 		"type": "PointBulletType",
 		"lifetime": 50,
 		"speed": 50,
-		"damage": 5480,
-		"splashDamageRadius": 80,
-		"splashDamage": 5400,
+		"damage": 5670,
+		"splashDamageRadius": 64,
+		"splashDamage": 5670,
 		"ammoMultiplier": 1,
 		"hitSound": "plasmaboom",
 		"chargeEffect": {
@@ -205,7 +205,7 @@
 				}
 			]
 		},
-		"fragBullets": 3,
+		"fragBullets": 4,
 		"fragBullet": {
 			"type": "PointBulletType",
 			"trailSpacing": 9,
@@ -251,9 +251,9 @@
 			"lifetime": 8,
 			"speed": 10,
 			"status": "余热",
-			"statusDuration": 20,
+			"statusDuration": 25,
 			"buildingDamageMultiplier": 0.8,
-			"damage": 50,
+			"damage": 54,
 			"splashDamageRadius": 8,
 			"splashDamage": 7,
 			"hitShake": 1,
@@ -299,9 +299,9 @@
 		}
 	},
 	"coolantMultiplier": 0.5,
-	"reload": 680,
-	"rotateSpeed": 2.35,
-	"range": 530,
+	"reload": 660,
+	"rotateSpeed": 2.4,
+	"range": 576,
 	"category": "turret",
 	"research": {
 		"parent": "foreshadow",
