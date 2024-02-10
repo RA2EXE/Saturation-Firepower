@@ -4,7 +4,7 @@
 	"health": 27000,
 	"armor": 22,
 	"size": 6,
-	"reload": 160,
+	"reload": 110,
 	"range": 496,
 	"recoilTime": 60,
 	"recoil": 3,
@@ -55,11 +55,11 @@
 	},
 	"consumes": {
 		"coolant": {
-			"amount": 4,
+			"amount": 3,
 			"optional": true
 		}
 	},
-	"coolantMultiplier": 0.25,
+	"coolantMultiplier": 0.66667,
 	"liquidCapacity": 40,
 	"shootSound": "mediumCannon",
 	"ammoUseEffect": {
@@ -117,10 +117,9 @@
 	},
 	"targetGround": true,
 	"targetAir": false,
-	"inaccuracy": 0,
+	"inaccuracy": 1.5,
 	"rotateSpeed": 2.3,
-	"maxAmmo": 36,
-	"ammoPerShot": 30,
+	"ammoPerShot": 10,
 	"ammoTypes": {
 		"铬": {
 			"type": "BasicBulletType",
@@ -139,7 +138,7 @@
 			"width": 16,
 			"height": 25,
 			"shrinkY": 0.1,
-			"damage": 2667.6,
+			"damage": 889.2,
 			"pierceArmor": true,
 			"hitShake": 6,
 			"trailChance": 1,
@@ -255,7 +254,7 @@
 				]
 			},
 			"knockback": 36,
-			"fragBullets": 8,
+			"fragBullets": 7,
 			"fragRandomSpread": 45,
 			"fragBullet": {
 				"backColor": "666484",
@@ -268,8 +267,8 @@
 				"shrinkY": 0.8,
 				"width": 12,
 				"height": 14,
-				"damage": 88,
-				"knockback": 19,
+				"damage": 30,
+				"knockback": 8,
 				"lifetime": 9,
 				"speed": 12
 			}
@@ -290,7 +289,7 @@
 			"width": 18,
 			"height": 27,
 			"shrinkY": 0.1,
-			"damage": 8247.33,
+			"damage": 2750,
 			"pierceArmor": true,
 			"pierce": true,
 			"pierceCap": 3,
@@ -413,9 +412,9 @@
 	"requirements": [
 		"镄/2200",
 		"blast-compound/550",
-		"裂位能/530",
-		"莱普合金/400",
-		"三级协议/18"
+		"裂位能/500",
+		"莱普合金/420",
+		"三级协议/14"
 	],
 	"category": "turret",
 	"research": "怨灵"

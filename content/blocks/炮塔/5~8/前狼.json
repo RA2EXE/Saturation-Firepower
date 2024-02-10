@@ -233,7 +233,7 @@
 			"status": "burning",
 			"statusDuration": 600,
 			"homingDelay": 45,
-			"homingPower": 0.04,
+			"homingPower": 0.05,
 			"homingRange": 240,
 			"width": 25,
 			"height": 94,

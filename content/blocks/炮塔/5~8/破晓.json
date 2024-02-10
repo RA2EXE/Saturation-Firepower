@@ -93,12 +93,24 @@
 					"type": "ParticleEffect",
 					"particles": 1,
 					"sizeFrom": 0,
-					"sizeTo": 8,
+					"sizeTo": 12,
 					"length": 0,
 					"baseLength": -0,
-					"lifetime": 80,
+					"lifetime": 81,
 					"colorFrom": "25C9AB",
 					"colorTo": "BFFFDB"
+				},
+				{
+					"type": "ParticleEffect",
+					"startDelay": 80,
+					"particles": 1,
+					"sizeFrom": 12,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": -0,
+					"lifetime": 60,
+					"colorFrom": "BFFFDB",
+					"colorTo": "25C9AB"
 				},
 				{
 					"type": "ParticleEffect",

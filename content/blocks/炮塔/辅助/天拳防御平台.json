@@ -10,7 +10,7 @@
 	"range": 940,
 	"recoilTime": 180,
 	"recoil": 4,
-	"shootSound": "missileLarge",
+	"shootSound": "missileLaunch",
 	"insulated": true,
 	"absorbLasers": true,
 	"shootWarmupSpeed": 0.08,
@@ -22,26 +22,24 @@
 		"parts": [
 			{
 				"type": "RegionPart",
-				"mirror": false,
+				"outline": false,
 				"under": true,
-				"x": 0,
-				"y": 0,
 				"color": "FFFFFF",
 				"colorTo": "FFFFFF00",
-				"mixColorTo": "FFFFFF",
+				"mixColorTo": "EEC591",
 				"mixColor": "FFFFFF00",
 				"suffix": "-导弹",
 				"progress": "reload",
-				"moves":[{
-					"y": 8 
-				}]
+				"moves": [
+					{
+						"y": 8
+					}
+				]
 			},
 			{
 				"type": "RegionPart",
 				"mirror": true,
 				"under": true,
-				"x": 0,
-				"y": 0,
 				"suffix": "-侧",
 				"moveX": 2,
 				"moveY": 2,
@@ -86,18 +84,37 @@
 		]
 	},
 	"smokeEffect": {
-		"type": "ParticleEffect",
-		"particles": 9,
-		"interp": "pow10Out",
-		"sizeInterp": "pow5In",
-		"sizeFrom": 5,
-		"sizeTo": 0,
-		"length": 40,
-		"baseLength": 0,
-		"lifetime": 65,
-		"colorFrom": "73737390",
-		"colorTo": "FFFFFF90",
-		"cone": 23
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 25,
+				"interp": "fastSlow",
+				"sizeInterp": "pow3In",
+				"sizeFrom": 9,
+				"sizeTo": 0,
+				"length": -88,
+				"baseLength": 0,
+				"lifetime": 65,
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591AA",
+				"cone": 35
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 16,
+				"interp": "fastSlow",
+				"sizeInterp": "pow3In",
+				"sizeFrom": 12,
+				"sizeTo": 0,
+				"length": -88,
+				"baseLength": 0,
+				"lifetime": 65,
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591AA",
+				"cone": 35
+			}
+		]
 	},
 	"targetGround": true,
 	"targetAir": true,

@@ -3,6 +3,7 @@
 	"rotateSpeed": 3,
 	"fogRadiusMultiplier": 0.6888,
 	"canOverdrive": false,
+	"coolantMultiplier": 1.5,
 	"consumes": {
 		"power": 18
 	},

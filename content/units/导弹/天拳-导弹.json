@@ -9,7 +9,7 @@
 	"hidden": true,
 	"missileAccelTime": 100,
 	"hitSize": 16,
-	"health": 1500,
+	"health": 2500,
 	"engineColor": "EEC591",
 	"trailColor": "EEC591",
 	"trailLength": 80,
@@ -28,7 +28,7 @@
 			"type": "MoveEffectAbility",
 			"effect": {
 				"type": "ParticleEffect",
-				"particles": 3,
+				"particles": 4,
 				"sizeFrom": 9,
 				"sizeTo": 0,
 				"length": 32,
@@ -39,14 +39,14 @@
 				"colorFrom": "EEC59180",
 				"colorTo": "EEC59180"
 			},
-			"interval": 5,
+			"interval": 4,
 			"y": -8
 		},
 		{
 			"type": "MoveEffectAbility",
 			"effect": {
 				"type": "ParticleEffect",
-				"particles": 5,
+				"particles": 6,
 				"sizeFrom": 7,
 				"sizeTo": 0,
 				"length": 32,
@@ -57,7 +57,7 @@
 				"colorFrom": "EEC591",
 				"colorTo": "EEC59180"
 			},
-			"interval": 5,
+			"interval": 4,
 			"y": -8
 		},
 		{
@@ -68,8 +68,18 @@
 			"applyEffect": "none",
 			"activeEffect": "none",
 			"effect": "overdrive"
+		},
+		{
+			"type": "StatusFieldAbility",
+			"duration": 300,
+			"reload": 270,
+			"range": -1,
+			"applyEffect": "none",
+			"activeEffect": "none",
+			"effect": "强攻"
 		}
 	],
+	"maxRange": 140,
 	"weapons": [
 		{
 			"name": "自爆",
@@ -79,10 +89,7 @@
 			"rotate": true,
 			"shootSound": "explosion",
 			"shootOnDeath": true,
-			"shootStatus": "强攻",
-			"shootStatusDuration": 60,
 			"bullet": {
-				"ammoMultiplier": 1,
 				"splashDamagePierce": true,
 				"instantDisappear": true,
 				"killShooter": true,
@@ -95,11 +102,11 @@
 				"height": 66,
 				"hitSoundVolume": 3,
 				"hitSound": "DBZ1",
-				"damage": 800,
+				"damage": 1200,
 				"status": "绝判",
 				"statusDuration": 360,
 				"splashDamageRadius": 280,
-				"splashDamage": 2200,
+				"splashDamage": 2700,
 				"buildingDamageMultiplier": 1.12,
 				"absorbable": false,
 				"hitEffect": {

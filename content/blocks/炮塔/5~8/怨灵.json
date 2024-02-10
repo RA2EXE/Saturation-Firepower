@@ -87,7 +87,7 @@
 			"optional": true
 		}
 	},
-	"coolantMultiplier": 0.75,
+	"coolantMultiplier": 0.77,
 	"liquidCapacity": 120,
 	"inaccuracy": 1.63,
 	"shake": 5,

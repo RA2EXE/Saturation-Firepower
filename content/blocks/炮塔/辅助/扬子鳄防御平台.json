@@ -57,7 +57,7 @@
 			}
 		]
 	},
-	"coolantMultiplier": 0.35,
+	"coolantMultiplier": 0.75,
 	"consumes": {
 		"coolant": {
 			"amount": 2,
