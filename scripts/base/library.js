@@ -26,7 +26,7 @@
 //RGB can be used  可以使用RGB格式
 const colorStat = Pal.accent;
 //Pal为内置颜色，自定义颜色格式
-//const colorStat = Color.valueOf("ffffff");//纯白色
+//const colorStat = Color.valueOf("FFFFFF");//纯白色
 
 function MultiCrafterBuild() {
     this.acceptItem = function(source, item) {

@@ -159,8 +159,8 @@
 				"sizeTo": 16,
 				"strokeFrom": 3,
 				"strokeTo": 0,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff"
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF"
 			},
 			"smokeEffect": {
 				"type": "ParticleEffect",

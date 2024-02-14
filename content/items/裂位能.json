@@ -4,7 +4,7 @@
 	"hardness": 1,
 	"alwaysUnlocked": false,
 	"color": "EEC591",
-	"healthScaling": 0.9,
+	"healthScaling": 0.3,
 	"radioactivity": 2.5,
 	"explosiveness": 0.85,
 	"flammability": 0,

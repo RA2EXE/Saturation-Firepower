@@ -201,7 +201,7 @@
 								"baseLength": 0,
 								"lifetime": 20,
 								"colorFrom": "97FFA8",
-								"colorTo": "ffffff00"
+								"colorTo": "FFFFFF00"
 							},
 							{
 								"type": "ParticleEffect",

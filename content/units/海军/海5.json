@@ -168,7 +168,7 @@
 							"baseLength": 0,
 							"lifetime": 103,
 							"colorFrom": "EEC591",
-							"colorTo": "ffffff",
+							"colorTo": "FFFFFF",
 							"cone": 40
 						},
 						{
@@ -179,14 +179,13 @@
 							"strokeFrom": 3,
 							"strokeTo": 0,
 							"colorFrom": "EEC591",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
 				"smokeEffect": "bigShockwave",
 				"makeFire": true,
 				"pierce": true,
-				"pierceBuilding": true,
 				"scaleLife": true,
 				"sprite": "饱和火力-大导弹",
 				"trailLength": 35,
@@ -362,7 +361,7 @@
 							"strokeFrom": 9,
 							"strokeTo": 0,
 							"colorFrom": "FFE176FF",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",
@@ -372,7 +371,7 @@
 							"strokeFrom": 7,
 							"strokeTo": 0,
 							"colorFrom": "FFE176FF",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},

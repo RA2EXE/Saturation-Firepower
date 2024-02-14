@@ -23,7 +23,7 @@
 		"baseLength": 2,
 		"lifetime": 300,
 		"colorFrom": "EEC591",
-		"colorTo": "ffffff00",
+		"colorTo": "FFFFFF00",
 		"cone": 20
 	},
 	"consumes": {

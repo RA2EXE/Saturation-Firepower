@@ -1,10 +1,10 @@
 {
-	"health": 800,
+	"health": 900,
 	"details": "无后座加农炮，升级防空系统",
 	"weapons": [
 		{
 			"name": "飞鲨1",
-			"reload": 13,
+			"reload": 11,
 			"x": 5,
 			"y": 3.5,
 			"shootY": 4,
@@ -22,7 +22,7 @@
 				"width": 9,
 				"height": 10,
 				"damage": 3,
-				"splashDamage": 33,
+				"splashDamage": 40,
 				"splashDamageRadius": 20,
 				"hitEffect": "flakExplosion",
 				"fragBullets": 5,
@@ -41,7 +41,7 @@
 		},
 		{
 			"name": "堡垒1",
-			"reload": 40,
+			"reload": 37.5,
 			"x": 5,
 			"y": -5,
 			"rotate": true,
@@ -60,7 +60,7 @@
 				"lifetime": 52,
 				"collides": true,
 				"collidesTiles": false,
-				"knockback": 0.35,
+				"knockback": 0.8,
 				"hitSound": "explosion",
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "none",

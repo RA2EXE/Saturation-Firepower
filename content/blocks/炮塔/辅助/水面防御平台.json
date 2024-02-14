@@ -2,7 +2,7 @@
 	"type": "PowerTurret",
 	"name": "鱼跃防御平台",
 	"unitSort": "strongest",
-	"buildVisibility": "campaignOnly",
+	"buildVisibility": "sandboxOnly",
 	"health": 28000,
 	"armor": 22,
 	"size": 4,
@@ -159,7 +159,7 @@
 					"strokeFrom": 9,
 					"strokeTo": 0,
 					"colorFrom": "FFE176FF",
-					"colorTo": "ffffff"
+					"colorTo": "FFFFFF"
 				},
 				{
 					"type": "WaveEffect",
@@ -169,7 +169,7 @@
 					"strokeFrom": 7,
 					"strokeTo": 0,
 					"colorFrom": "FFE176FF",
-					"colorTo": "ffffff"
+					"colorTo": "FFFFFF"
 				}
 			]
 		},
@@ -242,6 +242,6 @@
 	},
 	"breakable":false,
 	"rebuildable":false,
-	//"requirements": ["metaglass/24000","镄/14000","裂位能/8400","泰勒合金/6400","集束/12500"],
+	//"requirements": ["metaglass/25000","镄/15000","裂位能/9000","泰勒合金/7000","集束/15000"],
 	"category": "turret"
 }

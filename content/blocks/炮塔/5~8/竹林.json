@@ -5,9 +5,9 @@
 	"size": 8,
 	"reload": 340,
 	"range": 800,
-	"fogRadiusMultiplier": 0.46,
+	"fogRadiusMultiplier": 0.4,
 	"maxAmmo": 160,
-	"heatColor": "FF7055FF",
+	"heatColor": "FF7055",
 	"cooldownTime": 230,
 	"ammoPerShot": 1,
 	"consumeAmmoOnce": false,
@@ -41,7 +41,7 @@
 				"y": 33,
 				"sides": 3,
 				"shapes": 1,
-				"color": "ffffff",
+				"color": "FFFFFF",
 				"colorTo": "25C9AB",
 				"tri": true,
 				"hollow": true,
@@ -62,7 +62,7 @@
 				"y": 32,
 				"sides": 3,
 				"shapes": 1,
-				"color": "ffffff",
+				"color": "FFFFFF",
 				"colorTo": "25C9AB",
 				"tri": true,
 				"hollow": true,
@@ -83,7 +83,7 @@
 				"y": 33,
 				"sides": 3,
 				"shapes": 1,
-				"color": "ffffff",
+				"color": "FFFFFF",
 				"colorTo": "25C9AB",
 				"tri": true,
 				"hollow": true,
@@ -104,7 +104,7 @@
 				"y": 32,
 				"sides": 3,
 				"shapes": 1,
-				"color": "ffffff",
+				"color": "FFFFFF",
 				"colorTo": "25C9AB",
 				"tri": true,
 				"hollow": true,
@@ -129,7 +129,7 @@
 				"y": 40,
 				"sides": 3,
 				"shapes": 1,
-				"color": "ffffff",
+				"color": "FFFFFF",
 				"colorTo": "25C9AB80",
 				"tri": true,
 				"hollow": true,
@@ -155,7 +155,7 @@
 				"moveY": 45,
 				"sides": 3,
 				"shapes": 1,
-				"color": "ffffff",
+				"color": "FFFFFF",
 				"colorTo": "25C9AB80",
 				"tri": true,
 				"hollow": true,
@@ -181,7 +181,7 @@
 				"moveY": 90,
 				"sides": 3,
 				"shapes": 1,
-				"color": "ffffff",
+				"color": "FFFFFF",
 				"colorTo": "25C9AB80",
 				"tri": true,
 				"hollow": true,
@@ -245,7 +245,7 @@
 				"baseLength": 3,
 				"lifetime": 25,
 				"colorFrom": "FF7055FF",
-				"colorTo": "ffffff",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"hitEffect": {
@@ -282,7 +282,7 @@
 						"strokeFrom": 6,
 						"strokeTo": 0,
 						"colorFrom": "FFE176FF",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -309,7 +309,7 @@
 				"baseLength": 3,
 				"lifetime": 25,
 				"colorFrom": "D85555FF",
-				"colorTo": "ffffff",
+				"colorTo": "FFFFFF",
 				"cone": 30
 			},
 			"damage": 33,
@@ -384,37 +384,42 @@
 				},
 				"despawnEffect": "flakExplosionBig",
 				"status": "blasted",
-				"statusDuration": 60,
 				"knockback": 0.7,
 				"backColor": "D85555FF",
 				"frontColor": "D85555FF",
 				"width": 9,
 				"height": 10,
+				"scaledSplashDamage": true,
 				"splashDamageRadius": 60,
 				"splashDamage": 125,
-				"lifetime": 20,
-				"speed": 2.8,
+				"lifetime": 30,
+				"speed": 2,
 				"drag": 0.005
 			}
 		},
 		"裂位能": {
+			"buildingDamageMultiplier": 0.3,
+			"pierce": true,
+			"pierceCap": 2,
 			"absorbable": false,
 			"hittable": false,
 			"splashDamageRadius": 75,
 			"splashDamage": 95,
+			"status": "崩溃",
+			"statusDuration": 180,
 			"speed": 3,
 			"lifetime": 54,
 			"rangeChange": 73,
 			"drag": -0.05,
 			"damage": 46,
 			"sprite": "饱和火力-透彻",
-			"width": 10,
+			"width": 12,
 			"height": 35,
-			"backColor": "FEEBB3",
+			"backColor": "EEC591",
 			"frontColor": "FFFFFF",
 			"trailLength": 6,
-			"trailWidth": 1.5,
-			"trailColor": "FEEBB3",
+			"trailWidth": 2,
+			"trailColor": "EEC591",
 			"hitShake": 4,
 			"ammoMultiplier": 2,
 			"hitSound": "plasmaboom",
@@ -426,8 +431,8 @@
 				"length": 35,
 				"baseLength": 3,
 				"lifetime": 25,
-				"colorFrom": "FEEBB3",
-				"colorTo": "ffffff",
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591",
 				"cone": 60
 			},
 			"hitEffect": {
@@ -435,188 +440,114 @@
 				"effects": [
 					{
 						"type": "ParticleEffect",
-						"particles": 16,
+						"particles": 6,
 						"sizeFrom": 8,
 						"sizeTo": 0,
-						"length": 5,
-						"baseLength": 73,
+						"length": 85,
+						"baseLength": 13,
 						"lifetime": 45,
-						"colorFrom": "FEEBB3",
-						"colorTo": "FEEBB3"
-					},
-					{
-						"type": "ParticleEffect",
-						"particles": 35,
-						"line": true,
-						"sizeFrom": 9,
-						"sizeTo": 0,
-						"length": 75,
-						"baseLength": 1,
-						"lifetime": 16,
-						"colorFrom": "FFFFFF",
-						"colorTo": "FEEBB3"
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591"
 					},
 					{
 						"type": "WaveEffect",
-						"lifetime": 25,
+						"lifetime": 15,
 						"sizeFrom": 1,
 						"sizeTo": 75,
 						"strokeFrom": 6,
 						"strokeTo": 0,
-						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff"
+						"interp": "circleOut",
+						"colorFrom": "EEC591",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
 			"fragBullets": 5,
 			"fragRandomSpread": 30,
 			"fragBullet": {
+				"damage": 55,
 				"splashDamageRadius": 75,
 				"splashDamage": 75,
+				"buildingDamageMultiplier": 0.3,
+				"status": "崩溃",
+				"statusDuration": 30,
 				"speed": 2,
 				"lifetime": 12,
-				"damage": 13,
 				"width": 0,
 				"height": 0,
 				"hitShake": 4,
 				"hitSound": "plasmaboom",
-				"hitEffect": {
-					"type": "MultiEffect",
-					"effects": [
-						{
-							"type": "ParticleEffect",
-							"particles": 16,
-							"sizeFrom": 8,
-							"sizeTo": 0,
-							"length": 5,
-							"baseLength": 73,
-							"lifetime": 45,
-							"colorFrom": "FEEBB3",
-							"colorTo": "FEEBB3"
-						},
-						{
-							"type": "ParticleEffect",
-							"particles": 35,
-							"line": true,
-							"sizeFrom": 9,
-							"sizeTo": 0,
-							"length": 75,
-							"baseLength": 1,
-							"lifetime": 16,
-							"colorFrom": "FFFFFF",
-							"colorTo": "FEEBB3"
-						},
-						{
-							"type": "WaveEffect",
-							"lifetime": 25,
-							"sizeFrom": 1,
-							"sizeTo": 75,
-							"strokeFrom": 6,
-							"strokeTo": 0,
-							"colorFrom": "FEEBB3",
-							"colorTo": "ffffff"
-						}
-					]
+				"hitColor": "EEC591",
+				"hitEffect": "circleColorSpark",
+				"despawnEffect":{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 8,
+					"sizeInterp":"pow5In",
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 30,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
 				},
 				"fragBullets": 1,
 				"fragRandomSpread": 0,
 				"fragBullet": {
+					"damage": 55,
 					"splashDamageRadius": 75,
 					"splashDamage": 75,
+					"buildingDamageMultiplier": 0.3,
+					"status": "崩溃",
+					"statusDuration": 30,
 					"speed": 2,
 					"lifetime": 12,
-					"damage": 13,
 					"width": 0,
 					"height": 0,
 					"hitShake": 4,
 					"hitSound": "plasmaboom",
-					"hitEffect": {
-						"type": "MultiEffect",
-						"effects": [
-							{
-								"type": "ParticleEffect",
-								"particles": 16,
-								"sizeFrom": 8,
-								"sizeTo": 0,
-								"length": 5,
-								"baseLength": 73,
-								"lifetime": 45,
-								"colorFrom": "FEEBB3",
-								"colorTo": "FEEBB3"
-							},
-							{
-								"type": "ParticleEffect",
-								"particles": 35,
-								"line": true,
-								"sizeFrom": 9,
-								"sizeTo": 0,
-								"length": 75,
-								"baseLength": 1,
-								"lifetime": 16,
-								"colorFrom": "FFFFFF",
-								"colorTo": "FEEBB3"
-							},
-							{
-								"type": "WaveEffect",
-								"lifetime": 25,
-								"sizeFrom": 1,
-								"sizeTo": 75,
-								"strokeFrom": 6,
-								"strokeTo": 0,
-								"colorFrom": "FEEBB3",
-								"colorTo": "ffffff"
-							}
-						]
+					"hitColor": "EEC591",
+					"hitEffect": "circleColorSpark",
+					"despawnEffect":{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 6,
+						"sizeInterp":"pow5In",
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 30,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591"
 					},
 					"fragBullets": 1,
 					"fragRandomSpread": 0,
 					"fragBullet": {
+						"damage": 55,
 						"splashDamageRadius": 75,
 						"splashDamage": 75,
+						"buildingDamageMultiplier": 0.3,
+						"status": "崩溃",
+						"statusDuration": 30,
 						"speed": 2,
 						"lifetime": 12,
-						"damage": 13,
 						"width": 0,
 						"height": 0,
 						"hitShake": 4,
 						"hitSound": "plasmaboom",
-						"hitEffect": {
-							"type": "MultiEffect",
-							"effects": [
-								{
-									"type": "ParticleEffect",
-									"particles": 16,
-									"sizeFrom": 8,
-									"sizeTo": 0,
-									"length": 5,
-									"baseLength": 73,
-									"lifetime": 45,
-									"colorFrom": "FEEBB3",
-									"colorTo": "FEEBB3"
-								},
-								{
-									"type": "ParticleEffect",
-									"particles": 35,
-									"line": true,
-									"sizeFrom": 9,
-									"sizeTo": 0,
-									"length": 75,
-									"baseLength": 1,
-									"lifetime": 16,
-									"colorFrom": "FFFFFF",
-									"colorTo": "FEEBB3"
-								},
-								{
-									"type": "WaveEffect",
-									"lifetime": 25,
-									"sizeFrom": 1,
-									"sizeTo": 75,
-									"strokeFrom": 6,
-									"strokeTo": 0,
-									"colorFrom": "FEEBB3",
-									"colorTo": "ffffff"
-								}
-							]
+						"hitColor": "EEC591",
+						"hitEffect": "circleColorSpark",
+						"despawnEffect":{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 4,
+							"sizeInterp":"pow5In",
+							"sizeTo": 0,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 30,
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
 						}
 					}
 				}
@@ -660,7 +591,7 @@
 				"baseLength": 3,
 				"lifetime": 15,
 				"colorFrom": "FEEBB3",
-				"colorTo": "ffffff",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"hitEffect": {
@@ -697,7 +628,7 @@
 						"strokeFrom": 6,
 						"strokeTo": 0,
 						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -708,7 +639,7 @@
 			"lifetime": 90,
 			"speed": 100,
 			"ammoMultiplier": 1,
-			"reloadMultiplier": 0.85,
+			"reloadMultiplier": 0.5,
 			"hitSound": "lasercharge2",
 			"despawnEffect": {
 				"type": "ParticleEffect",
@@ -768,7 +699,7 @@
 					"baseLength": 0,
 					"lifetime": 90,
 					"colorFrom": "BFFFDB80",
-					"colorTo": "ffffff00"
+					"colorTo": "FFFFFF00"
 				},
 				"fragBullets": 1,
 				"fragAngle": 180,
@@ -777,6 +708,7 @@
 				"fragVelocityMin": 1,
 				"fragBullet": {
 					"type": "BasicBulletType",
+					"splashDamagePierce": true,
 					"reflectable": false,
 					"damage": 90,
 					"speed": 4,

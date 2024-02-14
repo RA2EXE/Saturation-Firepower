@@ -4,7 +4,6 @@
 	"emitLight": true,
 	"lightRadius": 12,
 	"lightColor": "7CF38980",
-	"playerUnmineable": true,
 	"useColor": true,
 	"speedMultiplier": 1.125,
 	"dragMultiplier": 0.95,
@@ -18,7 +17,7 @@
 		"baseLength": 0,
 		"lifetime": 10,
 		"colorFrom": "97FFA8",
-		"colorTo": "ffffff"
+		"colorTo": "FFFFFF"
 	},
 	"status": "修复",
 	"isLiquid": false,

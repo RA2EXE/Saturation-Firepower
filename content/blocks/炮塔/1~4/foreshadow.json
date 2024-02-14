@@ -3,6 +3,7 @@
 	"rotateSpeed": 3,
 	"fogRadiusMultiplier": 0.6888,
 	"canOverdrive": false,
+	"coolantMultiplier": 1.5,
 	"consumes": {
 		"power": 18
 	},
@@ -17,9 +18,9 @@
 			"damage": 1450,
 			"hitShake": 6,
 			"ammoMultiplier": 1,
-			"lightningDamage": 40,
-			"lightning": 7,
-			"lightningLength": 15,
+			"lightningDamage": 25,
+			"lightning": 4,
+			"lightningLength": 10,
 			"speed": 200,
 			"lifetime": 60,
 			"shootEffect": "instShoot",
@@ -260,7 +261,7 @@
 					"length": 25,
 					"baseLength": 0,
 					"lifetime": 35,
-					"colorFrom": "ffffff",
+					"colorFrom": "FFFFFF",
 					"colorTo": "EEC591"
 				},
 				"colors": [

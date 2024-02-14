@@ -14,9 +14,9 @@
 	"liquidCapacity": 60,
 	"canOverdrive": false,
 	"recoilTime": 100,
-	"reload": 92,
+	"reload": 82,
 	"rotateSpeed": 2,
-	"range": 700,
+	"range": 672,
 	"shoot": {
 		"shots": 6,
 		"shotDelay": 2,
@@ -126,8 +126,9 @@
 			"absorbable": false,
 			"status": "崩溃",
 			"statusDuration": 120,
+			"scaledSplashDamage": true,
 			"splashDamageRadius": 66.4,
-			"splashDamage": 337.5,
+			"splashDamage": 357.5,
 			"hitShake": 5,
 			"hitSound": "plasmaboom",
 			"hitEffect": {
@@ -175,7 +176,7 @@
 		}
 	},
 	"consumes": {
-		"power": 90,
+		"power": 120,
 		"coolant": {
 			"amount": 1.75,
 			"optional": true
@@ -194,9 +195,9 @@
 	"researchCostMultiplier": 0.35,
 	"requirements": [
 		"镄/520",
-		"metaglass/200",
+		"metaglass/350",
 		"硅钢/500",
 		"泰勒合金/340",
-		"二级协议/3"
+		"二级协议/4"
 	]
 }

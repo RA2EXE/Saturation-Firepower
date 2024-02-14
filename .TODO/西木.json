@@ -422,7 +422,7 @@
 			"baseRotation": 180,
 			"bullet": {
 				"type": "ContinuousFlameBulletType",
-				"colors":["F19583","FEEBB3","FFF2D6","ffffff"],
+				"colors":["F19583","FEEBB3","FFF2D6","FFFFFF"],
 				"lightColor":"FEEBB3",
 				"length": 22,
 				"lifetime":800,

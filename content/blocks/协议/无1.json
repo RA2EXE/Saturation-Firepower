@@ -1,27 +1,19 @@
 {
 	"type": "GenericCrafter",
-	"name": "铜",
-	"description": "物理老师震怒1",
-	"outputItem": { "item": "copper", "amount": 10},
+	"outputItem":"copper/10",
 	"size": 1, 
 	"health":50,
 	"itemCapacity": 50,
 	"hasPower": false,
-	"hasLiquids": false,
 	"hasItems": true,
 	"craftTime": 6,
 	"consumes": {
-   "items": {
-	 "items": [
-	{ "item": "coal", "amount": 5 }
-	]
-  }
+		"items":["coal/5"] 
  },
 	"requirements": [
-	{ "item": "copper", "amount": 10},
-	{ "item": "一级协议", "amount": 0 }
+		"copper/50000"
 	],
+	"buildCostMultiplier": 0.1,
 	"buildVisibility": "sandboxOnly",
-	"category": "crafting",
-	"research": "无0"
+	"category": "crafting"
 }

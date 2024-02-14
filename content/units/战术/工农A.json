@@ -62,7 +62,7 @@
 				"strokeFrom": 3,
 				"strokeTo": 0,
 				"colorFrom": "97FFA8",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			"effect": "修复"
 		},
@@ -250,7 +250,7 @@
 							"waveColor": "97FFA8",
 							"waveRad": 30,
 							"smokes": 4,
-							"smokeColor": "ffffff",
+							"smokeColor": "FFFFFF",
 							"sparkColor": "97FFA8",
 							"sparks": 0
 						},

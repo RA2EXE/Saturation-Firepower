@@ -104,7 +104,7 @@
 				"length": 45,
 				"lifetime": 40,
 				"lightOpacity": 0,
-				"colorFrom": "ffffff80",
+				"colorFrom": "FFFFFF80",
 				"colorTo": "78787870",
 				"cone": 80
 			},
@@ -305,7 +305,7 @@
 						"baseLength": 9,
 						"lifetime": 15,
 						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -339,7 +339,7 @@
 							"baseLength": 9,
 							"lifetime": 15,
 							"colorFrom": "FEEBB3",
-							"colorTo": "ffffff",
+							"colorTo": "FFFFFF",
 							"cone": 40
 						},
 						{
@@ -380,7 +380,7 @@
 								"baseLength": 9,
 								"lifetime": 15,
 								"colorFrom": "FEEBB3",
-								"colorTo": "ffffff",
+								"colorTo": "FFFFFF",
 								"cone": 40
 							},
 							{

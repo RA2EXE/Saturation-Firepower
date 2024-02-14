@@ -12,12 +12,12 @@
 	"range": 1000,
 	"recoilTime": 60,
 	"recoil": 5,
-	"maxAmmo": 12,
+	"maxAmmo": 16,
 	"cooldownTime": 100,
 	"targetGround": true,
 	"targetAir": true,
 	"inaccuracy": 0,
-	"ammoPerShot": 6,
+	"ammoPerShot": 8,
 	"shake": 6,
 	"liquidCapacity": 60,
 	"rotateSpeed": 2,
@@ -159,7 +159,7 @@
 			"rangeChange": 150,
 			"buildingDamageMultiplier": 0.3,
 			"pierce": true,
-			"ammoMultiplier": 2,
+			"ammoMultiplier": 3,
 			"pierceBuilding": true,
 			"pierceCap": 10,
 			"damage": 1300,
@@ -210,7 +210,7 @@
 						"strokeFrom": 6,
 						"strokeTo": 0,
 						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			}
@@ -225,7 +225,6 @@
 			"buildingDamageMultiplier": 0.2,
 			"status": "干扰",
 			"statusDuration": 80,
-			"ammoMultiplier": 1,
 			"trailSpacing": 9,
 			"trailEffect": {
 				"type": "ParticleEffect",

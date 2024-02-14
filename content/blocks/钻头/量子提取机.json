@@ -25,7 +25,7 @@
 		"baseLength": 30,
 		"lifetime": 300,
 		"colorFrom": "EEC591",
-		"colorTo": "ffffff00"
+		"colorTo": "FFFFFF00"
 	},
 	"destroyBullet": {
 		"type": "BasicBulletType",
@@ -45,7 +45,7 @@
 					"baseLength": 29,
 					"lifetime": 25,
 					"colorFrom": "FEEBB3A0",
-					"colorTo": "ffffff"
+					"colorTo": "FFFFFF"
 				},
 				{
 					"type": "WaveEffect",
@@ -55,7 +55,7 @@
 					"strokeFrom": 12,
 					"strokeTo": 0,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff"
+					"colorTo": "FFFFFF"
 				},
 				{
 					"type": "WaveEffect",
@@ -128,7 +128,7 @@
 						"baseLength": 0,
 						"lifetime": 25,
 						"colorFrom": "FEEBB3A0",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -138,7 +138,7 @@
 						"strokeFrom": 12,
 						"strokeTo": 0,
 						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			},

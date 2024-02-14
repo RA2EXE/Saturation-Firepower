@@ -7,7 +7,8 @@
 	"shootSound": "laserbig",
 	"range": 240,
 	"reload": 330,
-	"coolantMultiplier": 0.335,
+	"coolantMultiplier": 1,
+	//"coolantMultiplier": 0.35,
 	"liquidCapacity": 180,
 	"inaccuracy": 0,
 	"rotateSpeed": 3.6,
@@ -114,7 +115,7 @@
 			"colorTo": "7CF389FF",
 			"cone": 0
 		},
-		"status": "拆解",
+		"status": "corroded",
 		"statusDuration": 10,
 		"incendChance": 0,
 		"incendSpread": 0,
@@ -134,25 +135,67 @@
 			"97FFA8",
 			"FFFFFF"
 		],
-		"fragRandomSpread": 30,
-		"fragBullets": 1,
-		"fragBullet": {
-			"hitEffect": "none",
-			"despawnEffect": "none",
-			"absorbable": false,
-			"hittable": false,
-			"collides": false,
+		"bulletInterval": 2,
+		"intervalBullets": 2,
+		"intervalRandomSpread": 34,
+		"intervalBullet":{
+			"type": "MissileBulletType",
+			"reflectable": false,
 			"pierceArmor": true,
-			"instantDisappear": true,
-			"status": "corroded",
-			"statusDuration": 180,
+			"frontColor": "FFFFFF",
+			"mixColor": "97FFA8A8",
+			"backColor": "97FFA8",
+			"healPercent": 1,
+			"status": "拆解",
+			"statusDuration": 10,
+			"damage": 16,
 			"splashDamageRadius": 16,
-			"splashDamage": 6
+			"splashDamage": 8,
+			"homingRange": 48,
+			"homingDelay": 8,
+			"trailLength": 3,
+			"trailWidth": 3,
+			"trailColor": "97FFA8",
+			"sprite": "circle-bullet",
+			"shootEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 5,
+						"sizeFrom": 3,
+						"sizeTo": 0,
+						"length": 18,
+						"baseLength": 0,
+						"lifetime": 25,
+						"colorFrom": "97FFA8",
+						"colorTo": "97FFA890"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 18,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "97FFA8",
+						"colorTo": "97FFA890"
+					}
+				]
+			},
+			"despawnEffect": "none",
+			"collidesTeam": true,
+			"speed": 9.6,
+			"lifetime": 27,
+			"drag": 0.01,
+			"width": 5,
+			"height": 8
 		}
 	},
 	"consumes": {
 		"power": 48,
-		"liquid": "纳米流体/1.5"
+		"liquid": "纳米流体/0.75"
 	},
 	"shootDuration": 250,
 	"requirements": [

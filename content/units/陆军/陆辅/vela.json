@@ -101,7 +101,7 @@
 							"strokeTo": 1.5,
 							"interp":"pow5In",
 							"sizeInterp": "pow3Out",
-							"colorFrom": "ffffff",
+							"colorFrom": "FFFFFF",
 							"colorTo": "97FFA8"
 						}
 					]

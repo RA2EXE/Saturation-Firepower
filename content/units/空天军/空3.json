@@ -132,7 +132,7 @@
 							"baseLength": 10,
 							"lifetime": 25,
 							"colorFrom": "FF8C00",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",

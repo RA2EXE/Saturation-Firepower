@@ -85,7 +85,7 @@
 				"baseLength": 0,
 				"lifetime": 10,
 				"colorFrom": "FFE176FF",
-				"colorTo": "ffffff",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none"
@@ -138,7 +138,7 @@
 				"baseLength": 0,
 				"lifetime": 10,
 				"colorFrom": "FFE176FF",
-				"colorTo": "ffffff",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none"
@@ -194,7 +194,7 @@
 				"baseLength": 0,
 				"lifetime": 10,
 				"colorFrom": "FFE176FF",
-				"colorTo": "ffffff",
+				"colorTo": "FFFFFF",
 				"cone": 60
 			},
 			"despawnEffect": "none"

@@ -1,6 +1,6 @@
 {
 	"details": "装载多弹头EMP航空炸弹",
-	"health": 18800,
+	"health": 19600,
 	"speed": 1.4,
 	"rotateSpeed": 2,
 	"accel": 0.065,
@@ -38,8 +38,8 @@
 				"height": 50,
 				"maxRange": 50,
 				"backColor": "97FFA8",
-				"frontColor": "ffffff",
-				"mixColorTo": "ffffff",
+				"frontColor": "FFFFFF",
+				"mixColorTo": "FFFFFF",
 				"hitSound": "plasmaboom",
 				"hitShake": 8,
 				"collidesAir": false,
@@ -57,7 +57,7 @@
 							"baseLength": 8,
 							"lifetime": 30,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",
@@ -67,7 +67,7 @@
 							"strokeFrom": 6,
 							"strokeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -85,7 +85,7 @@
 				"lightningLength": 15,
 				"status": "electrified",
 				"statusDuration": 120,
-				"splashDamage": 90,
+				"splashDamage": 100,
 				"splashDamageRadius": 120,
 				"fragBullets": 3,
 				"fragLifeMin": 0.7,
@@ -104,12 +104,12 @@
 					"drag": 0.2,
 					"healPercent": 5,
 					"backColor": "97FFA8",
-					"frontColor": "ffffff",
-					"mixColorTo": "ffffff",
+					"frontColor": "FFFFFF",
+					"mixColorTo": "FFFFFF",
 					"hitSound": "plasmaboom",
 					"despawnEffect": "massiveExplosion",
 					"hitEffect": "greenBomb",
-					"splashDamage": 60,
+					"splashDamage": 65,
 					"splashDamageRadius": 80
 				}
 			}

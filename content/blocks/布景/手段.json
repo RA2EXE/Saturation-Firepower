@@ -55,7 +55,7 @@
 				"strokeFrom": 3,
 				"strokeTo": 0,
 				"colorFrom": "FFFFFF",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			}
 		]
 	},
@@ -140,7 +140,7 @@
 						"baseLength": 39,
 						"lifetime": 95,
 						"colorFrom": "FF5B5B",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -208,7 +208,7 @@
 								"baseLength": 39,
 								"lifetime": 35,
 								"colorFrom": "FF5B5B",
-								"colorTo": "ffffff"
+								"colorTo": "FFFFFF"
 							},
 							{
 								"type": "ParticleEffect",
@@ -253,5 +253,12 @@
 			}
 		}
 	},
+	"requirements": [
+		"silicon/500",
+		"纳米核/200",
+		"泰勒合金/200",
+		"三级协议/30"
+	],
+	"buildCostMultiplier": 1000,
 	"category": "effect"
 }

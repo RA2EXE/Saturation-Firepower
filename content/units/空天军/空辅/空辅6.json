@@ -18,7 +18,9 @@
 		"slow",
 		"unmoving",
 		"拆解",
-		"干扰"
+		"干扰",
+		"修复",
+		"抢修"
 	],
 	"ammoType": {
 		"type": "PowerAmmoType",
@@ -97,6 +99,7 @@
 			"effectRadius": 14,
 			"sectors": 6,
 			"sectorRad": 0.11,
+			"sameTypeHealMult": 0.3,
 			"hitEffect": {
 				"type": "ParticleEffect",
 				"particles": 1,
@@ -244,8 +247,8 @@
 				"statusDuration": 60,
 				"collidesTeam": false,
 				"backColor": "97FFA8",
-				"frontColor": "ffffff",
-				"mixColorTo": "ffffff",
+				"frontColor": "FFFFFF",
+				"mixColorTo": "FFFFFF",
 				"hitSound": "plasmaboom",
 				"hitEffect": {
 					"type": "MultiEffect",
@@ -259,7 +262,7 @@
 							"baseLength": 8,
 							"lifetime": 30,
 							"colorFrom": "97FFA888",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",
@@ -269,7 +272,7 @@
 							"strokeFrom": 3,
 							"strokeTo": 0,
 							"colorFrom": "97FFA8",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},

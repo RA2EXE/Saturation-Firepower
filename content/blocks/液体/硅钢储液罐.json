@@ -4,11 +4,13 @@
 	"size":4,
 	"health": 3600,
 	"liquidCapacity": 6000,
-	//"variants": 2,
+	"absorbLasers":true,
+
 	"requirements": [
 		"lead/70",
 		"metaglass/220",
-		"硅钢/50"
+		"plastanium/20",
+		"硅钢/40"
 	],
 	"category": "liquid",
 	"research":"liquid-tank"

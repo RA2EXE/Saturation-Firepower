@@ -144,6 +144,7 @@
 				"backColor": "D85555",
 				"frontColor": "FE7777",
 				"damage": 9,
+				"scaledSplashDamage": true,
 				"splashDamageRadius": 35,
 				"splashDamage": 38,
 				"lifetime": 20,

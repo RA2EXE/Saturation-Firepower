@@ -202,8 +202,83 @@
 			}
 		}
 
-亚龙-3预设图
-伯劳-2预设图
+{
+			"name": "沧海1",
+			"reload": 50,
+			"x": 0,
+			"y": 22,
+			"shootY": 3,
+			"rotate": true,
+			"rotateSpeed": 3.4,
+			"mirror": false,
+			"inaccuracy": 0,
+			"shootSound": "laser",
+			"alternate": true,
+			"ejectEffect": "casing3",
+			"bullet": {
+				"type": "BasicBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "FF5B5B",
+				"trailLength": 18,
+				"trailWidth": 2,
+				"trailColor": "FF5B5BA0",
+				"status": "碎解",
+				"statusDuration": 120,
+				"damage": 288,
+				"splashDamageRadius": 22,
+				"splashDamage": 180,
+				"scaleLife": true,
+				"width": 9,
+				"height": 24,
+				"speed": 12,
+				"lifetime": 25,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 5,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 25,
+					"baseLength": 0,
+					"lifetime": 25,
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B",
+					"cone": 30
+				},
+				"smokeEffect": "shootBig",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"sizeFrom": 5,
+							"sizeTo": 0,
+							"length": 30,
+							"baseLength": 0,
+							"lifetime": 25,
+							"interp": "fastSlow",
+							"sizeInterp": "pow5In",
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B"
+						},
+						{
+							"type": "WaveEffect",
+							"interp":"circleOut",
+							"lifetime": 10,
+							"sizeFrom": 0,
+							"sizeTo": 30,
+							"strokeFrom": 8,
+							"strokeTo": 0,
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B"
+						}
+					]
+				},
+				"hitSound": "laser",
+				"hitShake": 2,
+				"despawnEffect": "none"
+			}
+		},
 
 盘旋绕行
 "omniMovement": false,
@@ -233,4 +308,3 @@ overdrive场，overclock场-5秒-5格-3间隔
 反舰导弹Ⅱ：伤害1船，射程33，3.35速，装弹8秒 <2连发> <红色拖尾>
 舰炮Ⅰ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发>
 舰炮Ⅱ：伤害0.1船/0.33导弹，射程13，装弹5秒 <3连发*2>
-

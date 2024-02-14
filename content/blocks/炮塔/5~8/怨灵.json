@@ -5,8 +5,8 @@
 	"armor": 46,
 	"size": 8,
 	"reload": 6,
-	"range": 456,
-	"maxAmmo": 32,
+	"range": 520,
+	"maxAmmo": 36,
 	"shootCone": 35,
 	"recoilTime": 18,
 	"canOverdrive": false,
@@ -20,12 +20,8 @@
 				"suffix": "-管l",
 				"under": true,
 				"recoilIndex": 0,
-				"moves": [
-					{
-						"progress": "recoil",
-						"y": -6
-					}
-				],
+				"moveY": -6,
+				"progress": "recoil",
 				"heatProgress": "recoil"
 			},
 			{
@@ -33,12 +29,8 @@
 				"suffix": "-管r",
 				"under": true,
 				"recoilIndex": 1,
-				"moves": [
-					{
-						"progress": "recoil",
-						"y": -6
-					}
-				],
+				"moveY": -6,
+				"progress": "recoil",
 				"heatProgress": "recoil"
 			}
 		]
@@ -86,16 +78,16 @@
 			}
 		]
 	},
-	"ammoPerShot": 4,
+	"ammoPerShot": 3,
 	"targetGround": true,
 	"targetAir": true,
 	"consumes": {
 		"coolant": {
-			"amount": 5,
+			"amount": 4.5,
 			"optional": true
 		}
 	},
-	"coolantMultiplier": 0.75,
+	"coolantMultiplier": 0.77,
 	"liquidCapacity": 120,
 	"inaccuracy": 1.63,
 	"shake": 5,
@@ -105,7 +97,7 @@
 		"硅钢": {
 			"type": "BasicBulletType",
 			"speed": 17,
-			"lifetime": 26.8,
+			"lifetime":28,
 			"width": 16,
 			"height": 21,
 			"damage": 105,
@@ -129,8 +121,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -140,8 +132,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -154,8 +146,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "flakExplosionBig",
@@ -164,7 +156,7 @@
 		"thorium": {
 			"speed": 21,
 			"damage": 293.75,
-			"lifetime": 21.7,
+			"lifetime": 23,
 			"knockback": 4,
 			"pierce": true,
 			"pierceArmor": true,
@@ -187,8 +179,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -198,8 +190,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -212,8 +204,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "hitBulletBig",
@@ -222,7 +214,7 @@
 		"surge-alloy": {
 			"type": "BasicBulletType",
 			"speed": 17,
-			"lifetime": 26.8,
+			"lifetime": 28,
 			"knockback": 8,
 			"width": 18,
 			"height": 22,
@@ -256,8 +248,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -298,7 +290,7 @@
 			"pierceCap": 5,
 			"pierceArmor": true,
 			"sprite": "饱和火力-透彻",
-			"backColor": "E3E3E3",
+			"backColor": "EEC591",
 			"frontColor": "EEC591",
 			"trailLength": 6,
 			"trailWidth": 4,
@@ -316,7 +308,7 @@
 						"baseLength": 9,
 						"lifetime": 15,
 						"colorFrom": "FEEBB3",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -358,8 +350,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -384,7 +376,7 @@
 							"baseLength": 9,
 							"lifetime": 15,
 							"colorFrom": "FEEBB3",
-							"colorTo": "ffffff",
+							"colorTo": "FFFFFF",
 							"cone": 40
 						},
 						{
@@ -427,7 +419,7 @@
 								"baseLength": 9,
 								"lifetime": 15,
 								"colorFrom": "FEEBB3",
-								"colorTo": "ffffff",
+								"colorTo": "FFFFFF",
 								"cone": 40
 							},
 							{
@@ -461,7 +453,7 @@
 		"镄": {
 			"speed": 26,
 			"damage": 352.5,
-			"lifetime": 17.5,
+			"lifetime": 18,
 			"knockback": 0.65,
 			"pierce": true,
 			"pierceArmor": true,
@@ -485,8 +477,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -496,8 +488,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -510,8 +502,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "hitBulletBig",
@@ -535,7 +527,7 @@
 			"damage": 188,
 			"status": "内溃",
 			"pierceArmor": true,
-			"lifetime": 21.7,
+			"lifetime": 22,
 			"knockback": 11,
 			"width": 20,
 			"height": 25,
@@ -555,8 +547,8 @@
 						"length": 45,
 						"baseLength": 0,
 						"lifetime": 25,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF",
 						"cone": 15
 					},
 					{
@@ -566,8 +558,8 @@
 						"sizeTo": 16,
 						"strokeFrom": 3,
 						"strokeTo": 0,
-						"colorFrom": "ffffff",
-						"colorTo": "ffffff"
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -580,8 +572,8 @@
 				"length": 45,
 				"baseLength": 0,
 				"lifetime": 15,
-				"colorFrom": "ffffff",
-				"colorTo": "ffffff",
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
 				"cone": 10
 			},
 			"hitEffect": "hitBulletBig",
@@ -605,7 +597,7 @@
 		"surge-alloy/1600",
 		"镄/2500",
 		"二级协议/20",
-		"三级协议/8"
+		"三级协议/10"
 	],
 	"category": "turret",
 	"research": {

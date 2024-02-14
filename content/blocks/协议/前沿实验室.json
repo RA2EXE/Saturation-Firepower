@@ -54,6 +54,7 @@
 		"纳米核/80",
 		"一级协议/3"
 	],
+	"buildCostMultiplier": 0.9,
 	"category": "effect",
 	"research": {
 		"parent": "实验室",

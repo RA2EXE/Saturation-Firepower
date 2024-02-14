@@ -77,10 +77,10 @@
 		"泰勒合金": {
 			"type": "BasicBulletType",
 			"splashDamageRadius": 240,
-			"splashDamage": 2200,
+			"splashDamage": 1800,
 			"splashDamagePierce": true,
 			"speed": 20,
-			"lifetime": 40,
+			"lifetime": 32.5,
 			"damage": 500,
 			"width": 128,
 			"height": 128,
@@ -152,7 +152,7 @@
 						"strokeFrom": 45,
 						"strokeTo": 0,
 						"colorFrom": "25C9AB",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					},
 					{
 						"type": "WaveEffect",
@@ -162,7 +162,7 @@
 						"strokeFrom": 8,
 						"strokeTo": 0,
 						"colorFrom": "25C9AB",
-						"colorTo": "ffffff"
+						"colorTo": "FFFFFF"
 					}
 				]
 			},
@@ -292,6 +292,7 @@
 		"裂位能": {
 			"type": "BasicBulletType",
 			"rangeChange": -112,
+			"knockback": 80,
 			"damage": 2600,
 			"splashDamageRadius": 80,
 			"splashDamage": 800,
@@ -471,17 +472,21 @@
 				"fragVelocityMax": 0,
 				"fragBullets": 3,
 				"fragBullet": {
-					"lifetime": 60,
+					"speed": 3,
+					"lifetime": 40,
 					"height": 8,
 					"width": 8,
 					"shrinkY": 0.1,
 					"shrinkX": 0.1,
+					"trailChance": 1,
+					"trailColor":"EEC591",
+					"trailEffect":"artilleryTrail",
 					"sprite":"circle-bullet",
 					"collides": false,
 					"hittable": false,
 					"absorbable": false,
 					"status": "崩溃",
-					"statusDuration": 180,
+					"statusDuration": 70,
 					"splashDamageRadius": 55,
 					"splashDamage": 133,
 					"hitShake": 1,

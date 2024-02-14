@@ -28,7 +28,7 @@
 				"strokeFrom": 18,
 				"strokeTo": 0,
 				"colorFrom": "EEC591",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			{
 				"type": "ParticleEffect",
@@ -105,7 +105,7 @@
 		"liquid":"cryofluid/0.1",
 		"items": ["镄/1"]
 	},
-	"buildCostMultiplier": 0.9,
+	"buildCostMultiplier": 0.88,
 	"requirements": [
 		"lead/300",
 		"graphite/90",

@@ -24,7 +24,7 @@
 		"strokeFrom": 5,
 		"strokeTo": 0,
 		"colorFrom": "FFFFFF",
-		"colorTo": "ffffff"
+		"colorTo": "FFFFFF"
 	},
 	"consumes": {
 		"power": 35
@@ -62,7 +62,7 @@
 			"strokeFrom": 5,
 			"strokeTo": 0,
 			"colorFrom": "FFFFFF80",
-			"colorTo": "ffffff80"
+			"colorTo": "FFFFFF80"
 		},
 		"smokeEffect": {
 			"type": "WaveEffect",
@@ -73,7 +73,7 @@
 			"strokeFrom": 5,
 			"strokeTo": 0,
 			"colorFrom": "FFFFFF80",
-			"colorTo": "ffffff80"
+			"colorTo": "FFFFFF80"
 		},
 		"splashDamageRadius": 800,
 		"splashDamage": 0.1,

@@ -176,7 +176,7 @@
 					"baseLength": 0,
 					"lifetime": 30,
 					"colorFrom": "FEEBB3",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 30
 				},
 				"status": "melting",

@@ -31,13 +31,14 @@
 	},
 	"shootType": {
 		"type": "BasicBulletType",
-		"damage": 142,
+		"damage": 122,
 		"collidesGround": false,
-		"speed": 20,
+		"speed": 22,
 		"lifetime": 25,
 		"drag": 0.005,
 		"pierce": true,
-		"pierceCap": 3,
+		"pierceArmor": true,
+		"pierceCap": 5,
 		"frontColor": "FFFFFFAA",
 		"backColor": "FEEBB3AA",
 		"width": 8,
@@ -53,7 +54,7 @@
 			"sizeTo": 10,
 			"strokeFrom": 1.3,
 			"strokeTo": 0,
-			"colorFrom": "ffffff",
+			"colorFrom": "FFFFFF",
 			"colorTo": "FEEBB3"
 		},
 		"smokeEffect": "none",
@@ -69,7 +70,7 @@
 			"baseLength": 0,
 			"lifetime": 10,
 			"colorFrom": "FEEBB3",
-			"colorTo": "ffffff",
+			"colorTo": "FFFFFF",
 			"cone": 60
 		},
 		"despawnEffect": {
@@ -93,7 +94,7 @@
 		}
 	},
 	"rotateSpeed": 2.6,
-	"range": 460,
+	"range": 496,
 	"category": "turret",
 	"research": {
 		"parent": "天际",

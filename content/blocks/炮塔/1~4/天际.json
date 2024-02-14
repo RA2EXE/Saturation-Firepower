@@ -164,7 +164,7 @@
 			"strokeFrom": 1,
 			"strokeTo": 0,
 			"colorFrom": "FEEBB3",
-			"colorTo": "ffffff"
+			"colorTo": "FFFFFF"
 		}
 	},
 	"shootEffect": {
@@ -178,7 +178,7 @@
 				"strokeFrom": 2,
 				"strokeTo": 0,
 				"colorFrom": "FEEBB3",
-				"colorTo": "ffffff"
+				"colorTo": "FFFFFF"
 			},
 			{
 				"type": "ParticleEffect",

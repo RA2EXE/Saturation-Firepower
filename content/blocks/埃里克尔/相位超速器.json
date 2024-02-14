@@ -46,7 +46,7 @@
 					"region": "饱和火力-菱形",
 					"lifetime": 25,
 					"colorFrom": "EEC591A0",
-					"colorTo": "ffffff"
+					"colorTo": "FFFFFF"
 				},
 				{
 					"type": "WaveEffect",

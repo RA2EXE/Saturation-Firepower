@@ -46,7 +46,7 @@
 				"length": 65,
 				"baseLength": 9,
 				"lifetime": 55,
-				"colorFrom": "ffffff",
+				"colorFrom": "FFFFFF",
 				"colorTo": "FEEBB3",
 				"cone": 40
 			},
@@ -84,11 +84,8 @@
 			"height": 28,
 			"frontColor": "FFFFFF",
 			"backColor": "FEEBB3",
-			"trailLength": 8,
-			"trailWidth": 3,
-			"trailColor": "FEEBB3",
 			"speed": 12,
-			"lifetime": 30,
+			"lifetime": 28.8,
 			"splashDamageRadius": 64,
 			"splashDamage": 95,
 			"ammoMultiplier": 1,
@@ -100,51 +97,22 @@
 			"intervalAngle": 0,
 			"intervalBullet": {
 				"type": "BasicBulletType",
-				"hitEffect": {
-					"type": "MultiEffect",
-					"effects": [
-						{
-							"type": "ParticleEffect",
-							"particles": 5,
-							"sizeFrom": 4,
-							"sizeTo": 0,
-							"length": 45,
-							"baseLength": 9,
-							"lifetime": 15,
-							"colorFrom": "EEC591",
-							"colorTo": "ffffff",
-							"cone": 40
-						},
-						{
-							"type": "WaveEffect",
-							"lifetime": 10,
-							"sizeFrom": 2,
-							"sizeTo": 40,
-							"strokeFrom": 3,
-							"strokeTo": 0,
-							"colorFrom": "EEC591",
-							"colorTo": "EEC591"
-						}
-					]
-				},
-				"despawnEffect": "instBomb",
+				"hitEffect": "instBomb",
+				"despawnEffect": "none",
 				"hitSound": "laser",
 				"hitSoundVolume": 0.15,
 				"status": "崩溃",
-				"statusDuration": 180,
+				"statusDuration": 60,
 				"lightningColor": "EEC591",
-				"lightningDamage": 16,
-				"lightning": 3,
-				"lightningLength": 2,
-				"lightningLengthRand": 6,
+				"lightningDamage": 20,
+				"lightning": 5,
+				"lightningLength": 4,
 				"width": 10,
 				"height": 10,
-				"speed": 16,
-				"lifetime": 2,
+				"instantDisappear": true,
 				"pierceArmor": true,
 				"pierce": true,
 				"hittable": false,
-				"collides": false,
 				"damage": 60,
 				"splashDamageRadius": 40,
 				"splashDamage": 45
@@ -181,7 +149,7 @@
 						"baseLength": 9,
 						"lifetime": 15,
 						"colorFrom": "EEC591",
-						"colorTo": "ffffff",
+						"colorTo": "FFFFFF",
 						"cone": 70
 					},
 					{
@@ -225,7 +193,7 @@
 							"baseLength": 9,
 							"lifetime": 15,
 							"colorFrom": "EEC591",
-							"colorTo": "ffffff",
+							"colorTo": "FFFFFF",
 							"cone": 40
 						},
 						{
@@ -281,7 +249,7 @@
 							"baseLength": 9,
 							"lifetime": 15,
 							"colorFrom": "EEC591",
-							"colorTo": "ffffff",
+							"colorTo": "FFFFFF",
 							"cone": 40
 						},
 						{
@@ -329,7 +297,7 @@
 								"baseLength": 9,
 								"lifetime": 15,
 								"colorFrom": "EEC591",
-								"colorTo": "ffffff",
+								"colorTo": "FFFFFF",
 								"cone": 40
 							},
 							{
@@ -377,7 +345,7 @@
 									"baseLength": 9,
 									"lifetime": 15,
 									"colorFrom": "EEC591",
-									"colorTo": "ffffff",
+									"colorTo": "FFFFFF",
 									"cone": 40
 								},
 								{
@@ -425,7 +393,7 @@
 										"baseLength": 9,
 										"lifetime": 15,
 										"colorFrom": "EEC591",
-										"colorTo": "ffffff",
+										"colorTo": "FFFFFF",
 										"cone": 40
 									},
 									{
@@ -473,7 +441,7 @@
 											"baseLength": 9,
 											"lifetime": 15,
 											"colorFrom": "EEC591",
-											"colorTo": "ffffff",
+											"colorTo": "FFFFFF",
 											"cone": 40
 										},
 										{
@@ -520,7 +488,7 @@
 												"baseLength": 9,
 												"lifetime": 15,
 												"colorFrom": "EEC591",
-												"colorTo": "ffffff",
+												"colorTo": "FFFFFF",
 												"cone": 40
 											},
 											{
@@ -567,7 +535,7 @@
 													"baseLength": 9,
 													"lifetime": 15,
 													"colorFrom": "EEC591",
-													"colorTo": "ffffff",
+													"colorTo": "FFFFFF",
 													"cone": 40
 												},
 												{
@@ -614,7 +582,7 @@
 														"baseLength": 9,
 														"lifetime": 15,
 														"colorFrom": "EEC591",
-														"colorTo": "ffffff",
+														"colorTo": "FFFFFF",
 														"cone": 40
 													},
 													{
@@ -661,7 +629,7 @@
 															"baseLength": 9,
 															"lifetime": 15,
 															"colorFrom": "EEC591",
-															"colorTo": "ffffff",
+															"colorTo": "FFFFFF",
 															"cone": 40
 														},
 														{
@@ -708,7 +676,7 @@
 																"baseLength": 9,
 																"lifetime": 15,
 																"colorFrom": "EEC591",
-																"colorTo": "ffffff",
+																"colorTo": "FFFFFF",
 																"cone": 40
 															},
 															{

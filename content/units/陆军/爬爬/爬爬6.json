@@ -76,7 +76,7 @@
 					"baseLength": 0,
 					"lifetime": 25,
 					"colorFrom": "A278E1",
-					"colorTo": "ffffff",
+					"colorTo": "FFFFFF",
 					"cone": 30
 				},
 				"smokeEffect": "shootBigSmoke2",
@@ -110,7 +110,7 @@
 							"strokeFrom": 2,
 							"strokeTo": 0,
 							"colorFrom": "A278E1",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -140,7 +140,7 @@
 							"baseLength": 0,
 							"lifetime": 15,
 							"colorFrom": "A278E1",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						},
 						{
 							"type": "WaveEffect",
@@ -150,7 +150,7 @@
 							"strokeFrom": 4,
 							"strokeTo": 0,
 							"colorFrom": "A278E1",
-							"colorTo": "ffffff"
+							"colorTo": "FFFFFF"
 						}
 					]
 				},
@@ -232,7 +232,7 @@
 								"strokeFrom": 2,
 								"strokeTo": 0,
 								"colorFrom": "A278E1",
-								"colorTo": "ffffff"
+								"colorTo": "FFFFFF"
 							}
 						]
 					},

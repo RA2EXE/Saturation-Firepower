@@ -1,5 +1,5 @@
 {
-	"placableLiquid":true,
+	"placeableLiquid":true,
 	"displayFlow":true,
 	"requirements":[
 		"graphite/1",
