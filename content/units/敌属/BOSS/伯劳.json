@@ -31,7 +31,7 @@
 	"drownTimeMultiplier": 99999,
 	"groundLayer": 89,
 	"health": 560000,
-	"armor": 240,
+	"armor": 280,
 	"rotateSpeed": 0.8,
 	"faceTarget": true,
 	"abilities": [

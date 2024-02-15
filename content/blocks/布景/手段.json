@@ -259,6 +259,6 @@
 		"泰勒合金/200",
 		"三级协议/30"
 	],
-	"buildCostMultiplier": 1000,
+	"buildCostMultiplier": 10,
 	"category": "effect"
 }

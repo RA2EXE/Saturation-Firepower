@@ -6,7 +6,7 @@
 	"rotateMoveFirst": false,
 	"hovering": true,
 	"speed": 0.8,
-	"crushDamage": 8,
+	"crushDamage": 10,
 	"treadRects": [
 		{
 			"x": -115,
@@ -34,7 +34,7 @@
 	"ammoCapacity": 200,
 	"targetAir": true,
 	"health": 162000,
-	"armor": 48,
+	"armor": 62,
 	"drag": 0.3,
 	"rotateSpeed": 1,
 	"itemCapacity": 55,
@@ -78,7 +78,8 @@
 				"speed": 24,
 				"lifetime": 17,
 				"drag": -0.01,
-				"collides": true,
+				"absorbable": false,
+				"hittable": false,
 				"pierce": true,
 				"pierceArmor": true,
 				"pierceBuilding": true,

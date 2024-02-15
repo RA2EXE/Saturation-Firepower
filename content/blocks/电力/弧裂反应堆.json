@@ -16,7 +16,6 @@
 				"type": "DrawRegion",
 				"suffix": "-bottom"
 			},
-			//{"type": "DrawPlasma","plasma1": "FFF1D2","plasma2": "EEC591"},
 			{
 				"type": "DrawArcSmelt",
 				"midColor": "FFF1D2",
@@ -90,10 +89,9 @@
 	"ambientSoundVolume": 0.5,
 	"category": "power",
 	"research": {
-		"research": "镄反应堆",
+		"parent": "镄反应堆",
 		"objectives": [
 			{"type": "SectorComplete","preset": "荒芜矿区"}
 		]
 	}
-	
 }

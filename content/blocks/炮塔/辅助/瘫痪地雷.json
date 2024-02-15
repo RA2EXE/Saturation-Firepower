@@ -6,16 +6,16 @@
 	"underBullets": true,
 	"health": 30,
 	"tileDamage": 30,
-	"damage": 20,
-	"shots": 2,
-	"length": 10,
+	"damage": 36,
+	"shots": 3,
+	"length": 12,
 	"tendrils": 6,
 	"lightningColor": "BFFFDB",
 	"destroyBullet": {
 		"type": "BasicBulletType",
-		"damage": 20,
+		"damage": 24,
 		"status": "干扰",
-		"statusDuration": 660,
+		"statusDuration": 720,
 		"splashDamageRadius": 50,
 		"splashDamage": 16,
 		"sprite": "circle-bullet",
@@ -66,7 +66,7 @@
 	"category": "effect",
 	"research": "shock-mine",
 	"requirements": [
-		"titanium/10",
-		"泰勒合金/5"
+		"titanium/15",
+		"泰勒合金/2"
 	]
 }

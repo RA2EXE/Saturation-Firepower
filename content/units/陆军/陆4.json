@@ -22,7 +22,7 @@
 	"ammoCapacity": 120,
 	"targetAir": true,
 	"health": 25600,
-	"armor": 22,
+	"armor": 32,
 	"rotateSpeed": 1.5,
 	"itemCapacity": 0,
 	"faceTarget": false,

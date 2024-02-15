@@ -11,10 +11,7 @@
 	"shake": 6,
 	"consumes": {
 		"power": 16,
-		"liquid": {
-			"liquid": "cryofluid",
-			"amount": "1.2"
-		}
+		"liquid":"cryofluid/1.2"
 	},
 	"shoot": {
 		"shots": 3,
@@ -41,8 +38,7 @@
 		"layer": 41
 	},
 	"minWarmup": 0.8,
-	"warmupMaintainTime": 45,
-	"shootWarmupSpeed": 0.043,
+	"warmupMaintainTime": 360,
 	"drawer": {
 		"type": "DrawTurret",
 		"parts": [
@@ -419,23 +415,8 @@
 			}
 		}
 	},
-	"requirements": [
-		"titanium/2000",
-		"graphite/780",
-		"plastanium/1300",
-		"surge-alloy/225",
-		"纳米核/880",
-		"二级协议/15"
-	],
-	"buildCostMultiplier": 3,
-	"category": "turret",
-	"research": {
-		"parent": "猛犸",
-		"objectives": [
-			{
-				"type": "OnSector",
-				"preset": "灭绝"
-			}
-		]
-	}
+	//"requirements": ["titanium/2000","graphite/780","plastanium/1300","surge-alloy/225","纳米核/880","二级协议/15"],
+	"breakable":false,
+	"rebuildable":false,
+	"category": "turret"
 }

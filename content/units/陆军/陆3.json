@@ -20,7 +20,7 @@
 	"omniMovement": false,
 	"rotateMoveFirst": false,
 	"health": 1850,
-	"armor": 11,
+	"armor": 15,
 	"rotateSpeed": 2,
 	"itemCapacity": 0,
 	"faceTarget": false,

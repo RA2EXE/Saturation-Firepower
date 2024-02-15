@@ -561,7 +561,7 @@
 			]
 		}
 	},
-	"buildCostMultiplier": 1000,
+	//"buildCostMultiplier": 1000,
 	"buildVisibility": "campaignOnly",
 	"breakable": false,
 	"requirements": [

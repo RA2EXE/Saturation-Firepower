@@ -76,9 +76,9 @@
 			"backColor": "BFFFDB",
 			"width": 22,
 			"height": 22,
-			"statusDuration": 660,
-			"splashDamageRadius": 70,
-			"splashDamage": 22,
+			"statusDuration": 1500,
+			"splashDamageRadius": 72,
+			"splashDamage": 15,
 			"hitSound": "plasmaboom",
 			"despawnEffect": {
 				"type": "MultiEffect",
@@ -123,8 +123,8 @@
 	"category": "effect",
 	"research": "瘫痪地雷",
 	"requirements": [
-		"titanium/20",
-		"plastanium/3",
-		"泰勒合金/8"
+		"titanium/10",
+		"plastanium/5",
+		"泰勒合金/5"
 	]
 }

@@ -417,6 +417,7 @@
 		"cone": 50
 	},
 	"chargeSound": "lasercharge",
+	"targetAir": false,
 	"shootType": {
 		"type": "BasicBulletType",
 		"collidesAir": false,
