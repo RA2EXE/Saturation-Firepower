@@ -41,6 +41,7 @@
 	"warmupMaintainTime": 360,
 	"drawer": {
 		"type": "DrawTurret",
+		"basePrefix": "防御平台-",
 		"parts": [
 			{
 				"type": "RegionPart",
@@ -416,6 +417,7 @@
 		}
 	},
 	//"requirements": ["titanium/2000","graphite/780","plastanium/1300","surge-alloy/225","纳米核/880","二级协议/15"],
+	"buildVisibility": "sandboxOnly",
 	"breakable":false,
 	"rebuildable":false,
 	"category": "turret"

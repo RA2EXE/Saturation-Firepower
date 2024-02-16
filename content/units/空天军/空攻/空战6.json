@@ -15,11 +15,12 @@
 	"health": 148000,
 	"armor": 33,
 	"rotateSpeed": 0.88,
+	"researchCostMultiplier": 0,
 	"research": {
 		"parent": "eclipse",
 		"objectives": [
 			{
-				"type": "SectorComplete",
+				"type": "OnSector",
 				"preset": "第五战区"
 			}
 		]

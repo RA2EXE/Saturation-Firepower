@@ -83,6 +83,7 @@
 	"rotateSpeed": 0.8,
 	"faceTarget": true,
 	"singleTarget": true,
+	"researchCostMultiplier": 0,
 	"research": {
 		"parent": "corvus",
 		"objectives": [

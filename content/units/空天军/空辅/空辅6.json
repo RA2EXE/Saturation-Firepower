@@ -35,6 +35,7 @@
 	"armor": 38,
 	"engineOffset": 0,
 	"engineSize": 0,
+	"researchCostMultiplier": 0,
 	"research": {
 		"parent": "oct",
 		"objectives": [

@@ -1,0 +1,49 @@
+{
+	"type": "flying",
+	"name": "运输",
+	//"hidden":true,
+	//"playerControllable": false,
+	"speed": 2.24,
+	"rotateSpeed": 2.8,
+	"drag": 0.07,
+	"accel": 0.08,
+	"hitSize": 28,
+	"buildRange": 240,
+	"buildSpeed": 2,
+	"buildBeamOffset": 11,
+	"flying": true,
+	"faceTarget": true,
+	"health": 3300,
+	"armor": 12,
+	"itemCapacity": 300,
+	"itemOffsetY": 1,
+	"engineOffset": 26,
+	"engineSize": 6.2,
+	"engineLayer":110,
+	"engines": [
+		{
+			"x": -13.75,
+			"y": -25,
+			"radius": 2,
+			"rotation": -90
+		},
+		{
+			"x": 13.75,
+			"y": -25,
+			"radius": 2,
+			"rotation": -90
+		}
+	],
+	"lightRadius": 60,
+	"lightColor": "97FFA8",
+	"abilities": [
+		{
+			"type": "ForceFieldAbility",
+			"radius": 50,
+			"regen": 12,
+			"sides": 6,
+			"max": 3000,
+			"cooldown": 6000
+		}
+	]
+}

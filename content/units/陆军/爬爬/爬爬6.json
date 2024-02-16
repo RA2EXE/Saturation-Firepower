@@ -20,6 +20,7 @@
 	"drownTimeMultiplier": 6,
 	"hovering": true,
 	"allowLegStep": true,
+	"researchCostMultiplier": 0,
 	"research": {
 		"parent": "toxopid",
 		"objectives": [

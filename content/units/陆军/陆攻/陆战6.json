@@ -16,6 +16,7 @@
 	"immunities": [
 		"disarmed"
 	],
+	"researchCostMultiplier": 0,
 	"research": {
 		"parent": "reign",
 		"objectives": [

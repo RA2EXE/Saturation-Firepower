@@ -75,6 +75,7 @@
             "cooldown": 1330
         }
     ],
+	"researchCostMultiplier": 0,
     "research": {
         "parent": "navanax",
         "objectives": [

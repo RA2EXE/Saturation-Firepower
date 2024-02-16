@@ -79,6 +79,7 @@
 			"splashDamageRadius": 240,
 			"splashDamage": 1800,
 			"splashDamagePierce": true,
+			"collidesTiles": false,
 			"speed": 20,
 			"lifetime": 32.5,
 			"damage": 500,
@@ -215,6 +216,7 @@
 			"fragBullets": 35,
 			"fragBullet": {
 				"hitSound": "plasmaboom",
+				"collidesTiles": false,
 				"width": 16,
 				"height": 16,
 				"sprite": "circle-bullet",
@@ -479,9 +481,9 @@
 					"shrinkY": 0.1,
 					"shrinkX": 0.1,
 					"trailChance": 1,
-					"trailColor":"EEC591",
-					"trailEffect":"artilleryTrail",
-					"sprite":"circle-bullet",
+					"trailColor": "EEC591",
+					"trailEffect": "artilleryTrail",
+					"sprite": "circle-bullet",
 					"collides": false,
 					"hittable": false,
 					"absorbable": false,
@@ -533,5 +535,13 @@
 		"三级协议/15"
 	],
 	"category": "turret",
-	"research": "战研"
+	"research": {
+		"parent": "战研",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "雷鸣裂谷"
+			}
+		]
+	}
 }

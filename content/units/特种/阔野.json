@@ -95,7 +95,7 @@
 	"research": {
 		"parent": "阔野管理中心",
 		"objectives": [{"type": "SectorComplete","preset": "溢裂要塞"}],
-		"requirements": ["三级协议/1000"]
+		"requirements": ["裂位能/25000","纳米核/18000","三级协议/1000"]
 	},
 	"abilities": [
 		{

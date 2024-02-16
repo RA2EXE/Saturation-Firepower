@@ -1,7 +1,7 @@
 {
 	"type": "ItemTurret",
 	"name": "凌汛",
-	"health": 7500,
+	"health": 5500,
 	"armor": -8,
 	"size": 5,
 	"reload": 40,
@@ -258,8 +258,6 @@
 			"type": "PointBulletType",
 			"inaccuracy": 3,
 			"damage": 80,
-			"splashDamage": 80,
-			"splashDamageRadius": 18,
 			"lifetime": 10,
 			"speed": 100,
 			"status": "shocked",
@@ -327,7 +325,7 @@
 			"spawnBullets": [
 				{
 					"type": "LightningBulletType",
-					"damage": 78,
+					"damage": 80,
 					"lightningLength": 56,
 					"lightningLengthRand": 6,
 					"shootEffect": "shootHeal",
