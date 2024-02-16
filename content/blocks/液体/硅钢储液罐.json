@@ -4,8 +4,8 @@
 	"size":4,
 	"health": 3600,
 	"liquidCapacity": 6000,
-	"insulated":true,
 	"absorbLasers":true,
+
 	"requirements": [
 		"lead/70",
 		"metaglass/220",
