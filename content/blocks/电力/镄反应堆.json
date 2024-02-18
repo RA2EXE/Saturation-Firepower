@@ -3,14 +3,13 @@
 	"name": "镄反应堆",
 	"size": 3,
 	"health": 1600,
-	"liquidCapacity": 30,
+	"liquidCapacity": 36,
 	"itemCapacity": 25,
 	"hasItems": true,
 	"hasLiquids": true,
 	"outputsPower": true,
 	"powerProduction": 53.5,
 	"itemDuration": 300,
-	"heating": 0.02,
 	"lightColor": "FFFFFF",
 	"explosionShake": 9,
 	"explosionShakeDuration": 120,
@@ -101,8 +100,10 @@
 		]
 	},
 	"fuelItem": "镄",
+	"heating": 0.06,
+	"coolantPower": 3,
 	"consumes": {
-		"liquid":"cryofluid/0.1",
+		"liquid":"cryofluid/0.18",
 		"items": ["镄/1"]
 	},
 	"buildCostMultiplier": 0.88,

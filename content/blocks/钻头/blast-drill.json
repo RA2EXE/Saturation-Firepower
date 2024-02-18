@@ -4,13 +4,7 @@
 "updateEffect": "explosion",
 "drillTime": 45,
 "consumes": {
-	"power": 4.5,
-	"liquid": {
-		"liquid": "water",
-		"amount": 0.11,
-		"booster": true,
-		"optional": true
-	}
+	"power": 4.5
 },
 "requirements": [
 		"copper/120",

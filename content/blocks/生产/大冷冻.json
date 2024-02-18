@@ -4,7 +4,7 @@
 	"health": 360,
 	"outputLiquid": {
 		"liquid": "cryofluid",
-		"amount": 0.6
+		"amount": 0.61
 	},
 	"itemCapacity": 14,
 	"size": 3,
@@ -34,7 +34,7 @@
 		"items": [
 			"titanium/1"
 		],
-		"liquid": "water/0.6"
+		"liquid": "water/0.61"
 	},
 	"requirements": [
 		"thorium/150",

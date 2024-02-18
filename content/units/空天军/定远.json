@@ -1,0 +1,159 @@
+{
+	"type": "flying",
+	"name": "定远",
+	"outlineColor": "383848",
+	"health": 12000,
+	"rotateSpeed": 0.6,
+	"speed": 1.8,
+	"fogRadius": 33,
+	"maxRange":240,
+	"accel": 0.008,
+	"drag": 0.0082,
+	"hitSize": 55,
+	"abilities": [
+		{
+			"type":"ShieldRegenFieldAbility",
+			"amount": 24000,
+			"max": 24000, 
+			"reload": 800,
+			"range": 10,
+			"applyEffect":"none",
+			"activeEffect":
+				{"type": "WaveEffect",
+				"interp":"circleOut",
+				"lifetime": 42,
+				"sizeFrom": 0,
+				"sizeTo": 160,
+				"strokeFrom":10,
+				"strokeTo":0,
+				"colorFrom":"FEEBB355",
+				"colorTo": "FEEBB355"}}
+	],
+	"armor": 0,
+	"flying": true,
+	"faceTarget": false,
+	"engineOffset": 0,
+	"engineSize": 0,
+	"engineLayer":110,
+	"engines": [
+		{
+			"x": -10.5,
+			"y": -27,
+			"radius": 3,
+			"rotation": -90
+		},
+		{
+			"x": 10.5,
+			"y": -27,
+			"radius": 3,
+			"rotation": -90
+		}
+	],
+	"weapons": [
+		{
+			"name": "舰炮1",
+			"reload": 256,
+			"shoot": {
+				"type": "ShootAlternate",
+				"barrels": 2,
+				"spread":6,
+				"shots":3,
+				"shotDelay": 8
+			},
+			"minWarmup": 0.3,
+			"mirror": false,
+			"shootY":3.5,
+			"x": 0,
+			"y": -3,
+			"controllable": false,
+			"autoTarget": true,
+			"rotateSpeed": 10,
+			"rotate": true,
+			"recoil":2,
+			"recoilTime":60,
+			"heatColor": "FF4040",
+			"cooldownTime":120,
+			"shootCone":10,
+			"shootSound": "cannon",
+			"inaccuracy": 0,
+			"targetInterval":5,
+			"targetSwitchInterval":5,
+			"bullet": {
+				"type": "BasicBulletType",
+				"damage": 1800,
+				"speed": 8,
+				"lifetime": 20,
+				"height": 45,
+				"width": 8,
+				"frontColor": "FFFFFF",
+				"backColor": "BFFFDB",
+				"trailLength": 5,
+				"trailWidth": 1.5,
+				"trailColor": "BFFFDB",
+				"hitSound": "explosion",
+				"hitSoundVolume": 5,
+				"shootEffect":{
+					"type": "WaveEffect",
+					"lifetime": 15,
+					"sizeFrom": 0,
+					"sizeTo": 20,
+					"strokeFrom": 3,
+					"strokeTo": 0,
+					"colorFrom": "BFFFDB80",
+					"colorTo": "BFFFDB80"
+				},
+				"despawnEffect": "flakExplosionBig",
+				"hitShake":3,
+				"hitEffect": {
+					"type": "ExplosionEffect",
+					"lifetime": 36,
+					"waveStroke": 5,
+					"waveLife": 30,
+					"waveRadBase": 0,
+					"waveRad": 26,
+					"waveColor": "BFFFDB",
+					"smokes": 0,
+					"sparkColor": "BFFFDB",
+					"sparks": 10,
+					"sparkRad": 45,
+					"sparkStroke": 0.8,
+					"sparkLen": 16
+				}
+			}
+		},
+		{
+			"name": "导弹1",
+			"minWarmup": 0.9,
+			"x": 0,
+			"y": 0,
+			"shoot": {
+				"shots":2,
+				"shotDelay": 30
+			},
+			"reload": 510,
+			"mirror": false,
+			"rotate": true,
+			"rotateSpeed":8,
+			"shootSound": "missileLaunch",
+			"inaccuracy":10,
+			"shootCone": 360,
+			"bullet": {
+				"speed": 0,
+				"hitShake": 12,
+				"shootEffect": {
+					"type": "WaveEffect",
+					"interp": "circleOut",
+					"lifetime": 80,
+					"sizeFrom": 0,
+					"sizeTo": 60,
+					"strokeFrom": 8,
+					"strokeTo": 8,
+					"colorFrom": "BFFFDB",
+					"colorTo": "BFFFDB00"
+				},
+				"smokeEffect": "shootSmallFlame",
+				"spawnUnit": "反舰导弹"
+			}
+		}
+	]
+}

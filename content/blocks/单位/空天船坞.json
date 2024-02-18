@@ -1,0 +1,32 @@
+{
+	"type": "UnitFactory",
+	"name": "空天船坞",
+	"description": "生产舰船",
+    "health":12000,
+	"size":7,
+	"consumes":{},
+	"plans":[
+	{ 
+		"unit": "兵刃",
+		"time":2400, 
+		"requirements": []
+	},
+	{ 
+		"unit": "穿行",
+		"time":2400, 
+		"requirements": []
+	},
+	{ 
+		"unit": "定远",
+		"time":3000, 
+		"requirements": []
+	},
+	{ 
+		"unit": "摧坚",
+		"time":3300, 
+		"requirements": []
+	}
+],
+	"requirements": [],
+	"category":"units"
+}

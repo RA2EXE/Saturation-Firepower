@@ -16,11 +16,12 @@
 	"shoot": {
 		"type": "ShootBarrel",
 		"barrels": [
-			0,25,0,
-			16,26.5,0,
-			-16,26.5,0
+			0,31,0,
+			16,30.5,0,
+			-16,30.5,0
 		]
 	},
+	"shootY": 0,
 	"recoils": 3,
 	"range": 1100,
 	"recoilTime": 45,
@@ -91,7 +92,6 @@
 	"rotateSpeed": 1.8,
 	"maxAmmo": 24,
 	"consumeAmmoOnce": false,
-	"shootY": 13,
 	"velocityRnd": 0.05,
 	"ammoPerShot": 8,
 	"ammoTypes": {
@@ -151,16 +151,15 @@
 			"trailEffect": {
 				"type": "ParticleEffect",
 				"particles": 4,
-				"lifetime": 16,
-				"interp": "pow10Out",
-				"sizeInterp": "pow5In",
+				"lifetime": 30,
+				"interp": "circleOut",
+				"sizeInterp": "pow3In",
 				"sizeFrom": 6,
 				"sizeTo": 0,
-				"length": -13,
-				"baseLength": 3,
+				"length": 12,
+				"baseLength": 0,
 				"colorFrom": "FF705590",
-				"colorTo": "FF705590",
-				"cone": 30
+				"colorTo": "FF7055"
 			},
 			"hitEffect": {
 				"type": "MultiEffect",
@@ -306,6 +305,7 @@
 				"length": 0,
 				"baseLength": 0,
 				"lifetime": 180,
+				"sizeInterp": "pow5In",
 				"colorFrom": "EEC591",
 				"colorTo": "EEC591F"
 			},
@@ -315,9 +315,9 @@
 					{
 						"type": "ParticleEffect",
 						"particles": 10,
-						"sizeFrom": 15,
+						"sizeFrom": 12,
 						"sizeTo": 0,
-						"length": 60,
+						"length": 68,
 						"baseLength": 0,
 						"lifetime": 65,
 						"interp": "pow10Out",
@@ -342,11 +342,12 @@
 					},
 					{
 						"type": "WaveEffect",
-						"lifetime": 20,
+						"lifetime": 60,
 						"sizeFrom": 0,
-						"sizeTo": 66,
-						"strokeFrom": 3,
+						"sizeTo": 78,
+						"strokeFrom": 8,
 						"strokeTo": 0,
+						"interp": "circleOut",
 						"colorFrom": "EEC591",
 						"colorTo": "EEC591"
 					}
@@ -370,13 +371,14 @@
 				"cone": 0
 			},
 			"trailSpacing": 10,
-			"speed": 20,
+			"speed": 50,
 			"lifetime": 80,
 			"reloadMultiplier": 1.33,
-			"buildingDamageMultiplier": 10,
-			"lightningDamage": 98,
-			"lightning": 8,
+			"buildingDamageMultiplier": 0.8,
+			"lightningDamage": 156.8,
+			"lightning": 5,
 			"lightningLength": 18,
+			"lightningLengthRand": 9,
 			"lightningColor": "EEC591",
 			"pierceArmor": true,
 			"status": "崩溃",
