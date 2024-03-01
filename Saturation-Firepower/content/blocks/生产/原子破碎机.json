@@ -1,0 +1,73 @@
+{
+	"type": "Separator",
+	"results": [
+		"copper/12",
+		"lead/12",
+		"titanium/10",
+		"thorium/7",
+		"graphite/9",
+		"silicon/8",
+		"surge-alloy/5",
+		"phase-fabric/4",
+		"镄/3"
+	],
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "slag"
+			},
+			{
+				"type": "DrawSpikes",
+				"rotateSpeed": 4.5,
+				"amount": 6,
+				"stroke": 1,
+				"length": 8,
+				"radius": 2,
+				"color": "EEC591"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-转",
+				"spinSprite": true,
+				"rotateSpeed": 6
+			},
+			"DrawDefault"
+		]
+	},
+	"size": 3,
+	"itemCapacity": 30,
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids": true,
+	"liquidCapacity": 60,
+	"craftTime": 12,
+	"consumes": {
+		"power": 7,
+		"liquid": "slag/0.75"
+	},
+	"requirements": [
+		"graphite/120",
+		"硅钢/230",
+		"surge-alloy/180",
+		"纳米核/200",
+		"裂位能/80"
+	],
+	"ambientSound": "pulse",
+	"ambientSoundVolume": 0.3,
+	"category": "crafting",
+	"research": {
+		"parent": "separator",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "nuclearComplex"
+			}
+		]
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "灌注站",
+	"health": 240,
+	"size": 2,
+	"hasPower": true,
+	"hasItems": true,
+	"hasLiquids":true,
+	"liquidCapacity":120,
+	"requirements": [
+ 	"lead/80",
+ 	"metaglass/20",
+	"silicon/30"
+	],
+	"category": "crafting",
+	"research":"kiln"
+}

@@ -1,0 +1,42 @@
+{
+	"craftTime": 30,
+	"size": 3,
+	"hasLiquids": true,
+	"hasPower": true,
+	"hasItems": true,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			"DrawCultivator",
+			{
+				"type": "DrawRegion",
+				"suffix": "-top"
+			}
+		]
+	},
+	"requirements": [
+		"lead/70",
+		"silicon/35",
+		"titanium/40",
+		"metaglass/30"
+	],
+	"consumes": {
+		"power": 6.6,
+		"liquid": {
+			"liquid": "water",
+			"amount": 0.6
+		},
+		"items": [
+			"spore-pod/1"
+		]
+	},
+	"name": "细胞培养机",
+	"itemCapacity": 100,
+	"liquidCapacity": 72,
+	"outputItem": "spore-pod/11",
+	"boostScale": 0.445,
+	"attribute": "spores",
+	"category": "production",
+	"research": "cultivator"
+}

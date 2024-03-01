@@ -1,0 +1,59 @@
+{
+	"name": "硅钢冶炼厂",
+	"health": 500,
+	"outputItem": "硅钢/3",
+	"size": 3,
+	"hasPower": true,
+	"hasItems": true,
+	"craftTime": 45,
+	"itemCapacity": 12,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawFlame",
+				"flameColor": "e1e4c8"
+			}
+		]
+	},
+	"craftEffect": {
+		"type": "ParticleEffect",
+		"particles": 5,
+		"baseLength": 6,
+		"length": 6,
+		"region": "饱和火力-菱形",
+		"sizeInterp": "pow3In",
+		"lifetime": 15,
+		"sizeFrom": 5,
+		"sizeTo": 0,
+		"colorFrom": "7595D2AA",
+		"colorTo": "7595D2"
+	},
+	"consumes": {
+		"power": 7,
+		"items": [
+			"titanium/3",
+			"silicon/3"
+		]
+	},
+	"requirements": [
+		"plastanium/55",
+		"硅钢/100",
+		"镄/120",
+		"裂位能/40",
+		"一级协议/3"
+	],
+	"category": "crafting",
+	"ambientSound": "smelter",
+	"ambientSoundVolume": 0.65,
+	"research": {
+		"parent": "前沿实验室",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "雷鸣裂谷"
+			}
+		]
+	}
+}

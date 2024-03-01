@@ -1,0 +1,55 @@
+{
+	"name": "纳米组装机",
+	"health": 460,
+	"outputItem": {
+		"item": "纳米核",
+		"amount": 1
+	},
+	"size": 4,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 40,
+	"itemCapacity": 15,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawFlame",
+				"flameColor": "7cf389b6"
+			},
+			"DrawDefault",
+			{
+				"type": "DrawFade",
+				"scale": 6,
+				"alpha": 0.98
+			}
+		]
+	},
+	"consumes": {
+		"power": 10,
+		"items": [
+			"silicon/3",
+			"titanium/3"
+		]
+	},
+	"requirements": [
+		"lead/90",
+		"silicon/45",
+		"titanium/35",
+		"硅钢/60",
+		"一级协议/0"
+	],
+	"category": "crafting",
+	"ambientSound": "techloop",
+	"ambientSoundVolume": 0.5,
+	"research": {
+		"parent": "硅钢冶炼炉",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "迫降区"
+			}
+		]
+	}
+}

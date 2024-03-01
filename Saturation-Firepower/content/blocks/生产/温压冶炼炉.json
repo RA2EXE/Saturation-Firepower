@@ -1,0 +1,35 @@
+{
+	"name": "温压冶炼炉",
+	"outputItem": "surge-alloy/1",
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 85,
+	"itemCapacity": 18,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			"DrawFlame"
+		]
+	},
+	"craftEffect": "smeltsmoke",
+	"consumes": {
+		"power": 7.5,
+		"items": [
+			"scrap/6",
+			"silicon/3"
+		]
+	},
+	"requirements": [
+		"lead/90",
+		"graphite/75",
+		"metaglass/110",
+		"thorium/65",
+		"一级协议/1"
+	],
+	"category": "crafting",
+	"ambientSound": "smelter",
+	"research": "熔炼炉"
+}

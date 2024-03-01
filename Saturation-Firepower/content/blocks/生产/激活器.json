@@ -1,0 +1,57 @@
+{
+	"name": "激活器",
+	"health": 500,
+	"outputLiquid": "纳米流体/0.3",
+	"itemCapacity": 10,
+	"size": 3,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "纳米流体"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-转",
+				"spinSprite": true,
+				"rotateSpeed": 0.62
+			},
+			"DrawDefault"
+		]
+	},
+	"hasItems": true,
+	"hasLiquids": true,
+	"outputsLiquid": true,
+	"hasPower": true,
+	"liquidCapacity": 60,
+	"craftTime": 120,
+	"updateEffect": {
+		"type": "ParticleEffect",
+		"particles": 5,
+		"sizeFrom": 2,
+		"sizeTo": 0,
+		"length": 0,
+		"baseLength": 0,
+		"lifetime": 30,
+		"colorFrom": "97FFA8",
+		"colorTo": "97FFA8"
+	},
+	"consumes": {
+		"power": 7.35,
+		"items":["纳米核/2"],
+		"liquid":"cryofluid/0.3"
+	},
+	"requirements": [
+		"plastanium/70",
+		"metaglass/45",
+		"纳米核/90",
+		"一级协议/0"
+	],
+	"category": "crafting",
+	"research": "cryofluid-mixer"
+}

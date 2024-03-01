@@ -1,0 +1,40 @@
+{
+	"name": "硝化反应器",
+	"outputLiquid": "硝化重油/0.3",
+	"itemCapacity": 10,
+	"size": 3,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawLiquidTile",
+				"drawLiquid": "硝化重油"
+			},
+			"DrawDefault"
+		]
+	},
+	"hasItems": true,
+	"hasLiquids": true,
+	"outputsLiquid": true,
+	"hasPower": true,
+	"liquidCapacity": 30,
+	"craftTime": 60,
+	"consumes": {
+		"power": 5,
+		"items": ["spore-pod/1"],
+		"liquid": "oil/0.3"
+	},
+	"requirements": [
+		"plastanium/85",
+		"metaglass/60",
+		"铬/80",
+		"纳米核/80",
+		"一级协议/0"
+	],
+	"category": "crafting",
+	"research": "激活器"
+}

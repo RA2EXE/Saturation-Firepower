@@ -1,0 +1,43 @@
+{
+	"name": "沙分离机",
+	"results": [
+		{
+			"item": "sand",
+			"amount": 1
+		}
+	],
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "water",
+				"suffix": "-液体"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-转",
+				"spinSprite": true,
+				"rotateSpeed": 7
+			}
+		]
+	},
+	"size": 2,
+	"hasPower": true,
+	"hasLiquids": true,
+	"hasItems": true,
+	"craftTime": 20,
+	"itemCapacity": 10,
+	"liquidCapacity": 20,
+	"consumes": {
+		"power": 1,
+		"liquid": "water/0.2"
+	},
+	"requirements": [
+		"copper/35",
+		"lead/40"
+	],
+	"category": "crafting",
+	"research": "pulverizer"
+}

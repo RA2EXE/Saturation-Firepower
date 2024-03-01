@@ -1,0 +1,48 @@
+{
+	"name": "泰勒合金冶炼厂",
+	"outputItem": "泰勒合金/1",
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 100,
+	"itemCapacity": 20,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawFlame",
+				"flameColor": "25C9AB"
+			}
+		]
+	},
+	"craftEffect": {
+		"type": "ParticleEffect",
+		"particles": 5,
+		"baseLength": 1,
+		"length": 13,
+		"region": "饱和火力-菱形",
+		"lifetime": 22,
+		"sizeFrom": 5,
+		"sizeTo": 0,
+		"colorFrom": "25C9AB",
+		"colorTo": "25C9AB"
+	},
+	"consumes": {
+		"power": 8,
+		"items": [
+			"硅钢/1",
+			"surge-alloy/1"
+		]
+	},
+	"requirements": [
+		"lead/85",
+		"silicon/65",
+		"surge-alloy/45",
+		"一级协议/0"
+	],
+	"category": "crafting",
+	"ambientSound": "smelter",
+	"research": "alloy-smelter"
+}

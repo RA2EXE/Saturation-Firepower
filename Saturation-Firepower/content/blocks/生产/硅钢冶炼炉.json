@@ -1,0 +1,35 @@
+{
+	"name": "硅钢冶炼炉",
+	"outputItem": "硅钢/1",
+	"size": 2,
+	"hasPower": true,
+	"hasItems": true,
+	"craftTime": 50,
+	"itemCapacity": 10,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawFlame",
+				"flameColor": "e1e4c8"
+			}
+		]
+	},
+	"craftEffect": "smeltsmoke",
+	"consumes": {
+		"power": 1.5,
+		"items": [
+			"titanium/1",
+			"silicon/1"
+		]
+	},
+	"requirements": [
+		"lead/45",
+		"silicon/25",
+		"titanium/35"
+	],
+	"category": "crafting",
+	"ambientSound": "smelter",
+	"research": "实验室"
+}
