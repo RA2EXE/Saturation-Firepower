@@ -37,7 +37,6 @@
 	"outputItem": "spore-pod/11",
 	"boostScale": 0.445,
 	"attribute": "spores",
-	"type": "AttributeCrafter",
 	"category": "production",
 	"research": "cultivator"
 }

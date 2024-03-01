@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "大型冷冻机",
 	"health": 360,
 	"outputLiquid": {

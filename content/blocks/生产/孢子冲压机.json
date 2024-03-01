@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "孢子冲压机",
 	"outputLiquid": "oil/0.9",
 	"drawer": {

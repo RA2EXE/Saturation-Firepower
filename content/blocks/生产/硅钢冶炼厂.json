@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "硅钢冶炼厂",
 	"health": 500,
 	"outputItem": "硅钢/3",

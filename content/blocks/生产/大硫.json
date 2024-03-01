@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"health": 360,
 	"name": "大型硫混合器",
 	"outputItem": "pyratite/5",

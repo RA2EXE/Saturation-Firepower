@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "熔炼炉",
 	"outputLiquid": "slag/1.5",
 	"size": 2,
