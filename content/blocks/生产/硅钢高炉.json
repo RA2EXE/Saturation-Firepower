@@ -1,5 +1,4 @@
 {
-	"type": "AttributeCrafter",
 	"attribute": "heat",
 	"baseEfficiency": 0.5,
 	"maxBoost": 9.5,

@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"health": 360,
 	"name": "火硅炉",
 	"outputItem": "silicon/3",

@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"health": 360,
 	"name": "飞轮离心机",
 	"outputItem": "coal/2",

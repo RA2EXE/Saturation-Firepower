@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"health": 240,
 	"name": "镄合成器",
 	"outputItem": "镄/1",

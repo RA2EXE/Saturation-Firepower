@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "激活器",
 	"health": 500,
 	"outputLiquid": "纳米流体/0.3",

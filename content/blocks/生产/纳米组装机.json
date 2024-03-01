@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "纳米组装机",
 	"health": 460,
 	"outputItem": {

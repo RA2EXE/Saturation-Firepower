@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "终极合金厂",
 	"outputItem": "surge-alloy/5",
 	"size": 2,
@@ -26,6 +25,9 @@
 			"coal/100"
 		]
 	},
+	"requirements": [
+		"copper/1"
+	],
 	"buildVisibility": "sandboxOnly",
 	"category": "crafting",
 	"research": "终极合金厂"

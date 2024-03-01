@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "纳米打印机",
 	"health": 650,
 	"outputItem": "纳米核/1",

@@ -1,5 +1,4 @@
 {
-	"type": "GenericCrafter",
 	"name": "电磁合金冶炼炉",
 	"outputItem": "surge-alloy/3",
 	"size": 4,
