@@ -93,26 +93,9 @@
 		"二级协议/30"
 	]}
 	],
-	"requirements": [
-		"纳米核/12000",
-		"镄/5000",
-		"泰勒合金/2000",
-		"裂位能/3000",
-		"二级协议/200",
-		"三级协议/140"
-	],
+	//"requirements": ["纳米核/12000","镄/5000","泰勒合金/2000","裂位能/3000","二级协议/200","三级协议/140"],
 	"category":"units",
 	"canOverdrive": true,
-	"research": {
-		"parent": "T6单位重构厂",
-		"objectives": [
-			{
-				"type": "SectorComplete",
-				"preset": "第五战区"
-			},
-			{
-				"type": "SectorComplete",
-				"preset": "星稀山脉"
-			}
-			]}
+	"buildVisibility": "sandboxOnly",
+	//"research": {"parent": "T6单位重构厂","objectives": [{"type": "SectorComplete","preset": "第五战区"},{"type": "SectorComplete","preset": "星稀山脉"}]}
 }

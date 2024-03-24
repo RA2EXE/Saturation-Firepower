@@ -4,7 +4,7 @@
 	"health": 17650,
 	"size": 5,
 	"reload": 980,
-	"fogRadiusMultiplier":0.3,
+	"fogRadiusMultiplier": 0.16,
 	"range": 450,
 	"maxAmmo": 20,
 	"recoilTime": 180,
@@ -56,7 +56,7 @@
 				"colorFrom": "FFFFFF",
 				"colorTo": "FFFFFF"
 			},
-			"smokeEffect":{
+			"smokeEffect": {
 				"type": "ParticleEffect",
 				"particles": 17,
 				"sizeFrom": 11,
@@ -74,10 +74,6 @@
 			"despawnEffect": "none"
 		}
 	},
-	/*"requirements": [
-		"镄/25000",
-		"blast-compound/50000"
-	],*/
 	"buildVisibility": "sandboxOnly",
 	"category": "turret"
 }

@@ -8,6 +8,7 @@
 	"targetGround": true,
 	"targetAir": true,
 	"range": 1600,
+	"fogRadiusMultiplier": 0,
 	"inaccuracy": 0,
 	"rotateSpeed": 0,
 	"shootSound": "wave",

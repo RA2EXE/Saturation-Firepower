@@ -8,6 +8,7 @@
 	"size": 4,
 	"reload": 120,
 	"range": 620,
+	"fogRadiusMultiplier": 0.24,
 	"recoilTime": 50,
 	"recoil": 2.25,
 	"shootSound": "mineDeploy",

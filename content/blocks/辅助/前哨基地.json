@@ -5,9 +5,9 @@
 		"name": "泰伯利亚"
 		},
 	"requirements": [
-	{"amount": 800, "item": "copper"},
-	{"amount": 2000, "item": "lead"},
-	{"amount": 500, "item": "silicon"}
+		"copper/800",
+		"lead/2000",
+		"silicon/500"
 	],
 	"unitType": "alpha",
 	"alwaysUnlocked":true,

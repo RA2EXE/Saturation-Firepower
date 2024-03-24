@@ -28,5 +28,6 @@
 	}
 ],
 	"requirements": [],
+	"buildVisibility": "sandboxOnly",
 	"category":"units"
 }

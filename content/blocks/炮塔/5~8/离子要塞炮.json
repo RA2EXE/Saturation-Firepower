@@ -302,6 +302,7 @@
 	"reload": 660,
 	"rotateSpeed": 2.4,
 	"range": 576,
+	"fogRadiusMultiplier": 0.27,
 	"category": "turret",
 	"research": {
 		"parent": "foreshadow",

@@ -4,7 +4,7 @@
 	"squareShape": true,
 	"omniMovement": false,
 	"rotateMoveFirst": false,
-	"hovering": true,
+	"drownTimeMultiplier": 5,
 	"speed": 0.8,
 	"crushDamage": 10,
 	"treadRects": [
@@ -31,7 +31,7 @@
 		"unmoving"
 	],
 	"ammoType": "泰勒合金",
-	"ammoCapacity": 200,
+	"ammoCapacity": 80,
 	"targetAir": true,
 	"health": 162000,
 	"armor": 62,
@@ -54,8 +54,8 @@
 				"shotDelay": 8,
 				"type": "ShootBarrel",
 				"barrels": [
-					-9,30,0,
-					9,30,0
+					-9,40,0,
+					9,40,0
 				]
 			},
 			"cooldownTime": 100,
@@ -98,17 +98,15 @@
 				"trailEffect": {
 					"type": "ParticleEffect",
 					"particles": 3,
-					"line": true,
-					"strokeFrom": 2,
-					"strokeTo": 0,
-					"lenFrom": 8,
-					"lenTo": 20,
-					"length": 16,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"interp": "circleOut",
+					"sizeInterp": "pow3In",
+					"length": 10,
 					"baseLength": 0,
-					"lifetime": 10,
+					"lifetime": 8,
 					"colorFrom": "FEEBB3",
-					"colorTo": "FFFFFF",
-					"cone": 10
+					"colorTo": "FEEBB3"
 				},
 				"shrinkY": 0,
 				"hitEffect": {
@@ -123,7 +121,7 @@
 							"baseLength": 8,
 							"lifetime": 35,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FFFFFF"
+							"colorTo": "FEEBB3"
 						},
 						{
 							"type": "WaveEffect",
@@ -153,7 +151,7 @@
 							"baseLength": 0,
 							"lifetime": 11,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FFFFFF",
+							"colorTo": "FEEBB3",
 							"cone": 15
 						},
 						{
@@ -164,7 +162,7 @@
 							"strokeFrom": 4,
 							"strokeTo": 0,
 							"colorFrom": "FEEBB3",
-							"colorTo": "FFFFFF"
+							"colorTo": "FEEBB3"
 						}
 					]
 				},

@@ -8,6 +8,7 @@
 	"size": 4,
 	"reload": 16,
 	"range": 476,
+	"fogRadiusMultiplier": 0.31,
 	"recoilTime": 16,
 	"recoil": 4,
 	"shootY": 14,

@@ -1,7 +1,7 @@
 {
 	"type": "PowerTurret",
 	"name": "光阴",
-	"fogRadiusMultiplier": 0.45,
+	"fogRadiusMultiplier": 0.25,
 	"targetAir": true,
 	"targetGround": true,
 	"armor": 6,

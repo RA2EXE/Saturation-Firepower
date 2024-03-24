@@ -143,7 +143,6 @@
 			"reflectable": false,
 			"pierceArmor": true,
 			"frontColor": "FFFFFF",
-			"mixColor": "97FFA8A8",
 			"backColor": "97FFA8",
 			"healPercent": 1,
 			"status": "拆解",

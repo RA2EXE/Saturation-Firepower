@@ -1,0 +1,10 @@
+{
+	"color": "FFFFFF",
+	"hidden": true,
+	"alwaysUnlocked": true,
+	"research": {
+		"root":true,
+		"name": "溢裂要塞数据库",
+		"objectives": [{"type": "SectorComplete","preset": "溢裂要塞"}]
+		}
+}

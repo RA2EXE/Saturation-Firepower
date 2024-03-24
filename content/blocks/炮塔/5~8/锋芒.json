@@ -2,7 +2,7 @@
 	"type": "ContinuousTurret",
 	"name": "锋芒",
 	"unitSort": "strongest",
-	"health": 12000,
+	"health": 17500,
 	"size": 6,
 	"shootSound": "laserblast",
 	"loopSound": "laserbeam",
@@ -12,8 +12,8 @@
 	"cooldownTime": 300,
 	"canOverdrive": false,
 	"reload": 12,
-	"aimChangeSpeed": 3.5,
-	"rotateSpeed": 0.65,
+	"aimChangeSpeed": 3.75,
+	"rotateSpeed": 0.55,
 	"range": 420,
 	"shootY": 7,
 	"shootCone": 10,
@@ -21,6 +21,7 @@
 	"minWarmup": 0.88,
 	"drawer": {
 		"type": "DrawTurret",
+		"basePrefix": "防御平台-",
 		"parts": [
 			{
 				"type": "HaloPart",
@@ -126,16 +127,17 @@
 		]
 	},
 	"consumes": {
-		"power": 98,
+		"power": 80,
 		"liquid": "纳米流体/2"
 	},
 	"chargeSound": "lasercharge",
 	"accurateDelay": false,
-	"moveWhileCharging": false,
+	"moveWhileCharging": true,
 	"shoot": {
 		"type": "ShootPattern",
-		"firstShotDelay": 60,
-		"shots": 2
+		"firstShotDelay": 40,
+		"shotDelay": 120,
+		"shots": 4
 	},
 	"shootType": {
 		"type": "PointLaserBulletType",
@@ -224,10 +226,10 @@
 		"splashDamageRadius": 36,
 		"splashDamage": 12,
 		"pierceArmor": true,
-		"damageInterval": 5,
+		"damageInterval": 6,
 		"hitShake": 3,
-		"hitColor": "c0ecff",
-		"color": "c0ecff",
+		"hitColor": "c0ecffbf",
+		"color": "c0ecffbf",
 		"drawSize": 420,
 		"fragBullets": 2,
 		"fragBullet": {
@@ -307,7 +309,7 @@
 					"strokeTo": 1.6,
 					"sizeInterp": "pow5Out",
 					"interp": "pow5In",
-					"lifetime": 50,
+					"lifetime": 40,
 					"colorFrom": "c0ecff",
 					"colorTo": "c0ecff"
 				},
@@ -318,7 +320,7 @@
 					"sizeTo": 8,
 					"length": 0,
 					"baseLength": 0,
-					"lifetime": 66,
+					"lifetime": 55,
 					"colorFrom": "c0ecff",
 					"colorTo": "c0ecff"
 				}
@@ -327,11 +329,11 @@
 	},
 	"category": "turret",
 	"research": {
-		"parent": "冰风暴",
+		"parent": "凌汛",
 		"objectives": [
 			{
 				"type": "SectorComplete",
-				"preset": "急冻雾岭"
+				"preset": "灭绝"
 			}
 		]
 	},

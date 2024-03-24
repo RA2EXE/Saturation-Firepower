@@ -1,7 +1,7 @@
 {
 	"type": "GenericCrafter",
 	"name": "莱普合金冶炼厂",
-	"outputItem": "莱普合金/1",
+	"outputItem": "莱普合金/2",
 	"size": 3,
 	"hasPower": true,
 	"hasItems": true,

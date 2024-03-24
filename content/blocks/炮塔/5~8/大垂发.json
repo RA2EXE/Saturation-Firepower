@@ -6,7 +6,7 @@
 	"reload": 93,
 	"range": 2160,
 	"customShadow": false,
-	"fogRadiusMultiplier": 0.63,
+	"fogRadiusMultiplier": 0.074,
 	"recoil": 0,
 	"shootY": 0,
 	"minWarmup": 0.8,
@@ -669,7 +669,7 @@
 		"plastanium/3200",
 		"裂位能/1450",
 		"镄/2000",
-		"莱普合金/1300",
+		"莱普合金/1500",
 		"二级协议/60",
 		"三级协议/30"
 	],

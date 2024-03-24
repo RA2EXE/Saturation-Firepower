@@ -5,6 +5,7 @@
 	"size": 3,
 	"maxNodes": 3,
 	"laserRange": 80,
+	"laserScale": 0.5,
 	"research": "surge-tower",
 	"requirements": [
 		"titanium/35",

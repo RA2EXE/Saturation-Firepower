@@ -31,7 +31,7 @@
 	"drownTimeMultiplier":250000,
 	"faceTarget": false,
 	"research": {
-		"parent":"地魁",
+		"parent":"溢裂数据库",
 		"objectives": [{"type": "SectorComplete","preset": "实验种植地"}]
 	},
 	"treadPullOffset":8,

@@ -5,7 +5,7 @@
 	"size": 4,
 	"reload": 26,
 	"range": 640,
-	"fogRadiusMultiplier": 0.5,
+	"fogRadiusMultiplier": 0.25,
 	"maxAmmo": 20,
 	"ammoPerShot": 2,
 	"recoil": 4,

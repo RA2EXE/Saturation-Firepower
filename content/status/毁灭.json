@@ -1,44 +1,46 @@
 {
-	"name":"毁灭",
+	"name": "毁灭",
 	"color": "FF5B5B",
 	"damage": 50,
-	"show":false,
-	"damageMultiplier":5,
-	"healthMultiplier":2,
-	"speedMultiplier":5,
-	"reloadMultiplier":5,
-	"effectChance":0.5,
-	"effect":{
+	"show": false,
+	"damageMultiplier": 5,
+	"healthMultiplier": 2,
+	"speedMultiplier": 5,
+	"reloadMultiplier": 5,
+	"effectChance": 0.5,
+	"effect": {
 		"type": "MultiEffect",
 		"effects": [
-	{
-		"type": "ParticleEffect",
-		"particles": 1,  
-		"baseLength": 56,
-		"length":55,
-		"lifetime": 60,
-		"sizeInterp":"pow5In",
-		"interp":"pow10Out",
-		"spin":5,
-		"region":"饱和火力-菱形",
-		"sizeFrom": 15,
-		"sizeTo": 0,
-		"colorFrom": "FF5B5B",
-		"colorTo": "FF5B5B"
-	},
-	{
-		"type": "ParticleEffect",
-		"particles": 1,  
-		"baseLength": 56,
-		"length":55,
-		"lifetime": 60,
-		"sizeInterp":"pow5In",
-		"interp":"pow10Out",
-		"spin":5,
-		"region":"饱和火力-三角形",
-		"sizeFrom": 15,
-		"sizeTo": 0,
-		"colorFrom": "FF5B5B",
-		"colorTo": "FF5B5B"
-	}]}
+			{
+				"type": "ParticleEffect",
+				"particles": 1,
+				"baseLength": 56,
+				"length": 55,
+				"lifetime": 60,
+				"sizeInterp": "pow5In",
+				"interp": "pow10Out",
+				"spin": 5,
+				"region": "饱和火力-菱形",
+				"sizeFrom": 15,
+				"sizeTo": 0,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5B"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 1,
+				"baseLength": 56,
+				"length": 55,
+				"lifetime": 60,
+				"sizeInterp": "pow5In",
+				"interp": "pow10Out",
+				"spin": 5,
+				"region": "饱和火力-三角形",
+				"sizeFrom": 15,
+				"sizeTo": 0,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5B"
+			}
+		]
+	}
 }

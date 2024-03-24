@@ -293,6 +293,7 @@
 			"pierceArmor": true,
 			"pierce": true,
 			"pierceCap": 3,
+			"pierceDamageFactor": -0.3,
 			"hitShake": 6,
 			"trailChance": 1,
 			"trailInterval": 0.5,
@@ -413,7 +414,7 @@
 		"镄/2200",
 		"blast-compound/550",
 		"裂位能/500",
-		"莱普合金/420",
+		"莱普合金/600",
 		"三级协议/14"
 	],
 	"category": "turret",

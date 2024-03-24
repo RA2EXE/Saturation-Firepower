@@ -9,6 +9,7 @@
 	"targetAir": true,
 	"canOverdrive": false,
 	"range": 800,
+	"fogRadiusMultiplier": 0,
 	"recoil": 0,
 	"customShadow": false,
 	"shootY": 0,

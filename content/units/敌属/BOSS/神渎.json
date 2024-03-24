@@ -32,7 +32,7 @@
 		"殁火","急冻"
 	],
 	"research": {
-		"parent":"神渎",
+		"parent":"溢裂数据库",
 		"objectives": [{"type": "SectorComplete","preset": "火天路"}]
 	},
 	"abilities": [{

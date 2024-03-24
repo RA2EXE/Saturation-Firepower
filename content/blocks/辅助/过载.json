@@ -121,6 +121,6 @@
 		"泰勒合金/200",
 		"三级协议/10"
 	],
-	"category": "effect",
-	"research": "战研"
+	"buildVisibility": "sandboxOnly",
+	"category": "effect"
 }

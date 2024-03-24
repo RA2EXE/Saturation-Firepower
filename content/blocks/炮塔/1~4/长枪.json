@@ -5,6 +5,7 @@
 	"size": 3,
 	"reload": 35,
 	"range": 328,
+	"fogRadiusMultiplier": 0.5,
 	"shake": 2,
 	"recoil": 2,
 	"shootSound": "missileSmall",

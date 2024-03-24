@@ -14,10 +14,11 @@
 	"targetGround": true,
 	"targetAir": true,
 	"inaccuracy": 1,
-	"rotateSpeed": 9,
+	"rotateSpeed": 7.5,
+	"shootCone": 100,
 	"velocityRnd": 0.1,
 	"consumes": {
-		"power": 3
+		"power": 2
 	},
 	"liquidCapacity": 200,
 	"ammoTypes": {

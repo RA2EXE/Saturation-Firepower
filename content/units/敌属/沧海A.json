@@ -20,8 +20,9 @@
 		"tarred","unmoving","wet",
 		"spore-slowed","corroded",
 		"标记","裂位标记","崩溃","干扰"],
+	//"research": {"parent":"溢裂数据库","objectives": [{"type": "SectorComplete","preset": ""}]},
 	"faceTarget": true,
-	"dpsEstimate": 2077.92,//7000+
+	"dpsEstimate": 2077.92,
 	"weapons": [
 		{
 			"name": "饱和打击",
@@ -191,7 +192,6 @@
 			"inaccuracy": 90,
 			"shootWarmupSpeed":0.05,
 			"minWarmup":0.8,
-			"warmupMaintainTime": 600,
 			"shoot": {
 				"shots": 2,
 				"shotDelay": 12,
@@ -301,7 +301,6 @@
 			"inaccuracy": 90,
 			"shootWarmupSpeed":0.05,
 			"minWarmup":0.83,
-			"warmupMaintainTime": 600,
 			"shoot": {
 				"shots": 4,
 				"shotDelay": 6,
@@ -349,7 +348,7 @@
 				"shootEffect": {
 					"type": "WaveEffect",
 					"lifetime": 35,
-					"sizeInterp":"circleOut",
+					"interp":"circleOut",
 					"sizeFrom": 0,
 					"sizeTo": 10,
 					"strokeFrom": 4,
@@ -510,7 +509,7 @@
 						},
 						{
 							"type": "WaveEffect",
-							"sizeInterp": "circleOut",
+							"interp": "circleOut",
 							"lifetime": 22,
 							"sizeFrom": 1,
 							"sizeTo": 72,

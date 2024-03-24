@@ -204,6 +204,7 @@
 	"reload": 180,
 	"rotateSpeed": 10,
 	"range": 500,
+	"fogRadiusMultiplier": 0.32,
 	"category": "turret",
 	"research": "裂爆",
 	"researchCostMultiplier": 0.4,

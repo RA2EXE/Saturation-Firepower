@@ -15,6 +15,7 @@
 	"recoilTime": 80,
 	"unitSort": "strongest",
 	"reload": 300,
+	"fogRadiusMultiplier": 0.5,
 	"rotateSpeed": 1.92,
 	"drawer": {
 		"type": "DrawTurret",
@@ -425,5 +426,5 @@
 	"buildVisibility": "sandboxOnly",
 	"breakable": false,
 	"rebuildable": false,
-	"requirements": ["纳米核/8000","裂位能/15000","硅钢/8000","泰勒合金/12500","莱普合金/7500","三级协议/300"]
+	//"requirements": ["纳米核/8000","裂位能/15000","硅钢/8000","泰勒合金/12500","莱普合金/7500","三级协议/300"]
 }

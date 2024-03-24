@@ -6,6 +6,7 @@
 	"size": 8,
 	"reload": 6,
 	"range": 520,
+	"fogRadiusMultiplier": 0.38,
 	"maxAmmo": 36,
 	"shootCone": 35,
 	"recoilTime": 18,

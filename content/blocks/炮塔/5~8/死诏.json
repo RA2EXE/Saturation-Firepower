@@ -8,7 +8,7 @@
 	"shootSound": "release",
 	"reload": 300,
 	"canOverdrive": false,
-	"fogRadiusMultiplier": 0.36,
+	"fogRadiusMultiplier": 0.25,
 	"range": 1000,
 	"recoilTime": 60,
 	"recoil": 5,

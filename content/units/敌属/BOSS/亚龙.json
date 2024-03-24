@@ -192,7 +192,7 @@
 			"cooldown": 2000
 		}
 	],
-	"research": "亚龙",
+	//"research": {"parent":"溢裂数据库","objectives": [{"type": "SectorComplete","preset": "星移滩"}]},
 	"weapons": [
 		{
 			"name": "震爆弹",

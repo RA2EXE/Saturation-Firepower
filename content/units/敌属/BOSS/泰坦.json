@@ -29,7 +29,7 @@
 	"hovering": true,
 	"faceTarget": true,
 	"canDrown": false,
-	"research": "泰坦",
+	"research": "溢裂数据库",
 	"abilities": [
 		{
 			"type": "StatusFieldAbility",

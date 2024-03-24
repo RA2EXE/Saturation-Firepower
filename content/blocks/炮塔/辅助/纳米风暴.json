@@ -5,6 +5,7 @@
 	"size": 3,
 	"reload": 320,
 	"range": 400,
+	"fogRadiusMultiplier": 0.5,
 	"shoot": {
 		"shots": 2,
 		"shotDelay": 6

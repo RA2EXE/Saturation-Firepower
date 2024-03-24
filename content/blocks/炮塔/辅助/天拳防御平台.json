@@ -8,6 +8,7 @@
 	"size": 4,
 	"reload": 550,
 	"range": 940,
+	"fogRadiusMultiplier": 0.16,
 	"recoilTime": 180,
 	"recoil": 4,
 	"shootSound": "missileLaunch",

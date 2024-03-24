@@ -33,7 +33,7 @@
 	"ammoTypes": {
 		"phase-fabric": {
 			"type": "BasicBulletType",
-			"collides": false,
+			"pierceDamageFactor": 0.05,
 			"hittable": false,
 			"absorbable": false,
 			"shootEffect": {
@@ -86,6 +86,7 @@
 			"backColor": "FEEBB3",
 			"speed": 12,
 			"lifetime": 28.8,
+			"damage": 285,
 			"splashDamageRadius": 64,
 			"splashDamage": 95,
 			"ammoMultiplier": 1,

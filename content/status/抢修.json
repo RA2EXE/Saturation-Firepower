@@ -3,6 +3,7 @@
 	"color": "97FFA8",
 	"damage": -18,
 	"healthMultiplier": 1.35,
+	"speedMultiplier": 0.92,
 	"effectChance": 1,
 	//"opposites": ["burning","wet","sapped","freezing","melting","tarred","muddy","blasted","corroded","拆解","油蚀"],
 	"effect": {

@@ -1,7 +1,5 @@
 {
 	"type": "flying",
-	//"hidden":true,
-	//"physics":false,
 	"autoFindTarget":true,
 	"drawMinimap":false,
 	"name": "麦芒",

@@ -11,7 +11,7 @@
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
-	"craftTime": 80,
+	"craftTime": 60,
 	"itemCapacity": 20,
 	"liquidCapacity": 30,
 	"drawer": {

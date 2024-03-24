@@ -4,7 +4,6 @@
 	"armor":22,
 	"size": 8,
 	"reload": 5,
-	"fogRadiusMultiplier":0.725,
 	"range": 520,
 	"maxAmmo": 60,
 	"recoilTime":90,

@@ -6,7 +6,7 @@
 	"insulated": true,
 	"absorbLasers": true,
 	"size": 6,
-	"reload": 48,
+	"reload": 88,
 	"shootSound": "mediumCannon",
 	"shake": 6,
 	"consumes": {
@@ -14,17 +14,13 @@
 		"liquid": "cryofluid/1.2"
 	},
 	"shoot": {
-		"type": "ShootBarrel",
-		"barrels": [
-			0,31,0,
-			16,30.5,0,
-			-16,30.5,0
-		]
+		"shots": 3,
+		"shotDelay": 8
 	},
-	"shootY": 0,
+	"shootY": 16,
 	"recoils": 3,
 	"range": 1100,
-	"recoilTime": 45,
+	"recoilTime": 30,
 	"recoil": 2,
 	"ammoUseEffect": {
 		"type": "ParticleEffect",
@@ -49,40 +45,24 @@
 		"parts": [
 			{
 				"type": "RegionPart",
-				"suffix": "-管s",
+				"suffix": "-管",
+				"mirror": true,
 				"under": true,
-				"x": 16,
-				"y": -1.5,
-				"recoilIndex": 1,
+				"x": 8,
 				"moveY": 8,
+				"heatProgress": "warmup",
 				"moves":[{
 					"progress": "recoil",
-					"y": -8
+					"y": -5
 					}]
 			},
 			{
 				"type": "RegionPart",
-				"suffix": "-管m",
+				"suffix": "-侧",
+				"x": 12,
+				"moveX": 4,
 				"under": true,
-				"recoilIndex": 0,
-				"moveY": 8,
-				"moves":[{
-					"progress": "recoil",
-					"y": -8
-					}]
-			},
-			{
-				"type": "RegionPart",
-				"suffix": "-管s",
-				"under": true,
-				"x": -16,
-				"y": -1.5,
-				"recoilIndex": 2,
-				"moveY": 8,
-				"moves":[{
-					"progress": "recoil",
-					"y": -8
-					}]
+				"mirror": true
 			}
 		]
 	},
@@ -97,7 +77,7 @@
 	"ammoTypes": {
 		"集束": {
 			"type": "ArtilleryBulletType",
-			"inaccuracy": 3,
+			"inaccuracy": 5,
 			"speed": 16,
 			"lifetime": 68.75,
 			"width": 10,
@@ -130,7 +110,7 @@
 						"baseLength": 3,
 						"lifetime": 185,
 						"colorFrom": "FF7055",
-						"colorTo": "737373FF",
+						"colorTo": "73737380",
 						"cone": 30
 					},
 					{
@@ -147,14 +127,13 @@
 			},
 			"smokeEffect": "none",
 			"trailChance": 0.6,
-			"trailRotation": true,
 			"trailEffect": {
 				"type": "ParticleEffect",
 				"particles": 4,
 				"lifetime": 30,
 				"interp": "circleOut",
 				"sizeInterp": "pow3In",
-				"sizeFrom": 6,
+				"sizeFrom": 3,
 				"sizeTo": 0,
 				"length": 12,
 				"baseLength": 0,

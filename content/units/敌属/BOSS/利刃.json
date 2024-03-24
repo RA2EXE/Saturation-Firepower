@@ -3,8 +3,6 @@
 	"healColor":"FF5B5B",
 	"outlineColor":"383848",
 	"name": "利刃",
-	"description": "信息缺失！",
-	"details": "信息缺失！",
 	"speed": 1.268,
 	"accel": 0.052,
 	"drag": 0.05,
@@ -78,7 +76,7 @@
 		}
 	],
 	"faceTarget": false,
-	"research": "利刃",
+	"research": "溢裂数据库",
 	"weapons": [
 		{
 			"name": "利刃1",

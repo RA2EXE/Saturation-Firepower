@@ -1,0 +1,21 @@
+{
+	"type": "radar",
+	"name": "监测站",
+	"size": 3,
+	"health": 1800,
+	"fogRadius": 81.5,
+	"buildCostMultiplier": 0.5,
+	"outlineColor": "383848",
+	"glowColor": "BFFFDB",
+	"discoveryTime": 480,
+	"consumes": {
+		"power": 1.8
+	},
+	"requirements": [
+		"titanium/200",
+		"silicon/150",
+		"泰勒合金/80"
+	],
+	"category": "effect",
+	"buildVisibility": "fogOnly"
+}

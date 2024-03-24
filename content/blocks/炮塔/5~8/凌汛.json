@@ -5,6 +5,7 @@
 	"armor": -8,
 	"size": 5,
 	"reload": 40,
+	"fogRadiusMultiplier": 0.5,
 	"range": 408,
 	"maxAmmo": 60,
 	"xRand": 6,
@@ -12,7 +13,6 @@
 	"recoilTime": 45,
 	"recoil": 4,
 	"shake": 2.5,
-	"coolantMultiplier": 2000,
 	"consumes": {
 		"power": 25
 	},
@@ -341,10 +341,10 @@
 		}
 	},
 	"requirements": [
-		"titanium/1200",
-		"metaglass/800",
+		"titanium/1000",
+		"metaglass/500",
 		"硅钢/650",
-		"surge-alloy/500",
+		"surge-alloy/450",
 		"二级协议/0"
 	],
 	"category": "turret",

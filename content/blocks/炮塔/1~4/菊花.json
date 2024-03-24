@@ -4,7 +4,7 @@
 	"health": 1300,
 	"size": 4,
 	"reload": 30,
-	"fogRadiusMultiplier": 0.48,
+	"fogRadiusMultiplier": 0.26,
 	"range": 600,
 	"maxAmmo": 60,
 	"heatColor": "FFD197",
