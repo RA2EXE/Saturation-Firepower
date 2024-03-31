@@ -33,7 +33,6 @@
 	"ammoTypes": {
 		"phase-fabric": {
 			"type": "BasicBulletType",
-			"pierceDamageFactor": 0.05,
 			"hittable": false,
 			"absorbable": false,
 			"shootEffect": {

@@ -5,7 +5,7 @@
 	"health": 28000,
 	"hasLiquids": true,
 	"hasItems": true,
-	"itemDuration": 39,
+	"itemDuration": 19.5,
 	"powerProduction": 550,
 	"itemCapacity": 20,
 	"liquidCapacity": 60,
@@ -69,7 +69,6 @@
 				"type": "DrawLiquidRegion",
 				"drawLiquid": "纳米流体"
 			}
-			//DrawCrucibleFlame，nnd是用来做聚变的特效
 		]
 	},
 	"generateEffect": "generatespark",

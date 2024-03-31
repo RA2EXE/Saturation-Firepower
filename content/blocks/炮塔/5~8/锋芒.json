@@ -2,26 +2,28 @@
 	"type": "ContinuousTurret",
 	"name": "锋芒",
 	"unitSort": "strongest",
-	"health": 17500,
+	"health": 12000,
+	"armor": 29,
 	"size": 6,
 	"shootSound": "laserblast",
 	"loopSound": "laserbeam",
 	"loopSoundVolume": 10,
 	"shake": 1.5,
 	"recoil": 0,
+	"heatColor": "FF4040",
 	"cooldownTime": 300,
+	"placeableLiquid": true,
 	"canOverdrive": false,
 	"reload": 12,
 	"aimChangeSpeed": 3.75,
-	"rotateSpeed": 0.55,
+	"rotateSpeed": 0.75,
 	"range": 420,
-	"shootY": 7,
+	"shootY": 8,
 	"shootCone": 10,
 	"shootWarmupSpeed": 0.033,
 	"minWarmup": 0.88,
 	"drawer": {
 		"type": "DrawTurret",
-		"basePrefix": "防御平台-",
 		"parts": [
 			{
 				"type": "HaloPart",
@@ -59,7 +61,7 @@
 				"y": 7,
 				"sides": 3,
 				"shapes": 1,
-				"rotateSpeed": 0.12,
+				"rotateSpeed": 0.2,
 				"color": "c0ecff",
 				"layer": 110,
 				"tri": false,
@@ -76,7 +78,7 @@
 				"y": 24,
 				"sides": 3,
 				"shapes": 1,
-				"rotateSpeed": 0.12,
+				"rotateSpeed": 0.2,
 				"color": "c0ecff",
 				"layer": 110,
 				"tri": false,
@@ -93,7 +95,7 @@
 				"y": 41,
 				"sides": 3,
 				"shapes": 1,
-				"rotateSpeed": 0.12,
+				"rotateSpeed": 0.2,
 				"color": "c0ecff",
 				"layer": 110,
 				"tri": false,
@@ -109,8 +111,10 @@
 				"mirror": true,
 				"suffix": "-侧",
 				"moveX": 5,
-				"moveY": -2,
+				"moveY": 0,
 				"moveRot": 8.5,
+				"heatProgress": "warmup",
+				"heatColor": "FF4040",
 				"children": [
 					{
 						"type": "RegionPart",
@@ -128,7 +132,7 @@
 	},
 	"consumes": {
 		"power": 80,
-		"liquid": "纳米流体/2"
+		"liquid": "纳米流体/1.8"
 	},
 	"chargeSound": "lasercharge",
 	"accurateDelay": false,
@@ -228,8 +232,8 @@
 		"pierceArmor": true,
 		"damageInterval": 6,
 		"hitShake": 3,
-		"hitColor": "c0ecffbf",
-		"color": "c0ecffbf",
+		"hitColor": "c0ecff80",
+		"color": "c0ecffb80",
 		"drawSize": 420,
 		"fragBullets": 2,
 		"fragBullet": {
@@ -338,11 +342,11 @@
 		]
 	},
 	"requirements": [
-		"镄/1500",
-		"metaglass/880",
-		"纳米核/1300",
+		"metaglass/1050",
+		"silicon/900",
+		"纳米核/800",
 		"裂位能/1850",
-		"泰勒合金/1800",
-		"三级协议/15"
+		"莱普合金/650",
+		"三级协议/20"
 	]
 }

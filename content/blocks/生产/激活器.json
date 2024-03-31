@@ -17,6 +17,15 @@
 				"drawLiquid": "纳米流体"
 			},
 			{
+				"type": "DrawCircles",
+				"color": "7CF389A8",
+				"amount": 5,
+				"sides": 4,
+				"strokeMax": 2,
+				"sirokeMin": 0.5,
+				"storkeInterp": "pow5In"
+			},
+			{
 				"type": "DrawRegion",
 				"suffix": "-转",
 				"spinSprite": true,
@@ -30,22 +39,13 @@
 	"outputsLiquid": true,
 	"hasPower": true,
 	"liquidCapacity": 60,
-	"craftTime": 120,
-	"updateEffect": {
-		"type": "ParticleEffect",
-		"particles": 5,
-		"sizeFrom": 2,
-		"sizeTo": 0,
-		"length": 0,
-		"baseLength": 0,
-		"lifetime": 30,
-		"colorFrom": "97FFA8",
-		"colorTo": "97FFA8"
-	},
+	"craftTime": 180,
 	"consumes": {
 		"power": 7.35,
-		"items":["纳米核/2"],
-		"liquid":"cryofluid/0.3"
+		"items": [
+			"纳米核/2"
+		],
+		"liquid": "cryofluid/0.3"
 	},
 	"requirements": [
 		"plastanium/70",
