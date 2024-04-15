@@ -21,7 +21,7 @@
 				"color": "7CF389A8",
 				"amount": 5,
 				"sides": 4,
-				"strokeMax": 2,
+				"strokeMax": 1,
 				"sirokeMin": 0.5,
 				"storkeInterp": "pow5In"
 			},

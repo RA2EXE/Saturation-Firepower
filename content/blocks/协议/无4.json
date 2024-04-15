@@ -11,7 +11,7 @@
 		"items":["coal/5"] 
  },
 	"requirements": [
-		"sand/50000"
+		"sand/1000"
 	],
 	"buildCostMultiplier": 0.1,
 	"buildVisibility": "sandboxOnly",

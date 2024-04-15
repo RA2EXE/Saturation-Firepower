@@ -1,6 +1,7 @@
 {
 	"type": "Separator",
 	"name": "重油沉淀池",
+	"armor": 8,
 	"results": [
 		"blast-compound/3",
 		"pyratite/2"
@@ -8,18 +9,32 @@
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
-			"DrawDefault",
 			{
-				"type": "DrawLiquidRegion",
-				"drawLiquid": "硝化重油",
-				"suffix": "-液体"
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawCultivator",
+				"plantColor": "333333",
+				"plantColorLight": "7CF389A8",
+				"bottomColor": "3C3837",
+				"bubbles": 8,
+				"sides": 4,
+				"recurrence": 6,
+				"radius": 5,
+				"timeScl": 120
 			},
 			{
 				"type": "DrawRegion",
-				"suffix": "-转",
-				"spinSprite": true,
-				"rotateSpeed": 2
-			}
+				"suffix": "-转1",
+				"rotateSpeed": 0.15
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-转2",
+				"rotateSpeed": -0.217
+			},
+			"DrawDefault"
 		]
 	},
 	"size": 4,
@@ -34,10 +49,10 @@
 		"liquid": "硝化重油/0.9"
 	},
 	"requirements": [
-		"镄/120",
-		"graphite/90",
-		"硅钢/80",
-		"surge-alloy/20"
+		"plastanium/80",
+		"纳米核/100",
+		"铬/80",
+		"一级协议/0"
 	],
 	"category": "crafting",
 	"research": "硝化反应器"

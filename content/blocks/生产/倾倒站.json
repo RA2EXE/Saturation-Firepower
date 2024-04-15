@@ -1,16 +1,63 @@
 {
+	"extendedType": "MultiCrafter",
 	"name": "倾倒站",
-	"size": 2,
 	"health": 360,
+	"size": 2,
 	"hasPower": false,
 	"hasLiquids": true,
 	"hasItems": true,
-	"itemCapacity": 20,
-	"liquidCapacity": 300,
+	"liquidCapacity": 120,
 	"requirements": [
 		"lead/80",
 		"metaglass/40"
 	],
+	"craftPlans": [
+		{
+			"consumes": {
+				"items": [
+					"水桶/1"
+				]
+			},
+			"outputLiquid": "water/1",
+			"craftTime": 30
+		},
+		{
+			"consumes": {
+				"items": [
+					"矿渣桶/1"
+				]
+			},
+			"outputLiquid": "slag/1",
+			"craftTime": 30
+		},
+		{
+			"consumes": {
+				"items": [
+					"冷冻液桶/1"
+				]
+			},
+			"outputLiquid": "cryofluid/1",
+			"craftTime": 30
+		},
+		{
+			"consumes": {
+				"items": [
+					"石油桶/1"
+				]
+			},
+			"outputLiquid": "oil/1",
+			"craftTime": 30
+		},
+		{
+			"consumes": {
+				"items": [
+					"纳米流体桶/1"
+				]
+			},
+			"outputLiquid": "纳米流体/1",
+			"craftTime": 30
+		}
+	],
 	"category": "crafting",
-	"research": "灌注站"
+	"research":"灌注站"
 }

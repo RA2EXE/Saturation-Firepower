@@ -1,11 +1,11 @@
 {
+	"extendedType": "MultiCrafter",
 	"name": "螺旋压缩机",
 	"health": 1800,
 	"size": 4,
 	"hasPower": true,
-	"hasItems": true,
 	"hasLiquids": true,
-	"itemCapacity": 20,
+	"hasItems": true,
 	"liquidCapacity": 120,
 	"requirements": [
 		"titanium/250",
@@ -14,7 +14,52 @@
 		"silicon/80",
 		"一级协议/0",
 		"水桶/4"
-],
-"category": "crafting",
-"research": "塑钢厂"
+	],
+	"craftPlans": [
+		{
+			"consumes": {
+				"items": [
+					"coal/8"
+				],
+				"liquids": [
+					"water/0.2"
+				]
+			},
+			"outputItem": "graphite/4",
+			"craftTime": 7.5
+		},
+		{
+			"consumes": {
+				"items": [
+					"spore-pod/4"
+				]
+			},
+			"outputLiquid": "oil/0.4",
+			"craftTime": 15
+		},
+		{
+			"consumes": {
+				"items": [
+					"titanium/2"
+				],
+				"liquids": [
+					"oil/0.25"
+				]
+			},
+			"outputItem": "plastanium/1",
+			"craftTime": 7.5
+		},
+		{
+			"consumes": {
+				"items": [
+					"titanium/8",
+					"石油桶/1"
+				]
+			},
+			"outputItem": "plastanium/5",
+			"craftTime": 15
+		}
+	],
+	"category": "crafting",
+	"research": "塑钢厂"
 }

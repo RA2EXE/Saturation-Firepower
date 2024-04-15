@@ -11,7 +11,7 @@
 		"items":["coal/5"] 
  },
 	"requirements": [
-		"lead/50000"
+		"lead/1000"
 	],
 	"buildCostMultiplier": 0.1,
 	"buildVisibility": "sandboxOnly",

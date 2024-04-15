@@ -11,7 +11,7 @@
 		"items":["coal/5"] 
  },
 	"requirements": [
-		"scrap/50000"
+		"scrap/1000"
 	],
 	"buildCostMultiplier": 0.1,
 	"buildVisibility": "sandboxOnly",

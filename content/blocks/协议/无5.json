@@ -11,7 +11,7 @@
 		"items":["coal/10"] 
  },
 	"requirements": [
-		"titanium/50000"
+		"titanium/1000"
 	],
 	"buildCostMultiplier": 0.1,
 	"buildVisibility": "sandboxOnly",

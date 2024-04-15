@@ -289,13 +289,13 @@
 			"width": 18,
 			"height": 27,
 			"shrinkY": 0.1,
-			"damage": 2750,
+			"damage": 2770,
 			"pierceArmor": true,
 			"pierce": true,
 			"pierceCap": 3,
 			"pierceDamageFactor": -0.3,
 			"hitShake": 6,
-			"trailChance": 1,
+			"trailChance": 0,
 			"trailInterval": 0.5,
 			"trailEffect": {
 				"type": "MultiEffect",
@@ -407,6 +407,25 @@
 						"colorTo": "FFFFFF00"
 					}
 				]
+			},
+			"bulletInterval": 1,
+			"intervalDelay": 0.5,
+			"intervalBullets": 2,
+			"intervalRandomSpread": 30,
+			"intervalAngle": 0,
+			"intervalBullet": {
+				"type": "BasicBulletType",
+				"height": 6,
+				"width": 6,
+				"shrinkY": 0,
+				"sprite": "mine-bullet",
+				"backColor": "9b9dcf",
+				"hittable": false,
+				"damage": 1662,
+				"speed": 8,
+				"lifetime": 2.2,
+				"knockback": 1.9,
+				"hitEffect": "hitBulletBig"
 			}
 		}
 	},

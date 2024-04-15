@@ -11,7 +11,7 @@
 		"items":["coal/10"] 
  },
 	"requirements": [
-		"thorium/50000"
+		"thorium/1000"
 	],
 	"buildCostMultiplier": 0.1,
 	"buildVisibility": "sandboxOnly",

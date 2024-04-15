@@ -11,7 +11,7 @@
 		"items":["coal/5"] 
  },
 	"requirements": [
-		"copper/50000"
+		"copper/1000"
 	],
 	"buildCostMultiplier": 0.1,
 	"buildVisibility": "sandboxOnly",

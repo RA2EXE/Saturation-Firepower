@@ -1,6 +1,8 @@
 {
 	"name": "饱和火力",
 	"displayName":"Saturation firepower",
+	"java": true,
+	"main": "mxLibs.mxLibs",
 	"author":"RA2",
 	"version":"3.1.6",
 	"minGameVersion":"146",

@@ -12,7 +12,7 @@
 		"power": 0.5
 	},
 	"requirements": [
-		"裂位能/50000",
+		"裂位能/1000",
 		"二级协议/1"
 	],
 	"buildCostMultiplier": 0.1,

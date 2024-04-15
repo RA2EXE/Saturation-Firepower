@@ -6,11 +6,11 @@
 	"armor": 6,
 	"size": 5,
 	"heatColor": "FFD197",
-	"reload": 190,
+	"reload": 260,
 	"range": 346,
 	"maxAmmo": 15,
 	"ammoPerShot": 5,
-	"recoilTime": 80,
+	"recoilTime": 90,
 	"recoil": 5,
 	"cooldownTime": 90,
 	"shake": 4,
@@ -24,7 +24,7 @@
 	"coolantMultiplier": 1,
 	"unitSort": "farthest",
 	"consumes": {
-		"power": 50,
+		"power": 90,
 		"coolant": {
 			"amount": 1,
 			"optional": true
@@ -226,7 +226,7 @@
 				"lightningLength": 4
 			},
 			"speed": 16,
-			"lifetime": 30,
+			"lifetime": 21.6,
 			"status": "崩溃",
 			"statusDuration": 320,
 			"splashDamageRadius": 80,
@@ -380,7 +380,6 @@
 						"fragBullets": 1,
 						"fragBullet": {
 							"type": "BasicBulletType",
-							"pierce": true,
 							"hitEffect": {
 								"type": "MultiEffect",
 								"effects": [
@@ -428,7 +427,6 @@
 							"fragBullets": 1,
 							"fragBullet": {
 								"type": "BasicBulletType",
-								"pierce": true,
 								"hitEffect": {
 									"type": "MultiEffect",
 									"effects": [
@@ -723,8 +721,8 @@
 		"镄/300",
 		"silicon/500",
 		"plastanium/300",
-		"phase-fabric/150",
-		"泰勒合金/85",
+		"phase-fabric/700",
+		"泰勒合金/120",
 		"二级协议/5"
 	],
 	"category": "turret",
