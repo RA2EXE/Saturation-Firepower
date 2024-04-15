@@ -6,6 +6,7 @@
 	"hasPower": true,
 	"hasLiquids": true,
 	"hasItems": true,
+	"itemCapacity": 20,
 	"liquidCapacity": 120,
 	"requirements": [
 		"titanium/250",
@@ -15,6 +16,9 @@
 		"一级协议/0",
 		"水桶/4"
 	],
+	"consumes": {
+		"power": 7.5
+	},
 	"craftPlans": [
 		{
 			"consumes": {
