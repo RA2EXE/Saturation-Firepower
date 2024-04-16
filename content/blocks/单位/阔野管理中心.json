@@ -39,7 +39,7 @@
 	"category": "units",
 	"canOverdrive": false,
 	"research": {
-		"parent": "实验工厂",
+		"parent": "溢裂数据库",
 		"objectives": [
 			{
 				"type": "SectorComplete",

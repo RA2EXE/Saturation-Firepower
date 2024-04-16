@@ -90,7 +90,7 @@
 			"ignoreRotation": true,
 			"rotate": false,
 			"shootStatusDuration": 90,
-			"shootStatus": "invincible",
+			"shootStatus": "shielded",
 			"shootCone": 180,
 			"shootSound": "plasmadrop",
 			"xRand": 6,

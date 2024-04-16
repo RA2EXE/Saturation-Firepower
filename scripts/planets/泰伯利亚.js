@@ -135,6 +135,7 @@ SFlib.addToResearch(SCmap6dc, {
 /*
 //做不出来，待定
 可能能做，待命
+做不出来，放弃
 const map8zz = new SectorPreset("战争集成工业区", TBLY, 7);
 map8zz.description = "这里仍在运行并持续不断的派遣军队进攻第五战区。先遣部队已经抵达并建立基地，迅速摧毁这个巨大的军工区，不要给他们派出更多援军的机会。";
 map8zz.difficulty = 12;
@@ -191,7 +192,7 @@ SFlib.addToResearch(map7xx, {
 	objectives: Seq.with(
 	new Objectives.SectorComplete(map6fs))
 });
-
+/*
 const SCmap8jd = new SectorPreset("急冻雾岭", TBLY, 65);
 SCmap8jd.description = "[stat]分支难度警告：非主线战役，可不打。\n行动代号：“断钢锯”\n在此次对敌某集结点的突袭行动中缴获了数台重型机甲单位，这将对我方先进单位的研究突破有重要作用。\n此次撤离行动将由你指挥，敌人绝不会任由我部将之带走，\n数支敌我部队都在向你靠近，小心应对。坚守直到主力部队前来支援。";
 SCmap8jd.difficulty = 20;
@@ -205,7 +206,7 @@ SFlib.addToResearch(SCmap8jd, {
 	objectives: Seq.with(
 	new Objectives.SectorComplete(map7xx))
 });
-
+*/
 const map9mj = new SectorPreset("灭绝", TBLY, 78);
 map9mj.description = "北极基地群78号地区。这里是敌人的纵深腹地，外围防御火力异常凶猛，第五军团勉强撕开了一道裂口，并成功建立前进基地。\n外围友军正在逐步攻坚，一旦突破封锁便会立刻支援。\n[gold]这将是一场硬仗，祝你好运！";
 map9mj.difficulty = 20;
