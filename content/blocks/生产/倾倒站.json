@@ -18,7 +18,7 @@
 					"水桶/1"
 				]
 			},
-			"outputLiquid": "water/1",
+			"outputLiquid": "water/2",
 			"craftTime": 30
 		},
 		{
@@ -27,7 +27,7 @@
 					"矿渣桶/1"
 				]
 			},
-			"outputLiquid": "slag/1",
+			"outputLiquid": "slag/2",
 			"craftTime": 30
 		},
 		{
@@ -36,7 +36,7 @@
 					"冷冻液桶/1"
 				]
 			},
-			"outputLiquid": "cryofluid/1",
+			"outputLiquid": "cryofluid/2",
 			"craftTime": 30
 		},
 		{
@@ -45,7 +45,7 @@
 					"石油桶/1"
 				]
 			},
-			"outputLiquid": "oil/1",
+			"outputLiquid": "oil/2",
 			"craftTime": 30
 		},
 		{
@@ -54,7 +54,7 @@
 					"纳米流体桶/1"
 				]
 			},
-			"outputLiquid": "纳米流体/1",
+			"outputLiquid": "纳米流体/2",
 			"craftTime": 30
 		}
 	],

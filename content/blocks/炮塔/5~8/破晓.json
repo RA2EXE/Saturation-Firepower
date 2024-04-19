@@ -209,9 +209,9 @@
 		"sideAngle": 25,
 		"sideWidth": 2,
 		"sideLength": 420,
-		"pierceCap": 8,
-		"damage": 3130,
-		"buildingDamageMultiplier": 0.01,
+		"pierceCap": 12,
+		"damage": 3680,
+		"buildingDamageMultiplier": 0.001,
 		"lifetime": 70,
 		"ammoMultiplier": 1,
 		"colors": [
@@ -271,9 +271,9 @@
 		}
 	},
 	"consumes": {
-		"power": 176,
+		"power": 180,
 		"coolant": {
-			"amount": 1.8,
+			"amount": 2,
 			"optional": true
 		}
 	},
@@ -292,12 +292,12 @@
 		]
 	},
 	"requirements": [
-		"metaglass/2500",
-		"silicon/3000",
+		"metaglass/2000",
+		"silicon/2500",
 		"硅钢/2000",
-		"泰勒合金/1500",
-		"裂位能/1800",
+		"泰勒合金/130",
+		"裂位能/2000",
 		"二级协议/80",
-		"三级协议/50"
+		"三级协议/40"
 	]
 }

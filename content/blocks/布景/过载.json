@@ -112,7 +112,7 @@
 		"absorbable": false,
 		"instantDisappear": true,
 		"hitSound": "DBZ1"
-	},
+	},/*
 	"requirements": [
 		"metaglass/120",
 		"镄/720",
@@ -120,7 +120,7 @@
 		"硅钢/550",
 		"泰勒合金/200",
 		"三级协议/10"
-	],
+	],*/
 	"buildVisibility": "sandboxOnly",
 	"category": "effect"
 }

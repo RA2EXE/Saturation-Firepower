@@ -8,6 +8,18 @@
 	"hasItems": true,
 	"itemCapacity": 20,
 	"liquidCapacity": 120,
+	/*"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawRegion",
+				"suffix": "-转",
+				"spinSprite": true,
+				"rotateSpeed": 1.125
+			}
+		]
+	},*/
 	"requirements": [
 		"titanium/250",
 		"graphite/210",
@@ -26,7 +38,7 @@
 					"coal/8"
 				],
 				"liquids": [
-					"water/0.2"
+					"water/1.6"
 				]
 			},
 			"outputItem": "graphite/4",
@@ -38,7 +50,7 @@
 					"spore-pod/4"
 				]
 			},
-			"outputLiquid": "oil/0.4",
+			"outputLiquid": "oil/1.6",
 			"craftTime": 15
 		},
 		{
@@ -47,7 +59,7 @@
 					"titanium/2"
 				],
 				"liquids": [
-					"oil/0.25"
+					"oil/2"
 				]
 			},
 			"outputItem": "plastanium/1",
