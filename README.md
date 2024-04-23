@@ -20,7 +20,3 @@ Unfortunately, this mod doesn't work on English devices, I'll translate to the E
 ·QQ Group：【[mindustry]饱和火力】：https://jq.qq.com/?_wv=1027&k=lzXXr2ED
 ·Discord：https://discord.gg/Y7NhHfku
 Suggestions and feedback are welcome here.
-
-# 服务器/Sever location:
-mdtbaohe.work:43252
-
