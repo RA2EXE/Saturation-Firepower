@@ -22,8 +22,7 @@
 				"amount": 5,
 				"sides": 4,
 				"strokeMax": 1,
-				"sirokeMin": 0.5,
-				"storkeInterp": "pow5In"
+				"strokeMin": 0.5
 			},
 			{
 				"type": "DrawRegion",

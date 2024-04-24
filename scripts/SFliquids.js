@@ -6,3 +6,4 @@ function newLiquid(name) {
 }
 newLiquid("纳米流体")
 newLiquid("硝化重油")
+//newLiquid("活化纳米流体")

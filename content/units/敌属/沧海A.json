@@ -83,7 +83,6 @@
 			"shootSound": "missile",
 			"reload": 76,
 			"shootY": 0,
-			"range": 700,
 			"shoot": {
 				"type": "ShootBarrel",
 				"barrels": [
