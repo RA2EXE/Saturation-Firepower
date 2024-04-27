@@ -3,7 +3,7 @@
 	"name": "地动",
 	"pickupUnits": true,
 	"payloadCapacity": 2304,
-	"rotateSpeed": 1.1,
+	"rotateSpeed": 0.7,
 	"speed": 1.48,
 	"drag": 0.07,
 	"accel": 0.09,

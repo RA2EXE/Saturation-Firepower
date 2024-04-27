@@ -202,17 +202,17 @@
 		"lightningLength": 8,
 		"lightningLengthRand": 5,
 		"lightningAngleRand": 75,
-		"lightningDamage": 400,
+		"lightningDamage": 390,
 		"lightningColor": "25C9AB",
-		"length": 1368,
-		"width": 72,
+		"length": 1500,
+		"width": 75,
 		"sideAngle": 25,
 		"sideWidth": 2,
 		"sideLength": 420,
-		"pierceCap": 12,
-		"damage": 3680,
+		"pierceCap": 15,
+		"damage": 4200,
 		"buildingDamageMultiplier": 0.001,
-		"lifetime": 70,
+		"lifetime": 75,
 		"ammoMultiplier": 1,
 		"colors": [
 			"25C9ABCB",
@@ -271,16 +271,16 @@
 		}
 	},
 	"consumes": {
-		"power": 180,
+		"power": 190,
 		"coolant": {
 			"amount": 2,
 			"optional": true
 		}
 	},
 	"reload": 600,
-	"rotateSpeed": 1.2,
-	"fogRadiusMultiplier": 0.2,
-	"range": 1368,
+	"rotateSpeed": 0.96,
+	"fogRadiusMultiplier": 0.167,
+	"range": 1440,
 	"category": "turret",
 	"research": {
 		"parent": "战研",
@@ -292,12 +292,12 @@
 		]
 	},
 	"requirements": [
-		"metaglass/2000",
-		"silicon/2500",
-		"硅钢/2000",
-		"泰勒合金/130",
+		"metaglass/1500",
+		"silicon/2200",
+		"硅钢/1800",
+		"泰勒合金/1300",
 		"裂位能/2000",
-		"二级协议/80",
-		"三级协议/40"
+		"二级协议/60",
+		"三级协议/30"
 	]
 }
