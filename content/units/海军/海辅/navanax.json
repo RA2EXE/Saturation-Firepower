@@ -1,6 +1,21 @@
 {
 	"health": 47500,
 	"details": "升级极限电容以及新型电磁脉冲炮，搭载小型侵蚀光束",
+	"abilities":[{
+		"type": "SuppressionFieldAbility",
+		"range": 224,
+		"reload": 60,
+		"y": -14,
+		"color": "97FFA8",
+		"orbRadius": 9,
+		"orbMidScl": 0.5,
+		"particles": 9,
+		"particleColor": "97FFA8",
+		"particleLife": 60,
+		"particleLen": -8,
+		"particleSize": 3,
+		"applyParticleChance": 0.5
+	}],
 	"weapons": [
 		{
 			"name": "龙王1",

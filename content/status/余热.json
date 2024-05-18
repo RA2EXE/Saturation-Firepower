@@ -3,6 +3,7 @@
 	"color": "F2FF9C",
 	"damage": 120,
 	"transitionDamage": 10000,
+	"dragMultiplier": 0.8,
 	//"affinities": ["余热","崩溃"],
 	"effectChance": 1,
 	"effect": {

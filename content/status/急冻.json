@@ -4,6 +4,7 @@
 	"damage": 1.26,
 	"healthMultiplier":0.75,
 	"speedMultiplier": 0.58,
+	"dragMultiplier": 0.58,
 	"reloadMultiplier":0.58,
 	"effectChance": 0.088,
 	"opposites": [

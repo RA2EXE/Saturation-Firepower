@@ -3,6 +3,7 @@
 	"color": "FF5B5B",
 	"damage": 16.6,
 	"speedMultiplier": 0.8,
+	"dragMultiplier": 0.8,
 	"reloadMultiplier":0.76,
 	"damageMultiplier":0.85,
 	//"opposites": ["wet","freezing"],

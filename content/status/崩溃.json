@@ -4,6 +4,7 @@
 	"damage": 2,
 	"healthMultiplier": 0.95,
 	"speedMultiplier": 0.86,
+	"dragMultiplier": 0.86,
 	"effectChance": 0.1,
 	"effect": {
 		"type": "MultiEffect",

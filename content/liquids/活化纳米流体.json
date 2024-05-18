@@ -5,6 +5,7 @@
 	"alwaysUnlocked": false,
 	"blockReactive": true,
 	"capPuddles": false,
+	"coolant": false,
 	"cells": 12,
 	"canStayOn": ["water","cryofluid","oil","slag"],
 	"spreadTarget": "cryofluid",
