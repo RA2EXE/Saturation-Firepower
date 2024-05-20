@@ -480,10 +480,10 @@
 	},
 	"requirements": [
 		"graphite/500",
-		"phase-fabric/330",
-		"硅钢/250",
+		"硅钢/400",
 		"surge-alloy/350",
-		"二级协议/1"
+		"裂位能/330",
+		"二级协议/5"
 	],
 	"category": "turret",
 	"research": "雷阵雨"
