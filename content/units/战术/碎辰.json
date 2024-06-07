@@ -32,15 +32,7 @@
 	"health": 24500,
 	"armor": 350,
 	"itemCapacity": 0,
-	"research": {
-		"parent": "实验工厂",
-		"objectives": [
-			{
-				"type": "SectorComplete",
-				"preset": "灭绝"
-			}
-		]
-	},
+	//"research": {"parent": "实验工厂","objectives": [{"type": "SectorComplete","preset": "灭绝"}]},
 	"weapons": [
 		{
 			"name": "碎辰1",

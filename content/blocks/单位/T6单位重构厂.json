@@ -5,7 +5,6 @@
 	"liquidCapacity":180,
 	"consumes": {
 		"power": 45,
-		"items": {
 			"items": [
 				"silicon/1300",
 				"plastanium/850",
@@ -13,8 +12,7 @@
 				"硅钢/800",
 				"泰勒合金/600",
 				"裂位能/450"
-			]
-		},
+			],
 		"liquid": "cryofluid/6"
 	},
 	"upgrades":[
@@ -46,10 +44,6 @@
 	"research": {
 		"parent": "战研",
 		"objectives": [
-			{
-				"type": "SectorComplete",
-				"preset": "中央盆地"
-			},
 			{
 				"type": "OnSector",
 				"preset": "第五战区"

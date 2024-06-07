@@ -1,7 +1,8 @@
 {
 	"type": "ArmoredConveyor",
 	"name": "复合装甲传送带",
-	"health": 450,
+	"health": 560,
+	"armor": 8,
 	"insulated": true,
 	"absorbLasers": true,
 	"requirements": [

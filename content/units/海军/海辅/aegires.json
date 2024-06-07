@@ -101,7 +101,7 @@
 				"splashDamageRadius": 55,
 				"splashDamage": 45,
 				"collidesTeam": true,
-				"status": "干扰",
+				"status": "electrified",
 				"statusDuration": 45,
 				"frontColor": "97FFA8",
 				"backColor": "97FFA8",

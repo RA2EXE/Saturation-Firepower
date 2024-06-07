@@ -1,7 +1,8 @@
 {
 	"type": "ItemBridge",
 	"name": "裂位传送塔",
-	"health": 130,
+	"health": 560,
+	"armor": 8,
 	"range": 36,
 	"transportTime":1,
 	"consumes": {"power": 0.5},
@@ -10,10 +11,11 @@
 	"arrowTimeScl": 12,
 	"bridgeWidth": 8,
 	"requirements": [
-		"thorium/25",
+		"thorium/20",
 		"silicon/15",
 		"硅钢/5",
-		"裂位能/5"
+		"裂位能/5",
+		"镄/5"
 	],
 	"category": "distribution",	
 	"research": "phase-conveyor"

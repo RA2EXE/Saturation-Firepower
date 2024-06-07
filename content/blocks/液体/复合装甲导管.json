@@ -1,7 +1,8 @@
 {
 	"type": "ArmoredConduit",
 	"name": "复合装甲导管",
-	"health": 450,
+	"health": 560,
+	"armor": 8,
 	"insulated":true,
 	"absorbLasers":true,
 	"displayFlow":true,

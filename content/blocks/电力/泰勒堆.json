@@ -4,13 +4,24 @@
 	"size": 4,
 	"health": 10500,
 	"liquidCapacity": 600,
-	"itemCapacity": 110,
+	"itemCapacity": 50,
 	"warmupSpeed": 0.001,
 	"hasItems": true,
 	"hasLiquids": true,
 	"outputsPower": true,
 	"powerProduction": 660,
-	"itemDuration": 36000,
+	"itemDuration": 3600,
+	"consumes": {
+		"power": 5,
+		"liquid": {
+			"liquid": "cryofluid",
+			"amount": 3
+		},
+		"items": [
+			"thorium/5",
+			"blast-compound/5"
+		]
+	},
 	"drawer": {
 		"type": "DrawMulti",
 		"drawers": [
@@ -166,24 +177,13 @@
 			}
 		}
 	},
-	"consumes": {
-		"power": 5,
-		"liquid": {
-			"liquid": "cryofluid",
-			"amount": 3
-		},
-		"items": [
-			"thorium/50",
-			"blast-compound/50"
-		]
-	},
 	"requirements": [
 		"lead/1200",
-		"metaglass/800",
+		"metaglass/1000",
 		"镄/780",
 		"硅钢/1200",
 		"泰勒合金/700",
-		"三级协议/0"
+		"二级协议/0"
 	],
 	"category": "power",
 	"research": "镄反应堆"

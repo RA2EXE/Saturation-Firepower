@@ -74,6 +74,7 @@
 	"generateEffect": "generatespark",
 	"consumes": {
 		"itemRadioactive": {},
+		"itemExplode":{},
 		"liquid": "纳米流体/0.9"
 	},
 	"requirements": [
@@ -81,7 +82,8 @@
 		"镄/1280",
 		"硅钢/1700",
 		"纳米核/1000",
-		"裂位能/800"
+		"裂位能/800",
+		"三级协议/10"
 	],
 	"buildCostMultiplier": 0.88,
 	"ambientSound": "techloop",

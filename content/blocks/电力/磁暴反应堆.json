@@ -563,7 +563,7 @@
 	},
 	//"buildCostMultiplier": 1000,
 	"buildVisibility": "campaignOnly",
-	"breakable": false,
+	//"breakable": false,
 	"requirements": [
 		"metaglass/13000",
 		"plastanium/8000",
