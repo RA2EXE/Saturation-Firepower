@@ -34,12 +34,10 @@
 	"craftEffect": "smeltsmoke",
 	"consumes": {
 		"power": 5,
-		"items": {
-			"items": [
-				"graphite/1",
-				"thorium/1"
-			]
-		}
+		"items": [
+			"graphite/1",
+			"thorium/1"
+		]
 	},
 	"researchCostMultiplier": 0.5,
 	"requirements": [

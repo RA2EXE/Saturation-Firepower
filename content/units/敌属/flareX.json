@@ -38,6 +38,7 @@
 	],
 	"faceTarget": true,
 	"circleTarget": true,
+	"targetFlags": ["battery"],
 	"abilities": [
 		{
 			"type": "ShieldArcAbility",

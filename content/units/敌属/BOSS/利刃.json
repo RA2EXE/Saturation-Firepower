@@ -28,7 +28,7 @@
 	"targetAir": true,
 	"health": 250000,
 	"armor": 54,
-	"targetFlags": ["turret"],
+	"targetFlags": ["unitAssembler","turret"],
 	"immunities": [
 		"blasted","burning","electrified",
 		"freezing","melting","disarmed",

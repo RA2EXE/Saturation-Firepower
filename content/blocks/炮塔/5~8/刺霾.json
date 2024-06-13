@@ -415,6 +415,7 @@
 			"intervalAngle": 0,
 			"intervalBullet": {
 				"type": "BasicBulletType",
+				"collidesAir": false,
 				"height": 6,
 				"width": 6,
 				"shrinkY": 0,
