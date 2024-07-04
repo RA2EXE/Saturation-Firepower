@@ -17,7 +17,7 @@
 				"damage": 80,
 				"speed": 8.5,
 				"lifetime": 28,
-				"smokeEffect": "shootBig",
+				"shootEffect": "shootBig",
 				"width": 14,
 				"height": 20
 			}
@@ -42,6 +42,7 @@
 				"damage": 18,
 				"splashDamageRadius": 35,
 				"splashDamage": 37,
+				"homingDelay": 20,
 				"status": "blasted",
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
@@ -72,8 +73,8 @@
 				"damage": 20,
 				"splashDamageRadius": 35,
 				"splashDamage": 42,
+				"homingDelay": 20,
 				"status": "blasted",
-				"statusDuration": 60,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosionBig",
 				"smokeEffect": "none",

@@ -2,7 +2,7 @@
 	"type": "Floor",
 	"name": "嵌纳米地面",
 	"emitLight": true,
-	"lightRadius": 12,
+	"lightRadius": 10,
 	"lightColor": "7CF38980",
 	"useColor": true,
 	"speedMultiplier": 1.125,
