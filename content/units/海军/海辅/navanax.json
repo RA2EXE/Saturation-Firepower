@@ -1,6 +1,11 @@
 {
 	"health": 47500,
 	"details": "升级极限电容以及新型电磁脉冲炮，搭载小型侵蚀光束",
+	"immunities": [
+		"electrified",
+		"disarmed",
+		"拆解"
+	],
 	"abilities":[{
 		"type": "SuppressionFieldAbility",
 		"range": 224,

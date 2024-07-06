@@ -30,6 +30,11 @@
 			"maxTargets": 40
 		}
 	],
+	"immunities": [
+		"electrified",
+		"disarmed",
+		"拆解"
+	],
 	"weapons": [
 		{
 			"name": "玄武1",

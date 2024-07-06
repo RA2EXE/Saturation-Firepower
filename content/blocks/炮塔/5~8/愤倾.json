@@ -262,7 +262,7 @@
 			"drag": -0.12,
 			"lifetime": 40,
 			"status": "disarmed",
-			"statusDuration": 10,
+			"statusDuration": 3,
 			"homingDelay": 10,
 			"homingPower": 0.8,
 			"homingRange": 400,
