@@ -1,5 +1,5 @@
 # 饱和火力/Saturation Firepower
-![logo](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/e39d7de5-09ea-4fd6-b815-674141e0557c)
+![SF](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/3a60e114-5c42-493c-af44-8f5bceb499aa)
 
 # WARNING
 >Unstable beta! 
@@ -17,6 +17,6 @@ Unfortunately, this mod doesn't work on English devices, I'll translate to the E
 >The most realistic battlefield environment and various tactical options. Start with the tutorial and progress to the difficult main campaign, as well as difficult side campaigns for challengers.
 
 # Community
-·QQ Group：【[mindustry]饱和火力】：https://jq.qq.com/?_wv=1027&k=lzXXr2ED
+·QQ Group：942168286
 ·Discord：https://discord.gg/Y7NhHfku
 Suggestions and feedback are welcome here.
