@@ -287,10 +287,10 @@
 	},
 	"requirements": [
 		"plastanium/800",
-		"镄/750",
+		"镄/1050",
 		"silicon/2000",
 		"纳米核/1200",
-		"三级协议/4"
+		"三级协议/12"
 	],
 	"category": "turret",
 	"research": {
