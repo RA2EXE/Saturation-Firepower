@@ -4,10 +4,10 @@
 	"size": 10,
 	"liquidCapacity": 120,
 	"consumes": {
-		"power": 1800,
+		"power": 1200,
 		"liquid": {
 			"liquid": "纳米流体",
-			"amount": 3.6
+			"amount": 4
 		}
 	},
 	"areaSize": 28,
@@ -34,7 +34,7 @@
 		"裂位能/3000",
 		"莱普合金/3000",
 		"二级协议/200",
-		"三级协议/90"
+		"三级协议/120"
 	],
 	"category": "units",
 	"canOverdrive": false,

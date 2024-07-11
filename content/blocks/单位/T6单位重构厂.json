@@ -13,7 +13,7 @@
 				"泰勒合金/600",
 				"裂位能/450"
 			],
-		"liquid": "cryofluid/6"
+		"liquid": "cryofluid/5"
 	},
 	"upgrades":[
         ["reign","陆战6"],
@@ -27,7 +27,7 @@
 		["空5","空6"],
 		["海5","海6"]
 	],
-	"constructTime": 17280,
+	"constructTime": 21600,
 	"requirements": [
 		"lead/4000",
 		"silicon/3800",
