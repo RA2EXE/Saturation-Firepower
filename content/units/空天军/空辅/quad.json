@@ -1,9 +1,9 @@
 {
 	"details": "装载多弹头EMP航空炸弹",
-	"health": 19600,
-	"speed": 1.4,
+	"health": 20000,
+	"speed": 1.6,
 	"rotateSpeed": 2,
-	"accel": 0.065,
+	"accel": 0.072,
 	"drag": 0.017,
 	"lowAltitude": false,
 	"flying": true,
@@ -80,12 +80,12 @@
 				"collides": false,
 				"healPercent": 15,
 				"lightningColor": "97FFA8",
-				"lightningDamage": 15,
+				"lightningDamage": 18,
 				"lightning": 3,
-				"lightningLength": 15,
+				"lightningLength": 16,
 				"status": "electrified",
 				"statusDuration": 120,
-				"splashDamage": 100,
+				"splashDamage": 110,
 				"splashDamageRadius": 120,
 				"fragBullets": 3,
 				"fragLifeMin": 0.7,
@@ -109,7 +109,7 @@
 					"hitSound": "plasmaboom",
 					"despawnEffect": "massiveExplosion",
 					"hitEffect": "greenBomb",
-					"splashDamage": 65,
+					"splashDamage": 72,
 					"splashDamageRadius": 80
 				}
 			}

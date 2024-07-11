@@ -52,10 +52,10 @@
 		]
 	},
 	"consumes": {
-		"power": 180,
-		"liquid": "纳米流体/2"
+		"power": 150,
+		"liquid": "纳米流体/1.5"
 	},
-	"liquidCapacity": 300,
+	"liquidCapacity": 320,
 	"shootSound": "release",
 	"rotateSpeed": 3,
 	"ammoPerShot": 6,
@@ -77,28 +77,27 @@
 			"weaveScale": 8,
 			"weaveMag": 3,
 			"absorbable": false,
-			"healAmount": 175,
+			"healAmount": 288,
+			"healPercent": 18.8,
 			"homingDelay": 40,
 			"homingPower": 0.08,
 			"homingRange": 80,
-			"damage": 175,
+			"damage": 288,
 			"splashDamageRadius": 60,
-			"splashDamage": 175,
+			"splashDamage": 288,
 			"status": "拆解",
 			"sprite": "missile-large",
 			"parts": [
 				{
 					"type": "ShapePart",
 					"color": "97FFA8",
-					"tri": false,
 					"circle": true,
 					"hollow": true,
 					"layer": 100,
 					"stroke": 0,
 					"strokeTo": 3,
 					"radius": 100,
-					"radiusTo": 7,
-					"haloRadius": 0
+					"radiusTo": 7
 				}
 			],
 			"frontColor": "FFFFFF",
@@ -184,7 +183,7 @@
 				"timeIncrease": 1,
 				"powerDamageScl": 2,
 				"powerSclDecrease": 0.88,
-				"unitDamageScl": 2,
+				"unitDamageScl": 1.5,
 				"width": 6,
 				"height": 6,
 				"shrinkY": 0,
@@ -193,8 +192,7 @@
 				"backColor": "97FFA8",
 				"absorbable": false,
 				"collidesTeam": true,
-				"healAmount": 20,
-				"healPercent": 5,
+				"healAmount": 48,
 				"trailLength": 10,
 				"trailWidth": 1.8,
 				"trailColor": "97FFA8",
@@ -203,9 +201,9 @@
 				"homingRange": 200,
 				"speed": 13,
 				"lifetime": 20,
-				"damage": 55,
+				"damage": 48,
 				"radius": 100,
-				"knockback": 12,
+				"knockback": 10,
 				"hitColor": "97FFA8",
 				"hitEffect": {
 					"type": "MultiEffect",
@@ -242,7 +240,7 @@
 				"statusDuration": 8
 			},
 			"hitShake": 7,
-			"fragBullets": 15,
+			"fragBullets": 18,
 			"fragLifeMin": 0.3,
 			"fragBullet": {
 				"type": "BasicBulletType",
@@ -251,16 +249,17 @@
 				"frontColor": "FFFFFF",
 				"backColor": "97FFA8",
 				"absorbable": false,
-				"healAmount": 20,
+				"healAmount": 108,
+				"healPercent": 6,
 				"trailLength": 20,
 				"trailWidth": 2,
 				"trailColor": "97FFA8",
 				"speed": 20,
 				"drag": 0.1,
 				"lifetime": 30,
-				"damage": 50,
+				"damage": 108,
 				"splashDamageRadius": 44,
-				"splashDamage": 50,
+				"splashDamage": 108,
 				"hitColor": "97FFA8",
 				"hitEffect": {
 					"type": "ExplosionEffect",
@@ -281,16 +280,16 @@
 				"hitShake": 3,
 				"hitSound": "laser",
 				"status": "干扰",
-				"statusDuration": 10
+				"statusDuration": 20
 			}
 		}
 	},
 	"requirements": [
 		"plastanium/800",
-		"镄/1050",
+		"镄/750",
 		"silicon/2000",
 		"纳米核/1200",
-		"三级协议/12"
+		"三级协议/8"
 	],
 	"category": "turret",
 	"research": {

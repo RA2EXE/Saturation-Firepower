@@ -16,7 +16,7 @@
 	"warmupMaintainTime": 580,
 	"shoot": {
 		"type": "ShootPattern",
-		"firstShotDelay": 100
+		"firstShotDelay": 120
 	},
 	"drawer": {
 		"type": "DrawTurret",
@@ -197,22 +197,23 @@
 			]
 		},
 		"type": "LaserBulletType",
-		"lightningSpacing": 55,
-		"lightningDelay": 1.9,
+		"lightningSpacing": 43.5,
+		"lightningDelay": 1.2,
 		"lightningLength": 8,
-		"lightningLengthRand": 5,
-		"lightningAngleRand": 75,
-		"lightningDamage": 390,
+		"lightningLengthRand": 4,
+		"lightningAngleRand": 50,
+		"lightningDamage": 488,
 		"lightningColor": "25C9AB",
-		"length": 1500,
+		"length": 1800,
 		"width": 75,
 		"sideAngle": 25,
 		"sideWidth": 2,
 		"sideLength": 420,
-		"pierceCap": 15,
-		"damage": 4200,
+		"pierceCap": 18,
+		"pierceArmor": true,
+		"damage": 4880,
 		"buildingDamageMultiplier": 0.001,
-		"lifetime": 75,
+		"lifetime": 84,
 		"ammoMultiplier": 1,
 		"colors": [
 			"25C9ABCB",
@@ -271,7 +272,7 @@
 		}
 	},
 	"consumes": {
-		"power": 190,
+		"power": 175,
 		"coolant": {
 			"amount": 2,
 			"optional": true
@@ -280,7 +281,7 @@
 	"reload": 600,
 	"rotateSpeed": 0.96,
 	"fogRadiusMultiplier": 0.167,
-	"range": 1440,
+	"range": 1750,
 	"category": "turret",
 	"research": {
 		"parent": "战研",
@@ -292,12 +293,12 @@
 		]
 	},
 	"requirements": [
-		"metaglass/1500",
-		"silicon/2200",
-		"硅钢/1800",
-		"泰勒合金/1300",
+		"metaglass/1800",
+		"silicon/2000",
+		"硅钢/1500",
+		"泰勒合金/1580",
 		"裂位能/2000",
-		"二级协议/60",
-		"三级协议/30"
+		"二级协议/40",
+		"三级协议/20"
 	]
 }

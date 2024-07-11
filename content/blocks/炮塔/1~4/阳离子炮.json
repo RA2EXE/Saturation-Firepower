@@ -5,7 +5,7 @@
 	"health": 2150,
 	"shootEffect": "none",
 	"shootSound": "pulse",
-	"range": 200,
+	"range": 240,
 	"reload": 3,
 	"liquidCapacity": 120,
 	"inaccuracy": 0,
@@ -16,8 +16,8 @@
 	"coolEffect": "steam",
 	"cooldownTime": 150,
 	"consumes": {
-		"power": 8,
-		"liquid": "water/1"
+		"power": 6,
+		"liquid": "water/0.8"
 	},
 	"drawer": {
 		"type": "DrawTurret",
@@ -39,12 +39,12 @@
 		"type": "ContinuousLaserBulletType",
 		"hitEffect": "hitMeltdown",
 		"status": "阳电",
-		"statusDuration": 8,
+		"statusDuration": 12,
 		"pierceArmor": true,
 		"width": 4,
-		"length": 220,
+		"length": 240,
 		"knockback": 1,
-		"damage": 12,
+		"damage": 20,
 		"ammoMultiplier": 1,
 		"spawnBullets": [
 			{
@@ -52,10 +52,10 @@
 				"width": 12,
 				"damage": 88,
 				"speed": 22,
-				"lifetime": 10,
+				"lifetime": 11,
 				"pierceArmor": true,
 				"splashDamageRadius": 35,
-				"splashDamage": 135,
+				"splashDamage": 188,
 				"statusDuration": 60,
 				"status": "melting",
 				"frontColor": "FFA05C",
@@ -86,7 +86,7 @@
 	},
 	"requirements": [
 		"lead/110","silicon/80",
-		"metaglass/50","硅钢/45"
+		"metaglass/75","硅钢/60"
 	],
 	"category": "turret",
 	"research": "lancer"

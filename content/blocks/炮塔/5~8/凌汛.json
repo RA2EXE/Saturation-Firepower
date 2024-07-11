@@ -60,10 +60,10 @@
 	"ammoTypes": {
 		"titanium": {
 			"type": "PointBulletType",
-			"damage": 72,
+			"damage": 80,
 			"lifetime": 10,
 			"speed": 100,
-			"reloadMultiplier": 15,
+			"reloadMultiplier": 16,
 			"ammoMultiplier": 3,
 			"trailSpacing": 8,
 			"trailEffect": {
@@ -155,14 +155,15 @@
 		},
 		"冷冻液桶": {
 			"type": "PointBulletType",
-			"damage": 50,
-			"splashDamage": 16,
+			"damage": 64,
+			"splashDamage": 32,
 			"splashDamageRadius": 10,
-			"lifetime": 10,
+			"rangeChange": 30,
+			"lifetime": 12,
 			"speed": 100,
 			"status": "freezing",
 			"statusDuration": 60,
-			"reloadMultiplier": 8,
+			"reloadMultiplier": 10,
 			"ammoMultiplier": 30,
 			"trailSpacing": 5,
 			"trailEffect": {
@@ -247,7 +248,7 @@
 					"hitColor": "c0ecff",
 					"hitEffect": "hitLaserBlast",
 					"length": 204,
-					"damage": 16,
+					"damage": 24,
 					"status": "freezing",
 					"statusDuration": 180,
 					"despawnSound": "bolt"
@@ -257,9 +258,10 @@
 		"surge-alloy": {
 			"type": "PointBulletType",
 			"inaccuracy": 3,
-			"damage": 80,
-			"lifetime": 10,
+			"damage": 110,
+			"lifetime": 12,
 			"speed": 100,
+			"rangeChange": 40,
 			"status": "shocked",
 			"reloadMultiplier": 8,
 			"ammoMultiplier": 6,
@@ -325,9 +327,9 @@
 			"spawnBullets": [
 				{
 					"type": "LightningBulletType",
-					"damage": 80,
-					"lightningLength": 56,
-					"lightningLengthRand": 6,
+					"damage": 110,
+					"lightningLength": 64,
+					"lightningLengthRand": 12,
 					"shootEffect": "shootHeal",
 					"smokeEffect": "none",
 					"instantDisappear": true,
@@ -342,9 +344,9 @@
 	},
 	"requirements": [
 		"titanium/1000",
-		"metaglass/500",
-		"硅钢/650",
-		"surge-alloy/450",
+		"metaglass/600",
+		"硅钢/100",
+		"surge-alloy/500",
 		"二级协议/0"
 	],
 	"category": "turret",

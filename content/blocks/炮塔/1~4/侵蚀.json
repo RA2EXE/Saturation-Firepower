@@ -116,7 +116,7 @@
 			"cone": 0
 		},
 		"status": "corroded",
-		"statusDuration": 10,
+		"statusDuration": 20,
 		"incendChance": 0,
 		"incendSpread": 0,
 		"incendAmount": 0,
@@ -127,7 +127,7 @@
 		"hitSize": 8,
 		"length": 224,
 		"width": 6,
-		"damage": 300,
+		"damage": 302,
 		"lightColor": "76D081",
 		"colors": [
 			"7CF389A8",
@@ -136,7 +136,7 @@
 			"FFFFFF"
 		],
 		"bulletInterval": 2,
-		"intervalBullets": 2,
+		"intervalBullets": 1,
 		"intervalRandomSpread": 34,
 		"intervalBullet":{
 			"type": "MissileBulletType",
@@ -147,9 +147,9 @@
 			"healPercent": 1,
 			"status": "拆解",
 			"statusDuration": 10,
-			"damage": 16,
+			"damage": 32,
 			"splashDamageRadius": 16,
-			"splashDamage": 8,
+			"splashDamage": 16,
 			"homingRange": 48,
 			"homingDelay": 8,
 			"trailLength": 3,
@@ -193,8 +193,8 @@
 		}
 	},
 	"consumes": {
-		"power": 48,
-		"liquid": "纳米流体/0.75"
+		"power": 32,
+		"liquid": "纳米流体/0.8"
 	},
 	"shootDuration": 250,
 	"requirements": [

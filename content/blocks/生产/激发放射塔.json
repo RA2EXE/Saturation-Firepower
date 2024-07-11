@@ -4,9 +4,9 @@
 	"health": 430,
 	"outputItems": [
 		"thorium/2",
-		"裂位能/6"
+		"裂位能/12"
 	],
-	//"powerProduction": 12,
+	//"powerProduction": 8,
 	"size": 4,
 	"hasPower": true,
 	"hasLiquids": true,
@@ -176,17 +176,18 @@
 	},
 	"consumes": {
 		"power": 18,
-		"liquid": "纳米流体/0.6",
+		"liquid": "纳米流体/0.45",
 		"items": [
-			"phase-fabric/6",
+			"phase-fabric/8",
 			"镄/1"
 		]
 	},
 	"requirements": [
-		"铬/260",
-		"泰勒合金/140",
-		"纳米核/200",
-		"裂位能/80",
+		"铬/300",
+		"镄/480",
+		"泰勒合金/150",
+		"纳米核/220",
+		"裂位能/180",
 		"二级协议/0"
 	],
 	"category": "crafting",

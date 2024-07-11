@@ -100,21 +100,21 @@
 			"hitEffect": "blastExplosion",
 			"shootEffect": "none",
 			"splashDamageRadius": 32,
-			"splashDamage": 35,
+			"splashDamage": 44,
 			"fragLifeMin": 0.1,
-			"fragBullets": 3,
+			"fragBullets": 4,
 			"fragBullet": {
 				"type": "BasicBulletType",
 				"damage": 9,
 				"despawnEffect": "flakExplosion",
 				"status": "blasted",
 				"statusDuration": 60,
-				"knockback": 0.7,
+				"knockback": 1.5,
 				"backColor": "D85555",
 				"width": 3,
 				"height": 3,
 				"splashDamageRadius": 30,
-				"splashDamage": 22,
+				"splashDamage": 38,
 				"lifetime": 20,
 				"speed": 2.5,
 				"drag": 0.005
@@ -168,9 +168,9 @@
 			"hitSound": "laser",
 			"hitSoundVolume": 0.1,
 			"splashDamageRadius": 16,
-			"splashDamage": 22,
+			"splashDamage": 28,
 			"lightningColor": "EEC591",
-			"lightningDamage": 12,
+			"lightningDamage": 24,
 			"lightning": 2,
 			"lightningLength": 5,
 			"lightningLengthRand": 5,
@@ -180,7 +180,7 @@
 				"type": "ShrapnelBulletType",
 				"pierceArmor": true,
 				"status": "崩溃",
-				"statusDuration": 20,
+				"statusDuration": 30,
 				"hitEffect": {
 					"type": "ParticleEffect",
 					"particles": 5,
@@ -196,9 +196,9 @@
 				"fromColor": "EEC591",
 				"toColor": "EEC59180",
 				"despawnEffect": "none",
-				"damage": 42,
+				"damage": 64,
 				"width": 8,
-				"length": 72
+				"length": 80
 			}
 		}
 	}

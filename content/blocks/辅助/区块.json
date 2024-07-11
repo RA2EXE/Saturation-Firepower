@@ -4,7 +4,7 @@
 	"health": 1800,
 	"size": 4,
 	"range": 7200,
-	"speedBoost": 1.5,
+	"speedBoost": 1.75,
 	"phaseRangeBoost": 0,
 	"speedBoostPhase": 0,
 	"hasBoost": false,
@@ -12,13 +12,13 @@
 		"power": 25
 	},
 	"requirements": [
-		"lead/330",
-		"silicon/230",
-		"硅钢/660",
-		"plastanium/220",
-		"surge-alloy/180",
-		"二级协议/3"
+		"lead/4500",
+		"silicon/500",
+		"硅钢/760",
+		"plastanium/500",
+		"surge-alloy/300",
+		"一级协议/8"
 	],
 	"category": "effect",
-	"research": "裂位超速穹顶"
+	"research": "overdrive-dome"
 }
