@@ -176,8 +176,9 @@
 				"cone": 10
 			},
 			"hitSound": "plasmaboom",
-			"bulletInterval": 6,
+			"bulletInterval": 4,
 			"intervalBullets": 2,
+			"intervalDelay": 40,
 			"intervalBullet": {
 				"type": "EmpBulletType",
 				"timeIncrease": 1,
