@@ -17,6 +17,6 @@ Unfortunately, this mod doesn't work on English devices, I'll translate to the E
 >The most realistic battlefield environment and various tactical options. Start with the tutorial and progress to the difficult main campaign, as well as difficult side campaigns for challengers.
 
 # Community
-·QQ Group：942168286
+·QQ Group：181108928（respawn in 13/07/2024）
 ·Discord：https://discord.gg/Y7NhHfku
 Suggestions and feedback are welcome here.
