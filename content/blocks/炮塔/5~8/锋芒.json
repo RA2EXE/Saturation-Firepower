@@ -15,9 +15,9 @@
 	"placeableLiquid": true,
 	"canOverdrive": false,
 	"reload": 12,
-	"aimChangeSpeed": 3.75,
-	"rotateSpeed": 0.75,
-	"range": 420,
+	"aimChangeSpeed": 6.25,
+	"rotateSpeed": 1.25,
+	"range": 683,
 	"shootY": 8,
 	"shootCone": 10,
 	"shootWarmupSpeed": 0.033,
@@ -131,8 +131,8 @@
 		]
 	},
 	"consumes": {
-		"power": 80,
-		"liquid": "纳米流体/1.8"
+		"power": 84,
+		"liquid": "纳米流体/2.25"
 	},
 	"chargeSound": "lasercharge",
 	"accurateDelay": false,
@@ -140,14 +140,14 @@
 	"shoot": {
 		"type": "ShootPattern",
 		"firstShotDelay": 40,
-		"shotDelay": 120,
+		"shotDelay": 90,
 		"shots": 4
 	},
 	"shootType": {
 		"type": "PointLaserBulletType",
 		"sprite": "饱和火力-寒光束",
 		"status": "急冻",
-		"statusDuration": 30,
+		"statusDuration": 60,
 		"oscScl": 2.5,
 		"oscMag": 0.05,
 		"beamEffect": {
@@ -226,9 +226,9 @@
 			]
 		},
 		"beamEffectInterval": 3,
-		"damage": 380,
+		"damage": 588,
 		"splashDamageRadius": 36,
-		"splashDamage": 12,
+		"splashDamage": 36,
 		"pierceArmor": true,
 		"damageInterval": 6,
 		"hitShake": 3,
@@ -258,11 +258,11 @@
 			},
 			"lifetime": 8,
 			"speed": 10,
-			"status": "freezing",
+			"status": "急冻",
 			"statusDuration": 20,
-			"damage": 40,
-			"splashDamageRadius": 10,
-			"splashDamage": 7,
+			"damage": 162,
+			"splashDamageRadius": 12,
+			"splashDamage": 8,
 			"hitShake": 1,
 			"hitSound": "blot",
 			"hitEffect": {
@@ -342,11 +342,11 @@
 		]
 	},
 	"requirements": [
-		"metaglass/1050",
-		"silicon/900",
-		"纳米核/800",
-		"裂位能/1850",
-		"莱普合金/650",
-		"三级协议/20"
+		"metaglass/1500",
+		"硅钢/2200",
+		"纳米核/1000",
+		"裂位能/1600",
+		"莱普合金/750",
+		"三级协议/30"
 	]
 }

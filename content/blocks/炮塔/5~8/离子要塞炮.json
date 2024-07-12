@@ -19,7 +19,7 @@
 	"shootY": 8,
 	"shoot": {
 		"type": "ShootPattern",
-		"firstShotDelay": 75
+		"firstShotDelay": 48
 	},
 	"shootSound": "laser",
 	"shootEffect": {
@@ -38,7 +38,7 @@
 	"shootType": {
 		"type": "PointBulletType",
 		"lifetime": 50,
-		"speed": 50,
+		"speed": 60,
 		"damage": 5670,
 		"splashDamageRadius": 64,
 		"splashDamage": 5670,
@@ -292,16 +292,16 @@
 		}
 	},
 	"consumes": {
-		"power": 55,
+		"power": 42,
 		"coolant": {
-			"amount": 3,
+			"amount": 2,
 			"optional": true
 		}
 	},
 	"coolantMultiplier": 0.5,
 	"reload": 660,
 	"rotateSpeed": 2.4,
-	"range": 576,
+	"range": 609,
 	"fogRadiusMultiplier": 0.27,
 	"category": "turret",
 	"research": {

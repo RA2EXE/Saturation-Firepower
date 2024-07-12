@@ -1,11 +1,11 @@
 {
 	"name": "急冻",
 	"color": "c0ecff",
-	"damage": 1.26,
-	"healthMultiplier":0.75,
-	"speedMultiplier": 0.58,
-	"dragMultiplier": 0.58,
-	"reloadMultiplier":0.58,
+	"damage": 1.62,
+	"healthMultiplier":0.7,
+	"speedMultiplier": 0.4,
+	"dragMultiplier": 0.6,
+	"reloadMultiplier":0.45,
 	"effectChance": 0.088,
 	"opposites": [
 		"burning",

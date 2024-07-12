@@ -674,7 +674,7 @@
 		"三级协议/30"
 	],
 	//"research": {"parent":"前狼","objectives": [{"type": "SectorComplete","preset": "咆哮西风带"}]},
-	"buildVisibility": "sandboxOnly",
-	"researchCostMultiplier": 50000000,
+	//"buildVisibility": "sandboxOnly",
+	//"researchCostMultiplier": 50000000,
 	"category": "turret"
 }

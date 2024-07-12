@@ -5,7 +5,7 @@
 	"size": 5,
 	"reload": 980,
 	"fogRadiusMultiplier": 0.16,
-	"range": 450,
+	"range": 1440,
 	"maxAmmo": 20,
 	"recoilTime": 180,
 	"recoil": 8,
@@ -26,7 +26,7 @@
 	},
 	"targetGround": true,
 	"targetAir": true,
-	"inaccuracy": 32,
+	"inaccuracy": 20,
 	"rotateSpeed": 2,
 	"ammoPerShot": 20,
 	"ammoTypes": {

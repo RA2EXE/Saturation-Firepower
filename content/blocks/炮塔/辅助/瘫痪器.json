@@ -76,9 +76,9 @@
 			"backColor": "BFFFDB",
 			"width": 22,
 			"height": 22,
-			"statusDuration": 1500,
+			"statusDuration": 1800,
 			"splashDamageRadius": 72,
-			"splashDamage": 15,
+			"splashDamage": 180,
 			"hitSound": "plasmaboom",
 			"despawnEffect": {
 				"type": "MultiEffect",

@@ -9,9 +9,9 @@
 	"itemCapacity": 10,
 	"liquidCapacity": 20,
 	"drawRim": false,
-	"drillTime": 320,
+	"drillTime": 240,
 	"drillEffect": "mineHuge",
-	"liquidBoostIntensity": 2,
+	"liquidBoostIntensity": 1.8,
 	"hardnessDrillMultiplier": 8,
 	"updateEffect": {
 		"type": "ParticleEffect",
@@ -27,19 +27,19 @@
 		"cone": 20
 	},
 	"consumes": {
-		"power": 13.5,
+		"power": 10.5,
 		"liquid": {
-			"liquid": "纳米流体",
-			"amount": 0.15,
+			"liquid": "cryofluid",
+			"amount": 0.3,
 			"booster": true,
 			"optional": true
 		}
 	},
 	"requirements": [
-		"镄/350",
-		"graphite/200",
-		"硅钢/300",
-		"纳米核/90",
+		"镄/400",
+		"plastanium/200",
+		"硅钢/350",
+		"纳米核/150",
 		"裂位能/200"
 	],
 	"category": "production",

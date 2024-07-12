@@ -67,6 +67,8 @@
 			"damage": 3,
 			"splashDamage": 55,
 			"splashDamageRadius": 35,
+			"frontColor": "FFD2AE",
+			"backColor": "E58956",
 			"hitEffect": "flakExplosionBig"
 		},
 		"硅钢": {
@@ -81,6 +83,8 @@
 			"splashDamageRadius": 20,
 			"status": "unmoving",
 			"statusDuration": 16,
+			"frontColor": "FFFFFF",
+			"backColor": "7595D2",
 			"hitEffect": "flakExplosion"
 		}
 	}

@@ -8,7 +8,7 @@
 			"mirror": false,
 			"x": 0,
 			"y": 0,
-			"reload": 80,
+			"reload": 75,
 			"shoot": {
 				"shots": 8,
 				"shotDelay": 1
@@ -20,14 +20,15 @@
 			"inaccuracy": 6,
 			"bullet": {
 				"type": "MissileBulletType",
-				"damage": 52,
+				"damage": 55,
 				"shootEffect": "none",
 				"smokeEffect": "none",
 				"splashDamageRadius": 35,
-				"splashDamage": 52,
+				"splashDamage": 55,
 				"lightningDamage": 13,
 				"lightning": 2,
-				"lightningLength": 10,
+				"lightningLength": 9,
+				"lightningLengthRand": 3,
 				"hitEffect": "flakExplosionBig",
 				"despawnEffect": "flakExplosion",
 				"width": 8,
@@ -51,7 +52,7 @@
 			"alternate": true,
 			"ejectEffect": "casing3",
 			"bullet": {
-				"damage": 75,
+				"damage": 80,
 				"pierce": true,
 				"pierceCap": 2,
 				"speed": 8,

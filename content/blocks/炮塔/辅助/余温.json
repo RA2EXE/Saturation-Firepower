@@ -1,7 +1,7 @@
 {
 	"type": "PowerTurret",
 	"name": "余温",
-	"unitSort":"strongest",
+	"unitSort": "strongest",
 	"health": 150000,
 	"armor": 85,
 	"accurateDelay": false,
@@ -14,7 +14,6 @@
 	"liquidCapacity": 6000,
 	"canOverdrive": false,
 	"recoilTime": 90,
-	//"heatColor":"F2FF9C88",
 	"minWarmup": 0.96,
 	"warmupMaintainTime": 600,
 	"shootWarmupSpeed": 0.0072,
@@ -417,14 +416,12 @@
 		"cone": 50
 	},
 	"chargeSound": "lasercharge",
-	"targetAir": false,
 	"shootType": {
 		"type": "BasicBulletType",
-		"collidesAir": false,
-		"damage": 15000,
+		"damage": 24000,
 		"splashDamageRadius": 240,
-		"splashDamage": 8000,
-		"lifetime": 100,
+		"splashDamage": 15000,
+		"lifetime": 105,
 		"speed": 30,
 		"sprite": "missile-large",
 		"width": 32,
@@ -517,7 +514,7 @@
 				},
 				{
 					"type": "WaveEffect",
-					"interp":"circleIn",
+					"interp": "circleIn",
 					"lifetime": 20,
 					"sizeFrom": 700,
 					"sizeTo": 0,
@@ -528,7 +525,7 @@
 				},
 				{
 					"type": "WaveEffect",
-					"interp":"circleIn",
+					"interp": "circleIn",
 					"lifetime": 20,
 					"startDelay": 20,
 					"sizeFrom": 700,
@@ -540,7 +537,7 @@
 				},
 				{
 					"type": "WaveEffect",
-					"interp":"circleIn",
+					"interp": "circleIn",
 					"lifetime": 20,
 					"startDelay": 40,
 					"sizeFrom": 700,
@@ -552,7 +549,7 @@
 				},
 				{
 					"type": "WaveEffect",
-					"interp":"circleIn",
+					"interp": "circleIn",
 					"lifetime": 20,
 					"startDelay": 60,
 					"sizeFrom": 700,
@@ -564,7 +561,7 @@
 				},
 				{
 					"type": "WaveEffect",
-					"interp":"circleIn",
+					"interp": "circleIn",
 					"lifetime": 20,
 					"startDelay": 80,
 					"sizeFrom": 700,
@@ -576,7 +573,7 @@
 				},
 				{
 					"type": "WaveEffect",
-					"interp":"circleIn",
+					"interp": "circleIn",
 					"lifetime": 20,
 					"startDelay": 100,
 					"sizeFrom": 700,
@@ -908,7 +905,7 @@
 					},
 					{
 						"type": "WaveEffect",
-						"interp":"circleOut",
+						"interp": "circleOut",
 						"lifetime": 60,
 						"sizeFrom": 0,
 						"sizeTo": 160,
@@ -976,8 +973,8 @@
 					}
 				]
 			},
-			"lightningDamage": 200,
-			"lightning": 2,
+			"lightningDamage": 400,
+			"lightning": 3,
 			"lightningLength": 24,
 			"lightningLengthRand": 24,
 			"lightningColor": "F2FF9C",
@@ -987,9 +984,9 @@
 			"trailColor": "F2FF9C",
 			"trailLength": 3,
 			"trailWidth": 4,
-			"damage": 300,
+			"damage": 550,
 			"splashDamageRadius": 160,
-			"splashDamage": 600,
+			"splashDamage": 1600,
 			"fragBullets": 3,
 			"fragBullet": {
 				"type": "PointBulletType",
@@ -1015,9 +1012,9 @@
 				"pierceArmor": true,
 				"status": "余热",
 				"statusDuration": 230,
-				"damage": 1300,
+				"damage": 1850,
 				"splashDamageRadius": 45,
-				"splashDamage": 120,
+				"splashDamage": 200,
 				"hitShake": 5,
 				"hitSound": "laser",
 				"hitEffect": {
@@ -1060,7 +1057,6 @@
 	"fogRadiusMultiplier": 0.2,
 	"range": 3200,
 	"category": "turret",
-	//"research": {"parent": "余温","objectives": [{"type": "SectorComplete","preset": "溢裂要塞"}]},
 	"requirements": [
 		"纳米核/88000",
 		"泰勒合金/80000",

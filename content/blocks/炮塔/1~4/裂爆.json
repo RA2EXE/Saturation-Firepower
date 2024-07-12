@@ -47,11 +47,11 @@
 	"recoilTime": 28,
 	"shootType": {
 		"type": "BasicBulletType",
-		"damage": 44,
+		"damage": 46,
 		"status": "unmoving",
-		"statusDuration": 38,
+		"statusDuration": 40,
 		"splashDamageRadius": 85,
-		"splashDamage": 30,
+		"splashDamage": 68,
 		"ammoMultiplier": 1,
 		"sprite": "circle-bullet",
 		"shrinkY": 0,
@@ -139,7 +139,7 @@
 				"particles": 3,
 				"sizeFrom": 3,
 				"sizeTo": 0,
-				"length": 18,
+				"length": 22,
 				"baseLength": 0,
 				"lifetime": 20,
 				"colorFrom": "BFFFDB",
@@ -147,17 +147,17 @@
 			},
 			"despawnEffect": "none",
 			"sprite": "circle-bullet",
-			"status": "unmoving",
-			"statusDuration": 6,
+			"status": "干扰",
+			"statusDuration": 15,
 			"shrinkY": 0,
 			"trailLength": 2,
 			"trailWidth": 1.88,
 			"trailColor": "BFFFDB",
 			"frontColor": "BFFFDB",
 			"backColor": "BFFFDB",
-			"damage": 8,
-			"splashDamageRadius": 16,
-			"splashDamage": 16,
+			"damage": 16,
+			"splashDamageRadius": 24,
+			"splashDamage": 22,
 			"speed": 6,
 			"lifetime": 8
 		}
@@ -187,9 +187,9 @@
 		"colorTo": "BFFFDB88"
 	},
 	"consumes": {
-		"power": 8
+		"power": 6
 	},
-	"reload": 120,
+	"reload": 100,
 	"rotateSpeed": 8,
 	"range": 200,
 	"category": "turret",

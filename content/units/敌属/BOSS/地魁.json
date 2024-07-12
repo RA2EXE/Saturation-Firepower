@@ -230,7 +230,7 @@
 				"pierceArmor": true,
 				"hittable": false,
 				"absorbable": false,
-				"status": "崩溃",
+				"status": "碎解",
 				"statusDuration": 360,
 				"frontColor": "FFFFFF",
 				"backColor": "FF5B5B",

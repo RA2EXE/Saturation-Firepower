@@ -67,8 +67,8 @@
 			"status": "油蚀",
 			"hitEffect": "flakExplosionBig",
 			"despawnEffect": "none",
-			"damage": 25,
-			"splashDamage": 46,
+			"damage": 85,
+			"splashDamage": 124,
 			"splashDamageRadius": 30
 		}
 	},

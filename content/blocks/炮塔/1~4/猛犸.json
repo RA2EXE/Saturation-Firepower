@@ -117,11 +117,11 @@
 			"height": 15,
 			"backColor": "D85555FF",
 			"frontColor": "FE7777FF",
-			"damage": 9,
+			"damage": 15,
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
 			"splashDamageRadius": 20,
-			"splashDamage": 30,
+			"splashDamage": 38,
 			"hitEffect": "flakExplosionBig",
 			"despawnEffect": "flakExplosionBig",
 			"ammoMultiplier": 6,
@@ -138,7 +138,7 @@
 				"damage": 8,
 				"scaledSplashDamage": true,
 				"splashDamageRadius": 35,
-				"splashDamage": 40,
+				"splashDamage": 84,
 				"lifetime": 20,
 				"speed": 1.5
 			}

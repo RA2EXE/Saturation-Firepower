@@ -312,9 +312,9 @@
 				"colorTo": "FFFFFF",
 				"cone": 30
 			},
-			"damage": 33,
+			"damage": 30,
 			"splashDamageRadius": 36,
-			"splashDamage": 100,
+			"splashDamage": 105,
 			"hitEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -352,7 +352,7 @@
 				"type": "BasicBulletType",
 				"reflectable": false,
 				"buildingDamageMultiplier": 3,
-				"damage": 13,
+				"damage": 19,
 				"pierceArmor": true,
 				"hitEffect": {
 					"type": "MultiEffect",
@@ -391,7 +391,7 @@
 				"height": 10,
 				"scaledSplashDamage": true,
 				"splashDamageRadius": 60,
-				"splashDamage": 125,
+				"splashDamage": 170,
 				"lifetime": 30,
 				"speed": 2,
 				"drag": 0.005

@@ -4,11 +4,11 @@
 	"health": 2000,
 	"canOverdrive": false,
 	"minBlockSize": 4,
-	"maxBlockSize": 4,
+	"maxBlockSize": 5,
 	"size": 6,
 	"buildSpeed": 0.4,
 	"liquidCapacity": 30,
-	"filter":["裂位收容块","装甲收容块"],
+	"filter":["裂位收容块","装甲收容块","错位","消去"],
 	"consumes": {
 		"power": 12,
 		"liquid": "cryofluid/0.8"

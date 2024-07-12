@@ -97,7 +97,7 @@
 	"ammoTypes": {
 		"thorium": {
 			"speed": 21,
-			"damage": 293.75,
+			"damage": 292.28,
 			"lifetime": 23,
 			"knockback": 4,
 			"pierce": true,
@@ -105,6 +105,8 @@
 			"pierceCap": 2,
 			"width": 16,
 			"height": 21,
+			"frontColor": "FFFFFF",
+			"backColor": "F9A3C7",
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -155,11 +157,11 @@
 		},
 		"裂位能": {
 			"type": "BasicBulletType",
-			"reloadMultiplier": 0.5,
-			"damage": 85.5,
+			"reloadMultiplier": 0.67,
+			"damage": 87.5,
 			"rangeChange": 88,
 			"inaccuracy": 2,
-			"ammoMultiplier": 2,
+			"ammoMultiplier": 3,
 			"speed": 20,
 			"lifetime": 27.2,
 			"width": 18,
@@ -239,7 +241,7 @@
 			"status": "崩溃",
 			"statusDuration": 60,
 			"splashDamageRadius": 48,
-			"splashDamage": 166,
+			"splashDamage": 172,
 			"fragRandomSpread": 0,
 			"fragBullets": 2,
 			"fragBullet": {
@@ -280,7 +282,7 @@
 				"status": "崩溃",
 				"statusDuration": 50,
 				"splashDamageRadius": 50,
-				"splashDamage": 74.25,
+				"splashDamage": 76.25,
 				"lifetime": 10,
 				"speed": 3.2,
 				"fragRandomSpread": 0,
@@ -323,7 +325,7 @@
 					"status": "崩溃",
 					"statusDuration": 50,
 					"splashDamageRadius": 50,
-					"splashDamage": 74.25,
+					"splashDamage": 76.25,
 					"lifetime": 10,
 					"speed": 3.2
 				}
@@ -331,7 +333,7 @@
 		},
 		"镄": {
 			"speed": 26,
-			"damage": 352.5,
+			"damage": 327.5,
 			"lifetime": 18,
 			"knockback": 0.65,
 			"pierce": true,
@@ -340,6 +342,8 @@
 			"pierceCap": 3,
 			"width": 20,
 			"height": 26,
+			"frontColor": "FFFFFF",
+			"backColor": "DEDEDE",
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -387,29 +391,33 @@
 			},
 			"hitEffect": "hitBulletBig",
 			"ammoMultiplier": 3,
-			"fragBullets": 4,
+			"fragBullets": 5,
 			"fragRandomSpread": 30,
 			"fragBullet": {
 				"hitEffect": "none",
 				"width": 9,
 				"height": 10,
-				"damage": 55,
+				"damage": 56,
 				"pierce": true,
 				"pierceBuilding": true,
 				"lifetime": 9,
 				"speed": 26,
-				"drag": 0.05
+				"drag": 0.05,
+				"frontColor": "FFFFFF",
+				"backColor": "DEDEDE"
 			}
 		},
 		"铬": {
 			"speed": 21,
-			"damage": 188,
+			"damage": 218,
 			"status": "内溃",
 			"pierceArmor": true,
 			"lifetime": 22,
-			"knockback": 11,
+			"knockback": 12,
 			"width": 20,
 			"height": 25,
+			"frontColor": "FFFFFF",
+			"backColor": "666484",
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -463,10 +471,14 @@
 				"hitEffect": "none",
 				"width": 9,
 				"height": 10,
-				"damage": 56.25,
-				"knockback": 4,
+				"damage": 56,
+				"knockback": 5,
 				"lifetime": 6,
-				"speed": 21
+				"speed": 21,
+				"status": "slow",
+				"statusDuration": 30,
+				"frontColor": "FFFFFF",
+				"backColor": "666484"
 			}
 		}
 	},

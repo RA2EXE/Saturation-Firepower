@@ -26,8 +26,8 @@
 	"engineSize": 9,
 	"hitSize": 58,
 	"targetAir": true,
-	"health": 250000,
-	"armor": 54,
+	"health": 288000,
+	"armor": 64,
 	"targetFlags": ["unitAssembler","turret"],
 	"immunities": [
 		"blasted","burning","electrified",

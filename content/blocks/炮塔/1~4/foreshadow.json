@@ -3,7 +3,7 @@
 	"rotateSpeed": 3,
 	"fogRadiusMultiplier": 0.6888,
 	"canOverdrive": false,
-	"coolantMultiplier": 1.5,
+	"coolantMultiplier": 1,
 	"consumes": {
 		"power": 18
 	},
@@ -70,7 +70,7 @@
 						"type": "WaveEffect",
 						"lifetime": 20,
 						"sizeFrom": 5,
-						"sizeTo": 80,
+						"sizeTo": 53,
 						"strokeFrom": 3,
 						"strokeTo": 0,
 						"colorFrom": "BFFFDB",
@@ -103,8 +103,9 @@
 			"status": "干扰",
 			"statusDuration": 30,
 			"hitSound": "DBZ1",
-			"splashDamageRadius": 60,
-			"splashDamage": 2350,
+			"damage": 300,
+			"splashDamageRadius": 53,
+			"splashDamage": 2400,
 			"fragBullets": 3,
 			"fragBullet": {
 				"type": "PointBulletType",
@@ -141,7 +142,7 @@
 				"speed": 20,
 				"lifetime": 8,
 				"splashDamageRadius": 16,
-				"splashDamage": 177
+				"splashDamage": 153
 			}
 		},
 		"裂位能": {
@@ -186,7 +187,7 @@
 					},
 					{
 						"type": "WaveEffect",
-						"interp":"circleOut",
+						"interp": "circleOut",
 						"lifetime": 60,
 						"sizeFrom": 2,
 						"sizeTo": 60,

@@ -1,18 +1,18 @@
 {
 	"type": "ItemTurret",
 	"name": "死诏",
-	"health": 10500,
-	"armor": 12,
+	"health": 8000,
+	"armor": -20,
 	"size": 5,
 	"shootY": 16,
 	"shootSound": "release",
 	"reload": 300,
 	"canOverdrive": false,
 	"fogRadiusMultiplier": 0.25,
-	"range": 850,
+	"range": 900,
 	"recoilTime": 60,
 	"recoil": 5,
-	"maxAmmo": 16,
+	"maxAmmo": 24,
 	"cooldownTime": 100,
 	"targetGround": true,
 	"targetAir": true,
@@ -147,27 +147,27 @@
 	"consumes": {
 		"power": 80,
 		"coolant": {
-			"amount": 2,
+			"amount": 1.5,
 			"optional": true
 		}
 	},
-	"coolantMultiplier": 1,
+	"coolantMultiplier": 0.8,
 	"ammoTypes": {
 		"surge-alloy": {
 			"type": "RailBulletType",
 			"hitSound": "explosionbig",
 			"hitSoundVolume": 3,
 			"rangeChange": 150,
-			"buildingDamageMultiplier": 0.3,
+			"buildingDamageMultiplier": 0.25,
 			"ammoMultiplier": 3,
 			"pierce": true,
 			"pierceBuilding": true,
-			"pierceCap": 10,
-			"damage": 4200,
-			"pierceDamageFactor": 0.1,
+			"pierceCap": 8,
+			"damage": 2960,
+			"pierceDamageFactor": 0.075,
 			"length": 1000,
 			"shootEffect": "instShoot",
-			"pointEffectSpace": 30,
+			"pointEffectSpace": 45,
 			"pointEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -238,12 +238,14 @@
 					"type": "BasicBulletType",
 					"lifetime": 24,
 					"speed": 41.6,
-					"damage": 1300,
+					"damage": 1720,
 					"hitShake": 5,
 					"lightning": 2,
-					"lightningLength": 11,
-					"lightningDamage": 97,
+					"lightningLength": 12,
+					"lightningDamage": 96,
 					"trailInterval": 0.5,
+					"pierce": true,
+					"pierceCap": 6,
 					"trailEffect": {
 						"type": "ParticleEffect",
 						"sizeFrom": 8,
@@ -269,13 +271,13 @@
 		},
 		"泰勒合金": {
 			"type": "PointBulletType",
-			"damage": 8800,
+			"damage": 6540,
 			"hitSound": "DBZ1",
 			"speed": 20,
 			"hitShake": 8,
-			"buildingDamageMultiplier": 0.2,
+			"buildingDamageMultiplier": 0.125,
 			"status": "干扰",
-			"statusDuration": 60,
+			"statusDuration": 75,
 			"trailSpacing": 9,
 			"trailEffect": {
 				"type": "ParticleEffect",
@@ -355,7 +357,7 @@
 				"type": "PointBulletType",
 				"trailSpacing": 8,
 				"status": "干扰",
-				"statusDuration": 38,
+				"statusDuration": 30,
 				"trailEffect": {
 					"type": "ParticleEffect",
 					"particles": 1,
@@ -398,19 +400,19 @@
 				"hitSound": "plasmaboom",
 				"speed": 10,
 				"lifetime": 8,
-				"lightningDamage": 72,
+				"lightningDamage": 108,
 				"lightning": 2,
 				"lightningLength": 9,
 				"lightningColor": "BFFFDB",
 				"splashDamageRadius": 35,
-				"splashDamage": 266.66,
+				"splashDamage": 300,
 				"fragRandomSpread": 45,
 				"fragBullets": 1,
 				"fragBullet": {
 					"type": "PointBulletType",
 					"trailSpacing": 8,
 					"status": "干扰",
-					"statusDuration": 38,
+					"statusDuration": 10,
 					"trailEffect": {
 						"type": "ParticleEffect",
 						"particles": 1,
@@ -453,19 +455,19 @@
 					"hitSound": "plasmaboom",
 					"speed": 10,
 					"lifetime": 8,
-					"lightningDamage": 72,
+					"lightningDamage": 84,
 					"lightning": 2,
 					"lightningLength": 9,
 					"lightningColor": "BFFFDB",
 					"splashDamageRadius": 35,
-					"splashDamage": 266.66,
+					"splashDamage": 240,
 					"fragRandomSpread": 45,
 					"fragBullets": 1,
 					"fragBullet": {
 						"type": "PointBulletType",
 						"trailSpacing": 8,
 						"status": "干扰",
-						"statusDuration": 38,
+						"statusDuration": 5,
 						"trailEffect": {
 							"type": "ParticleEffect",
 							"particles": 1,
@@ -508,12 +510,12 @@
 						"hitSound": "plasmaboom",
 						"speed": 10,
 						"lifetime": 8,
-						"lightningDamage": 72,
+						"lightningDamage": 64,
 						"lightning": 2,
 						"lightningLength": 9,
 						"lightningColor": "BFFFDB",
 						"splashDamageRadius": 35,
-						"splashDamage": 266.66
+						"splashDamage": 200
 					}
 				}
 			}
@@ -522,8 +524,9 @@
 	"requirements": [
 		"silicon/1000",
 		"硅钢/1500",
-		"镄/900",
-		"泰勒合金/1100"
+		"镄/1000",
+		"泰勒合金/1100",
+		"二级协议/2"
 	],
 	"category": "turret",
 	"research": "穿云"
