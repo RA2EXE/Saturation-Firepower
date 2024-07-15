@@ -10,7 +10,6 @@
 	"recoil": 6,
 	"cooldownTime": 40,
 	"shake": 8,
-	"targetHealing": true,
 	"warmupMaintainTime": 60,
 	"unitSort":"weakest",
 	"shoot": {
