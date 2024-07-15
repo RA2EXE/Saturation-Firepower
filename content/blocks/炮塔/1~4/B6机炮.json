@@ -3,7 +3,7 @@
 	"name": "B6机炮",
 	"health": 960,
 	"size": 2,
-	"reload": 30,
+	"reload": 20,
 	"range": 200,
 	"maxAmmo": 120,
 	"recoilTime": 10,
@@ -15,7 +15,7 @@
 		}
 	},
 	"shoot": {
-		"shots": 8,
+		"shots": 6,
 		"shotDelay": 2
 	},
 	"drawer": {

@@ -1,7 +1,7 @@
 {
 	"type": "GenericCrafter",
 	"name": "激发放射塔",
-	"health": 430,
+	"health": 830,
 	"outputItems": [
 		"thorium/2",
 		"裂位能/12"
@@ -183,12 +183,11 @@
 		]
 	},
 	"requirements": [
-		"铬/300",
-		"镄/480",
+		"莱普合金/300",
 		"泰勒合金/150",
 		"纳米核/220",
 		"裂位能/180",
-		"二级协议/0"
+		"二级协议/1"
 	],
 	"category": "crafting",
 	"ambientSound": "pulse",

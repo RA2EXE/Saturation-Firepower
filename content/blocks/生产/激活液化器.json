@@ -1,8 +1,8 @@
 {
 	"type": "GenericCrafter",
 	"name": "激活液化器",
-	"health": 1800,
-	"armor": 4,
+	"health": 2200,
+	"armor": 8,
 	"outputLiquid": "纳米流体/0.9",
 	"itemCapacity": 24,
 	"size": 4,
@@ -31,7 +31,13 @@
 				"spinSprite": true,
 				"rotateSpeed": 0.55
 			},
-			"DrawDefault"
+			"DrawDefault",
+			{
+				"type": "DrawGlowRegion",
+				"color": "7CF389A8",
+				"glowScale": 8,
+				"alpha": 0.8
+			}
 		]
 	},
 	"hasItems": true,
@@ -48,11 +54,11 @@
 		"liquid": "water/0.9"
 	},
 	"requirements": [
-		"铬/180",
+		"莱普合金/180",
 		"surge-alloy/200",
 		"metaglass/300",
 		"纳米核/200",
-		"二级协议/1"
+		"二级协议/2"
 	],
 	"category": "crafting",
 	"research": "激活器"
