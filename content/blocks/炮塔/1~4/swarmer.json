@@ -75,6 +75,7 @@
 			"damage": 5,
 			"status": "unmoving",
 			"statusDuration": 9,
+			"ammoMultiplier": 4,
 			"width": 7,
 			"height": 9,
 			"despawnEffect": "blastExplosion",
@@ -145,7 +146,7 @@
 			"status": "崩溃",
 			"statusDuration": 30,
 			"reloadMultiplier": 0.667,
-			"ammoMultiplier": 8,
+			"ammoMultiplier": 5,
 			"hitEffect": {
 				"type": "WrapEffect",
 				"effect": "dynamicSpikes",
