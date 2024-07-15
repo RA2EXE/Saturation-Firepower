@@ -297,8 +297,8 @@
 		"research": "纳米风暴",
 		"objectives": [
 			{
-				"type": "SectorComplete",
-				"preset": "第五战区"
+				"type": "OnSector",
+				"preset": "风沙谷"
 			}
 		]
 	}
