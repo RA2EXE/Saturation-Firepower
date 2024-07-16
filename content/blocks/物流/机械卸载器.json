@@ -6,6 +6,7 @@
 	"hasItems": "true",
 	"type": "Unloader",
 	"name": "机械卸载器",
+	"group": "transportation",
 	"requirements": [
 		"copper/20",
 		"lead/20"
