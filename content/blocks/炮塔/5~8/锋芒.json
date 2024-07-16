@@ -131,8 +131,8 @@
 		]
 	},
 	"consumes": {
-		"power": 84,
-		"liquid": "纳米流体/2.25"
+		"power": 180,
+		"liquid": "纳米流体/2.7"
 	},
 	"chargeSound": "lasercharge",
 	"accurateDelay": false,
@@ -226,9 +226,9 @@
 			]
 		},
 		"beamEffectInterval": 3,
-		"damage": 588,
+		"damage": 550,
 		"splashDamageRadius": 36,
-		"splashDamage": 36,
+		"splashDamage": 24,
 		"pierceArmor": true,
 		"damageInterval": 6,
 		"hitShake": 3,
@@ -260,7 +260,7 @@
 			"speed": 10,
 			"status": "急冻",
 			"statusDuration": 20,
-			"damage": 162,
+			"damage": 172,
 			"splashDamageRadius": 12,
 			"splashDamage": 8,
 			"hitShake": 1,
