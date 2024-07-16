@@ -1,0 +1,56 @@
+getflag ST "RET"
+jump 0 notEqual ST 1
+wait 5
+spawn @饱和火力-工农 33 392 330 @sharded U
+status false fast unit 30
+spawn @饱和火力-工农 29 392 330 @sharded U
+status false fast unit 30
+spawn @饱和火力-工农 33 388 330 @sharded U
+status false fast unit 30
+ubind @饱和火力-工农
+ucontrol approach 179 204 5 0 0
+stop
+
+
+radar ally player player distance @this 1 p
+sensor x p @x
+sensor y p @y
+op sub x1 x 89
+op sub y1 y 91
+op abs x1 x1 91
+op abs y1 y1 91
+op len j x1 y1
+jump 0 greaterThan j 30
+print "这些废弃建筑疑似还能够使用"
+message announce 2
+print "[green]已经派遣少量工农前去勘测并回收"
+message notify 2
+print "[green]他们将会在一分钟内抵达"
+print "[green]\n请确保建筑的完整性"
+message announce 2
+wait 6
+spawn @饱和火力-工农 1 1 45 1 U
+setprop @payloadType U @mono
+setprop @payloadType U @mono
+ubind U
+ucontrol move 87 85 0 0 0
+spawn @饱和火力-工农 10 1 45 1 U
+setprop @payloadType U @mono
+setprop @payloadType U @mono
+ubind U
+ucontrol move 100 90 0 0 0
+spawn @饱和火力-工农 1 10 45 1 U
+setprop @payloadType U @mono
+setprop @payloadType U @mono
+ubind U
+ucontrol move 90 95 0 0 0
+wait 10
+setprop @team 前哨基地1 1
+explosion 1 91 89 50 3000 true true true
+ubind @饱和火力-工农
+op add i i 1
+ucontrol payDrop 90 95 0 0 0
+sensor PA @unit @payloadCount
+jump 37 notEqual PA 0
+jump 35 lessThan i 3
+stop

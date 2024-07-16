@@ -1,17 +1,17 @@
 {
-	  "health": 110,
-	  "size":1,
-	  "speed": 1,
-	  "update": "true",
-	  "hasItems": "true",
-	  "type":"Unloader",
-	  "description": "物流中心特供",
-	  "name":"高速卸载器",
-	  "requirements": [
+	"health": 110,
+	"size": 1,
+	"speed": 1,
+	"update": "true",
+	"hasItems": "true",
+	"type": "Unloader",
+	"name": "高速卸载器",
+	"group": "transportation",
+	"requirements": [
 		"titanium/20",
 		"silicon/10",
 		"硅钢/15"
 	],
 	"category": "effect",
-	"research":"unloader"
-	}
+	"research": "unloader"
+}
