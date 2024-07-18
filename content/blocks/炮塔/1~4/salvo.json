@@ -58,7 +58,6 @@
 			"splashDamage": 45,
 			"ammoMultiplier": 6,
 			"knockback": 3,
-			"frontColor": "FFD2AE",
 			"backColor": "E58956",
 			"hitEffect": "blastExplosion",
 			"despawnEffect": "blastExplosion",
@@ -79,8 +78,6 @@
 		},
 		"thorium": {
 			"type": "BasicBulletType",
-			"frontColor": "FFFFFF",
-			"backColor": "F9A3C7",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
 			"hitEffect": "hitBulletBig",

@@ -41,8 +41,7 @@
 			"hitSize": 5,
 			"width": 16,
 			"height": 21,
-			"frontColor": "FFFFFF",
-			"backColor": "F9A3C7",
+			"hitEffect": "hitBulletBig",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke"
 		},
@@ -64,6 +63,13 @@
 			"width": 16,
 			"height": 21,
 			"ammoMultiplier": 4,
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"hitBulletBig",
+					"fireHit"
+				]
+			},
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke"
 		},
@@ -78,6 +84,7 @@
 			"height": 21,
 			"frontColor": "FFFFFF",
 			"backColor": "7595D2",
+			"hitEffect": "hitBulletBig",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
 			"ammoMultiplier": 5

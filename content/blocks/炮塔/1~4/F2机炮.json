@@ -68,6 +68,7 @@
 			"lifetime": 30.76,
 			"backColor": "FF8C00",
 			"frontColor": "FFB90F",
+			"despawnEffect": "fireHit",
 			"width": 6,
 			"height": 9,
 			"ammoMultiplier": 4
@@ -86,7 +87,7 @@
 		"titanium": {
 			"speed": 9,
 			"lifetime": 22.22,
-			"damage": 22,
+			"damage": 20,
 			"reloadMultiplier": 1.2,
 			"width": 8,
 			"height": 10,
@@ -95,15 +96,13 @@
 		},
 		"thorium": {
 			"speed": 8,
-			"damage": 32,
+			"damage": 28,
 			"lifetime": 25,
 			"width": 10,
 			"height": 11,
 			"ammoMultiplier": 6,
 			"pierce": true,
 			"pierceCap": 2,
-			"frontColor": "FFFFFF",
-			"backColor": "F9A3C7",
 			"shootEffect":"shootBig"
 		}
 	},

@@ -78,6 +78,18 @@
 					"type": "MultiEffect",
 					"effects": [
 						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 49,
+							"startDelay": 10,
+							"colorFrom": "7CF389",
+							"colorTo": "7CF389",
+							"sizeFrom": 0,
+							"sizeTo": 5
+						},
+						{
 							"type": "WaveEffect",
 							"lifetime": 40,
 							"sizeFrom": 90,
@@ -167,7 +179,7 @@
 				"pierce": true,
 				"collidesTeam": true,
 				"speed": 2,
-				"lifetime": 28,
+				"lifetime": 27.5,
 				"width": 4,
 				"height": 13
 			}

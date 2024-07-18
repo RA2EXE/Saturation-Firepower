@@ -181,7 +181,6 @@
 				"y": 0,
 				"suffix": "-管",
 				"progress": "recoil",
-				"heatProgress": "recoil",
 				"under": true,
 				"moveY": -8
 			}

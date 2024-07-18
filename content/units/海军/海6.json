@@ -53,6 +53,10 @@
 		{
 			"name": "重堂1",
 			"reload": 45,
+			"shoot":{
+				"shots": 2,
+				"shotDelay": 12
+			},
 			"x": 24,
 			"y": 32,
 			"shootY": 6,
@@ -120,8 +124,8 @@
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 4,
-							"sizeFrom": 15,
+							"particles": 3,
+							"sizeFrom": 9,
 							"sizeTo": 0,
 							"interp": "pow5Out",
 							"sizeInterp": "pow5In",
@@ -163,6 +167,10 @@
 		{
 			"name": "重堂1",
 			"reload": 43,
+			"shoot":{
+				"shots": 2,
+				"shotDelay": 12
+			},
 			"x": -33,
 			"y": 8,
 			"shootY": 6,
@@ -230,8 +238,8 @@
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 4,
-							"sizeFrom": 15,
+							"particles": 3,
+							"sizeFrom": 9,
 							"sizeTo": 0,
 							"interp": "pow5Out",
 							"sizeInterp": "pow5In",
@@ -273,6 +281,10 @@
 		{
 			"name": "重堂1",
 			"reload": 48,
+			"shoot":{
+				"shots": 2,
+				"shotDelay": 12
+			},
 			"x": -28,
 			"y": -24,
 			"shootY": 6,
@@ -340,8 +352,8 @@
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 4,
-							"sizeFrom": 15,
+							"particles": 3,
+							"sizeFrom": 9,
 							"sizeTo": 0,
 							"interp": "pow5Out",
 							"sizeInterp": "pow5In",
