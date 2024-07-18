@@ -19,7 +19,6 @@
 	"health": 160000,
 	"armor": 40,
 	"faceTarget": false,
-	//"researchCostMultiplier": 0,
 	"research": {
 		"parent": "海5",
 		//"objectives": [{"type": "SectorComplete","preset": "map8zz"}]
@@ -57,6 +56,8 @@
 				"shots": 2,
 				"shotDelay": 12
 			},
+			"shootWarmupSpeed":0.05,
+			"minWarmup":0.9,
 			"x": 24,
 			"y": 32,
 			"shootY": 6,
@@ -171,6 +172,8 @@
 				"shots": 2,
 				"shotDelay": 12
 			},
+			"shootWarmupSpeed":0.05,
+			"minWarmup":0.9,
 			"x": -33,
 			"y": 8,
 			"shootY": 6,
@@ -285,6 +288,8 @@
 				"shots": 2,
 				"shotDelay": 12
 			},
+			"shootWarmupSpeed":0.05,
+			"minWarmup":0.9,
 			"x": -28,
 			"y": -24,
 			"shootY": 6,

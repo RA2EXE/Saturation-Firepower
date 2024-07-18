@@ -6,12 +6,12 @@
 	"radius": 360,
 	"squareSprite": false,
 	"canOverdrive": false,
-	"shieldHealth": 28000,
+	"shieldHealth": 35000,
 	"phaseRadiusBoost": 0,
 	"phaseShieldBoost": 10000,
-	"cooldownNormal": 7,
+	"cooldownNormal": 8,
 	"cooldownLiquid": 2.5,
-	"cooldownBrokenBase": 3,
+	"cooldownBrokenBase": 5,
 	"coolantConsumption": 0.5,
 	"liquidCapacity": 60,
 	"itemCapacity": 20,
@@ -31,12 +31,12 @@
 		"power": 16
 	},
 	"requirements": [
-		"lead/800",
-		"镄/650",
+		"lead/1200",
 		"plastanium/460",
+		"镄/650",
 		"硅钢/650",
-		"泰勒合金/500",
-		"二级协议/1"
+		"泰勒合金/700",
+		"二级协议/3"
 	],
 	"research": "铁幕",
 	"category": "effect"
