@@ -6,6 +6,7 @@
 	"immunities": [
 		"electrified",
 		"unmoving",
+		"修复",
 		"干扰",
 		"disarmed"
 	],
@@ -19,7 +20,7 @@
 	"waveTrailX": 29.5,
 	"waveTrailY": -40,
 	"trailScl": 5,
-	"health": 98666,
+	"health": 148000,
 	"buildSpeed": 5,
 	"armor": 42,
 	"abilities": [
@@ -45,9 +46,9 @@
 		{
 			"type": "ForceFieldAbility",
 			"radius": 190,
-			"max": 8000,
-			"regen": 30,
-			"cooldown": 1330
+			"max": 12000,
+			"regen": 35,
+			"cooldown": 1450
 		}
 	],
 	"researchCostMultiplier": 0,
