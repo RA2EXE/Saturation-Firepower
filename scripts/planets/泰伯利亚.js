@@ -336,4 +336,31 @@ SFlib.addToResearch(阑珊子午线, {
 	objectives: Seq.with(
 	new Objectives.SectorComplete(溢裂要塞))
 });
+
+const SCmapjrsl = new SectorPreset("锯刃山岭", TBLY, 10);
+SCmapjrsl.description = "";
+SCmapjrsl.difficulty = 24;
+SCmapjrsl.alwaysUnlocked = false;
+SCmapjrsl.addStartingItems = true;
+SCmapjrsl.captureWave = 30;
+SCmapjrsl.localizedName = "SCmapjrsl";
+exports.SCmapjrsl = SCmapjrsl;
+SFlib.addToResearch(SCmapjrsl, {
+	parent: "风沙谷",
+	objectives: Seq.with(
+	new Objectives.SectorComplete(map6fs))
+
+const SCmapnlfsc = new SectorPreset("逆流发射场", TBLY, 10);
+SCmapnlfsc.description = "";
+SCmapnlfsc.difficulty = 24;
+SCmapnlfsc.alwaysUnlocked = false;
+SCmapnlfsc.addStartingItems = true;
+SCmapnlfsc.captureWave = 30;
+SCmapnlfsc.localizedName = "SCmapnlfsc";
+exports.SCmapnlfsc = SCmapnlfsc;
+SFlib.addToResearch(SCmapnlfsc, {
+	parent: "锯刃山岭",
+	objectives: Seq.with(
+	new Objectives.SectorComplete(SCmapjrsl))
+});
 */

@@ -9,11 +9,12 @@
 	"shake": 0.05,
 	"inaccuracy": 2,
 	"recoil": 2,
-	"recoilTime":10,
+	"recoilTime": 10,
 	"cooldownTime": 80,
 	"shootEffect": "shootBig",
 	"shootType": {
 		"type": "PointBulletType",
+		"collidesGround": false,
 		"trailEffect": "none",
 		"hitEffect": "none",
 		"despawnEffect": "none",
@@ -28,6 +29,7 @@
 		"fragBullets": 4,
 		"fragBullet": {
 			"type": "PointBulletType",
+			"collidesGround": false,
 			"trailEffect": "none",
 			"hitEffect": "flakExplosion",
 			"despawnEffect": "flakExplosion",
