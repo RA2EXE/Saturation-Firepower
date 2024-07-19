@@ -81,7 +81,7 @@
 			"name": "榴弹炮1",
 			"reload": 190,
 			"shootStatus": "unmoving",
-			"shootStatusDuration": 175,
+			"shootStatusDuration": 195,
 			"recoil": 0,
 			"recoilTime": 70,
 			"cooldownTime":160,

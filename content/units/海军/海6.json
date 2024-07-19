@@ -19,7 +19,6 @@
 	"health": 160000,
 	"armor": 40,
 	"faceTarget": false,
-	//"researchCostMultiplier": 0,
 	"research": {
 		"parent": "海5",
 		//"objectives": [{"type": "SectorComplete","preset": "map8zz"}]
@@ -53,6 +52,12 @@
 		{
 			"name": "重堂1",
 			"reload": 45,
+			"shoot":{
+				"shots": 2,
+				"shotDelay": 12
+			},
+			"shootWarmupSpeed":0.05,
+			"minWarmup":0.9,
 			"x": 24,
 			"y": 32,
 			"shootY": 6,
@@ -120,8 +125,8 @@
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 4,
-							"sizeFrom": 15,
+							"particles": 3,
+							"sizeFrom": 9,
 							"sizeTo": 0,
 							"interp": "pow5Out",
 							"sizeInterp": "pow5In",
@@ -163,6 +168,12 @@
 		{
 			"name": "重堂1",
 			"reload": 43,
+			"shoot":{
+				"shots": 2,
+				"shotDelay": 12
+			},
+			"shootWarmupSpeed":0.05,
+			"minWarmup":0.9,
 			"x": -33,
 			"y": 8,
 			"shootY": 6,
@@ -230,8 +241,8 @@
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 4,
-							"sizeFrom": 15,
+							"particles": 3,
+							"sizeFrom": 9,
 							"sizeTo": 0,
 							"interp": "pow5Out",
 							"sizeInterp": "pow5In",
@@ -273,6 +284,12 @@
 		{
 			"name": "重堂1",
 			"reload": 48,
+			"shoot":{
+				"shots": 2,
+				"shotDelay": 12
+			},
+			"shootWarmupSpeed":0.05,
+			"minWarmup":0.9,
 			"x": -28,
 			"y": -24,
 			"shootY": 6,
@@ -340,8 +357,8 @@
 					"effects": [
 						{
 							"type": "ParticleEffect",
-							"particles": 4,
-							"sizeFrom": 15,
+							"particles": 3,
+							"sizeFrom": 9,
 							"sizeTo": 0,
 							"interp": "pow5Out",
 							"sizeInterp": "pow5In",

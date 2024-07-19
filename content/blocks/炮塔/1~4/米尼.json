@@ -10,7 +10,7 @@
 	"shoot": {
 		"type": "ShootAlternate",
 		"barrels": 2,
-		"spread": 10
+		"spread": 9
 	},
 	"recoilTime": 25,
 	"recoil": 2.88,
@@ -77,7 +77,13 @@
 			"ammoMultiplier": 2,
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
-			"hitEffect": "flakExplosion"
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"flakExplosion",
+					"fireHit"
+				]
+			}
 		},
 		"thorium": {
 			"type": "BasicBulletType",
@@ -106,8 +112,6 @@
 			"width": 11,
 			"height": 15,
 			"ammoMultiplier": 6,
-			"frontColor": "FFFFFF",
-			"backColor": "DEDEDE",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
 			"hitEffect": "hitBulletBig"
@@ -116,7 +120,7 @@
 			"type": "BasicBulletType",
 			"rangeChange": 40,
 			"status": "slow",
-			"statusDuration": 46,
+			"statusDuration": 6,
 			"speed": 17,
 			"lifetime": 19,
 			"damage": 61,
@@ -124,8 +128,6 @@
 			"width": 11,
 			"height": 15,
 			"ammoMultiplier": 6,
-			"frontColor": "FFFFFF",
-			"backColor": "666484",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
 			"hitEffect": "hitBulletBig"

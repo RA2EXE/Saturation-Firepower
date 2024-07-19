@@ -105,8 +105,6 @@
 			"pierceCap": 2,
 			"width": 16,
 			"height": 21,
-			"frontColor": "FFFFFF",
-			"backColor": "F9A3C7",
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -342,8 +340,6 @@
 			"pierceCap": 3,
 			"width": 20,
 			"height": 26,
-			"frontColor": "FFFFFF",
-			"backColor": "DEDEDE",
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -416,8 +412,6 @@
 			"knockback": 12,
 			"width": 20,
 			"height": 25,
-			"frontColor": "FFFFFF",
-			"backColor": "666484",
 			"shootEffect": {
 				"type": "MultiEffect",
 				"effects": [

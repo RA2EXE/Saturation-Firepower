@@ -3,7 +3,7 @@
 	"payloadCapacity": 576,
 	"name": "工农",
 	"controller":"BuilderAI",
-	//"defaultCommand": "rebuildCommand",
+	"defaultCommand": "rebuild",
 	"speed": 2,
 	"drag": 0.03,
 	"accel": 0.04,

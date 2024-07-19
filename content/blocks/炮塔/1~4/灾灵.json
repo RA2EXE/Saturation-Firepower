@@ -62,8 +62,6 @@
 			"pierceCap": 8,
 			"width": 18,
 			"height": 23,
-			"frontColor": "FFFFFF",
-			"backColor": "F9A3C7",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
 			"hitEffect": "hitBulletBig",
@@ -91,7 +89,13 @@
 			"width": 16,
 			"height": 20,
 			"ammoMultiplier": 3,
-			"hitEffect": "flakExplosionBig",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"flakExplosionBig",
+					"fireHit"
+				]
+			},
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke"
 		},
@@ -110,7 +114,6 @@
 			"width": 16,
 			"height": 20,
 			"ammoMultiplier": 4,
-			"frontColor": "FFD2AE",
 			"backColor": "E58956",
 			"hitEffect": "flakExplosionBig",
 			"shootEffect": "shootBig",
