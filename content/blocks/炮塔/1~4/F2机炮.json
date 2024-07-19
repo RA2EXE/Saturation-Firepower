@@ -39,7 +39,7 @@
 		},
 		"lead": {
 			"speed": 6.5,
-			"damage": 5,
+			"damage": 7,
 			"fragBullets": 3,
 			"fragBullet": {
 				"speed": 0.8,
@@ -53,7 +53,7 @@
 		},
 		"graphite": {
 			"speed": 6.5,
-			"damage": 28,
+			"damage": 22,
 			"reloadMultiplier": 0.8,
 			"lifetime": 30.76,
 			"width": 7,
@@ -62,7 +62,7 @@
 		},
 		"pyratite": {
 			"speed": 6.5,
-			"damage": 16,
+			"damage": 25,
 			"status": "burning",
 			"statusDuration": 600,
 			"lifetime": 30.76,

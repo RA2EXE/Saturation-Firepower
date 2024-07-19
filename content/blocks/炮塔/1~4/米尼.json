@@ -95,6 +95,8 @@
 			"ammoMultiplier": 4,
 			"pierce": true,
 			"pierceCap": 2,
+			"frontColor": "FFFFFF",
+			"backColor": "F9A3C7",
 			"shootEffect": "shootBig",
 			"smokeEffect": "shootBigSmoke",
 			"hitEffect": "hitBulletBig"
