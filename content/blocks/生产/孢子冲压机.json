@@ -43,13 +43,15 @@
 		"colorTo": "FFFFFF"
 	},
 	"consumes": {
-		"power": 6,
+		"power": 7,
 		"items": [
 			"spore-pod/3"
 		]
 	},
 	"requirements": [
+		"graphite/110",
 		"silicon/40",
+		"metaglass/80",
 		"硅钢/60",
 		"plastanium/30"
 	],

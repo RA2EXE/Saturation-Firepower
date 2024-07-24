@@ -41,13 +41,20 @@
 		]
 	},
 	"requirements": [
-		"镄/80",
-		"铬/20",
-		"硅钢/120",
-		"裂位能/25",
+		"铬/80",
+		"裂位能/50",
+		"纳米核/120",
 		"二级协议/0"
 	],
 	"category": "crafting",
 	"ambientSound": "smelter",
-	"research": "泰勒厂"
+	"research": {
+		"parent": "泰勒厂",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "星稀山脉"
+			}
+		]
+	}
 }

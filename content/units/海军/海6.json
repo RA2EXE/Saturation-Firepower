@@ -51,7 +51,7 @@
 		},
 		{
 			"name": "重堂1",
-			"reload": 45,
+			"reload": 55,
 			"shoot":{
 				"shots": 2,
 				"shotDelay": 12
@@ -167,7 +167,7 @@
 		},
 		{
 			"name": "重堂1",
-			"reload": 43,
+			"reload": 53,
 			"shoot":{
 				"shots": 2,
 				"shotDelay": 12
@@ -283,7 +283,7 @@
 		},
 		{
 			"name": "重堂1",
-			"reload": 48,
+			"reload": 58,
 			"shoot":{
 				"shots": 2,
 				"shotDelay": 12
@@ -449,7 +449,6 @@
 				"lifetime": 51.2,
 				"status": "绝判",
 				"statusDuration": 3600,
-				"collidesAir": false,
 				"hittable": false,
 				"laserAbsorb": true,
 				"pierceArmor": true,

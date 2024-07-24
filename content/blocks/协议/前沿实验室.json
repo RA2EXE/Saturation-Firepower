@@ -45,7 +45,7 @@
 	"hasItems": true,
 	"craftTime": 3600,
 	"consumes": {
-		"power": 20
+		"power": 26
 	},
 	"requirements": [
 		"lead/220",

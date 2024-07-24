@@ -8,6 +8,7 @@
 	"drag": 0.03,
 	"accel": 0.04,
 	"rotateSpeed": 2.5,
+	"targetFlags": ["drill"],
 	"immunities": [
 		"electrified",
 		"干扰"

@@ -11,6 +11,10 @@
 	"outputsPower": true,
 	"powerProduction": 660,
 	"itemDuration": 3600,
+	"explosionMinWarmup": 0.5,
+	"explosionDamage": 22000,
+	"explosionShakeDuration": 22,
+	"explosionShake": 8,
 	"consumes": {
 		"power": 5,
 		"liquid": {
@@ -44,7 +48,8 @@
 	"destroyBullet": {
 		"type": "BasicBulletType",
 		"splashDamageRadius": 480,
-		"splashDamage": 6000,
+		"splashDamage": 1000,
+		"buildingDamageMultiplier": 6,
 		"instantDisappear": true,
 		"makeFire": true,
 		"hitShake": 50,
@@ -108,8 +113,8 @@
 		"height": 0,
 		"hitSound": "DBZ1",
 		"hitSoundVolume": 3,
-		"status":"绝判",
-		"statusDuration": 265,
+		"status": "崩溃",
+		"statusDuration": 1000,
 		"fragBullets": 60,
 		"fragLifeMin": 0.15,
 		"fragLifeMax": 1.1,
@@ -118,10 +123,11 @@
 			"collides": false,
 			"hittable": false,
 			"absorbable": false,
-			"splashDamage": 800,
+			"splashDamage": 100,
 			"splashDamageRadius": 180,
-			"status":"崩溃",
-			"statusDuration": 1200,
+			"buildingDamageMultiplier": 8,
+			"status": "崩溃",
+			"statusDuration": 1000,
 			"speed": 30,
 			"drag": 0.1,
 			"hitShake": 50,
@@ -183,7 +189,7 @@
 		"镄/780",
 		"硅钢/1200",
 		"泰勒合金/700",
-		"二级协议/0"
+		"二级协议/5"
 	],
 	"category": "power",
 	"research": "镄反应堆"

@@ -16,13 +16,13 @@
 		]
 	},
 	"requirements": [
-		"lead/70",
-		"silicon/35",
-		"titanium/40",
-		"metaglass/30"
+		"lead/170",
+		"silicon/50",
+		"metaglass/110",
+		"硅钢/80"
 	],
 	"consumes": {
-		"power": 6.6,
+		"power": 18,
 		"liquid": {
 			"liquid": "water",
 			"amount": 0.6
