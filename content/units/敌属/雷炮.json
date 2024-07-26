@@ -81,9 +81,9 @@
 					"colorTo": "FF5B5B",
 					"cone": 13
 				},
-				"hitSound": "spark",
-				"hitSoundPitch": 3,
-				"hitSoundVolume": 8,
+				"hitSound": "DBZ1",
+				"hitSoundPitch": 4,
+				"hitSoundVolume": 0.5,
 				"hitEffect": {
 					"type": "MultiEffect",
 					"effects": [

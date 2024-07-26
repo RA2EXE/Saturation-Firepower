@@ -370,7 +370,9 @@
 			"recoilTime": 90,
 			"mirror": true,
 			"inaccuracy": 0,
-			"shootSound": "largeExplosion",
+			"shootSound": "DBZ1",
+			"soundPitchMin": 2,
+			"soundPitchMax": 2.1,
 			"shake": 10,
 			"parts": [
 				{

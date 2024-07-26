@@ -226,7 +226,8 @@
 					"colorTo": "FEEBB380"
 				},
 				"hitSound": "explosionbig",
-				"hitSoundVolume":3,
+				"hitSoundPitch": 0.5,
+				"hitSoundVolume": 3,
 				"hitColor":"FEEBB388",
 				"hitEffect": {
 					"type":"MultiEffect",
