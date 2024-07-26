@@ -14,9 +14,9 @@
 		"一级协议/0"
 	],
 	"consumes": {
-		"power": 2.29
+		"power": 2.5
 	},
-	"pumpAmount": 0.31,
+	"pumpAmount": 0.301,
 	"rotateSpeed": 1.3,
 	"result": "water",
 	"baseEfficiency": 1,

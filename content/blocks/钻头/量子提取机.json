@@ -186,11 +186,11 @@
 		"硅钢/800",
 		"莱普合金/500",
 		"裂位能/400",
-		"二级协议/3"
+		"三级协议/3"
 	],
 	"category": "production",
 	"research": {
-		"parent": "离子钻头",
+		"parent": "战研",
 		"objectives": [
 			{
 				"type": "SectorComplete",
