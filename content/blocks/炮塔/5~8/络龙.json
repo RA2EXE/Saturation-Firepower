@@ -367,12 +367,14 @@
 	"targetAir": true,
 	"consumes": {
 		"power": 360,
-		"liquid": "cryofluid/1.5"
+		"liquid": "纳米流体/4.5"
 	},
 	"liquidCapacity": 90,
 	"inaccuracy": 0.63,
 	"shake": 5,
 	"shootSound": "railgun",
+	"soundPitchMin": 0.8,
+	"SoundPitchMax": 1.2,
 	"rotateSpeed": 1.85,
 	"ammoPerShot": 20,
 	"ammoTypes": {
@@ -551,6 +553,7 @@
 				]
 			},
 			"hitSound": "shootSmite",
+			"hitSoundPitch": 0.8,
 			"hitSoundVolume": 3,
 			"despawnSound": "explosion",
 			"despawnEffect": {

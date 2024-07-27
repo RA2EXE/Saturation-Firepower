@@ -6,13 +6,13 @@
 	"health": 1280,
 	"rotateSpeed": 0.5,
 	"warmupSpeed": 0.0015,
-	"itemCapacity": 10,
-	"liquidCapacity": 20,
+	"itemCapacity": 30,
+	"liquidCapacity": 30,
 	"drawRim": false,
-	"drillTime": 240,
+	"drillTime": 180,
 	"drillEffect": "mineHuge",
-	"liquidBoostIntensity": 1.8,
-	"hardnessDrillMultiplier": 8,
+	"liquidBoostIntensity": 1.871,
+	"hardnessDrillMultiplier": 5,
 	"updateEffect": {
 		"type": "ParticleEffect",
 		"particles": 3,
@@ -27,7 +27,7 @@
 		"cone": 20
 	},
 	"consumes": {
-		"power": 10.5,
+		"power": 11,
 		"liquid": {
 			"liquid": "cryofluid",
 			"amount": 0.3,
@@ -37,10 +37,10 @@
 	},
 	"requirements": [
 		"镄/400",
-		"plastanium/200",
-		"硅钢/350",
-		"纳米核/150",
-		"裂位能/200"
+		"plastanium/100",
+		"硅钢/250",
+		"纳米核/50",
+		"裂位能/110"
 	],
 	"category": "production",
 	"research": {

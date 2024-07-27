@@ -335,6 +335,7 @@
 	"research": {
 		"parent": "凌汛",
 		"objectives": [
+			//{"type": "OnSector","preset": "锯刃山岭"},
 			{
 				"type": "SectorComplete",
 				"preset": "灭绝"

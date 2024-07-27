@@ -208,7 +208,8 @@
 				"cone": 60
 			},
 			"hitSound": "shootSmite",
-			"hitSoundVolume": 1.5,
+			"hitSoundPitch": 0.6,
+			"hitSoundVolume": 2,
 			"despawnEffect": {
 				"type": "MultiEffect",
 				"effects": [

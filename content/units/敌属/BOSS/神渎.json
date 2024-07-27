@@ -12,7 +12,7 @@
 	"baseRotateSpeed": 1.38,
 	"health": 480600,
 	"canBoost": true,
-	"riseSpeed": 0.005,
+	"riseSpeed": 0.05,
 	"engineOffset": 28,
 	"engineSize":24,
 	"boostMultiplier": 2.68,
@@ -35,10 +35,32 @@
 		"parent":"溢裂数据库",
 		"objectives": [{"type": "SectorComplete","preset": "火天路"}]
 	},
-	"abilities": [{
-		"type":"RegenAbility",
-		"amount":180
-	}],
+	"abilities": [
+		{
+			"type": "StatusFieldAbility",
+			"duration": 60,
+			"reload": 180,
+			"range": -1,
+			"applyEffect": "none",
+			"activeEffect": {
+				"type": "WaveEffect",
+				"interp": "circleOut",
+				"lifetime": 10,
+				"sizeFrom": 0,
+				"sizeTo": 60,
+				"strokeFrom": 12,
+				"strokeTo": 0,
+				"colorFrom": "FF5B5B",
+				"colorTo": "FF5B5B"
+			},
+			"effect": "invincible"
+		},
+		{
+			"type": "RegenAbility",
+			"percent": 1.5,
+			"amount": 180
+		}
+	],
 	"weapons": [
 		{
 			"name": "神渎1",
@@ -74,8 +96,8 @@
 				"type": "BulletType",
 				"lifetime": 12,
 				"speed": 21,
-				"knockback": 1.66,
-				"damage": 135.2,
+				"knockback": 1,
+				"damage": 210,
 				"hitSize":56,
 				"incendAmount": 3,
 				"incendSpread": 8,
@@ -186,7 +208,9 @@
 			"shootY": 48,
 			"rotate": false,
 			"inaccuracy": 8,
-			"shootSound": "flame",
+			"shootSound": "torch",
+			"soundPitchMin": 1.8,
+			"soundPitchMax": 1.8,
 			"alternate": true,
 			"shootCone": 35,
 			"xRand":6,
@@ -355,9 +379,9 @@
 						}
 					]
 				},
-				"damage": 2160,
-				"splashDamage": 668,
-				"splashDamageRadius": 86,
+				"damage": 21600,
+				"splashDamage": 2160,
+				"splashDamageRadius": 340,
 				"absorbable": false,
 				"reflectable":false,
 				"status": "殁火",
@@ -371,7 +395,7 @@
 				"sprite": "circle-bullet",
 				"backColor": "FF5B5BAA",
 				"frontColor": "FF5B5B",
-				"hitSoundVolume": 6,
+				"hitSoundVolume": 12,
 				"hitSound": "explosionbig",
 				"makeFire": true,
 				"pierceArmor":true,
@@ -446,7 +470,7 @@
 							"type": "ParticleEffect",
 							"particles": 1,
 							"sizeFrom": 0,
-							"sizeTo": 86,
+							"sizeTo": 116,
 							"length": 0,
 							"baseLength": 0,
 							"sizeInterp": "pow10Out",
@@ -456,12 +480,12 @@
 						},
 						{
 							"type": "ParticleEffect",
-							"particles": 13,
+							"particles": 19,
 							"sizeFrom": 18,
 							"sizeTo": 0,
 							"interp": "pow10Out",
 							"sizeInterp": "pow10In",
-							"length": 88,
+							"length": 190,
 							"baseLength": 0,
 							"lifetime": 185,
 							"colorFrom": "FFFFFF",
@@ -469,13 +493,13 @@
 						},
 						{
 							"type": "ParticleEffect",
-							"particles": 13,
+							"particles": 19,
 							"sizeFrom": 18,
 							"sizeTo": 0,
 							"interp": "pow10Out",
 							"sizeInterp": "pow10In",
 							"startDelay": 16,
-							"length": 99,
+							"length": 200,
 							"baseLength": 0,
 							"lifetime": 185,
 							"colorFrom": "FFFFFF",
@@ -483,13 +507,13 @@
 						},
 						{
 							"type": "ParticleEffect",
-							"particles": 13,
+							"particles": 19,
 							"sizeFrom": 18,
 							"sizeTo": 0,
 							"interp": "pow10Out",
 							"sizeInterp": "pow10In",
 							"startDelay": 32,
-							"length": 110,
+							"length": 220,
 							"baseLength": 0,
 							"lifetime": 185,
 							"colorFrom": "FFFFFF",
@@ -497,9 +521,20 @@
 						},
 						{
 							"type": "WaveEffect",
+							"lifetime": 18,
+							"sizeFrom": 0,
+							"sizeTo": 340,
+							"strokeFrom": 90,
+							"strokeTo": 36,
+							"interp": "circleOut",
+							"colorFrom": "FF5B5B80",
+							"colorTo": "FF5B5B00"
+						},
+						{
+							"type": "WaveEffect",
 							"lifetime": 36,
 							"sizeFrom": 0,
-							"sizeTo": 116,
+							"sizeTo": 150,
 							"strokeFrom": 30,
 							"strokeTo": 0,
 							"interp": "circleOut",
@@ -521,7 +556,8 @@
 					"makeFire": true
 				},
 				"fragBullets":45,
-				"fragLifeMin":0.6,
+				"fragVelocityMin": 0.8,
+				"fragLifeMin":0.8,
 				"fragLifeMax":1.3,
 				"fragBullet":{
 					"type": "BasicBulletType",

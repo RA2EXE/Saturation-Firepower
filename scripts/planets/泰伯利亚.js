@@ -29,8 +29,10 @@ TBLY.atmosphereColor = TBLY.lightColor = Color.valueOf("25C9AB90");
 TBLY.iconColor = Color.valueOf("25C9AB"),
 TBLY.hiddenItems.addAll(Items.erekirItems).removeAll(Items.serpuloItems);
 /*
-map n head2
-SC map n head2
+main
+map number head2
+SC map number head2
+side
 SC map name
 */
 const map1pj = new SectorPreset("迫降区", TBLY, 1);
@@ -120,7 +122,7 @@ SFlib.addToResearch(map5hs, {
 const SCmap6dc = new SectorPreset("断层带", TBLY, 16);
 SCmap6dc.description = "这里原是一片岸防基地，前不久探测到大规模地质运动，已经被夷为废墟。\n尚不清楚详细数据信息，接收这片区域，仔细搜查一切可利用的物资并建立哨所。\n第四军团与第五军团海军会与你行动。";
 SCmap6dc.difficulty = 4;
-//难度断层：4-1~25，10-30~70，15-70~90
+//难度断层：4=1~25，10=30~70，15=70~90
 SCmap6dc.alwaysUnlocked = false;
 SCmap6dc.addStartingItems = true;
 SCmap6dc.captureWave = 90;
@@ -166,7 +168,7 @@ SFlib.addToResearch(SCmap6yl, {
 });
 
 const map6fs = new SectorPreset("风沙谷", TBLY, 8);
-map6fs.description = "地处敌人的空军基地附近，环境恶劣，资源稀少，尽可能搜集当地资源，组织防御。\n阻断了敌人的雷达，在10分钟之内不可能发现我们，当心附近的巡逻部队，一旦被发现，主力军只需数十分钟便会赶过来";
+map6fs.description = "";
 map6fs.difficulty = 12;
 map6fs.alwaysUnlocked = false;
 map6fs.addStartingItems = true;
@@ -207,7 +209,7 @@ SFlib.addToResearch(SCmap8jd, {
 	new Objectives.SectorComplete(map7xx))
 });
 */
-const map9mj = new SectorPreset("灭绝", TBLY, 78);
+const map9mj = new SectorPreset("灭绝", TBLY, 199);
 map9mj.description = "北极基地群78号地区。这里是敌人的纵深腹地，外围防御火力异常凶猛，第五军团勉强撕开了一道裂口，并成功建立前进基地。\n外围友军正在逐步攻坚，一旦突破封锁便会立刻支援。\n[gold]这将是一场硬仗，祝你好运！";
 map9mj.difficulty = 20;
 map9mj.alwaysUnlocked = false;
@@ -264,22 +266,6 @@ SFlib.addToResearch(狭长冰谷, {
 	objectives: Seq.with(
 	new Objectives.SectorComplete(残兵败将))
 });
-*/
-
-/*
-const 地图变量名 = new SectorPreset("灭绝", TBLY, 78);
-地图变量名.description = "";
-地图变量名.difficulty = 20;
-地图变量名.alwaysUnlocked = false;
-地图变量名.addStartingItems = true;
-地图变量名.captureWave = 0;
-地图变量名.localizedName = "灭绝";
-exports.地图变量名 = 地图变量名;
-SFlib.addToResearch(地图变量名, {
-	parent: "科技树位置=地图名",
-	objectives: Seq.with(
-	new Objectives.SectorComplete(星稀山脉))
-});
 
 const SCmapkdhk = new SectorPreset("溃堤海口", TBLY, 48);
 SCmapkdhk.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]-泰伯利亚赤道南侧，拉乌达洋某处河流集群入海口。此处峡谷年代久远，长年累月的冲刷甚至使峭壁之下产生了入海口三角洲。\n第二军团已于此处建立5条坝式水力能源站，敌舰队正在附近聚集，保护能源站并剿灭所有敌人。";
@@ -306,8 +292,9 @@ exports.SCmaphtl = SCmaphtl;
 SFlib.addToResearch(SCmaphtl, {
 	parent: "星稀山脉",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(map7xx))
-});
+	new Objectives.SectorComplete(map7xx),
+	new Objectives.SectorComplete(SCmap6yl))
+});//神渎
 
 const SCmapsyzzd = new SectorPreset("实验种植地", TBLY, 64);
 SCmapsyzzd.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]这是一处难得的自然条件适宜进行有机体研究的河域，第二军团已经在此驻扎，协助他们获取足够的样本并发送至我们的基地。";
@@ -320,11 +307,43 @@ exports.SCmapsyzzd = SCmapsyzzd;
 SFlib.addToResearch(SCmapsyzzd, {
 	parent: "火山岛",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(map5hs))
-});
+	new Objectives.SectorComplete(map5hs),
+	new Objectives.SectorComplete(SCmap6yl))
+});//地魁
 /*
+
+const SCmapjrsl = new SectorPreset("锯刃山岭", TBLY, 10);
+SCmapjrsl.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]";
+SCmapjrsl.difficulty = 24;
+SCmapjrsl.alwaysUnlocked = false;
+SCmapjrsl.addStartingItems = true;
+SCmapjrsl.captureWave = 30;
+SCmapjrsl.localizedName = "SCmapjrsl";
+exports.SCmapjrsl = SCmapjrsl;
+SFlib.addToResearch(SCmapjrsl, {
+	parent: "风沙谷",
+	objectives: Seq.with(
+	new Objectives.SectorComplete(map6fs),
+	new Objectives.SectorComplete(SCmap6yl))
+});//
+
+const SCmapnlfsc = new SectorPreset("逆流发射场", TBLY, 10);
+SCmapnlfsc.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]";
+SCmapnlfsc.difficulty = 24;
+SCmapnlfsc.alwaysUnlocked = false;
+SCmapnlfsc.addStartingItems = true;
+SCmapnlfsc.captureWave = 30;
+SCmapnlfsc.localizedName = "SCmapnlfsc";
+exports.SCmapnlfsc = SCmapnlfsc;
+SFlib.addToResearch(SCmapnlfsc, {
+	parent: "锯刃山岭",
+	objectives: Seq.with(
+	new Objectives.SectorComplete(SCmapjrsl))
+});
+
+
 const 阑珊子午线 = new SectorPreset("阑珊子午线", TBLY, 10);
-阑珊子午线.description = "";
+阑珊子午线.description = "[stat]分支难度警告：非主线战役，可不打。\n[white]";
 阑珊子午线.difficulty = 28;
 阑珊子午线.alwaysUnlocked = false;
 阑珊子午线.addStartingItems = true;
@@ -337,30 +356,22 @@ SFlib.addToResearch(阑珊子午线, {
 	new Objectives.SectorComplete(溢裂要塞))
 });
 
-const SCmapjrsl = new SectorPreset("锯刃山岭", TBLY, 10);
-SCmapjrsl.description = "";
-SCmapjrsl.difficulty = 24;
-SCmapjrsl.alwaysUnlocked = false;
-SCmapjrsl.addStartingItems = true;
-SCmapjrsl.captureWave = 30;
-SCmapjrsl.localizedName = "SCmapjrsl";
-exports.SCmapjrsl = SCmapjrsl;
-SFlib.addToResearch(SCmapjrsl, {
-	parent: "风沙谷",
-	objectives: Seq.with(
-	new Objectives.SectorComplete(map6fs))
 
-const SCmapnlfsc = new SectorPreset("逆流发射场", TBLY, 10);
-SCmapnlfsc.description = "";
-SCmapnlfsc.difficulty = 24;
-SCmapnlfsc.alwaysUnlocked = false;
-SCmapnlfsc.addStartingItems = true;
-SCmapnlfsc.captureWave = 30;
-SCmapnlfsc.localizedName = "SCmapnlfsc";
-exports.SCmapnlfsc = SCmapnlfsc;
-SFlib.addToResearch(SCmapnlfsc, {
-	parent: "锯刃山岭",
+
+*/
+
+/*
+const 地图变量名 = new SectorPreset("灭绝", TBLY, 78);
+地图变量名.description = "";
+地图变量名.difficulty = 20;
+地图变量名.alwaysUnlocked = false;
+地图变量名.addStartingItems = true;
+地图变量名.captureWave = 0;
+地图变量名.localizedName = "灭绝";
+exports.地图变量名 = 地图变量名;
+SFlib.addToResearch(地图变量名, {
+	parent: "科技树位置=地图名",
 	objectives: Seq.with(
-	new Objectives.SectorComplete(SCmapjrsl))
+	new Objectives.SectorComplete(星稀山脉))
 });
 */

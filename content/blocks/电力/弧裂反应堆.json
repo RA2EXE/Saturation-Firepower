@@ -74,25 +74,27 @@
 	"generateEffect": "generatespark",
 	"consumes": {
 		"itemRadioactive": {},
-		"itemExplode":{},
+		"itemExplode": {},
 		"liquid": "纳米流体/0.9"
 	},
 	"requirements": [
 		"metaglass/400",
-		"镄/1280",
+		"镄/1400",
 		"硅钢/1700",
-		"纳米核/1000",
+		"纳米核/1200",
 		"裂位能/800",
 		"三级协议/10"
 	],
-	"buildCostMultiplier": 0.88,
 	"ambientSound": "techloop",
 	"ambientSoundVolume": 0.5,
 	"category": "power",
 	"research": {
 		"parent": "镄反应堆",
 		"objectives": [
-			{"type": "SectorComplete","preset": "荒芜矿区"}
+			{
+				"type": "OnSector",
+				"preset": "第五战区"
+			}
 		]
 	}
 }

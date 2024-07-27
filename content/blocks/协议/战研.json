@@ -89,8 +89,8 @@
 		]
 	},
 	"consumes": {
-		"power": 250,
-		"liquid": "cryofluid/3.6"
+		"power": 1000,
+		"liquid": "cryofluid/4"
 	},
 	"requirements": [
 		"lead/4000",

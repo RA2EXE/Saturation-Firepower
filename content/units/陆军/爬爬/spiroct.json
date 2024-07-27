@@ -13,6 +13,8 @@
 			"x": 8.5,
 			"y": -1.5,
 			"shootSound": "sap",
+			"shootStatusDuration": 10,
+			"shootStatus": "overclock",
 			"bullet": {
 				"type": "SapBulletType",
 				"shootEffect": "shootSmall",
@@ -41,6 +43,8 @@
 			"x": 4,
 			"y": 3,
 			"shootSound": "sap",
+			"shootStatusDuration": 10,
+			"shootStatus": "overclock",
 			"bullet": {
 				"type": "SapBulletType",
 				"shootEffect": "shootSmall",

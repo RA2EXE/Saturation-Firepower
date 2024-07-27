@@ -337,10 +337,7 @@
 	"smokeEffect": "none",
 	"consumes": {
 		"power": 360,
-		"liquid": {
-			"liquid": "cryofluid",
-			"amount": 3.5
-		}
+		"liquid":"纳米流体/3.5"
 	},
 	"liquidCapacity": 60,
 	"reload": 230,

@@ -1,13 +1,11 @@
 {
 	"type": "flying",
 	"name": "工农A",
-	//"hidden":true,
-	//"playerControllable": false,
-	//"": "repairCommand",
 	"speed": 2.46,
 	"rotateSpeed": 3.8,
 	"drag": 0.08,
 	"accel": 0.08,
+	"targetFlags": ["drill"],
 	"immunities": [
 		"unmoving",
 		"electrified",

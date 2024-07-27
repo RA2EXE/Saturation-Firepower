@@ -19,13 +19,13 @@
 		"spore-slowed",
 		"corroded"
 	],
-	"speed": 0.66,
+	"speed": 0.76,
 	"mechSideSway": 0.7,
 	"mechFrontSway": 2.1,
 	"hitSize": 75,
-	"health": 280000,
+	"health": 375000,
 	"armor": 230,
-	"rotateSpeed": 1.5,
+	"rotateSpeed": 1.88,
 	"hovering": true,
 	"faceTarget": true,
 	"canDrown": false,
@@ -38,7 +38,7 @@
 			"range": 160,
 			"applyEffect": "none",
 			"activeEffect": "none",
-			"effect": "boss"
+			"effect": "overclock"
 		},
 		{
 			"type": "ShieldRegenFieldAbility",

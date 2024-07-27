@@ -93,6 +93,8 @@
 	"inaccuracy": 1.63,
 	"shake": 5,
 	"shootSound": "shootBig",
+	"soundPitchMin": 0.5,
+	"SoundPitchMax": 0.8,
 	"rotateSpeed": 3.5,
 	"ammoTypes": {
 		"thorium": {
