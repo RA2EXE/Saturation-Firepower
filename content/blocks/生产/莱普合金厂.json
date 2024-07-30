@@ -5,7 +5,7 @@
 	"size": 3,
 	"hasPower": true,
 	"hasItems": true,
-	"craftTime": 150,
+	"craftTime": 200,
 	"itemCapacity": 20,
 	"drawer": {
 		"type": "DrawMulti",
@@ -36,8 +36,8 @@
 	"consumes": {
 		"power": 18,
 		"items": [
-			"镄/1",
-			"铬/1"
+			"镄/3",
+			"铬/3"
 		]
 	},
 	"requirements": [
