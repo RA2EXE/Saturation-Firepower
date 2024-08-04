@@ -4,7 +4,7 @@
 	"health": 2000,
 	"canOverdrive": false,
 	"minBlockSize": 4,
-	"maxBlockSize": 5,
+	"maxBlockSize": 4,
 	"size": 6,
 	"buildSpeed": 0.4,
 	"liquidCapacity": 30,

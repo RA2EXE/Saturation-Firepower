@@ -91,7 +91,7 @@
 				"fragLifeMin": 0.7,
 				"fragBullet": {
 					"sprite": "circle-bullet",
-					"status": "electrified",
+					"status": "拆解",
 					"statusDuration": 60,
 					"shrinkY": 0,
 					"hitShake": 3,
