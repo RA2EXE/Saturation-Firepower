@@ -38,6 +38,14 @@
 		"镄/200",
 		"裂位能/50"
 	],
-	"research": "mass-driver",
+	"research": {
+		"parent": "mass-driver",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "荒芜矿区"
+			}
+		]
+	},
 	"category": "distribution"
 }

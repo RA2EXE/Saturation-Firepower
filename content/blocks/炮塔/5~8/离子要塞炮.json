@@ -313,7 +313,7 @@
 			}
 		]
 	},
-	"researchCostMultiplier": 0.5,
+	"researchCostMultiplier": 0,
 	"requirements": [
 		"silicon/2200",
 		"plastanium/880",

@@ -165,9 +165,9 @@
 			"pierceCap": 8,
 			"damage": 2960,
 			"pierceDamageFactor": 0.075,
-			"length": 1000,
+			"length": 1050,
 			"shootEffect": "instShoot",
-			"pointEffectSpace": 45,
+			"pointEffectSpace": 50,
 			"pointEffect": {
 				"type": "MultiEffect",
 				"effects": [
@@ -236,7 +236,7 @@
 			"spawnBullets": [
 				{
 					"type": "BasicBulletType",
-					"lifetime": 24,
+					"lifetime": 25.2,
 					"speed": 41.6,
 					"damage": 1720,
 					"hitShake": 5,

@@ -758,7 +758,7 @@
 				"despawnEffect": "none",
 				"lightningColor": "BFFFDB",
 				"hitSound": "spark",
-				"lightningDamage": 44,
+				"damage": 44,
 				"lightningLength": 11,
 				"lightningLengthRand": 6,
 				"lightningType": {

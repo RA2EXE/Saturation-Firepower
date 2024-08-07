@@ -23,6 +23,7 @@
 	],
 	"hitSize": 66,
 	"immunities": [
+		"burning",
 		"shocked",
 		"electrified",
 		"干扰",
@@ -41,7 +42,7 @@
 	"faceTarget": false,
 	"research": {
 		"parent": "陆5",
-		//"objectives": [{"type": "SectorComplete","preset": "军工河原"}]
+		"objectives": [{"type": "OnSector","preset": "第五战区"}]
 	},
 	"weapons": [
 		{
