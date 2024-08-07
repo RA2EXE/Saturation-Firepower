@@ -8,7 +8,7 @@
 	"targetGround": true,
 	"targetAir": true,
 	"canOverdrive": false,
-	"range": 800,
+	"range": 1200,
 	"fogRadiusMultiplier": 0,
 	"recoil": 0,
 	"customShadow": false,
@@ -76,7 +76,7 @@
 			"colorFrom": "FFFFFF80",
 			"colorTo": "FFFFFF80"
 		},
-		"splashDamageRadius": 800,
+		"splashDamageRadius": 1200,
 		"splashDamage": 0.1,
 		"buildingDamageMultiplier": 0,
 		"hitEffect": "none",
@@ -89,7 +89,7 @@
 		"metaglass/160",
 		"silicon/250",
 		"硅钢/170",
-		"二级协议/3"
+		"一级协议/3"
 	],
 	"category": "effect",
 	"research": "高斯"

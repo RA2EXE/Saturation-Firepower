@@ -47,11 +47,11 @@
 	"liquidCapacity": 120,
 	"craftTime": 120,
 	"consumes": {
-		"power": 16,
+		"power": 24,
 		"items": [
-			"纳米核/6"
+			"纳米核/9"
 		],
-		"liquid": "water/0.9"
+		"liquid": "water/1.2"
 	},
 	"requirements": [
 		"莱普合金/180",

@@ -7,7 +7,7 @@
 	"reload": 120,
 	"targetGround": true,
 	"targetAir": true,
-	"range": 1600,
+	"range": 2000,
 	"fogRadiusMultiplier": 0,
 	"inaccuracy": 0,
 	"rotateSpeed": 0,
@@ -110,19 +110,19 @@
 			"colorFrom": "EEC59190",
 			"colorTo": "EEC59100"
 		},
-		"splashDamageRadius": 1600,
+		"splashDamageRadius": 2000,
 		"splashDamage": 0.1,
 		"buildingDamageMultiplier": 0,
 		"hitEffect": "none",
 		"despawnEffect": "none",
-		"statusDuration": 220,
+		"statusDuration": 400,
 		"status": "裂位标记"
 	},
 	"requirements": [
-		"镄/120",
-		"硅钢/400",
-		"裂位能/50",
-		"二级协议/10"
+		"镄/200",
+		"硅钢/300",
+		"裂位能/250",
+		"二级协议/5"
 	],
 	"category": "effect",
 	"research": "短波雷达"

@@ -367,7 +367,7 @@
 	"targetAir": true,
 	"consumes": {
 		"power": 360,
-		"liquid": "纳米流体/4.5"
+		"liquid": "纳米流体/3.75"
 	},
 	"liquidCapacity": 90,
 	"inaccuracy": 0.63,
