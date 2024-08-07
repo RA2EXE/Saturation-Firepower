@@ -1,0 +1,6 @@
+{
+	"type": "floor",
+	"name": "损坏的供应点",
+	"speedMultiplier": 0.95,
+	"variants":5
+}

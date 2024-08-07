@@ -32,46 +32,58 @@
 		"copper": {
 			"speed": 7.5,
 			"damage": 9,
+			"knockback": 0.1,
 			"lifetime": 32,
 			"width": 6,
 			"height": 9,
-			"ammoMultiplier": 2,
+			"ammoMultiplier": 4,
 			"shootEffect": "shootSmall"
 		},
 		"lead": {
 			"speed": 7.5,
-			"damage": 9,
-			"knockback": 0.05,
+			"damage": 4,
+			"fragBullets": 2,
+			"fragBullet": {
+				"speed": 1.2,
+				"damage": 8,
+				"lifetime": 20,
+				"knockback": 0.05
+			},
 			"lifetime": 32,
 			"width": 6,
 			"height": 9,
-			"ammoMultiplier": 2,
+			"ammoMultiplier": 4,
 			"shootEffect": "shootSmall"
 		},
 		"titanium": {
 			"speed": 7.5,
-			"damage": 14,
-			"lifetime": 35,
+			"damage": 17,
+			"lifetime": 36.67,
+			"rangeChange": 35,
 			"width": 8,
 			"height": 9,
 			"shootEffect": "shootSmall",
-			"ammoMultiplier": 4
+			"reloadMultiplier": 1.2,
+			"ammoMultiplier": 6
 		},
 		"thorium": {
 			"speed": 7.5,
-			"damage": 20,
-			"lifetime": 35,
+			"damage": 22,
+			"lifetime": 38.4,
+			"rangeChange": 48,
+			"pierce": true,
+			"pierceCap": 2,
 			"width": 9,
 			"height": 10,
 			"shootEffect": "shootSmall",
-			"ammoMultiplier": 6
+			"ammoMultiplier": 8
 		}
 	},
 	"requirements": [
-		"copper/130",
-		"lead/90",
-		"graphite/80",
-		"titanium/70",
+		"copper/120",
+		"lead/120",
+		"graphite/100",
+		"titanium/50",
 		"一级协议/0"
 	],
 	"category": "turret",
