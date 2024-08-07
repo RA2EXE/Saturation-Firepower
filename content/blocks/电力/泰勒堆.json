@@ -5,7 +5,7 @@
 	"health": 10500,
 	"liquidCapacity": 600,
 	"itemCapacity": 50,
-	"warmupSpeed": 0.001,
+	"warmupSpeed": 0.00127839,
 	"hasItems": true,
 	"hasLiquids": true,
 	"outputsPower": true,
@@ -19,7 +19,7 @@
 		"power": 5,
 		"liquid": {
 			"liquid": "cryofluid",
-			"amount": 3
+			"amount": 1.8
 		},
 		"items": [
 			"thorium/5",

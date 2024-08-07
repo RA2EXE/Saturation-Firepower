@@ -1,7 +1,7 @@
 {
 	"name": "阴电",
 	"color": "#EFDDFF",
-	"healthMultiplier": 1.35,
+	"healthMultiplier": 1.2,
 	"speedMultiplier": 0.66,
 	"effectChance": 0.8,
 	"effect": {

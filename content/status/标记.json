@@ -2,7 +2,7 @@
 	"name": "标记",
 	"color": "FFFFFF",
 	"healthMultiplier": 0.8,
-	"speedMultiplier": 1.8,
+	"speedMultiplier": 1.5,
 	"reloadMultiplier": 0.8,
 	//"opposites": ["electrified"],
 	"effectChance": 0.01,
