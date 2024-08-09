@@ -6,6 +6,6 @@
 	version:4.0.1,
 	minGameVersion:146,
 	repo:RA2EXE/Saturation-Firepower,
-	hideInBrowser: false,
+	hideInBrowser: true,
 	description:english version, all maps rebuild
 }
