@@ -3,7 +3,7 @@
 
 # WARNING
 >Unstable beta! 
-Unfortunately, this mod doesn't work on English devices, I'll translate to the English version after completing the whole mod.
+Unfortunately, this mod doesn't work on English devices, and is translating to the English version now.
 
 # 内容概述/Content overview
 >200+ New blocks, covering all aspects! More factories, drills, transmission components, defenses and unit factories!
@@ -15,8 +15,3 @@ Unfortunately, this mod doesn't work on English devices, I'll translate to the E
 >A large number of new maps (some are under construction, there will eventually be about 30), and more spectacular battle scenes! More difficult battles! Stronger enemies!
 
 >The most realistic battlefield environment and various tactical options. Start with the tutorial and progress to the difficult main campaign, as well as difficult side campaigns for challengers.
-
-# Community
-·QQ Group：181108928（respawn in 13/07/2024）
-·Discord：https://discord.gg/Y7NhHfku
-Suggestions and feedback are welcome here.
