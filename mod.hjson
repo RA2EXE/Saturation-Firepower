@@ -5,7 +5,8 @@
 	author:RA2EXE,
 	version:4.0.1,
 	minGameVersion:146,
-	repo:RA2EXE/Saturation-Firepower,
+	//repo:RA2EXE/Saturation-Firepower,
+	repo:Cry0flu1d/Saturation-Firepower-Alt,
 	hideInBrowser: true,
 	description:english version, all maps rebuild
 }
