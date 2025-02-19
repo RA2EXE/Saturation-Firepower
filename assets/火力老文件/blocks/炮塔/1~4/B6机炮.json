@@ -1,0 +1,127 @@
+{
+	"type": "ItemTurret",
+	"name": "B6机炮",
+	"health": 960,
+	"size": 2,
+	"reload": 20,
+	"range": 200,
+	"maxAmmo": 120,
+	"recoilTime": 10,
+	"recoil": 0.5,
+	"consumes": {
+		"coolant": {
+			"amount": 0.2,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 6,
+		"shotDelay": 2
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"suffix": "-管",
+				"progress":"recoil",
+				"moveY": -2
+			}
+		]
+	},
+	"shake": 1.1,
+	"liquidCapacity": 30,
+	"ammoPerShot": 6,
+	"ammoUseEffect": "casing2",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 0.5,
+	"rotateSpeed": 15,
+	"ammoTypes": {
+		"copper": {
+			"speed": 6.5,
+			"damage": 11,
+			"knockback": 0.5,
+			"lifetime": 30.76,
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier": 2
+		},
+		"lead": {
+			"speed": 6.5,
+			"damage": 7,
+			"fragBullets": 3,
+			"fragBullet": {
+				"speed": 0.8,
+				"damage": 9,
+				"lifetime": 32
+			},
+			"lifetime": 30.76,
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier": 2
+		},
+		"graphite": {
+			"speed": 6.5,
+			"damage": 22,
+			"reloadMultiplier": 0.8,
+			"lifetime": 30.76,
+			"width": 7,
+			"height": 10,
+			"ammoMultiplier": 4
+		},
+		"pyratite": {
+			"speed": 6.5,
+			"damage": 25,
+			"status": "burning",
+			"statusDuration": 600,
+			"lifetime": 30.76,
+			"backColor": "FF8C00",
+			"frontColor": "FFB90F",
+			"despawnEffect": "fireHit",
+			"width": 6,
+			"height": 9,
+			"ammoMultiplier": 4
+		},
+		"silicon": {
+			"speed": 6.5,
+			"damage": 18,
+			"reloadMultiplier": 1.4,
+			"lifetime": 30.76,
+			"width": 6,
+			"height": 11,
+			"homingRange": 80,
+			"homingPower": 0.08,
+			"ammoMultiplier": 5
+		},
+		"titanium": {
+			"speed": 9,
+			"lifetime": 22.22,
+			"damage": 20,
+			"reloadMultiplier": 1.2,
+			"width": 8,
+			"height": 10,
+			"ammoMultiplier": 6,
+			"shootEffect":"shootBig"
+		},
+		"thorium": {
+			"speed": 8,
+			"damage": 28,
+			"lifetime": 25,
+			"width": 10,
+			"height": 11,
+			"ammoMultiplier": 6,
+			"pierce": true,
+			"pierceCap": 2,
+			"shootEffect":"shootBig"
+		}
+	},
+	"requirements": [
+		"copper/130",
+		"graphite/60",
+		"titanium/70"
+	],
+	"category": "turret",
+	"research": "F2机炮"
+}

@@ -1,0 +1,96 @@
+{
+	"type": "PowerTurret",
+	"playerControllable": false,
+	"name": "短波雷达",
+	"health": 550,
+	"size": 4,
+	"reload": 180,
+	"targetGround": true,
+	"targetAir": true,
+	"canOverdrive": false,
+	"range": 1200,
+	"fogRadiusMultiplier": 0,
+	"recoil": 0,
+	"customShadow": false,
+	"shootY": 0,
+	"shootSound": "wave",
+	"inaccuracy": 0,
+	"rotateSpeed": 0,
+	"shootCone": 360,
+	"ammoUseEffect": {
+		"type": "WaveEffect",
+		"lifetime": 100,
+		"sizeFrom": 0,
+		"sizeTo": 800,
+		"strokeFrom": 5,
+		"strokeTo": 0,
+		"colorFrom": "FFFFFF",
+		"colorTo": "FFFFFF"
+	},
+	"consumes": {
+		"power": 35
+	},
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawRegion",
+				"suffix": "-面",
+				"spinSprite": true,
+				"rotateSpeed": 1
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-顶",
+				"spinSprite": true,
+				"rotateSpeed": -1
+			}
+		]
+	},
+	"shootType": {
+		"type": "BasicBulletType",
+		"damage": 0,
+		"speed": 0,
+		"instantDisappear": true,
+		"ammoMultiplier": 1,
+		"shootEffect": {
+			"type": "WaveEffect",
+			"lifetime": 100,
+			"startDelay": 15,
+			"sizeFrom": 0,
+			"sizeTo": 800,
+			"strokeFrom": 5,
+			"strokeTo": 0,
+			"colorFrom": "FFFFFF80",
+			"colorTo": "FFFFFF80"
+		},
+		"smokeEffect": {
+			"type": "WaveEffect",
+			"lifetime": 100,
+			"startDelay": 30,
+			"sizeFrom": 0,
+			"sizeTo": 800,
+			"strokeFrom": 5,
+			"strokeTo": 0,
+			"colorFrom": "FFFFFF80",
+			"colorTo": "FFFFFF80"
+		},
+		"splashDamageRadius": 1200,
+		"splashDamage": 0.1,
+		"buildingDamageMultiplier": 0,
+		"hitEffect": "none",
+		"despawnEffect": "none",
+		"statusDuration": 300,
+		"status": "标记"
+	},
+	"requirements": [
+		"copper/350",
+		"metaglass/160",
+		"silicon/250",
+		"硅钢/170",
+		"一级协议/3"
+	],
+	"category": "effect",
+	"research": "高斯"
+}

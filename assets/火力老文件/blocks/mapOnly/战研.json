@@ -1,0 +1,117 @@
+{
+	"name": "战争实验室",
+	"type": "Separator",
+	"health": 30000,
+	"size": 7,
+	"canOverdrive": false,
+	"rebuildable": false,
+	"squareSprite": false,
+	"hasLiquids": true,
+	"researchCostMultiplier": 0.5,
+	"results": [
+		"一级协议/29",
+		"二级协议/8",
+		"三级协议/2"
+	],
+	"itemCapacity": 50,
+	"liquidCapacity": 100,
+	"craftTime": 7.5,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-底"
+			},
+			{
+				"type": "DrawPistons",
+				"sinMag": -35,
+				"lenOffset": 13,
+				"angleOffset": 90,
+				"sinScl": 5.53,
+				"sides": 2
+			},
+			{
+				"type": "DrawPistons",
+				"sinMag": -35,
+				"lenOffset": 13,
+				"sinScl": 13.27,
+				"sides": 2
+			},
+			{
+				"type": "DrawPistons",
+				"sinMag": -35,
+				"lenOffset": 13,
+				"sinScl": 8.76,
+				"sides": 4
+			},
+			{
+				"type": "DrawPistons",
+				"sinMag": -35,
+				"lenOffset": 13,
+				"sinScl": 12,
+				"sides": 4
+			},
+			"DrawDefault",
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "cryofluid",
+				"suffix": "-液体"
+			},
+			{
+				"type": "DrawFlame",
+				"flameRadius": 5,
+				"flameRadiusIn": 2,
+				"flameRadiusMag": 2.25,
+				"flameRadiusInMag": 1.25,
+				"flameColor": "BFFFDB"
+			},
+			{
+				"type": "DrawFade",
+				"suffix": "-光1",
+				"scale": 5
+			},
+			{
+				"type": "DrawFade",
+				"suffix": "-光2",
+				"scale": 7
+			},
+			{
+				"type": "DrawFade",
+				"suffix": "-光3",
+				"scale": 3
+			},
+			{
+				"type": "DrawFade",
+				"suffix": "-光4",
+				"scale": 9
+			}
+		]
+	},
+	"consumes": {
+		"power": 1000,
+		"liquid": "cryofluid/4"
+	},
+	"requirements": [
+		"lead/4000",
+		"镄/2200",
+		"metaglass/2000",
+		"silicon/3800",
+		"硅钢/1700",
+		"泰勒合金/2700",
+		"纳米核/1200",
+		"裂位能/800",
+		"二级协议/50"
+	],
+	"buildCostMultiplier": 2.5,
+	"category": "effect",
+	"research": {
+		"parent": "前哨基地",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "荒芜矿区"
+			}
+		]
+	}
+}

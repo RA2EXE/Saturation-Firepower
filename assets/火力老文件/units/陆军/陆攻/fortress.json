@@ -1,0 +1,48 @@
+{
+	"health": 2100,
+	"armor": 12,
+	"speed": 0.5,
+	"details": "正 反 手 教 学",
+	"targetAir": true,
+	"weapons": [
+		{
+			"name": "堡垒1",
+			"reload": 48,
+			"x": 9.5,
+			"y": 1,
+			"rotate": false,
+			"inaccuracy": 0,
+			"shake": 2,
+			"recoil": 4,
+			"shootY": 7,
+			"top": false,
+			"alternate": true,
+			"ejectEffect": "casing3",
+			"shootSound": "artillery",
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"recoil": 0.45,
+				"homingRange": 40,
+				"homingPower": 0.1,
+				"homingDelay": 27,
+				"collides": true,
+				"collidesTiles": false,
+				"collidesAir": true,
+				"status": "blasted",
+				"damage": 88,
+				"speed": 6,
+				"lifetime": 41,
+				"knockback": 19,
+				"hitSound": "explosion",
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "blastExplosion",
+				"shootEffect": "shootBig2",
+				"smokeEffect": "shootBigSmoke",
+				"splashDamage": 110,
+				"splashDamageRadius": 45,
+				"width": 12,
+				"height": 16
+			}
+		}
+	]
+}

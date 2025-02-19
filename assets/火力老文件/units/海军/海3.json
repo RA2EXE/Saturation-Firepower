@@ -1,0 +1,205 @@
+{
+	"type": "naval",
+	"name": "罗星",
+	"speed": 0.85,
+	"rotateSpeed": 2,
+	"ammoType": "thorium",
+	"ammoCapacity": 600,
+	"hitSize": 24,
+	"trailLength": 40,
+	"waveTrailX": 8,
+	"waveTrailY": -8,
+	"trailScl": 2.5,
+	"health": 2000,
+	"armor": 9,
+	"immunities": [
+		"electrified",
+		"slow"
+	],
+	"faceTarget": false,
+	"research": "海2",
+	"requirements": {
+		"block": "multiplicative-reconstructor",
+		"previous": "海2"
+	},
+	"weapons": [
+		{
+			"name": "罗星1",
+			"reload": 45,
+			"x": 0,
+			"y": 0,
+			"shootY": 5.5,
+			"rotate": true,
+			"rotateSpeed": 4.4,
+			"mirror": false,
+			"inaccuracy": 0,
+			"shootSound": "shootBig",
+			"alternate": true,
+			"ejectEffect": "casing3",
+			"layerOffset": 0.01,
+			"parts": [
+				{
+					"type": "RegionPart",
+					"mirror": false,
+					"suffix": "-前",
+					"under": true,
+					"moveY": -1.2,
+					"progress": "reload"
+				}
+			],
+			"bullet": {
+				"type": "BasicBulletType",
+				"frontColor": "FFFFFF",
+				"backColor": "FEEBB3",
+				"trailLength": 12,
+				"trailWidth": 1.6,
+				"trailColor": "FEEBB3",
+				"status": "崩溃",
+				"statusDuration": 20,
+				"damage": 28,
+				"splashDamageRadius": 26,
+				"splashDamage": 34,
+				"scaleLife": false,
+				"drag": -0.05,
+				"width": 9,
+				"height": 18,
+				"speed": 5,
+				"lifetime": 28.2,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 5,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 25,
+					"baseLength": 0,
+					"lifetime": 25,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3",
+					"cone": 30
+				},
+				"smokeEffect": "shootBig",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"sizeFrom": 5,
+							"sizeTo": 0,
+							"length": 30,
+							"baseLength": 0,
+							"lifetime": 15,
+							"colorFrom": "FFFFFF",
+							"colorTo": "FEEBB3"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 2,
+							"sizeTo": 26,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"hitSound": "laser",
+				"hitShake": 2,
+				"despawnEffect": "none"
+			}
+		},
+		{
+			"name": "罗星2",
+			"x": 0,
+			"y": 0,
+			"mirror": false,
+			"reload": 148,
+			"shootCone": 360,
+			"shootSound": "DD1",
+			"rotate": false,
+			"controllable": false,
+			"autoTarget": true,
+			"inaccuracy": 0,
+			"shoot": {
+				"shots": 6,
+				"shotDelay": 6,
+				"type": "ShootBarrel",
+				"barrels": [
+					10,6,-35,
+					-10,6,35,
+					10,-6,-35,
+					-10,-6,35
+				]
+			},
+			"bullet": {
+				"type": "MissileBulletType",
+				"damage": 35,
+				"splashDamageRadius": 45,
+				"splashDamage": 38,
+				"homingRange": 400,
+				"homingDelay": 8,
+				"homingPower": 0.18,
+				"shootEffect": "none",
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"sprite": "饱和火力-导弹",
+				"trailLength": 15,
+				"trailWidth": 1.3,
+				"trailEffect": "none",
+				"trailColor": "FFFFFF",
+				"backColor": "FF5B5B",
+				"frontColor": "E3E3E3",
+				"speed": 1.6,
+				"drag": -0.1,
+				"lifetime": 31,
+				"width": 12,
+				"height": 45
+			}
+		},
+		{
+			"name": "罗星3",
+			"x": 0,
+			"y": 0,
+			"mirror": false,
+			"reload": 135,
+			"rotate": true,
+			"rotateSpeed": 6,
+			"shoot": {
+				"shots": 4,
+				"shotDelay": 8,
+				"type": "ShootBarrel",
+				"barrels": [
+					6,6,0,
+					-6,6,0,
+					6,-6,0,
+					-6,-6,0
+				]
+			},
+			"shootCone": 10,
+			"shootSound": "missile",
+			"inaccuracy": 3,
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"splashDamageRadius": 35,
+				"splashDamage": 40,
+				"hitSound": "explosion",
+				"status": "blasted",
+				"buildingDamageMultiplier": 1.5,
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"sprite": "饱和火力-导弹",
+				"trailLength": 13,
+				"trailWidth": 1.2,
+				"trailEffect": "none",
+				"trailColor": "FFFFFF",
+				"backColor": "FF5B5B",
+				"frontColor": "E3E3E3",
+				"width": 10,
+				"height": 45,
+				"speed": 4,
+				"lifetime": 90
+			}
+		}
+	]
+}

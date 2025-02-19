@@ -1,0 +1,171 @@
+{
+	"type": "ItemTurret",
+	"name": "猛犸",
+	"health": 1200,
+	"size": 2,
+	"reload": 60,
+	"shootSound": "artillery",
+	"shake": 1.7,
+	"consumes": {
+		"coolant": {
+			"amount": 0.2,
+			"optional": true
+		}
+	},
+	"shoot": {
+		"shots": 2,
+		"shotDelay": 15
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"suffix": "-管",
+				"progress": "recoil",
+				"moveY": -4
+			}
+		]
+	},
+	"targetGround": true,
+	"targetAir": false,
+	"range": 280,
+	"recoilTime": 20,
+	"recoil": 0.5,
+	"ammoUseEffect": "casing3",
+	"inaccuracy": 3,
+	"rotateSpeed": 6,
+	"ammoPerShot": 2,
+	"ammoTypes": {
+		"graphite": {
+			"type": "ArtilleryBulletType",
+			"pierceArmor": true,
+			"speed": 4,
+			"lifetime": 64,
+			"width": 12,
+			"height": 12,
+			"knockback": 1,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"splashDamageRadius": 20,
+			"splashDamage": 40,
+			"hitEffect": "explosion",
+			"despawnEffect": "explosion"
+		},
+		"silicon": {
+			"type": "ArtilleryBulletType",
+			"pierceArmor": true,
+			"speed": 4,
+			"reloadMultiplier": 2,
+			"lifetime": 70,
+			"width": 12,
+			"height": 12,
+			"knockback": 1,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"homingRange": 40,
+			"homingPower": 0.1,
+			"splashDamageRadius": 20,
+			"splashDamage": 38,
+			"hitEffect": "explosion",
+			"despawnEffect": "explosion"
+		},
+		"pyratite": {
+			"type": "ArtilleryBulletType",
+			"pierceArmor": true,
+			"speed": 4,
+			"lifetime": 64,
+			"width": 12,
+			"height": 12,
+			"knockback": 1,
+			"backColor": "FF8C00",
+			"frontColor": "FFB90F",
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"splashDamageRadius": 20,
+			"splashDamage": 45,
+			"makeFire": true,
+			"status": "burning",
+			"statusDuration": 600,
+			"hitEffect": "explosion",
+			"despawnEffect": "explosion"
+		},
+		"blast-compound": {
+			"type": "ArtilleryBulletType",
+			"pierceArmor": true,
+			"speed": 4,
+			"lifetime": 64,
+			"width": 13,
+			"height": 13,
+			"status": "blasted",
+			"statusDuration": 60,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"splashDamageRadius": 45,
+			"splashDamage": 86,
+			"knockback": 1.3,
+			"hitEffect": "blastExplosion",
+			"despawnEffect": "flakExplosionBig"
+		},
+		"集束": {
+			"type": "ArtilleryBulletType",
+			"pierceArmor": true,
+			"speed": 3,
+			"lifetime": 100,
+			"width": 13,
+			"height": 15,
+			"backColor": "D85555FF",
+			"frontColor": "FE7777FF",
+			"damage": 15,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"splashDamageRadius": 20,
+			"splashDamage": 38,
+			"hitEffect": "flakExplosionBig",
+			"despawnEffect": "flakExplosionBig",
+			"ammoMultiplier": 6,
+			"fragBullets": 5,
+			"fragBullet": {
+				"pierceArmor": true,
+				"hitEffect": "blastExplosion",
+				"status": "blasted",
+				"statusDuration": 60,
+				"width": 8,
+				"height": 9,
+				"backColor": "D85555FF",
+				"frontColor": "FE7777FF",
+				"damage": 8,
+				"scaledSplashDamage": true,
+				"splashDamageRadius": 35,
+				"splashDamage": 84,
+				"lifetime": 20,
+				"speed": 1.5
+			}
+		},
+		"硅钢": {
+			"type": "ArtilleryBulletType",
+			"backColor": "7595D2",
+			"pierceArmor": true,
+			"speed": 4,
+			"width": 12,
+			"height": 12,
+			"lifetime": 60,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "blastExplosion",
+			"splashDamageRadius": 25,
+			"splashDamage": 35,
+			"ammoMultiplier": 2,
+			"status": "unmoving",
+			"statusDuration": 60
+		}
+	},
+	"requirements": [
+		"copper/95",
+		"graphite/55",
+		"titanium/65"
+	],
+	"category": "turret",
+	"research": "hail"
+}

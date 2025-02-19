@@ -1,0 +1,133 @@
+{
+	"type": "mech",
+	"name": "立宪",
+	"hitSize": 48,
+	"canDrown": false,
+	"armor": 36,
+	"speed": 0.58,
+	"rotateSpeed": 1.44,
+	"baseRotateSpeed": 1.3,
+	"health": 154000,
+	"mechStepParticles": true,
+	"mechFrontSway": 2.2,
+	"mechSideSway": 0.8,
+	"ammoType": "镄",
+	"ammoCapacity": 350,
+	"immunities": [
+		"disarmed"
+	],
+	"researchCostMultiplier": 0,
+	"research": {
+		"parent": "reign",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "荒芜矿区"
+			}
+		]
+	},
+	"weapons": [
+		{
+			"name": "立宪1",
+			"reload": 5.5,
+			"shake": 3,
+			"recoil": 5,
+			"x": 28,
+			"y": -1,
+			"shootX": 0,
+			"shootY": 20,
+			"rotate": false,
+			"top": false,
+			"inaccuracy": 0.5,
+			"shootSound": "shootBig",
+			"alternate": true,
+			"ejectEffect": "casing4",
+			"shootCone": 15,
+			"bullet": {
+				"damage": 245,
+				"splashDamage": 135,
+				"splashDamageRadius": 40,
+				"pierce": true,
+				"pierceBuilding": true,
+				"pierceArmor": true,
+				"pierceCap": 10,
+				"speed": 28.6,
+				"lifetime": 14,
+				"hitSound": "explosion",
+				"shootEffect": "shootBig",
+				"smokeEffect": "shootBigSmoke",
+				"trailLength": 3.5,
+				"trailWidth": 3.3,
+				"trailColor": "FFA05C",
+				"backColor": "FFA05C",
+				"frontColor": "FFFFFF",
+				"width": 14,
+				"height": 33,
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 15,
+					"line": true,
+					"strokeFrom": 3,
+					"strokeTo": 0,
+					"lenFrom": 16,
+					"lenTo": 0,
+					"length": 60,
+					"baseLength": 0,
+					"lifetime": 10,
+					"colorFrom": "FFA05C",
+					"colorTo": "FFFFFF",
+					"cone": 60
+				},
+				"despawnEffect": "flakExplosionBig"
+			}
+		},
+		{
+			"name": "立宪2",
+			"reload": 50,
+			"shootY": 7.5,
+			"x": 16,
+			"y": 12,
+			"controllable": false,
+			"autoTarget": true,
+			"shootStatusDuration": 15,
+			"shootStatus": "强攻",
+			"shoot": {
+				"type": "ShootSpread",
+				"shots": 5
+			},
+			"shake": 2,
+			"recoil": 2,
+			"top": true,
+			"rotationLimit": 50,
+			"shootCone": 41,
+			"rotate": true,
+			"rotateSpeed": 6,
+			"shootSound": "spark",
+			"alternate": true,
+			"inaccuracy": 16,
+			"bullet": {
+				"type": "LightningBulletType",
+				"damage": 32,
+				"lightningColor": "FFA05C",
+				"hitColor": "FFA05C",
+				"lightningLength": 12,
+				"lightningLengthRand": 12,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 4,
+					"line": true,
+					"length": 55,
+					"baseLength": 0,
+					"lifetime": 22,
+					"colorFrom": "FFA05CFF",
+					"colorTo": "D86E56FF",
+					"cone": 20
+				},
+				"smokeEffect": "none",
+				"hitEffect": "hitLancer",
+				"despawnEffect": "none",
+				"status": "shocked"
+			}
+		}
+	]
+}

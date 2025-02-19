@@ -1,0 +1,83 @@
+{
+	"type": "LiquidTurret",
+	"name": "铁流",
+	"health": 2500,
+	"size": 3,
+	"reload": 24,
+	"range": 208,
+	"recoilTime": 30,
+	"recoil": 3,
+	"shootSound": "shotgun",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 2,
+	"shoot": {
+		"type": "ShootSpread",
+		"shots": 3,
+		"spread": 0
+	},
+	"shake": 2,
+	"rotateSpeed": 9,
+	"liquidCapacity": 10,
+	"ammoTypes": {
+		"slag": {
+			"type": "RailBulletType",
+			"pointEffectSpace": 18,
+			"pointEffect": "railTrail",
+			"damage": 135,
+			"knockback": 3,
+			"lifetime": 30,
+			"length": 208,
+			"pierce": true,
+			"pierceDamageFactor": 0.3,
+			"hitEffect": "hitMeltdown",
+			"status": "melting",
+			"statusDuration": 600,
+			"shootEffect": "instShoot",
+			"smokeEffect": "none"
+		},
+		"硝化重油": {
+			"type": "BasicBulletType",
+			"trailChance": 1,
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 4,
+				"sizeFrom": 4,
+				"sizeTo": 0,
+				"interp": "circleOut",
+				"sizeInterp": "pow3In",
+				"length": 7,
+				"baseLength": 2,
+				"lifetime": 60,
+				"layer": 99,
+				"colorFrom": "333333",
+				"colorTo": "333333"
+			},
+			"sprite": "circle-bullet",
+			"width": 10,
+			"height": 8,
+			"backColor": "313131",
+			"frontColor": "313131",
+			"speed": 18,
+			"lifetime": 11.5,
+			"shootEffect": "none",
+			"smokeEffect": "none",
+			"knockback": 22,
+			"statusDuration": 180,
+			"status": "油蚀",
+			"hitEffect": "flakExplosionBig",
+			"despawnEffect": "none",
+			"damage": 85,
+			"splashDamage": 124,
+			"splashDamageRadius": 30
+		}
+	},
+	"requirements": [
+		"lead/350",
+		"metaglass/180",
+		"titanium/120",
+		"thorium/100"
+	],
+	"category": "turret",
+	"research": "tsunami"
+}

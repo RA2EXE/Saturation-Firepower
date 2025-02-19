@@ -1,0 +1,35 @@
+{
+	"type": "UnitAssembler",
+	"name": "电鳄装配厂",
+	"health": 5200,
+	"size": 6,
+	"liquidCapacity": 90,
+	"consumes": {
+		"power": 20,
+		"liquid": {
+			"liquid": "cryofluid",
+			"amount": 1.5
+		}
+	},
+	"areaSize": 9,
+	"plans": [
+		{
+			"unit": "电鳄",
+			"time": 12000,
+			"requirements": [
+				"饱和火力-裂位收容块/1",
+				"饱和火力-装甲收容块/1"
+			]
+		}
+	],
+	"droneType": "组装机",
+	"requirements": [
+		"镄/1000",
+		"plastanium/800",
+		"泰勒合金/800",
+		"纳米核/1500",
+		"二级协议/5"
+	],
+	//"research": {"parent": "特种工厂","objectives": [{"type": "SectorComplete","preset": "雷师殿"}]}，
+	"category": "units"
+}

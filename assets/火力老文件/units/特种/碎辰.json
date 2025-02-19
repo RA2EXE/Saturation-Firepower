@@ -1,0 +1,303 @@
+{
+	"type": "legs",
+	"name": "碎辰",
+	"fogRadius": 150,
+	"legSplashDamage": 288,
+	"legSplashRange": 13,
+	"legCount": 6,
+	"legExtension": -10,
+	"lockLegBase": true,
+	"legBaseOffset": 8,
+	"legLength": 48,
+	"legForwardScl": 0.6,
+	"stepShake": 0.8,
+	"legGroupSize": 2,
+	"legMoveSpace": 0.6,
+	"rippleScale": 1,
+	"drownTimeMultiplier": 9,
+	"legContinuousMove": true,
+	"hovering": true,
+	"allowLegStep": true,
+	"canBoost": false,
+	"immunities":["electrified","干扰","unmoving","disarmed"],
+	"targetFlags": ["turret"],
+	"ammoType": "三级协议",
+	"ammoCapacity": 6,
+	"rotateSpeed": 0.88,
+	"speed": 0.38,
+	"hitSize": 60,
+	"targetAir": false,
+	"targetGround": false,
+	"faceTarget": true,
+	"health": 29600,
+	"armor": 35,
+	"itemCapacity": 0,
+	//"research": {"parent": "实验工厂","objectives": [{"type": "SectorComplete","preset": "灭绝"}]},
+	"weapons": [
+		{
+			"name": "碎辰1",
+			"reload": 470,
+			"y": 7.75,
+			"x": 0,
+			"layerOffset": 0.02,
+			"parts": [
+				{
+					"type": "RegionPart",
+					"progress": "reload",
+					"mirror": false,
+					"under": true,
+					"x": 0,
+					"y": 0,
+					"suffix": "-1",
+					"moveY": -16
+				}
+			],
+			"ejectEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 32,
+						"sizeFrom": 15,
+						"sizeTo": 0,
+						"length": 180,
+						"baseLength": 0,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"layer": 60,
+						"lifetime": 185,
+						"colorFrom": "73737390",
+						"colorTo": "73737390"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 22,
+						"sizeFrom": 25,
+						"sizeTo": 0,
+						"length": 180,
+						"baseLength": 0,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"layer": 60,
+						"lifetime": 185,
+						"colorFrom": "73737390",
+						"colorTo": "73737390"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 13,
+						"sizeFrom": 0,
+						"sizeTo": 150,
+						"strokeFrom": 66,
+						"strokeTo": 16,
+						"layer": 60,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF10"
+					}
+				]
+			},
+			"shake": 15,
+			"mirror": false,
+			"rotate": false,
+			"autoTarget": false,
+			"shootY": 34,
+			"cooldownTime": 300,
+			"inaccuracy": 0,
+			"shootSound": "largeCannon",
+			"recoil": 6,
+			"bullet": {
+				"type": "BasicBulletType",
+				"buildingDamageMultiplier": 3,
+				"damage": 7600,
+				"speed": 13.55,
+				"lifetime": 137.62,
+				"recoil": 1.32,
+				"scaleLife": true,
+				"collidesTiles": false,
+				"collidesAir": false,
+				"collidesGround": false,
+				"sprite": "missile-large",
+				"shrinkX": 0,
+				"shrinkY": 0,
+				"hitSize": 10,
+				"width": 25,
+				"height": 55,
+				"backColor": "FEEBB3",
+				"frontColor": "FFFFFF",
+				"trailColor": "FEEBB3",
+				"trailLength": 10,
+				"trailWidth": 6,
+				"trailChance": 1,
+				"trailInterval": 10,
+				"trailEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"length": 26,
+					"interp": "fastSlow",
+					"baseLength": 0,
+					"lifetime": 105,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3",
+					"sizeFrom": 7,
+					"sizeTo": 0
+				},
+				"lightningDamage": 2350,
+				"lightning": 2,
+				"lightningLength": 5,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 4,
+							"sizeFrom": 15,
+							"sizeTo": 0,
+							"length": 20,
+							"baseLength": 48,
+							"lifetime": 25,
+							"colorFrom": "FEEBB380",
+							"colorTo": "FEEBB300"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 22,
+							"line": true,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"lenFrom": 24,
+							"lenTo": 0,
+							"length": -63,
+							"baseLength": 64,
+							"lifetime": 20,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 25,
+							"sizeFrom": 0,
+							"sizeTo": 66,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"shootEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 10,
+							"sizeTo": 100,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 45,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB300",
+							"cone": 0
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 25,
+							"sizeFrom": 2,
+							"sizeTo": 90,
+							"strokeFrom": 8,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"smokeEffect": "smokeCloud",
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 100,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 50,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				},
+				"hitSound": "largeCannon",
+				"fragLifeMin": 1,
+				"fragBullets": 1,
+				"fragBullet": {
+					"instantDisappear": true,
+					"speed": 0,
+					"collides": false,
+					"absorbable": false,
+					"buildingDamageMultiplier": 3,
+					"damage": 500,
+					"splashDamage": 1790,
+					"splashDamageRadius": 185,
+					"hitShake": 35,
+					"hitSound": "largeCannon",
+					"hitSoundVolume": 18,
+					"hitEffect": {
+						"type": "MultiEffect",
+						"effects": [
+							{
+								"type": "ParticleEffect",
+								"particles": 59,
+								"sizeFrom": 15,
+								"sizeTo": 0,
+								"length": 140,
+								"baseLength": 58,
+								"lifetime": 55,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FFFFFF"
+							},
+							{
+								"type": "ParticleEffect",
+								"particles": 72,
+								"line": true,
+								"strokeFrom": 12,
+								"strokeTo": 0,
+								"lenFrom": 35,
+								"lenTo": 60,
+								"length": 203,
+								"baseLength": 30,
+								"lifetime": 20,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							},
+							{
+								"type": "WaveEffect",
+								"lifetime": 25,
+								"sizeFrom": 2,
+								"sizeTo": 180,
+								"strokeFrom": 8,
+								"strokeTo": 0,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							}
+						]
+					},
+					"despawnEffect": "none"
+				},
+				"bulletInterval": 1,
+				"intervalBullets": 2,
+				"intervalRandomSpread": 30,
+				"intervalSpread": 8,
+				"intervalAngle": 0,
+				"intervalBullet": {
+					"type": "LightningBulletType",
+					"damage": 326,
+					"lightningColor": "FEEBB3",
+					"hitColor": "FEEBB3",
+					"lightningLength": 5,
+					"lightningLengthRand": 10,
+					"hitEffect": "hitLancer",
+					"despawnEffect": "none",
+					"status": "崩溃",
+					"statusDuration": 180
+				}
+			}
+		}
+	]
+}

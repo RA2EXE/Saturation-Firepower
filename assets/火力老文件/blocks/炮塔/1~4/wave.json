@@ -1,0 +1,50 @@
+{
+	"smokeEffect":"none",
+	"shootEffect":"none",
+	"ammoTypes": {
+	"water":{
+		"type": "LiquidBulletType",
+		"shootEffect":"none",
+		"liquid": "water",
+		"statusDuration":120,
+		"status":"wet",
+		"knockback":0.7,
+		"drag":0.01,
+		"layer":98
+		},
+	"slag":{
+		"type": "LiquidBulletType",
+		"damage":4,
+		"liquid": "slag",
+		"status": "melting",
+		"statusDuration": 120,
+		"drag":0.01
+		},
+	"cryofluid":{
+		"type": "LiquidBulletType",
+		"liquid": "cryofluid",
+		"status": "freezing",
+		"statusDuration": 120,
+		"drag":0.01
+		},
+	"oil":{
+		"type": "LiquidBulletType",
+		"liquid": "oil",
+		"status": "tarred",
+		"statusDuration": 120,
+		"drag":0.01,
+		"layer":98
+		},
+	"纳米流体":{
+	"type": "LiquidBulletType",
+	"liquid": "纳米流体",
+	"lifetime":30,
+	"knockback":0.3,
+	"healPercent":5,
+	"collidesTeam":true,
+	"statusDuration":120,
+	"status":"拆解",
+	"damage": 1.5
+	}
+}
+}

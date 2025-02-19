@@ -1,0 +1,119 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"outlineColor":"383848",
+	"name": "利刃-导弹",
+	"immunities": [
+		"burning","freezing","melting",
+		"disarmed","sapped","slow",
+		"tarred","unmoving","wet",
+		"spore-slowed","corroded",
+		"碎解","阳电","阴电"
+	],
+	"homingDelay": 90,
+	"speed": 6,
+	"lifetime": 290,
+	"rotateSpeed": 3,
+	"loopSoundVolume": 0.03,
+	"deathSound": "explosionbig",
+	"hidden": true,
+	"missileAccelTime": 100,
+	"hitSize": 18,
+	"health": 3600,
+	"armor": 35,
+	"fogRadius": 8,
+	"engineColor": "FF5B5B",
+	"trailColor": "FF5B5B50",
+	"trailLength": 35,
+	"engineLayer": 110,
+	"engineOffset": 8,
+	"engineSize": 4,
+	"maxRange": 30,
+	"abilities": [
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"sizeFrom": 3,
+				"sizeTo": 10,
+				"length": 32,
+				"baseLength": 0,
+				"lifetime": 33,
+				"colorFrom": "FF5B5B",
+				"colorTo": "E3E3E300",
+				"cone": 28
+			},
+			"interval": 3,
+			"rotateEffect": true,
+			"y": -8,
+			"color": "FF5B5B"
+		}
+	],
+	"weapons": [
+		{
+			"name": "自爆",
+			"x": 0,
+			"y": 0,
+			"reload": 1,
+			"mirror": false,
+			"rotate": true,
+			"shake": 10,
+			"shootSound": "none",
+			"shootOnDeath": true,
+			"shootCone": 360,
+			"bullet": {
+				"collides":false,
+				"instantDisappear": true,
+				"ammoMultiplier": 1,
+				"hitSound": "titanExplosion",
+				"hitSoundVolume": 6,
+				"killShooter": true,
+				"splashDamageRadius": 66,
+				"splashDamage": 5250,
+				"status": "碎解",
+				"statusDuration": 600,
+				"hitShake": 15,
+				"shootEffect":  {
+					"type": "MultiEffect",
+					"effects": [
+						"massiveExplosion",
+						{
+							"type":"WrapEffect",
+							"effect":"scatheExplosion",
+							"color":"FF5B5B"
+						}
+					]},
+				"smokeEffect": "none",
+				"despawnEffect": "none",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 26,
+							"sizeFrom": 13,
+							"sizeTo": 0,
+							"length": 56,
+							"baseLength": 20,
+							"interp": "pow10Out",
+							"sizeInterp": "pow10Out",
+							"lifetime": 85,
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B00"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 11,
+							"sizeFrom": 0,
+							"sizeTo": 70,
+							"strokeFrom": 10,
+							"strokeTo": 0,
+							"colorFrom": "FF5B5B",
+							"colorTo": "FF5B5B"
+						}
+					]
+				}
+			}
+		}
+	]
+}

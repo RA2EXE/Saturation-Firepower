@@ -1,0 +1,79 @@
+{
+	"details": "更强的透射聚焦棱镜与先进火控系统是个不错的选择，事实也证明确实如此。\n谁再把不稳定还有安全隐患的裂能设备往小型化炮塔上装就给我军法处置！\n[darkgray]下不为例",
+	"reload": 40,
+	"range": 100,
+	"health": 2230,
+	"shoot": {
+		"type": "ShootSpread",
+		"shots": 4,
+		"spread": 12.5
+	},
+	"requirements": [
+		"graphite/110",
+		"metaglass/60",
+		"硅钢/50",
+		"thorium/80"
+	],
+	"rotateSpeed": 8,
+	"ammoTypes": {
+		"titanium": {
+			"type": "ShrapnelBulletType",
+			"length": 110,
+			"width": 17,
+			"damage": 88,
+			"ammoMultiplier": 4,
+			"reloadMultiplier": 1.3
+		},
+		"thorium": {
+			"type": "ShrapnelBulletType",
+			"length": 110,
+			"rangeChange": 10,
+			"damage": 135.2,
+			"pierceArmor": true,
+			"ammoMultiplier": 5,
+			"toColor": "f9a3c7",
+			"shootEffect": "thoriumShoot",
+			"smokeEffect": "thoriumShoot"
+		},
+		"裂位能": {
+			"type": "ShrapnelBulletType",
+			"inaccuracy":3,
+			"length": 80,
+			"rangeChange": 42,
+			"damage": 216,
+			"pierceArmor": true,
+			"reloadMultiplier": 0.9,
+			"status": "崩溃",
+			"statusDuration": 44,
+			"ammoMultiplier": 4,
+			"fromColor":"EEC591A8",
+			"toColor":"EEC591",
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 9,
+				"line": true,
+				"lenFrom": 25,
+				"lenTo": 0,
+				"length": 55,
+				"baseLength": 0,
+				"lifetime": 25,
+				"colorFrom": "FFFFFF",
+				"colorTo": "EEC591",
+				"cone": 30
+			},
+			"smokeEffect": "none",
+			"spawnBullets":[{
+				"type": "ShrapnelBulletType",
+				"length": 132,
+				"rangeChange": 10,
+				"damage": 216,
+				"pierceArmor": true,
+				"status": "崩溃",
+				"statusDuration": 44,
+				"ammoMultiplier": 5,
+				"fromColor":"EEC59100",
+				"toColor":"EEC591"
+		}]
+		}
+	}
+}

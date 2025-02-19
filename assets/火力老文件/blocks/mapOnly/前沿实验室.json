@@ -1,0 +1,66 @@
+{
+	"type": "GenericCrafter",
+	"name": "前沿实验室",
+	"outputItem":"二级协议/1",
+	"size": 3,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-1",
+				"rotateSpeed": 1.08
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-2",
+				"rotation": 120,
+				"rotateSpeed": 0.18
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-3",
+				"rotation": 240,
+				"rotateSpeed": 0.03
+			},
+			{
+				"type": "DrawFlame",
+				"flameColor": "25C9AB"
+			},
+			"DrawDefault",
+			{
+				"type": "DrawFade",
+				"scale": 30
+			}
+		]
+	},
+	"canOverdrive": false,
+	"health": 2500,
+	"itemCapacity": 25,
+	"hasPower": true,
+	"hasItems": true,
+	"craftTime": 3600,
+	"consumes": {
+		"power": 26
+	},
+	"requirements": [
+		"lead/220",
+		"thorium/180",
+		"硅钢/150",
+		"纳米核/80",
+		"一级协议/3"
+	],
+	"buildCostMultiplier": 0.9,
+	"category": "effect",
+	"research": {
+		"parent": "实验室",
+		"objectives": [
+			"镄反应堆",
+			"激发器"
+		]
+	}
+}

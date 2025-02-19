@@ -1,0 +1,15 @@
+{
+	"name": "区块隔离门",
+	"type": "AutoDoor",
+	"health": 24000,
+	"size": 2,
+	//"buildCostMultiplier": 20,
+	"rebuildable": false,
+	"buildVisibility": "editorOnly",
+	"category": "defense",
+	"requirements": [
+		"镄/640",
+		"硅钢/800",
+		"裂位能/500"
+	]
+}

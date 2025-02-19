@@ -1,0 +1,190 @@
+{
+	"health": 24000,
+	"range": 220,
+	"abilities": [
+		{
+			"type": "EnergyFieldAbility",
+			"damage": 45,
+			"reload": 48,
+			"range": 220,
+			"healPercent": 1.1,
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"particles": 9,
+				"sizeFrom": 9,
+				"sizeTo": 0,
+				"line": true,
+				"length": 55,
+				"baseLength": 0,
+				"lifetime": 25,
+				"colorFrom": "76D081",
+				"colorTo": "76D081"
+			},
+			"sameTypeHealMult": 0.6,
+			"damageEffect": "chainLightning",
+			"status": "electrified",
+			"shootSound": "spark",
+			"statusDuration": 360,
+			"x": 0,
+			"y": 0,
+			"maxTargets": 40
+		}
+	],
+	"immunities": [
+		"electrified",
+		"disarmed",
+		"拆解"
+	],
+	"weapons": [
+		{
+			"name": "玄武1",
+			"type": "PointDefenseWeapon",
+			"x": 12.5,
+			"y": -18,
+			"rotate": true,
+			"recoil": 0,
+			"rotateSpeed": 12,
+			"reload": 4,
+			"targetInterval": 4,
+			"targetSwitchInterval": 4,
+			"bullet": {
+				"speed": 24,
+				"lifetime": 12,
+				"shootEffect": "sparkShoot",
+				"hitEffect": "pointHit",
+				"maxRange": 220,
+				"damage": 42
+			}
+		},
+		{
+			"name": "玄武1",
+			"type": "PointDefenseWeapon",
+			"x": 12.5,
+			"y": 14,
+			"rotate": true,
+			"recoil": 0,
+			"rotateSpeed": 12,
+			"reload": 4,
+			"targetInterval": 4,
+			"targetSwitchInterval": 4,
+			"bullet": {
+				"speed": 24,
+				"lifetime": 12,
+				"shootEffect": "sparkShoot",
+				"hitEffect": "pointHit",
+				"maxRange": 220,
+				"damage": 42
+			}
+		},
+		{
+			"name": "玄武2",
+			"x": 0,
+			"y": 0,
+			"inaccuracy": 180,
+			"shoot": {
+				"shots": 3,
+				"shotDelay": 8
+			},
+			"shootCone": 360,
+			"shootSound": "missile",
+			"mirror": false,
+			"reload": 100,
+			"controllable": false,
+			"autoTarget": true,
+			"bullet": {
+				"height": 15,
+				"width": 9,
+				"damage": 80,
+				"shrinkY": 0,
+				"absorbable": false,
+				"homingDelay": 10,
+				"homingPower": 0.08,
+				"homingRange": 300,
+				"healPercent": 8,
+				"speed": 5,
+				"lifetime": 100,
+				"splashDamageRadius": 55,
+				"splashDamage": 45,
+				"collidesTeam": true,
+				"status": "electrified",
+				"statusDuration": 45,
+				"frontColor": "97FFA8",
+				"backColor": "97FFA8",
+				"trailLength": 46,
+				"trailWidth": 2,
+				"trailColor": "97FFA8",
+				"shootEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "WaveEffect",
+							"lifetime": 20,
+							"sizeFrom": 5,
+							"sizeTo": 30,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "97FFA8",
+							"colorTo": "FFFFFF"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 8,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 45,
+							"baseLength": 0,
+							"lifetime": 35,
+							"colorFrom": "97FFA8",
+							"colorTo": "FFFFFF"
+						}
+					]
+				},
+				"smokeEffect": "bigShockwave",
+				"hitSound": "plasmaboom",
+				"despawnEffect": "none",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 12,
+							"sizeFrom": 1.2,
+							"sizeTo": 0,
+							"length": 80,
+							"baseLength": 5,
+							"lifetime": 60,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA8"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"sizeFrom": 2,
+							"sizeTo": 0,
+							"length": 80,
+							"baseLength": 5,
+							"lifetime": 60,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA8"
+						},
+						{
+							"type": "WaveEffect",
+							"interp": "circleOut",
+							"lifetime": 13,
+							"sizeFrom": 2,
+							"sizeTo": 65,
+							"strokeFrom": 6,
+							"strokeTo": 0,
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA8"
+						}
+					]
+				}
+			}
+		}
+	]
+}

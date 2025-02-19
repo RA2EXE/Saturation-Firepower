@@ -1,0 +1,88 @@
+{
+	"details": "我们修复并升级了月影原型机所使用的导弹巢，并换装小型化幽灵炮",
+	"health": 23000,
+	"weapons": [
+		{
+			"name": "巫妖1",
+			"reload": 7,
+			"shootY": 7,
+			"x": 10,
+			"y": 0,
+			"rotate": true,
+			"rotateSpeed": 1,
+			"shootSound": "shootBig",
+			"shake": 1,
+			"ejectEffect": "casing3",
+			"bullet": {
+				"damage": 80,
+				"speed": 8.5,
+				"lifetime": 28,
+				"shootEffect": "shootBig",
+				"width": 14,
+				"height": 20
+			}
+		},
+		{
+			"name": "巫妖2",
+			"reload": 50,
+			"x": 18,
+			"y": 8,
+			"shootY": 6,
+			"shoot": {
+				"shots": 5,
+				"shotDelay": 1
+			},
+			"rotate": true,
+			"inaccuracy": 10,
+			"alternate": true,
+			"shootSound": "missile",
+			"ejectEffect": "casing1",
+			"bullet": {
+				"type": "MissileBulletType",
+				"damage": 18,
+				"splashDamageRadius": 35,
+				"splashDamage": 37,
+				"homingDelay": 20,
+				"status": "blasted",
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"smokeEffect": "none",
+				"speed": 5,
+				"lifetime": 40,
+				"width": 7,
+				"height": 8
+			}
+		},
+		{
+			"name": "巫妖2",
+			"reload": 75,
+			"x": -18,
+			"y": -9,
+			"shootY": 6,
+			"shoot": {
+				"shots": 5,
+				"shotDelay": 1
+			},
+			"rotate": true,
+			"inaccuracy": 10,
+			"alternate": true,
+			"shootSound": "missile",
+			"ejectEffect": "casing1",
+			"bullet": {
+				"type": "MissileBulletType",
+				"damage": 20,
+				"splashDamageRadius": 35,
+				"splashDamage": 42,
+				"homingDelay": 20,
+				"status": "blasted",
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"smokeEffect": "none",
+				"speed": 5,
+				"lifetime": 40,
+				"width": 7,
+				"height": 8
+			}
+		}
+	]
+}

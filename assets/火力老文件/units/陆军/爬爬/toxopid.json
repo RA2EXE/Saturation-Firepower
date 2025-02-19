@@ -1,0 +1,169 @@
+{
+	"health": 40000,
+	"legSplashDamage": 88,
+	"legSplashRange": 60,
+	"weapons": [
+		{
+			"name": "毒蛊1",
+			"shoot": {
+				"type": "ShootSpread",
+				"shots": 3,
+				"spread": 13
+			},
+			"reload": 27,
+			"x": 11,
+			"y": -5,
+			"shootY": 7,
+			"rotate": true,
+			"rotateSpeed": 2,
+			"inaccuracy": 0,
+			"alternate": true,
+			"ejectEffect": "casing1",
+			"shootSound": "shootBig",
+			"shake": 4,
+			"bullet": {
+				"type": "ShrapnelBulletType",
+				"pierceArmor": true,
+				"damage": 110,
+				"length": 100,
+				"width": 20,
+				"serrationLenScl": 7,
+				"serrationSpaceOffset": 60,
+				"serrationFadeOffset": 0,
+				"serrations": 10,
+				"serrationWidth": 6,
+				"statusDuration": 60,
+				"status": "sapped",
+				"fromColor": "A278E31FF",
+				"toColor": "665C9FFF",
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 8,
+					"line": true,
+					"length": 45,
+					"baseLength": 0,
+					"lifetime": 15,
+					"colorFrom": "A278E1",
+					"colorTo": "665C9FFF",
+					"cone": 60
+				},
+				"smokeEffect": "sparkShoot"
+			}
+		},
+		{
+			"name": "天蝎1",
+			"top": true,
+			"shootY": 22,
+			"reload": 200,
+			"rotate": true,
+			"rotationLimit": 80,
+			"rotateSpeed": 1,
+			"mirror": false,
+			"ejectEffect": "casing3",
+			"recoil": 10,
+			"shake": 10,
+			"x": 0,
+			"y": -14,
+			"shootSound": "artillery",
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"shootEffect": "shootSmall",
+				"smokeEffect": "shootBigSmoke2",
+				"speed": 3,
+				"lifetime": 98,
+				"width": 25,
+				"height": 25,
+				"frontColor": "FFFFFF",
+				"backColor": "A278E1",
+				"collidesTiles": true,
+				"ammoMultiplier": 4,
+				"damage": 45,
+				"splashDamageRadius": 80,
+				"splashDamage": 92,
+				"hitShake": 10,
+				"lightningColor": "A278E1",
+				"lightningDamage": 70,
+				"lightning": 5,
+				"lightningLength": 14,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 18,
+							"sizeFrom": 11,
+							"sizeTo": 0,
+							"length": 55,
+							"baseLength": 43,
+							"lifetime": 35,
+							"colorFrom": "A278E180",
+							"colorTo": "A278E100"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 12,
+							"sizeFrom": 1,
+							"sizeTo": 80,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "A278E1",
+							"colorTo": "FFFFFF"
+						}
+					]
+				},
+				"status": "sapped",
+				"statusDuration": 600,
+				"despawnEffect": "none",
+				"fragBullets": 16,
+				"fragLifeMin": 0.3,
+				"fragBullet": {
+					"type": "ArtilleryBulletType",
+					"speed": 2.3,
+					"lifetime": 90,
+					"width": 19,
+					"height": 19,
+					"frontColor": "FFFFFF",
+					"backColor": "A278E1",
+					"collidesTiles": false,
+					"splashDamageRadius": 50,
+					"splashDamage": 75,
+					"knockback": 1,
+					"hitShake": 5,
+					"lightningColor": "A278E1",
+					"lightningDamage": 30,
+					"lightning": 3,
+					"lightningLength": 7,
+					"hitEffect": {
+						"type": "MultiEffect",
+						"effects": [
+							{
+								"type": "ParticleEffect",
+								"particles": 18,
+								"sizeFrom": 9,
+								"sizeTo": 0,
+								"length": 35,
+								"baseLength": 23,
+								"lifetime": 35,
+								"colorFrom": "A278E180",
+								"colorTo": "A278E100"
+							},
+							{
+								"type": "WaveEffect",
+								"lifetime": 10,
+								"sizeFrom": 1,
+								"sizeTo": 50,
+								"strokeFrom": 2,
+								"strokeTo": 0,
+								"colorFrom": "A278E1",
+								"colorTo": "FFFFFF"
+							}
+						]
+					},
+					"status": "sapped",
+					"statusDuration": 60,
+					"despawnEffect": "none"
+				}
+			}
+		}
+	]
+}

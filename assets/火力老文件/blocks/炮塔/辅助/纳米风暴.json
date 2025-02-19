@@ -1,0 +1,135 @@
+{
+	"type": "ItemTurret",
+	"name": "纳米风暴",
+	"health": 2300,
+	"size": 3,
+	"reload": 320,
+	"range": 400,
+	"fogRadiusMultiplier": 0.5,
+	"shoot": {
+		"shots": 2,
+		"shotDelay": 6
+	},
+	"ammoUseEffect": "bigShockwave",
+	"heatColor": "76D081",
+	"cooldownTime": 120,
+	"targetHealing": true,
+	"canOverdrive": false,
+	"inaccuracy": 20,
+	"velocityRnd": 0.2,
+	"rotateSpeed": 3,
+	"shake": 1,
+	"shootSound": "laser",
+	"shootEffect": "hitEmpSpark",
+	"consumes": {
+		"power": 5
+	},
+	"ammoPerShot": 4,
+	"ammoTypes": {
+		"纳米核": {
+			"type": "ArtilleryBulletType",
+			"splashDamageRadius": 160,
+			"splashDamage": 15,
+			"speed": 6.5,
+			"lifetime": 70,
+			"damage": 18,
+			"shrinkY": 0,
+			"shrinkX": 0,
+			"spin": 2,
+			"sprite": "large-bomb",
+			"backColor": "76D081",
+			"frontColor": "FFFFFF",
+			"trailLength": 10,
+			"trailWidth": 2.2,
+			"trailInterval": 20,
+			"trailColor": "76D081",
+			"collidesTeam": true,
+			"healPercent": 30,
+			"status": "干扰",
+			"statusDuration": 180,
+			"drag": 0.001,
+			"width": 24,
+			"height": 24,
+			"hitShake": 1,
+			"ammoMultiplier": 1,
+			"hitEffect": {
+				"type": "WaveEffect",
+				"lifetime": 30,
+				"sizeFrom": 0,
+				"sizeTo": 160,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"interp": "circleOut",
+				"colorFrom": "76D081",
+				"colorTo": "76D081"
+			},
+			"fragBullets": 1,
+			"fragBullet": {
+				"type": "EmpBulletType",
+				"timeIncrease": 2.75,
+				"timeDuration": 450,
+				"status": "拆解",
+				"statusDuration": 300,
+				"range": 160,
+				"splashDamageRadius": 160,
+				"splashDamage": 20,
+				"healAmount": 350,
+				"width": 0,
+				"height": 0,
+				"damage": 15,
+				"trailEffect": "none",
+				"backColor": "76D081",
+				"frontColor": "FFFFFF",
+				"instantDisappear": true,
+				"hitSound": "plasmaboom",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "WrapEffect",
+							"effect": "dynamicSpikes",
+							"color": "76D081",
+							"rotation": 160
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 23,
+							"sizeFrom": 1.5,
+							"sizeTo": 0,
+							"length": 160,
+							"baseLength": 8,
+							"lifetime": 100,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "76D081",
+							"colorTo": "76D081"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 23,
+							"sizeFrom": 1.2,
+							"sizeTo": 0,
+							"length": 160,
+							"baseLength": 8,
+							"lifetime": 100,
+							"interp": "fastSlow",
+							"sizeInterp": "pow3In",
+							"colorFrom": "76D081",
+							"colorTo": "76D081"
+						}
+					]
+				},
+				"despawnEffect": "hitEmpSpark"
+			}
+		}
+	},
+	"requirements": [
+		"lead/135",
+		"silicon/85",
+		"plastanium/110",
+		"纳米核/150",
+		"一级协议/0"
+	],
+	"category": "effect",
+	"research": "纳米组装机"
+}

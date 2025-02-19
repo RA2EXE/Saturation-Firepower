@@ -1,0 +1,65 @@
+{
+	"type": "GenericCrafter",
+	"name": "相位稳定塔",
+	"health": 12400,
+	"outputItem": "phase-fabric/5",
+	"size": 8,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 600,
+	"itemCapacity": 100,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			"DrawDefault",
+			{
+				"type": "DrawFade",
+				"scale": 2,
+				"alpha": 0.98
+			},
+			{
+				"type": "DrawArcSmelt",
+				"midColor": "FFF1D2",
+				"flameColor": "EEC591",
+				"flameRad": 0,
+				"flameRadiusScl": 0,
+				"flameRadiusMag": 0,
+				"circleSpace": 770,
+				"circleStroke": 10,
+				"alpha": 0.8,
+				"particles": 120,
+				"particleLife": 120,
+				"particleRad": 780,
+				"particleStroke": 1.5,
+				"particleLen": 22
+			},
+			{
+				"type": "DrawArcSmelt",
+				"midColor": "FFF1D2",
+				"flameColor": "EEC591",
+				"flameRad": 10,
+				"flameRadiusScl": 20,
+				"flameRadiusMag": 1.2,
+				"circleSpace": 770,
+				"circleStroke": 10,
+				"alpha": 0.8,
+				"particles": 120,
+				"particleLife": 60,
+				"particleRad": 780,
+				"particleStroke": 1.5,
+				"particleLen": 22
+			},
+		]
+	},
+	"consumes": {
+		"power": 260,
+		"items": [
+			"裂位能/10"
+		]
+	},
+	"breakable":false,
+	"buildVisibility":"sandboxOnly",
+	//"buildVisibility":"editorOnly",
+	"category": "crafting"
+}

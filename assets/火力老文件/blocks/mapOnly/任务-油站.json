@@ -1,0 +1,76 @@
+{
+	"type": "AttributeCrafter",
+	"attribute": "oil",
+	"baseEfficiency": 0,
+	"minEfficiency": -1,
+	"boostScale": 0.005,
+	"maxBoost": 1,
+	"name": "重油精炼站",
+	"health": 12000,
+	"outputLiquid": "硝化重油/5",
+	"size": 10,
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			{
+				"type": "DrawCultivator",
+				"bubbles": 50,
+				"sides": 16,
+				"spread": 30,
+				"strokeMin": 0.1,
+				"recurrence": 1,
+				"radius": 8
+			},
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "oil",
+				"suffix": "-o"
+			},
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "water",
+				"suffix": "-w"
+			},
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "硝化重油",
+				"suffix": "-x"
+			},
+			{
+				"type": "DrawRegion",
+				"x": 20,
+				"y": -20,
+				"suffix": "-r",
+				"spinSprite": true,
+				"rotateSpeed": 0.5
+			},
+			"DrawDefault"
+		]
+	},
+	"hasItems": true,
+	"hasLiquids": true,
+	"outputsLiquid": true,
+	"hasPower": true,
+	"craftTime": 30,
+	"liquidCapacity": 360,
+	"itemCapacity": 360,
+	"consumes": {
+		"power": 50,
+		"items": [
+			"裂位能/10"
+		],
+		"liquids": [
+			"water/18",
+			"oil/5"
+		]
+	},
+	"breakable":false,
+	"buildCostMultiplier": 1000,
+	//"buildVisibility":"sandboxOnly",
+	"buildVisibility":"editorOnly",
+	"category": "crafting"
+}

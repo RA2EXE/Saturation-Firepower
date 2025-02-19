@@ -1,0 +1,130 @@
+{
+	"type": "PowerTurret",
+	"name": "弹射瘫痪器",
+	"targetAir": true,
+	"targetGround": true,
+	"solid": false,
+	"targetable": false,
+	"hasShadow": false,
+	"underBullets": true,
+	"health": 100,
+	"size": 2,
+	"shootSound": "bang",
+	"rotateSpeed": 0,
+	"shake": 2,
+	"inaccuracy": 0,
+	"range": 65,
+	"shootCone": 360,
+	"reload": 60,
+	"recoil": 0,
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "ShapePart",
+				"stroke": 1.2,
+				"strokeTo": 2,
+				"color": "BFFFDB20",
+				"colorTo": "BFFFDB",
+				"circle": true,
+				"hollow": true,
+				"radius": 65,
+				"radiusTo": 70,
+				"layer": 110
+			}
+		]
+	},
+	"shoot": {
+		"type": "ShootPattern",
+		"firstShotDelay": 30
+	},
+	"shootType": {
+		"killShooter": true,
+		"type": "BasicBulletType",
+		"damage": 20,
+		"sprite": "large-bomb",
+		"frontColor": "FFFFFF",
+		"backColor": "BFFFDB",
+		"width": 22,
+		"height": 22,
+		"spin": -12,
+		"shrinkY": 0,
+		"hitSound": "explosion",
+		"hitSoundVolume": 2,
+		"despawnEffect": "none",
+		"hitEffect": "none",
+		"collides": false,
+		"hittable": false,
+		"absorbable": false,
+		"speed": 22,
+		"drag": 0.2,
+		"lifetime": 15,
+		"fragRandomSpread": 0,
+		"fragAngle": 180,
+		"fragBullets": 1,
+		"fragVelocityMin": 1,
+		"fragBullet": {
+			"type": "BasicBulletType",
+			"speed": 11,
+			"lifetime": 8,
+			"status": "干扰",
+			"trailColor": "BFFFDB",
+			"trailLength": 10,
+			"trailWidth": 3,
+			"sprite": "large-bomb",
+			"frontColor": "FFFFFF",
+			"backColor": "BFFFDB",
+			"width": 22,
+			"height": 22,
+			"statusDuration": 1800,
+			"splashDamageRadius": 72,
+			"splashDamage": 180,
+			"hitSound": "plasmaboom",
+			"despawnEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "WaveEffect",
+						"interp": "circleOut",
+						"lifetime": 11,
+						"sizeFrom": 0,
+						"sizeTo": 70,
+						"strokeFrom": 6,
+						"strokeTo": 0,
+						"colorFrom": "25C9AB",
+						"colorTo": "BFFFDB"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 28,
+						"line": true,
+						"lenFrom": 16,
+						"lenTo": 0,
+						"strokeFrom": 1.5,
+						"strokeTo": 0.8,
+						"interp": "fastSlow",
+						"sizeInterp": "pow3In",
+						"length": 65,
+						"baseLength": 8,
+						"lifetime": 35,
+						"colorFrom": "BFFFDB",
+						"colorTo": "BFFFDBd0"
+					}
+				]
+			},
+			"hitEffect": "none",
+			"collides": false,
+			"hittable": false,
+			"absorbable": false
+		},
+		"smokeEffect":"none"
+	},
+	"shootEffect": "none",
+	"category": "effect",
+	"research": "瘫痪地雷",
+	"requirements": [
+		"titanium/10",
+		"plastanium/5",
+		"泰勒合金/5"
+	]
+}

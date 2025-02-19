@@ -1,0 +1,188 @@
+{
+	"health": 20000,
+	"armor": 12,
+	"details": "优化底盘稳定，搭载小型侵蚀光束。安装更强劲的推进器。\n[red]突袭！",
+	"boostMultiplier": 3.8,
+	"immunities": [
+		"burning",
+		"electrified",
+		"拆解",
+		"干扰"
+	],
+	"weapons": [
+		{
+			"name": "灾星1",
+			"mirror": false,
+			"top": false,
+			"shake": 4,
+			"shootY": 14,
+			"x": 0,
+			"y": 0,
+			"reload": 170,
+			"recoil": 0,
+			"parentizeEffects": true,
+			"shoot": {
+				"type": "ShootPattern",
+				"firstShotDelay": 59
+			},
+			"chargeSound": "lasercharge2",
+			"shootSound": "beam",
+			"continuous": true,
+			"cooldownTime": 200,
+			"bullet": {
+				"type": "ContinuousLaserBulletType",
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 6,
+					"baseLength": 8,
+					"length": 18,
+					"lifetime": 10,
+					"line": true,
+					"lenFrom": 16,
+					"lenTo": 0,
+					"strokeFrom": 1.6,
+					"strokeTo": 0,
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8"
+				},
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"baseLength": 8,
+					"length": 38,
+					"lifetime": 18,
+					"line": true,
+					"lenFrom": 12,
+					"lenTo": 0,
+					"strokeFrom": 1,
+					"strokeTo": 0,
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
+					"cone": 60
+				},
+				"smokeEffect": "none",
+				"status": "拆解",
+				"statusDuration": 20,
+				"collidesTeam": true,
+				"healPercent": 1.3,
+				"ammoMultiplier": 1,
+				"length": 240,
+				"damage": 45,
+				"lifetime": 200,
+				"colors": [
+					"7CF38990",
+					"97FFA880",
+					"FFFFFF"
+				],
+				"chargeEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 49,
+							"startDelay": 10,
+							"colorFrom": "7CF389",
+							"colorTo": "7CF389",
+							"sizeFrom": 0,
+							"sizeTo": 5
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 40,
+							"sizeFrom": 90,
+							"sizeTo": 0,
+							"strokeFrom": 0,
+							"strokeTo": 8,
+							"interp":"circleIn",
+							"colorFrom": "7CF389",
+							"colorTo": "7CF389"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 33,
+							"baseLength": -80,
+							"length": 80,
+							"lifetime": 40,
+							"line": true,
+							"lenFrom": 0,
+							"lenTo": 10,
+							"strokeFrom": 1,
+							"strokeTo": 1.5,
+							"interp":"pow5In",
+							"sizeInterp": "pow3Out",
+							"colorFrom": "FFFFFF",
+							"colorTo": "97FFA8"
+						}
+					]
+				},
+				"incendChance": 0.1,
+				"incendSpread": 8,
+				"incendAmount": 1
+			}
+		},
+		{
+			"name": "灾星2",
+			"type": "RepairBeamWeapon",
+			"x": 11,
+			"y": -7.5,
+			"shootY": 6,
+			"beamWidth": 0.8,
+			"mirror": true,
+			"repairSpeed": 2,
+			"bullet": {
+				"maxRange": 120
+			}
+		},
+		{
+			"name": "灾星3",
+			"reload": 25,
+			"x": 4,
+			"y": 12,
+			"rotate": false,
+			"top": false,
+			"shootCone": 10,
+			"inaccuracy": 0,
+			"alternate": false,
+			"shootSound": "lasershoot",
+			"bullet": {
+				"type": "BasicBulletType",
+				"reflectable": false,
+				"keepVelocity": false,
+				"sprite": "missile-large",
+				"drag": -0.1,
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8",
+				"trailLength": 9,
+				"trailWidth": 2,
+				"trailChance": 0,
+				"trailInterval": 2,
+				"trailColor": "97FFA8",
+				"trailEffect": {
+					"type": "WaveEffect",
+					"interp": "circleOut",
+					"lifetime": 20,
+					"sizeFrom": 4,
+					"sizeTo": 16,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8"
+				},
+				"hitEffect": "hitEmpSpark",
+				"despawnEffect": "none",
+				"shootEffect":"shootHeal",
+				"healPercent": 3,
+				"damage": 35,
+				"pierce": true,
+				"collidesTeam": true,
+				"speed": 2,
+				"lifetime": 27.5,
+				"width": 4,
+				"height": 13
+			}
+		}
+	]
+}

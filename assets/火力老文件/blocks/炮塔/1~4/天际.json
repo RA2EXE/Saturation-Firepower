@@ -1,0 +1,218 @@
+{
+	"type": "PowerTurret",
+	"name": "天际",
+	"targetAir": true,
+	"targetGround": false,
+	"health": 2570,
+	"size": 3,
+	"accurateDelay": false,
+	"moveWhileCharging": false,
+	"chargeSound": "lasercharge2",
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 0,
+				"y": 0,
+				"suffix": "-前",
+				"moveX": 2.25,
+				"moveY": 3.25,
+				"heatProgress": "recoil",
+				"heatColor": "FEEBB3"
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 0,
+				"y": 0,
+				"suffix": "-后",
+				"moveX": 1.5,
+				"moveY": -1,
+				"heatProgress": "recoil",
+				"heatColor": "FEEBB3"
+			}
+		]
+	},
+	"shoot": {
+		"type": "ShootPattern",
+		"firstShotDelay": 45
+	},
+	"shootY": 4,
+	"shootSound": "laser",
+	"shake": 3,
+	"inaccuracy": 0,
+	"recoil": 3,
+	"recoilTime": 30,
+	"shootType": {
+		"type": "FlakBulletType",
+		"explodeRange": 0,
+		"explodeDelay": 50,
+		"flakDelay": 10,
+		"flakInterval": 6,
+		"damage": 375,
+		"pierce": true,
+		"pierceArmor": true,
+		"absorbable": false,
+		"knockback": 40,
+		"hitSound": "shotgun",
+		"sprite": "饱和火力-透彻",
+		"frontColor": "FFFFFF",
+		"backColor": "FEEBB3",
+		"width": 15,
+		"height": 45,
+		"trailLength": 25,
+		"trailWidth": 3,
+		"trailColor": "FEEBB3",
+		"homingDelay": 7.7,
+		"homingPower": 0.02,
+		"homingRange": 80,
+		"status": "崩溃",
+		"statusDuration": 60,
+		"drag": -0.05,
+		"speed": 8,
+		"lifetime": 30,
+		"ammoMultiplier": 1,
+		"chargeEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "WaveEffect",
+					"lifetime": 40,
+					"sizeFrom": 80,
+					"sizeTo": 0,
+					"strokeFrom": 0,
+					"strokeTo": 2,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FEEBB3"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 8,
+					"strokeFrom": 4,
+					"strokeTo": 0,
+					"lenFrom": 30,
+					"lenTo": 0,
+					"line": true,
+					"length": -90,
+					"baseLength": 90,
+					"lifetime": 40,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FEEBB3",
+					"cone": 50
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 18,
+					"sizeFrom": 0,
+					"sizeTo": 1,
+					"length": 90,
+					"baseLength": -90,
+					"lifetime": 40,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FEEBB3",
+					"cone": 50
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"strokeFrom": 8,
+					"strokeTo": 0,
+					"lenFrom": 0,
+					"lenTo": 576,
+					"line": true,
+					"randLength": false,
+					"sizeInterp": "pow5In",
+					"length": 0,
+					"baseLength": 1,
+					"lifetime": 45,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FEEBB3",
+					"cone": 0
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 0,
+					"sizeTo": 3,
+					"length": 0,
+					"baseLength": -0,
+					"lifetime": 70,
+					"colorFrom": "FFFFFF",
+					"colorTo": "FEEBB3"
+				}
+			]
+		},
+		"hitEffect": {
+			"type": "ParticleEffect",
+			"particles": 9,
+			"sizeFrom": 1,
+			"sizeTo": 0,
+			"length": 80,
+			"baseLength": 0,
+			"lifetime": 20,
+			"colorFrom": "FEEBB3",
+			"colorTo": "FFFFFF",
+			"cone": 30
+		},
+		"despawnEffect": {
+			"type": "WaveEffect",
+			"lifetime": 8,
+			"sizeFrom": 0,
+			"sizeTo": 40,
+			"strokeFrom": 1,
+			"strokeTo": 0,
+			"colorFrom": "FEEBB3",
+			"colorTo": "FFFFFF"
+		}
+	},
+	"shootEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "WaveEffect",
+				"lifetime": 15,
+				"sizeFrom": 0,
+				"sizeTo": 80,
+				"strokeFrom": 2,
+				"strokeTo": 0,
+				"colorFrom": "FEEBB3",
+				"colorTo": "FFFFFF"
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 9,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 40,
+				"baseLength": 0,
+				"lifetime": 120,
+				"colorFrom": "FEEBB3",
+				"colorTo": "FFFFFF",
+				"cone": 50
+			}
+		]
+	},
+	"consumes": {
+		"power": 6,
+		"coolant": {
+			"amount": 0.3,
+			"optional": true
+		}
+	},
+	"reload": 180,
+	"rotateSpeed": 10,
+	"range": 500,
+	"fogRadiusMultiplier": 0.32,
+	"category": "turret",
+	"research": "裂爆",
+	"researchCostMultiplier": 0.4,
+	"requirements": [
+		"lead/300",
+		"metaglass/100",
+		"silicon/200",
+		"plastanium/80",
+		"二级协议/0"
+	]
+}

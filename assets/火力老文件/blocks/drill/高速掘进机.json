@@ -1,0 +1,54 @@
+{
+	"name": "高速掘进机",
+	"type": "AttributeCrafter",
+	"health": 450,
+	"size": 3,
+	"hasPower": true,
+	"hasLiquids": true,
+	"liquidCapacity": 60,
+	"updateEffect": "redgeneratespark",
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-底"
+			},
+			{
+				"type": "DrawLiquidRegion",
+				"drawLiquid": "slag",
+				"suffix": "-液体"
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-转",
+				"spinSprite": true,
+				"rotateSpeed": 8.6
+			},
+			{
+				"type": "DrawRegion",
+				"suffix": "-转2",
+				"spinSprite": true,
+				"rotateSpeed": -0.8
+			},
+			"DrawDefault"
+		]
+	},
+	"requirements": [
+		"thorium/45",
+		"graphite/60",
+		"metaglass/80",
+		"硅钢/80"
+	],
+	"consumes": {
+		"power": 7
+	},
+	"outputLiquid": "slag/0.75",
+	"baseEfficiency": 0,
+	"maxBoost": 6,
+	"boostScale": 0.334,
+	"minEfficiency": -1,
+	"attribute": "heat",
+	"category": "production",
+	"research": "water-extractor"
+}

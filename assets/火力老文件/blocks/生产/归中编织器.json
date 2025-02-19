@@ -1,0 +1,53 @@
+{
+	"type": "GenericCrafter",
+	"name": "归中编织器",
+	"outputItem": {
+		"item": "phase-fabric",
+		"amount": 4
+	},
+	"itemCapacity": 40,
+	"size": 3,
+	"updateEffect": {
+		"type": "WaveEffect",
+		"lifetime": 30,
+		"sizeFrom": 0,
+		"sizeTo": 10,
+		"strokeFrom": 6,
+		"strokeTo": 0,
+		"colorFrom": "FFF1D2",
+		"colorTo": "FFD197"
+	},
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawRegion",
+				"suffix": "-bottom"
+			},
+			"DrawWeave",
+			"DrawDefault"
+		]
+	},
+	"craftTime": 60,
+	"consumes": {
+		"power": 8.75,
+		"items": {
+			"items": [
+				"thorium/4",
+				"sand/20",
+				"裂位能/1"
+			]
+		}
+	},
+	"requirements": [
+		"镄/45",
+		"silicon/65",
+		"硅钢/60",
+		"裂位能/8",
+		"二级协议/0"
+	],
+	"ambientSound": "techloop",
+	"ambientSoundVolume": 0.56,
+	"category": "crafting",
+	"research": "激发器"
+}

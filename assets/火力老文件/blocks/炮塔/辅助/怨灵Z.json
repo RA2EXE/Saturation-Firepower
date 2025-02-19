@@ -1,0 +1,240 @@
+{
+	"name": "怨灵Z",
+	"health": 1,
+	"armor":22,
+	"size": 8,
+	"reload": 6,
+	"range": 520,
+	"maxAmmo": 60,
+	"recoilTime":90,
+	"canOverdrive": false,
+	"recoil": 8,
+	"cooldownTime": 90,
+	"shoot": {
+		"type": "ShootAlternate",
+		"barrels": 2,
+		"spread": 24
+	},
+	"ammoUseEffect": {
+		"type":"MultiEffect",
+		"effects":[
+	{
+		"type": "ParticleEffect",
+		"particles": 1,
+		"line": true,
+		"interp":"pow10Out",
+		"sizeInterp":"pow5In",
+		"strokeFrom": 8,
+		"strokeTo": 0,
+		"lenFrom": 10,
+		"lenTo": 0,
+		"length": -48,
+		"baseLength": -10,
+		"randLength": false,
+		"lifetime": 74,
+		"colorFrom": "FFE176",
+		"colorTo": "737373",
+		"layer":48
+	},
+	{
+		"type": "ParticleEffect",
+		"particles": 2,
+		"sizeFrom": 12,
+		"sizeTo": 0,
+		"interp": "pow10Out",
+		"sizeInterp": "pow10In",
+		"length": -60,
+		"baseLength": 0,
+		"lifetime": 85,
+		"colorFrom": "73737390",
+		"colorTo": "73737350",
+		"layer":49}
+	]},
+	"ammoPerShot": 3,
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 2,
+	"shake": 5,
+	"destroyEffect": "none",
+	"shootSound": "shootBig",
+	"rotateSpeed": 3.5,
+	"ammoTypes": {
+		"裂位能": {
+			"type": "BasicBulletType",
+			"killShooter": true,
+			"damage": 85.5,
+			"rangeChange": 88,
+			"inaccuracy": 2,
+			"ammoMultiplier": 2,
+			"speed": 20,
+			"lifetime": 26,
+			"width": 18,
+			"height": 50,
+			"hittable": false,
+			"absorbable": false,
+			"pierce": true,
+			"pierceCap": 5,
+			"pierceArmor": true,
+			"sprite": "饱和火力-透彻",
+			"backColor": "E3E3E3",
+			"frontColor": "EEC591",
+			"trailLength": 6,
+			"trailWidth": 4,
+			"trailColor": "EEC591",
+			"trailEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 5,
+						"sizeFrom": 4,
+						"sizeTo": 0,
+						"length": 55,
+						"baseLength": 9,
+						"lifetime": 15,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 2,
+						"sizeTo": 50,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					}
+				]
+			},
+			"despawnEffect": "instBomb",
+			"shootEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"sizeInterp": "pow5In",
+						"interp": "pow10Out",
+						"particles": 3,
+						"strokeFrom": 2,
+						"strokeTo": 0,
+						"line": true,
+						"lenFrom": 15,
+						"lenTo": 0,
+						"length": 45,
+						"baseLength": 0,
+						"lifetime": 25,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591",
+						"cone": 15
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 0,
+						"sizeTo": 16,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					}
+				]
+			},
+			"hitSound": "laser",
+			"status": "崩溃",
+			"statusDuration": 60,
+			"splashDamageRadius": 48,
+			"splashDamage": 166,
+			"fragRandomSpread": 0,
+			"fragBullets": 2,
+			"fragBullet": {
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"sizeFrom": 4,
+							"sizeTo": 0,
+							"length": 45,
+							"baseLength": 9,
+							"lifetime": 15,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FFFFFF",
+							"cone": 40
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 2,
+							"sizeTo": 40,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"despawnEffect": "instBomb",
+				"hitSound": "laser",
+				"width": 10,
+				"height": 4,
+				"damage": 55,
+				"collides": true,
+				"pierceArmor": true,
+				"status": "崩溃",
+				"statusDuration": 50,
+				"splashDamageRadius": 50,
+				"splashDamage": 74.25,
+				"lifetime": 10,
+				"speed": 3.2,
+				"fragRandomSpread": 0,
+				"fragBullets": 1,
+				"fragBullet": {
+					"hitEffect": {
+						"type": "MultiEffect",
+						"effects": [
+							{
+								"type": "ParticleEffect",
+								"particles": 5,
+								"sizeFrom": 4,
+								"sizeTo": 0,
+								"length": 45,
+								"baseLength": 9,
+								"lifetime": 15,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FFFFFF",
+								"cone": 40
+							},
+							{
+								"type": "WaveEffect",
+								"lifetime": 10,
+								"sizeFrom": 2,
+								"sizeTo": 40,
+								"strokeFrom": 3,
+								"strokeTo": 0,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							}
+						]
+					},
+					"despawnEffect": "instBomb",
+					"hitSound": "laser",
+					"width": 10,
+					"height": 4,
+					"damage": 55,
+					"collides": true,
+					"pierceArmor": true,
+					"status": "崩溃",
+					"statusDuration": 50,
+					"splashDamageRadius": 50,
+					"splashDamage": 74.25,
+					"lifetime": 10,
+					"speed": 3.2
+				}
+			}
+		}
+	},
+	"buildVisibility":"hidden"
+}

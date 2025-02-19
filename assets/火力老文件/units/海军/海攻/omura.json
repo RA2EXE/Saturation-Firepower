@@ -1,0 +1,33 @@
+{
+	"health": 47500,
+	"weapons": [
+		{
+			"name": "海神1",
+			"reload": 95,
+			"x": 0,
+			"y": 0,
+			"shootY": 10,
+			"cooldownTime": 85,
+			"rotate": true,
+			"rotateSpeed": 5,
+			"mirror": false,
+			"inaccuracy": 0,
+			"shootSound": "railgun",
+			"shake": 8,
+			"bullet": {
+				"type": "RailBulletType",
+				"damage": 1920,
+				"pierce": true,
+				"pierceBuilding": true,
+				"pierceEffect": "railHit",
+				"pointEffect": "railTrail",
+				"hitEffect": "massiveExplosion",
+				"shootEffect": "railShoot",
+				"smokeEffect": "smokeCloud",
+				"pierceDamageFactor": 0.167,
+				"length": 765,
+				"despawnEffect": "bigShockwave"
+			}
+		}
+	]
+}

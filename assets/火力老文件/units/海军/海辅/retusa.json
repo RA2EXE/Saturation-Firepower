@@ -1,0 +1,76 @@
+{
+	"health": 340,
+	"details": "强化船体结构，换装二型鱼雷发射器",
+	"weapons": [
+		{
+			"name": "灾星2",
+			"type": "RepairBeamWeapon",
+			"x": 0,
+			"y": -5.5,
+			"shootY": 6,
+			"beamWidth": 0.88,
+			"mirror": false,
+			"repairSpeed": 0.88,
+			"bullet": {
+				"maxRange": 130
+			}
+		},
+		{
+			"name": "潜螺1",
+			"mirror": false,
+			"reload": 33,
+			"x": 0,
+			"y": 0,
+			"shoot": {
+				"shotDelay": 8,
+				"shots": 2
+			},
+			"shootCone": 30,
+			"shootSound": "mineDeploy",
+			"rotate": true,
+			"rotateSpeed": 8,
+			"inaccuracy": 15,
+			"bullet": {
+				"type": "BasicBulletType",
+				"damage": 8,
+				"splashDamageRadius": 35,
+				"splashDamage": 33,
+				"weaveMag": 5,
+				"weaveScale": 4,
+				"homingRange": 250,
+				"homingDelay": 8,
+				"homingPower": 0.05,
+				"absorbable": false,
+				"collidesAir": false,
+				"collideFloor": true,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"hitSound": "plasmaboom",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						"blastExplosion",
+						"greenCloud"
+					]
+				},
+				"despawnEffect": "none",
+				"sprite": "mine-bullet",
+				"healPercent": 4,
+				"trailLength": 8,
+				"trailWidth": 3,
+				"trailColor": "76D081",
+				"backColor": "76D081",
+				"frontColor": "FFFFFF",
+				"trailRotation": true,
+				"hitSize": 22,
+				"shrinkX": 0,
+				"shrinkY": 0,
+				"maxRange": 86,
+				"width": 10,
+				"height": 10,
+				"speed": 5,
+				"lifetime": 30
+			}
+		}
+	]
+}

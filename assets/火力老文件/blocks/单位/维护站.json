@@ -1,0 +1,31 @@
+{
+    "type": "RepairTower",
+    "name": "纳米单位维护站",
+    "size": 4,
+    "health": 1200,
+	"liquidCapacity": 128,
+    "range": 224,
+    "healAmount": 12,
+    "circleSpeed": 75,
+    "circleStroke": 8,
+    "squareRad": 6,
+    "squareSpinScl": 1.2,
+    "glowMag": 0.4,
+    "glowScl": 12,
+    "consumes": {
+		"power": 18,
+		"liquid": {
+			"liquid": "纳米流体",
+			"amount": 0.6
+		}
+	} ,
+	"requirements": [
+		"plastanium/400",
+		"裂位能/300",
+		"纳米核/400",
+		"泰勒合金/200",
+		"二级协议/1"
+	],
+	"category": "units",
+	"research": "repair-turret"
+}

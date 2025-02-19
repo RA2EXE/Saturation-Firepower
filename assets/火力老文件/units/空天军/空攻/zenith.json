@@ -1,0 +1,42 @@
+{
+	"details": "扩增导弹发射巢大小",
+	"speed": 2,
+	"targetAir": true,
+	"health": 1850,
+	"armor": 6,
+	"range": 250,
+	"weapons": [
+		{
+			"name": "苍穹1",
+			"reload": 50,
+			"x": 7.5,
+			"y": 0,
+			"shootY": 8,
+			"shoot": {
+				"type": "ShootSpread",
+				"shots": 3,
+				"spread": 1.77
+			},
+			"rotate": true,
+			"inaccuracy": 6,
+			"alternate": true,
+			"ejectEffect": "casing2",
+			"shootSound": "missile",
+			"bullet": {
+				"type": "MissileBulletType",
+				"damage": 24,
+				"splashDamageRadius": 35,
+				"splashDamage": 25,
+				"status": "blasted",
+				"backColor": "FF7F24",
+				"hitEffect": "explosion",
+				"despawnEffect": "explosion",
+				"smokeEffect": "none",
+				"speed": 5,
+				"lifetime": 50,
+				"width": 8,
+				"height": 9
+			}
+		}
+	]
+}

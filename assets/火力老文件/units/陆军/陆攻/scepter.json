@@ -1,0 +1,79 @@
+{
+	"details": "于混沌中开辟天地\n多亏原型机‘混沌’的大量实战经验，此机型日趋完善",
+	"armor": 18,
+	"health": 21000,
+	"weapons": [
+		{
+			"name": "权杖",
+			"reload": 40,
+			"shoot": {
+				"shots": 4,
+				"shotDelay": 3
+			},
+			"x": 16,
+			"y": 0,
+			"shootY": 10,
+			"rotate": false,
+			"inaccuracy": 3,
+			"shootSound": "shootBig",
+			"alternate": true,
+			"top": false,
+			"ejectEffect": "casing4",
+			"shake": 3,
+			"bullet": {
+				"damage": 35,
+				"splashDamage": 45,
+				"splashDamageRadius": 35,
+				"lightningDamage": 25,
+				"lightning": 3,
+				"lightningLength": 8,
+				"lightningLengthRand": 3,
+				"status": "shocked",
+				"statusDuration": 60,
+				"speed": 6,
+				"lifetime": 42,
+				"smokeEffect": "shootBig",
+				"width": 10,
+				"height": 15,
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig"
+			}
+		},
+		{
+			"name": "权杖2",
+			"reload": 10,
+			"x": 10,
+			"y": 7,
+			"rotate": true,
+			"rotateSpeed": 9,
+			"inaccuracy": 0,
+			"alternate": true,
+			"ejectEffect": "casing1",
+			"bullet": {
+				"damage": 19,
+				"speed": 8,
+				"lifetime": 23,
+				"width": 5,
+				"height": 8
+			}
+		},
+		{
+			"name": "权杖2",
+			"reload": 15,
+			"x": 10,
+			"y": -8,
+			"rotate": true,
+			"rotateSpeed": 9,
+			"inaccuracy": 0,
+			"alternate": true,
+			"ejectEffect": "casing1",
+			"bullet": {
+				"damage": 21,
+				"speed": 8,
+				"lifetime": 23,
+				"width": 5,
+				"height": 8
+			}
+		}
+	]
+}

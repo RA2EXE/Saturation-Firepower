@@ -1,0 +1,102 @@
+{
+	"type": "UnitFactory",
+	"name": "实验工厂",
+	"size":13,
+	"consumes":{
+		"power": 825,
+		"liquid": "纳米流体/3.6"
+	},
+	"plans":[
+	{ "unit": "陆战6", "time": 23400,
+	"requirements": [
+		"silicon/3000","镄/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "空战6", "time": 23400,
+	"requirements": [
+		"silicon/3000","titanium/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "海战6", "time": 23400,
+	"requirements": [
+		"silicon/3000","metaglass/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "爬爬6", "time": 23400,
+	"requirements": [
+		"silicon/3000","titanium/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "路辅6", "time": 23400,
+	"requirements": [
+		"silicon/3000","纳米核/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "空辅6", "time": 23400,
+	"requirements": [
+		"silicon/3000","纳米核/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "海辅6", "time": 23400,
+	"requirements": [
+		"silicon/3000","纳米核/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "碎辰", "time": 25200,
+	"requirements": [
+		"silicon/4000","plastanium/2500",
+		"泰勒合金/1500","裂位能/3200",
+		"二级协议/30","三级协议/50"
+	]},
+	{ "unit": "陆6", "time": 23400,
+	"requirements": [
+		"silicon/3000","镄/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "空6", "time": 23400,
+	"requirements": [
+		"silicon/3000","titanium/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]},
+	{ "unit": "海6", "time": 23400,
+	"requirements": [
+		"silicon/3000","metaglass/1200",
+		"硅钢/1500","plastanium/2200",
+		"surge-alloy/1800",
+		"裂位能/1200","泰勒合金/1000",
+		"二级协议/30","三级协议/5"
+	]}
+	],
+	"requirements": ["纳米核/8000","镄/5000","泰勒合金/10000","裂位能/10000","二级协议/300","三级协议/200"],
+	"category":"units",
+	//"canOverdrive": false,
+	"buildVisibility": "sandboxOnly"
+	//"research": {"parent": "T6单位重构厂","objectives": [{"type": "SectorComplete","preset": "溢裂要塞"}]}
+}

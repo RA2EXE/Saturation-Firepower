@@ -1,0 +1,54 @@
+{
+	"type": "UnitAssembler",
+	"name": "阔野管理中心",
+	"size": 10,
+	"liquidCapacity": 120,
+	"consumes": {
+		"power": 1200,
+		"liquid": {
+			"liquid": "纳米流体",
+			"amount": 4
+		}
+	},
+	"areaSize": 28,
+	"plans": [
+		{
+			"unit": "阔野",
+			"time": 28800,
+			"requirements": [
+				"饱和火力-竹林/1",
+				"饱和火力-破晓/1",
+				"饱和火力-错位/2",
+				"饱和火力-消去/2",
+				"饱和火力-裂位收容块/5",
+				"饱和火力-装甲收容块/20"
+			]
+		}
+	],
+	"droneType": "组装无人机",
+	"requirements": [
+		"镄/8000",
+		"silicon/6000",
+		"纳米核/5000",
+		"plastanium/5000",
+		"裂位能/3000",
+		"莱普合金/3000",
+		"二级协议/200",
+		"三级协议/120"
+	],
+	"category": "units",
+	"canOverdrive": false,
+	"research": {
+		"parent": "溢裂数据库",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "溢裂要塞"
+			},
+			{
+				"type": "SectorComplete",
+				"preset": "火天路"
+			}
+		]
+	}
+}

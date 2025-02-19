@@ -1,0 +1,88 @@
+{
+	"ammoUseEffect": "casing2",
+	"inaccuracy": 17,
+	"rotateSpeed": 12,
+	"shake": 0.5,
+	"targetGround": false,
+	"ammoTypes": {
+		"scrap": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 5,
+			"speed": 6,
+			"lifetime": 36,
+			"width": 6,
+			"height": 8,
+			"damage": 3,
+			"splashDamage": 33,
+			"splashDamageRadius": 24,
+			"reloadMultiplier": 0.5,
+			"hitEffect": "flakExplosion"
+		},
+		"lead": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 4,
+			"speed": 6.5,
+			"lifetime": 33,
+			"width": 6,
+			"height": 8,
+			"damage": 3,
+			"splashDamage": 40.5,
+			"splashDamageRadius": 15,
+			"hitEffect": "flakExplosion"
+		},
+		"metaglass": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 5,
+			"reloadMultiplier": 0.7,
+			"speed": 6,
+			"lifetime": 36,
+			"width": 6,
+			"height": 8,
+			"damage": 3,
+			"splashDamage": 45,
+			"splashDamageRadius": 20,
+			"hitEffect": "flakExplosion",
+			"fragBullets": 6,
+			"fragBullet": {
+				"type": "BasicBulletType",
+				"collidesGround": false,
+				"despawnEffect": "none",
+				"width": 5,
+				"height": 12,
+				"shrinkY": 1,
+				"damage": 5,
+				"lifetime": 20,
+				"speed": 3
+			}
+		},
+		"blast-compound": {
+			"type": "FlakBulletType",
+			"inaccuracy": 6,
+			"explodeRange": 30,
+			"ammoMultiplier": 5,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 8,
+			"height": 10,
+			"damage": 3,
+			"splashDamage": 55,
+			"splashDamageRadius": 35,
+			"backColor": "E58956",
+			"hitEffect": "flakExplosionBig"
+		},
+		"硅钢": {
+			"type": "FlakBulletType",
+			"ammoMultiplier": 4,
+			"speed": 6,
+			"lifetime": 34,
+			"width": 6,
+			"height": 8,
+			"damage": 3,
+			"splashDamage": 23,
+			"splashDamageRadius": 20,
+			"status": "unmoving",
+			"statusDuration": 16,
+			"hitEffect": "flakExplosion"
+		}
+	}
+}

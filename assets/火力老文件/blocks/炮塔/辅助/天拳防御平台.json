@@ -1,0 +1,138 @@
+{
+	"type": "PowerTurret",
+	"name": "天拳防御平台",
+	"unitSort": "strongest",
+	"buildVisibility": "sandboxOnly",
+	"health": 28000,
+	"armor": 22,
+	"size": 4,
+	"reload": 550,
+	"range": 940,
+	"fogRadiusMultiplier": 0.16,
+	"recoilTime": 180,
+	"recoil": 4,
+	"shootSound": "missileLaunch",
+	"insulated": true,
+	"absorbLasers": true,
+	"shootWarmupSpeed": 0.08,
+	"warmupMaintainTime": 600,
+	"minWarmup": 0.9,
+	"drawer": {
+		"type": "DrawTurret",
+		"basePrefix": "防御平台-",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"outline": false,
+				"under": true,
+				"color": "FFFFFF",
+				"colorTo": "FFFFFF00",
+				"mixColorTo": "EEC591",
+				"mixColor": "FFFFFF00",
+				"suffix": "-导弹",
+				"progress": "reload",
+				"moves": [
+					{
+						"y": 8
+					}
+				]
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"suffix": "-侧",
+				"moveX": 2,
+				"moveY": 2,
+				"moveRot": -9,
+				"moves": [
+					{
+						"progress": "recoil",
+						"y": -2,
+						"rot": -7
+					}
+				]
+			}
+		]
+	},
+	"shootY": 8,
+	"shootEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 32,
+				"interp": "fastSlow",
+				"sizeFrom": 12,
+				"sizeTo": 0,
+				"length": 125,
+				"baseLength": 0,
+				"lifetime": 123,
+				"colorFrom": "EEC591",
+				"colorTo": "FFFFFF",
+				"cone": 40
+			},
+			{
+				"type": "WaveEffect",
+				"lifetime": 22,
+				"sizeFrom": 0,
+				"sizeTo": 100,
+				"strokeFrom": 18,
+				"strokeTo": 0,
+				"colorFrom": "EEC59180",
+				"colorTo": "FFFFFF80"
+			}
+		]
+	},
+	"smokeEffect": {
+		"type": "MultiEffect",
+		"effects": [
+			{
+				"type": "ParticleEffect",
+				"particles": 25,
+				"interp": "fastSlow",
+				"sizeInterp": "pow3In",
+				"sizeFrom": 9,
+				"sizeTo": 0,
+				"length": -88,
+				"baseLength": 0,
+				"lifetime": 65,
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591AA",
+				"cone": 35
+			},
+			{
+				"type": "ParticleEffect",
+				"particles": 16,
+				"interp": "fastSlow",
+				"sizeInterp": "pow3In",
+				"sizeFrom": 12,
+				"sizeTo": 0,
+				"length": -88,
+				"baseLength": 0,
+				"lifetime": 65,
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591AA",
+				"cone": 35
+			}
+		]
+	},
+	"targetGround": true,
+	"targetAir": true,
+	"canOverdrive": false,
+	"accurateDelay": false,
+	"inaccuracy": 0,
+	"rotateSpeed": 1.25,
+	"shootCone": 360,
+	"shootType": {
+		"ammoMultiplier": 1,
+		"homingDelay": 180,
+		"smokeEffect": "bigShockwave",
+		"speed": 0,
+		"spawnUnit": "天拳-导弹"
+	},
+	//"requirements": ["镄/12000","铬/8000","裂位能/16500","泰勒合金/8000"],
+	"breakable": false,
+	"rebuildable": false,
+	"category": "turret"
+}

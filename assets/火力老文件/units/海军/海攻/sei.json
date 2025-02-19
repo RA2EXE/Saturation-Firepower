@@ -1,0 +1,66 @@
+{
+	"details": "换用合金导弹发射器与水冷幽灵炮",
+	"health": 23900,
+	"faceTarget": false,
+	"weapons": [
+		{
+			"name": "蛟龙1",
+			"mirror": false,
+			"x": 0,
+			"y": 0,
+			"reload": 75,
+			"shoot": {
+				"shots": 8,
+				"shotDelay": 1
+			},
+			"shootSound": "missile",
+			"rotate": true,
+			"rotateSpeed": 4,
+			"xRand": 6,
+			"inaccuracy": 6,
+			"bullet": {
+				"type": "MissileBulletType",
+				"damage": 55,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"splashDamageRadius": 35,
+				"splashDamage": 55,
+				"lightningDamage": 13,
+				"lightning": 2,
+				"lightningLength": 9,
+				"lightningLengthRand": 3,
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosion",
+				"width": 8,
+				"height": 9,
+				"speed": 4.5,
+				"lifetime": 70
+			}
+		},
+		{
+			"name": "巫妖1",
+			"reload": 6,
+			"shake": 2,
+			"rotate": true,
+			"rotateSpeed": 6.5,
+			"x": 17.5,
+			"y": -16.5,
+			"shootX": 0,
+			"shootY": 7,
+			"inaccuracy": 0,
+			"shootSound": "shootBig",
+			"alternate": true,
+			"ejectEffect": "casing3",
+			"bullet": {
+				"damage": 80,
+				"pierce": true,
+				"pierceCap": 2,
+				"speed": 8,
+				"lifetime": 35,
+				"shootEffect": "shootBig",
+				"width": 13,
+				"height": 18
+			}
+		}
+	]
+}

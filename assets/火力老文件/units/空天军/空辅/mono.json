@@ -1,0 +1,7 @@
+{
+	"details":"引擎升级，容量优化",
+	"itemCapacity": 30,
+	"mineSpeed": 3,
+	"mineTier": 2,
+	"speed":1.5
+}

@@ -1,0 +1,246 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"name": "天拳导弹",
+	"speed": 4,
+	"lifetime": 278,
+	"rotateSpeed": 0.4,
+	"deathSound": "explosionbig",
+	"hidden": true,
+	"missileAccelTime": 100,
+	"hitSize": 16,
+	"health": 2500,
+	"engineColor": "EEC591",
+	"trailColor": "EEC591",
+	"trailLength": 80,
+	"engineLayer":110,
+	"immunities": [
+		"unmoving",
+		"electrified",
+		"修复",
+		"抢修",
+		"干扰"
+	],
+	"engineOffset": 12,
+	"engineSize": 4.5,
+	"abilities": [
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 4,
+				"sizeFrom": 9,
+				"sizeTo": 0,
+				"length": 32,
+				"lifetime": 100,
+				"layer": 91,
+				"interp": "pow3Out",
+				"sizeInterp": "pow10In",
+				"colorFrom": "EEC59180",
+				"colorTo": "EEC59180"
+			},
+			"interval": 4,
+			"y": -8
+		},
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 6,
+				"sizeFrom": 7,
+				"sizeTo": 0,
+				"length": 32,
+				"lifetime": 110,
+				"layer": 91,
+				"interp": "pow3Out",
+				"sizeInterp": "pow10In",
+				"colorFrom": "EEC591",
+				"colorTo": "EEC59180"
+			},
+			"interval": 4,
+			"y": -8
+		},
+		{
+			"type": "StatusFieldAbility",
+			"duration": 300,
+			"reload": 110,
+			"range": -1,
+			"applyEffect": "none",
+			"activeEffect": "none",
+			"effect": "overdrive"
+		},
+		{
+			"type": "StatusFieldAbility",
+			"duration": 300,
+			"reload": 270,
+			"range": -1,
+			"applyEffect": "none",
+			"activeEffect": "none",
+			"effect": "强攻"
+		}
+	],
+	"maxRange": 140,
+	"weapons": [
+		{
+			"name": "自爆",
+			"x": 0,
+			"reload": 60,
+			"mirror": false,
+			"rotate": true,
+			"shootSound": "explosion",
+			"shootOnDeath": true,
+			"bullet": {
+				"splashDamagePierce": true,
+				"instantDisappear": true,
+				"killShooter": true,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"backColor": "FF5B5B",
+				"frontColor": "EEC591",
+				"shrinkY": 0,
+				"width": 16,
+				"height": 66,
+				"hitSoundVolume": 3,
+				"hitSound": "DBZ1",
+				"damage": 1200,
+				"status": "绝判",
+				"statusDuration": 360,
+				"splashDamageRadius": 280,
+				"splashDamage": 2700,
+				"buildingDamageMultiplier": 1.12,
+				"absorbable": false,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 0,
+							"sizeTo": 9999,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 66,
+							"sizeInterp": "pow5Out",
+							"colorFrom": "00000020",
+							"colorTo": "00000000",
+							"layer": 120
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 80,
+							"sizeTo": 240,
+							"sizeInterp": "pow5Out",
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 22.5,
+							"colorFrom": "EEC591",
+							"colorTo": "EEC59188"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 240,
+							"sizeTo": 0,
+							"sizeInterp": "pow10In",
+							"length": 0,
+							"baseLength": 0,
+							"startDelay": 22,
+							"lifetime": 105,
+							"colorFrom": "EEC59188",
+							"colorTo": "EEC59188"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 23,
+							"sizeFrom": 23,
+							"sizeTo": 0,
+							"length": 280,
+							"baseLength": 8,
+							"startDelay": 22,
+							"interp": "pow10Out",
+							"sizeInterp": "pow10In",
+							"lifetime": 135,
+							"colorFrom": "EEC59180",
+							"colorTo": "EEC591AA"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 82,
+							"line": true,
+							"strokeFrom": 5.2,
+							"strokeTo": 0,
+							"interp": "pow5Out",
+							"lenFrom": 94,
+							"lenTo": 0,
+							"length": 360,
+							"baseLength": 8,
+							"lifetime": 25,
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 0,
+							"sizeTo": 350,
+							"strokeFrom": 30,
+							"strokeTo": 12,
+							"colorFrom": "EEC591",
+							"colorTo": "EEC59180"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 85,
+							"sizeFrom": 0,
+							"sizeTo": 280,
+							"strokeFrom": 30,
+							"strokeTo": 0,
+							"interp": "circleOut",
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
+						},
+						{
+							"type": "WaveEffect",
+							"startDelay": 8,
+							"lifetime": 85,
+							"sizeFrom": 0,
+							"sizeTo": 280,
+							"strokeFrom": 30,
+							"strokeTo": 0,
+							"interp": "circleOut",
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
+						},
+						{
+							"type": "WaveEffect",
+							"startDelay": 15,
+							"lifetime": 85,
+							"sizeFrom": 0,
+							"sizeTo": 280,
+							"strokeFrom": 30,
+							"strokeTo": 0,
+							"interp": "circleOut",
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
+						}
+					]
+				},
+				"hitShake": 33,
+				"despawnEffect": {
+					"type": "WaveEffect",
+					"lifetime": 20,
+					"sizeFrom": 40,
+					"sizeTo": 550,
+					"strokeFrom": 30,
+					"strokeTo": 11,
+					"colorFrom": "EEC59180",
+					"colorTo": "EEC59110"
+				},
+				"makeFire": true,
+				"pierce": true,
+				"pierceBuilding": true
+			}
+		}
+	]
+}

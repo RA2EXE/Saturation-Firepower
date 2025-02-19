@@ -1,0 +1,20 @@
+{
+	"type":"LiquidRouter",
+	"name":"重型装甲储油罐",
+	"size":4,
+	"health": 4200,
+	"armor": 24,
+	"liquidCapacity": 8400,
+	"insulated":true,
+	"absorbLasers":true,
+	//"buildCostMultiplier": 50,
+	"rebuildable": false,
+	"buildVisibility": "editorOnly",
+	"requirements": [
+		"metaglass/400",
+		"硅钢/400",
+		"plastanium/550",
+		"镄/500"
+	],
+	"category": "liquid"
+	}

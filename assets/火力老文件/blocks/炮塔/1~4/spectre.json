@@ -1,0 +1,93 @@
+{
+	"details": "高效水冷系统，适配不同口径炮管并使用全威力弹。\n暂使用旧主要结构，可能导致部分稳定性缺失",
+	"scaledHealth": 250,
+	"armor": 8,
+	"size": 4,
+	"reload": 8.28,
+	"range": 280,
+	"maxAmmo": 60,
+	"coolantMultiplier": 1,
+	"liquidCapacity": 60,
+	"inaccuracy": 3,
+	"shake": 3,
+	"rotateSpeed": 3,
+	"ammoTypes": {
+		"graphite": {
+			"type": "BasicBulletType",
+			"speed": 9,
+			"lifetime": 31.1,
+			"damage": 76.4,
+			"knockback": 0.8,
+			"reloadMultiplier": 1.6,
+			"pierce": true,
+			"pierceCap": 3,
+			"hitSize": 5,
+			"width": 15,
+			"height": 21,
+			"ammoMultiplier": 4,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke"
+		},
+		"thorium": {
+			"type": "BasicBulletType",
+			"speed": 10,
+			"lifetime": 28,
+			"damage": 122.24,
+			"knockback": 0.6,
+			"pierce": true,
+			"pierceArmor": true,
+			"pierceBuilding":true,
+			"pierceCap": 3,
+			"hitSize": 5,
+			"width": 16,
+			"height": 21,
+			"hitEffect": "hitBulletBig",
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke"
+		},
+		"pyratite": {
+			"speed": 10,
+			"lifetime": 26,
+			"damage": 106.96,
+			"splashDamageRadius": 28,
+			"splashDamage": 38.2,
+			"makeFire": true,
+			"status": "burning",
+			"statusDuration": 600,
+			"incendChance": 0.3,
+			"incendSpread": 16,
+			"incendAmount": 3,
+			"backColor": "FF8C00",
+			"frontColor": "FFB90F",
+			"hitSize": 5,
+			"width": 16,
+			"height": 21,
+			"ammoMultiplier": 4,
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"hitBulletBig",
+					"fireHit"
+				]
+			},
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke"
+		},
+		"硅钢": {
+			"speed": 9,
+			"lifetime": 31.1,
+			"damage": 75,
+			"knockback": 0.5,
+			"status": "unmoving",
+			"statusDuration": 22,
+			"width": 15,
+			"height": 21,
+			"frontColor": "FFFFFF",
+			"backColor": "7595D2",
+			"hitEffect": "hitBulletBig",
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"ammoMultiplier": 5
+		}
+	}
+}

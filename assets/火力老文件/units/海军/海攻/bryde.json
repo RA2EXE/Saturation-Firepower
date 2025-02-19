@@ -1,0 +1,74 @@
+{
+	"health": 2100,
+	"details": "换用集束爆破弹头，更新导弹系统",
+	"weapons": [
+		{
+			"name": "死神1",
+			"reload": 90,
+			"x": 0,
+			"y": -3.5,
+			"shootY": 8,
+			"recoil": 3,
+			"mirror": false,
+			"rotate": true,
+			"rotateSpeed": 2,
+			"inaccuracy": 0,
+			"shake": 2,
+			"ejectEffect": "casing3",
+			"shootSound": "artillery",
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"speed": 4,
+				"lifetime": 75,
+				"knockback": 0.9,
+				"status": "blasted",
+				"hitEffect": "massiveExplosion",
+				"despawnEffect": "flakExplosionBig",
+				"smokeEffect": "shootBig",
+				"splashDamage": 25,
+				"splashDamageRadius": 45,
+				"width": 12,
+				"height": 16,
+				"fragBullets": 5,
+				"fragLifeMin": 0.5,
+				"fragBullet": {
+					"type": "ArtilleryBulletType",
+					"despawnEffect": "blastExplosion",
+					"status": "blasted",
+					"width": 8,
+					"height": 9,
+					"splashDamageRadius": 35,
+					"splashDamage": 38,
+					"lifetime": 10,
+					"speed": 3
+				}
+			}
+		},
+		{
+			"name": "巫妖2",
+			"reload": 10,
+			"shootY": 6,
+			"x": 8.5,
+			"y": -9,
+			"rotate": true,
+			"rotateSpeed": 8,
+			"inaccuracy": 5,
+			"ejectEffect": "casing2",
+			"shootSound": "missile",
+			"alternate": true,
+			"bullet": {
+				"type": "MissileBulletType",
+				"damage": 21,
+				"speed": 4.3,
+				"lifetime": 70,
+				"trailEffect": "smoke",
+				"splashDamage": 25,
+				"splashDamageRadius": 25,
+				"width": 8,
+				"height": 8,
+				"hitEffect": "flakExplosion",
+				"despawnEffect": "explosion"
+			}
+		}
+	]
+}

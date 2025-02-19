@@ -1,0 +1,220 @@
+{
+	"type": "ItemTurret",
+	"name": "落梅",
+	"size": 4,
+	"reload": 3,
+	"fogRadiusMultiuplier": 0.42,
+	"range": 400,
+	"maxAmmo": 60,
+	"canOverdrive": true,
+	"cooldownTime": 120,
+	"recoil": 2,
+	"recoilTime": 160,
+	"minWarmup": 0.9,
+	"shootWarmupSpeed": 0.02,
+	"warmupMaintainTime": 180,
+	"unitSort": "farthest",
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawTurret",
+				"parts": [
+					{
+						"type": "RegionPart",
+						"suffix": "-侧",
+						"mirror": true,
+						"moveY": -2,
+						"moveRot": -30,
+						"moves": [
+							{
+								"y": -2,
+								"rot": -8,
+								"progress": "recoil"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"ammoUseEffect": "none",
+	"shootSound": "missile",
+	"targetGround": true,
+	"targetAir": false,
+	"shootY": 13,
+	"xRand": 10,
+	"liquidCapacity": 80,
+	"consumes": {
+		"power": 10,
+		"coolant": {
+			"amount": 1,
+			"optional": true
+		}
+	},
+	"inaccuracy": 8,
+	"shootCone": 30,
+	"shake": 1,
+	"rotateSpeed": 1.5,
+	"velocityRnd": 0.1,
+	"ammoTypes": {
+		"铷": {
+			"type": "ArtilleryBulletType",
+			"splashDamageRadius": 50,
+			"splashDamage": 180,
+			"status": "磁扰",
+			"statusDuration": 300,
+			"shootEffect": "shootSmallFlame",
+			"weaveMag": 3,
+			"weaveScale": 3,
+			"speed": 10,
+			"lifetime": 60,
+			"drag": 0.02,
+			"width": 13,
+			"height": 25,
+			"sprite": "饱和火力-抛射",
+			"spin": 23,
+			"backColor": "d0bae6",
+			"frontColor": "bc89f0",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"line":true,
+						"particles": 5,
+						"length": 66,
+						"baseLength": 0,
+						"interp": "pow5Out",
+						"lenFrom": 8,
+						"lenTo": 0,
+						"strokeFrom":3,
+						"strokeTo":3,
+						"sizeInterp": "pow3In",
+						"lifetime": 35,
+						"colorFrom": "FF8C00",
+						"colorTo": "E3E3E3"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 3,
+						"length": 55,
+						"baseLength": 0,
+						"interp": "pow10Out",
+						"sizeFrom": 5,
+						"sizeTo": 0,
+						"sizeInterp": "pow5In",
+						"lifetime": 55,
+						"colorFrom": "d0bae6",
+						"colorTo": "d0bae680"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 16,
+						"sizeFrom": 0,
+						"sizeTo": 50,
+						"strokeFrom": 6,
+						"strokeTo": 0,
+						"colorFrom": "bc89f0",
+						"colorTo": "d0bae6"
+					}
+				]
+			},
+			"despawnEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"length": 0,
+				"baseLength": 0,
+				"sizeFrom": 8,
+				"sizeTo": 8,
+				"sizeInterp": "pow10In",
+				"lifetime": 80,
+				"colorFrom": "d0bae6",
+				"colorTo": "d0bae600"
+			},
+			"ammoMultiplier": 2
+		},
+		"磁钢": {
+			"type": "ArtilleryBulletType",
+			"splashDamageRadius": 50,
+			"splashDamage": 220,
+			"status": "磁扰",
+			"statusDuration": 580,
+			"shootEffect": "shootSmallFlame",
+			"weaveMag": 3,
+			"weaveScale": 3,
+			"speed": 10,
+			"lifetime": 60,
+			"drag": 0.02,
+			"width": 13,
+			"height": 25,
+			"sprite": "饱和火力-抛射",
+			"spin": 23,
+			"backColor": "b9c0eb",
+			"frontColor": "7595D2",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"line":true,
+						"particles": 8,
+						"length": 66,
+						"baseLength": 0,
+						"interp": "pow5Out",
+						"lenFrom": 15,
+						"lenTo": 0,
+						"strokeFrom":2,
+						"strokeTo":2,
+						"sizeInterp": "pow3In",
+						"lifetime": 35,
+						"colorFrom": "FF8C00",
+						"colorTo": "b9c0eb"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 3,
+						"length": 55,
+						"baseLength": 0,
+						"interp": "pow10Out",
+						"sizeFrom": 6,
+						"sizeTo": 0,
+						"sizeInterp": "pow5In",
+						"lifetime": 55,
+						"colorFrom": "b9c0eb",
+						"colorTo": "b9c0eb80"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 16,
+						"sizeFrom": 0,
+						"sizeTo": 50,
+						"strokeFrom": 6,
+						"strokeTo": 0,
+						"colorFrom": "b9c0eb",
+						"colorTo": "7595D2"
+					}
+				]
+			},
+			"despawnEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"length": 0,
+				"baseLength": 0,
+				"sizeFrom": 8,
+				"sizeTo": 8,
+				"sizeInterp": "pow10In",
+				"lifetime": 80,
+				"colorFrom": "b9c0eb",
+				"colorTo": "b9c0eb00"
+			},
+			"ammoMultiplier": 6
+		}
+	},
+	"requirements": [
+		"titanium/300",
+		"纲稀硅/250"
+	],
+	"category": "turret",
+	"research": "中央空间站"
+}

@@ -1,0 +1,89 @@
+{
+	"type": "PowerTurret",
+	"name": "先驱",
+	"targetAir": true,
+	"targetGround": true,
+	"health": 370,
+	"size": 1,
+	"shootSound": "JG1",
+	"shake": 0.2,
+	"inaccuracy": 0,
+	"recoil": 0.2,
+	"recoilTime": 10,
+	"heatColor": "FF4040",
+	"unitSort": "weakest",
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"suffix": "-前",
+				"under": true,
+				"progress": "recoil",
+				"moveY": -0.8
+			}
+		]
+	},
+	"shootType": {
+		"type": "BasicBulletType",
+		"damage": 11,
+		"frontColor": "FFFFFF",
+		"backColor": "BFFFDB",
+		"width": 3,
+		"height": 3,
+		"status": "干扰",
+		"statusDuration": 10,
+		"speed": 6,
+		"lifetime": 20,
+		"ammoMultiplier": 1,
+		"sprite": "circle-bullet",
+		"shrinkY": 0,
+		"hitEffect": {
+			"type": "WaveEffect",
+			"lifetime": 8,
+			"sizeFrom": 0,
+			"sizeTo": 8,
+			"strokeFrom": 1,
+			"strokeTo": 0,
+			"colorFrom": "FFFFFF",
+			"colorTo": "BFFFDB"
+		},
+		"despawnEffect": {
+			"type": "WaveEffect",
+			"lifetime": 8,
+			"sizeFrom": 0,
+			"sizeTo": 8,
+			"strokeFrom": 1,
+			"strokeTo": 0,
+			"colorFrom": "FFFFFF",
+			"colorTo": "BFFFDB"
+		}
+	},
+	"shootEffect": {
+		"type": "WaveEffect",
+		"lifetime": 8,
+		"sizeFrom": 0,
+		"sizeTo": 8,
+		"strokeFrom": 1,
+		"strokeTo": 0,
+		"colorFrom": "FFFFFF",
+		"colorTo": "BFFFDB"
+	},
+	"consumes": {
+		"power": 1.55,
+		"coolant": {
+			"amount": 0.1,
+			"optional": true
+		}
+	},
+	"reload": 20,
+	"rotateSpeed": 13,
+	"range": 120,
+	"category": "turret",
+	"research": "多管炮",
+	"requirements": [
+		"copper/70",
+		"lead/40"
+	]
+}

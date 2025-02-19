@@ -1,0 +1,184 @@
+{
+	"type": "tank",
+	"name": "轰炸",
+	"treadFrames": 8,
+	"treadPullOffset": 8,
+	"treadRects": [
+		{
+			"x": -45,
+			"y": -45,
+			"width": 24,
+			"height": 88
+		}
+	],
+	"speed": 1.3,
+	"hitSize": 20,
+	"ammoType": "blast-compound",
+	"ammoCapacity": 16,
+	"targetAir": false,
+	"squareShape": true,
+	"omniMovement": false,
+	"rotateMoveFirst": false,
+	"health": 1850,
+	"armor": 15,
+	"rotateSpeed": 2,
+	"itemCapacity": 0,
+	"faceTarget": false,
+	"research": "陆2",
+	"requirements": {
+		"block": "multiplicative-reconstructor",
+		"previous": "陆2"
+	},
+	"weapons": [
+		{
+			"name": "轰炸1",
+			"reload": 250,
+			"x": 0,
+			"y": 0,
+			"rotate": true,
+			"mirror": true,
+			"alternate": false,
+			"rotateSpeed": 1.3,
+			"minWarmup": 0.93,
+			"shootWarmupSpeed": 0.05,
+			"parts": [
+				{
+					"type": "RegionPart",
+					"mirror": true,
+					"suffix": "-前",
+					"under": true,
+					"moveY": -4,
+					"progress": "warmup"
+				}
+			],
+			"shoot": {
+				"shots": 25,
+				"shotDelay": 6
+			},
+			"xRand": 4,
+			"inaccuracy": 6,
+			"shootSound": "missile",
+			"shootStatus": "unmoving",
+			"shootStatusDuration": 200,
+			"velocityRnd": 0.1,
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"sprite": "饱和火力-导弹",
+				"backColor": "FF7055",
+				"frontColor": "E3E3E3",
+				"width": 8,
+				"height": 45,
+				"trailChance": 0,
+				"trailInterval": 1,
+				"trailEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"length": 30,
+					"baseLength": 0,
+					"sizeInterp": "pow5In",
+					"lifetime": 10,
+					"colorFrom": "E3E3E3",
+					"colorTo": "E3E3E380",
+					"sizeFrom": 2.6,
+					"sizeTo": 0,
+					"cone": 8
+				},
+				"trailRotation": true,
+				"splashDamage": 55,
+				"splashDamageRadius": 45,
+				"buildingDamageMultiplier": 2.33,
+				"collides": false,
+				"status": "blasted",
+				"shootEffect": "shootSmallFlame",
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 9,
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"sizeFrom": 6,
+					"sizeTo": 0,
+					"length": -58,
+					"baseLength": -20,
+					"lifetime": 42,
+					"colorFrom": "73737390",
+					"colorTo": "73737390",
+					"cone": 40,
+					"layer": 49
+				},
+				"speed": 12,
+				"lifetime": 41.6,
+				"hitShake": 2,
+				"hitSound": "explosion",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 8,
+							"sizeFrom": 10,
+							"sizeTo": 0,
+							"length": 35,
+							"baseLength": 33,
+							"lifetime": 35,
+							"colorFrom": "737373FF",
+							"colorTo": "737373FF"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 12,
+							"line": true,
+							"strokeFrom": 2,
+							"strokeTo": 0,
+							"lenFrom": 16,
+							"lenTo": 8,
+							"length": 66,
+							"baseLength": 3,
+							"lifetime": 12,
+							"colorFrom": "FFFFFF",
+							"colorTo": "FFE176FF"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 0,
+							"sizeTo": 45,
+							"length": 0,
+							"baseLength": 0,
+							"sizeInterp": "pow5Out",
+							"lifetime": 12,
+							"layer": 50,
+							"colorFrom": "FFFFFF88",
+							"colorTo": "73737300"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 0,
+							"sizeTo": 48,
+							"interp": "circleOut",
+							"strokeFrom": 15,
+							"strokeTo": 0,
+							"layer": 50,
+							"colorFrom": "FFFFFF",
+							"colorTo": "737373A8"
+						}
+					]
+				},
+				"despawnEffect": "flakExplosionBig"
+			}
+		}
+	],
+	"parts": [
+		{
+			"type": "RegionPart",
+			"mirror": true,
+			"y": -4.75,
+			"suffix": "-支架",
+			"layer": 59,
+			"moveX": 5.55,
+			"moveY": -8,
+			"moveRot": -30,
+			"progress": "warmup"
+		}
+	]
+}

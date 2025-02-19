@@ -1,0 +1,72 @@
+{
+	"type": "ShockMine",
+	"name": "瘫痪地雷",
+	"size": 1,
+	"hasShadow":false,
+	"underBullets": true,
+	"health": 30,
+	"tileDamage": 30,
+	"damage": 36,
+	"shots": 3,
+	"length": 12,
+	"tendrils": 6,
+	"lightningColor": "BFFFDB",
+	"destroyBullet": {
+		"type": "BasicBulletType",
+		"damage": 24,
+		"status": "干扰",
+		"statusDuration": 720,
+		"splashDamageRadius": 50,
+		"splashDamage": 16,
+		"sprite": "circle-bullet",
+		"frontColor": "FFFFFF",
+		"backColor": "BFFFDB",
+		"width": 4,
+		"height": 4,
+		"hitSound": "plasmaboom",
+		"despawnEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "WaveEffect",
+					"lifetime": 8,
+					"sizeFrom": 0,
+					"sizeTo": 50,
+					"strokeFrom": 3,
+					"strokeTo": 1,
+					"colorFrom": "25C9AB",
+					"colorTo": "BFFFDB"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 23,
+					"line": true,
+					"lenFrom": 10,
+					"lenTo": 0,
+					"strokeFrom": 1.2,
+					"strokeTo": 0.8,
+					"interp": "fastSlow",
+					"sizeInterp": "pow3In",
+					"length": 45,
+					"baseLength": 8,
+					"lifetime": 35,
+					"colorFrom": "BFFFDB",
+					"colorTo": "BFFFDBd0"
+				}
+			]
+		},
+		"hitEffect": "none",
+		"collidesAir": false,
+		"collides": false,
+		"hittable": false,
+		"absorbable": false,
+		"instantDisappear": true,
+		"speed": 0
+	},
+	"category": "effect",
+	"research": "shock-mine",
+	"requirements": [
+		"titanium/15",
+		"泰勒合金/2"
+	]
+}

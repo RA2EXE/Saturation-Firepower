@@ -1,0 +1,12 @@
+    displayName: "SaturationFirepowerMod"
+name: "sfire-mod"
+
+author: "B.C.E.M."
+
+main: "SFire.SFireMod"
+
+description: "Hell time, once for all"
+
+version: BETA_4.0.0
+minGameVersion: 146
+java: true

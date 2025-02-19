@@ -1,0 +1,292 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"loopSound": "torch",
+	"loopSoundVolume": 2.5,
+	"name": "地质锤-火箭",
+	"immunities": [
+		"burning",
+		"freezing",
+		"melting",
+		"disarmed",
+		"sapped",
+		"slow",
+		"tarred",
+		"unmoving",
+		"wet",
+		"electrified",
+		"overdrive",
+		"overclock",
+		"修复",
+		"抢修",
+		"干扰",
+		"强化",
+		"强攻",
+		"绝判",
+		"毁灭",
+		"崩溃",
+		"阳电",
+		"阴电",
+		"油蚀"
+	],
+	"speed": 7,
+	"missileAccelTime": 100,
+	"lifetime": 1200,
+	"rotateSpeed": 0,
+	"outlineColor": "383848",
+	"deathSound": "Explosionbig",
+	"hidden": true,
+	"hitSize": 26,
+	"health": 6800,
+	"armor": -10,
+	"fogRadius": 3,
+	"engineLayer": 110,
+	"engineColor": "BFFFDB",
+	"trailColor": "BFFFDBAA",
+	"trailLength": 50,
+	"engineOffset": 24,
+	"engineSize": 6,
+	"maxRange": 50,
+	"abilities": [
+		{
+			"type": "RegenAbility",
+			"percentAmount": 0.05
+		},
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 2,
+						"region": "饱和火力-菱形",
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"sizeFrom": 9,
+						"sizeTo": 0,
+						"length": 50,
+						"baseLength": 0,
+						"lifetime": 37,
+						"colorFrom": "BFFFDB",
+						"colorTo": "BFFFDBA8",
+						"cone": 40
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 2,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"sizeFrom": 10,
+						"sizeTo": 0,
+						"length": 50,
+						"baseLength": 0,
+						"lifetime": 37,
+						"colorFrom": "BFFFDB",
+						"colorTo": "BFFFDB60",
+						"cone": 40
+					}
+				]
+			},
+			"minVelocity": 0.5,
+			"rotation": 180,
+			"rotateEffect": true,
+			"interval": 4,
+			"y": -8
+		},
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 3,
+				"interp": "pow5Out",
+				"sizeInterp": "pow3In",
+				"line": true,
+				"strokeFrom": 2.6,
+				"strokeTo": 1.6,
+				"lenFrom": 45,
+				"lenTo": 0,
+				"length": 93,
+				"baseLength": 0,
+				"lifetime": 20,
+				"colorFrom": "BFFFDB",
+				"colorTo": "BFFFDB",
+				"cone": 13
+			},
+			"minVelocity": 2,
+			"rotation": 180,
+			"rotateEffect": true,
+			"interval": 2,
+			"y": -8
+		},
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"region": "饱和火力-箭头",
+						"sizeInterp": "pow5Out",
+						"sizeFrom": 0,
+						"sizeTo": 46,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 12,
+						"colorFrom": "BFFFDB",
+						"colorTo": "BFFFDBA8",
+						"cone": 0
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"startDelay": 10,
+						"region": "饱和火力-箭头",
+						"sizeFrom": 46,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 33,
+						"colorFrom": "BFFFDBA8",
+						"colorTo": "BFFFDB",
+						"cone": 0
+					}
+				]
+			},
+			"minVelocity": 3,
+			"rotation": 0,
+			"rotateEffect": true,
+			"interval": 10,
+			"y": -9
+		}
+	],
+	"weapons": [
+		{
+			"name": "自爆",
+			"x": 0,
+			"shake": 10,
+			"reload": 60,
+			"mirror": false,
+			"rotate": true,
+			"shootCone": 360,
+			"shootSound": "boom",
+			"shootOnDeath": true,
+			"bullet": {
+				"killShooter": true,
+				"collides": false,
+				"lightningColor": "BFFFDB",
+				"lightningDamage": 760,
+				"lightning": 4,
+				"lightningLength": 18,
+				"lightningLengthRand": 12,
+				"splashDamage": 12000,
+				"splashDamageRadius": 120,
+				"instantDisappear": true,
+				"hitSound": "DBZ1",
+				"hitSoundVolume": 3,
+				"hitShake": 60,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"despawnEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"sizeFrom": 16,
+							"sizeTo": 110,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 8,
+							"sizeInterp": "pow5Out",
+							"colorFrom": "BFFFDBA8",
+							"colorTo": "BFFFDBAA"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 1,
+							"startDelay": 6.5,
+							"sizeFrom": 110,
+							"sizeTo": 0,
+							"length": 0,
+							"baseLength": 0,
+							"lifetime": 36,
+							"colorFrom": "BFFFDBAA",
+							"colorTo": "BFFFDB"
+						}
+					]
+				},
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"length": 100,
+							"baseLength": 0,
+							"interp": "pow10Out",
+							"sizeFrom": 12,
+							"sizeTo": 0,
+							"sizeInterp": "pow10In",
+							"lifetime": 120,
+							"colorFrom": "BFFFDBA8",
+							"colorTo": "BFFFDB"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 21,
+							"length": 88,
+							"baseLength": 20,
+							"interp": "pow10Out",
+							"sizeFrom": 18,
+							"sizeTo": 0,
+							"sizeInterp": "pow5In",
+							"lifetime": 160,
+							"layer": 120,
+							"colorFrom": "BFFFDBAA",
+							"colorTo": "E3E3E380"
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 21,
+							"line": true,
+							"strokeFrom": 7,
+							"strokeTo": 5,
+							"lenFrom": 66,
+							"lenTo": 0,
+							"sizeInterp": "pow3In",
+							"interp": "pow10Out",
+							"length": 83,
+							"baseLength": 20,
+							"lifetime": 60,
+							"colorFrom": "BFFFDBAA",
+							"colorTo": "BFFFDB"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 40,
+							"sizeFrom": 0,
+							"sizeTo": 140,
+							"interp": "circleOut",
+							"strokeFrom": 16,
+							"strokeTo": 0,
+							"colorFrom": "25C9AB",
+							"colorTo": "BFFFDB"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 11,
+							"sizeFrom": 0,
+							"sizeTo": 150,
+							"strokeFrom": 36,
+							"strokeTo": 0,
+							"colorFrom": "25C9ABEB",
+							"colorTo": "BFFFDB00"
+						}
+					]
+				}
+			}
+		}
+	]
+}

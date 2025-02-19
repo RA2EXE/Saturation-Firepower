@@ -1,0 +1,144 @@
+{
+	"type": "ItemTurret",
+	"name": "米尼",
+	"health": 2200,
+	"armor": 5,
+	"size": 3,
+	"reload": 4.5,
+	"range": 280,
+	"maxAmmo": 150,
+	"shoot": {
+		"type": "ShootAlternate",
+		"barrels": 2,
+		"spread": 9
+	},
+	"recoilTime": 25,
+	"recoil": 2.88,
+	"shake": 2.5,
+	"coolantMultiplier": 1000,
+	"consumes": {
+		"coolant": {
+			"amount": 0.001,
+			"optional": true
+		}
+	},
+	"liquidCapacity": 60,
+	"shootSound": "shootBig",
+	"ammoUseEffect": "casing3",
+	"targetGround": true,
+	"targetAir": true,
+	"shootCone": 180,
+	"inaccuracy": 2,
+	"rotateSpeed": 6,
+	"ammoTypes": {
+		"graphite": {
+			"type": "BasicBulletType",
+			"reloadMultiplier": 0.7,
+			"speed": 13,
+			"lifetime": 22,
+			"damage": 33,
+			"splashDamage": 13,
+			"splashDamageRadius": 15,
+			"knockback": 0.25,
+			"width": 8,
+			"height": 13,
+			"ammoMultiplier": 4,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "flakExplosion"
+		},
+		"silicon": {
+			"type": "BasicBulletType",
+			"reloadMultiplier": 1.5,
+			"homingPower": 0.12,
+			"speed": 13,
+			"lifetime": 22,
+			"damage": 26,
+			"width": 9,
+			"height": 13,
+			"ammoMultiplier": 5,
+			"shootEffect": "shootBig",
+			"hitEffect": "hitBulletBig"
+		},
+		"pyratite": {
+			"type": "BasicBulletType",
+			"speed": 17.5,
+			"lifetime": 16.5,
+			"damage": 22,
+			"splashDamageRadius": 21,
+			"splashDamage": 36,
+			"status": "burning",
+			"statusDuration": 600,
+			"makeFire": true,
+			"backColor": "FF8C00",
+			"frontColor": "FFB90F",
+			"width": 9,
+			"height": 14,
+			"ammoMultiplier": 2,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					"flakExplosion",
+					"fireHit"
+				]
+			}
+		},
+		"thorium": {
+			"type": "BasicBulletType",
+			"speed": 17.5,
+			"lifetime": 16.5,
+			"damage": 49,
+			"width": 10,
+			"height": 15,
+			"ammoMultiplier": 4,
+			"pierce": true,
+			"pierceCap": 2,
+			"frontColor": "FFFFFF",
+			"backColor": "F9A3C7",
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig"
+		},
+		"镄": {
+			"type": "BasicBulletType",
+			"rangeChange": 40,
+			"speed": 17,
+			"lifetime": 19,
+			"damage": 68,
+			"pierce": true,
+			"pierceCap": 2,
+			"width": 11,
+			"height": 15,
+			"ammoMultiplier": 6,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig"
+		},
+		"铬": {
+			"type": "BasicBulletType",
+			"rangeChange": 40,
+			"status": "slow",
+			"statusDuration": 6,
+			"speed": 17,
+			"lifetime": 19,
+			"damage": 61,
+			"knockback": 6,
+			"width": 11,
+			"height": 15,
+			"ammoMultiplier": 6,
+			"shootEffect": "shootBig",
+			"smokeEffect": "shootBigSmoke",
+			"hitEffect": "hitBulletBig"
+		}
+	},
+	"requirements": [
+		"titanium/210",
+		"graphite/125",
+		"thorium/125",
+		"metaglass/20"
+	],
+	"category": "turret",
+	"research": "B6机炮"
+}

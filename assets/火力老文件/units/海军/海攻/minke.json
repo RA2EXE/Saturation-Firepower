@@ -1,0 +1,74 @@
+{
+	"health": 900,
+	"details": "无后座加农炮，升级防空系统",
+	"weapons": [
+		{
+			"name": "飞鲨1",
+			"reload": 11,
+			"x": 5,
+			"y": 3.5,
+			"shootY": 4,
+			"rotate": true,
+			"rotateSpeed": 5,
+			"inaccuracy": 8,
+			"alternate": true,
+			"ejectEffect": "casing1",
+			"shootSound": "shoot",
+			"bullet": {
+				"type": "FlakBulletType",
+				"ammoMultiplier": 5,
+				"speed": 6,
+				"lifetime": 41.6,
+				"width": 9,
+				"height": 10,
+				"damage": 3,
+				"splashDamage": 40,
+				"splashDamageRadius": 20,
+				"hitEffect": "flakExplosion",
+				"fragBullets": 5,
+				"fragBullet": {
+					"type": "BasicBulletType",
+					"collidesGround": false,
+					"despawnEffect": "none",
+					"width": 5,
+					"height": 12,
+					"shrinkY": 1,
+					"damage": 7,
+					"lifetime": 20,
+					"speed": 3
+				}
+			}
+		},
+		{
+			"name": "堡垒1",
+			"reload": 37.5,
+			"x": 5,
+			"y": -5,
+			"rotate": true,
+			"rotateSpeed": 2,
+			"inaccuracy": 2,
+			"shake": 1.7,
+			"recoil": 1,
+			"top": false,
+			"alternate": true,
+			"ejectEffect": "casing3",
+			"shootSound": "bang",
+			"bullet": {
+				"type": "ArtilleryBulletType",
+				"damage": 22,
+				"speed": 5,
+				"lifetime": 52,
+				"collides": true,
+				"collidesTiles": false,
+				"knockback": 0.8,
+				"hitSound": "explosion",
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "none",
+				"splashDamage": 55,
+				"splashDamageRadius": 24,
+				"width": 11,
+				"height": 12
+			}
+		}
+	]
+}

@@ -1,0 +1,89 @@
+{
+	"details": "优化射击方式以提高稳定性，换装新分裂弹头与导弹发射器",
+	"armor": 26,
+	"health": 42000,
+	"weapons": [
+		{
+			"name": "根除1",
+			"reload": 38,
+			"shake": 3,
+			"shoot": {
+				"shots": 4,
+				"shotDelay": 2
+			},
+			"recoil": 5,
+			"x": 21.5,
+			"shootX": 0,
+			"shootY": 11,
+			"rotate": false,
+			"top": false,
+			"inaccuracy": 1,
+			"shootSound": "artillery",
+			"alternate": true,
+			"ejectEffect": "casing4",
+			"bullet": {
+				"status": "blasted",
+				"damage": 103,
+				"pierceArmor": true,
+				"pierce": true,
+				"pierceCap": 10,
+				"speed": 15,
+				"lifetime": 25.3,
+				"shootEffect": "shootBig",
+				"smokeEffect": "shootBigSmoke",
+				"width": 13,
+				"height": 34,
+				"hitSound": "explosion",
+				"hitEffect": "flakExplosion",
+				"fragBullets": 4,
+				"fragRandomSpread": 30,
+				"fragBullet": {
+					"damage": 33,
+					"width": 10,
+					"height": 10,
+					"pierce": true,
+					"pierceBuilding": true,
+					"pierceCap": 3,
+					"speed": 16,
+					"lifetime": 10,
+					"hitSound": "explosion",
+					"hitEffect": "flakExplosion",
+					"splashDamage": 19,
+					"splashDamageRadius": 16
+				}
+			}
+		},
+		{
+			"name": "根除2",
+			"x": 8,
+			"y": -8,
+			"reload": 14,
+			"rotate": true,
+			"rotateSpeed": 9,
+			"top":true,
+			"shoot": {
+				"type":"shootSpread",
+				"spread": 12,
+				"shots": 3
+			},
+			"alternate": false,
+			"shootSound": "missile",
+			"inaccuracy": 15,
+			"shootCone": 30,
+			"bullet": {
+				"type": "MissileBulletType",
+				"homingPower": 0.03,
+				"status": "blasted",
+				"damage": 23,
+				"splashDamageRadius": 45,
+				"splashDamage": 55,
+				"hitEffect": "flakExplosionBig",
+				"despawnEffect": "flakExplosionBig",
+				"width": 10,
+				"height": 13,
+				"speed": 6,
+				"lifetime": 45
+			}
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"type": "GenericCrafter",
+	"name": "实验室",
+	"outputItem": "一级协议/1",
+	"drawer": {
+		"type": "DrawMulti",
+		"drawers": [
+			{
+				"type": "DrawFlame",
+				"flameRadius": 2,
+				"flameRadiusIn": 0.5,
+				"flameColor": "25C9AB"
+			},
+			"DrawDefault"
+		]
+	},
+	"size": 2,
+	"canOverdrive": false,
+	"health": 360,
+	"itemCapacity": 25,
+	"hasPower": true,
+	"hasLiquids": false,
+	"hasItems": true,
+	"craftTime": 3000,
+	"consumes": {
+		"power": 10
+	},
+	"requirements": [
+		"lead/80",
+		"silicon/60",
+		"titanium/50"
+	],
+	"category": "effect",
+	"research": "silicon-smelter"
+}

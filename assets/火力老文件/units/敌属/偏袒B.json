@@ -1,0 +1,222 @@
+{
+	"type": "legs",
+	"healColor":"FF5B5B",
+	"outlineColor":"383848",
+	"legContinuousMove": true,
+	"lockLegBase": true,
+	"legCount":4,
+	"legLength":35,
+	"legForwardScl":0.35,
+	"hovering":true,
+	"canDrown":false,
+	"drownTimeMultiplier":105,
+	"legMoveSpace":1,
+	"allowLegStep":true,
+	"legPhysicsLayer":false,
+	"legSplashDamage":108,
+	"legSplashRange":15,
+	"name": "偏袒",	
+	"fogRadius": 40,
+	"rotateSpeed": 1.88,
+	"speed": 1.05,
+	"hitSize": 33,
+	"immunities":[
+		"blasted","burning","electrified",
+		"freezing","melting","disarmed",
+		"sapped","shocked","slow",
+		"tarred","unmoving","wet",
+		"spore-slowed","corroded",
+		"标记","裂位标记","崩溃","干扰"],
+	"ammoType":"裂位能",
+	"ammoCapacity": 2000,
+	"health": 56000,
+	"armor": 88,
+	"drag": 0.15,
+	"accel": 0.35,
+	"itemCapacity": 0,
+	"faceTarget": true,
+	"abilities": [
+		{
+			"type": "ShieldArcAbility",
+			"radius": 32,
+			"width": 15,
+			"max": 6000,
+			"regen": 15,
+			"cooldown": 160,
+			"angle": 130,
+			"angleOffset": 0
+		},
+		{
+			"type": "ArmorPlateAbility",
+			"healthMultiplier": 1.88
+		}
+	],
+	"weapons": [
+		{
+			"name": "偏袒2",
+			"reload": 208.12,
+			"shootStatusDuration": 219.12,
+			"shootStatus": "强攻",
+			"x": 0,
+			"y": 0,
+			"cooldownTime": 130,
+			"rotate": true,
+			"rotateSpeed": 2.3,
+			"recoil": 3,
+			"mirror": false,
+			"inaccuracy": 0,
+			"shootSound": "mediumCannon",
+			"shake": 8.6,
+			"parts": [
+				{
+					"type": "RegionPart",
+					"mirror": true,
+					"x": 0,
+					"y": 0,
+					"suffix": "-管",
+					"progress": "recoil",
+					"heatProgress": "recoil",
+					"under": true,
+					"moveY": -4
+				}
+			],
+			"shootY": 29,
+			"bullet": {
+				"damage": 104,
+				"splashDamage": 300,
+				"splashDamageRadius": 66,
+				"lightningColor": "EEC591",
+				"lightningDamage": 87,
+				"lightning": 3,
+				"lightningLength": 4,
+				"lightningLengthRand": 16,
+				"buildingDamageMultiplier": 5.25,
+				"sprite": "missile-large",
+				"width": 10,
+				"height": 20,
+				"speed": 9,
+				"lifetime": 43,
+				"drag": -0.016,
+				"pierceArmor": true,
+				"hittable": false,
+				"absorbable": false,
+				"status": "崩溃",
+				"statusDuration": 206,
+				"frontColor": "FFFFFF",
+				"backColor": "EEC591",
+				"trailLength": 10,
+				"trailWidth": 4,
+				"trailColor": "EEC591",
+				"shrinkY": 0,
+				"hitSound": "explosion",
+				"hitSoundVolume": 6,
+				"hitShake": 8,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 13,
+							"sizeFrom": 8,
+							"sizeTo": 0,
+							"length": 60,
+							"baseLength": 8,
+							"interp": "pow10Out",
+							"sizeInterp": "pow5In",
+							"lifetime": 95,
+							"colorFrom": "EEC59180",
+							"colorTo": "EEC591"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 26,
+							"sizeFrom": 5,
+							"sizeTo": 70,
+							"strokeFrom": 8,
+							"strokeTo": 0,
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 26,
+							"sizeFrom": 5,
+							"sizeTo": 90,
+							"strokeFrom": 11,
+							"strokeTo": 0,
+							"colorFrom": "EEC591",
+							"colorTo": "EEC591"
+						}
+					]
+				},
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 9,
+					"interp": "pow5Out",
+					"sizeInterp": "pow5In",
+					"sizeFrom": 6,
+					"sizeTo": 0,
+					"length": 30,
+					"baseLength": 0,
+					"lifetime": 65,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC59180",
+					"cone": 18
+				},
+				"smokeEffect": {
+					"type": "WaveEffect",
+					"lifetime": 28,
+					"sizeFrom": 0,
+					"sizeTo": 30,
+					"strokeFrom": 3,
+					"strokeTo": 0,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
+				},
+				"despawnEffect": {
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeInterp": "pow5Out",
+					"sizeFrom": 0,
+					"sizeTo": 60,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 95,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC59100"
+				}
+			},
+			"ejectEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"sizeFrom": 13,
+						"sizeTo": 0,
+						"length": 60,
+						"baseLength": 0,
+						"interp": "pow10Out",
+						"sizeInterp": "pow5In",
+						"layer": 60,
+						"lifetime": 95,
+						"colorFrom": "73737390",
+						"colorTo": "73737390"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 18,
+						"sizeFrom": 0,
+						"sizeTo": 70,
+						"strokeFrom": 48,
+						"strokeTo": 16,
+						"layer": 60,
+						"interp": "circleOut",
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF10"
+					}
+				]
+			}
+		}
+	]
+}

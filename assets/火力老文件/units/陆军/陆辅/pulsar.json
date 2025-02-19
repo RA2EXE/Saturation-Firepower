@@ -1,0 +1,44 @@
+{
+	"health": 850,
+	"armor": 5,
+	"weapons": [
+		{
+			"name": "恒星1",
+			"reload": 30,
+			"shootY": 6,
+			"x": 6,
+			"y": 0,
+			"inaccuracy":35,
+			"shoot": {
+				"shots": 6,
+				"shotDelay":0.2
+			},
+			"shake": 2.2,
+			"recoil": 2.5,
+			"top": false,
+			"shootSound": "spark",
+			"alternate": true,
+			"bullet": {
+				"type": "LightningBulletType",
+				"damage": 16,
+				"lightningColor": "97FFA8",
+				"hitColor": "97FFA8",
+				"lightningLength": 8,
+				"lightningLengthRand": 6,
+				"shootEffect": "shootHeal",
+				"smokeEffect": "none",
+				"healPercent": 2,
+				"lightningType": {
+					"lifetime": 0.0001,
+					"speed": 0,
+					"collidesTeam": true,
+					"hittable": false,
+					"hitEffect": "hitLancer",
+					"despawnEffect": "none",
+					"status": "shocked",
+					"healPercent": 2
+				}
+			}
+		}
+	]
+}

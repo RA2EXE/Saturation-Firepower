@@ -1,0 +1,201 @@
+{
+	"type": "PowerTurret",
+	"name": "裂爆",
+	"targetAir": true,
+	"targetGround": true,
+	"health": 1700,
+	"size": 2,
+	"heatColor": "FF4040",
+	"cooldownTime": 80,
+	"accurateDelay": false,
+	"shootSound": "laser",
+	"shoot": {
+		"type": "ShootPattern",
+		"firstShotDelay": 50
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "HaloPart",
+				"progress": "recoil",
+				"rotateSpeed": 0,
+				"shapeRotation": 0,
+				"y": 8,
+				"sides": 3,
+				"shapes": 4,
+				"color": "BFFFDB",
+				"colorTo": "BFFFDB88",
+				"tri": true,
+				"hollow": true,
+				"radius": 0,
+				"radiusTo": 5,
+				"triLength": 0,
+				"triLengthTo": 60,
+				"haloRadius": 0,
+				"haloRotation": 0,
+				"haloRotateSpeed": 4,
+				"layer": 110
+			}
+		]
+	},
+	"moveWhileCharging": false,
+	"chargeSound": "lasercharge2",
+	"shake": 1,
+	"inaccuracy": 1,
+	"recoil": 2,
+	"recoilTime": 28,
+	"shootType": {
+		"type": "BasicBulletType",
+		"damage": 46,
+		"status": "unmoving",
+		"statusDuration": 40,
+		"splashDamageRadius": 85,
+		"splashDamage": 68,
+		"ammoMultiplier": 1,
+		"sprite": "circle-bullet",
+		"shrinkY": 0,
+		"trailLength": 10,
+		"trailWidth": 4,
+		"trailColor": "BFFFDB",
+		"frontColor": "FFFFFF",
+		"backColor": "BFFFDB",
+		"width": 13,
+		"height": 13,
+		"hitSound": "plasmaboom",
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "WaveEffect",
+					"lifetime": 20,
+					"sizeFrom": 0,
+					"sizeTo": 85,
+					"strokeFrom": 3,
+					"strokeTo": 1,
+					"colorFrom": "25C9AB",
+					"colorTo": "BFFFDB00"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 8,
+					"sizeFrom": 7,
+					"sizeTo": 0,
+					"interp": "pow5Out",
+					"sizeInterp": "pow5In",
+					"length": 70,
+					"baseLength": 10,
+					"lifetime": 45,
+					"colorFrom": "BFFFDBd8",
+					"colorTo": "BFFFDBd0"
+				}
+			]
+		},
+		"despawnEffect": "bigShockwave",
+		"speed": 5,
+		"lifetime": 26,
+		"chargeEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "WaveEffect",
+					"lifetime": 50,
+					"sizeFrom": 60,
+					"sizeTo": 0,
+					"strokeFrom": 0,
+					"strokeTo": 2,
+					"colorFrom": "25C9AB",
+					"colorTo": "BFFFDB"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 8,
+					"sizeFrom": 0,
+					"sizeTo": 2,
+					"length": 80,
+					"baseLength": -80,
+					"lifetime": 45,
+					"colorFrom": "FFFFFF",
+					"colorTo": "BFFFDB"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 0,
+					"sizeTo": 6,
+					"length": 0,
+					"baseLength": -0,
+					"lifetime": 51,
+					"colorFrom": "FFFFFF",
+					"colorTo": "BFFFDB"
+				}
+			]
+		},
+		"fragBullets": 8,
+		"fragBullet": {
+			"trailEffect": "none",
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"particles": 3,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 22,
+				"baseLength": 0,
+				"lifetime": 20,
+				"colorFrom": "BFFFDB",
+				"colorTo": "BFFFDB"
+			},
+			"despawnEffect": "none",
+			"sprite": "circle-bullet",
+			"status": "干扰",
+			"statusDuration": 15,
+			"shrinkY": 0,
+			"trailLength": 2,
+			"trailWidth": 1.88,
+			"trailColor": "BFFFDB",
+			"frontColor": "BFFFDB",
+			"backColor": "BFFFDB",
+			"damage": 16,
+			"splashDamageRadius": 24,
+			"splashDamage": 22,
+			"speed": 6,
+			"lifetime": 8
+		}
+	},
+	"shootEffect": {
+		"type": "ParticleEffect",
+		"particles": 7,
+		"sizeFrom": 2,
+		"sizeTo": 0,
+		"interp": "pow5Out",
+		"sizeInterp": "pow5In",
+		"length": 33,
+		"baseLength": 0,
+		"lifetime": 55,
+		"colorFrom": "BFFFDB",
+		"colorTo": "BFFFDB",
+		"cone": 16
+	},
+	"smokeEffect": {
+		"type": "WaveEffect",
+		"lifetime": 20,
+		"sizeFrom": 0,
+		"sizeTo": 60,
+		"strokeFrom": 2,
+		"strokeTo": 0,
+		"colorFrom": "BFFFDB",
+		"colorTo": "BFFFDB88"
+	},
+	"consumes": {
+		"power": 6
+	},
+	"reload": 100,
+	"rotateSpeed": 8,
+	"range": 200,
+	"category": "turret",
+	"research": "先驱",
+	"requirements": [
+		"lead/90",
+		"硅钢/40"
+	]
+}

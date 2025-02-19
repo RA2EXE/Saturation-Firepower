@@ -1,0 +1,147 @@
+{
+	"type": "PowerTurret",
+	"name": "扬子鳄防御平台",
+	"unitSort": "strongest",
+	"buildVisibility": "sandboxOnly",
+	"health": 28000,
+	"armor": 33,
+	"size": 4,
+	"reload": 16,
+	"range": 476,
+	"fogRadiusMultiplier": 0.31,
+	"recoilTime": 16,
+	"recoil": 4,
+	"shootY": 14,
+	"insulated": true,
+	"absorbLasers": true,
+	"shoot": {
+		"type": "ShootAlternate",
+		"barrels": 2,
+		"shots": 2,
+		"spread": 13.5
+	},
+	"shootWarmupSpeed": 0.08,
+	"warmupMaintainTime": 300,
+	"minWarmup": 0.9,
+	"drawer": {
+		"type": "DrawTurret",
+		"basePrefix": "防御平台-",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"progress": "reload",
+				"suffix": "-前",
+				"under": true,
+				"moveX": 0,
+				"moveY": -1.25
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 8,
+				"suffix": "-管",
+				"moveX": 1,
+				"moveY": 2,
+				"moves":[{
+					"progress":"recoil",
+					"y": -2.5
+				}]
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"x": 8,
+				"suffix": "-后",
+				"moveX": 1,
+				"moveY": -3
+			}
+		]
+	},
+	"coolantMultiplier": 0.75,
+	"consumes": {
+		"coolant": {
+			"amount": 2,
+			"optional": true
+		}
+	},
+	"shootSound": "laser",
+	"shootEffect": {
+		"type": "ParticleEffect",
+		"particles": 7,
+		"sizeFrom": 9,
+		"sizeTo": 0,
+		"line": true,
+		"length": 55,
+		"baseLength": 0,
+		"lifetime": 15,
+		"colorFrom": "dedede",
+		"colorTo": "aaaaaa",
+		"cone": 60
+	},
+	"inaccuracy": 0,
+	"shake": 3,
+	"shootCone": 5,
+	"rotateSpeed": 3,
+	"shootType": {
+		"type": "BasicBulletType",
+		"ammoMultiplier": 1,
+		"knockback": 16,
+		"damage": 155,
+		"splashDamageRadius": 60,
+		"splashDamage": 155,
+		"lightningDamage": 50,
+		"lightning": 2,
+		"lightningLength": 7,
+		"status": "崩溃",
+		"statusDuration": 160,
+		"speed": 17,
+		"lifetime": 28,
+		"hitShake": 3,
+		"width": 14,
+		"height": 21,
+		"frontColor": "EEC591",
+		"backColor": "EEC591",
+		"trailLength": 32,
+		"trailWidth": 3,
+		"trailColor": "EEC591",
+		"shootEffect": "shootBig2",
+		"smokeEffect": {
+			"type": "ParticleEffect",
+			"particles": 7,
+			"sizeFrom": 3.85,
+			"sizeTo": 0,
+			"lifetime": 55,
+			"interp": "pow10Out",
+			"sizeInterp": "pow3In",
+			"baseLength": 0,
+			"length": 45,
+			"cone": 16,
+			"colorFrom": "EEC591A8",
+			"colorTo": "EEC59180"
+		},
+		"despawnEffect": "instBomb",
+		"hitSound": "explosionbig",
+		"hitSoundVolume": 0.6,
+		"hitEffect": {
+			"type": "ExplosionEffect",
+			"lifetime": 30,
+			"waveStroke": 8,
+			"waveLife": 15,
+			"waveRadBase": 0,
+			"waveColor": "EEC591",
+			"waveRad": 66,
+			"smokes": 8,
+			"smokeColor": "EEC59188",
+			"sparkColor": "EEC591",
+			"sparks": 8,
+			"sparkRad": 70,
+			"sparkStroke": 2.6,
+			"sparkLen": 26
+		}
+	},
+	//"requirements": ["镄/14000","铬/14000","裂位能/20000","泰勒合金/8000"],
+	"breakable":false,
+	"rebuildable":false,
+	"category": "turret"
+}

@@ -1,0 +1,142 @@
+{
+	"health": 840,
+	"details": "升级能量供应系统，可以将过剩能量储存、释放",
+	"range": 80,
+	"weapons": [
+		{
+			"name": "玄武1",
+			"type": "PointDefenseWeapon",
+			"x": 0,
+			"y": -1,
+			"mirror": false,
+			"rotate": true,
+			"recoil": 0,
+			"rotateSpeed": 9,
+			"reload": 9,
+			"targetInterval": 10,
+			"targetSwitchInterval": 10,
+			"bullet": {
+				"shootEffect": "sparkShoot",
+				"hitEffect": "pointHit",
+				"maxRange": 110,
+				"damage": 17
+			}
+		},
+		{
+			"name": "电鳗1",
+			"x": 4.5,
+			"y": 6.5,
+			"reload": 5,
+			"shootY": 2,
+			"rotate": true,
+			"rotateSpeed": 6,
+			"inaccuracy": 10,
+			"alternate": true,
+			"top": false,
+			"shootSound": "flame",
+			"ejectEffect": "none",
+			"cooldownTime": 120,
+			"bullet": {
+				"type": "BulletType",
+				"collidesTeam": true,
+				"healPercent": 1.88,
+				"speed": 5,
+				"lifetime": 16,
+				"damage": 23,
+				"collidesAir": false,
+				"pierce": true,
+				"shootEffect": {
+					"type": "ParticleEffect",
+					"particles": 10,
+					"lifetime": 10,
+					"sizeFrom": 2,
+					"sizeTo": 0,
+					"region": "饱和火力-菱形",
+					"interp": "pow5Out",
+					"sizeInterp": "pow10In",
+					"length": 70,
+					"baseLength": 0,
+					"colorFrom": "FFFFFF",
+					"colorTo": "97FFA8AA",
+					"cone": 10
+				},
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 5,
+					"line": true,
+					"strokeFrom": 1,
+					"strokeTo": 0,
+					"lenFrom": 16,
+					"lenTo": 8,
+					"length": 70,
+					"baseLength": 0,
+					"lifetime": 12,
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8",
+					"cone": 10
+				},
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"region": "饱和火力-菱形",
+					"lifetime": 10,
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"colorFrom": "97FFA8",
+					"colorTo": "97FFA8"
+				},
+				"despawnEffect": "none",
+				"statusDuration": 250,
+				"status": "burning"
+			}
+		},
+		{
+			"name": "电鳗2",
+			"reload": 600,
+			"x": 0,
+			"mirror": false,
+			"shootCone": 360,
+			"rotate": false,
+			"controllable": false,
+			"autoTarget": true,
+			"inaccuracy": 360,
+			"shootY": 0,
+			"shoot": {
+				"type": "ShootPattern",
+				"firstShotDelay": 28,
+				"shots": 12
+			},
+			"shootStatusDuration": 28,
+			"shootStatus": "unmoving",
+			"chargeSound": "lasercharge2",
+			"shake": 2.2,
+			"shootSound": "spark",
+			"bullet": {
+				"type": "LightningBulletType",
+				"damage": 26,
+				"chargeEffect": {
+					"type": "WaveEffect",
+					"lifetime": 25,
+					"sizeFrom": 26,
+					"sizeTo": 0,
+					"strokeFrom": 0,
+					"strokeTo": 8,
+					"colorFrom": "7CF389",
+					"colorTo": "7CF389"
+				},
+				"lightningColor": "97FFA8",
+				"hitColor": "97FFA8",
+				"lightningLength": 8,
+				"lightningLengthRand": 18,
+				"shootEffect": "shootHeal",
+				"smokeEffect": "none",
+				"healPercent": 2,
+				"collidesTeam": true,
+				"hitEffect": "hitLancer",
+				"despawnEffect": "none",
+				"status": "shocked",
+				"statusDuration": 10
+			}
+		}
+	]
+}

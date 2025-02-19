@@ -1,0 +1,163 @@
+{
+	"type": "flying",
+	"name": "霹雳",
+	"accel": 0.018,
+	"drag": 0.01,
+	"speed": 1.5,
+	"rotateSpeed": 2.1,
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 58000
+	},
+	"ammoCapacity": 110,
+	"hitSize": 70,
+	"flying": true,
+	"health": 38000,
+	"armor": 62,
+	"lightRadius": 130,
+	"lightColor": "FF5B5B",
+	"engineOffset": 14,
+	"engineSize": 4.5,
+	"engines": [
+		{
+			"x": 0,
+			"y": 0,
+			"radius": 0,
+			"rotation": 0
+		}
+	],
+	"weapons": [
+		{
+			"name": "雷炮1",
+			"x": 12,
+			"reload": 20,
+			"shootStatus": "shielded",
+			"shootStatusDuration": 50,
+			"inaccuracy": 10,
+			"rotate": false,
+			"shootSound": "laser",
+			"shootY": 6,
+			"bullet": {
+				"type": "BasicBulletType",
+				"speed": 11,
+				"lifetime": 33,
+				"width": 14,
+				"height": 18,
+				"frontColor": "FF5B5B",
+				"backColor": "FF5B5B",
+				"trailLength": 11,
+				"trailWidth": 3,
+				"trailColor": "FF5B5BA0",
+				"hitShake": 4,
+				"trailInterval": 1,
+				"trailRotation": true,
+				"trailEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"interp": "pow10Out",
+					"line": true,
+					"lenFrom": 18,
+					"lenTo": 0,
+					"strokeFrom": 1.5,
+					"strokeTo": 1,
+					"length": -45,
+					"baseLength": 0,
+					"lifetime": 40,
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B",
+					"cone": 13
+				},
+				"shootEffect": "shootBig2",
+				"smokeEffect": {
+					"type": "ParticleEffect",
+					"particles": 9,
+					"interp": "pow5Out",
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 45,
+					"baseLength": 0,
+					"lifetime": 30,
+					"colorFrom": "FF5B5B",
+					"colorTo": "FF5B5B",
+					"cone": 13
+				},
+				"hitSound": "DBZ1",
+				"hitSoundPitch": 4,
+				"hitSoundVolume": 0.5,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ExplosionEffect",
+							"lifetime": 28,
+							"waveStroke": 6,
+							"waveLife": 16,
+							"waveRadBase": 3,
+							"waveColor": "FF5B5B",
+							"waveRad": 50,
+							"smokes": 0,
+							"sparkColor": "FF5B5B",
+							"sparks": 10,
+							"sparkRad": 50,
+							"sparkStroke": 1.5,
+							"sparkLen": 4
+						},
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"sizeFrom": 5,
+							"sizeTo": 0,
+							"length": 38,
+							"baseLength": 8,
+							"interp": "circleOut",
+							"sizeInterp": "circleOut",
+							"lifetime": 28,
+							"colorFrom": "FF5B5B",
+							"colorTo": "E3E3E3"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"damage": 17,
+				"splashDamageRadius": 45,
+				"splashDamage": 65,
+				"status": "碎解",
+				"lightningColor": "FF5B5B",
+				"lightningDamage": 36,
+				"lightning": 2,
+				"lightningLength": 7,
+				"lightningLengthRand": 9,
+				"fragBullets": 6,
+				"fragRandomSpread": 0,
+				"fragSpread": 12,
+				"fragBullet": {
+					"type": "LightningBulletType",
+					"status": "unmoving",
+					"statusDuration": 20,
+					"hitColor": "FF5B5B",
+					"hitEffect": "hitLancer",
+					"despawnEffect": "none",
+					"lightningColor": "FF5B5B",
+					"hitSound": "spark",
+					"lightningDamage": 72,
+					"lightningLength": 19,
+					"lightningLengthRand": 7,
+					"lightningType": {
+						"instantDisappear": true,
+						"lightningDamage": 46,
+						"lightningLength": 4,
+						"lightningLengthRand": 2,
+						"collidesTeam": true,
+						"hittable": false,
+						"hitColor": "FF5B5B",
+						"hitEffect": "hitLancer",
+						"despawnEffect": "none",
+						"lightningColor": "FF5B5B",
+						"hitSound": "spark",
+						"status": "shocked"
+					}
+				}
+			}
+		}
+	]
+}

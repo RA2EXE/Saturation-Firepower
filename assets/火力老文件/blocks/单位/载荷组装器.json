@@ -1,0 +1,34 @@
+{
+	"type": "Constructor",
+	"name": "载荷组装器",
+	"health": 2000,
+	"canOverdrive": false,
+	"minBlockSize": 4,
+	"maxBlockSize": 4,
+	"size": 6,
+	"buildSpeed": 0.4,
+	"liquidCapacity": 30,
+	"filter":["裂位收容块","装甲收容块"],
+	"consumes": {
+		"power": 12,
+		"liquid": "cryofluid/0.8"
+	},
+	"requirements": [
+		"silicon/750",
+		"phase-fabric/400",
+		"泰勒合金/1000",
+		"镄/800",
+		"纳米核/500",
+		"二级协议/3"
+	],
+	"category": "units",
+	"research": {
+		"parent": "特种工厂",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "火天路"
+			}
+		]
+	}
+}

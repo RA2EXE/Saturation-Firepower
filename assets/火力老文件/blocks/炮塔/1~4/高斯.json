@@ -1,0 +1,52 @@
+{
+    "type": "PowerTurret",
+    "name": "高斯线圈",
+    "health": 900,
+    "reload": 6,
+    "shootCone": 360,
+    "rotateSpeed": 0,
+    "consumes": {
+        "power": 6
+    },
+    "hasLiquids": false,
+    "targetAir": true,
+    "targetGround": true,
+    "range": 120,
+    "shootEffect": {
+        "type": "ParticleEffect",
+        "particles": 4,
+        "length": 45,
+        "baseLength": 0,
+        "lifetime": 13,
+        "line": true,
+        "lenFrom": 8,
+        "lenTo": 18,
+        "strokeFrom": 2,
+        "strokeTo": 0,
+        "colorFrom": "FFFFFF",
+        "colorTo": "FFFFFF"
+    },
+    "recoil": 0,
+    "size": 2,
+    "shoot": {
+        "type": "ShootSpread",
+        "shots": 4
+    },
+    "inaccuracy": 360,
+    "shootSound": "spark",
+    "shootY": 0,
+    "shootType": {
+        "type": "LightningBulletType",
+        "damage": 12,
+        "lightningLength": 20,
+        "lightningLengthRand": 8,
+        "ammoMultiplier": 1,
+        "collidesAir": true
+    },
+    "requirements": [
+        "copper/150",
+        "lead/80"
+    ],
+    "category": "turret",
+    "research": "arc"
+}

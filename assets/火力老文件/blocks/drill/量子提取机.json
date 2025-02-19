@@ -1,0 +1,201 @@
+{
+	"name": "量子提取机",
+	"size": 5,
+	"health": 2000,
+	"armor": 16,
+	"type": "BurstDrill",
+	"tier": 20,
+	"drillTime": 5,
+	//"getDrillTime":"铬/0.25",
+	"canOverdrive": false,
+	"arrowOffset": 0,
+	"arrowSpacing": 0,
+	"arrows": 0,
+	"drawMineItem": true,
+	"displayFlow": true,
+	"placeableLiquid": true,
+	"squareSprite": false,
+	"drillEffect": {
+		"type": "ParticleEffect",
+		"particles": 1,
+		"interp": "fastSlow",
+		"sizeFrom": 1,
+		"sizeTo": 3,
+		"length": 25,
+		"baseLength": 30,
+		"lifetime": 300,
+		"colorFrom": "EEC591",
+		"colorTo": "FFFFFF00"
+	},
+	"destroyBullet": {
+		"type": "BasicBulletType",
+		"collides": false,
+		"hittable": false,
+		"absorbable": false,
+		"hitEffect": "none",
+		"despawnEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 35,
+					"sizeFrom": 20,
+					"sizeTo": 0,
+					"length": 185,
+					"baseLength": 29,
+					"lifetime": 25,
+					"colorFrom": "FEEBB3A0",
+					"colorTo": "FFFFFF"
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 60,
+					"sizeFrom": 5,
+					"sizeTo": 170,
+					"strokeFrom": 12,
+					"strokeTo": 0,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FFFFFF"
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 10,
+					"sizeFrom": 5,
+					"sizeTo": 160,
+					"strokeFrom": 9,
+					"strokeTo": 0,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				}
+			]
+		},
+		"hitSound": "explosionbig",
+		"width": 225,
+		"height": 225,
+		"backColor": "EEC591",
+		"frontColor": "EEC591",
+		"sprite": "饱和火力-海胆",
+		"spin": 0.88,
+		"shrinkY": 0.02,
+		"shrinkX": 0.02,
+		"speed": 0,
+		"lifetime": 230,
+		"splashDamageRadius": 170,
+		"splashDamage": 600,
+		"lightningDamage": 83,
+		"lightning": 8,
+		"lightningLength": 26,
+		"hitShake": 10,
+		"fragRandomSpread": 0,
+		"fragBullets": 10,
+		"fragSpread": 36,
+		"fragBullet": {
+			"type": "ShrapnelBulletType",
+			"pierceArmor": true,
+			"serrationLenScl": 8,
+			"serrationSpaceOffset": 60,
+			"serrationFadeOffset": 0,
+			"serrations": 8,
+			"serrationWidth": 8,
+			"width": 16,
+			"length": 160,
+			"fromColor": "EEC591",
+			"toColor": "EEC591",
+			"despawnEffect": "bigShockwave",
+			"lifetime": 25,
+			"damage": 260
+		},
+		"bulletInterval": 1,
+		"intervalBullets": 3,
+		"intervalRandomSpread": 360,
+		"intervalSpread": 22,
+		"intervalAngle": 360,
+		"intervalBullet": {
+			"damage": 45,
+			"weaveMag": 4,
+			"weaveScale": 4,
+			"absorbable": false,
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 18,
+						"sizeFrom": 9,
+						"sizeTo": 0,
+						"length": 65,
+						"baseLength": 0,
+						"lifetime": 25,
+						"colorFrom": "FEEBB3A0",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 0,
+						"sizeTo": 60,
+						"strokeFrom": 12,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FFFFFF"
+					}
+				]
+			},
+			"hitSound": "explosion",
+			"hitShake": 2,
+			"sprite": "circle-bullet",
+			"width": 6,
+			"height": 6,
+			"speed": 30,
+			"lifetime": 3,
+			"splashDamageRadius": 60,
+			"splashDamage": 135,
+			"fragBullets": 1,
+			"fragRandomSpread": 0,
+			"fragBullet": {
+				"type": "ShrapnelBulletType",
+				"pierceArmor": true,
+				"serrationLenScl": 7,
+				"serrationSpaceOffset": 20,
+				"serrationFadeOffset": 0,
+				"serrations": 6,
+				"serrationWidth": 6,
+				"width": 16,
+				"length": 76,
+				"fromColor": "EEC591",
+				"toColor": "EEC591",
+				"despawnEffect": "none",
+				"lifetime": 15,
+				"damage": 60
+			}
+		}
+	},
+	"liquidCapacity": 60,
+	"consumes": {
+		"power": 20,
+		"liquid": {
+			"liquid": "cryofluid",
+			"amount": 0.6
+		}
+	},
+	"itemCapacity": 1000,
+	"hasItems": true,
+	"hasLiquids": true,
+	"requirements": [
+		"硅钢/800",
+		"莱普合金/500",
+		"裂位能/400",
+		"三级协议/3"
+	],
+	"category": "production",
+	"research": {
+		"parent": "战研",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "星稀山脉"
+			}
+		]
+	}
+}

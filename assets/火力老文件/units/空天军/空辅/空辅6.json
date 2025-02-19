@@ -1,0 +1,370 @@
+{
+	"type": "payload",
+	"payloadCapacity": 5184,
+	"name": "广寒",
+	"controller": "FlyingFollowAI",
+	"speed": 0.81,
+	"drag": 0.03,
+	"accel": 0.02,
+	"rotateSpeed": 1.2,
+	"immunities": [
+		"burning",
+		"electrified",
+		"freezing",
+		"melting",
+		"muddy",
+		"sapped",
+		"shocked",
+		"slow",
+		"unmoving",
+		"拆解",
+		"干扰",
+		"修复",
+		"抢修"
+	],
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 15000
+	},
+	"hitSize": 98,
+	"buildSpeed": 9,
+	"buildBeamOffset": 11,
+	"flying": true,
+	"faceTarget": false,
+	"health": 160000,
+	"armor": 38,
+	"engineOffset": 0,
+	"engineSize": 0,
+	"researchCostMultiplier": 0,
+	"research": {
+		"parent": "oct",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "第五战区"
+			}
+		]
+	},
+	"lowAltitude": true,
+	"engines": [
+		{
+			"x": -32,
+			"y": -32,
+			"radius": 10,
+			"rotation": -135
+		},
+		{
+			"x": 32,
+			"y": -32,
+			"radius": 10,
+			"rotation": -45
+		},
+		{
+			"x": 32,
+			"y": 32,
+			"radius": 10,
+			"rotation": 45
+		},
+		{
+			"x": -32,
+			"y": 32,
+			"radius": 10,
+			"rotation": 135
+		}
+	],
+	"abilities": [
+		{
+			"type": "StatusFieldAbility",
+			"duration": 70,
+			"reload": 60,
+			"range": 240,
+			"applyEffect": "none",
+			"activeEffect": {
+				"type": "WaveEffect",
+				"lifetime": 10,
+				"sizeFrom": 240,
+				"sizeTo": 240,
+				"strokeFrom": 8,
+				"strokeTo": 0,
+				"colorFrom": "97FFA8",
+				"colorTo": "97FFA800"
+			},
+			"effect": "抢修"
+		},
+		{
+			"type": "EnergyFieldAbility",
+			"damage": 236,
+			"reload": 120,
+			"range": 310,
+			"healPercent": 5,
+			"effectRadius": 14,
+			"sectors": 6,
+			"sectorRad": 0.11,
+			"sameTypeHealMult": 0.3,
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeFrom": 16,
+				"sizeTo": 35,
+				"baseLength": 0,
+				"lifetime": 15,
+				"colorFrom": "76D081",
+				"colorTo": "76D08100"
+			},
+			"damageEffect": "chainLightning",
+			"status": "干扰",
+			"shootSound": "shotgun",
+			"statusDuration": 360,
+			"x": 0,
+			"y": 0,
+			"maxTargets": 18
+		},
+		{
+			"type": "ShieldRegenFieldAbility",
+			"amount": 180,
+			"max": 1800,
+			"reload": 70,
+			"range": 200,
+			"applyEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 80,
+						"sizeTo": 80,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 10,
+						"colorFrom": "76D081",
+						"colorTo": "76D08100"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 22,
+						"sizeFrom": 80,
+						"sizeTo": 0,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"colorFrom": "76D081",
+						"colorTo": "76D081"
+					}
+				]
+			},
+			"activeEffect": {
+				"type": "WaveEffect",
+				"interp":"circleOut",
+				"lifetime": 35,
+				"sizeFrom": 16,
+				"sizeTo": 240,
+				"strokeFrom": 15,
+				"strokeTo": 0,
+				"colorFrom": "76D081",
+				"colorTo": "76D081"
+			}
+		}
+	],
+	"weapons": [
+		{
+			"name": "广寒1",
+			"reload": 65,
+			"x": 0,
+			"y": 0,
+			"shootY": 0,
+			"rotate": true,
+			"rotateSpeed": 20,
+			"top": false,
+			"recoil": 0,
+			"inaccuracy": 1,
+			"xRand": 8,
+			"mirror": false,
+			"shootSound": "laser",
+			"shake": 6,
+			"shoot": {
+				"shots": 5,
+				"shotDelay": 3
+			},
+			"bullet": {
+				"type": "LaserBulletType",
+				"healPercent": 6,
+				"damage": 100,
+				"buildingDamageMultiplier": 0.67,
+				"status": "干扰",
+				"statusDuration": 126,
+				"collidesTeam": true,
+				"hitEffect": {
+					"type": "ParticleEffect",
+					"particles": 3,
+					"sizeFrom": 5,
+					"sizeTo": 0,
+					"length": 10,
+					"baseLength": 0,
+					"interp": "pow5Out",
+					"sizeInterp": "pow5In",
+					"lifetime": 35,
+					"colorFrom": "76D081",
+					"colorTo": "76D081"
+				},
+				"shootEffect": "bigShockwave",
+				"colors": [
+					"7CF38990",
+					"97FFA880",
+					"FFFFFF"
+				],
+				"width": 22,
+				"length": 310
+			}
+		},
+		{
+			"name": "广寒4",
+			"reload": 180,
+			"x": 0,
+			"y": 0,
+			"rotate": false,
+			"top": false,
+			"recoil": 0,
+			"inaccuracy": 360,
+			"mirror": false,
+			"shootSound": "plasmadrop",
+			"shootCone": 360,
+			"velocityRnd": 0.9,
+			"shoot": {
+				"shotDelay": 1,
+				"shots": 30
+			},
+			"bullet": {
+				"type": "BasicBulletType",
+				"reflectable": false,
+				"healPercent": 4,
+				"damage": 88,
+				"width": 12,
+				"height": 12,
+				"splashDamage": 65,
+				"splashDamageRadius": 100,
+				"homingDelay": 70,
+				"homingPower": 1,
+				"homingRange": 100,
+				"status": "拆解",
+				"statusDuration": 60,
+				"collidesTeam": false,
+				"backColor": "97FFA8",
+				"frontColor": "FFFFFF",
+				"mixColorTo": "FFFFFF",
+				"hitSound": "plasmaboom",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 8,
+							"sizeFrom": 6,
+							"sizeTo": 0,
+							"length": 80,
+							"baseLength": 8,
+							"lifetime": 30,
+							"colorFrom": "97FFA888",
+							"colorTo": "FFFFFF"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 25,
+							"sizeFrom": 8,
+							"sizeTo": 100,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "97FFA8",
+							"colorTo": "FFFFFF"
+						}
+					]
+				},
+				"despawnEffect": "none",
+				"shootEffect": "none",
+				"sprite": "circle-bullet",
+				"hitShake": 8,
+				"shrinkX": 0,
+				"shrinkY": 0,
+				"drag": 0.03,
+				"lifetime": 100,
+				"speed": 8,
+				"fragRandomSpread": 10,
+				"fragBullets": 1,
+				"fragBullet": {
+					"type": "LaserBulletType",
+					"healPercent": 1.5,
+					"damage": 35,
+					"status": "shocked",
+					"collidesTeam": true,
+					"hitEffect": "none",
+					"despawnEffect": "none",
+					"colors": [
+						"7CF38990",
+						"97FFA8A8",
+						"97FFA8",
+						"FFFFFF"
+					],
+					"width": 12,
+					"length": 96,
+					"lifetime": 20
+				}
+			}
+		},
+		{
+			"name": "广寒2",
+			"type": "RepairBeamWeapon",
+			"x": 40,
+			"y": -8,
+			"shootY": 6,
+			"beamWidth": 1,
+			"mirror": true,
+			"repairSpeed": 5,
+			"bullet": {
+				"maxRange": 200
+			}
+		},
+		{
+			"name": "广寒3",
+			"type": "RepairBeamWeapon",
+			"x": 0,
+			"y": -32,
+			"shootY": 6,
+			"beamWidth": 1.4,
+			"mirror": false,
+			"repairSpeed": 8,
+			"bullet": {
+				"maxRange": 230
+			}
+		}
+	],
+	"parts": [
+		{
+			"type": "ShapePart",
+			"stroke": 2,
+			"strokeTo": 2,
+			"color": "97FFA8AF",
+			"circle": true,
+			"hollow": true,
+			"radius": 240,
+			"radiusTo": 240,
+			"layer": 110
+		},
+		{
+			"type": "HaloPart",
+			"rotateSpeed": 0,
+			"sides": 3,
+			"shapes": 6,
+			"color": "97FFA890",
+			"tri": true,
+			"hollow": true,
+			"stroke": 0,
+			"strokeTo": 0.1,
+			"radius": 480,
+			"radiusTo": 480,
+			"triLength": 16,
+			"triLengthTo": 16,
+			"haloRadius": 8,
+			"haloRotation": 0,
+			"haloRotateSpeed": -0.4,
+			"layer": 80
+		}
+	]
+}

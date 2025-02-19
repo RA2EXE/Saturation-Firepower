@@ -1,0 +1,89 @@
+{
+	"type": "missile",
+	"template": "MissileUnitType",
+	"name": "余晖-导弹",
+	"speed": 5,
+	"lifetime": 200,
+	"rotateSpeed": 2.2,
+	"loopSoundVolume": 0.03,
+	"hidden": true,
+	"missileAccelTime": 30,
+	"homingDelay": 30,
+	"hitSize": 18,
+	"health": 800,
+	"fogRadius": 8,
+	"engineColor": "FFA05C",
+	"trailColor": "FFA05C",
+	"trailLength": 35,
+	"engineLayer": 110,
+	"engineOffset": 15,
+	"engineSize": 4,
+	"maxRange": 30,
+	"abilities": [
+		{
+			"type": "MoveEffectAbility",
+			"effect": {
+				"type": "ParticleEffect",
+				"particles": 3,
+				"sizeFrom": 8,
+				"sizeTo": 0,
+				"interp":"pow5Out",
+				"sizeInterp":"pow10In",
+				"length": 25,
+				"baseLength": 2,
+				"lifetime": 93,
+				"colorFrom": "FFA05C88",
+				"colorTo": "FFA05C48",
+				"cone": 30
+			},
+			"interval": 2,
+			"rotateEffect": true,
+			"y": -16
+		}
+	],
+	"weapons": [
+		{
+			"name": "自爆",
+			"x": 0,
+			"reload": 60,
+			"mirror": false,
+			"rotate": true,
+			"shake": 10,
+			"shootSound": "none",
+			"shootOnDeath": true,
+			"shootCone": 360,
+			"bullet": {
+				"collides":false,
+				"instantDisappear": true,
+				"ammoMultiplier": 1,
+				"hitSound": "titanExplosion",
+				"killShooter": true,
+				"splashDamageRadius": 66,
+				"splashDamage": 700,
+				"status": "blasted",
+				"hitShake": 8,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"despawnEffect": "none",
+				"hitColor":"FFA05C",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						"titanExplosion",
+						"titanSmoke",
+						{
+							"type": "WaveEffect",
+							"lifetime": 60,
+							"sizeFrom": 0,
+							"sizeTo": 70,
+							"strokeFrom": 10,
+							"strokeTo": 0,
+							"colorFrom": "FFA05C",
+							"colorTo": "FFA05C"
+						}
+					]
+				}
+			}
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"details": "专业反建筑攻顶燃烧弹",
+	"speed": 3,
+	"targetAir": false,
+	"hitSize": 12,
+	"health": 450,
+	"ammoType": "pyratite",
+	"ammoCapacity": 80,
+	"weapons": [
+		{
+			"name": "天垠1",
+			"minShootVelocity": 1.5,
+			"reload": 85,
+			"shoot": {
+				"shots": 7,
+				"shotDelay": 4
+			},
+			"x": 0,
+			"y": 0,
+			"ignoreRotation": true,
+			"rotate": true,
+			"shootCone": 120,
+			"inaccuracy": 15,
+			"mirror": false,
+			"shootSound": "none",
+			"bullet": {
+				"type": "BombBulletType",
+				"splashDamage": 35,
+				"splashDamageRadius": 30,
+				"status": "blasted",
+				"buildingDamageMultiplier": 2,
+				"incendAmount": 1,
+				"incendSpread": 16,
+				"incendChance": 0.005,
+				"lifetime": 30,
+				"width": 9,
+				"height": 15,
+				"shootEffect": "none",
+				"smokeEffect": "none",
+				"hitEffect": "flakExplosion",
+				"despawnEffect": "flakExplosion"
+			}
+		}
+	]
+}

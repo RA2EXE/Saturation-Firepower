@@ -1,0 +1,51 @@
+{
+	"range": 216,
+	"reload": 240,
+	"shootType": {
+		"type": "ContinuousLaserBulletType",
+		"status": "melting",
+		"statusDuration": 120,
+		"incendChance": 0.6,
+		"incendSpread": 7,
+		"incendAmount": 2,
+		"ammoMultiplier": 1,
+		"pierceArmor": true,
+		"hitSize": 7.5,
+		"length": 216,
+		"damage": 96,
+		"bulletInterval": 8,
+		"intervalBullets": 1,
+		"intervalRandomSpread": 0,
+		"intervalBullet": {
+			"type": "LaserBulletType",
+			"hitEffect": "hitMeltdown",
+			"despawnEffect": "none",
+			"shootEffect": "none",
+			"damage": 33,
+			"lightningSpacing": 21.6,
+			"lightningDelay": 1,
+			"lightningLength": 4,
+			"lightningLengthRand": 2,
+			"lightningDamage": 33,
+			"lightningColor": "D86E56",
+			"pierceCap": 6,
+			"pierceArmor": true,
+			"knockback": 2,
+			"sideAngle": 20,
+			"sideWidth": 1,
+			"sideLength": 35,
+			"smokeEffect": "bigShockwave",
+			"colors": [
+				"D86E56FF",
+				"FFA05CFF",
+				"FFFFFF"
+			],
+			"width": 16,
+			"length": 216,
+			"makeFire": true,
+			"status": "阳电",
+			"statusDuration": 12,
+			"lifetime": 10
+		}
+	}
+}

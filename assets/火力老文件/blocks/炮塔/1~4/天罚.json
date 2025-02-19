@@ -1,0 +1,28 @@
+{
+	"type": "TractorBeamTurret",
+	"name": "天罚",
+	"health": 3300,
+	"size": 3,
+	"rotateSpeed": 7,
+	"range": 250,
+	"scaledForce": 0,
+	"force": 0,
+	"targetGround": true,
+	"targetAir": true,
+	"hasPower": true,
+	"damage": 38.1,
+	"status": "干扰",
+	"statusDuration": 60,
+	"consumes": {
+		"power": 15
+	},
+	"requirements": [
+		"titanium/300",
+		"silicon/350",
+		"plastanium/260",
+		"泰勒合金/120",
+		"二级协议/0"
+	],
+	"category": "turret",
+	"research": "parallax"
+}

@@ -1,0 +1,117 @@
+{
+	"type": "PowerTurret",
+	"name": "漫游",
+	"targetAir": true,
+	"targetGround": true,
+	"health": 1450,
+	"size": 3,
+	"canOverdrive": false,
+	"shootSound": "laser",
+	"shake": 2.5,
+	"inaccuracy": 3,
+	"recoil": 3,
+	"xRand": 2,
+	"recoilTime": 20,
+	"heatColor": "FF4040",
+	"shootEffect": {
+		"type": "ParticleEffect",
+		"particles": 7,
+		"sizeFrom": 3,
+		"sizeTo": 0,
+		"length": 40,
+		"baseLength": 0,
+		"lifetime": 30,
+		"colorFrom": "FEEBB3",
+		"colorTo": "FFFFFF",
+		"cone": 50
+	},
+	"smokeEffect": "bigShockwave",
+	"shootType": {
+		"height": 35,
+		"width": 6,
+		"damage": 100,
+		"speed": 10,
+		"lifetime": 35,
+		"splashDamageRadius": 30,
+		"splashDamage": 135,
+		"statusDuration": 60,
+		"status": "崩溃",
+		"ammoMultiplier": 1,
+		"buildingDamageMultiplier": 3,
+		"frontColor": "FFFFFF",
+		"backColor": "FEEBB3",
+		"trailLength": 16,
+		"trailWidth": 1.2,
+		"trailColor": "FEEBB3",
+		"hitSound": "plasmaboom",
+		"despawnEffect": "none",
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 5,
+					"sizeFrom": 9,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 48,
+					"lifetime": 35,
+					"colorFrom": "FEEBB380",
+					"colorTo": "FEEBB300"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 12,
+					"line": true,
+					"strokeFrom": 3,
+					"strokeTo": 0,
+					"lenFrom": 15,
+					"lenTo": 0,
+					"length": 53,
+					"baseLength": 0,
+					"lifetime": 15,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				},
+				{
+					"type": "WaveEffect",
+					"lifetime": 25,
+					"sizeFrom": 0,
+					"sizeTo": 44,
+					"strokeFrom": 3,
+					"strokeTo": 0,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				}
+			]
+		}
+	},
+	"consumes": {
+		"power": 15,
+		"coolant": {
+			"amount": 0.3,
+			"optional": true
+		}
+	},
+	"reload": 20,
+	"rotateSpeed": 6,
+	"range": 360,
+	"category": "turret",
+	"research": {
+		"parent": "天际",
+		"objectives": [
+			{
+				"type": "SectorComplete",
+				"preset": "nuclearComplex"
+			}
+		]
+	},
+	"researchCostMultiplier": 0.4,
+	"requirements": [
+		"metaglass/70",
+		"silicon/200",
+		"硅钢/180",
+		"surge-alloy/70",
+		"二级协议/1"
+	]
+}

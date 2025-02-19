@@ -1,0 +1,118 @@
+{
+	"details": "装载多弹头EMP航空炸弹",
+	"health": 20000,
+	"speed": 1.6,
+	"rotateSpeed": 2,
+	"accel": 0.072,
+	"drag": 0.017,
+	"lowAltitude": false,
+	"flying": true,
+	"circleTarget": true,
+	"range": 150,
+	"targetAir": false,
+	"ammoType": {
+		"type": "PowerAmmoType",
+		"totalPower": 5000
+	},
+	"ammoCapacity": 30,
+	"weapons": [
+		{
+			"name": "雷霆1",
+			"rotate": true,
+			"mirror": false,
+			"reload": 160,
+			"x": 0,
+			"shoot": {
+				"shots": 3,
+				"shotDelay": 25
+			},
+			"minShootVelocity": 0.04,
+			"ejectEffect": "none",
+			"soundPitchMin": 1,
+			"shootSound": "plasmadrop",
+			"ignoreRotation": true,
+			"shootCone": 300,
+			"bullet": {
+				"sprite": "large-bomb",
+				"width": 50,
+				"height": 50,
+				"maxRange": 50,
+				"backColor": "97FFA8",
+				"frontColor": "FFFFFF",
+				"mixColorTo": "FFFFFF",
+				"hitSound": "plasmaboom",
+				"hitShake": 8,
+				"collidesAir": false,
+				"lifetime": 90,
+				"absorbable": false,
+				"despawnEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 19,
+							"sizeFrom": 9,
+							"sizeTo": 0,
+							"length": 80,
+							"baseLength": 8,
+							"lifetime": 30,
+							"colorFrom": "97FFA8",
+							"colorTo": "FFFFFF"
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 25,
+							"sizeFrom": 8,
+							"sizeTo": 130,
+							"strokeFrom": 6,
+							"strokeTo": 0,
+							"colorFrom": "97FFA8",
+							"colorTo": "FFFFFF"
+						}
+					]
+				},
+				"hitEffect": "massiveExplosion",
+				"keepVelocity": false,
+				"spin": 6,
+				"shrinkX": 0.7,
+				"shrinkY": 0.7,
+				"speed": 0,
+				"collides": false,
+				"healPercent": 15,
+				"lightningColor": "97FFA8",
+				"lightningDamage": 18,
+				"lightning": 3,
+				"lightningLength": 16,
+				"status": "electrified",
+				"statusDuration": 120,
+				"splashDamage": 110,
+				"splashDamageRadius": 120,
+				"fragBullets": 3,
+				"fragLifeMin": 0.7,
+				"fragBullet": {
+					"sprite": "circle-bullet",
+					"status": "拆解",
+					"statusDuration": 60,
+					"shrinkY": 0,
+					"hitShake": 3,
+					"absorbable": false,
+					"collides": false,
+					"width": 8,
+					"height": 8,
+					"speed": 16,
+					"lifetime": 20,
+					"drag": 0.2,
+					"healPercent": 5,
+					"backColor": "97FFA8",
+					"frontColor": "FFFFFF",
+					"mixColorTo": "FFFFFF",
+					"hitSound": "plasmaboom",
+					"despawnEffect": "massiveExplosion",
+					"hitEffect": "greenBomb",
+					"splashDamage": 72,
+					"splashDamageRadius": 80
+				}
+			}
+		}
+	]
+}

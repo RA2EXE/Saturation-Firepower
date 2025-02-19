@@ -1,0 +1,203 @@
+{
+	"type": "PowerTurret",
+	"name": "光阴",
+	"fogRadiusMultiplier": 0.25,
+	"targetAir": true,
+	"targetGround": true,
+	"armor": 6,
+	"health": 5350,
+	"size": 6,
+	"shake": 5,
+	"inaccuracy": 0,
+	"recoil": 6,
+	"cooldownTime": 120,
+	"liquidCapacity": 60,
+	"canOverdrive": false,
+	"recoilTime": 100,
+	"reload": 82,
+	"rotateSpeed": 2,
+	"range": 672,
+	"shoot": {
+		"shots": 6,
+		"shotDelay": 2,
+		"type": "ShootAlternate",
+		"barrels": 2,
+		"spread": 16
+	},
+	"coolantMultiplier": 0.92,
+	"shootSound": "laser",
+	"shootEffect": {
+		"type": "ParticleEffect",
+		"particles": 5,
+		"sizeFrom": 4,
+		"sizeTo": 0,
+		"length": 24,
+		"baseLength": 0,
+		"lifetime": 15,
+		"colorFrom": "FEEBB3",
+		"colorTo": "FEEBB3",
+		"cone": 30
+	},
+	"velocityRnd": 0.1,
+	"shootType": {
+		"type": "BasicBulletType",
+		"damage": 90,
+		"status": "崩溃",
+		"statusDuration": 18,
+		"lifetime": 48,
+		"speed": 13,
+		"width": 18,
+		"height": 24,
+		"hitSize": 30,
+		"frontColor": "FFFFFF",
+		"backColor": "FEEBB3",
+		"trailLength": 8,
+		"trailWidth": 3.6,
+		"trailColor": "FEEBB3",
+		"ammoMultiplier": 1,
+		"hitSound": "lasercharge2",
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 7,
+					"sizeFrom": 0,
+					"sizeTo": 2,
+					"length": -66,
+					"baseLength": 66,
+					"lifetime": 15,
+					"colorFrom": "FEEBB380",
+					"colorTo": "FEEBB3"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 0,
+					"sizeTo": 9,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 15,
+					"colorFrom": "FEEBB380",
+					"colorTo": "FEEBB3"
+				},
+				{
+					"type": "WaveEffect",
+					"interp":"circleIn",
+					"lifetime": 10,
+					"sizeFrom": 70,
+					"sizeTo": 8,
+					"strokeFrom": 2,
+					"strokeTo": 3,
+					"colorFrom": "FEEBB3",
+					"colorTo": "FEEBB3"
+				}
+			]
+		},
+		"despawnEffect": "none",
+		"smokeEffect": "smokeCloud",
+		"trailChance": 1,
+		"trailInterval": 25,
+		"trailEffect": {
+			"type": "ParticleEffect",
+			"particles": 2,
+			"length": 10,
+			"baseLength": 16,
+			"lifetime": 20,
+			"sizeFrom": 4,
+			"sizeTo": 0,
+			"colorFrom": "FEEBB350",
+			"colorTo": "FEEBB3"
+		},
+		"fragLifeMin": 1,
+		"fragBullets": 1,
+		"fragBullet": {
+			"sprite":"circle-bullet",
+			"height": 2,
+			"width": 2,
+			"frontColor": "FFFFFF",
+			"backColor": "FEEBB3",
+			"shrinkX": 1.2,
+			"shrinkY": 1.2,
+			"lifetime": 15,
+			"speed": 0,
+			"collides": false,
+			"hittable": false,
+			"absorbable": false,
+			"status": "崩溃",
+			"statusDuration": 120,
+			"scaledSplashDamage": true,
+			"splashDamageRadius": 66.4,
+			"splashDamage": 357.5,
+			"hitShake": 5,
+			"hitSound": "plasmaboom",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 4,
+						"sizeFrom": 15,
+						"sizeTo": 0,
+						"length": 20,
+						"baseLength": 48,
+						"lifetime": 25,
+						"colorFrom": "FEEBB380",
+						"colorTo": "FEEBB300"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 22,
+						"line": true,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"lenFrom": 20,
+						"lenTo": 0,
+						"length": 63,
+						"baseLength": 0,
+						"lifetime": 20,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					},
+					{
+						"type": "WaveEffect",
+						"interp":"circleOut",
+						"lifetime": 30,
+						"sizeFrom": 0,
+						"sizeTo": 66,
+						"strokeFrom": 6,
+						"strokeTo": 0,
+						"colorFrom": "FEEBB3",
+						"colorTo": "FEEBB3"
+					}
+				]
+			},
+			"despawnEffect": "none"
+		}
+	},
+	"consumes": {
+		"power": 120,
+		"coolant": {
+			"amount": 1.75,
+			"optional": true
+		}
+	},
+	"category": "turret",
+	"research": {
+		"parent": "漫游",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "荒芜矿区"
+			}
+		]
+	},
+	"researchCostMultiplier": 0.35,
+	"requirements": [
+		"镄/520",
+		"metaglass/350",
+		"硅钢/500",
+		"泰勒合金/340",
+		"二级协议/4"
+	]
+}

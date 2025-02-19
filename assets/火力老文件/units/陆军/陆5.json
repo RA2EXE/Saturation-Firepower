@@ -1,0 +1,203 @@
+{
+	"type": "tank",
+	"name": "斩首",
+	"squareShape": true,
+	"omniMovement": false,
+	"rotateMoveFirst": false,
+	"speed": 1,
+	"hitSize": 48,
+	"drownTimeMultiplier": 2.6,
+	"crushDamage": 6,
+	"treadRects": [
+		{
+			"x": -86,
+			"y": -108,
+			"width": 42,
+			"height": 112
+		},
+		{
+			"x": -72,
+			"y": -124,
+			"width": 21,
+			"height": 16
+		},
+		{
+			"x": -86,
+			"y": 9,
+			"width": 42,
+			"height": 119
+		}
+	],
+	"ammoType": "surge-alloy",
+	"ammoCapacity": 50,
+	"targetAir": true,
+	"health": 42500,
+	"armor": 48,
+	"rotateSpeed": 1.22,
+	"itemCapacity": 30,
+	"faceTarget": false,
+	"immunities":["burning","shocked","崩溃"],
+	"targetFlags": [
+		"core",
+		"turret"
+	],
+	"research": "陆4",
+	"requirements": {
+		"block": "tetrative-reconstructor",
+		"previous": "陆4"
+	},
+	"weapons": [
+		{
+			"name": "斩首1",
+			"reload": 110,
+			"x": 0,
+			"y": -0.5,
+			"shootY": 33,
+			"cooldownTime": 100,
+			"rotate": true,
+			"top": true,
+			"rotateSpeed": 1.6,
+			"recoil": 5,
+			"mirror": false,
+			"inaccuracy": 0,
+			"shootSound": "mediumCannon",
+			"shake": 8,
+			"bullet": {
+				"damage": 250,
+				"splashDamage": 135,
+				"splashDamageRadius": 55,
+				"buildingDamageMultiplier": 3,
+				"speed": 31,
+				"lifetime": 15,
+				"status": "崩溃",
+				"statusDuration": 400,
+				"lightning": 2,
+				"lightningDamage": 90,
+				"lightningLength": 15,
+				"lightningColor": "FEEBB3",
+				"shrinkY": 0,
+				"frontColor": "FFFFFF",
+				"backColor": "FEEBB3",
+				"trailLength": 15,
+				"trailWidth": 2.2,
+				"trailColor": "FEEBB3",
+				"pierce": true,
+				"pierceCap": 4,
+				"knockback": 8,
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 9,
+							"sizeFrom": 10,
+							"sizeTo": 0,
+							"length": 65,
+							"baseLength": 0,
+							"lifetime": 15,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FFFFFF",
+							"cone": 40
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 2,
+							"sizeTo": 60,
+							"strokeFrom": 10,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FEEBB3"
+						}
+					]
+				},
+				"shootEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						{
+							"type": "ParticleEffect",
+							"particles": 6,
+							"sizeFrom": 8,
+							"sizeTo": 0,
+							"length": 55,
+							"baseLength": 0,
+							"lifetime": 33,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FFFFFF",
+							"cone": 35
+						},
+						{
+							"type": "WaveEffect",
+							"lifetime": 10,
+							"sizeFrom": 0,
+							"sizeTo": 30,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"colorFrom": "FEEBB3",
+							"colorTo": "FFFFFF"
+						}
+					]
+				},
+				"smokeEffect": "smokeCloud",
+				"width": 16,
+				"height": 28,
+				"hitSound": "plasmaboom",
+				"fragLifeMin": 0.1,
+				"fragBullets": 3,
+				"fragRandomSpread": 60,
+				"fragBullet": {
+					"type": "PointBulletType",
+					"trailEffect": "none",
+					"despawnEffect": "none",
+					"status": "blasted",
+					"hitEffect": {
+						"type": "MultiEffect",
+						"effects": [
+							{
+								"type": "ParticleEffect",
+								"particles": 9,
+								"sizeFrom": 8,
+								"sizeTo": 0,
+								"length": 55,
+								"baseLength": 0,
+								"lifetime": 15,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							},
+							{
+								"type": "WaveEffect",
+								"lifetime": 15,
+								"sizeFrom": 2,
+								"sizeTo": 40,
+								"strokeFrom": 6,
+								"strokeTo": 0,
+								"colorFrom": "FEEBB3",
+								"colorTo": "FEEBB3"
+							}
+						]
+					},
+					"hitSound": "laser",
+					"collides": false,
+					"damage": 250,
+					"splashDamageRadius": 40,
+					"splashDamage": 85,
+					"buildingDamageMultiplier": 2.25,
+					"lifetime": 10,
+					"speed": 8
+				},
+				"despawnEffect": "bigShockwave"
+			},
+			"parts": [
+				{
+					"type": "RegionPart",
+					"mirror": true,
+					"suffix": "-管",
+					"under": true,
+					"moveY": -4,
+					"heatProgress": "recoil",
+					"progress": "recoil"
+				}
+			]
+		}
+	]
+}

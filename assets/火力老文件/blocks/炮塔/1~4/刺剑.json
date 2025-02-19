@@ -1,0 +1,88 @@
+{
+	"type": "ItemTurret",
+	"name": "刺剑",
+	"unitSort": "weakest",
+	"health": 3250,
+	"size": 3,
+	"reload": 28,
+	"range": 160,
+	"maxAmmo": 48,
+	"recoilTime": 30,
+	"recoil": 3,
+	"consumes": {
+		"coolant": {
+			"amount": 0.3,
+			"optional": true
+		}
+	},
+	"shootY": 0,
+	"shoot": {
+		"shots": 6,
+		"shotDelay": 4,
+		"type": "ShootBarrel",
+		"barrels": [
+			0,11,0,
+			4,9.5,0,
+			-4,9.5,0
+		]
+	},
+	"ammoPerShot": 6,
+	"shootSound": "shotgun",
+	"targetGround": true,
+	"targetAir": true,
+	"inaccuracy": 5,
+	"shake": 3,
+	"shootCone": 20,
+	"rotateSpeed": 9,
+	"ammoTypes": {
+		"titanium": {
+			"type": "ShrapnelBulletType",
+			"reloadMultiplier": 1.2,
+			"width": 20,
+			"length": 160,
+			"damage": 125,
+			"ammoMultiplier": 2
+		},
+		"thorium": {
+			"type": "ShrapnelBulletType",
+			"rangeChange": 10,
+			"length": 170,
+			"damage": 150,
+			"width": 20,
+			"fromColor": "f9a3c7",
+			"toColor": "f9a3c7",
+			"ammoMultiplier": 4,
+			"shootEffect": "thoriumShoot",
+			"smokeEffect": "thoriumShoot"
+		},
+		"镄": {
+			"type": "ShrapnelBulletType",
+			"reloadMultiplier": 0.95,
+			"rangeChange": 40,
+			"length": 200,
+			"damage": 180,
+			"width": 20,
+			"fromColor": "dedede",
+			"toColor": "aaaaaa",
+			"ammoMultiplier": 6,
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 9,
+				"line": true,
+				"length": 55,
+				"baseLength": 0,
+				"lifetime": 15,
+				"colorFrom": "dedede",
+				"colorTo": "aaaaaa",
+				"cone": 60
+			}
+		}
+	},
+	"requirements": [
+		"graphite/80",
+		"硅钢/90",
+		"镄/220"
+	],
+	"category": "turret",
+	"research": "阔刀"
+}
