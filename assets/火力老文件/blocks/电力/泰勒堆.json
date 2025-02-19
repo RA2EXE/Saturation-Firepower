@@ -1,0 +1,150 @@
+{
+	"destroyBullet": {
+		"type": "BasicBulletType",
+		"splashDamageRadius": 480,
+		"splashDamage": 1000,
+		"buildingDamageMultiplier": 6,
+		"instantDisappear": true,
+		"makeFire": true,
+		"hitShake": 50,
+		"hitEffect": {
+			"type": "WaveEffect",
+			"lifetime": 60,
+			"sizeFrom": 20,
+			"sizeTo": 530,
+			"strokeFrom": 30,
+			"strokeTo": 0,
+			"interp": "circleOut",
+			"colorFrom": "FFFFFF",
+			"colorTo": "EEC591"
+		},
+		"despawnEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 60,
+					"sizeFrom": 60,
+					"sizeTo": 0,
+					"length": 480,
+					"baseLength": 0,
+					"lifetime": 480,
+					"interp": "pow10Out",
+					"sizeInterp": "pow10In",
+					"colorFrom": "FFFFFFBE",
+					"colorTo": "EEC591"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 10,
+					"sizeTo": 480,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 12,
+					"sizeInterp": "pow10Out",
+					"colorFrom": "FFFFFF",
+					"colorTo": "EEC591"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"startDelay": 9,
+					"sizeFrom": 480,
+					"sizeTo": 0,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 60,
+					"colorFrom": "EEC591",
+					"colorTo": "EEC591"
+				}
+			]
+		},
+		"trailColor": "FFFFFF",
+		"backColor": "FF5B5B",
+		"frontColor": "E3E3E3",
+		"width": 0,
+		"height": 0,
+		"hitSound": "DBZ1",
+		"hitSoundVolume": 3,
+		"status": "崩溃",
+		"statusDuration": 1000,
+		"fragBullets": 60,
+		"fragLifeMin": 0.15,
+		"fragLifeMax": 1.1,
+		"fragBullet": {
+			"type": "BasicBulletType",
+			"collides": false,
+			"hittable": false,
+			"absorbable": false,
+			"splashDamage": 100,
+			"splashDamageRadius": 180,
+			"buildingDamageMultiplier": 8,
+			"status": "崩溃",
+			"statusDuration": 1000,
+			"speed": 30,
+			"drag": 0.1,
+			"hitShake": 50,
+			"lifetime": 240,
+			"hitSound": "explosionbig",
+			"hitSoundVolume": 10,
+			"width": 30,
+			"height": 30,
+			"shrinkY": 0,
+			"sprite": "circle-bullet",
+			"trailLength": 18,
+			"trailWidth": 2.25,
+			"trailColor": "EEC59190",
+			"hitEffect": {
+				"type": "WaveEffect",
+				"lifetime": 35,
+				"interp": "circleOut",
+				"sizeFrom": 40,
+				"sizeTo": 230,
+				"strokeFrom": 30,
+				"strokeTo": 0,
+				"colorFrom": "EEC591",
+				"colorTo": "EEC591"
+			},
+			"despawnEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 10,
+						"sizeTo": 180,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 12,
+						"sizeInterp": "pow10Out",
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"startDelay": 9,
+						"sizeFrom": 180,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 15,
+						"colorFrom": "EEC591",
+						"colorTo": "EEC591"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		"lead/1200",
+		"metaglass/1000",
+		"镄/780",
+		"硅钢/1200",
+		"泰勒合金/700",
+		"二级协议/5"
+	],
+	"category": "power",
+	"research": "镄反应堆"
+}

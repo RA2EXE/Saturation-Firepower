@@ -1,0 +1,15 @@
+{
+	"liquidCapacity": 270,
+	"consumes": {
+		"power": 20
+	},
+	"requirements": [
+		"lead/3500",
+		"硅钢/1200",
+		"silicon/2000",
+		"plastanium/750",
+		"纳米核/800",
+		"phase-fabric/800",
+		"surge-alloy/1200"
+	]
+}

@@ -1,9 +1,0 @@
-{
-	"name": "冷冻液桶",
-	"color": "6ecdec",
-	"alwaysUnlocked":false,
-	"radioactivity": 0,
-	"explosiveness": 0,
-	"flammability": 0,
-	"research": "cryofluid"
-}
