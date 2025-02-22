@@ -1,6 +1,7 @@
 package SFire.content;
 
 import arc.graphics.*;
+import arc.math.Angles;
 import arc.math.Mathf;
 import arc.net.dns.SRVRecord;
 import mindustry.content.Fx;
@@ -419,10 +420,17 @@ public class SFStatusEffects {
         }};
         fullFire = new StatusEffect("saturation-attack") {{
             color = Color.gray;
-            speedMultiplier = 0;
+            speedMultiplier = 0.125f;
+            dragMultiplier = 2;
             damageMultiplier = 1.2f;
             reloadMultiplier = 5;
-            effectChance = 0.6f;
+            effectChance = 0.3f;
+            /*
+            for(int i = 0; i < 4; i++){
+                float angle = i*45;
+                effect.add
+            }
+             */
             effect = new MultiEffect(
                     new WrapEffect(){{effect = Fx.colorSparkBig;color=Color.gray;rotation = 45;}},
                     new WrapEffect(){{effect = Fx.colorSparkBig;color=Color.gray;rotation = 135;}},

@@ -1,7 +1,7 @@
-    displayName: "SaturationFirepowerMod"
+displayName: "SaturationFirepowerMod"
 name: "sfire-mod"
 
-author: "B.C.E.M."
+author: "RAdea.exe"
 
 main: "SFire.SFireMod"
 

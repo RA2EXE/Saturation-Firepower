@@ -42,6 +42,13 @@ public class SFUnitTypes {
         n.y = y;
         return n;
     }
+    public static Weapon copyRotate(Weapon weapon, float x, float y, float br){
+        Weapon n = weapon.copy();
+        n.x = x;
+        n.y = y;
+        n.baseRotation = br;
+        return n;
+    }
     public static Weapon
             redPointDefense = new PointDefenseWeapon(name("red-point-defense")) {{
         reload = 9;
@@ -57,7 +64,7 @@ public class SFUnitTypes {
             damage = 50;
         }};
     }},
-            redPointDefenseBig = new PointDefenseWeapon(name("red-point-gun")) {{
+            /*redPointDefenseBig = new PointDefenseWeapon(name("red-point-gun")) {{
                 reload = 9;
                 targetInterval = 20;
                 targetSwitchInterval = 4.5f;
@@ -70,15 +77,73 @@ public class SFUnitTypes {
                     maxRange = 280;
                     damage = 50;
                 }};
-            }},
+            }},*/
+            vastGun = new Weapon(name("vast-gun")) {{
+        shootCone = 5.5f;
+        shootSound = Sounds.blaster;
+        shoot = new ShootAlternate(4.5f);
+        shootY = 6.5f;
+        recoil = 1;
+        rotate = true;
+        rotateSpeed = 7;
+        reload = 4.5f;
+        alternate = false;
+        bullet = new RailBulletType(){{
+            damage = 78;
+            length = 330;
+            pierce = false;
+            pierceDamageFactor = 0.4f;
+            pierceEffect = Fx.none;
+            pointEffectSpace = 16;
+            pointEffect = new ParticleEffect(){{
+                particles = 1;
+                sizeInterp = Interp.pow3In;
+                line = true;
+                randLength = false;
+                lenFrom = lenTo = 17;
+                strokeFrom = 2;
+                strokeTo = 0;
+                length = 0;
+                baseLength = 1;
+                lifetime = 10;
+                colorFrom = colorTo = SFColor.enemyRedLight;
+                cone = 0;
+            }};
+            endEffect = new ParticleEffect(){{
+                particles = 1;
+                length = 0;
+                sizeFrom = 1;
+                lifetime = 10;
+                colorFrom = colorTo = SFColor.enemyRedLight;
+            }};
+            smokeEffect = Fx.none;
+            hitEffect = new MultiEffect(
+                    Fx.hitBulletColor,
+                    new ParticleEffect(){{
+                        particles = 5;
+                        interp = Interp.circleOut;
+                        sizeInterp = Interp.fastSlow;
+                        line = true;
+                        lenFrom = 16;
+                        strokeFrom = 2;
+                        length = 32;
+                        lifetime = 15;
+                        colorFrom = colorTo = SFColor.enemyRedLight;
+                        cone = 100;
+                    }}
+            );
+            hitColor = SFColor.enemyRedLight;
+        }};
+    }}
 
+;
     public static UnitType
             //enemy only
             flareX,/* flareY,*/ electrodile, thunderclap, knocker,
     painA, painB, painC, painD,
     blade, titan, vast,
     falcon, wyvern,
-    //local T6
+    //T6
     liXian, diXing, panLong, guangHan, yuHui, tengWang, luoHan,
     //tanks
     tank1, tank2, tank3, tank4, tank5, tank6,
@@ -146,14 +211,12 @@ public class SFUnitTypes {
                             buildingDamageMultiplier = 0.43f;
                             splashDamage = 280;
                             splashDamageRadius = 22;
-
                             homingDelay = 30;
                             homingRange = 240;
                             homingPower = 0.5f;
                             hittable = false;
                             pierceArmor = true;
                             absorbable = false;
-
                             trailEffect = Fx.none;
                             trailColor = SFColor.enemyRedLight;
                             trailLength = 5;
@@ -175,7 +238,6 @@ public class SFUnitTypes {
                             }};
                             shrinkX = shrinkY = 0;
                             frontColor = backColor = SFColor.enemyRedLight;
-
                             suppressionRange = 60;
                             suppressionDuration = 100;
                             status = SFStatusEffects.shattered;
@@ -955,6 +1017,7 @@ public class SFUnitTypes {
                         y = 0;
                         shootY = 30;
                         rotate = false;
+                        top = false;
                         shake = 5;
                         recoil = 6;
                         shootSound = Sounds.largeCannon;
@@ -1050,12 +1113,302 @@ public class SFUnitTypes {
             health = 375000;
             armor = 77;
             faceTarget = true;
-
-
-            weapons.add(
-
-
-
+            weapons.addAll(
+                    new Weapon(name("vast-radar")) {{
+                        reload = 2100;
+                        x = 0;
+                        shootCone = 360;
+                        rotate = false;
+                        minWarmup = 0.96f;
+                        targetInterval = 120;
+                        targetSwitchInterval = 60;
+                        shootWarmupSpeed = 0.0075f;
+                        shootStatus = SFStatusEffects.fullFire;
+                        shootStatusDuration = 180;
+                        shootSound = Sounds.lasercharge;
+                        bullet = new BulletType(400,10){{
+                            lifetime = 1;
+                            instantDisappear = true;
+                            shootEffect = new WaveEffect(){{
+                                    interp = Interp.circleOut;
+                                    lifetime = 120;
+                                    sizeTo = 80;
+                                    strokeFrom = 10;
+                                    colorFrom = SFColor.disc;
+                                    colorTo = SFColor.discDark;
+                                }};
+                            smokeEffect = Fx.none;
+                            splashDamage = 10;
+                            splashDamageRadius = 400;
+                            collidesTiles = false;
+                            hitEffect = despawnEffect = Fx.none;
+                            status = SFStatusEffects.marked;
+                            statusDuration = 300;
+                        }};
+                    }},
+                    new Weapon(name("vast-missile")) {{
+                        x = 28.5f;
+                        y = -32;
+                        baseRotation = -45;
+                        rotate = true;
+                        rotateSpeed = 2.4f;
+                        alternate = false;
+                        inaccuracy = 3;
+                        shootSound = Sounds.missile;
+                        reload = 76;
+                        shootY = 0;
+                        shoot = new ShootBarrel() {{
+                            shots = 3;
+                            shotDelay = 12;
+                            barrels = new float[]{
+                                    -3,6.5f,0,
+                                    3,6.5f,0
+                            };
+                        }};
+                        xRand = 2;
+                        bullet = new FlakBulletType(13,50){{
+                            splashDamage = 250;
+                            splashDamageRadius = 40;
+                            lightningDamage = 38;
+                            lightning = 5;
+                            lightningLength = 2;
+                            lightningLengthRand = 2;
+                            lightColor = SFColor.enemyRedLight;
+                            shrinkY = 0;
+                            homingRange = 80;
+                            homingPower = 0.1f;
+                            homingDelay = 8;
+                            lifetime = 44;
+                            hitSound = Sounds.explosion;
+                            width = 13;
+                            height  = 46;
+                            hitShake = 3;
+                            sprite = "sfire-mod-missile2";
+                            frontColor = SFColor.smoke;
+                            backColor = SFColor.enemyRedLight;
+                            trailLength = 40;
+                            trailWidth = 2;
+                            trailColor = Color.white.cpy().a(0.5f);
+                            trailChance = 0.45f;
+                            trailEffect = new ParticleEffect(){{
+                                particles = 3;
+                                length = 11;
+                                baseLength = 1;
+                                lifetime = 45;
+                                interp = Interp.pow10Out;
+                                colorFrom = colorTo = SFColor.smoke.cpy().a(0.45f);
+                                sizeFrom = 3;
+                            }};
+                            shootEffect = Fx.shootTitan;
+                            smokeEffect = Fx.shootPyraFlame;
+                            hitEffect = new ExplosionEffect(){{
+                                waveLife = 10;
+                                waveRad = 45;
+                                waveStroke = 8;
+                                waveColor = SFColor.enemyRedLight;
+                                sparkRad = 56;
+                                sparkStroke = 2.5f;
+                                sparkLen = 13;
+                                smokes = 10;
+                                smokeSizeBase = 10;
+                                smokeRad = 33;
+                                lifetime = 35;
+                                smokeColor = SFColor.enemyRedLight.cpy().a(0.56f);
+                                sparkColor = Pal.bulletYellow;
+                            }};
+                        }};
+                    }},
+                    new Weapon(name("vast-m")) {{
+                        x = 0;
+                        y = 16;
+                        recoil = 0;
+                        reload = 40;
+                        shootCone = 360;
+                        rotate = false;
+                        shootSound = Sounds.missileSmall;
+                        controllable = false;
+                        autoTarget = true;
+                        inaccuracy = 90;
+                        shootWarmupSpeed = 0.05f;
+                        minWarmup = 0.8f;
+                        targetInterval = 5;
+                        targetSwitchInterval = 5;
+                        shoot = new ShootBarrel(){{
+                            shots = 2;
+                            shotDelay = 12;
+                            barrels = new float[]{
+                                    2,12,0,
+                                    2,8.5f,0,
+                                    2,5,0,
+                                    4.75f,1.25f,0,
+                                    4.75f,6.75f,0,
+                                    2.75f,0.5f,0,
+                                    2.75f,-3.25f,0,
+                                    5.5f,2.25f,0,
+                                    5.5f,-1.5f,0,
+                                    5.5f,-5,0
+                            };
+                        }};
+                        parts.add(new RegionPart("-top") {{
+                            y = 4;
+                            mirror = false;
+                            moveX = -8;
+                            outline = false;
+                            mixColorTo = color = Color.white;
+                            mixColor = colorTo = Color.white.cpy().a(0);
+                        }});
+                        bullet = new MissileBulletType(7,75,"sfire-mod-missile1"){{
+                            absorbable = false;
+                            keepVelocity = false;
+                            reflectable = false;
+                            hitShake = 3;
+                            splashDamage = 225;
+                            splashDamageRadius = 50;
+                            status = SFStatusEffects.shattered;
+                            statusDuration = 160;
+                            frontColor = SFColor.smoke;
+                            backColor = SFColor.enemyRedLight;
+                            homingPower = 0.2f;
+                            homingDelay = 8;
+                            homingRange = 400;
+                            shootEffect = Fx.none;
+                            smokeEffect = Fx.shootPyraFlame;
+                            hitEffect = new ExplosionEffect(){{
+                                lifetime =22;
+                                waveStroke = 6;
+                                waveLife = 11;
+                                waveRad = 55;
+                                smokes = 12;
+                                smokeColor = SFColor.smoke;
+                                sparkColor = SFColor.enemyRedLight;
+                                sparks = 11;
+                                sparkRad = 55;
+                                sparkStroke = 1.25f;
+                                sparkLen = 16;
+                            }};
+                            despawnEffect = Fx.flakExplosionBig;
+                            hitSoundVolume = 5;
+                            trailChance = 1;
+                            trailEffect = new ParticleEffect(){{
+                                particles = 5;
+                                sizeFrom = 2.5f;
+                                length = -30;
+                                lifetime = 20;
+                                lightOpacity = 0.2f;
+                                interp = Interp.circleOut;
+                                sizeInterp = Interp.pow5In;
+                                colorTo = SFColor.smoke.cpy().a(0.4f);
+                                cone = 10;
+                            }};
+                            trailRotation = true;
+                            shrinkY = 0;
+                            drag = -0.015f;
+                            lifetime = 61;
+                            width = 14;
+                            height = 50;
+                        }};
+                    }},
+                    new Weapon(name("vast-m")) {{
+                        x = 0;
+                        y = 16;
+                        recoil = 0;
+                        reload = 60;
+                        shootCone = 360;
+                        rotate = false;
+                        shootSound = Sounds.missile;
+                        controllable = false;
+                        autoTarget = true;
+                        inaccuracy = 90;
+                        shootWarmupSpeed = 0.05f;
+                        minWarmup = 0.83f;
+                        shoot = new ShootBarrel(){{
+                            shots = 4;
+                            shotDelay = 6;
+                            barrels = new float[]{
+                                    -2.75f,0.5f,0,
+                                    -2.75f,-3.25f,0,
+                                    -5.5f,2.25f,0,
+                                    -5.5f,-1.5f,0,
+                                    5.5f,-5,0,
+                                    -2,12,0,
+                                    -2,8.5f,0,
+                                    -2,5,0,
+                                    -4.75f,1.25f,0,
+                                    -4.75f,6.75f,0
+                            };
+                        }};
+                        bullet = new EmpBulletType(){{
+                            hittable = false;
+                            keepVelocity = false;
+                            reflectable = false;
+                            timeIncrease = 1;
+                            buildingDamageMultiplier = 0.5f;
+                            powerDamageScl = 6;
+                            powerSclDecrease = 0.78f;
+                            unitDamageScl = 1.15f;
+                            suppressionDuration = 300;
+                            suppressionRange = 220;
+                            hitShake = 1;
+                            radius = 92;
+                            splashDamage = 88;
+                            splashDamageRadius = 46;
+                            damage = 60;
+                            status = StatusEffects.slow;
+                            statusDuration = 8;
+                            lightning = 2;
+                            lightningLength = 5;
+                            lightningLengthRand = 3;
+                            lightningColor = SFColor.enemyRedLight;
+                            frontColor = Color.white;
+                            backColor = SFColor.enemyRedLight;
+                            homingPower = 0.2f;
+                            homingDelay = 8;
+                            homingRange = 400;
+                            shootEffect = new WaveEffect(){{
+                                lifetime = 35;
+                                interp = Interp.circleOut;
+                                sizeTo = 10;
+                                strokeFrom = 4;
+                                colorFrom = SFColor.enemyRedLight;
+                                colorTo = SFColor.enemyRedLight.cpy().a(0.55f);
+                            }};
+                            smokeEffect = Fx.none;
+                            hitPowerEffect = new ParticleEffect(){{
+                                particles = 5;
+                                line = true;
+                                length = 50;
+                                lifetime = 16;
+                                lenFrom = 16;
+                                strokeFrom = 2;
+                                colorFrom = colorTo = SFColor.enemyRedLight;
+                                cone = 10;
+                            }};
+                            hitEffect = new WrapEffect(Fx.dynamicSpikes,SFColor.enemyRedLight,50);
+                            hitSound = Sounds.laser;
+                            hitSoundVolume = 0.5f;
+                            despawnEffect = new ParticleEffect(){{
+                                particles = 1;
+                                sizeFrom = 5f;
+                                length = 0;
+                                lifetime = 50;
+                                sizeInterp = Interp.pow5In;
+                                colorTo = SFColor.enemyRedLight;
+                            }};
+                            sprite = "missile-large";
+                            trailEffect = Fx.circleColorSpark;
+                            trailColor = SFColor.enemyRedLight;
+                            trailWidth = 3;
+                            trailLength = 9;
+                            shrinkY = 0;
+                            speed = 8;
+                            drag = -0.012f;
+                            lifetime = 59;
+                            width = 10;
+                            height = 13;
+                        }};
+                    }},
+                    copyRotate(vastGun, 16, 16, -45),
+                    copyRotate(vastGun, -22, -10, 90),
                     copy(redPointDefense, 21.5f, 32f),
                     copy(redPointDefense, 13, 42.5f),
                     copy(redPointDefense, 6, -59f),
