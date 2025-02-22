@@ -951,6 +951,137 @@ public class SFUnitTypes {
                 );
             }};
             weapons.add(
+                    new Weapon(name("blade-nuke")){{
+                       rotate = false;
+                       reload = 280;
+                       x = 9;
+                       shootSound = Sounds.missileLarge;
+                       shootCone = 360;
+                       minWarmup = 0.9f;
+                       shootWarmupSpeed = 0.022f;
+                       baseRotation = -45;
+                       bullet = new BulletType(){{
+                           keepVelocity = false;
+                           collidesAir = true;
+                           hitShake = 18;
+                           speed = 0;
+                           shootEffect = Fx.massiveExplosion;
+                           spawnUnit = new MissileUnitType("blade-missile"){{
+                               outlineColor = SFColor.darkOutline;
+                               missileAccelTime = 60;
+                               homingDelay = 70;
+                               speed = 6f;
+                               lifetime = 290;
+                               rotateSpeed = 2.25f;
+                               hitSize = 20;
+                               health = 3600;
+                               armor = 15;
+                               targetAir = true;
+                               collidesAir = true;
+                               deathSound = Sounds.explosionbig;
+                               engineColor = trailColor = SFColor.enemyRedLight;
+                               trailLength = 35;
+                               engineLayer = 110;
+                               engineOffset = 16;
+                               engineSize = 4;
+                               abilities.add(new MoveEffectAbility() {{
+                                   rotateEffect = true;
+                                   interval = 3;
+                                   y = -8;
+                                   effect = new ParticleEffect() {{
+                                       particles = 3;
+                                       sizeFrom = 4;
+                                       sizeTo = 10;
+                                       lifetime = 33;
+                                       length = 42;
+                                       interp = Interp.fastSlow;
+                                       colorFrom = SFColor.enemyRedLight;
+                                       colorTo = SFColor.enemyRedLight.cpy().a(0);
+                                       cone = 16;
+                                   }};
+                                   y = -8f;
+                               }});
+                               maxRange = 45;
+                               weapons.add(new Weapon(name("blade-missile-nuke")){{
+                                   reload = 60;
+                                   x = 0;
+                                   mirror = false;
+                                   rotate = true;
+                                   shake = 10;
+                                   shootSound = Sounds.none;
+                                   shootOnDeath = true;
+                                   shootCone = 360;
+                                   bullet = new BulletType(0,180){{
+                                       killShooter = true;
+                                       instantDisappear = true;
+                                       splashDamageRadius = 200;
+                                       splashDamage = 2200;
+                                       pierceArmor = true;
+                                       status = SFStatusEffects.shattered;
+                                       statusDuration = 600;
+                                       hitSound = Sounds.titanExplosion;
+                                       hitSoundVolume = 8;
+                                       hitShake = 15;
+                                       shootEffect = new WrapEffect(Fx.scatheExplosion,SFColor.enemyRedLight);
+                                       smokeEffect = despawnEffect = Fx.none;
+                                       hitEffect = new MultiEffect(
+                                               new WaveEffect(){{
+                                                   interp = Interp.circleOut;
+                                                   lifetime = 20;
+                                                   sizeTo = 300;
+                                                   strokeFrom = 22;
+                                                   strokeTo = 10;
+                                                   colorFrom = SFColor.enemyRedLight;
+                                                   colorTo = SFColor.discDark.cpy().a(0.5f);
+                                               }},
+                                               new WaveEffect(){{
+                                                   interp = Interp.circleOut;
+                                                   startDelay = 10;
+                                                   lifetime = 20;
+                                                   sizeTo = 300;
+                                                   strokeFrom = 22;
+                                                   strokeTo = 10;
+                                                   colorFrom = SFColor.enemyRedLight;
+                                                   colorTo = SFColor.discDark.cpy().a(0.5f);
+                                               }},
+                                               new ParticleEffect(){{
+                                                   particles = 26;
+                                                   line = true;
+                                                   strokeFrom = 5;
+                                                   lenFrom = 36;
+                                                   length = 230;
+                                                   baseLength = 33;
+                                                   lifetime = 22;
+                                                   interp = Interp.pow10Out;
+                                                   sizeInterp = Interp.pow3In;
+                                                   colorFrom = SFColor.enemyRedLight;
+                                                   colorTo = SFColor.disc;
+                                               }},
+                                               new ParticleEffect(){{
+                                                   particles = 1;
+                                                   sizeTo = 200;
+                                                   colorFrom = SFColor.enemyRedLight;
+                                                   colorTo = SFColor.disc;
+                                                   sizeInterp = Interp.pow5Out;
+                                                   lifetime = 20;
+                                                   length = 0;
+                                               }},
+                                               new ParticleEffect(){{
+                                                   particles = 1;
+                                                   sizeFrom = 200;
+                                                   sizeTo = 0;
+                                                   colorFrom = SFColor.disc;
+                                                   colorTo = SFColor.discDark.cpy().a(0.5f);
+                                                   startDelay = 18;
+                                                   lifetime = 120;
+                                                   length = 0;
+                                               }}
+                                       );
+                                   }};
+                               }});
+                           }};
+                       }};
+                    }},
                     new Weapon(name("red-point-gun")){{
                         reload = 15;
                         x = 13.25f;
@@ -1011,7 +1142,7 @@ public class SFUnitTypes {
                                 new ShootHelix(){{scl=6;mag=6;shots=3;}},
                                 new ShootHelix(){{scl=8;mag=3;shots=3;}}
                         );
-                        inaccuracy = 15;
+                        inaccuracy = 7.5f;
                         shootCone = 60;
                         x = 44;
                         y = 0;
@@ -1308,7 +1439,7 @@ public class SFUnitTypes {
                             height = 50;
                         }};
                     }},
-                    new Weapon(name("vast-m")) {{
+                    new Weapon(name("vast-m2")) {{
                         x = 0;
                         y = 16;
                         recoil = 0;

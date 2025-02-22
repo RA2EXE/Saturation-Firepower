@@ -1250,6 +1250,10 @@ public class SFBlocks {
             consumePower(0.5f);
             health = 1600 * largeHealth;
 
+            shieldHealth = 1000;
+            regenSpeed = 1.15f;
+            breakCooldown = 180;
+
             outputsPower = false;
             hasPower = true;
             consumesPower = true;
@@ -1406,11 +1410,11 @@ public class SFBlocks {
             itemCapacity = 21;
             liquidCapacity = 80;
 
-            shieldHealth = 35000;
+            shieldHealth = 25000;
             radius = 360;
             phaseRadiusBoost = 0;
-            phaseShieldBoost = 5000;
-            itemConsumer = consumeItem(SFItems.discFabric, 3).boost();
+            phaseShieldBoost = 15000;
+            itemConsumer = consumeItem(SFItems.discFabric, 5).boost();
             cooldownNormal = 8;
             cooldownLiquid = 2.5f;
             cooldownBrokenBase = 5;
