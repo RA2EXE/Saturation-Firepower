@@ -19,6 +19,7 @@ import mindustry.world.*;
 import mindustry.world.blocks.defense.*;
 import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.environment.*;
+import mindustry.world.blocks.liquid.ArmoredConduit;
 import mindustry.world.blocks.liquid.Conduit;
 import mindustry.world.blocks.liquid.LiquidBridge;
 import mindustry.world.blocks.liquid.LiquidRouter;
@@ -43,45 +44,45 @@ import static mindustry.type.ItemStack.*;
 
 public class SFBlocks {
     public static Block
-            //environment + wall + ores
-            snowSand, rareEarth,
-            induFloor, induFloor_supplyer, induFloor_heater, induFloor_cover, induFloor_wall, induFloor_nano, induFloor_nanowall,
-            reforcedFloor,
-            OREstrontium, ORErubidium, OREfermium, OREchromium,
+    //environment + wall + ores
+    snowSand, rareEarth,
+    induFloor, induFloor_supplyer, induFloor_heater, induFloor_cover, induFloor_wall, induFloor_nano, induFloor_nanowall,
+    reforcedFloor, reforcedFloor1, reforcedFloor2,
+    OREstrontium, ORErubidium, OREfermium, OREchromium,
 
     //crafting
     crusher, sporeCompressor, flywheelCentrifuge,
-            pyraBlender, blastBlender, clusBlender, cryoCentrifuge, plasMultiCompresser, surgeTheSmelter, surgeElesmelter,
+    pyraBlender, blastBlender, clusBlender, cryoCentrifuge, plasMultiCompresser, surgeTheSmelter, surgeElesmelter,
 
     silisteelSmelter, silisteelSmelterLarge, silisteelSmelterHuge, silisteelCrucible, wavesteelCompresseor, wavesteelForger, metalAnalyzer,
-            nanoConstructor, nanoPrinter, lensAtomizer, airCollector, nitrateMixer,
-            discPhaseWaver, discPhaseKnitter, chemicalSiSmelter, blastSiSmelter, nitrReactor, nitrCentrifuge, nitrPrecipitator, nanoActivator, blastReagentMixer, clusMaker,
-            tayriumSlelter, tayriumCrucible, leippiumSmelter, leippiumCrucible,
+    nanoConstructor, nanoPrinter, lensAtomizer, airCollector, airColler, nitrateMixer, fractionator,
+    discPhaseWaver, discPhaseKnitter, chemicalSiSmelter, blastSiSmelter, nitrReactor, nitrCentrifuge, nitrPrecipitator, nanoActivator, blastReagentMixer, clusMaker,
+    tayriumSlelter, tayriumCrucible, leippiumSmelter, leippiumCrucible,
     //primaryLab, seniorLab, warfareLab
 
     //wall
     steelWall, steelWallLarge, influxWall, influxWallLarge, discWall,
-            fermWall, fermWallLarge, fermDoor, leipWall, leipWallLarge,
-            discContainmentUnit, armorContainmentUnit, tayrContainmentUnit,
+    fermWall, fermWallLarge, fermDoor, leipWall, leipWallLarge,
+    discContainmentUnit, armorContainmentUnit, tayrContainmentUnit,
 
     //defense
     nanoMendProjector, nanoRegenProjector, ironCurtain, ironDome,
 
     //transport
     waveConveyor, rearmoredConveyor, silisteelConveyor, waveJunction, waveBridge,
-            discConveyor, discMassDriver,
+    discConveyor, discMassDriver,
     //liquid
     tidalPump, silisteelConduit, reArmoredConduit, silisteelTank, discConduit,
 
     //power
     armorBattery, armorNode, discNodeTower,
-            gasSmoker, coalPyrolyzer, heatGenerator, fermReactor, fissionReactor, arcFissionReactor,
+    gasSmoker, coalPyrolyzer, heatGenerator, fermReactor, fissionReactor, arcFissionReactor,
     // hypermagneticReactor,
 
     //production
-    energyDrill, blastWell, heavyDrill, //quantumOreExtractor,
-            waterExtractor, /*slagExtractor,*/
-            oilPressurePump, sporeCultivator,
+    energyDrill, heavyDrill, blastWell, //quantumOreExtractor,
+    waterExtractor, /*slagExtractor,*/
+    oilPressurePump, sporeCultivator,
 
     //storage
     //frondCore,
@@ -99,7 +100,6 @@ public class SFBlocks {
                     ;
 
     public static void load() {
-
         snowSand = new Floor("snow-sand") {{
             itemDrop = Items.sand;
             playerUnmineable = true;
@@ -155,7 +155,6 @@ public class SFBlocks {
             blendGroup = SFBlocks.induFloor;
             variants = 2;
         }};
-        //可以偷井盖了兄弟们
         induFloor_cover = new Prop("industry-floor-cover") {{
             variants = 6;
             breakSound = Sounds.breaks;
@@ -182,6 +181,22 @@ public class SFBlocks {
             dragMultiplier = 1.15f;
             attributes.set(Attribute.oil, -0.125f);
             attributes.set(Attribute.water, -0.125f);
+            variants = 0;
+        }};
+        reforcedFloor1 = new Floor("reforced-floor-1") {{
+            speedMultiplier = 1.3f;
+            dragMultiplier = 1.15f;
+            attributes.set(Attribute.oil, -0.125f);
+            attributes.set(Attribute.water, -0.125f);
+            blendGroup = SFBlocks.reforcedFloor;
+            variants = 0;
+        }};
+        reforcedFloor2 = new Floor("reforced-floor-2") {{
+            speedMultiplier = 1.3f;
+            dragMultiplier = 1.15f;
+            attributes.set(Attribute.oil, -0.125f);
+            attributes.set(Attribute.water, -0.125f);
+            blendGroup = SFBlocks.reforcedFloor;
             variants = 0;
         }};
 
@@ -234,7 +249,7 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.graphite, 110, Items.silicon, 40, Items.metaglass, 80, SFItems.siliSteel, 60, Items.plastanium, 30));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
-            liquidCapacity = 60;
+            liquidCapacity = 100;
 
             craftTime = 30;
             outputLiquid = new LiquidStack(Liquids.oil, 0.9f);
@@ -339,7 +354,7 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.graphite, 100, Items.thorium, 80, SFItems.waveSteel, 50, SFItems.siliSteel, 90));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
-            liquidCapacity = 40;
+            liquidCapacity = 60;
 
             craftTime = 60;
             outputItem = new ItemStack(Items.plastanium, 3);
@@ -592,7 +607,7 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.silicon, 80, Items.metaglass, 100, Items.titanium, 50, SFItems.siliSteel, 35));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 24;
-            liquidCapacity = 10;
+            liquidCapacity = 30;
 
             craftTime = 20;
             results = with(SFItems.strontium, 3, SFItems.rubidium, 5, SFItems.chromium, 5);
@@ -650,7 +665,6 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.lead, 200, Items.metaglass, 110, SFItems.tayrAlloy, 80, SFItems.discFabric, 35));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 5;
-            liquidCapacity = 10;
 
             craftTime = 120;
             outputItem = new ItemStack(SFItems.lens, 1);
@@ -826,16 +840,37 @@ public class SFBlocks {
                         color = Items.sporePod.color;
                     }});
         }};
+        airColler = new GenericCrafter("air-cooler") {{
+            size = 2;
+            requirements(Category.crafting, with(Items.silicon, 110, Items.plastanium, 80, Items.surgeAlloy, 60));
+            hasPower = hasLiquids = true;
+            liquidCapacity = 60;
+
+            craftTime = 60;
+            outputLiquid = new LiquidStack(Liquids.nitrogen, 1/6f);
+            consumeLiquid(Liquids.cryofluid,0.25f);
+            consumePower(2f);
+
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.nitrogen, 2.1f), new DrawDefault(), new DrawLiquidRegion(Liquids.cryofluid),
+                    new DrawParticles() {{
+                        particles = 8;
+                        particleSize = 1.5f;
+                        particleRad = 12;
+                        particleLife = 120;
+                        alpha = 0.4f;
+                        color = Liquids.nitrogen.color;
+                    }});
+        }};
         nitrateMixer = new GenericCrafter("nitrate-mixer") {{
-            size = 3;
+            size = 5;
             requirements(Category.crafting, with(Items.metaglass, 150, Items.silicon, 80, Items.plastanium, 50, SFItems.chromium, 80));
             hasPower = hasLiquids = true;
             liquidCapacity = 180;
 
             craftTime = 60;
-            outputLiquid = new LiquidStack(SFLiquids.nitrate, 1f);
-            consumePower(15.5f);
-            consumeLiquids(LiquidStack.with(Liquids.water, 1.5f, Liquids.nitrogen, 0.5f));
+            outputLiquid = new LiquidStack(SFLiquids.nitrate, 2f);
+            consumePower(33.5f);
+            consumeLiquids(LiquidStack.with(Liquids.water, 3f, Liquids.nitrogen, 1f));
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidRegion(Liquids.water) {{
                 suffix = "-liquid1";
@@ -845,17 +880,38 @@ public class SFBlocks {
                     new DrawArcSmelt() {{
                         midColor = Color.valueOf("eeffc7");
                         flameColor = Color.valueOf("8c996dd8");
-                        flameRad = 7;
-                        circleSpace = 2;
+                        flameRad = 2;
+                        circleSpace = 4;
                         flameRadiusScl = 10;
                         flameRadiusMag = 1;
                         circleStroke = 0.6f;
                         alpha = 0.6f;
+                        particleRad = 16;
                         particles = 23;
                         particleLife = 37;
                         particleLen = 2;
                     }},
                     new DrawDefault());
+        }};
+        fractionator = new GenericCrafter("fractionator") {{
+            size = 5;
+            armor = 4;
+            health = 3100;
+            requirements(Category.crafting, with(Items.silicon,200, Items.plastanium, 150, Items.surgeAlloy, 180, SFItems.chromium, 100));
+            hasPower = hasLiquids = hasItems = true;
+            itemCapacity = 40;
+            liquidCapacity = 50;
+
+            craftTime = 60;
+            consumePower(25f);
+            consumeLiquid(Liquids.oil,3.6f);
+            outputItem = new ItemStack(Items.coal, 3);
+            outputLiquid = new LiquidStack(SFLiquids.mixGas, 5/3f);
+
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.oil), new DrawLiquidTile(SFLiquids.mixGas){{alpha=0.35f;}}, new DrawDefault());
+            ambientSound = Sounds.smelter;
+            ambientSoundVolume = 0.3f;
+            craftEffect = Fx.smokeCloud;
         }};
         chemicalSiSmelter = new GenericCrafter("chemical-silicon-smelter") {{
             size = 4;
@@ -868,7 +924,7 @@ public class SFBlocks {
             outputItem = new ItemStack(Items.silicon, 8);
             consumePower(8f);
             consumeItems(new ItemStack(Items.sand, 8));
-            consumeLiquid(SFLiquids.mixGas, 0.05f);
+            consumeLiquid(SFLiquids.mixGas, 0.2f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(SFLiquids.mixGas),
                     new DrawCrucibleFlame() {{
@@ -1436,8 +1492,8 @@ public class SFBlocks {
             requirements(Category.distribution, with(Items.lead, 1, SFItems.waveSteel, 1));
             junctionReplacement = waveJunction;
             bridgeReplacement = waveBridge;
-            speed = 0.31f;
-            displayedSpeed = 31;
+            speed = 0.19f;
+            displayedSpeed = 20;
             placeableLiquid = true;
         }};
         rearmoredConveyor = new ArmoredConveyor("complex-armored-conveyor") {{
@@ -1446,8 +1502,8 @@ public class SFBlocks {
             requirements(Category.distribution, with(Items.titanium, 1, Items.metaglass, 1, SFItems.siliSteel, 1, SFItems.fermium, 1));
             junctionReplacement = waveJunction;
             bridgeReplacement = discConveyor;
-            speed = 0.31f;
-            displayedSpeed = 31;
+            speed = 0.19f;
+            displayedSpeed = 20;
             insulated = absorbLasers = placeableLiquid = true;
         }};
         silisteelConveyor = new StackConveyor("silisteel-conveyor") {{
@@ -1469,22 +1525,21 @@ public class SFBlocks {
             requirements(Category.distribution, with(Items.lead, 2, SFItems.waveSteel, 1));
             ((Conveyor) waveConveyor).junctionReplacement = this;
             ((Conveyor) rearmoredConveyor).junctionReplacement = this;
-            speed = 2;
-            capacity = 4;
+            speed = 14;
             health = 220;
+            capacity = 7;
             buildCostMultiplier = 6f;
             placeableLiquid = true;
         }};
-        waveBridge = new BufferedItemBridge("wavesteel-bridge") {{
+        waveBridge = new ItemBridge("wavesteel-bridge") {{
             health = 220;
             requirements(Category.distribution, with(Items.lead, 6, SFItems.waveSteel, 4));
             ((Conveyor) waveConveyor).bridgeReplacement = this;
-            fadeIn = moveArrows = false;
+            hasPower = false;
             range = 6;
-            speed = 20f;
+            transportTime = 3f;
             bridgeWidth = 8f;
             arrowSpacing = 6f;
-            bufferCapacity = 10;
             placeableLiquid = true;
         }};
         discConveyor = new ItemBridge("discfabric-bridge") {{
@@ -1492,13 +1547,12 @@ public class SFBlocks {
             armor = 8;
             requirements(Category.distribution, with(Items.thorium, 20, Items.silicon, 15, SFItems.siliSteel, 5, SFItems.discFabric, 5, SFItems.fermium, 5));
             ((Conveyor) rearmoredConveyor).bridgeReplacement = this;
-            range = 24;
-            transportTime = 1;
+            range = 26;
+            transportTime = 2;
             arrowSpacing = 8;
             arrowOffset = 4;
             arrowTimeScl = 12;
             bridgeWidth = 8;
-            hasPower = true;
             pulse = true;
             consumePower(0.5f);
         }};
@@ -1549,7 +1603,7 @@ public class SFBlocks {
             liquidPressure = 5;
             bridgeReplacement = Blocks.phaseConduit;
         }};
-        reArmoredConduit = new Conduit("complex-armored-conduit") {{
+        reArmoredConduit = new ArmoredConduit("complex-armored-conduit") {{
             health = 560;
             armor = 8;
             requirements(Category.liquid, with(Items.titanium, 1, Items.metaglass, 2, SFItems.siliSteel, 1, SFItems.fermium, 1));
@@ -1571,7 +1625,7 @@ public class SFBlocks {
             armor = 8;
             requirements(Category.liquid, with(Items.metaglass, 20, Items.silicon, 15, SFItems.siliSteel, 5, SFItems.discFabric, 5, SFItems.fermium, 5));
             ((Conduit) reArmoredConduit).bridgeReplacement = this;
-            range = 24;
+            range = 26;
             arrowSpacing = 8;
             arrowOffset = 4;
             arrowTimeScl = 12;
@@ -1675,7 +1729,7 @@ public class SFBlocks {
             hasPower = hasLiquids = true;
 
             powerProduction = 10 / 6f;
-            consumeLiquid(SFLiquids.mixGas, 0.05f);
+            consumeLiquid(SFLiquids.mixGas, 0.1f);
 
             generateEffect = Fx.steam;
             effectChance = 0.01f;
@@ -1695,7 +1749,7 @@ public class SFBlocks {
             powerProduction = 8;
             consumeLiquid(Liquids.water, 1);
             consumeItem(Items.coal, 2);
-            outputLiquid = new LiquidStack(SFLiquids.mixGas, 0.3f);
+            outputLiquid = new LiquidStack(SFLiquids.mixGas, 0.6f);
 
             generateEffect = new MultiEffect(Fx.steam, Fx.generatespark);
             effectChance = 0.02f;
@@ -1766,7 +1820,7 @@ public class SFBlocks {
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 30;
             liquidCapacity = 600;
-            warmupSpeed = 1 / 3600f;
+            warmupSpeed = 0.0005f;
 
             powerProduction = 180;
             consumePower(28f);
@@ -1870,7 +1924,6 @@ public class SFBlocks {
                     }}
             );
         }};
-
         //hypermagneticReactor = new ConsumeGenerator("hypermagnetic-reactor") {{}};
 
         energyDrill = new Drill("energe-drill") {{
@@ -1887,35 +1940,10 @@ public class SFBlocks {
             drillEffect = Fx.mineBig;
             updateEffect = Fx.pulverizeMedium;
         }};
-        blastWell = new BurstDrill("blast-ore-well") {{
-            size = 5;
-            requirements(Category.production, with(Items.plastanium, 60, Items.graphite, 85, SFItems.waveSteel, 180));
-            hasLiquids = hasItems = true;
-            itemCapacity = 50;
-            liquidCapacity = 20;
-            drillTime = 80;
-            tier = 10;
-            arrows = 4;
-            arrowSpacing = 1.5f;
-            arrowOffset = 0;
-            arrowColor = Color.valueOf("FEC59E80");
-            drillMultipliers.put(Items.sand, 2f);
-            blockedItem = SFItems.fermium;
-
-            consumeLiquid(SFLiquids.blastReagent, 0.1f);
-            drillEffect = new MultiEffect(
-                    new WrapEffect() {{
-                        effect = Fx.dynamicExplosion;
-                        color = Color.valueOf("FEC59EF1");
-                        rotation = 1.5f;
-                    }},
-                    Fx.mineImpactWave.wrap(Items.blastCompound.color, 45f)
-            );
-        }};
         heavyDrill = new Drill("heavy-drill") {{
             size = 4;
             health = 1200;
-            requirements(Category.production, with(Items.silicon, 160, Items.plastanium, 45, SFItems.waveSteel, 80, SFItems.siliSteel, 70));
+            requirements(Category.production, with(Items.silicon,160, Items.plastanium,45, Items.surgeAlloy,80, SFItems.siliSteel,70));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
             liquidCapacity = 30;
@@ -1943,6 +1971,31 @@ public class SFBlocks {
                 cone = 20;
             }};
         }};
+        blastWell = new BurstDrill("blast-ore-well") {{
+            size = 5;
+            requirements(Category.production, with(Items.graphite,180, Items.thorium,110, Items.phaseFabric,80, SFItems.waveSteel,80));
+            hasLiquids = hasItems = true;
+            itemCapacity = 50;
+            liquidCapacity = 20;
+            drillTime = 80;
+            tier = 10;
+            arrows = 4;
+            arrowSpacing = 1.5f;
+            arrowOffset = 0;
+            arrowColor = Color.valueOf("FEC59E80");
+            drillMultipliers.put(Items.sand, 2f);
+            blockedItem = SFItems.fermium;
+
+            consumeLiquid(SFLiquids.blastReagent, 0.1f);
+            drillEffect = new MultiEffect(
+                    new WrapEffect() {{
+                        effect = Fx.dynamicExplosion;
+                        color = Color.valueOf("FEC59EF1");
+                        rotation = 1.5f;
+                    }},
+                    Fx.mineImpactWave.wrap(Items.blastCompound.color, 45f)
+            );
+        }};
         //quater
         waterExtractor = new SolidPump("water-extractor") {{
             size = 3;
@@ -1962,7 +2015,7 @@ public class SFBlocks {
         oilPressurePump = new Fracker("oil-pressure-pump") {{
             size = 3;
             health = 550;
-            requirements(Category.production, with(Items.graphite, 160, Items.thorium, 180, Items.plastanium, 80, SFItems.rubidium, 110));
+            requirements(Category.production, with(Items.graphite, 160, Items.plastanium, 180, Items.surgeAlloy, 80, SFItems.rubidium, 110));
             hasPower = hasLiquids = true;
             hasItems = false;
             liquidCapacity = 60;
@@ -1989,14 +2042,14 @@ public class SFBlocks {
             size = 4;
             requirements(Category.production, with(Items.metaglass, 130, Items.titanium, 50, SFItems.waveSteel, 40));
             hasPower = hasLiquids = hasItems = true;
-            liquidCapacity = 15;
+            liquidCapacity = 110;
             attribute = Attribute.spores;
             boostScale = 0.125f;
             maxBoost = 2f;
 
             craftTime = 20;
             outputItem = new ItemStack(Items.sporePod, 3);
-            consumeLiquid(SFLiquids.mixGas, 0.6f);
+            consumeLiquid(SFLiquids.mixGas, 1.2f);
             consumePower(10 / 3f);
 
             drawer = new DrawMulti(
@@ -2044,16 +2097,6 @@ public class SFBlocks {
             liquidCapacity = 60;
             consumePower(8.5f);
             consumeLiquid(Liquids.cryofluid, 0.6f);
-/*
-            ArrayMap<UnitType, ItemStack[]> unitItem = getUnitItem((Reconstructor) Blocks.additiveReconstructor);
-            plans.add(new UnitPlan(UnitTypes.fortress, 60 * 60f, unitItem.get(UnitTypes.fortress)));
-            plans.add(new UnitPlan(UnitTypes.zenith, 60 * 60f, unitItem.get(UnitTypes.zenith)));
-            plans.add(new UnitPlan(UnitTypes.bryde, 60 * 60f, unitItem.get(UnitTypes.bryde)));
-            plans.add(new UnitPlan(UnitTypes.spiroct, 60 * 60f, unitItem.get(UnitTypes.spiroct)));
-            plans.add(new UnitPlan(UnitTypes.quasar, 60 * 60f, unitItem.get(UnitTypes.quasar)));
-            plans.add(new UnitPlan(UnitTypes.mega, 60 * 60f, unitItem.get(UnitTypes.mega)));
-            plans.add(new UnitPlan(UnitTypes.cyerce, 60 * 60f, unitItem.get(UnitTypes.cyerce)));
-*/
             plans = Seq.with(
                     new UnitPlan(UnitTypes.fortress, 60f * 33, T3Item),
                     new UnitPlan(UnitTypes.zenith, 60f * 33, T3Item),
@@ -2129,16 +2172,4 @@ public class SFBlocks {
 
 
     }
-    /**
-     public ArrayMap<UnitType, ItemStack[]> getUnitItem(Seq<UnitFactory.UnitPlan> plans){
-     ArrayMap<UnitType, ItemStack[]> unitItem = new ArrayMap<>();
-
-     plans.each(unitPlan -> unitItem.put(unitPlan.unit, unitPlan.requirements));
-
-     return unitItem;
-     }
-
-     public ArrayMap<UnitType, ItemStack[]> getUnitItem(UnitFactory factory) {
-     return getUnitItem(factory.plans);
-     }*/
 }

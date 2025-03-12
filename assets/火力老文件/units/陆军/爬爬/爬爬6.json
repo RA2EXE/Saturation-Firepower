@@ -20,16 +20,7 @@
 	"drownTimeMultiplier": 6,
 	"hovering": true,
 	"allowLegStep": true,
-	"researchCostMultiplier": 0,
-	"research": {
-		"parent": "toxopid",
-		"objectives": [
-			{
-				"type": "SectorComplete",
-				"preset": "荒芜矿区"
-			}
-		]
-	},
+
 	"ammoType": {
 		"type": "PowerAmmoType",
 		"totalPower": 22000

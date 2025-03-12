@@ -165,6 +165,7 @@ public class SFUnitTypes {
             constructor = UnitTypes.flare.constructor;
             flying = true;
             outlineColor = SFColor.darkOutline;
+            itemCapacity = 0;
             autoFindTarget = true;
             drawMinimap = false;
 
@@ -205,6 +206,7 @@ public class SFUnitTypes {
                         shootCone = 90;
                         minShootVelocity = 0.15f;
                         bullet = new MissileBulletType(3, 76, "sfire-mod-missile2") {{
+                            keepVelocity = false;
                             width = 12;
                             height = 40;
                             drag = -0.03f;
@@ -303,6 +305,7 @@ public class SFUnitTypes {
             constructor = UnitTypes.elude.constructor;
             hovering = true;
             outlineColor = SFColor.darkOutline;
+            itemCapacity = 0;
             flying = false;
             healFlash = false;
             rotateSpeed = 1.5f;
@@ -611,6 +614,7 @@ public class SFUnitTypes {
         knocker = new UnitType("knocker") {{
             constructor = UnitTypes.corvus.constructor;
             outlineColor = SFColor.darkOutline;
+            itemCapacity = 0;
             armor = 15;
             speed = 1.36f;
             drag = 0.1f;
@@ -859,9 +863,25 @@ public class SFUnitTypes {
                     }}
             );
         }};
+/*
+        painA = new UnitType("Partiality-A") {{
+            constructor = UnitTypes.corvus.constructor;
+            flying = false;
+            speed = 1.28f;
+            drag = 0.08f;
+            accel = 0.088f;
+            hitSize = 45;
+
+        }};
+        painB = new UnitType("Partiality-B") {{}};
+        painC = new UnitType("Partiality-C") {{}};
+        painD = new UnitType("Partiality-D") {{}};
+*/
+
         blade = new UnitType("blade") {{
             constructor = UnitTypes.zenith.constructor;
             outlineColor = SFColor.darkOutline;
+            itemCapacity = 0;
             flying = true;
             speed = 1.28f;
             rotateSpeed = 1.2f;
@@ -1114,6 +1134,7 @@ public class SFUnitTypes {
         titan = new UnitType("titan"){{
             constructor = UnitTypes.reign.constructor;
             outlineColor = SFColor.darkOutline;
+            itemCapacity = 0;
             flying = false;
             speed = 0.76f;
             mechSideSway = 0.7f;
@@ -1233,6 +1254,7 @@ public class SFUnitTypes {
         vast = new UnitType("vast"){{
             constructor = UnitTypes.omura.constructor;
             outlineColor = SFColor.darkOutline;
+            itemCapacity = 0;
             flying = false;
             speed = 0.57f;
             rotateSpeed = 0.45f;
@@ -1564,6 +1586,419 @@ public class SFUnitTypes {
             );
         }};
 
+        liXian = new UnitType("ordinance"){{
+            constructor = UnitTypes.reign.constructor;
+            hitSize = 48;
+            canDrown = false;
+            armor = 36;
+            speed = 0.58f;
+            rotateSpeed = 1.44f;
+            baseRotateSpeed = 1.3f;
+            health = 88000;
+            mechSideSway = 0.8f;
+            mechFrontSway = 2.2f;
+            immunities.add(StatusEffects.disarmed);
+            weapons.add(
+                    new Weapon(name("ordinance-weapon")){{
+                        reload = 4.45f;
+                        shake = 3;
+                        recoil = 5;
+                        x = 28;
+                        y = -1;
+                        shootY = 20;
+                        rotate = false;
+                        top = false;
+                        inaccuracy = 0.5f;
+                        shootSound = Sounds.shootBig;
+                        ejectEffect = Fx.casing4;
+                        shootCone = 15;
+                        bullet = new BasicBulletType(14.3f,115){{
+                           splashDamage = 30;
+                           splashDamageRadius = 40;
+                           pierce = true;
+                           pierceBuilding = true;
+                           pierceCap = 10;
+                           lifetime = 28;
+                           hitSound = Sounds.explosion;
+                           shootEffect = Fx.shootBig2;
+                           smokeEffect = Fx.shootBigSmoke2;
+                           trailLength = 7;
+                           trailWidth = 3.3f;
+                           trailColor = backColor = Color.valueOf("FFA05C");
+                           width = 14;
+                           height = 33;
+                           hitEffect = new ParticleEffect(){{
+                               particles = 4;
+                               line = true;
+                               lifetime = 10;
+                               strokeFrom = 3;
+                               lenFrom = 16;
+                               length = 60;
+                               interp = Interp.fastSlow;
+                               sizeInterp = Interp.pow5;
+                               colorFrom = Pal.bulletYellow;
+                               colorTo = Pal.bulletYellowBack;
+                               cone = 60;
+                           }};
+                           despawnEffect = Fx.flakExplosionBig;
+                        }};
+                    }},
+                    new Weapon(name("ordinance-gun")){{
+                        reload = 60;
+                        shootY = 7.5f;
+                        x = 16;
+                        y = 12;
+                        controllable = false;
+                        autoTarget = true;
+                        shootStatusDuration = 15;
+                        shootStatus = SFStatusEffects.stormed;
+                        shoot = new ShootSpread(5,5);
+                        recoil = 2;
+                        rotate = true;
+                        rotateSpeed = 6;
+                        rotationLimit = 50;
+                        shootSound = Sounds.spark;
+                        inaccuracy = 16;
+                        bullet = new LightningBulletType(){{
+                            damage = 32;
+                            lightningColor = Color.valueOf("FFA05C");
+                            lightningLength = 12;
+                            lightningLengthRand = 12;
+                            shootEffect = new ParticleEffect(){{
+                                particles = 2;
+                                line = true;
+                                length = 55;
+                                lifetime = 22;
+                                colorFrom = Color.valueOf("FFA05C");
+                                colorTo = Color.valueOf("D86E56");
+                            }};
+                            despawnEffect = smokeEffect = Fx.none;
+                            hitEffect = Fx.hitLancer;
+                        }};
+                    }}
+            );
+
+        }};
+        diXing = new UnitType("libra"){{
+            constructor = UnitTypes.corvus.constructor;
+            armor = 15;
+            speed = 0.3f;
+            rotateSpeed = 1.52f;
+            hitSize = 52;
+            health = 73600;
+            legCount = 6;
+            lockLegBase = true;
+            legContinuousMove = true;
+            legSplashDamage = 220;
+            legSplashRange = 18;
+            legMoveSpace = 1.4f;
+            legExtension = -8;
+            legBaseOffset = 20;
+            legLength = 32;
+            legForwardScl = 0.7f;
+            stepShake = 0.77f;
+            buildRange = 360;
+            buildSpeed = 8.5f;
+            buildBeamOffset = 24;
+            rippleScale = 1;
+            allowLegStep = true;
+            drownTimeMultiplier = 8;
+            immunities.addAll(StatusEffects.electrified, StatusEffects.unmoving, StatusEffects.disarmed, SFStatusEffects.scrambled);
+            abilities.addAll(
+                    new StatusFieldAbility(SFStatusEffects.strengthen,480,600,340){{
+                        activeEffect = new WaveEffect(){{
+                            lifetime = 56;
+                            interp = Interp.circleOut;
+                            sizeTo = 340;
+                            strokeFrom = 9;
+                            colorFrom = colorTo = Pal.heal;
+                        }};
+                    }},
+                    new ShieldArcAbility(){{
+                        radius = 80;
+                        width = 25;
+                        max = 10000;
+                        regen = 25;
+                        cooldown = 20;
+                        angle = 140;
+                    }}
+            );
+            speed = 0.3f;
+            hitSize = 52;
+            health = 77600;
+            armor = 28;
+            rotateSpeed = 0.8f;
+            faceTarget = true;
+            singleTarget = true;
+            weapons.add(
+                    new Weapon(name("libra-laser")){{
+                        reload = 70;
+                        shootX = -3.5f;
+                        //shootY = 12f;
+                        x = 28;
+                        shake = 3;
+                        recoil = 3;
+                        layerOffset = 0.05f;
+                        rotate = false;
+                        shootCone = 5;
+                        top = false;
+                        shootSound = Sounds.malignShoot;
+                        cooldownTime = 80;
+                        bullet = new BasicBulletType(25,100,"circle-bullet"){{
+                            frontColor = Color.white;
+                            backColor = trailColor = Pal.heal;
+                            healPercent = 11;
+                            status = SFStatusEffects.disRepair;
+                            statusDuration = 120;
+                            splashDamage = 80;
+                            splashDamageRadius = 60;
+                            trailLength = 3;
+                            trailWidth = 1.5f;
+                            trailInterval = 20;
+                            trailEffect = new WaveEffect(){{
+                                lifetime = 20;
+                                sizeTo = 30;
+                                strokeFrom = 3;
+                                colorFrom = colorTo = Pal.heal;
+                            }};
+                            shootEffect = Fx.bigShockwave;
+                            shrinkY = 0;
+                            absorbable = false;
+                            reflectable = false;
+                            pierce = collidesTeam = true;
+                            lifetime = 19.8f;
+                            width = 14;
+                            height = 14;
+                            despawnEffect = Fx.none;
+                            hitEffect = new MultiEffect(
+                                    new ExplosionEffect(){{
+                                        sparks = 32;
+                                        sparkStroke = 6;
+                                        sparkLen = 30;
+                                        sparkRad = 70;
+                                        lifetime = 20;
+                                        smokes = 0;
+                                        sparkColor = waveColor = Pal.heal;
+                                        waveRad = 60;
+                                        waveLife = 15;
+                                        waveStroke = 3;
+                                    }},
+                                    new ParticleEffect(){{
+                                        region = "sfire-mod-star";
+                                        particles = 1;
+                                        length = baseLength = 0;
+                                        lifetime = 15;
+                                        spin = 3.34f;
+                                        sizeInterp = Interp.fastSlow;
+                                        sizeFrom = 130;
+                                        colorFrom = colorTo = Pal.heal;
+                                    }}
+                            );
+                            spawnBullets.add(
+                                    new LaserBulletType(216){{
+                                        length = 496;
+                                        width = 27;
+                                        healPercent = 5;
+                                        collidesTeam = true;
+                                        sideAngle = 30;
+                                        sideWidth = 0.8f;
+                                        sideLength = 70;
+                                        lifetime = 50;
+                                        status = SFStatusEffects.scrambled;
+                                        statusDuration = 60;
+                                        colors = new Color[]{Pal.heal.cpy().a(0.4f), Pal.heal, Color.white};
+                                    }},
+                                    new LaserBulletType(216){{
+                                        length = 496;
+                                        width = 27;
+                                        healPercent = 5;
+                                        collidesTeam = true;
+                                        sideAngle = 126;
+                                        sideWidth = 1f;
+                                        sideLength = 140;
+                                        lifetime = 50;
+                                        status = SFStatusEffects.scrambled;
+                                        statusDuration = 60;
+                                        colors = new Color[]{Pal.heal.cpy().a(0.4f), Pal.heal, Color.white};
+                                    }}
+                            );
+                        }};
+                    }},
+                    new Weapon(name("libra-bomb")){{
+                        reload = 420;
+                        x = 0;
+                        shootY = 24;
+                        shoot = new ShootPattern(){{shots = 6;shotDelay = 5;}};
+                        parts.add(new ShapePart(){{circle=true;hollow=false;radius=0;radiusTo=5;y=24;color=Pal.heal;layerOffset=-0.001f;}});
+                        parts.add(new ShapePart(){{circle=true;hollow=false;radius=0;radiusTo=5;y=24;color=Pal.heal;layer=100;progress=PartProgress.reload;}});
+                        parts.add(new RegionPart("-front"){{layerOffset=-0.001f;y=-24;moveY=24;mirror=false;}});
+                        rotate = false;
+                        mirror = false;
+                        cooldownTime = 300;
+                        inaccuracy = 0;
+                        shootSound = Sounds.plasmadrop;
+                        recoil = 0;
+                        bullet = new PointBulletType(){{
+                            damage = 20;
+                            lifetime = 8;
+                            speed = 60;
+                            hitSound = Sounds.none;
+                            despawnEffect = new ParticleEffect(){{
+                                particles = 1;
+                                sizeFrom = 16;
+                                length = 0;
+                                lifetime = 60;
+                                colorFrom = Pal.heal;
+                                colorTo = Pal.heal.cpy().a(0);
+                            }};
+                            shootEffect = Fx.bigShockwave;
+                            smokeEffect = Fx.none;
+                            hitEffect = new WaveEffect(){{
+                                lifetime = 60;
+                                sizeFrom = 100;
+                                strokeFrom = 4;
+                                strokeTo = 1;
+                                colorFrom = colorTo = Pal.heal;
+                            }};
+                            trailEffect = Fx.none;
+                            fragBullets = 1;
+                            fragAngle = 180;
+                            fragRandomSpread = 40;
+                            fragVelocityMin = fragVelocityMax = 1;
+                            fragBullet = new PointBulletType(){{
+                                lifetime = 100;
+                                speed = 10;
+                                trailEffect = hitEffect = Fx.none;
+                                despawnEffect = new MultiEffect(
+                                        new ParticleEffect(){{
+                                            line = true;
+                                            particles = 11;
+                                            strokeFrom = 8;
+                                            lenFrom = 46;
+                                            length = -103;
+                                            baseLength = 10;
+                                            lifetime = 30;
+                                            colorFrom = colorTo = Pal.heal;
+                                            cone = 60;
+                                        }},
+                                        new ParticleEffect(){{
+                                            particles = 1;
+                                            sizeTo = 30;
+                                            length = baseLength = 0;
+                                            lifetime = 20;
+                                            colorFrom = Pal.heal;
+                                            colorTo = Color.white.cpy().a(0);
+                                        }}
+                                );
+                                fragBullets = 1;
+                                fragAngle = 180;
+                                fragRandomSpread = 5;
+                                fragVelocityMin = 0.95f;
+                                fragVelocityMax = 1.05f;
+                                fragBullet = new BasicBulletType(10,840,"circle-bullet"){{
+                                    splashDamage = 180;
+                                    splashDamageRadius = 150;
+                                    scaledSplashDamage = true;
+                                    buildingDamageMultiplier = 1.25f;
+                                    lifetime = 100;
+                                    healPercent = 24;
+                                    collides = false;
+                                    shrinkX = shrinkY = 0.4f;
+                                    width = 30;
+                                    height = 30;
+                                    trailLength = 50;
+                                    trailWidth = 5;
+                                    trailColor = backColor = Pal.heal;
+                                    frontColor = Color.white;
+                                    trailEffect = new ParticleEffect(){{
+                                        particles = 4;
+                                        region = "sfire-mod-lozenge";
+                                        sizeFrom = 7;
+                                        sizeTo = 16;
+                                        length = 42;
+                                        lifetime = 33;
+                                        colorFrom = Pal.heal;
+                                        colorTo = Pal.heal.cpy().a(0);
+                                    }};
+                                    hitShake = 20;
+                                    status = SFStatusEffects.scrambled;
+                                    statusDuration = 30;
+                                    pierceBuilding = true;
+                                    hitSound = Sounds.plasmaboom;
+                                    hitEffect = new MultiEffect(
+                                            new ExplosionEffect(){{
+                                                lifetime = 40;
+                                                smokes = 0;
+                                                sparkColor = waveColor = Pal.heal;
+                                                sparks = 60;
+                                                sparkStroke = 6;
+                                                sparkLen = 85;
+                                                sparkRad = 133;
+                                                waveStroke = 19;
+                                                waveRad = 160;
+                                                waveLife = 15;
+                                            }},
+                                            new ParticleEffect(){{
+                                                particles = 30;
+                                                sizeFrom = 10;
+                                                sizeInterp = Interp.pow2Out;
+                                                interp = Interp.pow10Out;
+                                                length = 130;
+                                                baseLength = 30;
+                                                colorFrom = Pal.heal.cpy().a(0.88f);
+                                                colorTo = Pal.heal.cpy().a(0);
+                                            }},
+                                            new ParticleEffect(){{
+                                                particles = 1;
+                                                sizeFrom = 160;
+                                                sizeInterp = Interp.pow2Out;
+                                                length = baseLength = 0;
+                                                colorFrom = Pal.heal.cpy().a(0.4f);
+                                                colorTo = Pal.heal.cpy().a(0);
+                                            }}
+                                    );
+                                    despawnEffect = Fx.none;
+                                    parts.add(new FlarePart(){{
+                                        progress = PartProgress.life.slope().curve(Interp.fastSlow);
+                                        radius = 0f;
+                                        radiusTo = 135;
+                                        stroke = 15;
+                                        color1 = Pal.heal.cpy();
+                                        color2 = Pal.heal.cpy().a(0.55f);
+                                        rotation = 45;
+                                        spinSpeed = 4.6f;
+                                    }});
+                                }};
+                            }};
+                        }};
+                    }}
+            );
+        }};/*
+        panLong = new UnitType("agelenid"){{
+            constructor = UnitTypes.corvus.constructor;
+            armor = 30;
+            speed = 0.76f;
+            rotateSpeed = 1.12f;
+            hitSize = 48;
+            health = 81000;
+            legPairOffset = 3;
+            legExtension = -20;
+            legBaseOffset = 8;
+            stepShake = 1.2f;
+            legCount = 8;
+            legLength = 80;
+            legMoveSpace = 1;
+            rippleScale = 1.6f;
+            immunities.addAll(StatusEffects.sapped,StatusEffects.unmoving,StatusEffects.disarmed,SFStatusEffects.scrambled,SFStatusEffects.breakdown);
+            legSplashRange = 46;
+            legSplashDamage = 88;
+            drownTimeMultiplier = 6;
+            hovering = true;
+            allowLegStep = true;
+            weapons.addAll(
+
+            );
+        }}*/
 
         farmer = new UnitType("farmer") {{
             constructor = UnitTypes.mega.constructor;
@@ -1798,6 +2233,7 @@ public class SFUnitTypes {
         }};
         flamer = new UnitType("flamer") {{
             constructor = UnitTypes.dagger.constructor;;
+            itemCapacity = 0;
             health = 11500;
             armor = 19;
             hitSize = 35;
@@ -1909,6 +2345,7 @@ public class SFUnitTypes {
         }};
         thunder = new UnitType("thunder") {{
             constructor = UnitTypes.flare.constructor;
+            itemCapacity = 0;
             flying = true;
             speed = 2;
             drag = 0.04f;
@@ -2052,6 +2489,7 @@ public class SFUnitTypes {
         }};
         hammer = new UnitType("hammer") {{
             constructor = UnitTypes.atrax.constructor;
+            itemCapacity = 0;
             legCount = 4;
             legLength = 14;
             legForwardScl = 0.6f;
@@ -2123,7 +2561,7 @@ public class SFUnitTypes {
                     new Weapon(name("omega-gun")){{
                         x = y = 0;
                         recoil = 0;
-                        shootX = 5;
+                        shootX = -5;
                         shootY = 22;
                         reload = 6;
                         rotate = false;
@@ -2265,6 +2703,7 @@ public class SFUnitTypes {
             healFlash = false;
             faceTarget = false;
             targetAir = false;
+            itemCapacity = 0;
 
             treadFrames = 16;
             treadPullOffset = 8;
@@ -2433,6 +2872,7 @@ public class SFUnitTypes {
             hovering = true;
             healFlash = false;
             faceTarget = false;
+            itemCapacity = 0;
 
             treadFrames = 16;
             treadPullOffset = 8;
@@ -2522,6 +2962,7 @@ public class SFUnitTypes {
             hovering = true;
             healFlash = false;
             faceTarget = false;
+            itemCapacity = 0;
 
             treadFrames = 16;
             treadPullOffset = 8;
@@ -2567,6 +3008,7 @@ public class SFUnitTypes {
             healFlash = false;
             faceTarget = false;
             targetGround = false;
+            itemCapacity = 0;
 
             treadFrames = 16;
             treadPullOffset = 8;

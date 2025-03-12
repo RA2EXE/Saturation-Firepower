@@ -15,6 +15,7 @@ import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.*;
+import mindustry.world.blocks.distribution.BufferedItemBridge;
 import mindustry.world.blocks.distribution.Conveyor;
 import mindustry.world.blocks.distribution.Junction;
 import mindustry.world.blocks.liquid.Conduit;
@@ -25,13 +26,16 @@ import mindustry.world.blocks.production.Drill;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.production.Pump;
 import mindustry.world.blocks.storage.Unloader;
+import mindustry.world.consumers.ConsumeItemFlammable;
+import mindustry.world.consumers.ConsumeItemRadioactive;
 
 public class SFOverride {
     public static void load() {
 
-        //all drillspeed+10% as basic
+        /*
         ((Drill) Blocks.mechanicalDrill).drillTime = 540;
         ((Drill) Blocks.pneumaticDrill).drillTime = 360;
+        */
         ((Drill) Blocks.laserDrill).drillTime = 252;
         ((Drill) Blocks.laserDrill).updateEffect = Fx.hitLancer;
         ((Drill) Blocks.blastDrill).drillTime = 252;
@@ -86,16 +90,21 @@ public class SFOverride {
         }};
         Blocks.differentialGenerator.details = "得益于材料进步，我们能够用更少的材料控制更强大的燃烧、进行更大面积的换热、产出更多的电力……以及发生更危险的生产安全事故！";
 
-        //faster than faster
+        //faster than faste
+        /*
         ((Conveyor) Blocks.conveyor).speed = 0.08f;
         ((Conveyor) Blocks.conveyor).displayedSpeed = 8;
-        ((Junction) Blocks.junction).speed = 12;
+        ((Junction) Blocks.junction).speed = 20;
+        ((Junction) Blocks.junction).capacity = 9;
+        ((BufferedItemBridge) Blocks.itemBridge).speed = 20;
+        ((BufferedItemBridge) Blocks.itemBridge).bufferCapacity = 16;
         ((Conveyor) Blocks.titaniumConveyor).speed = 0.15f;
         ((Conveyor) Blocks.titaniumConveyor).displayedSpeed = 15;
         ((Conveyor) Blocks.armoredConveyor).speed = 0.15f;
         ((Conveyor) Blocks.armoredConveyor).displayedSpeed = 15;
-        Blocks.armoredConveyor.placeableLiquid = true;
         ((Unloader)Blocks.unloader).speed = 3;
+        */
+        Blocks.armoredConveyor.placeableLiquid = true;
 
         //crafting
         ((GenericCrafter)Blocks.siliconSmelter).craftTime = 40;
