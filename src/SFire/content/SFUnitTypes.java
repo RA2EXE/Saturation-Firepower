@@ -6,6 +6,7 @@ import arc.graphics.Color;
 import arc.math.*;
 import arc.math.geom.Rect;
 import arc.struct.ObjectSet;
+import jdk.jshell.Snippet;
 import mindustry.ai.UnitCommand;
 import mindustry.ai.types.AssemblerAI;
 import mindustry.ai.types.BuilderAI;
@@ -1600,7 +1601,7 @@ public class SFUnitTypes {
             immunities.add(StatusEffects.disarmed);
             weapons.add(
                     new Weapon(name("ordinance-weapon")){{
-                        reload = 4.45f;
+                        reload = 5.5f;
                         shake = 3;
                         recoil = 5;
                         x = 28;
@@ -1644,13 +1645,14 @@ public class SFUnitTypes {
                         }};
                     }},
                     new Weapon(name("ordinance-gun")){{
-                        reload = 60;
+                        reload = 50;
                         shootY = 7.5f;
                         x = 16;
                         y = 12;
                         controllable = false;
                         autoTarget = true;
-                        shootStatusDuration = 15;
+                        shootStatusDuration = 30;
+                        shootCone = 180;
                         shootStatus = SFStatusEffects.stormed;
                         shoot = new ShootSpread(5,5);
                         recoil = 2;
@@ -1701,6 +1703,7 @@ public class SFUnitTypes {
             buildSpeed = 8.5f;
             buildBeamOffset = 24;
             rippleScale = 1;
+            hovering = true;
             allowLegStep = true;
             drownTimeMultiplier = 8;
             immunities.addAll(StatusEffects.electrified, StatusEffects.unmoving, StatusEffects.disarmed, SFStatusEffects.scrambled);
@@ -1733,8 +1736,7 @@ public class SFUnitTypes {
             weapons.add(
                     new Weapon(name("libra-laser")){{
                         reload = 70;
-                        shootX = -3.5f;
-                        //shootY = 12f;
+                        shootY = 16f;
                         x = 28;
                         shake = 3;
                         recoil = 3;
@@ -1743,7 +1745,8 @@ public class SFUnitTypes {
                         shootCone = 5;
                         top = false;
                         shootSound = Sounds.malignShoot;
-                        cooldownTime = 80;
+                        cooldownTime = 120;
+                        heatColor = Color.red;
                         bullet = new BasicBulletType(25,100,"circle-bullet"){{
                             frontColor = Color.white;
                             backColor = trailColor = Pal.heal;
@@ -1770,6 +1773,7 @@ public class SFUnitTypes {
                             width = 14;
                             height = 14;
                             despawnEffect = Fx.none;
+                            hitSound = Sounds.laser;
                             hitEffect = new MultiEffect(
                                     new ExplosionEffect(){{
                                         sparks = 32;
@@ -1856,6 +1860,7 @@ public class SFUnitTypes {
                             hitEffect = new WaveEffect(){{
                                 lifetime = 60;
                                 sizeFrom = 100;
+                                sizeTo = 0;
                                 strokeFrom = 4;
                                 strokeTo = 1;
                                 colorFrom = colorTo = Pal.heal;
@@ -1961,7 +1966,7 @@ public class SFUnitTypes {
                                     parts.add(new FlarePart(){{
                                         progress = PartProgress.life.slope().curve(Interp.fastSlow);
                                         radius = 0f;
-                                        radiusTo = 135;
+                                        radiusTo = 85;
                                         stroke = 15;
                                         color1 = Pal.heal.cpy();
                                         color2 = Pal.heal.cpy().a(0.55f);
@@ -1973,7 +1978,7 @@ public class SFUnitTypes {
                         }};
                     }}
             );
-        }};/*
+        }};
         panLong = new UnitType("agelenid"){{
             constructor = UnitTypes.corvus.constructor;
             armor = 30;
@@ -1996,9 +2001,190 @@ public class SFUnitTypes {
             hovering = true;
             allowLegStep = true;
             weapons.addAll(
-
+                    new Weapon(name("agelenid-weapon")){{
+                        x = 24;
+                        rotate = false;
+                        reload = 150;
+                        shootCone = 30;
+                        shootY = 16;
+                        ejectEffect = Fx.none;
+                        shootSound = Sounds.missileLaunch;
+                        bullet = new BasicBulletType(2,120,"sfire-mod-dragon"){{
+                           lifetime = 300;
+                           homingDelay = 30;
+                           homingPower = 0.5f;
+                           homingRange = 60;
+                           width = 32;
+                           height = 65;
+                           weaveMag = 3;
+                           weaveScale = 10;
+                           hitShake = 4;
+                           shrinkX = shrinkY = 0;
+                           hitSound = Sounds.explosionbig;
+                           pierce = pierceBuilding = true;
+                           status = StatusEffects.sapped;
+                           statusDuration = 600;
+                           shootEffect = new WrapEffect(Fx.shootBigColor,Pal.sap);
+                           smokeEffect = new ParticleEffect(){{
+                               particles = 8;
+                               sizeFrom = 6;
+                               length = 50;
+                               lifetime = 25;
+                               colorFrom = Pal.sap;
+                               cone = 30;
+                           }};
+                           splashDamageRadius = 40;
+                           splashDamage = 50;
+                           frontColor = Pal.sapBulletBack;
+                           backColor = Pal.sapBullet;
+                           trailLength = 60;
+                           trailWidth = 6;
+                           trailColor = Pal.sapBullet;
+                           hitEffect = new ExplosionEffect(){{
+                               sparks = 0;
+                               waveLife = 15;
+                               waveRad = 40;
+                               waveStroke = 2;
+                               waveColor = Pal.sapBullet;
+                               lifetime = 25;
+                               smokes = 6;
+                               smokeSize = 15;
+                               smokeSizeBase = 3;
+                               smokeRad = 55;
+                               smokeColor = Pal.sapBullet;
+                           }};
+                           despawnEffect = new ExplosionEffect(){{
+                                sparks = 35;
+                                sparkStroke = 5;
+                                sparkRad = 75;
+                                sparkLen = 55;
+                                sparkColor = Pal.sapBullet;
+                                lifetime = 15;
+                                waveLife = 17;
+                                waveRad = 60;
+                                waveStroke = 4;
+                                waveColor = Pal.sapBullet;
+                                smokes = 16;
+                                smokeSize = 9;
+                                smokeRad = 45;
+                                smokeColor = Pal.sapBullet;
+                            }};
+                           fragRandomSpread = 0;
+                           fragBullets = 1;
+                           fragBullet = new ShrapnelBulletType(){{
+                               damage = 75;
+                               lifetime = 15;
+                               length = 110;
+                               width = 12;
+                               buildingDamageMultiplier = 0.83f;
+                               pierceArmor = true;
+                               serrationLenScl = 8;
+                               serrationSpaceOffset = 60;
+                               serrationFadeOffset = 0;
+                               serrations = 8;
+                               serrationWidth = 8;
+                               fromColor = Pal.sapBullet;
+                               toColor = Pal.sapBulletBack;
+                           }};
+                           intervalBullets = 1;
+                           bulletInterval = 10f;
+                           intervalRandomSpread = 180;
+                           intervalSpread = 60;
+                           intervalAngle = 0;
+                           intervalBullet = new BasicBulletType(6,60,"sfire-mod-dragon"){{
+                               absorbable = false;
+                               lifetime = 30;
+                               homingPower = 0.5f;
+                               homingRange = 90;
+                               width = 18;
+                               height = 35;
+                               weaveMag = 3;
+                               weaveScale = 3;
+                               shrinkX = shrinkY = 0;
+                               hitSound = Sounds.explosion;
+                               knockback = 5;
+                               status = StatusEffects.sapped;
+                               statusDuration = 180;
+                               frontColor = Pal.sapBulletBack;
+                               backColor = Pal.sapBullet;
+                               trailLength = 10;
+                               trailWidth = 2;
+                               trailColor = Pal.sapBullet;
+                               hitEffect = new ExplosionEffect(){{
+                                   smokes = 0;
+                                   waveLife = 15;
+                                   waveRad = 40;
+                                   waveStroke = 2;
+                                   waveColor = Pal.sapBullet;
+                                   lifetime = 25;
+                                   sparks = 5;
+                                   sparkColor = Pal.sapBullet;
+                                   sparkLen = 35;
+                                   sparkStroke = 2;
+                                   sparkRad = 45;
+                               }};
+                               despawnEffect = new ParticleEffect(){{
+                                   particles = 1;
+                                   sizeFrom = 5;
+                                   length = 0;
+                                   lifetime = 35;
+                                   colorFrom = colorTo = Pal.sapBullet;
+                               }};
+                           }};
+                        }};
+                    }},
+                    new Weapon(name("agelenid-sap")){{
+                        x = -7;
+                        y = 16;
+                        shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
+                        top = true;
+                        shootY = 8;
+                        reload = 33;
+                        ejectEffect = Fx.none;
+                        rotate = true;
+                        rotateSpeed = 5;
+                        recoil = 2;
+                        bullet = new SapBulletType(){{
+                            lifetime = 30;
+                            sapStrength = 2;
+                            length = 90;
+                            width = 0.7f;
+                            knockback = -1.24f;
+                            statusDuration = 60;
+                            damage = 50;
+                            status = StatusEffects.sapped;
+                            shootEffect = Fx.shootSmall;
+                            hitColor = color = Color.valueOf("bf92f9");
+                            despawnEffect = Fx.none;
+                        }};
+                    }},
+                    new Weapon(name("agelenid-sap")){{
+                        x = -16;
+                        y = 8;
+                        shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
+                        top = true;
+                        shootY = 8;
+                        reload = 33;
+                        ejectEffect = Fx.none;
+                        rotate = true;
+                        rotateSpeed = 5;
+                        recoil = 2;
+                        bullet = new SapBulletType(){{
+                            lifetime = 30;
+                            sapStrength = 2;
+                            length = 90;
+                            width = 0.7f;
+                            knockback = -1.24f;
+                            statusDuration = 60;
+                            damage = 50;
+                            status = StatusEffects.sapped;
+                            shootEffect = Fx.shootSmall;
+                            hitColor = color = Color.valueOf("bf92f9");
+                            despawnEffect = Fx.none;
+                        }};
+                    }}
             );
-        }}*/
+        }};
 
         farmer = new UnitType("farmer") {{
             constructor = UnitTypes.mega.constructor;
@@ -3308,7 +3494,6 @@ public class SFUnitTypes {
                             despawnEffect = Fx.none;
                         }};
                     }}
-
             );
         }};
     }

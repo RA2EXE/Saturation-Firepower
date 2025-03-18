@@ -342,7 +342,7 @@ public class SFStatusEffects {
                 spin = 9;
                 region = "sfire-mod-triangle";
                 sizeFrom = 2.5f;
-                colorFrom = Color.red.lerp(Color.white, 0.5f);
+                colorFrom = Color.valueOf("FF7C7C");
                 colorTo = Color.red;
             }};
         }};
