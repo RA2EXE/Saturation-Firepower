@@ -307,32 +307,6 @@
 					"lifetime": 20
 				}
 			}
-		},
-		{
-			"name": "广寒2",
-			"type": "RepairBeamWeapon",
-			"x": 40,
-			"y": -8,
-			"shootY": 6,
-			"beamWidth": 1,
-			"mirror": true,
-			"repairSpeed": 5,
-			"bullet": {
-				"maxRange": 200
-			}
-		},
-		{
-			"name": "广寒3",
-			"type": "RepairBeamWeapon",
-			"x": 0,
-			"y": -32,
-			"shootY": 6,
-			"beamWidth": 1.4,
-			"mirror": false,
-			"repairSpeed": 8,
-			"bullet": {
-				"maxRange": 230
-			}
 		}
 	],
 	"parts": [

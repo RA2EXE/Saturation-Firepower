@@ -10,6 +10,8 @@ import jdk.jshell.Snippet;
 import mindustry.ai.UnitCommand;
 import mindustry.ai.types.AssemblerAI;
 import mindustry.ai.types.BuilderAI;
+import mindustry.ai.types.DefenderAI;
+import mindustry.ai.types.SuicideAI;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.StatusEffects;
@@ -614,6 +616,7 @@ public class SFUnitTypes {
         }};*/
         knocker = new UnitType("knocker") {{
             constructor = UnitTypes.corvus.constructor;
+            aiController = SuicideAI::new;
             outlineColor = SFColor.darkOutline;
             itemCapacity = 0;
             armor = 15;
@@ -2004,6 +2007,7 @@ public class SFUnitTypes {
                     new Weapon(name("agelenid-weapon")){{
                         x = 24;
                         rotate = false;
+                        top = false;
                         reload = 150;
                         shootCone = 30;
                         shootY = 16;
@@ -2181,6 +2185,135 @@ public class SFUnitTypes {
                             shootEffect = Fx.shootSmall;
                             hitColor = color = Color.valueOf("bf92f9");
                             despawnEffect = Fx.none;
+                        }};
+                    }}
+            );
+        }};
+        guangHan = new UnitType("hepta"){{
+            constructor = UnitTypes.oct.constructor;
+            payloadCapacity = 9 * 9 * 64;
+            aiController = DefenderAI::new;
+            speed = 0.81f;
+            drag = 0.08f;
+            accel = 0.07f;
+            rotateSpeed = 1.2f;
+            immunities.addAll(StatusEffects.slow,StatusEffects.unmoving,StatusEffects.muddy,StatusEffects.electrified,SFStatusEffects.repairX,SFStatusEffects.disRepair);
+            hitSize = 98;
+            buildSpeed = 9;
+            buildBeamOffset = 11;
+            flying = true;
+            health = 90000;
+            armor = 25;
+            engineSize = 0;
+            lowAltitude = true;
+            setEnginesMirror(
+                    new UnitEngine(32f, -32, 10f, -45f),
+                    new UnitEngine(32f, 32, 10f, 45f)
+            );
+            abilities.add(new StatusFieldAbility(SFStatusEffects.repairX,70,60,240){{
+                activeEffect = new WaveEffect(){{
+                    lifetime = 10;
+                    sizeFrom = sizeTo = 240;
+                    strokeFrom = 8;
+                    colorFrom = Pal.heal;
+                    colorTo = Pal.heal.cpy().a(0);
+                }};
+            }});
+            abilities.add(new EnergyFieldAbility(80,120,240){{
+                healPercent = 2.5f;
+                effectRadius = 13;
+                sectors = 6;
+                sectorRad = 0.11f;
+                sameTypeHealMult = 0.3f;
+                shootSound = Sounds.shotgun;
+                hitEffect = new ParticleEffect(){{
+                    particles = 1;
+                    sizeFrom = 16;
+                    sizeTo = 35;
+                    lifetime = 15;
+                    colorFrom = Pal.heal;
+                    colorTo = Pal.heal.cpy().a(0);
+                }};
+                damageEffect = Fx.chainLightning;
+                status = SFStatusEffects.scrambled;
+                statusDuration = 360;
+                maxTargets = 18;
+            }});
+            abilities.add(new ShieldRegenFieldAbility(180,1800,80,200){{
+                activeEffect = new WaveEffect(){{
+                    interp = Interp.circleOut;
+                    lifetime = 35;
+                    sizeFrom = 16;
+                    sizeTo = 240;
+                    strokeFrom = 15;
+                    colorFrom = colorTo = Pal.heal;
+                }};
+            }});
+            weapons.addAll(
+                    new Weapon(name("hepta-laser")){{
+                        reload = 85;
+                        x = 0;
+                        rotate = true;
+                        rotateSpeed = 20;
+                        recoil = 0;
+                        inaccuracy = 1;
+                        xRand = 8;
+                        mirror = false;
+                        shootSound = Sounds.laser;
+                        shake = 3;
+                        shoot = new ShootPattern(){{
+                            shots = 5;
+                            shotDelay = 3;
+                        }};
+                        bullet = new LaserBulletType(60){{
+                            healPercent = 2.5f;
+                            width = 22;
+                            length = 240;
+                            status = SFStatusEffects.scrambled;
+                            statusDuration = 16;
+                            collidesTeam = true;
+                            hitEffect = Fx.hitLaserBlast;
+                            shootEffect = smokeEffect = Fx.none;
+                            colors = new Color[]{Pal.heal.cpy().a(0.4f), Pal.heal, Color.white};
+                        }};
+                    }},
+                    new RepairBeamWeapon(name("hepta-repair")){{
+                        x = 40;
+                        y = -8;
+                        shootY = 6;
+                        beamWidth = 1;
+                        targetBuildings = true;
+                        mirror = true;
+                        repairSpeed = 4.5f;
+                        fractionRepairSpeed = 0.01f;
+                        bullet = new BulletType(){{
+                            maxRange = 220;
+                        }};
+                    }},
+                    new RepairBeamWeapon(name("hepta-repair")){{
+                        x = 20;
+                        y = 20;
+                        shootY = 6;
+                        beamWidth = 1;
+                        targetBuildings = true;
+                        mirror = true;
+                        repairSpeed = 4.5f;
+                        fractionRepairSpeed = 0.01f;
+                        bullet = new BulletType(){{
+                            maxRange = 220;
+                        }};
+                    }},
+                    new RepairBeamWeapon(name("hepta-repair")){{
+                        x = 0;
+                        y = -48;
+                        shootY = 6;
+                        beamWidth = 1;
+                        targetBuildings = true;
+                        mirror = false;
+                        repairSpeed = 4.5f;
+                        fractionRepairSpeed = 0.01f;
+                        bullet = new BulletType(){{
+                            maxRange = 220;
                         }};
                     }}
             );
