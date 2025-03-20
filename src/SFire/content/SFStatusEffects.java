@@ -23,7 +23,7 @@ public class SFStatusEffects {
             repair, repairX, disRepair, scrambled, strengthen, negative, postive,
             magnStrif, marked, acidded, inBreak, breakdown, echoFlame, overLoad,
             stormed, shattered, overFreezing, chemicalFlame, fullFire,
-            skewed, charging ;
+            skewed, charging;
 
     public static void load() {
         repair = new StatusEffect("repair") {{
@@ -54,7 +54,7 @@ public class SFStatusEffects {
             effect = new ParticleEffect() {{
                 particles = 1;
                 line = true;
-                lenFrom = 20;
+                lenFrom = 12;
                 lenTo = 0;
                 strokeFrom = 2;
                 strokeTo = 0;
@@ -65,9 +65,7 @@ public class SFStatusEffects {
                 sizeInterp = Interp.pow3In;
                 colorFrom = colorTo = Pal.heal;
             }};
-            init(() -> {
-                opposite(burning, sapped, melting, tarred, disRepair, scrambled);
-            });
+            init(() -> opposite(burning, sapped, melting, tarred, disRepair, scrambled));
         }};
         disRepair = new StatusEffect("dismantle") {{
             color = Pal.heal;
@@ -84,9 +82,7 @@ public class SFStatusEffects {
                 interp = Interp.fastSlow;
                 colorFrom = Pal.heal;
             }};
-            init(() -> {
-                opposite(repair, repairX);
-            });
+            init(() -> opposite(repair, repairX));
         }};
         scrambled = new StatusEffect("scrambled") {{
             color = Pal.heal;
@@ -104,9 +100,7 @@ public class SFStatusEffects {
                 interp = Interp.fastSlow;
                 colorTo = colorFrom = Pal.heal;
             }};
-            init(() -> {
-                opposite(repairX);
-            });
+            init(() -> opposite(repairX));
         }};
         strengthen = new StatusEffect("strengthen") {{
             color = Pal.heal;
@@ -164,9 +158,7 @@ public class SFStatusEffects {
                 lifetime = 10;
                 colorFrom = colorTo = Color.valueOf("EAC2A9");
             }};
-            init(() -> {
-                opposite(burning, melting, breakdown, magnStrif);
-            });
+            init(() -> opposite(burning, melting, breakdown, magnStrif));
         }};
         magnStrif = new StatusEffect("magnetic-strif") {{
             color = Color.gray;
@@ -221,7 +213,7 @@ public class SFStatusEffects {
                 colorTo = Color.valueOf("a0b46e00");
             }};
         }};
-        inBreak = new StatusEffect("inside-break"){{
+        inBreak = new StatusEffect("inside-break") {{
             color = Color.valueOf("666484");
             healthMultiplier = 0.9f;
             reloadMultiplier = 0.9f;
@@ -264,7 +256,7 @@ public class SFStatusEffects {
                 });
             });
         }};
-        echoFlame = new StatusEffect("echo-flame"){{
+        echoFlame = new StatusEffect("echo-flame") {{
             color = SFColor.plastLight;
             damage = 120;
             dragMultiplier = 1.8f;
@@ -289,7 +281,7 @@ public class SFStatusEffects {
                         sizeInterp = Interp.pow3In;
                         region = "sfire-mod-star";
                         sizeFrom = 9;
-                        colorFrom =  SFColor.plastLight.cpy().a(0.05f);
+                        colorFrom = SFColor.plastLight.cpy().a(0.05f);
                         colorTo = SFColor.plastLight;
                     }}
             );
@@ -297,7 +289,7 @@ public class SFStatusEffects {
             init(() -> {
                 affinity(breakdown, (unit, result, time) -> {
                     float transitionDamageMultiplier = 1.5f;
-                    new WrapEffect(){{
+                    new WrapEffect() {{
                         effect = Fx.dynamicSpikes;
                         color = SFColor.plastLight;
                         rotation = 60;
@@ -308,33 +300,33 @@ public class SFStatusEffects {
                 });
             });
         }};
-        overLoad = new StatusEffect("over-load"){{
+        overLoad = new StatusEffect("over-load") {{
             color = SFColor.energyYellow;
-            damage = 20/3f;
-            damageMultiplier = 25/3f;
+            damage = 20 / 3f;
+            damageMultiplier = 25 / 3f;
             healthMultiplier = 0.54f;
             reloadMultiplier = 0.36f;
             effectChance = 0.08f;
-            effect = new WaveEffect(){{
+            effect = new WaveEffect() {{
                 sizeFrom = 8;
                 sizeTo = 26;
                 strokeFrom = 12;
                 interp = Interp.circleOut;
                 lifetime = 16;
-                colorFrom =  SFColor.energyYellow.cpy().a(0.08f);
+                colorFrom = SFColor.energyYellow.cpy().a(0.08f);
                 colorTo = SFColor.energyYellow;
                 lightOpacity = 0.12f;
             }};
         }};
 
-        stormed = new StatusEffect("stormed"){{
+        stormed = new StatusEffect("stormed") {{
             color = SFColor.enemyRedLight;
             healthMultiplier = 1.2f;
             speedMultiplier = 1.25f;
             reloadMultiplier = 1.5f;
             damageMultiplier = 2;
             effectChance = 0.8f;
-            effect = new ParticleEffect(){{
+            effect = new ParticleEffect() {{
                 particles = 3;
                 baseLength = 26;
                 length = -25;
@@ -346,22 +338,22 @@ public class SFStatusEffects {
                 colorTo = Color.red;
             }};
         }};
-        shattered = new StatusEffect("shattered"){{
+        shattered = new StatusEffect("shattered") {{
             color = SFColor.enemyRedDark;
-           healthMultiplier =  0.75f;
-           speedMultiplier = 0.8f;
-           damageMultiplier = 0.7f;
-           damage = 9;
-           effectChance = 0.8f;
-           effect = new ParticleEffect(){{
-               particles = 1;
-               length = 65;
-               lifetime = 10;
-               spin = 12;
-               region = "sfire-mod-triangle";
-               sizeFrom = 4f;
-               colorFrom = Color.red.lerp(Color.white, 0.5f);
-           }};
+            healthMultiplier = 0.75f;
+            speedMultiplier = 0.8f;
+            damageMultiplier = 0.7f;
+            damage = 9;
+            effectChance = 0.8f;
+            effect = new ParticleEffect() {{
+                particles = 1;
+                length = 65;
+                lifetime = 10;
+                spin = 12;
+                region = "sfire-mod-triangle";
+                sizeFrom = 4f;
+                colorFrom = Color.red.lerp(Color.white, 0.5f);
+            }};
         }};
         overFreezing = new StatusEffect("over-freezing") {{
             color = Liquids.cryofluid.color;
@@ -395,7 +387,7 @@ public class SFStatusEffects {
                         sizeInterp = Interp.fastSlow;
                         sizeFrom = 1;
                         colorFrom = SFColor.enemyRedLight;
-                        colorTo =  SFColor.enemyRedLight.cpy().a(0.5f);
+                        colorTo = SFColor.enemyRedLight.cpy().a(0.5f);
                     }},
                     new ParticleEffect() {{
                         particles = 3;
@@ -405,7 +397,7 @@ public class SFStatusEffects {
                         interp = Interp.pow10Out;
                         sizeInterp = Interp.pow5In;
                         sizeFrom = 3;
-                        colorFrom =  SFColor.enemyRedLight.cpy().a(0.8f);
+                        colorFrom = SFColor.enemyRedLight.cpy().a(0.8f);
                         colorTo = Color.valueOf("585858A8");
                     }}
             );
@@ -432,10 +424,26 @@ public class SFStatusEffects {
             }
              */
             effect = new MultiEffect(
-                    new WrapEffect(){{effect = Fx.colorSparkBig;color=Color.gray;rotation = 45;}},
-                    new WrapEffect(){{effect = Fx.colorSparkBig;color=Color.gray;rotation = 135;}},
-                    new WrapEffect(){{effect = Fx.colorSparkBig;color=Color.gray;rotation = 225;}},
-                    new WrapEffect(){{effect = Fx.colorSparkBig;color=Color.gray;rotation = 315;}}
+                    new WrapEffect() {{
+                        effect = Fx.colorSparkBig;
+                        color = Color.gray;
+                        rotation = 45;
+                    }},
+                    new WrapEffect() {{
+                        effect = Fx.colorSparkBig;
+                        color = Color.gray;
+                        rotation = 135;
+                    }},
+                    new WrapEffect() {{
+                        effect = Fx.colorSparkBig;
+                        color = Color.gray;
+                        rotation = 225;
+                    }},
+                    new WrapEffect() {{
+                        effect = Fx.colorSparkBig;
+                        color = Color.gray;
+                        rotation = 315;
+                    }}
             );
             init(() -> {
                 opposite(skewed, shattered, marked);
@@ -450,12 +458,12 @@ public class SFStatusEffects {
             reloadMultiplier = 1.43f;
             effectChance = 0.2f;
             effect = new MultiEffect(
-                    new WrapEffect(){{
+                    new WrapEffect() {{
                         effect = Fx.dynamicSpikes;
                         color = SFColor.tayrLight;
                         rotation = 22;
                     }},
-                    new ParticleEffect(){{
+                    new ParticleEffect() {{
                         particles = 16;
                         line = true;
                         strokeFrom = 1.5f;

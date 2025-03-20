@@ -195,61 +195,6 @@
 				"maxRange": 250,
 				"damage": 90
 			}
-		},
-		{
-			"name": "余晖3",
-			"mirror": false,
-			"top": false,
-			"shake": 4,
-			"shootY": 40,
-			"x": 0,
-			"y": 0,
-			"reload": 270,
-			"chargeSound": "lasercharge",
-			"shootSound": "laserbig",
-			"continuous": true,
-			"cooldownTime": 200,
-			"bullet": {
-				"type": "ContinuousLaserBulletType",
-				"damage": 240,
-				"width": 6,
-				"length": 300,
-				"colors": [
-					"D86E56FF",
-					"FFA05CFF",
-					"FFFFFF"
-				],
-				"hitEffect": {
-					"type": "ParticleEffect",
-					"particles": 6,
-					"sizeFrom": 9,
-					"sizeTo": 0,
-					"line": true,
-					"length": 85,
-					"baseLength": 0,
-					"lifetime": 25,
-					"colorFrom": "FFA05CFF",
-					"colorTo": "D86E56FF",
-					"cone": 80
-				},
-				"lifetime": 145,
-				"hitShake": 2,
-				"despawnEffect": "smokeCloud",
-				"smokeEffect": "none",
-				"chargeEffect": {
-					"type": "WaveEffect",
-					"lifetime": 89,
-					"sizeFrom": 100,
-					"sizeTo": 0,
-					"strokeFrom": 0,
-					"strokeTo": 9,
-					"colorFrom": "FFA05CFF",
-					"colorTo": "D86E56FF"
-				},
-				"incendChance": 0.1,
-				"incendSpread": 8,
-				"incendAmount": 1
-			}
 		}
 	]
 }

@@ -30,6 +30,7 @@ import mindustry.type.unit.*;
 import mindustry.type.weapons.PointDefenseWeapon;
 import mindustry.type.weapons.RepairBeamWeapon;
 import mindustry.world.meta.*;
+import rhino.UintMap;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -867,8 +868,8 @@ public class SFUnitTypes {
                     }}
             );
         }};
-/*
-        painA = new UnitType("Partiality-A") {{
+        /*
+        painA = new UnitType("partiality-A") {{
             constructor = UnitTypes.corvus.constructor;
             flying = false;
             speed = 1.28f;
@@ -880,7 +881,7 @@ public class SFUnitTypes {
         painB = new UnitType("Partiality-B") {{}};
         painC = new UnitType("Partiality-C") {{}};
         painD = new UnitType("Partiality-D") {{}};
-*/
+        */
 
         blade = new UnitType("blade") {{
             constructor = UnitTypes.zenith.constructor;
@@ -1367,7 +1368,6 @@ public class SFUnitTypes {
                                 sparkStroke = 2.5f;
                                 sparkLen = 13;
                                 smokes = 10;
-                                smokeSizeBase = 10;
                                 smokeRad = 33;
                                 lifetime = 35;
                                 smokeColor = SFColor.enemyRedLight.cpy().a(0.56f);
@@ -1682,7 +1682,6 @@ public class SFUnitTypes {
                         }};
                     }}
             );
-
         }};
         diXing = new UnitType("libra"){{
             constructor = UnitTypes.corvus.constructor;
@@ -2096,6 +2095,9 @@ public class SFUnitTypes {
                            intervalSpread = 60;
                            intervalAngle = 0;
                            intervalBullet = new BasicBulletType(6,60,"sfire-mod-dragon"){{
+                               splashDamage = 40;
+                               splashDamageRadius = 16;
+                               scaledSplashDamage = true;
                                absorbable = false;
                                lifetime = 30;
                                homingPower = 0.5f;
@@ -2141,6 +2143,7 @@ public class SFUnitTypes {
                         x = -7;
                         y = 16;
                         shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
+                        shootSound = Sounds.sap;
                         top = true;
                         shootY = 8;
                         reload = 33;
@@ -2155,7 +2158,7 @@ public class SFUnitTypes {
                             width = 0.7f;
                             knockback = -1.24f;
                             statusDuration = 60;
-                            damage = 50;
+                            damage = 77;
                             status = StatusEffects.sapped;
                             shootEffect = Fx.shootSmall;
                             hitColor = color = Color.valueOf("bf92f9");
@@ -2166,6 +2169,7 @@ public class SFUnitTypes {
                         x = -16;
                         y = 8;
                         shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
+                        shootSound = Sounds.sap;
                         top = true;
                         shootY = 8;
                         reload = 33;
@@ -2180,7 +2184,7 @@ public class SFUnitTypes {
                             width = 0.7f;
                             knockback = -1.24f;
                             statusDuration = 60;
-                            damage = 50;
+                            damage = 77;
                             status = StatusEffects.sapped;
                             shootEffect = Fx.shootSmall;
                             hitColor = color = Color.valueOf("bf92f9");
@@ -2193,7 +2197,7 @@ public class SFUnitTypes {
             constructor = UnitTypes.oct.constructor;
             payloadCapacity = 9 * 9 * 64;
             aiController = DefenderAI::new;
-            speed = 0.81f;
+            speed = 0.68f;
             drag = 0.08f;
             accel = 0.07f;
             rotateSpeed = 1.2f;
@@ -2205,6 +2209,7 @@ public class SFUnitTypes {
             health = 90000;
             armor = 25;
             engineSize = 0;
+            faceTarget = false;
             lowAltitude = true;
             setEnginesMirror(
                     new UnitEngine(32f, -32, 10f, -45f),
@@ -2314,6 +2319,230 @@ public class SFUnitTypes {
                         fractionRepairSpeed = 0.01f;
                         bullet = new BulletType(){{
                             maxRange = 220;
+                        }};
+                    }}
+            );
+            parts.add(
+                    new ShapePart(){{
+                        stroke = strokeTo = 2;
+                        color = Color.valueOf("97FFA8AF");
+                        circle = true;
+                        hollow = true;
+                        radius = radiusTo = 240;
+                        layer = 110;
+                    }},
+                    new HaloPart(){{
+                        rotateSpeed = 0;
+                        sides = 3;
+                        shapes = 6;
+                        color = Color.valueOf("97FFA890");
+                        tri = true;
+                        hollow = true;
+                        stroke = 0;
+                        strokeTo = 0.1f;
+                        radiusTo = radius = 480;
+                        triLength = triLengthTo = 16;
+                        haloRadius = 8;
+                        haloRotation = 0;
+                        haloRotateSpeed = -0.1f;
+                        layer = 80;
+                    }}
+            );
+        }};
+        yuHui = new UnitType("sundown"){{
+            constructor = UnitTypes.eclipse.constructor;
+            health = 74000;
+            armor = 33;
+            speed = 0.62f;
+            drag = 0.05f;
+            accel = 0.04f;
+            flying = true;
+            hitSize = 86;
+            lowAltitude = true;
+            rotateSpeed = 0.78f;
+            engineOffset = 40;
+            engineSize = 16;
+            BulletType sundownBullet = new FlakBulletType(10, 26){{
+                lifetime = 39.6f;
+                splashDamage = 80;
+                splashDamageRadius = 45f;
+                collidesGround = true;
+                shootEffect = Fx.shootBig;
+                smokeEffect = Fx.shootBigSmoke;
+                trailLength = 5;
+                trailWidth = 4;
+                lightningColor = trailColor = backColor = Color.valueOf("FFA05C");
+                width = 12;
+                height = 26;
+                lightningLength = 10;
+                lightning = 2;
+                lightningLengthRand = 3;
+                lightningDamage = 40;
+                status = StatusEffects.blasted;
+                hitEffect = Fx.flakExplosionBig;
+                fragBullets = 3;
+                fragBullet = new BasicBulletType(8,13){{
+                    splashDamage = 25;
+                    splashDamageRadius = 25;
+                    lifetime = 10;
+                    trailLength = 3;
+                    trailWidth = 2;
+                    lightningColor = trailColor = backColor = Color.valueOf("FFA05C");
+                    width = 8;
+                    height = 9;
+                    lightningLength = 7;
+                    lightning = 1;
+                    lightningDamage = 13;
+                    hitEffect = Fx.flakExplosion;
+                }};
+            }};
+            weapons.addAll(
+                    new Weapon(name("sundown-weapon")){{
+                        reload = 33;
+                        x = 22.5f;
+                        y = 23;
+                        inaccuracy = 6;
+                        shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
+                        shootY = 10.5f;
+                        rotate = true;
+                        rotateSpeed = 2.3f;
+                        recoil = 2;
+                        shake = 1;
+                        shootSound = Sounds.shootBig;
+                        ejectEffect = Fx.casing3;
+                        bullet = sundownBullet;
+                    }},
+                    new Weapon(name("sundown-weapon")){{
+                        reload = 30;
+                        x = 38.5f;
+                        y = 5.25f;
+                        inaccuracy = 6;
+                        shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
+                        shootY = 10.5f;
+                        rotate = true;
+                        rotateSpeed = 2.3f;
+                        recoil = 2;
+                        shake = 1;
+                        shootSound = Sounds.shootBig;
+                        ejectEffect = Fx.casing3;
+                        bullet = sundownBullet;
+                    }},
+                    new PointDefenseWeapon(name("ordinance-gun")){{
+                        x = 18;
+                        y = -20;
+                        mirror = true;
+                        rotateSpeed = 9;
+                        rotate = true;
+                        reload = 10;
+                        targetInterval = 8;
+                        targetSwitchInterval = 8;
+                        bullet = new BulletType(){{
+                            maxRange = 250;
+                            damage = 80;
+                            shootEffect = Fx.sparkShoot;
+                            hitEffect = Fx.pointHit;
+                        }};
+                    }},
+                    new Weapon(name("sundown-m")){{
+                        reload = 500;
+                        rotate = false;
+                        baseRotation = -90;
+                        x = 18;
+                        y = -20;
+                        shootSound = Sounds.missileSmall;
+                        shootWarmupSpeed = 0.085f;
+                        minWarmup = 0.98f;
+                        parts.add(new RegionPart("-side"){{
+                            x = 0;
+                            y = 0;
+                            moveRot = -80;
+                        }});
+                        shake = 5;
+                        shootCone = 360;
+                        inaccuracy = 10;
+                        xRand = 16;
+                        shoot = new ShootPattern(){{shots=9;shotDelay=5;}};
+                        bullet = new BulletType(){{
+                            speed = 0;
+                            maxRange = 800;
+                            keepVelocity = false;
+                            shootEffect = Fx.shootTitan;
+                            smokeEffect = Fx.shootBigSmoke;
+                            spawnUnit = new MissileUnitType("sundown-missile"){{
+                                targetAir = true;
+                                speed = 5;
+                                missileAccelTime = 40;
+                                homingDelay = 40;
+                                lifetime = 200;
+                                hitSize = 10;
+                                health = 600;
+                                trailLength = 35;
+                                engineLayer = 110;
+                                engineOffset = 10;
+                                engineSize = 3;
+                                maxRange = 25;
+                                /*abilities.add(new MoveEffectAbility(){{
+                                    effect = new ParticleEffect(){{
+                                        particles = 3;
+                                        sizeFrom = 5;
+                                        interp = Interp.pow5Out;
+                                        sizeInterp = Interp.pow5;
+                                        length = 25;
+                                        baseLength = 2;
+                                        lifetime = 93;
+                                        colorFrom = Color.valueOf("FFA05C88");
+                                        colorTo = Color.valueOf("FFA05C48");
+                                        cone = 30;
+                                    }};
+                                    interval = 2;
+                                    rotateEffect = true;
+                                    y = -16;
+                                }});*/
+                                parts.add(new RegionPart("-wing"){{
+                                    mirror = true;
+                                    top = false;
+                                    under = true;
+                                    x = 4;
+                                    y = -4;
+                                    moveX = moveY = 4;
+                                    rotation = -45;
+                                    moveRot = 45;
+                                    progress = PartProgress.life.curve(Interp.pow3Out);
+                                }});
+                                weapons.add(new Weapon(){{
+                                    shootCone = 360;
+                                    shake = 5;
+                                    mirror = false;
+                                    reload = 1;
+                                    shootOnDeath = true;
+                                    shootSound = Sounds.none;
+                                    bullet = new BasicBulletType(10,10){{
+                                        lifetime = 2.5f;
+                                        instantDisappear = true;
+                                        collides = false;
+                                        hitSound = Sounds.titanExplosion;
+                                        killShooter = true;
+                                        scaledSplashDamage = true;
+                                        splashDamageRadius = 50;
+                                        splashDamage = 110;
+                                        status = StatusEffects.melting;
+                                        statusDuration = 70;
+                                        shootEffect = Fx.massiveExplosion;
+                                        despawnEffect = Fx.none;
+                                        hitEffect = new ExplosionEffect(){{
+                                            lifetime = 25;
+                                            waveColor = smokeColor = Color.valueOf("FFA05C");
+                                            smokes = 15;
+                                            smokeRad = 50;
+                                            smokeSize = 8;
+                                            smokeSizeBase = 3;
+                                            waveStroke = 5;
+                                            waveRad = 60;
+                                            waveLife = 20;
+                                        }};
+                                    }};
+                                }});
+                            }};
                         }};
                     }}
             );
@@ -2551,7 +2780,7 @@ public class SFUnitTypes {
             );
         }};
         flamer = new UnitType("flamer") {{
-            constructor = UnitTypes.dagger.constructor;;
+            constructor = UnitTypes.dagger.constructor;
             itemCapacity = 0;
             health = 11500;
             armor = 19;
@@ -3575,7 +3804,7 @@ public class SFUnitTypes {
                                 x = 8;
                                 moves.add(new PartMove(PartProgress.recoil,0,-2,0));
                             }});
-                        };
+                        }
                         for(int i = 1; i <= 2; i++){
                             int fi = i;
                             parts.add(new RegionPart("-2"){{
@@ -3588,7 +3817,7 @@ public class SFUnitTypes {
                                 x = -8;
                                 moves.add(new PartMove(PartProgress.recoil,0,-2,0));
                             }});
-                        };
+                        }
                         bullet = new RailBulletType(){{
                             damage = 32;
                             status = SFStatusEffects.breakdown;

@@ -2124,11 +2124,11 @@ public class SFBlocks {
             size = 11;
             liquidCapacity = 300;
             upgrades.addAll(
-                    //        new UnitType[]{UnitTypes.reign, SFUnitTypes.liXian},
-                    //        new UnitType[]{UnitTypes.corvus, SFUnitTypes.diXing},
-                    //        new UnitType[]{UnitTypes.toxopid, SFUnitTypes.panLong},
-                    //        new UnitType[]{UnitTypes.oct, SFUnitTypes.guangHan},
-                    //        new UnitType[]{UnitTypes.eclipse, SFUnitTypes.yuHui},
+                    new UnitType[]{UnitTypes.reign, SFUnitTypes.liXian},
+                    new UnitType[]{UnitTypes.corvus, SFUnitTypes.diXing},
+                    new UnitType[]{UnitTypes.toxopid, SFUnitTypes.panLong},
+                    new UnitType[]{UnitTypes.oct, SFUnitTypes.guangHan},
+                    new UnitType[]{UnitTypes.eclipse, SFUnitTypes.yuHui}
                     //       new UnitType[]{UnitTypes.omura, SFUnitTypes.tengWang},
                     //       new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan}
             );
