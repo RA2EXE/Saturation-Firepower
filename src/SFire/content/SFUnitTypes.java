@@ -158,7 +158,7 @@ public class SFUnitTypes {
     //special force + flagship*/
             farmer, carrier, //repairer,
             flamer, thunder, banisher, hammer,
-            omega, terrascape,
+            tau, omega, terrascape,
     //campaign only
     utv, utvA, utvC, utvD, utvM,
     //drones
@@ -1598,7 +1598,7 @@ public class SFUnitTypes {
             speed = 0.58f;
             rotateSpeed = 1.44f;
             baseRotateSpeed = 1.3f;
-            health = 88000;
+            health = 76000;
             mechSideSway = 0.8f;
             mechFrontSway = 2.2f;
             immunities.add(StatusEffects.disarmed);
@@ -2363,7 +2363,7 @@ public class SFUnitTypes {
             engineOffset = 40;
             engineSize = 16;
             BulletType sundownBullet = new FlakBulletType(10, 26){{
-                lifetime = 39.6f;
+                lifetime = 30.4f;
                 splashDamage = 80;
                 splashDamageRadius = 45f;
                 collidesGround = true;
@@ -2399,8 +2399,8 @@ public class SFUnitTypes {
             weapons.addAll(
                     new Weapon(name("sundown-weapon")){{
                         reload = 33;
-                        x = 22.5f;
-                        y = 23;
+                        x = 22.25f;
+                        y = 22.75f;
                         inaccuracy = 6;
                         shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
                         shootY = 10.5f;
@@ -2414,8 +2414,8 @@ public class SFUnitTypes {
                     }},
                     new Weapon(name("sundown-weapon")){{
                         reload = 30;
-                        x = 38.5f;
-                        y = 5.25f;
+                        x = 38.25f;
+                        y = 5f;
                         inaccuracy = 6;
                         shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
                         shootY = 10.5f;
@@ -2547,6 +2547,222 @@ public class SFUnitTypes {
                     }}
             );
         }};
+        tengWang = new UnitType("dorudon"){{
+            constructor = UnitTypes.omura.constructor;
+            flying = false;
+            faceTarget = false;
+            speed = 0.48f;
+            rotateSpeed = 0.75f;
+            hitSize = 80;
+            trailLength = 160;
+            waveTrailX = 25;
+            waveTrailY = -46;
+            trailScl = 5.4f;
+            health = 86000;
+            armor = 38;
+            weapons.addAll(
+                    new Weapon("sei-launcher"){{
+                        x = 17;
+                        y = -29;
+                        reload = 30;
+                        shootCone = 60;
+                        shoot = new ShootSpread(5,8);
+                        shootSound = Sounds.missile;
+                        rotate = true;
+                        rotateSpeed = 4;
+                        inaccuracy = 6;
+                        xRand = 6;
+                        bullet = new MissileBulletType(6,40){{
+                            splashDamageRadius = 45;
+                            splashDamage = 48;
+                            status = StatusEffects.blasted;
+                            homingDelay = 5;
+                            homingRange = 60;
+                            homingPower = 0.35f;
+                            shootEffect = Fx.shootBig2;
+                            smokeEffect = Fx.shootSmallFlame;
+                            hitEffect = Fx.flakExplosionBig;
+                            despawnEffect = Fx.blastExplosion;
+                            trailWidth = 2.5f;
+                            trailLength = 9;
+                            width = 12;
+                            height = 13;
+                            lifetime = 352/6f;
+                        }};
+                    }},
+                    new Weapon("sei-launcher"){{
+                        x = -32;
+                        y = -40;
+                        reload = 54;
+                        shootCone = 60;
+                        shoot = new ShootPattern(){{shots=5;shotDelay=1;}};
+                        shootSound = Sounds.missile;
+                        rotate = true;
+                        rotateSpeed = 4;
+                        inaccuracy = 10;
+                        xRand = 6;
+                        bullet = new MissileBulletType(8,44){{
+                            splashDamageRadius = 22;
+                            splashDamage = 32;
+                            homingDelay = 5;
+                            homingRange = 60;
+                            homingPower = 0.4f;
+                            shootEffect = Fx.shootBig2;
+                            smokeEffect = Fx.shootSmallFlame;
+                            hitEffect = Fx.plasticExplosion;
+                            despawnEffect = Fx.blastExplosion;
+                            trailWidth = 2.5f;
+                            trailLength = 9;
+                            width = 12;
+                            height = 13;
+                            lifetime = 44;
+                            fragBullets = 8;
+                            fragBullet = new BasicBulletType(2.8f,16){{
+                                despawnEffect = Fx.none;
+                                width = 10;
+                                height = 12;
+                                shrinkY = 1;
+                                lifetime = 15;
+                                backColor = Pal.plastaniumBack;
+                                frontColor = Pal.plastaniumFront;
+                            }};
+                        }};
+                    }},
+                    new Weapon(name("dorudon-weapon")){{
+                reload = 160;
+                rotate = true;
+                rotateSpeed = 1.25f;
+                x = 0;
+                mirror = false;
+                inaccuracy = 0;
+                recoil = 12;
+                cooldownTime = 160;
+                shootSound = Sounds.release;
+                shake = 12;
+                bullet = new BasicBulletType(14,950,"sfire-mod-arrow-bullet"){{
+                    scaleLife = true;
+                    statusDuration = 200;
+                    status = SFStatusEffects.breakdown;
+                    pierceArmor = true;
+                    shootEffect = new ParticleEffect(){{
+                        interp = Interp.pow10Out;
+                        sizeInterp = Interp.pow10In;
+                        particles = 35;
+                        sizeFrom = 9;
+                        length = 65;
+                        baseLength = 59;
+                        lifetime = 65;
+                        colorTo = SFColor.energyYellow;
+                        cone = 30;
+                    }};
+                    despawnEffect = Fx.none;
+                    hitEffect = new MultiEffect(
+                            new ExplosionEffect(){{
+                                smokes = 15;
+                                smokeSize = 15;
+                                smokeRad = 85;
+                                lifetime = 95;
+                                waveLife = 10;
+                                waveRad = 80;
+                                waveStroke = 10;
+                                waveColor = smokeColor = SFColor.energyYellow;
+                            }},
+                            new WaveEffect(){{
+                                lifetime = 80;
+                                interp = Interp.circleOut;
+                                sizeFrom = 5;
+                                sizeTo = 80;
+                                colorFrom = colorTo = SFColor.energyYellow;
+                            }}
+                    );
+                    shrinkY = 0;
+                    width = 22;
+                    height = 45;
+                    trailLength = 15;
+                    trailWidth = 3;
+                    trailColor = backColor = SFColor.energyYellow;
+                    frontColor = Color.white;
+                    lifetime = 40;
+                    pierce = true;
+                    pierceCap = 3;
+                    fragRandomSpread = 0;
+                    fragBullets = 1;
+                    fragLifeMin = 1;
+                    fragVelocityMin = 1;
+                    fragBullet = new BasicBulletType(0.1f,0,"mine-bullet"){{
+                        collides = false;
+                        hittable = false;
+                        absorbable = false;
+                        width = height = 60;
+                        speed = 0.1f;
+                        lifetime = 60;
+                        homingRange = 180;
+                        homingPower = 0.5f;
+                        hitEffect = new WrapEffect(Fx.dynamicSpikes,SFColor.energyYellow,80);
+                        statusDuration = 80;
+                        status = SFStatusEffects.breakdown;
+                        backColor = SFColor.energyYellow;
+                        frontColor = Color.white;
+                        spin = 10;
+                        shrinkY = shrinkX = 0.5f;
+                        hitSound = Sounds.plasmaboom;
+                        hitShake = 8;
+                        bulletInterval = 2.5f;
+                        intervalBullets = 2;
+                        intervalRandomSpread = 35;
+                        intervalBullet = new BasicBulletType(9,20){{
+                            hitShake = 3;
+                            splashDamage = 35;
+                            splashDamageRadius = 35;
+                            lightningDamage = 20;
+                            lightning = 2;
+                            lightningLengthRand = 6;
+                            lightningLength = 9;
+                            drag = -0.02f;
+                            lifetime = 10;
+                            width = 9;
+                            height = 23;
+                            pierceArmor = true;
+                            trailLength = 6;
+                            trailWidth = 2;
+                            trailColor = backColor = SFColor.energyYellow;
+                            frontColor = Color.white;
+                            hitEffect = new WrapEffect(Fx.dynamicSpikes,SFColor.energyYellow,35);
+                            despawnEffect = new ParticleEffect(){{
+                                particles = 3;
+                                sizeInterp = Interp.pow5In;
+                                sizeFrom = 8;
+                                length = 35;
+                                lifetime = 35;
+                                colorFrom = colorTo = SFColor.energyYellow;
+                            }};
+                            hitSound = Sounds.laser;
+                            hitSoundVolume = 0.3f;
+                            status = SFStatusEffects.breakdown;
+                            statusDuration = 20;
+                        }};
+                    }};
+                }};
+            }}
+            );
+        }};
+        /*luoHan = new UnitType("cerberilla"){{
+            constructor = UnitTypes.omura.constructor;
+            flying = false;
+            faceTarget = false;
+            speed = 0.48f;
+            rotateSpeed = 0.75f;
+            hitSize = 80;
+            trailLength = 160;
+            waveTrailX = 25;
+            waveTrailY = -46;
+            trailScl = 5.4f;
+            health = 86000;
+            armor = 38;
+            weapons.addAll(
+                    new Weapon(name("cerberilla-weapon")){{}}
+            );
+        }};*/
 
         farmer = new UnitType("farmer") {{
             constructor = UnitTypes.mega.constructor;
@@ -3086,14 +3302,73 @@ public class SFUnitTypes {
                 }};
             }});
         }};
-        omega = new UnitType("omega") {{
-            constructor = UnitTypes.flare.constructor;
+        tau = new UnitType("tau") {{
+            constructor = UnitTypes.gamma.constructor;
             outlineColor = SFColor.darkOutline;
+            aiController = BuilderAI::new;
+            flying = true;
+            rotateSpeed = 8;
+            speed = 3.8f;
+            accel = 0.06f;
+            drag = 0.04f;
+            hitSize = 30;
+            buildRange = 220;
+            buildBeamOffset = 11;
+            buildSpeed = 2.25f;
+            itemCapacity = 150;
+            mineRange = 50;
+            mineTier = 4;
+            mineSpeed = 10;
+            health = 1000;
+            engineSize = 2.8f;
+            engineOffset = 16;
+            setEnginesMirror(
+                    new UnitEngine(-10,-11,3f,-112.5f));
+            weapons.add(
+                    new Weapon(name("tau-weapon")){{
+                        x = y = 0;
+                        recoil = 0;
+                        reload = 30;
+                        rotate = false;
+                        shootSound = Sounds.missile;
+                        inaccuracy = 3;
+                        baseRotation = 45;
+                        shootCone = 60;
+                        shoot = new ShootSpread(6,3);
+                        bullet = new MissileBulletType(8,12){{
+                            splashDamage = 10;
+                            splashDamageRadius = 10;
+                            buildingDamageMultiplier  = 0.3f;
+                            hitEffect = new WrapEffect(Fx.hitSquaresColor,Pal.heal);
+                            despawnEffect = new WrapEffect(Fx.hitBulletColor,Pal.heal);
+                            collidesTeam = true;
+                            healPercent = 1/6f;
+                            reflectable = false;
+                            trailColor = Pal.heal;
+                            frontColor = Color.white;
+                            backColor = Pal.heal;
+                            status = StatusEffects.electrified;
+                            statusDuration = 30;
+                            width = 8;
+                            height = 11;
+                            trailLength = 4;
+                            trailWidth = 2.2f;
+                            homingDelay = 5;
+                            homingPower = 0.5f;
+                            lifetime = 36;
+                        }};
+                    }}
+            );
+        }};
+        omega = new UnitType("omega") {{
+            constructor = UnitTypes.gamma.constructor;
+            outlineColor = SFColor.darkOutline;
+            aiController = BuilderAI::new;
             flying = true;
             rotateSpeed = 6;
-            speed = 3.8f;
-            accel = 0.08f;
-            drag = 0.07f;
+            speed = 3.4f;
+            accel = 0.05f;
+            drag = 0.04f;
             hitSize = 38;
             buildRange = 288;
             buildBeamOffset = 16;

@@ -86,7 +86,7 @@ public class SFBlocks {
 
     //storage
     //frondCore,
-    finalCommandCenter, hyperUnloader, molecularDatabase,
+    industryCore, finalCommandCenter, hyperUnloader, molecularDatabase,
 
     //turrets
     //turrets_enemy_only
@@ -2062,6 +2062,16 @@ public class SFBlocks {
             );
         }};
 
+        industryCore = new CoreBlock("industry-core") {{
+            size = 6;
+            requirements(Category.effect, with(Items.silicon, 3000, Items.thorium, 2000, SFItems.waveSteel, 3000));
+            health = 20000;
+            armor = 25;
+            itemCapacity = 30000;
+            unitCapModifier = 20;
+            researchCostMultiplier = 0.5f;
+            unitType = SFUnitTypes.tau;
+        }};
         finalCommandCenter = new CoreBlock("final-command-core") {{
             size = 8;
             requirements(Category.effect, with(Items.silicon, 8000, SFItems.siliSteel, 3500, SFItems.fermium, 5000));
