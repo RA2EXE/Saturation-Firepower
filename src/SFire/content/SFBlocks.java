@@ -2138,9 +2138,15 @@ public class SFBlocks {
                     new UnitType[]{UnitTypes.corvus, SFUnitTypes.diXing},
                     new UnitType[]{UnitTypes.toxopid, SFUnitTypes.panLong},
                     new UnitType[]{UnitTypes.oct, SFUnitTypes.guangHan},
-                    new UnitType[]{UnitTypes.eclipse, SFUnitTypes.yuHui}
-                    //       new UnitType[]{UnitTypes.omura, SFUnitTypes.tengWang},
-                    //       new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan}
+                    new UnitType[]{UnitTypes.eclipse, SFUnitTypes.yuHui},
+                    new UnitType[]{UnitTypes.omura, SFUnitTypes.tengWang},
+                    new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan}
+                    /*
+                    new UnitType[]{UnitTypes.tank5, SFUnitTypes.luoHan}
+                    new UnitType[]{UnitTypes.air5, SFUnitTypes.luoHan}
+                    new UnitType[]{UnitTypes.naval5, SFUnitTypes.luoHan}
+
+                    **/
             );
             researchCostMultiplier = 0.4f;
             buildCostMultiplier = 0.7f;

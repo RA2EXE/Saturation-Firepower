@@ -24,6 +24,7 @@ import mindustry.entities.effect.*;
 import mindustry.entities.part.*;
 import mindustry.entities.pattern.*;
 import mindustry.gen.*;
+import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
 import mindustry.type.*;
 import mindustry.type.unit.*;
@@ -33,10 +34,12 @@ import mindustry.world.meta.*;
 import rhino.UintMap;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 import static SFire.SFireMod.name;
+import static arc.graphics.g2d.Draw.color;
 
 public class SFUnitTypes {
 
@@ -1271,12 +1274,15 @@ public class SFUnitTypes {
             health = 375000;
             armor = 77;
             faceTarget = true;
+            forceMultiTarget = false;
             weapons.addAll(
                     new Weapon(name("vast-radar")) {{
                         reload = 2100;
                         x = 0;
+                        recoil = 0;
                         shootCone = 360;
                         rotate = false;
+                        mirror = false;
                         minWarmup = 0.96f;
                         targetInterval = 120;
                         targetSwitchInterval = 60;
@@ -1284,6 +1290,19 @@ public class SFUnitTypes {
                         shootStatus = SFStatusEffects.fullFire;
                         shootStatusDuration = 180;
                         shootSound = Sounds.lasercharge;
+                        parts.add(new ShapePart() {{
+                            rotateSpeed = 0.05f;
+                            sides = 4;
+                            color = SFColor.enemyRedLight.cpy().a(0f);
+                            colorTo = SFColor.enemyRedLight;
+                            hollow = true;
+                            stroke = 0;
+                            strokeTo = 3;
+                            radius = 160;
+                            radiusTo = 90;
+                            lightOpacity = 1;
+                            layer = 60;
+                        }});
                         bullet = new BulletType(400,10){{
                             lifetime = 1;
                             instantDisappear = true;
@@ -2141,7 +2160,7 @@ public class SFUnitTypes {
                     }},
                     new Weapon(name("agelenid-sap")){{
                         x = -7;
-                        y = 16;
+                        y = 20;
                         shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
                         shootSound = Sounds.sap;
                         top = true;
@@ -2167,7 +2186,7 @@ public class SFUnitTypes {
                     }},
                     new Weapon(name("agelenid-sap")){{
                         x = -16;
-                        y = 8;
+                        y = 12;
                         shoot = new ShootPattern(){{shots=3;shotDelay=3;}};
                         shootSound = Sounds.sap;
                         top = true;
@@ -2452,11 +2471,6 @@ public class SFUnitTypes {
                         shootSound = Sounds.missileSmall;
                         shootWarmupSpeed = 0.085f;
                         minWarmup = 0.98f;
-                        parts.add(new RegionPart("-side"){{
-                            x = 0;
-                            y = 0;
-                            moveRot = -80;
-                        }});
                         shake = 5;
                         shootCone = 360;
                         inaccuracy = 10;
@@ -2623,6 +2637,9 @@ public class SFUnitTypes {
                                 height = 12;
                                 shrinkY = 1;
                                 lifetime = 15;
+                                pierceBuilding = true;
+                                pierce = true;
+                                pierceCap = 2;
                                 backColor = Pal.plastaniumBack;
                                 frontColor = Pal.plastaniumFront;
                             }};
@@ -2718,6 +2735,7 @@ public class SFUnitTypes {
                             lightning = 2;
                             lightningLengthRand = 6;
                             lightningLength = 9;
+                            lightningColor = SFColor.energyYellow;
                             drag = -0.02f;
                             lifetime = 10;
                             width = 9;
@@ -2746,23 +2764,1640 @@ public class SFUnitTypes {
             }}
             );
         }};
-        /*luoHan = new UnitType("cerberilla"){{
+        luoHan = new UnitType("cerberilla"){{
             constructor = UnitTypes.omura.constructor;
             flying = false;
             faceTarget = false;
-            speed = 0.48f;
-            rotateSpeed = 0.75f;
-            hitSize = 80;
+            speed = 0.5f;
+            rotateSpeed = 0.86f;
+            hitSize = 90;
             trailLength = 160;
-            waveTrailX = 25;
-            waveTrailY = -46;
-            trailScl = 5.4f;
-            health = 86000;
-            armor = 38;
-            weapons.addAll(
-                    new Weapon(name("cerberilla-weapon")){{}}
+            waveTrailX = 29.5f;
+            waveTrailY = -40;
+            trailScl = 5f;
+            health = 74000;
+            armor = 26;
+
+            abilities.addAll(
+                    new StatusFieldAbility(SFStatusEffects.repair,200,180,160){{
+                        applyEffect = Fx.none;
+                        activeEffect = new WaveEffect(){{
+                            lifetime = 45;
+                            sizeTo = 160;
+                            strokeFrom = 22;
+                            interp = Interp.circleOut;
+                            colorFrom = colorTo = Pal.heal;
+                        }};
+                    }},
+                    new ForceFieldAbility(190,12000,35,1450)
             );
-        }};*/
+            forceMultiTarget = true;
+            for(float mountY : new float[]{17, -16}){
+                for(float mountX : new float[]{11, 32}){
+                    if ((mountY == 17 && mountX == 11) || (mountY == -16 && mountX == 32)) {
+                        weapons.add(new PointDefenseWeapon("point-defense-mount"){{
+                            rotate = true;
+                            rotateSpeed = 12;
+                            x = mountX;
+                            y = mountY;
+                            reload = 10f;
+                            targetInterval = 7.5f;
+                            targetSwitchInterval = 7.5f;
+                            bullet = new BulletType(){{
+                                shootEffect = Fx.sparkShoot;
+                                hitEffect = Fx.pointHit;
+                                maxRange = 260f;
+                                damage = 80f;
+                            }};
+                        }});
+                    }
+                }
+            }
+            weapons.addAll(
+                    new Weapon(name("cerberilla-weapon")){{
+                        rotate = true;
+                        rotateSpeed = 3f;
+                        x = -23.5f;
+                        y = 9f;
+                        reload = 40;
+                        alternate = true;
+                        shootCone = 60;
+                        shootSound = Sounds.laser;
+                        shootY = 5;
+                        shake = 3;
+                        bullet = new EmpBulletType(){{
+                            damage = 90;
+                            splashDamage = 90;
+                            radius = splashDamageRadius = 92;
+                            speed = 6;
+                            lifetime = 70;
+                            width = 66;
+                            height = 66;
+                            sprite = "sfire-mod-star-bullet";
+                            spin = 3.34f;
+                            shrinkX = shrinkY = 0.15f;
+                            healPercent = 3;
+                            hitSize = 36;
+                            reflectable = false;
+                            hitShake = 8;
+                            pierce = true;
+                            pierceBuilding = true;
+                            pierceCap = 2;
+                            timeIncrease = 3.75f;
+                            powerDamageScl = 3;
+                            powerSclDecrease = 0.01f;
+                            unitDamageScl = 1.25f;
+                            hitUnits = true;
+                            scaleLife = true;
+                            status = StatusEffects.electrified;
+                            statusDuration = 300;
+                            backColor = frontColor = Pal.heal;
+                            trailColor = Pal.heal;
+                            trailWidth = 4;
+                            trailLength = 16;
+                            shootEffect = new WrapEffect(Fx.shootBigColor,Pal.heal);
+                            smokeEffect = new ParticleEffect(){{
+                              particles = 5;
+                              sizeFrom = 3;
+                              length = 45;
+                              lifetime = 35;
+                              colorFrom = Pal.heal;
+                              cone = 30;
+                            }};
+                            hitSound = Sounds.plasmaboom;
+                            despawnEffect = new WaveEffect(){{
+                                lifetime = 45;
+                                sizeFrom = 90;
+                                sizeTo = 92;
+                                strokeFrom = 6;
+                                colorFrom = colorTo = Pal.heal;
+                            }};
+                            hitEffect = new MultiEffect(
+                                    new ParticleEffect(){{
+                                        particles = 10;
+                                        baseLength = 130;
+                                        length = 50;
+                                        sizeFrom = 20;
+                                        lifetime = 35;
+                                        colorFrom = Pal.heal.cpy().a(0.5f);
+                                    }},
+                                    new ParticleEffect(){{
+                                        particles = 1;
+                                        sizeFrom = sizeTo = 92;
+                                        length = 0;
+                                        lifetime = 15;
+                                        colorFrom = Pal.heal.cpy().a(0.5f);
+                                        colorTo = Pal.heal.cpy().a(0);
+                                    }},
+                                    new ParticleEffect(){{
+                                        particles = 1;
+                                        region = "sfire-mod-star";
+                                        sizeFrom = 110;
+                                        length = 1;
+                                        lifetime = 45;
+                                        spin = 3.34f;
+                                        colorFrom = Pal.heal;
+                                    }}
+                            );
+                            intervalBullets = 2;
+                            bulletInterval = 7;
+                            intervalBullet = new EmpBulletType(){{
+                                instantDisappear = true;
+                                hittable = false;
+                                absorbable = false;
+                                damage = 24;
+                                radius = 92;
+                                timeIncrease = 1;
+                                powerDamageScl = 2;
+                                powerSclDecrease = 0.8f;
+                                unitDamageScl = 1.5f;
+                                hitUnits = true;
+                                status = SFStatusEffects.scrambled;
+                                statusDuration = 18;
+                                hitEffect = new ParticleEffect(){{
+                                    line = true;
+                                    particles = 7;
+                                    length = 80;
+                                    lifetime = 35;
+                                    colorFrom = Pal.heal;
+                                }};
+                                despawnEffect = Fx.none;
+                            }};
+                        }};
+                    }},
+                    new Weapon(name("cerberilla-cannon")){{
+                        rotate = true;
+                        rotateSpeed = 2f;
+                        x = 23.25f;
+                        y = -29f;
+                        alternate = true;
+                        shootSound = Sounds.laser;
+                        shootY = 5;
+                        shake = 3;
+                        reload = 110;
+                        parts.add(new RegionPart("-barrel"){{
+                            mirror = false;
+                            progress = PartProgress.recoil;
+                            under = true;
+                            moveY = 2;
+                        }});
+                        shoot = new ShootPattern(){{shots=3;shotDelay=12;}};
+                        bullet = new BasicBulletType(15,119f){{
+                            lifetime = 448 / 15f;
+                            height = 35;
+                            width = 18;
+                            sprite = "sfire-mod-arrow-bullet";
+                            healPercent = 3;
+                            knockback = 30;
+                            reflectable = false;
+                            absorbable = false;
+                            hitShake = 8;
+                            pierce = true;
+                            status = SFStatusEffects.scrambled;
+                            statusDuration = 60;
+                            backColor = frontColor = Pal.heal;
+                            trailColor = Pal.heal;
+                            trailWidth = 2.5f;
+                            trailLength = 20;
+                            trailChance = 0.6f;
+                            trailEffect = Fx.hitEmpSpark;
+                            shootEffect = new WrapEffect(Fx.shootBigColor,Pal.heal);
+                            smokeEffect = new ParticleEffect(){{
+                                line = true;
+                                particles = 5;
+                                strokeFrom = 3;
+                                lenFrom = 12;
+                                length = 45;
+                                lifetime = 45;
+                                colorFrom = Pal.heal;
+                                cone = 30;
+                            }};
+                            hitSound = Sounds.plasmaboom;
+                            despawnEffect = Fx.none;
+                            hitEffect = new MultiEffect(
+                                    new ParticleEffect(){{
+                                        particles = 23;
+                                        strokeFrom = 4;
+                                        lenFrom = 22;
+                                        length = 80;
+                                        interp = Interp.circleOut;
+                                        lifetime = 40;
+                                        colorFrom = Pal.heal;
+                                    }},
+                                    new ParticleEffect(){{
+                                        particles = 8;
+                                        strokeFrom = 4;
+                                        lenFrom = 22;
+                                        length = 80;
+                                        interp = Interp.circleOut;
+                                        sizeInterp = Interp.circleOut;
+                                        lifetime = 16;
+                                        colorFrom = Pal.heal;
+                                        cone = 15;
+                                    }}
+                            );
+                        }};
+                    }}
+            );
+        }};
+
+        tank1 = new UnitType("vanguard"){{
+            constructor = UnitTypes.stell.constructor;
+            omniMovement = false;
+            rotateMoveFirst = false;
+            rotateSpeed = 3;
+            speed = 1.8f;
+            hitSize = 9.5f;
+
+            health = 155;
+            armor = 4;
+            drag = 0.08f;
+            accel = 0.1f;
+            itemCapacity = 5;
+            faceTarget = false;
+            abilities.add(new StatusFieldAbility(StatusEffects.overclock,250,300,30){{
+                activeEffect = new WaveEffect(){{
+                    lifetime = 20;
+                    interp = Interp.circleOut;
+                    sides = 4;
+                    strokeFrom = 3;
+                    sizeTo = 33;
+                    colorFrom = colorTo = SFColor.energyYellow;
+                }};
+                applyEffect = Fx.none;
+            }});
+            weapons.add(new Weapon(name("vanguard-weapon")){{
+                reload = 7.6f;
+                recoil = 0;
+                x = y = 0;
+                shootY = 5.5f;
+                mirror = false;
+                rotate = true;
+                rotateSpeed = 15;
+                inaccuracy = 0.5f;
+                ejectEffect = Fx.casing1;
+                shootSound = Sounds.shoot;
+                bullet = new BasicBulletType(9,8){{
+                    buildingDamageMultiplier = 0.7f;
+                    lifetime = 18;
+                    width = 3;
+                    height = 9;
+                }};
+            }});
+        }};
+        tank2 = new UnitType("striker"){{
+                constructor = UnitTypes.stell.constructor;
+                omniMovement = false;
+                rotateMoveFirst = false;
+                rotateSpeed = 3;
+                speed = 1.35f;
+                hitSize = 18f;
+                hovering = true;
+                canDrown = false;
+
+                health = 530;
+                armor = 5;
+                drag = 0.08f;
+                accel = 0.1f;
+                faceTarget = false;
+                weapons.add(new Weapon(name("striker-weapon")){{
+                    reload = 90;
+                    x = 0;
+                    y = -1;
+                    rotate = true;
+                    rotateSpeed = 9;
+                    mirror = false;
+                    inaccuracy = 1;
+                    ejectEffect = Fx.casing2;
+                    shootSound = Sounds.artillery;
+                    bullet = new MissileBulletType(8,80,"sfire-mod-missile1"){{
+                        splashDamage = 66;
+                        splashDamageRadius = 46;
+                        status = StatusEffects.blasted;
+                        backColor = SFColor.enemyRedLight;
+                        frontColor = SFColor.missileGray;
+                        lifetime = 24;
+                        homingRange = 50;
+                        homingPower = 0.03f;
+                        width = 12;
+                        height = 40;
+                        smokeEffect = Fx.shootPyraFlame;
+                        hitEffect = Fx.flakExplosionBig;
+                        despawnEffect = Fx.blastExplosion;
+                    }};
+                }});
+        }};
+        tank3 = new UnitType("skyfire"){{
+            constructor = UnitTypes.stell.constructor;
+            omniMovement = false;
+            rotateMoveFirst = true;
+            rotateSpeed = 2;
+            speed = 0.975f;
+            hitSize = 20f;
+            treadRects = new Rect[]{new Rect(-45f, -45f, 24, 88)};
+
+            health = 1100;
+            armor = 8;
+            drag = 0.08f;
+            accel = 0.1f;
+            itemCapacity = 0;
+            faceTarget = false;
+            targetAir = false;
+            autoFindTarget = false;
+            parts.add(new RegionPart("-back"){{
+                y = -4.75f;
+                layerOffset = -1;
+                moveX = 5.55f;
+                moveY = -8;
+                moveRot = -30;
+                mirror = true;
+            }});
+            weapons.add(new Weapon(name("skyfire-weapon")){{
+                x = y = 0;
+                reload = 400;
+                rotate = true;
+                rotateSpeed = 2;
+                minWarmup = 0.93f;
+                shootWarmupSpeed = 0.05f;
+                mirror = true;
+                alternate = false;
+                parts.add(new RegionPart("-front"){{
+                    moveY = -4;
+                    under = true;
+                    mirror = true;
+                }});
+                shoot = new ShootPattern(){{shots=25;shotDelay=6;}};
+                xRand = 4;
+                inaccuracy = 6;
+                shootSound = Sounds.missile;
+                shootStatus = StatusEffects.unmoving;
+                shootStatusDuration = 200;
+                velocityRnd = 0.1f;
+                bullet = new ArtilleryBulletType(12, 16,"sfire-mod-missile1"){{
+                    lifetime = 30;
+                    splashDamage = 55;
+                    splashDamageRadius = 40;
+                    buildingDamageMultiplier = 2.25f;
+                    collides = false;
+                    status = StatusEffects.blasted;
+                    backColor = SFColor.enemyRedLight;
+                    frontColor = SFColor.missileGray;
+                    width = 12;
+                    height = 40;
+                    trailChance = 0;
+                    trailInterval = 1;
+                    trailEffect = new ParticleEffect(){{
+                        particles = 3;
+                        length = 30;
+                        sizeInterp = Interp.pow5In;
+                        lifetime = 10;
+                        colorFrom = SFColor.smoke;
+                        colorTo = SFColor.smoke.cpy().a(0.44f);
+                        sizeFrom = 2.6f;
+                        cone = 8;
+                    }};
+                    trailRotation = true;
+                    shootEffect = Fx.shootPyraFlame;
+                    smokeEffect = new ParticleEffect(){{
+                        particles = 3;
+                        interp = Interp.pow10Out;
+                        sizeInterp = Interp.pow10In;
+                        sizeFrom = 6;
+                        length = -58;
+                        baseLength = -20;
+                        lifetime = 42;
+                        colorFrom = colorTo = SFColor.smoke.cpy().a(0.56f);
+                        cone = 40;
+                        layer = 49;
+                    }};
+                    hitShake = 2;
+                    hitSound = Sounds.explosion;
+                    hitEffect = new MultiEffect(
+                            new ExplosionEffect(){{
+                                sparkRad = 50;
+                                sparkStroke = 2;
+                                sparkLen = 16;
+                                sparks = 12;
+                                lifetime = 12;
+                                sparkColor = Pal.bulletYellow;
+                                waveColor = SFColor.smoke.cpy().a(0.5f);
+                                waveLife = 10;
+                                waveRad = 55;
+                                waveStroke = 10;
+                                smokeRad = 38;
+                                smokeSize = 6;
+                                smokes = 7;
+                                smokeColor = SFColor.smoke.cpy().a(0.5f);
+                            }},
+                            new ParticleEffect(){{
+                                particles = 1;
+                                sizeInterp = Interp.pow5Out;
+                                sizeFrom = 10;
+                                sizeTo = 40;
+                                length = 0;
+                                lifetime = 12;
+                                colorFrom = Color.white.cpy().a(0.8f);
+                                colorTo = SFColor.smoke.cpy().a(0);
+                            }},
+                            new ParticleEffect(){{
+                                particles = 8;
+                                interp = Interp.pow10Out;
+                                sizeInterp = Interp.pow5In;
+                                sizeFrom = 8;
+                                length = 38;
+                                baseLength = 10;
+                                lifetime = 35;
+                                colorFrom = colorTo = SFColor.smoke.cpy().a(0.8f);
+                            }}
+                    );
+                    despawnEffect = Fx.flakExplosionBig;
+                }};
+            }});
+        }};
+        tank4 = new UnitType("flanker"){{
+            constructor = UnitTypes.stell.constructor;
+            squareShape = true;
+            omniMovement = false;
+            rotateMoveFirst = false;
+            rotateSpeed = 1.5f;
+            speed = 0.9f;
+            hitSize = 36f;
+            crushDamage = 2;
+            treadRects = new Rect[]{new Rect(-67f, -84f, 39, 176)};
+            treadFrames = 8;
+            drownTimeMultiplier = 2;
+
+            health = 10500;
+            armor = 15;
+            itemCapacity = 0;
+            faceTarget = false;
+            abilities.add(new StatusFieldAbility(StatusEffects.overclock,1200,1200,45){{
+                activeEffect = new WaveEffect(){{
+                    lifetime = 15;
+                    strokeFrom = 3;
+                    sizeTo = 45;
+                    colorFrom = colorTo = SFColor.energyYellow;
+                }};
+                applyEffect = Fx.none;
+            }});
+            immunities.addAll(StatusEffects.burning, StatusEffects.wet, SFStatusEffects.breakdown);
+            weapons.add(new Weapon(name("flanker-weapon")){{
+                top = true;
+                reload = 90;
+                shootY = 27f;
+                x = y = 0;
+                rotate = true;
+                rotateSpeed = 1.9f;
+                shootSound = Sounds.mediumCannon;
+                shake = 4;
+                mirror = false;
+                bullet = new BasicBulletType(12,180){{
+                    lifetime = 25;
+                    width = 10;
+                    height = 24;
+                    buildingDamageMultiplier = 0.6f;
+                    status = SFStatusEffects.breakdown;
+                    statusDuration = 160;
+                    frontColor = Color.white;
+                    backColor = SFColor.energyYellow;
+                    trailLength = 15;
+                    trailWidth = 2f;
+                    trailColor = SFColor.energyYellow;
+                    knockback = 8;
+                    hitSound = Sounds.explosion;
+                    hitSoundVolume = 3;
+                    hitShake = 5;
+                    hitEffect = new ParticleEffect(){{
+                        lifetime = 30;
+                        line = true;
+                        lenFrom = 25;
+                        strokeFrom = 4.2f;
+                        colorFrom = colorTo = SFColor.energyYellow;
+                        sizeInterp = interp = Interp.circleOut;
+                        length = 56;
+                        baseLength = -16;
+                        cone = 40;
+                    }};
+                    despawnEffect = new ExplosionEffect(){{
+                        lifetime = 15;
+                        smokes = 6;
+                        smokeRad = 15;
+                        smokeSize = 6;
+                        smokeColor = waveColor = SFColor.energyYellow;
+                        waveRad = 20;
+                        waveStroke = 4;
+                        waveLife = 10;
+                    }};
+                    shootEffect = Fx.shootTitan;
+                    smokeEffect = new ParticleEffect() {{
+                        particles = 6;
+                        sizeFrom = 4;
+                        length = 26;
+                        cone = 16;
+                        lifetime = 33;
+                        interp = Interp.pow5Out;
+                        sizeInterp = Interp.fastSlow;
+                        colorFrom = colorTo = SFColor.energyYellow;
+                    }};
+                    fragBullets = 3;
+                    fragRandomSpread = 60;
+                    fragBullet = new BasicBulletType(2.5f,46){{
+                        despawnEffect = Fx.none;
+                        pierceArmor = true;
+                        width = 10;
+                        height = 12;
+                        shrinkY = 1;
+                        lifetime = 15;
+                        pierce = true;
+                        pierceCap = 2;
+                        frontColor = Color.white;
+                        backColor = SFColor.energyYellow;
+                    }};
+                }};
+                parts.add(new RegionPart("-barrel"){{
+                    moveY = -8;
+                    top = true;
+                    under = true;
+                    heatProgress = PartProgress.recoil;
+                    progress = PartProgress.recoil;
+                }});
+            }});
+        }};
+        tank5 = new UnitType("executioner"){{
+            constructor = UnitTypes.stell.constructor;
+            squareShape = true;
+            omniMovement = false;
+            rotateMoveFirst = false;
+            rotateSpeed = 1.22f;
+            speed = 0.75f;
+            hitSize = 48f;
+            crushDamage = 6;
+            treadRects = new Rect[]{
+                    new Rect(-86, -108, 42, 112),
+                    new Rect(-72, -124, 21, 16),
+                    new Rect(-86, -9, 42, 119)
+            };
+            treadFrames = 8;
+            drownTimeMultiplier = 2;
+            health = 25000;
+            armor = 26;
+            itemCapacity = 0;
+            faceTarget = false;
+            immunities.addAll(StatusEffects.burning, StatusEffects.wet, SFStatusEffects.breakdown);
+            targetFlags = new BlockFlag[]{BlockFlag.core};
+            weapons.add(new Weapon(name("executioner-weapon")){{
+                reload = 110;
+                x = y = 0;
+                rotate = true;
+                rotateSpeed = 1.1f;
+                shootSound = Sounds.railgun;
+                mirror = false;
+                shootY = 20f;
+                shoot = new ShootAlternate(20){{shotDelay=10;shots=2;}};
+                recoil = 0;
+                bullet = new PointBulletType(){{
+                    speed = 330;
+                    lifetime = 1;
+                    damage = 220;
+                    status = SFStatusEffects.breakdown;
+                    statusDuration = 60;
+                    buildingDamageMultiplier = 2.25f;
+                    trailEffect = new ParticleEffect(){{
+                        line = true;
+                        length = 0;
+                        baseLength = 1;
+                        particles = 1;
+                        strokeFrom = 6;
+                        strokeTo = 0;
+                        lenTo = lenFrom = 10;
+                        randLength = false;
+                        colorFrom = colorTo = SFColor.energyYellow;
+                        cone = 0;
+                        lifetime = 20;
+                    }};
+                    trailSpacing = 9;
+                    shootEffect = Fx.shootTitan;
+                    hitShake = 4;
+                    hitSound = Sounds.lasercharge2;
+                    hitEffect = smokeEffect = new ParticleEffect(){{
+                        particles = 1;
+                        sizeFrom = 8;
+                        length = 0;
+                        lifetime = 33;
+                        sizeInterp = Interp.fastSlow;
+                        colorFrom = colorTo = SFColor.energyYellow;
+                    }};
+                    despawnEffect = Fx.bigShockwave;
+                    fragBullets = 1;
+                    fragBullet = new BasicBulletType(0,10,"circle-bullet"){{
+                        width = height = 16;
+                        shrinkY = shrinkX = 0.1f;
+                        lifetime = 15;
+                        hittable = false;
+                        absorbable = false;
+                        collides = false;
+                        status = SFStatusEffects.breakdown;
+                        statusDuration = 120;
+                        buildingDamageMultiplier = 2;
+                        scaledSplashDamage = true;
+                        splashDamage = 45;
+                        splashDamageRadius = 66.4f;
+                        hitShake = 4;
+                        hitSound = Sounds.plasmaboom;
+                        hitEffect = new ParticleEffect(){{
+                            particles = 15;
+                            sizeFrom = 8;
+                            length = 60;
+                            lifetime = 33;
+                            interp = Interp.pow5Out;
+                            sizeInterp = Interp.pow5;
+                            colorFrom = colorTo = SFColor.energyYellow;
+                        }};
+                        despawnEffect = new WrapEffect(Fx.titanExplosion,SFColor.energyYellow);
+                    }};
+                }};
+            }});
+        }};
+        tank6 = new UnitType("enforcer"){{
+            constructor = UnitTypes.stell.constructor;
+            squareShape = true;
+            omniMovement = false;
+            rotateMoveFirst = false;
+            rotateSpeed = 1.22f;
+            speed = 0.75f;
+            drag = 0.3f;
+            hitSize = 66;
+            crushDamage = 10;
+            treadRects = new Rect[]{
+                    new Rect(-115, 118, 52, 48),
+                    new Rect(-118, -160, 79, 144)
+            };
+            treadFrames = 8;
+            drownTimeMultiplier = 5;
+            health = 81000;
+            armor = 45;
+            itemCapacity = 0;
+            faceTarget = false;
+            drawShields = false;
+            immunities.addAll(StatusEffects.burning, StatusEffects.wet, StatusEffects.electrified, StatusEffects.unmoving,SFStatusEffects.scrambled, SFStatusEffects.breakdown);
+            weapons.add(new Weapon(name("enforcer-weapon")){{
+                rotate = true;
+                rotateSpeed = 1.5f;
+                x = y = 0;
+                shootY = 40;
+                mirror = false;
+                cooldownTime = 160;
+                recoil = 6;
+                reload = 110;
+                shoot = new ShootAlternate(18){{shots=2;shotDelay=8;}};
+                shootSound = Sounds.largeCannon;
+                bullet = new BasicBulletType(24,180,"missile-large"){{
+                    lifetime = 15;
+                    drag = -0.01f;
+                    width = 10;
+                    height = 26;
+                    splashDamage = 115;
+                    splashDamageRadius = 60;
+                    buildingDamageMultiplier = 1.5f;
+                    absorbable = false;
+                    hittable = false;
+                    pierce = true;
+                    pierceArmor = true;
+                    pierceBuilding = true;
+                    pierceCap = 3;
+                    status = StatusEffects.unmoving;
+                    statusDuration = 80;
+                    frontColor = Color.white;
+                    backColor = SFColor.energyYellow;
+                    trailLength = 8;
+                    trailWidth = 4;
+                    trailColor = SFColor.energyYellow;
+                    trailChance = 1;
+                    trailRotation = true;
+                    trailEffect = new ParticleEffect(){{
+                        particles = 3;
+                        sizeFrom = 3;
+                        interp = Interp.circleOut;
+                        sizeInterp = Interp.pow3In;
+                        colorFrom = colorTo = SFColor.energyYellow;
+                        lifetime = 8;
+                    }};
+                    hitSound = Sounds.plasmaboom;
+                    hitSoundVolume = 3;
+                    hitShake = 8;
+                    hitEffect = new ExplosionEffect(){{
+                        lifetime = 35;
+                        smokes = 9;
+                        smokeRad = 90;
+                        smokeSize = 10;
+                        smokeColor = waveColor = SFColor.energyYellow;
+                        waveRad = 60;
+                        waveStroke = 10;
+                        waveLife = 10;
+                    }};
+                    despawnEffect = new ParticleEffect(){{
+                        lifetime = 65;
+                        particles = 1;
+                        sizeFrom = 10;
+                        colorFrom = colorTo = SFColor.energyYellow;
+                        length = 0;
+                    }};
+                    smokeEffect = Fx.smokeCloud;
+                    shootEffect = new ParticleEffect() {{
+                        particles = 6;
+                        line = true;
+                        strokeFrom = 6;
+                        lenFrom = 25;
+                        length = 50;
+                        cone = 15;
+                        lifetime = 11;
+                        interp = Interp.pow5Out;
+                        sizeInterp = Interp.fastSlow;
+                        colorFrom = colorTo = SFColor.energyYellow;
+                    }};
+                }};
+            }});
+        }};
+
+        Effect hitEnergySky = new WaveEffect(){{
+            lifetime = 10;
+            sizeFrom = 1;
+            sizeTo = 8;
+            strokeFrom = 2.5f;
+            colorFrom = colorTo = SFColor.energySky;
+        }};
+        Effect desEnergySky = new ParticleEffect(){{
+           particles = 1;
+           sizeFrom = 1.5f;
+           length = baseLength = 0;
+           lifetime = 20;
+           colorFrom = colorTo = SFColor.energySky;
+        }};
+
+        air1 = new UnitType("convection"){{
+            constructor = UnitTypes.flare.constructor;
+            flying = true;
+            lowAltitude = true;
+            faceTarget = true;
+            rotateSpeed = 8f;
+            speed = 1.8f;
+            drag = 0.05f;
+            accel = 0.1f;
+            hitSize = 8;
+            health = 110;
+            armor = 0;
+            itemCapacity = 0;
+            engineOffset = 8;
+            engineSize = 2.5f;
+            immunities.add(StatusEffects.freezing);
+            weapons.add(new Weapon(name("convection-weapon")){{
+                rotate = false;
+                mirror = false;
+                reload = 60;
+                x = y = 0;
+                shootSound = Sounds.missile;
+                shoot = new ShootSpread(2, 20){{shotDelay=8;}};
+                velocityRnd = 0.02f;
+                bullet = new MissileBulletType(4,8,"circle-bullet"){{
+                    width = height = 5;
+                    lifetime = 30;
+                    weaveMag = 3;
+                    weaveScale = 3;
+                    reflectable = false;
+                    frontColor = Color.white;
+                    backColor = SFColor.energySky;
+                    trailColor = SFColor.energySky;
+                    trailLength = 4;
+                    trailWidth = 2;
+                    trailEffect = Fx.none;
+                    hitEffect = hitEnergySky;
+                    despawnEffect = desEnergySky;
+                    //it not follow the weapon rotation......
+                    //shootEffect = new WrapEffect(Fx.shootSmallColor,SFColor.energySky);
+                    shootEffect = Fx.none;
+                    smokeEffect = Fx.none;
+                    status = SFStatusEffects.magnStrif;
+                    statusDuration = 15;
+                }};
+            }});
+        }};
+        air2 = new UnitType("sleet"){{
+            constructor = UnitTypes.zenith.constructor;
+            flying = true;
+            lowAltitude = true;
+            faceTarget = true;
+            rotateSpeed = 4.7f;
+            speed = 1.5f;
+            drag = 0.08f;
+            accel = 0.1f;
+            hitSize = 13;
+            health = 520;
+            armor = 3;
+            itemCapacity = 0;
+            engineOffset = 10;
+            engineSize = 3f;
+            immunities.add(StatusEffects.freezing);
+            weapons.add(new Weapon(name("sleet-weapon")){{
+                x = 0;
+                rotate = false;
+                mirror = false;
+                reload = 17;
+                shootY = 4;
+                shootCone = 15;
+                recoil = 0;
+                shootSound = Sounds.missile;
+                heatColor = Color.red;
+                cooldownTime = 20;
+                shoot = new ShootPattern(){{firstShotDelay=7.5f;}};
+                parts.add(new ShapePart(){{
+                    color = SFColor.energySky;
+                    y = 4;
+                    layer = 110;
+                    circle = true;
+                    hollow = false;
+                    radius = 0.6f;
+                    radiusTo = 2.2f;
+                }});
+                bullet = new PointBulletType(){{
+                    trailSpacing = 3;
+                    trailEffect = new MultiEffect(
+                            new ParticleEffect(){{
+                                particles = 1;
+                                line = true;
+                                randLength = false;
+                                length = 0;
+                                baseLength = 1;
+                                lifetime = 7.5f;
+                                lenFrom = lenTo = 3.3f;
+                                strokeFrom = 2.2f;
+                                strokeTo = 0;
+                                colorFrom = colorTo = SFColor.energySky;
+                                cone = 0;
+                            }},
+                            new ParticleEffect(){{
+                                particles = 1;
+                                baseLength = 3f;
+                                lifetime = 15f;
+                                sizeFrom = 1.6f;
+                                colorFrom = colorTo = SFColor.energySky;
+                            }}
+                    );
+                    buildingDamageMultiplier = 0.68f;
+                    damage = 35f;
+                    lifetime = 10;
+                    speed = 16;
+                    status = StatusEffects.freezing;
+                    statusDuration = 240;
+                    chargeEffect = new ParticleEffect(){{
+                        particles = 2;
+                        length = -35;
+                        baseLength = 35;
+                        lifetime = 55;
+                        sizeFrom = 0;
+                        sizeTo = 1.3f;
+                        colorFrom = colorTo = SFColor.energySky;
+                    }};
+                    shootEffect = hitEnergySky;
+                    smokeEffect = Fx.none;
+                    hitSound = Sounds.explosion;
+                    hitEffect = new MultiEffect(
+                            new WaveEffect() {{
+                                lifetime = 10;
+                                sizeFrom = 1;
+                                sizeTo = 16;
+                                strokeFrom = 2.5f;
+                                colorFrom = colorTo = SFColor.energySky;
+                            }},
+                            new ParticleEffect() {{
+                                particles = 8;
+                                length = 16;
+                                line = true;
+                                lifetime = 55;
+                                interp = Interp.pow5Out;
+                                colorFrom = colorTo = SFColor.energySky;
+                            }}
+                    );
+                    despawnEffect = new ParticleEffect() {{
+                        particles = 1;
+                        sizeFrom = 3f;
+                        length = baseLength = 0;
+                        lifetime = 30;
+                        colorFrom = colorTo = SFColor.energySky;
+                    }};
+                }};
+            }});
+        }};
+        air3 = new UnitType("cumulus"){{
+            constructor = UnitTypes.zenith.constructor;
+            flying = true;
+            lowAltitude = false;
+            rotateSpeed = 5f;
+            speed = 2.1f;
+            drag = 0.015f;
+            accel = 0.02f;
+            hitSize = 24;
+            health = 1000;
+            armor = 4;
+            itemCapacity = 20;
+            engineSize = 3.5f;
+            engineOffset = 13f;
+            trailLength = 7;
+            immunities.addAll(StatusEffects.burning,StatusEffects.unmoving);
+            circleTarget = faceTarget = true;
+            weapons.add(new Weapon(name("cumulus-gun")){{
+                top = false;
+                x = 4;
+                y = 5;
+                shootX = 1;
+                shootY = 3;
+                inaccuracy = 1;
+                layerOffset = -0.001f;
+                shootSound = Sounds.blaster;
+                rotate = false;
+                reload = 6f;
+                shootCone = 5;
+                minShootVelocity = 0.1f;
+                bullet = new RailBulletType(){{
+                    damage = 16;
+                    pierce = false;
+                    pointEffectSpace = 4;
+                    pierceDamageFactor = 0.8f;
+                    pointEffect =  new ParticleEffect(){{
+                        particles = 1;
+                        line = true;
+                        randLength = false;
+                        length = 0;
+                        baseLength = 1;
+                        lifetime = 7f;
+                        lenFrom = lenTo = 4.3f;
+                        strokeFrom = 3f;
+                        strokeTo = 0;
+                        colorFrom = colorTo = Pal.lightPyraFlame;
+                        cone = 0;
+                    }};
+                    endEffect = new Effect(7, e -> {
+                        color(e.color);
+                        Drawf.tri(e.x, e.y, e.fout() * 1.5f, 5f, e.rotation);
+                    });
+                    smokeEffect = Fx.none;
+                    hitEffect = new ParticleEffect(){{
+                        particles = 5;
+                        lifetime = 10;
+                        sizeFrom = 3;
+                        colorFrom = colorTo = Pal.lightPyraFlame;
+                    }};
+                    status = StatusEffects.burning;
+                    statusDuration = 180;
+                    length = 120;
+                }};
+            }},
+                    new Weapon(name("cumulus-bomb")){{
+                        x = 4;
+                        reload = 130f;
+                        rotate = false;
+                        minShootVelocity = 0.2f;
+                        shootY = 3f;
+                        shootCone = 180f;
+                        shoot = new ShootPattern(){{
+                            shots = 5;
+                            shotDelay = 6f;
+                        }};
+                        ejectEffect = Fx.none;
+                        inaccuracy = 15f;
+                        ignoreRotation = true;
+                        shootSound = Sounds.none;
+                        bullet = new BombBulletType(20,35,"missile-large"){{
+                            splashDamage = 20;
+                            incendAmount = 2;
+                            incendChance = 0.35f;
+                            incendSpread = 30;
+                            makeFire = true;
+                            width = height = 9;
+                            shrinkX = shrinkY = 0.5f;
+                            frontColor = Color.white;
+                            backColor = Pal.lightPyraFlame;
+                            hitEffect = new MultiEffect(
+                                    new ParticleEffect(){{
+                                        particles = 9;
+                                        sizeFrom = 6;
+                                        length = 30;
+                                        lifetime = 25;
+                                        colorFrom = Pal.lightPyraFlame;
+                                    }},
+                                    new WaveEffect(){{
+                                        sizeTo = 35;
+                                        strokeFrom = 4;
+                                        lifetime = 15;
+                                        colorFrom = colorTo = Pal.lightPyraFlame;
+                                    }}
+                            );
+                            despawnEffect = Fx.flakExplosion;
+                            shootEffect = Fx.none;
+                            smokeEffect = Fx.none;
+
+                            status = StatusEffects.burning;
+                            statusDuration = 600f;
+                        }};
+                    }}
+            );
+        }};
+        air4 = new UnitType("circulation"){{
+            constructor = UnitTypes.zenith.constructor;
+            flying = true;
+            lowAltitude = true;
+            faceTarget = true;
+            rotateSpeed = 2f;
+            speed = 1.33f;
+            drag = 0.02f;
+            accel = 0.02f;
+            hitSize = 35;
+            health = 8200;
+            armor = 6;
+            itemCapacity = 0;
+            immunities.add(StatusEffects.freezing);
+            engineOffset = 24;
+            engineSize = 3;
+            setEnginesMirror(new UnitEngine(-11.75f,-14,4,-55));
+            abilities.add(new SuppressionFieldAbility(){{
+                range = 180;
+                reload = 60;
+                y = 1;
+                color = SFColor.energySky;
+                orbRadius = 5;
+                orbMidScl = 0.33f;
+                particles = 12;
+                particleColor = SFColor.energySky;
+                particleLife = 50;
+                particleLen = -8;
+                particleSize = 2;
+                applyParticleChance = 0;
+            }});
+            BulletType energyBulletSky = new BasicBulletType(6,12){{
+                reflectable = false;
+                shrinkY = 0;
+                shootEffect = hitEffect = hitEnergySky;
+                smokeEffect = Fx.none;
+                despawnEffect = desEnergySky;
+                buildingDamageMultiplier = 0.68f;
+                width = 7;
+                height = 10;
+                lifetime = 30;
+                frontColor = Color.white;
+                backColor = SFColor.energySky;
+            }};
+            weapons.add(
+                    new Weapon(name("cumulus-gun")) {{
+                        rotate = true;
+                        rotateSpeed = 12;
+                        rotationLimit = 22;
+                        top = false;
+                        x = 16.75f;
+                        y = -1.5f;
+                        shootX = 1;
+                        shootY = 3;
+                        inaccuracy = 1.2f;
+                        layerOffset = -0.001f;
+                        shootSound = Sounds.blaster;
+                        reload = 7f;
+                        shootCone = 13;
+                        bullet = energyBulletSky;
+                    }},
+                    new Weapon(name("cumulus-gun")) {{
+                        rotate = true;
+                        rotateSpeed = 12;
+                        rotationLimit = 22;
+                        top = false;
+                        x = 8.5f;
+                        y = 11.75f;
+                        shootX = 1;
+                        shootY = 3;
+                        inaccuracy = 1.2f;
+                        layerOffset = -0.001f;
+                        shootSound = Sounds.blaster;
+                        reload = 8f;
+                        shootCone = 13;
+                        bullet = energyBulletSky;
+                    }},
+                    new Weapon(name("circulation-missile")){{
+                        rotate = false;
+                        x = 13f;
+                        y = 6f;
+                        alternate = false;
+                        shoot = new ShootBarrel(){{
+                            shots = 10;
+                            shotDelay = 3.5f;
+                            barrels = new float[]{
+                                    -1.5f,1.5f,0,
+                                    0,0,0,
+                                    1.5f,-1.5f,0
+                            };
+                        }};
+                        inaccuracy = 5f;
+                        shootSound = Sounds.missile;
+                        reload = 50f;
+                        shootCone = 30;
+                        velocityRnd = 0.1f;
+                        bullet = new MissileBulletType(6,18,"circle-bullet"){{
+                            reflectable = false;
+                            drag = -0.01f;
+                            width = height = 6;
+                            lifetime = 28;
+                            shrinkY = 0;
+                            homingDelay = 15;
+                            frontColor = Color.white;
+                            backColor = SFColor.energySky;
+                            trailColor = SFColor.energySky;
+                            trailLength = 5;
+                            trailWidth = 2.5f;
+                            shootEffect = smokeEffect = Fx.none;
+                            splashDamage = 18;
+                            splashDamageRadius = 25;
+                            status = SFStatusEffects.magnStrif;
+                            statusDuration = 18;
+                            knockback = 0.5f;
+                            hitEffect = new MultiEffect(
+                                    new WaveEffect(){{
+                                        interp = Interp.circleOut;
+                                        lifetime = 18;
+                                        sizeTo = 38;
+                                        strokeFrom = 4;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                    }},
+                                    new ParticleEffect(){{
+                                        particles = 5;
+                                        sizeFrom = 2.5f;
+                                        length = 35;
+                                        interp = Interp.pow5Out;
+                                        sizeInterp = Interp.pow3Out;
+                                        lifetime = 45;
+                                        colorFrom = SFColor.energySky;
+                                        colorTo = SFColor.energySky.cpy().a(0.8f);
+                                    }}
+                            );
+                        }};
+                    }}
+            );
+        }};
+        air5 = new UnitType("cirrus"){{
+            constructor = UnitTypes.zenith.constructor;
+            flying = true;
+            lowAltitude = true;
+            faceTarget = true;
+            rotateSpeed = 1.22f;
+            speed = 0.6f;
+            drag = 0.05f;
+            accel = 0.04f;
+            hitSize = 59;
+            health = 20000;
+            armor = 8;
+            itemCapacity = 0;
+            engineOffset = 18;
+            engineSize = 15;
+            immunities.addAll(StatusEffects.wet,StatusEffects.freezing);
+            drawShields = false;
+            abilities.add(new ForceFieldAbility(82,6,3500,360));
+            weapons.add(
+                    new Weapon(name("cirrus-weapon")) {{
+                        rotate = true;
+                        rotateSpeed = 3;
+                        reload = 18;
+                        x = 16;
+                        y = -8;
+                        shootY = 11;
+                        shoot = new ShootAlternate(8);
+                        shake = 2;
+                        shootSound = Sounds.laser;
+                        bullet = new BasicBulletType(8,45,"circle-bullet"){{
+                            reflectable = false;
+                            width = height = 10;
+                            lifetime = 33.75f;
+                            shrinkY = 0;
+                            frontColor = Color.white;
+                            backColor = SFColor.energySky;
+                            trailColor = SFColor.energySky;
+                            trailLength = 8;
+                            trailWidth = 4f;
+                            trailInterval = 3;
+                            trailEffect = new ParticleEffect(){{
+                                particles = 3;
+                                sizeFrom = 3;
+                                length = 8;
+                                sizeInterp = Interp.pow3In;
+                                interp = Interp.pow5Out;
+                                lifetime = 22;
+                                colorFrom = colorTo = SFColor.energySky;
+                            }};
+                            shootEffect = Fx.lancerLaserShoot;
+                            smokeEffect = Fx.none;
+
+                            splashDamage = 60;
+                            splashDamageRadius = 38;
+                            status = SFStatusEffects.magnStrif;
+                            statusDuration = 30;
+                            lightning = 5;
+                            lightningDamage = 24;
+                            lightningLength = lightningLengthRand = 3;
+                            lightningColor = SFColor.energySky;
+                            despawnEffect = Fx.lancerLaserShoot;
+                            hitSound = Sounds.laser;
+                            hitShake = 3;
+                            hitEffect = new MultiEffect(
+                                    new ExplosionEffect(){{
+                                        waveLife = 22;
+                                        waveRad = 50;
+                                        waveStroke = 8;
+                                        waveColor = SFColor.energySky;
+                                        smokeColor = SFColor.smoke;
+                                        lifetime = 60;
+                                        smokeRad = 55;
+                                        smokeSize = 10;
+                                        smokes = 7;
+                                        sparks = 0;
+                                    }},
+                                    new ParticleEffect(){{
+                                        particles = 6;
+                                        sizeFrom = 6;
+                                        length = 20;
+                                        baseLength = 30;
+                                        lifetime = 60;
+                                        colorTo = SFColor.smoke;
+                                        colorFrom = SFColor.energySky;
+                                    }}
+                            );
+                        }};
+                    }},
+                    new Weapon(name("cirrus-storm")) {{
+                        rotate = false;
+                        alternate = false;
+                        x = 28;
+                        y = 24;
+                        reload = 400;
+                        shootSound = Sounds.release;
+                        shootCone = 10;
+                        bullet = new BasicBulletType(8, 150, "missile-large") {{
+                            reflectable = false;
+                            collides = false;
+                            scaleLife = true;
+                            width = 20;
+                            height = 24;
+                            lifetime = 40f;
+                            shrinkY = 0;
+                            frontColor = Color.white;
+                            backColor = SFColor.energySky;
+                            trailColor = SFColor.energySky;
+                            trailLength = 18;
+                            trailWidth = 4f;
+                            trailInterval = 3;
+                            trailEffect = new WaveEffect() {{
+                                sizeTo = 20;
+                                strokeFrom = 2;
+                                interp = Interp.circleOut;
+                                lifetime = 30;
+                                colorFrom = colorTo = SFColor.energySky;
+                            }};
+                            shootEffect = smokeEffect = Fx.none;
+                            despawnEffect = new MultiEffect(
+                                    new WaveEffect(){{
+                                        sizeTo = 150;
+                                        lifetime = 20;
+                                        strokeFrom = 1;
+                                        strokeTo = 4;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                    }},
+                                    new WaveEffect(){{
+                                        startDelay = 20;
+                                        sizeFrom = sizeTo = 150;
+                                        lifetime = 80;
+                                        strokeFrom = 4;
+                                        interp = Interp.circleOut;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                    }}
+                            );
+                            hitEffect = new ParticleEffect(){{
+                                particles = 35;
+                                sizeFrom = 28;
+                                length = 130;
+                                baseLength = 20;
+                                lifetime = 150;
+                                sizeInterp = Interp.pow5In;
+                                interp = Interp.pow10Out;
+                                layer = 120;
+                                colorFrom = SFColor.smoke;
+                                colorTo = SFColor.smoke.cpy().a(0.5f);
+                            }};
+                            hitShake = 12;
+                            fragBullets = 20;
+                            fragLifeMin = 0.5f;
+                            fragBullet = new BasicBulletType(1.3f,10){{
+                                lifetime = 100;
+                                collides = false;
+                                hittable = false;
+                                absorbable = false;
+                                buildingDamageMultiplier = 0.58f;
+                                splashDamage = 25;
+                                splashDamageRadius = 38;
+                                status = SFStatusEffects.magnStrif;
+                                statusDuration = 30;
+                                lightning = 9;
+                                lightningDamage = 24;
+                                lightningLength = 15;
+                                lightningLengthRand = 3;
+                                lightningColor = SFColor.energySky;
+                                hitShake = 5;
+                                hitSound = Sounds.plasmaboom;
+                                despawnEffect = Fx.lancerLaserShoot;
+                                hitEffect = new MultiEffect(
+                                        new ExplosionEffect(){{
+                                            waveLife = 22;
+                                            waveRad = 50;
+                                            waveStroke = 8;
+                                            waveColor = SFColor.energySky;
+                                            smokeColor = SFColor.smoke;
+                                            lifetime = 60;
+                                            smokeRad = 55;
+                                            smokeSize = 10;
+                                            smokes = 7;
+                                            sparks = 0;
+                                        }},
+                                        new ParticleEffect(){{
+                                            particles = 6;
+                                            sizeFrom = 6;
+                                            length = 20;
+                                            baseLength = 30;
+                                            lifetime = 60;
+                                            colorTo = SFColor.smoke;
+                                            colorFrom = SFColor.energySky;
+                                        }}
+                                );
+                            }};
+                        }};
+                    }}
+            );
+        }};
+        air6 = new UnitType("stratosphere"){{
+            constructor = UnitTypes.quad.constructor;
+            payloadCapacity = 6 * 6 * 64;
+            flying = true;
+            lowAltitude = false;
+            faceTarget = false;
+            rotateSpeed = 0.7f;
+            speed = 1.11f;
+            drag = 0.07f;
+            accel = 0.09f;
+            hitSize = 88;
+            health = 82500;
+            armor = 30;
+            itemCapacity = 0;
+            engineOffset = 22;
+            engineSize = 13;
+            trailLength = 40;
+            setEnginesMirror(
+                    new UnitEngine(-40,-17,7,-135),
+                    new UnitEngine(-68.75f,-7,4.3f,-135)
+                    );
+            immunities.addAll(StatusEffects.electrified,StatusEffects.slow,StatusEffects.freezing,StatusEffects.unmoving,SFStatusEffects.negative,SFStatusEffects.postive,SFStatusEffects.scrambled,SFStatusEffects.disRepair,SFStatusEffects.magnStrif);
+            targetFlags = new BlockFlag[]{BlockFlag.turret,BlockFlag.core};
+            circleTarget = true;
+            weapons.add(
+                    new Weapon(name("stratosphere-emp")){{
+                        rotate = false;
+                        x = 0;
+                        reload = 380;
+                        shoot = new ShootBarrel(){{
+                            shots = 12;
+                            shotDelay = 120 / 12f;
+                            barrels = new float[]{
+                                    53.5f,8,0,
+                                    24,24,0,
+                                    -53.5f,8,0,
+                                    -24,24,0
+                            };
+                        }};
+                        minShootVelocity = 0.1f;
+                        ignoreRotation = true;
+                        shootStatus = StatusEffects.shielded;
+                        shootStatusDuration = 90;
+                        shootCone = 180;
+                        shootSound = Sounds.plasmadrop;
+                        xRand = 6;
+                        bullet = new EmpBulletType(){{
+                            sprite = "missile-large";
+                            width = 24;
+                            height = 32;
+                            hitShake = 20;
+                            hitSound = Sounds.plasmaboom;
+                            frontColor = Color.white;
+                            backColor = SFColor.energySky;
+                            trailLength = 24;
+                            trailWidth = 5;
+                            trailColor = backColor;
+                            layer = 100;
+                            collides = false;
+                            collidesAir = false;
+                            scaledSplashDamage = true;
+                            speed = 0.7f;
+                            drag = 0.03f;
+                            lifetime = 100;
+                            shrinkY = shrinkX = 0.8f;
+
+                            timeIncrease = 1;
+                            powerSclDecrease = 0.88f;
+                            radius = 60;
+                            unitDamageScl = 2f;
+                            chainEffect = Fx.chainLightning;
+                            hitPowerEffect = new WrapEffect(Fx.hitLaserColor,SFColor.energySky);
+                            applyEffect = Fx.none;
+                            status = StatusEffects.slow;
+                            statusDuration = 600;
+                            suppressionRange = 120;
+                            suppressionDuration = 1200;
+
+                            lightning = 4;
+                            lightningDamage = 50;
+                            lightningLength = 5;
+                            lightningLengthRand = 8;
+                            lightningColor = SFColor.energySky;
+
+                            damage = 75;
+                            splashDamage = 60;
+                            splashDamageRadius = 60;
+                            shootEffect = smokeEffect = Fx.none;
+                            despawnEffect = Fx.none;
+                            hitEffect = new MultiEffect(
+                                    new WrapEffect(Fx.dynamicSpikes,SFColor.energySky,60),
+                                    new ExplosionEffect(){{
+                                        sparks = 37;
+                                        sparkLen = 32;
+                                        sparkStroke = 2.25f;
+                                        sparkRad = 80;
+                                        waveColor = sparkColor = SFColor.energySky;
+                                        lifetime = 20;
+                                        smokes = 0;
+                                        waveStroke = 8;
+                                        waveRad = 70;
+                                        waveLife = 35;
+                                    }},
+                                    new ParticleEffect(){{
+                                        lifetime = 60;
+                                        sizeFrom = 12;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                        length = 0;
+                                    }}
+                            );
+                        }};
+                    }},
+                    new Weapon(name("stratosphere-emp")){{
+                        rotate = false;
+                        x = 0;
+                        reload = 380;
+                        shoot = new ShootBarrel(){{
+                            shots = 27;
+                            shotDelay = 120 / 27f;
+                            barrels = new float[]{
+                                    0,12,0,
+                                    40,-6,0,
+                                    -40,-6,0
+                            };
+                        }};
+                        minShootVelocity = 0.1f;
+                        ignoreRotation = true;
+                        shootStatus = StatusEffects.shielded;
+                        shootStatusDuration = 90;
+                        shootCone = 180;
+                        shootSound = Sounds.plasmadrop;
+                        xRand = 6;
+                        bullet = new BasicBulletType(){{
+                            sprite = "missile-large";
+                            width = 24;
+                            height = 32;
+                            hitShake = 20;
+                            hitSound = Sounds.explosionbig;
+                            frontColor = Color.white;
+                            backColor = Pal.lightPyraFlame;
+                            trailLength = 24;
+                            trailWidth = 5;
+                            trailColor = backColor;
+                            layer = 100;
+                            collides = false;
+                            collidesAir = false;
+                            scaledSplashDamage = true;
+                            speed = 0.7f;
+                            drag = 0.03f;
+                            lifetime = 100;
+                            shrinkY = shrinkX = 0.8f;
+
+                            status = StatusEffects.burning;
+                            statusDuration = 1200;
+                            incendAmount = 3;
+                            incendSpread = 86;
+                            incendChance = 1;
+
+                            damage = 150;
+                            splashDamage = 75;
+                            splashDamageRadius = 60;
+                            shootEffect = smokeEffect = Fx.none;
+                            despawnEffect = Fx.none;
+                            hitEffect = new MultiEffect(
+                                    new WrapEffect(Fx.dynamicSpikes,SFColor.energySky,60),
+                                    new ExplosionEffect(){{
+                                        smokes = 37;
+                                        smokeSize= 16;
+                                        smokeRad = 76f;
+                                        waveColor = smokeColor = Pal.lightPyraFlame.cpy().a(0.48f);
+                                        lifetime = 50;
+                                        sparks = 0;
+                                        waveStroke = 10;
+                                        waveRad = 70;
+                                        waveLife = 25;
+                                    }},
+                                    new ParticleEffect(){{
+                                        lifetime = 80;
+                                        sizeFrom = 12;
+                                        sizeInterp = Interp.pow3In;
+                                        colorFrom = colorTo = Pal.lightPyraFlame;
+                                        length = 0;
+                                    }}
+                            );
+                        }};
+                    }},
+                    new Weapon(name("stratosphere-gun")){{
+                        reload = 5;
+                        alternate = false;
+                        mirror = true;
+                        x = 43;
+                        rotate = true;
+                        rotateSpeed = 9;
+                        controllable = false;
+                        autoTarget = true;
+                        shootSound = Sounds.missile;
+                        shootY = 3;
+                        bullet = new PointBulletType(){{
+                            trailSpacing = 3;
+                            trailEffect = new MultiEffect(
+                                    new ParticleEffect(){{
+                                        particles = 1;
+                                        line = true;
+                                        randLength = false;
+                                        layer = 120;
+                                        lightOpacity = 1;
+                                        length = 0;
+                                        baseLength = 1;
+                                        lifetime = 7.5f;
+                                        lenFrom = lenTo = 3.3f;
+                                        strokeFrom = 2.2f;
+                                        strokeTo = 0;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                        cone = 0;
+                                    }},
+                                    new ParticleEffect(){{
+                                        particles = 1;
+                                        baseLength = 3f;
+                                        lifetime = 15f;
+                                        sizeFrom = 1.6f;
+                                        layer = 120;
+                                        lightOpacity = 1;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                    }}
+                            );
+                            collidesGround = false;
+                            splashDamage = 16;
+                            splashDamageRadius = 30;
+                            damage = 35f;
+                            lifetime = 8;
+                            speed = 30;
+                            status = StatusEffects.freezing;
+                            statusDuration = 60;
+                            shootEffect = hitEnergySky;
+                            smokeEffect = Fx.none;
+                            hitSound = Sounds.explosion;
+                            hitEffect = new MultiEffect(
+                                    new WaveEffect() {{
+                                        lifetime = 10;
+                                        sizeFrom = 1;
+                                        sizeTo = 30;
+                                        strokeFrom = 2.5f;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                    }},
+                                    new ParticleEffect() {{
+                                        particles = 8;
+                                        length = 16;
+                                        line = true;
+                                        lifetime = 55;
+                                        interp = Interp.pow5Out;
+                                        colorFrom = colorTo = SFColor.energySky;
+                                    }}
+                            );
+                            despawnEffect = new ParticleEffect() {{
+                                particles = 1;
+                                sizeFrom = 4.6f;
+                                length = baseLength = 0;
+                                lifetime = 34;
+                                colorFrom = colorTo = SFColor.energySky;
+                            }};
+                        }};
+                    }}
+                    );
+        }};
 
         farmer = new UnitType("farmer") {{
             constructor = UnitTypes.mega.constructor;
@@ -3566,8 +5201,10 @@ public class SFUnitTypes {
             accel = 0.08f;
             drag = 0.07f;
             lightRadius = 60;
+            autoFindTarget = false;
             weapons.add(new Weapon(name("utv-2")) {{
                 mirror = false;
+                top = true;
                 rotate = true;
                 rotateSpeed = 0.85f;
                 reload = 190f;
@@ -3579,6 +5216,7 @@ public class SFUnitTypes {
                 y = -4;
                 parts.add(new RegionPart("-barrel") {{
                     progress = PartProgress.warmup;
+                    top = true;
                     under = true;
                     moveY = 10;
                     heatColor = Color.valueOf("FF4040");

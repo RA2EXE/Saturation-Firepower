@@ -117,6 +117,7 @@
 				"lifetime": 100,
 				"shrinkY": 0.8,
 				"shrinkX": 0.8,
+
 				"timeIncrease": 1,
 				"powerDamageScl": 3,
 				"powerSclDecrease": 0.88,
@@ -126,9 +127,11 @@
 				"status": "slow",
 				"statusDuration": 600,
 				"unitDamageScl": 0.4,
+
 				"damage": 480,
 				"splashDamageRadius": 74,
 				"splashDamage": 300,
+
 				"lightningDamage": 50,
 				"lightning": 4,
 				"lightningLength": 5,
@@ -150,6 +153,7 @@
 					"colorTo": "c0ecff"
 				},
 				"applyEffect": "none",
+
 				"shootEffect": "none",
 				"smokeEffect": "none",
 				"despawnEffect": "none",
@@ -195,12 +199,6 @@
 							"colorTo": "c0ecff00"
 						},
 						{
-							"type": "WrapEffect",
-							"effect": "dynamicSpikes",
-							"color": "c0ecff",
-							"rotation": 80
-						},
-						{
 							"type": "WaveEffect",
 							"interp": "circleOut",
 							"lifetime": 35,
@@ -216,7 +214,7 @@
 			}
 		},
 		{
-			"name": "地动3",
+			"name": "huo",
 			"minShootVelocity": 0.1,
 			"x": 0,
 			"y": 0,
@@ -313,31 +311,7 @@
 			}
 		},
 		{
-			"name": "地动4",
-			"reload": 300,
-			"x": 35,
-			"y": -16,
-			"rotate": true,
-			"alternate": true,
-			"autoTarget": true,
-			"rotateSpeed": 5,
-			"inaccuracy": 15,
-			"shootCone": 360,
-			"shootSound": "click",
-			"shootStatus": "修复",
-			"shootStatusDuration": 120,
-			"bullet": {
-				"type": "FlakBulletType",
-				"keepVelocity": false,
-				"collidesGround": false,
-				"smokeEffect": "none",
-				"hitEffect": "none",
-				"despawnEffect": "none",
-				"spawnUnit": "地动诱饵"
-			}
-		},
-		{
-			"name": "地动1",
+			"name": "laser",
 			"reload": 3,
 			"recoil": 1,
 			"x": 43,
