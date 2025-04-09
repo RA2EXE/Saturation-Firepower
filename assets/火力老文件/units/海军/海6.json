@@ -25,31 +25,6 @@
 	},
 	"weapons": [
 		{
-			"name": "重堂2",
-			"type": "PointDefenseWeapon",
-			"x": 32,
-			"y": -40,
-			"shootSound": "missile",
-			"rotate": true,
-			"recoil": 0,
-			"rotateSpeed": 9,
-			"reload": 4,
-			"xRand": 2,
-			"targetInterval": 2,
-			"targetSwitchInterval": 2,
-			"shoot": {
-				"shots": 3
-			},
-			"bullet": {
-				"speed": 34,
-				"lifetime": 10,
-				"shootEffect": "sparkShoot",
-				"hitEffect": "pointHit",
-				"maxRange": 340,
-				"damage": 50
-			}
-		},
-		{
 			"name": "重堂1",
 			"reload": 55,
 			"shoot":{
@@ -482,6 +457,7 @@
 				"sprite": "missile-large",
 				"shrinkY": 0,
 				"shrinkX": 0,
+
 				"chargeEffect": {
 					"type": "MultiEffect",
 					"effects": [
@@ -570,6 +546,7 @@
 						}
 					]
 				},
+
 				"hitSound": "DBZ1",
 				"hitPowerEffect": {
 					"type": "ParticleEffect",

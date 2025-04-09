@@ -2116,12 +2116,10 @@ public class SFBlocks {
                     new UnitPlan(UnitTypes.mega, 60f * 45, T3Item),
                     new UnitPlan(UnitTypes.cyerce, 60f * 54, T3Item),
                     new UnitPlan(SFUnitTypes.farmer, 60f * 50, with(Items.titanium,300, Items.silicon,250, SFItems.siliSteel,100, SFItems.nanoCore,80)),
-                    /*
                     new UnitPlan(SFUnitTypes.tank1, 60f * 42, T3Item),
                     new UnitPlan(SFUnitTypes.air3, 60f * 39, T3Item),
                     new UnitPlan(SFUnitTypes.naval3, 60f * 60, T3Item),
-                    new UnitPlan(SFUnitTypes.banisher, 60f * 67, with(Items.titanium,120, Items.silicon,230, Items.metaglass,180, Items.plastanium,60)),
-                    */
+                    //new UnitPlan(SFUnitTypes.banisher, 60f * 67, with(Items.titanium,120, Items.silicon,230, Items.metaglass,180, Items.plastanium,60)),
                     new UnitPlan(SFUnitTypes.hammer, 60f * 35, with(Items.titanium,80, Items.silicon,160, Items.graphite,160, SFItems.siliSteel,80)),
                     //new UnitPlan(SFUnitTypes.flamer, 60f * 50, with(Items.graphite,90, Items.silicon,180, SFItems.siliSteel,80, SFItems.strontium,80)),
                     new UnitPlan(SFUnitTypes.thunder, 60f * 50, with(Items.titanium,80, Items.silicon,220, Items.plastanium,130, Items.phaseFabric,60))
@@ -2140,13 +2138,10 @@ public class SFBlocks {
                     new UnitType[]{UnitTypes.oct, SFUnitTypes.guangHan},
                     new UnitType[]{UnitTypes.eclipse, SFUnitTypes.yuHui},
                     new UnitType[]{UnitTypes.omura, SFUnitTypes.tengWang},
-                    new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan}
-                    /*
-                    new UnitType[]{UnitTypes.tank5, SFUnitTypes.luoHan}
-                    new UnitType[]{UnitTypes.air5, SFUnitTypes.luoHan}
-                    new UnitType[]{UnitTypes.naval5, SFUnitTypes.luoHan}
-
-                    **/
+                    new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan},
+                    new UnitType[]{SFUnitTypes.tank5, SFUnitTypes.tank6},
+                    new UnitType[]{SFUnitTypes.air5, SFUnitTypes.air6},
+                    new UnitType[]{SFUnitTypes.naval5, SFUnitTypes.naval6}
             );
             researchCostMultiplier = 0.4f;
             buildCostMultiplier = 0.7f;
