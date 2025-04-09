@@ -4657,7 +4657,7 @@ public class SFUnitTypes {
             waveTrailY = -30;
             trailScl = 3;
             hitSize = 50;
-            health = 7300;
+            health = 9300;
             armor = 8;
             faceTarget = false;
             weapons.addAll(
@@ -5048,8 +5048,6 @@ public class SFUnitTypes {
                         layerOffset = 0.001f;
                         shootY = 8;
                         shoot = new ShootPattern(){{firstShotDelay=120;}};
-                        minWarmup = 0.8f;
-                        shootWarmupSpeed = 0.03f;
                         inaccuracy = 3;
                         recoil = 2;
                         shootSound = Sounds.railgun;
@@ -5181,9 +5179,9 @@ public class SFUnitTypes {
                             }};
                             despawnEffect = Fx.none;
                             shootEffect = new WaveEffect(){{
-                                lifetime = 10;
+                                lifetime = 30;
                                 sizeTo = 90;
-                                strokeFrom = 6;
+                                strokeFrom = 8;
                             }};
                             smokeEffect = new ParticleEffect(){{
                                 particles = 10;
@@ -5191,9 +5189,10 @@ public class SFUnitTypes {
                                 lenFrom = 25;
                                 lenTo = 0;
                                 lifetime = 160;
+                                length = 85f;
                                 strokeFrom = strokeTo = 3;
-                                sizeInterp = Interp.pow10In;
-                                interp = Interp.fastSlow;
+                                sizeInterp = Interp.pow5In;
+                                interp = Interp.pow10Out;
                                 colorFrom = SFColor.energyYellow;
                                 colorTo = SFColor.energyYellow;
                                 cone = 30;
