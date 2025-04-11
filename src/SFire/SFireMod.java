@@ -27,13 +27,12 @@ public class SFireMod extends Mod {
 
     @Override
     public void loadContent() {
-        //SFSounds.load();
+        SFSounds.load();
         SFStatusEffects.load();
         SFItems.load();
         SFLiquids.load();
-        SFSounds.load();
         SFOverride.load();
-        //SFBulletTypes.load();
+        //SFBulletType.load();
         SFUnitTypes.loadUnit();
         SFBlocks.load();
         //SFTechTree.load();

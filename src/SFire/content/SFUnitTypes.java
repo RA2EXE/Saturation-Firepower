@@ -1298,17 +1298,19 @@ public class SFUnitTypes {
                         shootCone = 360f;
                         //display = false;
                         ejectEffect = Fx.none;
-                        shootSound = SFSounds.huegExplosion;
+                        shootSound = SFSounds.hugeExplosion;
                         mirror = false;
                         shootOnDeath = true;
                         controllable = false;
+                        autoTarget = true;
                         shoot.shots = 2;
                         shoot.firstShotDelay = 480f;
                         shootStatus = SFStatusEffects.overLoad;
                         shootStatusDuration = 488f;
-                        bullet = new ExplosionBulletType(){{
-                            splashDamage = 2230;
-                            splashDamageRadius = 150;
+                        bullet = new ExplosionBulletType(12000,150){{
+                            maxRange = 200;
+                            speed = 20;
+                            lifetime = 5;
                             hitShake = 88f;
                             shootEffect = new MultiEffect(Fx.massiveExplosion, new WrapEffect(Fx.dynamicSpikes, SFColor.enemyRedLight, 160), new WaveEffect(){{
                                 colorFrom = colorTo = SFColor.enemyRedLight;
@@ -1316,6 +1318,21 @@ public class SFUnitTypes {
                                 lifetime = 12f;
                                 strokeFrom = 4f;
                             }});
+                            smokeEffect = new ExplosionEffect(){{
+                                lifetime = 128;
+                                waveStroke = 9;
+                                waveLife = 20;
+                                waveRadBase = 7;
+                                waveColor = SFColor.enemyRedLight;
+                                waveRad = 220;
+                                smokes = 30;
+                                smokeSize = 10;
+                                smokeColor = sparkColor = SFColor.enemyRedLight;
+                                sparks = 60;
+                                sparkRad = 350;
+                                sparkStroke = 3;
+                                sparkLen = 50;
+                            }};
                             hitEffect = new ParticleEffect() {{
                                 particles = 1;
                                 region = "sfire-mod-star";
@@ -1348,7 +1365,6 @@ public class SFUnitTypes {
                                         colorTo = SFColor.enemyRedLight;
                                     }}
                             );
-                            maxRange = 240;
                         }};
                     }}
             );
@@ -5641,7 +5657,7 @@ public class SFUnitTypes {
                                         sparkLen = 90;
                                     }}
                             );
-                            hitSound = SFSounds.huegExplosion;
+                            hitSound = SFSounds.hugeExplosion;
                             hitPowerEffect = new ParticleEffect(){{
                                 particles = 1;
                                 length = 0;

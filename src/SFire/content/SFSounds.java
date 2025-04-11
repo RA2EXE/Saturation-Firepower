@@ -4,35 +4,39 @@ import arc.Core;
 import arc.assets.AssetDescriptor;
 import arc.assets.loaders.SoundLoader;
 import arc.audio.Sound;
-import arc.struct.Seq;
+import arc.util.Log;
 import mindustry.Vars;
 
 import java.lang.reflect.Field;
+
 public class SFSounds {
-    public static Sound
-            flying, huegExplosion, missileX;
+        public static Sound
+                flying, hugeExplosion, missileX
+                ;
 
-    public static void load(){
-        Class<?> c = SFSounds.class;
-        Seq<Field> fields = new Seq<>(c.getFields());
-        fields.select(f -> Sound.class.equals(f.getType()));
-        try{
-            for(Field f : fields)f.set(null, loadSound(f.getName()));
-        }catch(IllegalAccessException e){
-            e.printStackTrace();
+        public static void load() {
+            try {
+                for (Field field : SFSounds.class.getFields()) {
+                    if (field.getType().equals(Sound.class)) {
+                        field.set(null, loadSound(field.getName()));
+                    }
+                }
+            } catch (IllegalAccessException e) {
+                Log.err(e);
+            }
         }
-    }
 
-    private static Sound loadSound(String soundName){
-        if(!Vars.headless){
-            String name = "sounds/" + soundName;
-            String path = Vars.tree.get(name + ".ogg").exists() ? name + ".ogg" : name + ".mp3";
+        private static Sound loadSound(String soundName) {
+            if (Vars.headless) {
+                return new Sound();
+            }
+
+            String path = "sounds/" + soundName;
+            String filePath = Vars.tree.get(path + ".ogg").exists() ? path + ".ogg" : path + ".mp3";
 
             Sound sound = new Sound();
-
-            AssetDescriptor<?> desc = Core.assets.load(path, Sound.class, new SoundLoader.SoundParameter(sound));
+            AssetDescriptor<?> desc = Core.assets.load(filePath, Sound.class, new SoundLoader.SoundParameter(sound));
             desc.errored = Throwable::printStackTrace;
             return sound;
-        }else return new Sound();
-    }
+        }
 }
