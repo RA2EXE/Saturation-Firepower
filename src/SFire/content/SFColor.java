@@ -14,7 +14,7 @@ public class SFColor {
             clusRed = Color.valueOf("FF5845"),
             clusRedDark = clusRed.cpy().lerp(Color.black, 0.995f),
 
-            disc = Color.valueOf("EEC591"),
+            disc = Color.valueOf("FFD59E"),
             discDark = Color.valueOf("EEC591"),
 
             tayr = Color.valueOf("25C9AB"),
