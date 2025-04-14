@@ -2,6 +2,7 @@ package SFire.content;
 
 import arc.graphics.Color;
 import arc.math.Interp;
+import arc.struct.Seq;
 import mindustry.content.*;
 import mindustry.entities.Effect;
 import mindustry.entities.bullet.BulletType;
@@ -13,6 +14,7 @@ import mindustry.gen.Sounds;
 import mindustry.graphics.Pal;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
+import mindustry.type.UnitType;
 import mindustry.world.Block;
 import mindustry.world.blocks.*;
 import mindustry.world.blocks.distribution.BufferedItemBridge;
@@ -26,8 +28,12 @@ import mindustry.world.blocks.production.Drill;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.production.Pump;
 import mindustry.world.blocks.storage.Unloader;
+import mindustry.world.blocks.units.Reconstructor;
+import mindustry.world.blocks.units.UnitFactory;
 import mindustry.world.consumers.ConsumeItemFlammable;
 import mindustry.world.consumers.ConsumeItemRadioactive;
+
+import static mindustry.type.ItemStack.with;
 
 public class SFOverride {
     public static void load() {
@@ -154,7 +160,31 @@ public class SFOverride {
             colorTo = Color.valueOf("A278E100");
         }});
 
+        //units
+        ((UnitFactory)Blocks.airFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.air1, 60 * 25f, with(Items.silicon,15,Items.titanium,20)));
+        ((UnitFactory)Blocks.groundFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.tank1, 60 * 40f, with(Items.silicon,30,Items.titanium,25,Items.lead,25)));
+        ((UnitFactory)Blocks.navalFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.naval1, 60 * 50f, with(Items.silicon,35,Items.titanium,35,Items.metaglass,25)));
 
+        ((Reconstructor)Blocks.additiveReconstructor).upgrades.addAll(
+                new UnitType[]{SFUnitTypes.tank1, SFUnitTypes.tank2},
+                new UnitType[]{SFUnitTypes.air1, SFUnitTypes.air2},
+                new UnitType[]{SFUnitTypes.naval1, SFUnitTypes.naval2}
+        );
+        ((Reconstructor)Blocks.multiplicativeReconstructor).upgrades.addAll(
+                new UnitType[]{SFUnitTypes.tank2, SFUnitTypes.tank3},
+                new UnitType[]{SFUnitTypes.air2, SFUnitTypes.air3},
+                new UnitType[]{SFUnitTypes.naval2, SFUnitTypes.naval3}
+        );
+        ((Reconstructor)Blocks.exponentialReconstructor).upgrades.addAll(
+                new UnitType[]{SFUnitTypes.tank3, SFUnitTypes.tank4},
+                new UnitType[]{SFUnitTypes.air3, SFUnitTypes.air4},
+                new UnitType[]{SFUnitTypes.naval3, SFUnitTypes.naval4}
+        );
+        ((Reconstructor)Blocks.tetrativeReconstructor).upgrades.addAll(
+                new UnitType[]{SFUnitTypes.tank4, SFUnitTypes.tank5},
+                new UnitType[]{SFUnitTypes.air4, SFUnitTypes.air5},
+                new UnitType[]{SFUnitTypes.naval4, SFUnitTypes.naval5}
+        );
 
 
     }

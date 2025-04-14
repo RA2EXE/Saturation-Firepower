@@ -116,17 +116,16 @@ public class SFTechTree {
         addToNode(vault, () -> node(molecularDatabase));
 
         //units + payloads
-        addToNode(tetrativeReconstructor, () -> node(pentativeReconstrustor, () -> {
-            node(liXian);
-            node(diXing);
-            node(panLong);
-            node(guangHan);
-            node(yuHui);
-            node(tengWang);
-            node(luoHan);
-        }));
+        addToNode(tetrativeReconstructor, () -> node(pentativeReconstrustor));
+        addToNode(reign, () -> node(liXian));
+        addToNode(corvus, () -> node(diXing));
+        addToNode(toxopid, () -> node(panLong));
+        addToNode(oct, () -> node(guangHan));
+        addToNode(eclipse, () -> node(yuHui));
+        addToNode(omura, () -> node(tengWang));
+        addToNode(navanax, () -> node(luoHan));
         addToNode(flare, () ->
-                node(air1, () -> node (air2, () -> node(air3, () -> node(air4, () -> node(air5, () -> node(air6))))))
+                node(air1, () -> node(air2, () -> node(air3, () -> node(air4, () -> node(air5, () -> node(air6))))))
         );
         addToNode(dagger, () ->
                 node(tank1, () -> node (tank2, () -> node(tank3, () -> node(tank4, () -> node(tank5, () -> node(tank6))))))
@@ -146,7 +145,7 @@ public class SFTechTree {
             node(armorContainmentUnit);
             node(discContainmentUnit);
         }));
-        addToNode(unitRepairTower, () -> node(nanoRegenProjector));
+        addToNode(unitRepairTower, () -> node(nanoUnitRegener));
 
         //items + liquids
         node(Items.coal, () -> {
