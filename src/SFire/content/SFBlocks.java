@@ -85,8 +85,7 @@ public class SFBlocks {
     oilPressurePump, sporeCultivator,
 
     //storage
-    //frondCore,
-    industryCore, finalCommandCenter, hyperUnloader, molecularDatabase,
+    /*frondCore,*/industryCore, finalCommandCenter, hyperUnloader, molecularDatabase,
 
     //turrets
     //turrets_enemy_only
@@ -94,10 +93,8 @@ public class SFBlocks {
     //units
     terrAssembler, specFactory, pentativeReconstrustor, payloadConstrustor,
     nanoUnitRegener
-                    //payloads
-                    //campaign
-
-                    ;
+    //campaign
+    ;
 
     public static void load() {
         snowSand = new Floor("snow-sand") {{
@@ -2123,9 +2120,7 @@ public class SFBlocks {
                     new UnitPlan(SFUnitTypes.hammer, 60f * 35, with(Items.titanium,80, Items.silicon,160, Items.graphite,160, SFItems.siliSteel,80)),
                     //new UnitPlan(SFUnitTypes.flamer, 60f * 50, with(Items.graphite,90, Items.silicon,180, SFItems.siliSteel,80, SFItems.strontium,80)),
                     new UnitPlan(SFUnitTypes.thunder, 60f * 50, with(Items.titanium,80, Items.silicon,220, Items.plastanium,130, Items.phaseFabric,60))
-
             );
-
         }};
         pentativeReconstrustor = new Reconstructor("pentative-reconstructor") {{
             requirements(Category.units, with(Items.silicon, 3800, Items.plastanium, 2200, SFItems.siliSteel, 1300, SFItems.tayrAlloy, 1100, SFItems.discFabric, 750));
@@ -2143,7 +2138,7 @@ public class SFBlocks {
                     new UnitType[]{SFUnitTypes.air5, SFUnitTypes.air6},
                     new UnitType[]{SFUnitTypes.naval5, SFUnitTypes.naval6}
             );
-            researchCostMultiplier = 0.4f;
+            researchCostMultiplier = 0.2f;
             buildCostMultiplier = 0.7f;
             constructTime = 21600f;
 

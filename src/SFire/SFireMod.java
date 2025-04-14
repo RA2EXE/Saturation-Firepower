@@ -35,7 +35,7 @@ public class SFireMod extends Mod {
         //SFBulletType.load();
         SFUnitTypes.loadUnit();
         SFBlocks.load();
-        //SFTechTree.load();
+        SFTechTree.load();
     }
 
 }

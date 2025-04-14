@@ -191,8 +191,8 @@ public class SFStatusEffects {
                 strokeTo = 0;
                 sizeFrom = 10f;
                 sizeTo = 30;
-                colorFrom = Color.valueOf("EEC591");
-                colorTo = Color.valueOf("EEC59100");
+                colorFrom = SFColor.disc;
+                colorTo = SFColor.discDark;
             }};
         }};
         acidded = new StatusEffect("acidded") {{
@@ -309,6 +309,7 @@ public class SFStatusEffects {
             effectChance = 0.08f;
             effect = new WaveEffect() {{
                 sizeFrom = 8;
+                sides = 6;
                 sizeTo = 26;
                 strokeFrom = 12;
                 interp = Interp.circleOut;

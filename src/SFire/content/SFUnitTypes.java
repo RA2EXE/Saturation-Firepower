@@ -143,11 +143,11 @@ public class SFUnitTypes {
             hitColor = SFColor.enemyRedLight;
         }};
     }}
-
 ;
+
     public static UnitType
-            //enemy only
-            flareX,/* flareY,*/ electrodile, thunderclap, knocker,
+    //enemy only
+    flareX, flareY, electrodile, thunderclap, knocker,
     painA, painB, painC, painD,
     blade, titan, vast,
     falcon, wyvern,
@@ -160,9 +160,9 @@ public class SFUnitTypes {
     //naval
     naval1, naval2, naval3, naval4, naval5, naval6,
     //special force + flagship*/
-            farmer, carrier, //repairer,
-            flamer, thunder, banisher, hammer,
-            tau, omega, terrascape,
+    farmer, carrier,
+    flamer, thunder, banisher, hammer,
+    tau, omega, terrascape,
     //campaign only
     utv, utvA, utvC, utvD, utvM,
     //drones
@@ -308,6 +308,73 @@ public class SFUnitTypes {
                         }};
                     }}
             );
+        }};
+        flareY = new UnitType("flareY") {{
+            constructor = UnitTypes.flare.constructor;
+            healColor = SFColor.tayrLight;
+            outlineColor = SFColor.darkOutline;
+            rotateSpeed = 6;
+            speed = 4.86f;
+            accel = 0.03f;
+            drag = 0.022f;
+            hitSize = 26f;
+            flying = true;
+            health = 6000;
+            armor = 36f;
+            faceTarget = true;
+            circleTarget = true;
+            engineLayer = 110f;
+            engineSize = 0;
+            setEnginesMirror(new UnitEngine(-3.75f,-18.8f,2.35f,-90));
+            abilities.add(new RegenAbility(){{amount=10;}});
+            weapons.add(new Weapon(name("flareY-weapon")){{
+                reload = 28.8f;
+                x = 5;
+                y = 3;
+                inaccuracy = 2;
+                ignoreRotation = true;
+                shootSound = Sounds.missile;
+                soundPitchMax = 0.5f;
+                soundPitchMin = 0.5f;
+                shoot.shots = 3;
+                shoot.shotDelay = 4;
+                shootCone = 15f;
+                rotationLimit = 20f;
+                rotateSpeed = 2f;
+                rotate = true;
+                bullet = new BasicBulletType(40,88){{
+                    drag = 0.12f;
+                    pierceArmor = true;
+                    lightning = 1;
+                    lightningLength = 2;
+                    lightningColor = SFColor.tayrLight;
+                    status = SFStatusEffects.skewed;
+                    statusDuration = 22;
+                    height = 45f;
+                    width = 8;
+                    frontColor = Color.white;
+                    backColor = hitColor = SFColor.tayrLight;
+                    trailLength = 16;
+                    trailWidth = 1.5f;
+                    trailColor = backColor;
+                    shootEffect = Fx.shootSmallColor;
+                    smokeEffect = Fx.none;
+                    hitSound = Sounds.explosion;
+                    despawnEffect = Fx.none;
+                    hitShake = 3f;
+                    hitEffect = new ExplosionEffect(){{
+                        lifetime = 30f;
+                        waveStroke = 4;
+                        waveLife = 16;
+                        waveRad = 30f;
+                        smokes = 0;
+                        sparks = 8;
+                        sparkRad = 45f;
+                        sparkStroke = 0.88f;
+                        sparkLen = 18;
+                    }};
+                }};
+            }});
         }};
         electrodile = new UnitType("electrodile") {{
             constructor = UnitTypes.elude.constructor;
@@ -911,13 +978,21 @@ public class SFUnitTypes {
                 recoil = 2;
                 shootSound = Sounds.malignShoot;
                 shake = 3.6f;
-                //数值-50%暂定
                 bullet = new BasicBulletType(16,83,"missile-large"){{
-                    lightningDamage = damage;
                     lightning = 2;
+                    lightningDamage = damage;
+                    lightningColor = SFColor.disc;
                     lightningLength = 3;
                     lightningLengthRand = 5;
-                    lightningColor = backColor;
+                    lightningType = new BulletType(0.00001f,0f){{
+                        hitEffect = new WrapEffect(Fx.hitLaserColor,SFColor.disc);
+                        despawnEffect = Fx.none;
+                        lightColor = SFColor.disc;
+                        status = StatusEffects.shocked;
+                        statusDuration = 10f;
+                        hittable = false;
+                        buildingDamageMultiplier = 0.4f;
+                    }};
                     buildingDamageMultiplier = 0.4f;
                     width = 6;
                     height = 20;
@@ -1018,15 +1093,23 @@ public class SFUnitTypes {
                 }});
                 shootSound = Sounds.mediumCannon;
                 shake = 3.6f;
-                //数值-50%暂定
                 bullet = new BasicBulletType(16,188,"missile-large"){{
                     lightningDamage = damage;
                     lightning = 3;
                     lightningLength = 6;
                     lightningLengthRand = 8;
+                    lightningType = new BulletType(0.00001f,0f){{
+                        hitEffect = new WrapEffect(Fx.hitLaserColor,SFColor.disc);
+                        despawnEffect = Fx.none;
+                        lightColor = SFColor.disc;
+                        status = StatusEffects.shocked;
+                        statusDuration = 10f;
+                        hittable = false;
+                        buildingDamageMultiplier = 5.25f;
+                    }};
                     buildingDamageMultiplier = 5.25f;
                     lightningColor = backColor;
-                    splashDamage = 200;
+                    splashDamage = 260;
                     splashDamageRadius = 66f;
                     width = 10;
                     height = 20;
@@ -1151,9 +1234,8 @@ public class SFUnitTypes {
                 shootCone = 30;
                 shootSound = Sounds.missileLarge;
                 shake = 3.6f;
-                //数值-50%暂定
-                bullet = new MissileBulletType(1,75,"sfire-mod-missile1"){{
-                    splashDamage = 130;
+                bullet = new MissileBulletType(1,135,"sfire-mod-missile1"){{
+                    splashDamage = 180;
                     splashDamageRadius = 48f;
                     buildingDamageMultiplier = 2f;
                     width = 12;
@@ -1166,10 +1248,10 @@ public class SFUnitTypes {
                     keepVelocity = false;
                     pierceArmor = true;
                     hittable = absorbable = false;
-                    status = SFStatusEffects.breakdown;
-                    statusDuration = 206;
+                    status = SFStatusEffects.shattered;
+                    statusDuration = 22;
                     frontColor = Color.white;
-                    backColor = SFColor.disc;
+                    backColor = SFColor.enemyRedLight;
                     hitShake = 8f;
                     hitSound = Sounds.titanExplosion;
                     hitSoundVolume = 3;
@@ -1213,9 +1295,9 @@ public class SFUnitTypes {
                     trailWidth = 2;
                     trailLength = 15;
                     trailRotation = true;
-                    trailChance = 0.5f;
+                    trailChance = 0.8f;
                     trailEffect = new MultiEffect(
-                            new ParticleEffect() {{
+                            new ParticleEffect(){{
                                 particles = 3;
                                 sizeFrom = 3;
                                 length = -50;
@@ -1239,16 +1321,19 @@ public class SFUnitTypes {
                             }}
                     );
                     fragBullets = 3;
-                    fragBullet = new FlakBulletType(4,75){{
+                    fragBullet = new FlakBulletType(4,135){{
                         frontColor = backColor = SFColor.disc;
                         hitSound = Sounds.explosion;
                         despawnEffect = Fx.flakExplosionBig;
-                        hitEffect = new WrapEffect(Fx.dynamicSpikes,SFColor.disc,45f);
-                        lifetime = 10;
+                        status = SFStatusEffects.breakdown;
+                        statusDuration = 206f;
+                        hitEffect = new WrapEffect(Fx.dynamicSpikes,SFColor.disc,30);
+                        lifetime = 20;
                         pierceArmor = true;
                         hittable = false;
-                        splashDamage = 130;
-                        splashDamageRadius = 45;
+                        scaledSplashDamage = true;
+                        splashDamage = 180;
+                        splashDamageRadius = 30;
                     }};
                 }};
             }});
@@ -1526,6 +1611,7 @@ public class SFUnitTypes {
                                    bullet = new BulletType(0,180){{
                                        killShooter = true;
                                        instantDisappear = true;
+                                       makeFire = true;
                                        maxRange = 50f;
                                        splashDamageRadius = 200;
                                        splashDamage = 1200;
@@ -1574,7 +1660,7 @@ public class SFUnitTypes {
                                                    sizeTo = 200;
                                                    colorFrom = SFColor.enemyRedLight;
                                                    colorTo = SFColor.disc;
-                                                   sizeInterp = Interp.pow5Out;
+                                                   sizeInterp = Interp.pow3Out;
                                                    lifetime = 20;
                                                    length = 0;
                                                }},
@@ -2092,6 +2178,7 @@ public class SFUnitTypes {
 
         liXian = new UnitType("ordinance"){{
             constructor = UnitTypes.reign.constructor;
+            researchCostMultiplier = 0.1f;
             hitSize = 48;
             canDrown = false;
             armor = 36;
@@ -2185,6 +2272,7 @@ public class SFUnitTypes {
         }};
         diXing = new UnitType("libra"){{
             constructor = UnitTypes.corvus.constructor;
+            researchCostMultiplier = 0.1f;
             armor = 15;
             speed = 0.3f;
             rotateSpeed = 1.52f;
@@ -2484,6 +2572,7 @@ public class SFUnitTypes {
         }};
         panLong = new UnitType("agelenid"){{
             constructor = UnitTypes.corvus.constructor;
+            researchCostMultiplier = 0.1f;
             armor = 30;
             speed = 0.76f;
             rotateSpeed = 1.12f;
@@ -2698,6 +2787,7 @@ public class SFUnitTypes {
         }};
         guangHan = new UnitType("hepta"){{
             constructor = UnitTypes.oct.constructor;
+            researchCostMultiplier = 0.1f;
             payloadCapacity = 9 * 9 * 64;
             aiController = DefenderAI::new;
             speed = 0.68f;
@@ -2852,6 +2942,7 @@ public class SFUnitTypes {
         }};
         yuHui = new UnitType("sundown"){{
             constructor = UnitTypes.eclipse.constructor;
+            researchCostMultiplier = 0.1f;
             health = 74000;
             armor = 33;
             speed = 0.62f;
@@ -3048,6 +3139,7 @@ public class SFUnitTypes {
         }};
         tengWang = new UnitType("dorudon"){{
             constructor = UnitTypes.omura.constructor;
+            researchCostMultiplier = 0.1f;
             flying = false;
             faceTarget = false;
             speed = 0.48f;
@@ -3252,6 +3344,7 @@ public class SFUnitTypes {
         }};
         luoHan = new UnitType("cerberilla"){{
             constructor = UnitTypes.omura.constructor;
+            researchCostMultiplier = 0.1f;
             flying = false;
             faceTarget = false;
             speed = 0.5f;
@@ -3621,8 +3714,8 @@ public class SFUnitTypes {
                 shootStatus = StatusEffects.unmoving;
                 shootStatusDuration = 200;
                 velocityRnd = 0.1f;
-                bullet = new ArtilleryBulletType(12, 16,"sfire-mod-missile1"){{
-                    lifetime = 30;
+                bullet = new ArtilleryBulletType(8, 16,"sfire-mod-missile1"){{
+                    lifetime = 37.5f;
                     splashDamage = 55;
                     splashDamageRadius = 40;
                     buildingDamageMultiplier = 2.25f;
@@ -3632,7 +3725,6 @@ public class SFUnitTypes {
                     frontColor = SFColor.missileGray;
                     width = 12;
                     height = 40;
-                    trailChance = 0;
                     trailInterval = 1;
                     trailEffect = new ParticleEffect(){{
                         particles = 3;
@@ -3889,7 +3981,7 @@ public class SFUnitTypes {
                         buildingDamageMultiplier = 2;
                         scaledSplashDamage = true;
                         splashDamage = 45;
-                        splashDamageRadius = 66.4f;
+                        splashDamageRadius = 125f;
                         hitShake = 4;
                         hitSound = Sounds.plasmaboom;
                         hitEffect = new ParticleEffect(){{
@@ -4588,10 +4680,20 @@ public class SFUnitTypes {
                                 status = SFStatusEffects.magnStrif;
                                 statusDuration = 30;
                                 lightning = 9;
-                                lightningDamage = 24;
-                                lightningLength = 15;
-                                lightningLengthRand = 3;
+                                lightningDamage = 25;
+                                lightningLength = 12;
+                                lightningLengthRand = 5;
                                 lightningColor = SFColor.energySky;
+                                lightningType = new BulletType(0.0001f, 0f){{
+                                    lifetime = Fx.lightning.lifetime;
+                                    hitEffect = Fx.hitLancer;
+                                    despawnEffect = Fx.none;
+                                    status = StatusEffects.shocked;
+                                    statusDuration = 10f;
+                                    hittable = false;
+                                    lightColor = Color.white;
+                                    buildingDamageMultiplier = 0.58f;
+                                }};
                                 hitShake = 5;
                                 hitSound = Sounds.plasmaboom;
                                 despawnEffect = Fx.lancerLaserShoot;
@@ -5739,8 +5841,8 @@ public class SFUnitTypes {
             rotateSpeed = 4;
             accel = 0.07f;
             drag = 0.06f;
-            health = 2110;
-            armor = 9;
+            health = 1500;
+            armor = 6;
             hitSize = 24;
             buildSpeed = 3.5f;
             buildRange = 288;
@@ -5781,12 +5883,12 @@ public class SFUnitTypes {
                             healPercent = 16;
                             collidesTeam = true;
                             recoil = 0.12f;
-                            damage = 95;
+                            damage = 40;
                             knockback = 20;
                             status = SFStatusEffects.scrambled;
                             statusDuration = 60;
                             width = 15;
-                            length = 250;
+                            length = 176;
                             sideAngle = 135;
                             sideWidth = 1.35f;
                             sideLength = 45;
@@ -5796,7 +5898,7 @@ public class SFUnitTypes {
                                 particles = 9;
                                 lenFrom = 10;
                                 strokeFrom = 1.5f;
-                                baseLength = 240;
+                                baseLength = 160;
                                 length = cone = 0;
                                 sizeInterp = Interp.pow3In;
                                 lifetime = 20;
@@ -5816,7 +5918,7 @@ public class SFUnitTypes {
                         shootSound = Sounds.lasershoot;
                         shootWarmupSpeed = 0.1f;
                         minWarmup = 0.98f;
-                        parts.add(new RegionPart("-b") {{
+                        parts.add(new RegionPart("-preview") {{
                             x = -9;
                             y = -8;
                             rotation = -60;
@@ -5825,8 +5927,8 @@ public class SFUnitTypes {
                             moveY = -y;
                             moveRot = -rotation;
                         }});
-                        bullet = new MissileBulletType(9.6f, 36, "circle-bullet") {{
-                            lifetime = 25;
+                        bullet = new MissileBulletType(9.6f, 20, "circle-bullet") {{
+                            lifetime = 176 / 9.6f;
                             width = 6;
                             height = 9;
                             shrinkY = 0;
@@ -6283,10 +6385,8 @@ public class SFUnitTypes {
             health = 1000;
             engineSize = 2.8f;
             engineOffset = 16;
-            setEnginesMirror(
-                    new UnitEngine(-10,-11,3f,-112.5f));
-            weapons.add(
-                    new Weapon(name("tau-weapon")){{
+            setEnginesMirror(new UnitEngine(-10,-11,3f,-112.5f));
+            weapons.add(new Weapon(name("tau-weapon")){{
                         x = y = 0;
                         recoil = 0;
                         reload = 30;
@@ -6318,8 +6418,7 @@ public class SFUnitTypes {
                             homingPower = 0.5f;
                             lifetime = 36;
                         }};
-                    }}
-            );
+                    }});
         }};
         omega = new UnitType("omega") {{
             constructor = UnitTypes.gamma.constructor;
@@ -6856,6 +6955,7 @@ public class SFUnitTypes {
                                 homingRange = 64;
                                 splashDamage = 155;
                                 splashDamageRadius = 60;
+                                keepVelocity = false;
                                 scaleLife = true;
                                 lifetime = 36;
                                 sprite = "sfire-mod-missile2";
