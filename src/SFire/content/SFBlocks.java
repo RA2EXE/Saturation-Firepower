@@ -2116,10 +2116,10 @@ public class SFBlocks {
                     new UnitPlan(SFUnitTypes.tank1, 60f * 42, T3Item),
                     new UnitPlan(SFUnitTypes.air3, 60f * 39, T3Item),
                     new UnitPlan(SFUnitTypes.naval3, 60f * 60, T3Item),
-                    //new UnitPlan(SFUnitTypes.banisher, 60f * 67, with(Items.titanium,120, Items.silicon,230, Items.metaglass,180, Items.plastanium,60)),
                     new UnitPlan(SFUnitTypes.hammer, 60f * 35, with(Items.titanium,80, Items.silicon,160, Items.graphite,160, SFItems.siliSteel,80)),
-                    //new UnitPlan(SFUnitTypes.flamer, 60f * 50, with(Items.graphite,90, Items.silicon,180, SFItems.siliSteel,80, SFItems.strontium,80)),
-                    new UnitPlan(SFUnitTypes.thunder, 60f * 50, with(Items.titanium,80, Items.silicon,220, Items.plastanium,130, Items.phaseFabric,60))
+                    new UnitPlan(SFUnitTypes.flamer, 60f * 50, with(Items.graphite,90, Items.silicon,180, SFItems.waveSteel,80, SFItems.strontium,80)),
+                    new UnitPlan(SFUnitTypes.thunder, 60f * 50, with(SFItems.siliSteel,80, Items.silicon,220, Items.plastanium,130, Items.phaseFabric,60)),
+                    new UnitPlan(SFUnitTypes.banisher, 60f * 67, with(SFItems.waveSteel,120, Items.silicon,230, Items.plastanium,80, Items.surgeAlloy,60))
             );
         }};
         pentativeReconstrustor = new Reconstructor("pentative-reconstructor") {{

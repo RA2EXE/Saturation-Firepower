@@ -187,10 +187,12 @@ public class SFStatusEffects {
             effectChance = 0.6f;
             effect = new WaveEffect() {{
                 lifetime = 30;
+                sides = 4;
                 strokeFrom = 2;
                 strokeTo = 0;
                 sizeFrom = 10f;
                 sizeTo = 30;
+                interp = Interp.circleOut;
                 colorFrom = SFColor.disc;
                 colorTo = SFColor.discDark;
             }};
@@ -457,7 +459,7 @@ public class SFStatusEffects {
             damageMultiplier = 0.5f;
             speedMultiplier = -1.1f;
             reloadMultiplier = 1.43f;
-            effectChance = 0.2f;
+            effectChance = 0.08f;
             effect = new MultiEffect(
                     new WrapEffect() {{
                         effect = Fx.dynamicSpikes;
