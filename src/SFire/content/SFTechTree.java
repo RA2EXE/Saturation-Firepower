@@ -137,7 +137,7 @@ public class SFTechTree {
             node(farmer);
             node(flamer);
             node(thunder);
-            //node(banisher);
+            node(banisher);
             node(hammer);
         }));
         addToNode(specFactory, () -> node(payloadConstrustor, () -> {

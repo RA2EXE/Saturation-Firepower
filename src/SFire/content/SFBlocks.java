@@ -8,7 +8,9 @@ import arc.struct.Seq;
 import mindustry.content.*;
 import mindustry.entities.Effect;
 import mindustry.entities.Sized;
+import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.BulletType;
+import mindustry.entities.bullet.ExplosionBulletType;
 import mindustry.entities.effect.*;
 import mindustry.gen.*;
 import mindustry.graphics.Pal;
@@ -46,6 +48,9 @@ public class SFBlocks {
     public static Block
     //environment + wall + ores
     snowSand, rareEarth,
+    calrareEarth,
+
+
     induFloor, induFloor_supplyer, induFloor_heater, induFloor_cover, induFloor_wall, induFloor_nano, induFloor_nanowall,
     reforcedFloor, reforcedFloor1, reforcedFloor2,
     OREstrontium, ORErubidium, OREfermium, OREchromium,
@@ -110,6 +115,20 @@ public class SFBlocks {
             speedMultiplier = 0.98f;
             variants = 4;
         }};
+        /**/
+        calrareEarth = new Floor("calrare-earth-floor") {{
+            itemDrop = SFItems.rareEarth;
+            playerUnmineable = true;
+            speedMultiplier = 0.98f;
+            variants = 4;
+        }};
+        XX = new Floor(""){{
+            variants = 3;
+        }}
+
+
+
+
         induFloor = new Floor("industry-floor") {{
             speedMultiplier = 1.125f;
             dragMultiplier = 0.95f;
@@ -1804,10 +1823,48 @@ public class SFBlocks {
             explosionShakeDuration = 120f;
             explosionDamage = 2300;
             explosionRadius = 35;
-            //explodeSound = SFSounds.hugeExplosion;
-            //explodeEffect = SFFx.feriumExplosion;
-
-
+            explodeSound = SFSounds.hugeExplosion;
+            explodeEffect = new MultiEffect(
+                    new ExplosionEffect(){{
+                        waveLife = 20f;
+                        waveRad = 320;
+                        waveStroke = 18;
+                        waveColor = Pal.bulletYellow;
+                        smokes = 0;
+                        sparks = 25;
+                        sparkStroke = 3f;
+                        sparkLen = 120f;
+                        sparkRad = 220f;
+                        sparkColor = Color.valueOf("DEDEDE70");
+                    }},
+                    new ParticleEffect(){{
+                        particles = 25;
+                        sizeInterp = Interp.pow5In;
+                        interp = Interp.pow10Out;
+                        sizeFrom = 35f;
+                        length = 280f;
+                        lifetime = 250f;
+                        colorFrom = colorTo = Color.valueOf("DEDEDE70");
+                    }},
+                    new ParticleEffect(){{
+                        particles = 35;
+                        sizeInterp = Interp.pow5In;
+                        interp = Interp.pow10Out;
+                        sizeFrom = 30f;
+                        length = 290f;
+                        lifetime = 300f;
+                        colorFrom = colorTo = Color.valueOf("DEDEDE70");
+                    }},
+                    new ParticleEffect(){{
+                        particles = 40;
+                        sizeInterp = Interp.pow5In;
+                        interp = Interp.pow10Out;
+                        sizeFrom = 20;
+                        length = 300f;
+                        lifetime = 350f;
+                        colorFrom = colorTo = Color.valueOf("DEDEDE70");
+                    }}
+            );
         }};
         fissionReactor = new ImpactReactor("fission-reactor") {{
             size = 6;
@@ -1830,7 +1887,7 @@ public class SFBlocks {
             explosionShakeDuration = 22f;
             explosionDamage = 18000;
             explosionRadius = 35;
-            //explodeSound = SFSounds.hugeExplosion;
+            explodeSound = SFSounds.hugeExplosion;
             //explodeEffect = SFFx.fissionExplosion;
             drawer = new DrawMulti(new DrawRegion("-bottom"),
                     new DrawPlasma() {{
@@ -1838,13 +1895,96 @@ public class SFBlocks {
                         plasma2 = SFColor.tayr;
                     }},
                     new DrawDefault(),
-                    new DrawFlame() {{
-                        flameColor = Color.valueOf("BFFFDB");
-                    }},
-                    new DrawLiquidRegion(Liquids.cryofluid)) {{
-                lightLiquid = Liquids.cryofluid;
+                    new DrawFlame() {{flameColor = Color.valueOf("BFFFDB");}},
+                    new DrawLiquidRegion(Liquids.cryofluid)) {{lightLiquid = Liquids.cryofluid;}};
+            destroyBullet = new ExplosionBulletType(1000,480){{
+                buildingDamageMultiplier = 6f;
+                makeFire = true;
+                hitSound = SFSounds.hugeExplosion;
+                hitSoundVolume = 3;
+                hitShake = 50f;
+                hitEffect = new WaveEffect(){{
+                    lifetime = 60f;
+                    sizeFrom = 20f;
+                    sizeTo = 530f;
+                    strokeFrom = 30;
+                    interp = Interp.circleOut;
+                    colorTo = SFColor.disc;
+                }};
+                status = SFStatusEffects.breakdown;
+                statusDuration = 1200f;
+                despawnEffect = new MultiEffect(
+                        Fx.impactReactorExplosion,
+                        new ParticleEffect(){{
+                            particles = 1;
+                            sizeFrom = 10;
+                            sizeTo = 480f;
+                            length = 0;
+                            lifetime = 22f;
+                            sizeInterp = Interp.pow10Out;
+                            colorTo = SFColor.disc;
+                        }},
+                        new ParticleEffect(){{
+                            particles = 1;
+                            sizeFrom = 480;
+                            startDelay = 19f;
+                            length = 0;
+                            lifetime = 60;
+                            colorFrom = colorTo = SFColor.disc;
+                        }}
+                );
+                fragBullets = 60;
+                fragLifeMin = 0.15f;
+                fragLifeMax = 1.1f;
+                fragBullet = new BasicBulletType(30, 150,"circle-bullet") {{
+                    hittable = false;
+                    absorbable = false;
+                    collides = false;
+                    drag = 0.1f;
+                    lifetime = 240f;
+                    splashDamage = 100f;
+                    splashDamageRadius = 180f;
+                    buildingDamageMultiplier = 8f;
+                    makeFire = true;
+                    hitSound = Sounds.explosionbig;
+                    hitSoundVolume = 10;
+                    hitShake = 20f;
+                    width = height = 30f;
+                    shrinkY = 0f;
+                    trailColor = backColor = SFColor.disc;
+                    trailLength = 18;
+                    trailWidth = 2.25f;
+                    hitEffect = new WaveEffect(){{
+                        lifetime = 35;
+                        sizeFrom = 40f;
+                        sizeTo = 230f;
+                        strokeFrom = 30;
+                        interp = Interp.circleOut;
+                        colorFrom = colorTo = SFColor.disc;
+                    }};
+                    status = SFStatusEffects.breakdown;
+                    statusDuration = 1000f;
+                    despawnEffect = new MultiEffect(
+                            new ParticleEffect(){{
+                                particles = 1;
+                                sizeFrom = 10;
+                                sizeTo = 180;
+                                length = 0;
+                                lifetime = 12f;
+                                sizeInterp = Interp.pow10Out;
+                                colorTo = SFColor.disc;
+                            }},
+                            new ParticleEffect(){{
+                                particles = 1;
+                                sizeFrom = 180;
+                                startDelay = 9f;
+                                length = 0;
+                                lifetime = 60;
+                                colorFrom = colorTo = SFColor.disc;
+                            }}
+                    );
+                }};
             }};
-            //destroyBullet = SFDeadBullet.fussionReactor;
         }};
         arcFissionReactor = new ConsumeGenerator("arc-fission-reactor") {{
             size = 10;

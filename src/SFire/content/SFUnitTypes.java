@@ -6241,7 +6241,7 @@ public class SFUnitTypes {
             constructor = UnitTypes.dagger.constructor;
             itemCapacity = 0;
             health = 1800;
-            armor = 8;
+            armor = 18;
             hitSize = 25;
             speed = 0.48f;
             rotateSpeed = 2.35f;
@@ -6366,7 +6366,7 @@ public class SFUnitTypes {
             rotateSpeed = 5;
             hitSize = 30;
             health = 1500;
-            armor = 20;
+            armor = 14;
             lightRadius = 60;
             lightColor = SFColor.energyYellow;
             engineOffset = 14;
@@ -6404,10 +6404,10 @@ public class SFUnitTypes {
                             trailWidth = 2.25f;
                             trailColor = SFColor.energyYellow;
                             splashDamageRadius = 45;
-                            splashDamage = 65;
+                            splashDamage = 35;
                             status = StatusEffects.shocked;
                             lightning = 3;
-                            lightningDamage = 18;
+                            lightningDamage = damage;
                             lightningLength = 6;
                             lightningLengthRand = 4;
                             trailInterval = 1;
@@ -6457,7 +6457,8 @@ public class SFUnitTypes {
                         rotate = false;
                         mirror = false;
                         shootSound = Sounds.laserblast;
-                        bullet = new BasicBulletType(3, 80, "large-bomb") {{
+                        bullet = new BasicBulletType(3, 200, "large-bomb") {{
+                            collides = false;
                             hitSize = 15;
                             hitShake = 3;
                             height = width = 38;
@@ -6507,13 +6508,13 @@ public class SFUnitTypes {
             accel = 0.08f;
             speed = 0.82f;
             rotateSpeed = 1.5f;
-            hitSize = 43f;
+            hitSize = 38f;
             trailLength = 45;
             waveTrailX = 12;
             waveTrailY = -23;
             trailScl = 3;
             health = 2500f;
-            armor = 10;
+            armor = 20;
             abilities.add(new StatusFieldAbility(StatusEffects.shielded,120,360,65){{
                 applyEffect = Fx.none;
                 activeEffect = new WaveEffect(){{
@@ -6720,9 +6721,9 @@ public class SFUnitTypes {
                     collides = true;
                     collidesTiles = true;
                     absorbable = false;
-                    splashDamage = 205;
+                    splashDamage = 105;
                     splashDamageRadius = 45;
-                    buildingDamageMultiplier = 2;
+                    buildingDamageMultiplier = 2.5f;
                     hitShake = 3;
                     lifetime = 80;
                     shootEffect = Fx.shootBig2;

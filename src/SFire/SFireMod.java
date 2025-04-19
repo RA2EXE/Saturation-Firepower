@@ -29,6 +29,7 @@ public class SFireMod extends Mod {
     public void loadContent() {
         SFSounds.load();
         SFStatusEffects.load();
+        SFAttribute.load();
         SFItems.load();
         SFLiquids.load();
         //SFBulletType.load();
