@@ -3,20 +3,15 @@ package SFire.content;
 import arc.audio.Sound;
 import arc.graphics.Color;
 import arc.math.*;
-import arc.struct.ArrayMap;
 import arc.struct.Seq;
 import mindustry.content.*;
-import mindustry.entities.Effect;
-import mindustry.entities.Sized;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.BulletType;
 import mindustry.entities.bullet.ExplosionBulletType;
 import mindustry.entities.effect.*;
 import mindustry.gen.*;
 import mindustry.graphics.Pal;
-import mindustry.logic.LStatements;
 import mindustry.type.*;
-import mindustry.ui.LiquidDisplay;
 import mindustry.world.*;
 import mindustry.world.blocks.defense.*;
 import mindustry.world.blocks.distribution.*;
@@ -40,7 +35,6 @@ import mindustry.world.consumers.ConsumeItemExplode;
 import mindustry.world.consumers.ConsumeItemRadioactive;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
-import org.w3c.dom.Node;
 
 import static mindustry.type.ItemStack.*;
 
@@ -51,10 +45,10 @@ public class SFBlocks {
     radiquartzFloor,radiquartzWall,radiquartzStone,
     radiamphiboleFloor,radiamphiboleWall,radiamphiboleStone,radigabbroFloor,radigabbroWall,radigabbroStone,radimacadam1Floor,radimacadam2Floor,
 
-    lightRed, lightYellow, lightBlue, lightGreen,
-
-    induFloor, induFloorSupplyer, induFloorHeater, induFloorCover, induFloorWall, induFloorNano, induFloorNanowall,
-    reforcedFloor, reforcedFloor1, reforcedFloor2,
+    induFloor, induFloorSupplyer, induFloorHeater, induHeatBroken, induFloorCover, induFloorWall, induFloorNano, induFloorNanowall,
+            lightRed, lightYellow, lightBlue, lightGreen,
+    reforcedFloor, reforcedFloor1, reforcedFloor2, reforcedFloor3,
+    metalTower1, metalTower2, metalTower3,
     OREstrontium, ORErubidium, OREfermium, OREchromium,
 
     //crafting
@@ -195,35 +189,6 @@ public class SFBlocks {
         radiamphiboleStone = new Prop("radiamphibole-stone"){{variants = 2;}};
         radigabbroStone = new Prop("radigabbro-stone"){{variants = 2;}};
 
-        lightRed = new Floor("light-red",0){{
-            useColor = false;
-            emitLight = true;
-            blendGroup = induFloor;
-            lightRadius = 40;
-            lightColor = Color.red.cpy().a(0.4f);
-        }};
-        lightYellow = new Floor("light-yellow",0){{
-            useColor = false;
-            emitLight = true;
-            blendGroup = induFloor;
-            lightRadius = 40;
-            lightColor = Color.yellow.cpy().a(0.4f);
-        }};
-        lightBlue = new Floor("light-blue",0){{
-            useColor = false;
-            emitLight = true;
-            blendGroup = induFloor;
-            lightRadius = 40;
-            lightColor = Color.blue.cpy().a(0.4f);
-        }};
-        lightGreen = new Floor("light-green",0){{
-            useColor = false;
-            emitLight = true;
-            blendGroup = induFloor;
-            lightRadius = 40;
-            lightColor = Color.green.cpy().a(0.4f);
-        }};
-
         induFloor = new Floor("industry-floor", 0) {{
             speedMultiplier = 1.125f;
             dragMultiplier = 0.95f;
@@ -267,6 +232,12 @@ public class SFBlocks {
             status = StatusEffects.melting;
             blendGroup = SFBlocks.induFloor;
         }};
+        induHeatBroken = new Floor("industry-heater-broken", 4){{
+            speedMultiplier = 0.85f;
+            dragMultiplier = 1.35f;
+            decoration = induFloorCover;
+            blendGroup = SFBlocks.induFloor;
+        }};
         induFloorCover = new Prop("industry-floor-cover") {{
             variants = 6;
             breakSound = Sounds.breaks;
@@ -284,6 +255,36 @@ public class SFBlocks {
             status = SFStatusEffects.repair;
         }};
         induFloorNanowall = new StaticWall("industry-nanowall") {{variants = 4;}};
+
+        lightRed = new Floor("light-red",0){{
+            useColor = false;
+            emitLight = true;
+            blendGroup = induFloor;
+            lightRadius = 40;
+            lightColor = Color.red.cpy().a(0.6f);
+        }};
+        lightYellow = new Floor("light-yellow",0){{
+            useColor = false;
+            emitLight = true;
+            blendGroup = induFloor;
+            lightRadius = 40;
+            lightColor = Color.yellow.cpy().a(0.6f);
+        }};
+        lightBlue = new Floor("light-blue",0){{
+            useColor = false;
+            emitLight = true;
+            blendGroup = induFloor;
+            lightRadius = 40;
+            lightColor = Color.blue.cpy().a(0.6f);
+        }};
+        lightGreen = new Floor("light-green",0){{
+            useColor = false;
+            emitLight = true;
+            blendGroup = induFloor;
+            lightRadius = 40;
+            lightColor = Color.green.cpy().a(0.6f);
+        }};
+
         reforcedFloor = new Floor("reforced-floor",0) {{
             speedMultiplier = 1.3f;
             dragMultiplier = 1.15f;
@@ -304,6 +305,11 @@ public class SFBlocks {
             attributes.set(Attribute.water, -0.125f);
             blendGroup = SFBlocks.reforcedFloor;
         }};
+        reforcedFloor3 = new OverlayFloor("reforced-floor-3") {{variants=0;}};
+
+        metalTower1 = new TallBlock("metal-tower-1"){{variants=0;}};
+        metalTower2 = new TallBlock("metal-tower-2"){{variants=0;}};
+        metalTower3 = new TallBlock("metal-tower-3"){{variants=0;}};
 
         OREstrontium = new OreBlock(SFItems.strontium) {{
             oreDefault = true;
@@ -713,7 +719,7 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.silicon, 80, Items.metaglass, 100, Items.titanium, 50, SFItems.siliSteel, 35));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 24;
-            liquidCapacity = 30;
+            liquidCapacity = 36;
 
             craftTime = 20;
             results = with(SFItems.strontium, 3, SFItems.rubidium, 5, SFItems.chromium, 5);
@@ -956,7 +962,7 @@ public class SFBlocks {
                         color = Items.sporePod.color;
                     }});
         }};
-        airColler = new GenericCrafter("air-cooler") {{
+        /*airColler = new GenericCrafter("air-cooler") {{
             size = 2;
             requirements(Category.crafting, with(Items.silicon, 110, Items.plastanium, 80, Items.surgeAlloy, 60));
             hasPower = hasLiquids = true;
@@ -976,12 +982,12 @@ public class SFBlocks {
                         alpha = 0.4f;
                         color = Liquids.nitrogen.color;
                     }});
-        }};
+        }};*/
         nitrateMixer = new GenericCrafter("nitrate-mixer") {{
             size = 5;
             requirements(Category.crafting, with(Items.metaglass, 150, Items.silicon, 80, Items.plastanium, 50, SFItems.chromium, 80));
             hasPower = hasLiquids = true;
-            liquidCapacity = 180;
+            liquidCapacity = 300;
 
             craftTime = 60;
             outputLiquid = new LiquidStack(SFLiquids.nitrate, 2f);
@@ -1016,7 +1022,7 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.silicon,200, Items.plastanium, 150, Items.surgeAlloy, 180, SFItems.chromium, 100));
             hasPower = hasLiquids = hasItems = true;
             itemCapacity = 40;
-            liquidCapacity = 50;
+            liquidCapacity = 300;
 
             craftTime = 60;
             consumePower(25f);
@@ -1035,6 +1041,7 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.thorium, 70, Items.plastanium, 80, SFItems.waveSteel, 50));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
+            liquidCapacity = 60;
 
             craftTime = 60;
             outputItem = new ItemStack(Items.silicon, 8);
@@ -1117,7 +1124,7 @@ public class SFBlocks {
             health = 660;
             requirements(Category.crafting, with(Items.metaglass, 110, Items.surgeAlloy, 20, SFItems.nanoCore, 80, SFItems.waveSteel, 90));
             hasPower = hasItems = hasLiquids = true;
-            liquidCapacity = 40;
+            liquidCapacity = 60;
 
             craftTime = 30;
             outputLiquid = new LiquidStack(SFLiquids.nitratedOil, 0.3f);
@@ -1133,7 +1140,7 @@ public class SFBlocks {
             health = 460;
             requirements(Category.crafting, with(Items.metaglass, 150, Items.surgeAlloy, 60, SFItems.siliSteel, 80, SFItems.rubidium, 100));
             hasPower = hasLiquids = true;
-            liquidCapacity = 80;
+            liquidCapacity = 90;
 
             craftTime = 60;
             outputLiquid = new LiquidStack(SFLiquids.nitratedOil, 0.5f);
@@ -1152,7 +1159,7 @@ public class SFBlocks {
             requirements(Category.crafting, with(Items.plastanium, 90, SFItems.nanoCore, 100, SFItems.rubidium, 150));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
-            liquidCapacity = 60;
+            liquidCapacity = 180;
 
             craftTime = 7.5f;
             results = with(Items.pyratite, 2, Items.blastCompound, 3);
@@ -1207,7 +1214,7 @@ public class SFBlocks {
             health = 660;
             requirements(Category.crafting, with(Items.metaglass, 60, SFItems.waveSteel, 80, SFItems.chromium, 40, SFItems.rubidium, 80));
             hasPower = hasItems = hasLiquids = true;
-            liquidCapacity = 30;
+            liquidCapacity = 90;
 
             craftTime = 60;
             outputLiquid = new LiquidStack(SFLiquids.blastReagent, 1.25f);
@@ -1226,6 +1233,8 @@ public class SFBlocks {
             health = 220;
             requirements(Category.crafting, with(Items.metaglass, 20, SFItems.waveSteel, 40, SFItems.rubidium, 20));
             hasPower = hasItems = hasLiquids = true;
+            itemCapacity = 15;
+            liquidCapacity = 60;
 
             craftTime = 20;
             outputItem = new ItemStack(SFItems.clusBomb, 1);
@@ -1715,18 +1724,20 @@ public class SFBlocks {
         silisteelConduit = new Conduit("silisteel-conduit") {{
             health = 220;
             requirements(Category.liquid, with(Items.lead, 1, Items.metaglass, 2, SFItems.siliSteel, 1));
-            liquidCapacity = 30;
-            liquidPressure = 5;
+            liquidCapacity = 35;
+            liquidPressure = 2.25f;
             bridgeReplacement = Blocks.phaseConduit;
+            explosivenessScale = flammabilityScale = 16f/50f;
         }};
         reArmoredConduit = new ArmoredConduit("complex-armored-conduit") {{
             health = 560;
             armor = 8;
             requirements(Category.liquid, with(Items.titanium, 1, Items.metaglass, 2, SFItems.siliSteel, 1, SFItems.fermium, 1));
             liquidCapacity = 150;
-            liquidPressure = 2;
+            liquidPressure = 2.25f;
             bridgeReplacement = discConduit;
             insulated = absorbLasers = placeableLiquid = true;
+            explosivenessScale = flammabilityScale = 16f/50f;
         }};
         silisteelTank = new LiquidRouter("silisteel-tank") {{
             size = 4;
@@ -1747,6 +1758,7 @@ public class SFBlocks {
             arrowTimeScl = 12;
             bridgeWidth = 8;
             liquidCapacity = 150;
+            explosivenessScale = flammabilityScale = 20f/100f;
             consumePower(0.5f);
         }};
 
@@ -1933,7 +1945,7 @@ public class SFBlocks {
             buildCostMultiplier = 0.8f;
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 30;
-            liquidCapacity = 36;
+            liquidCapacity = 60;
 
             powerProduction = 24;
             consumeLiquid(Liquids.cryofluid, 0.18f);
@@ -2118,7 +2130,7 @@ public class SFBlocks {
             buildCostMultiplier = 0.8f;
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
-            liquidCapacity = 120;
+            liquidCapacity = 300;
             warmupSpeed = 0.006f;
 
             powerProduction = 550f;
