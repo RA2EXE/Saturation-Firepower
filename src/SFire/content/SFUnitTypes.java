@@ -378,6 +378,7 @@ public class SFUnitTypes {
         electrodile = new UnitType("electrodile") {{
             constructor = UnitTypes.elude.constructor;
             hovering = true;
+            canDrown = false;
             outlineColor = SFColor.darkOutline;
             itemCapacity = 0;
             flying = false;
@@ -3411,7 +3412,7 @@ public class SFUnitTypes {
                             colorFrom = colorTo = Pal.heal;
                         }};
                     }},
-                    new ForceFieldAbility(190, 35, 12000, 1450)
+                    new ForceFieldAbility(190, 35, 12000, 35*60)
             );
             forceMultiTarget = true;
             for (float mountY : new float[]{17, -16}) {
@@ -6277,7 +6278,6 @@ public class SFUnitTypes {
                         heatColor = Color.valueOf("FF4040");
                         bullet = new ContinuousFlameBulletType(60) {{
                             recoil = 0.01f;
-                            pierce = false;
                             buildingDamageMultiplier = 2f;
                             colors = new Color[]{Color.valueOf("F33304A0"), Color.valueOf("F33304B8"), Color.valueOf("FEAF1FCC"), Color.valueOf("FCBE11"), Color.valueOf("FEFF5F")};
                             lightColor = Color.valueOf("FCBE11");
@@ -6504,6 +6504,7 @@ public class SFUnitTypes {
         banisher = new UnitType("banisher") {{
             constructor = UnitTypes.elude.constructor;
             hovering = true;
+            canDrown = false;
             drag = 0.07f;
             accel = 0.08f;
             speed = 0.82f;
@@ -6573,7 +6574,7 @@ public class SFUnitTypes {
                 status = SFStatusEffects.breakdown;
                 statusDuration = 6;
                 width = 8;
-                lifetime = 20f;
+                lifetime = 15;
                 length = 172;
                 sideWidth = 1.4f;
                 sideLength = 18;
@@ -6595,6 +6596,7 @@ public class SFUnitTypes {
                         shootSound = Sounds.sap;
                         soundPitchMin = soundPitchMax = 0.5f;
                         recoil = 1f;
+                        continuous = true;
                         bullet = banisherLaser;
                     }},
                     new Weapon(name("banisher-gun")) {{
@@ -6606,6 +6608,7 @@ public class SFUnitTypes {
                         shootCone = 5;
                         shootSound = Sounds.sap;
                         recoil = 1f;
+                        continuous = true;
                         bullet = banisherLaser;
                     }},
                     new Weapon(name("banisher-weapon")) {{
@@ -6622,7 +6625,7 @@ public class SFUnitTypes {
                         shoot.firstShotDelay = 40f;
                         chargeSound = Sounds.lasercharge2;
                         bullet = new BasicBulletType(18,120f,"sfire-mod-arrow-bullet") {{
-                            lifetime = 36f;
+                            lifetime = 32f;
                             drag = 0.022f;
                             trailLength = 16;
                             trailWidth = 3;
