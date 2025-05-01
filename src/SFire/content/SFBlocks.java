@@ -8,6 +8,7 @@ import mindustry.content.*;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.entities.bullet.BulletType;
 import mindustry.entities.bullet.ExplosionBulletType;
+import mindustry.entities.bullet.FireBulletType;
 import mindustry.entities.effect.*;
 import mindustry.gen.*;
 import mindustry.graphics.Pal;
@@ -48,15 +49,17 @@ public class SFBlocks {
     induFloor, induFloorSupplyer, induFloorHeater, induHeatBroken, induFloorCover, induFloorWall, induFloorNano, induFloorNanowall,
             lightRed, lightYellow, lightBlue, lightGreen,
     reforcedFloor, reforcedFloor1, reforcedFloor2, reforcedFloor3,
-    metalTower1, metalTower2, metalTower3,
-    OREstrontium, ORErubidium, OREfermium, OREchromium,
+
+    discEngine, oilDrums, oilDrumsLarge, oilDrumsArmor, radarBig,
+
+    strontium, rubidium, fermium, chromium,
 
     //crafting
     crusher, sporeCompressor, flywheelCentrifuge,
     pyraBlender, blastBlender, clusBlender, cryoCentrifuge, plasMultiCompresser, surgeTheSmelter, surgeElesmelter,
 
     silisteelSmelter, silisteelSmelterLarge, silisteelSmelterHuge, silisteelCrucible, wavesteelCompresseor, wavesteelForger, metalAnalyzer,
-    nanoConstructor, nanoPrinter, lensAtomizer, airCollector, airColler, nitrateMixer, fractionator,
+    nanoConstructor, nanoPrinter, lensAtomizer, airCollector, nitrateMixer, fractionator,
     discPhaseWaver, discPhaseKnitter, chemicalSiSmelter, blastSiSmelter, nitrReactor, nitrCentrifuge, nitrPrecipitator, nanoActivator, blastReagentMixer, clusMaker,
     tayriumSlelter, tayriumCrucible, leippiumSmelter, leippiumCrucible,
     //primaryLab, seniorLab, warfareLab
@@ -307,26 +310,175 @@ public class SFBlocks {
         }};
         reforcedFloor3 = new OverlayFloor("reforced-floor-3") {{variants=0;}};
 
-        metalTower1 = new TallBlock("metal-tower-1"){{variants=0;}};
-        metalTower2 = new TallBlock("metal-tower-2"){{variants=0;}};
-        metalTower3 = new TallBlock("metal-tower-3"){{variants=0;}};
+        discEngine = new Thruster("disc-engine") {{
+            health = 4000;
+            size = 5;
+            requirements(Category.defense, with(Items.scrap,5000, SFItems.discFabric,650, SFItems.fermium,1500));
+            buildVisibility = BuildVisibility.editorOnly;
+            buildCostMultiplier = 0.5f;
+        }};
+        oilDrums = new Wall("oil-drums") {{
+            solid = false;
+            targetable = false;
+            underBullets = true;
+            variants = 5;
+            size = 1;
+            buildVisibility = BuildVisibility.editorOnly;
+            category = Category.defense;
+            destroyBullet = new ExplosionBulletType(300,50){{
+                buildingDamageMultiplier = 0.05f;
+                status = StatusEffects.blasted;
+                hitSound = Sounds.explosionbig;
+                hitSoundVolume = 3;
+                hitShake = 5;
+                hitEffect = new MultiEffect(
+                        Fx.massiveExplosion,
+                        new ParticleEffect(){{
+                            particles = 12;
+                            length = 44;
+                            sizeFrom = 10;
+                            lifetime = 65;
+                            layer = 70;
+                            interp = Interp.pow10Out;
+                            sizeInterp = Interp.pow5In;
+                            colorFrom = SFColor.smoke;
+                            colorTo = SFColor.smoke.cpy().a(0.3f);
+                        }}
+                );
+                despawnEffect = new WaveEffect(){{
+                    interp = Interp.circleOut;
+                    lifetime = 22;
+                    sizeTo = 50;
+                    strokeFrom = 8;
+                    colorFrom = colorTo = Color.valueOf("d97c7c");
+                }};
+                fragBullets = 5;
+                fragLifeMin = 0.8f;
+                fragVelocityMax = 1.2f;
+                fragVelocityMin = 0.6f;
+                fragBullet = new BasicBulletType(10,820){{
+                    buildingDamageMultiplier = 45.5f;
+                    hitSize = 16f;
+                    hittable = absorbable = false;
+                    pierce = true;
+                    lifetime = 13.5f;
+                    hitShake = 3.5f;
+                    width = height = 0;
+                    hitSound = Sounds.boom;
+                    hitSoundVolume = 3;
+                    hitEffect = despawnEffect = Fx.blastExplosion;
+                    intervalDelay = 1;
+                    bulletInterval = 0.12f;
+                    intervalBullets = 1;
+                    intervalBullet = new FireBulletType(4,280){{
+                        lifetime = 10;
+                        splashDamage = 220;
+                        splashDamageRadius = 25;
+                        buildingDamageMultiplier = 45.5f;
+                        hitEffect = despawnEffect = Fx.blastExplosion;
+                    }};
+                }};
+            }};
+        }};
+        oilDrumsLarge = new Wall("oil-drums-large") {{
+            solid = false;
+            targetable = false;
+            underBullets = true;
+            variants = 3;
+            size = 2;
+            buildVisibility = BuildVisibility.editorOnly;
+            category = Category.defense;
+            destroyBullet = new ExplosionBulletType(390,80){{
+                buildingDamageMultiplier = 0.05f;
+                status = StatusEffects.blasted;
+                hitSound = Sounds.explosionbig;
+                hitSoundVolume = 3;
+                hitShake = 5;
+                hitEffect = new MultiEffect(
+                        Fx.massiveExplosion,
+                        new ParticleEffect(){{
+                            particles = 12;
+                            length = 60;
+                            sizeFrom = 13;
+                            lifetime = 75;
+                            layer = 70;
+                            interp = Interp.pow10Out;
+                            sizeInterp = Interp.pow5In;
+                            colorFrom = SFColor.smoke;
+                            colorTo = SFColor.smoke.cpy().a(0.3f);
+                        }}
+                );
+                despawnEffect = new WaveEffect(){{
+                    interp = Interp.circleOut;
+                    lifetime = 30;
+                    sizeTo = 80;
+                    strokeFrom = 10;
+                    colorFrom = colorTo = Color.valueOf("d97c7c");
+                }};
+                fragBullets = 16;
+                fragLifeMin = 0.8f;
+                fragVelocityMax = 1.2f;
+                fragVelocityMin = 0.6f;
+                fragBullet = new BasicBulletType(10,820){{
+                    buildingDamageMultiplier = 45.5f;
+                    hitSize = 16f;
+                    hittable = absorbable = false;
+                    pierce = true;
+                    lifetime = 13.5f;
+                    hitShake = 3.5f;
+                    width = height = 0;
+                    hitSound = Sounds.boom;
+                    hitSoundVolume = 3;
+                    hitEffect = despawnEffect = Fx.blastExplosion;
+                    intervalDelay = 1;
+                    bulletInterval = 0.12f;
+                    intervalBullets = 1;
+                    intervalBullet = new FireBulletType(4,280){{
+                        lifetime = 10;
+                        splashDamage = 220;
+                        splashDamageRadius = 25;
+                        buildingDamageMultiplier = 45.5f;
+                        hitEffect = despawnEffect = Fx.blastExplosion;
+                    }};
+                }};
+            }};
+        }};
+        oilDrumsArmor = new LiquidRouter("oil-drums-armor") {{
+            size = 4;
+            health = 4200;
+            armor = 24;
+            liquidCapacity = 8400;
+            buildVisibility = BuildVisibility.sandboxOnly;
+            insulated = absorbLasers = true;
+        }};
+        radarBig = new Radar("big-radar") {{
+            size = 3;
+            buildCostMultiplier = 0.5f;
+            fogRadius = 82;
+            health = 1500;
+            outlineColor = SFColor.darkOutline;
+            discoveryTime = 480f;
+            consumePower(1.8f);
+            requirements(Category.effect,with(Items.titanium,100, Items.silicon,150, SFItems.tayrAlloy,50));
+            buildVisibility = BuildVisibility.fogOnly;
+        }};
 
-        OREstrontium = new OreBlock(SFItems.strontium) {{
+        strontium = new OreBlock(SFItems.strontium) {{
             oreDefault = true;
             oreThreshold = 0.85f;
             oreScale = 28.702f;
         }};
-        ORErubidium = new OreBlock(SFItems.rubidium) {{
+        rubidium = new OreBlock(SFItems.rubidium) {{
             oreDefault = true;
             oreThreshold = 0.864f;
             oreScale = 24.904f;
         }};
-        OREfermium = new OreBlock(SFItems.fermium) {{
+        fermium = new OreBlock(SFItems.fermium) {{
             oreDefault = true;
             oreThreshold = 0.882f;
             oreScale = 33.206f;
         }};
-        OREchromium = new OreBlock(SFItems.chromium) {{
+        chromium = new OreBlock(SFItems.chromium) {{
             oreDefault = true;
             oreThreshold = 0.864f;
             oreScale = 28.255f;
@@ -962,27 +1114,6 @@ public class SFBlocks {
                         color = Items.sporePod.color;
                     }});
         }};
-        /*airColler = new GenericCrafter("air-cooler") {{
-            size = 2;
-            requirements(Category.crafting, with(Items.silicon, 110, Items.plastanium, 80, Items.surgeAlloy, 60));
-            hasPower = hasLiquids = true;
-            liquidCapacity = 60;
-
-            craftTime = 60;
-            outputLiquid = new LiquidStack(Liquids.nitrogen, 1/6f);
-            consumeLiquid(Liquids.cryofluid,0.25f);
-            consumePower(2f);
-
-            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.nitrogen, 2.1f), new DrawDefault(), new DrawLiquidRegion(Liquids.cryofluid),
-                    new DrawParticles() {{
-                        particles = 8;
-                        particleSize = 1.5f;
-                        particleRad = 12;
-                        particleLife = 120;
-                        alpha = 0.4f;
-                        color = Liquids.nitrogen.color;
-                    }});
-        }};*/
         nitrateMixer = new GenericCrafter("nitrate-mixer") {{
             size = 5;
             requirements(Category.crafting, with(Items.metaglass, 150, Items.silicon, 80, Items.plastanium, 50, SFItems.chromium, 80));
