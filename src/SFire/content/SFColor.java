@@ -27,6 +27,7 @@ public class SFColor {
             plastLight = Color.valueOf("F2FF9C"),
             energyYellow = Color.valueOf("FEEBB3"),
             energySky = Color.valueOf("c0ecff"),
+            energyGreen = Color.valueOf("F2FF9C"),
             enemyRedLight = Color.valueOf("FF6464"),
             enemyRedDark = Color.valueOf("C93B3B"),
             darkOutline = Color.valueOf("383848");

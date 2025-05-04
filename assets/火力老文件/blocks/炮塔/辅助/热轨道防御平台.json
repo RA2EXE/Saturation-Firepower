@@ -42,7 +42,7 @@
 			{
 				"type": "RegionPart",
 				"mirror": false,
-				"suffix": "-预热",
+				"suffix": "-load",
 				"drawRegion": false,
 				"heatProgress": "warmup",
 				"heatColor": "FF4040"
@@ -348,6 +348,7 @@
 				]
 			},
 			"despawnEffect": "none",
+
 			"fragBullets": 15,
 			"fragLifeMin": 0.4,
 			"fragBullet": {

@@ -1756,8 +1756,8 @@ public class SFUnitTypes {
             weapons.add(
                     new Weapon(name("titan-weapon")) {{
                         reload = 28;
-                        shoot = new ShootSpread(30, 0);
-                        inaccuracy = 7.5f;
+                        shoot = new ShootSpread(46, 0);
+                        inaccuracy = 10.5f;
                         shootCone = 60;
                         x = 44;
                         y = 0;
@@ -2552,7 +2552,7 @@ public class SFUnitTypes {
                                     frontColor = Color.white;
                                     trailEffect = new ParticleEffect() {{
                                         particles = 4;
-                                        region = "sfire-mod-lozenge";
+                                        region = "sfire-mod-loz";
                                         sizeFrom = 7;
                                         sizeTo = 16;
                                         length = 42;
@@ -5508,7 +5508,7 @@ public class SFUnitTypes {
                                         sizeFrom = 6;
                                         sizeTo = 2;
                                         lifetime = 95;
-                                        region = "sfire-mod-lozenge";
+                                        region = "sfire-mod-loz";
                                         interp = Interp.pow10Out;
                                         sizeInterp = Interp.pow5In;
                                         cone = 20;

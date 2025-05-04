@@ -105,7 +105,7 @@ public class SFTechTree {
         //production
         addToNode(pneumaticDrill, () -> node(energyDrill));
         addToNode(laserDrill, () -> node(heavyDrill));
-        addToNode(blastDrill, () -> node(blastWell));
+        addToNode(blastDrill, () -> node(blastWell, () -> node(quantumOreExtractor)));
         addToNode(Blocks.waterExtractor, () -> node(SFBlocks.waterExtractor));
         addToNode(oilExtractor, () -> node(oilPressurePump));
         addToNode(cultivator, () -> node(sporeCultivator));
