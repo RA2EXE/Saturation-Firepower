@@ -34,7 +34,7 @@ public class SFStatusEffects {
             effect = new ParticleEffect() {{
                 particles = 1;
                 spin = 6;
-                region = "sfire-mod-triangle";
+                region = "sfire-mod-tri";
                 baseLength = 30;
                 length = -30;
                 lifetime = 30;
@@ -75,7 +75,7 @@ public class SFStatusEffects {
             effect = new ParticleEffect() {{
                 particles = 6;
                 spin = 6;
-                region = "sfire-mod-triangle";
+                region = "sfire-mod-tri";
                 sizeFrom = 2;
                 length = 35;
                 lifetime = 10;
@@ -110,7 +110,7 @@ public class SFStatusEffects {
             effectChance = 0.4f;
             effect = new ParticleEffect() {{
                 particles = 2;
-                region = "sfire-mod-triangle";
+                region = "sfire-mod-tri";
                 baseLength = 10;
                 length = 25;
                 lifetime = 15;
@@ -335,7 +335,7 @@ public class SFStatusEffects {
                 length = -25;
                 lifetime = 20;
                 spin = 9;
-                region = "sfire-mod-triangle";
+                region = "sfire-mod-tri";
                 sizeFrom = 2.5f;
                 colorFrom = Color.valueOf("FF7C7C");
                 colorTo = Color.red;
@@ -353,7 +353,7 @@ public class SFStatusEffects {
                 length = 65;
                 lifetime = 10;
                 spin = 12;
-                region = "sfire-mod-triangle";
+                region = "sfire-mod-tri";
                 sizeFrom = 4f;
                 colorFrom = Color.red.lerp(Color.white, 0.5f);
             }};
@@ -369,7 +369,7 @@ public class SFStatusEffects {
                 length = 8;
                 spin = -0.05f;
                 interp = Interp.fastSlow;
-                region = "sfire-mod-triangle";
+                region = "sfire-mod-tri";
                 sizeInterp = Interp.pow5In;
                 sizeFrom = 5;
                 colorFrom = colorTo = Liquids.cryofluid.color;

@@ -1409,8 +1409,6 @@ public class SFUnitTypes {
                         shootStatusDuration = 488f;
                         bullet = new ExplosionBulletType(12000, 150) {{
                             maxRange = 200;
-                            speed = 20;
-                            lifetime = 5;
                             hitShake = 88f;
                             shootEffect = new MultiEffect(Fx.massiveExplosion, new WrapEffect(Fx.dynamicSpikes, SFColor.enemyRedLight, 160), new WaveEffect() {{
                                 colorFrom = colorTo = SFColor.enemyRedLight;
@@ -2849,8 +2847,8 @@ public class SFUnitTypes {
             faceTarget = false;
             lowAltitude = true;
             setEnginesMirror(
-                    new UnitEngine(32f, -32, 10f, -45f),
-                    new UnitEngine(32f, 32, 10f, 45f)
+                    new UnitEngine(36, -36, 10f, -45f),
+                    new UnitEngine(36, 36, 10f, 45f)
             );
             abilities.add(new StatusFieldAbility(SFStatusEffects.repairX, 70, 60, 240) {{
                 activeEffect = new WaveEffect() {{
@@ -4840,6 +4838,7 @@ public class SFUnitTypes {
                             layer = 100;
                             collidesTiles = false;
                             collides = false;
+                            collidesAir = false;
                             scaledSplashDamage = true;
                             speed = 0.7f;
                             drag = 0.03f;
@@ -4927,6 +4926,7 @@ public class SFUnitTypes {
                             layer = 100;
                             collidesTiles = false;
                             collides = false;
+                            collidesAir = false;
                             scaledSplashDamage = true;
                             speed = 0.7f;
                             drag = 0.03f;
@@ -5130,6 +5130,7 @@ public class SFUnitTypes {
             health = 800;
             armor = 5;
             faceTarget = false;
+            fogRadius = 31;
             weapons.add(
                     new Weapon(name("alnitak-gun")) {{
                         reload = 6;
@@ -7398,7 +7399,6 @@ public class SFUnitTypes {
             flying = true;
             controller = u -> new AssemblerAI();
             speed = 0.95f;
-            accel = 0.09f;
             rotateSpeed = 2.5f;
             hitSize = 12;
             buildBeamOffset = 6;
@@ -7415,10 +7415,11 @@ public class SFUnitTypes {
         assemblerDrone2 = new UnitType("assembler-drone-large") {{
             constructor = UnitTypes.assemblyDrone.constructor;
             outlineColor = SFColor.darkOutline;
+            health = 550;
+            armor = 5;
             flying = true;
             controller = u -> new AssemblerAI();
             speed = 1.15f;
-            accel = 0.09f;
             rotateSpeed = 2.5f;
             hitSize = 24;
             buildBeamOffset = 11;

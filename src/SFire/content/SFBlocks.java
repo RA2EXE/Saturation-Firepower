@@ -1,5 +1,6 @@
 package SFire.content;
 
+import SFire.world.blocks.SFCore;
 import arc.graphics.Color;
 import arc.math.*;
 import arc.struct.Seq;
@@ -13,6 +14,7 @@ import mindustry.entities.part.RegionPart;
 import mindustry.entities.pattern.ShootAlternate;
 import mindustry.entities.pattern.ShootBarrel;
 import mindustry.gen.*;
+import mindustry.graphics.CacheLayer;
 import mindustry.graphics.Pal;
 import mindustry.type.*;
 import mindustry.type.unit.MissileUnitType;
@@ -25,24 +27,14 @@ import mindustry.world.blocks.liquid.ArmoredConduit;
 import mindustry.world.blocks.liquid.Conduit;
 import mindustry.world.blocks.liquid.LiquidBridge;
 import mindustry.world.blocks.liquid.LiquidRouter;
-import mindustry.world.blocks.payloads.Constructor;
-import mindustry.world.blocks.payloads.PayloadConveyor;
+import mindustry.world.blocks.payloads.*;
 import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.production.*;
-import mindustry.world.blocks.storage.CoreBlock;
-import mindustry.world.blocks.storage.StorageBlock;
-import mindustry.world.blocks.storage.Unloader;
-import mindustry.world.blocks.units.Reconstructor;
-import mindustry.world.blocks.units.RepairTower;
-import mindustry.world.blocks.units.UnitAssembler;
-import mindustry.world.blocks.units.UnitFactory;
-import mindustry.world.consumers.ConsumeCoolant;
-import mindustry.world.consumers.ConsumeItemExplode;
-import mindustry.world.consumers.ConsumeItemRadioactive;
+import mindustry.world.blocks.storage.*;
+import mindustry.world.blocks.units.*;
+import mindustry.world.consumers.*;
 import mindustry.world.draw.*;
 import mindustry.world.meta.*;
-
-import java.util.Random;
 
 import static SFire.SFireMod.name;
 import static arc.math.Mathf.random;
@@ -51,13 +43,13 @@ import static mindustry.type.ItemStack.*;
 public class SFBlocks {
     public static Block
     //environment + wall + ores
-    snowSand, rareEarth, calrareEarth, magshaleFloor, magshaleWall, magshaleStone, celestiteFloor, celestiteWall, celestiteStone,
+    snowSand, rareEarth, rareEarthWater, calrareEarth, calrareEarthWall, magshaleFloor, magshaleWall, magshaleStone, celestiteFloor, celestiteWall, celestiteStone, combinationFloor, combinationWall, combinationStone,
     radiquartzFloor,radiquartzWall,radiquartzStone,
     radiamphiboleFloor,radiamphiboleWall,radiamphiboleStone,radigabbroFloor,radigabbroWall,radigabbroStone,radimacadam1Floor,radimacadam2Floor,
 
     induFloor, induFloorSupplyer, induFloorHeater, induHeatBroken, induFloorCover, induFloorWall, induFloorNano, induFloorNanowall,
             lightRed, lightYellow, lightBlue, lightGreen,
-    reforcedFloor, reforcedFloor1, reforcedFloor2, reforcedFloor3,
+    reforcedFloor, reforcedFloor1, reforcedFloor2, reforcedFloor3, perimeter,
 
     discEngine, oilDrums, oilDrumsLarge, oilDrumsArmor, radarBig,
 
@@ -98,10 +90,17 @@ public class SFBlocks {
     oilPressurePump, sporeCultivator,
 
     //storage
-    /*frondCore,*/industryCore, finalCommandCenter, hyperUnloader, molecularDatabase,
+    frontCore, industryCore, finalCommandCenter, hyperUnloader, molecularDatabase,
 
     //turrets
+    xianqu, huojian, dianguang, bingfengbao, gaosi, liebao, zuodao, longxi, mengma, zheyue,
+    mini, chuanyun, kuodao, longjuan, tieliu, yanglizi, changqiang, namifengbao, manyou, woliu, cijian, chuifa,
+    fangtian, qingning, juhua0,
+    lizipao, sizhao, liemei, cuowei0,
+    dingdaer, guangyin, cimai, fengmang, zuli,
+    poxiao, fenqing, kuosan, zhulin, yuanling, luolong,
 
+    lingding, yuwen,
     defensePlatform1, defensePlatform2, defensePlatform3, defensePlatform4, defensePlatform5,
 
 
@@ -115,27 +114,40 @@ public class SFBlocks {
         snowSand = new Floor("snow-sand") {{
             itemDrop = Items.sand;
             playerUnmineable = true;
-            attributes.set(Attribute.oil, 0.5f);
+            attributes.set(Attribute.oil, 0.35f);
             attributes.set(Attribute.water, 0.2f);
             variants = 2;
         }};
         rareEarth = new Floor("rare-earth-floor",4) {{
             itemDrop = SFItems.rareEarth;
             playerUnmineable = true;
-            speedMultiplier = 0.98f;
+            dragMultiplier = 1.08f;
+        }};
+        rareEarthWater = new Floor("rare-earth-water",4){{
+            speedMultiplier = 0.8f;
+            statusDuration = 50f;
+            albedo = 0.9f;
+            supportsOverlay = true;
+            liquidDrop = Liquids.water;
+            cacheLayer = CacheLayer.water;
+            isLiquid = true;
+            overlayAlpha = 0.35f;
         }};
         calrareEarth = new Floor("calrare-earth-floor",4) {{
             itemDrop = SFItems.rareEarth;
             playerUnmineable = true;
-            speedMultiplier = 0.98f;
+            dragMultiplier = 1.08f;
             attributes.set(Attribute.water, -0.1f);
+        }};
+        calrareEarthWall = new StaticWall("calrare-earth-wall"){{variants = 2;
+            unitMoveBreakable = true;
         }};
 
         magshaleFloor = new Floor("magshale-floor",3){{
             wall = magshaleWall;
             decoration = magshaleWall;
-            dragMultiplier = 2f;
-            attributes.set(Attribute.oil, 2f);
+            dragMultiplier = 2.25f;
+            attributes.set(Attribute.oil, 1.88f);
             walkSound = Sounds.spark;
         }};
         celestiteFloor = new Floor("celestite-floor",3){{
@@ -143,7 +155,9 @@ public class SFBlocks {
             decoration = celestiteStone;
             dragMultiplier = 0.9f;
         }};
-        radiquartzFloor = new Floor("radiquartz-floor",3){{
+        combinationFloor = new Floor("combination-floor",4);
+
+        radiquartzFloor = new Floor("radiquartz-floor",4){{
             wall = radiquartzWall;
             decoration = radiquartzStone;
             attributes.set(Attribute.water, -0.1f);
@@ -190,6 +204,7 @@ public class SFBlocks {
         radiquartzWall = new StaticWall("radiquartz-wall"){{variants = 2;}};
         radiamphiboleWall = new StaticWall("radiamphibole-wall"){{variants = 2;}};
         radigabbroWall = new StaticWall("radigabbro-wall"){{variants = 2;}};
+        combinationWall = new StaticWall("combination-wall"){{variants = 2;}};
 
         magshaleStone = new Prop("magshale-stone"){{variants = 2;}};
         celestiteStone = new Prop("celestite-stone"){{variants = 2;}};
@@ -202,6 +217,7 @@ public class SFBlocks {
         }};
         radiamphiboleStone = new Prop("radiamphibole-stone"){{variants = 2;}};
         radigabbroStone = new Prop("radigabbro-stone"){{variants = 2;}};
+        combinationStone = new Prop("combination-stone"){{variants = 2;}};
 
         induFloor = new Floor("industry-floor", 0) {{
             speedMultiplier = 1.125f;
@@ -320,6 +336,13 @@ public class SFBlocks {
             blendGroup = SFBlocks.reforcedFloor;
         }};
         reforcedFloor3 = new OverlayFloor("reforced-floor-3") {{variants=0;}};
+        perimeter = new Floor("perimeter", 0) {{
+            placeableOn=false;
+            speedMultiplier = 1.3f;
+            dragMultiplier = 1.15f;
+            attributes.set(Attribute.oil, -0.125f);
+            attributes.set(Attribute.water, -0.125f);
+        }};
 
         discEngine = new Thruster("disc-engine") {{
             health = 4000;
@@ -335,6 +358,7 @@ public class SFBlocks {
             variants = 5;
             size = 1;
             buildVisibility = BuildVisibility.editorOnly;
+            rebuildable = false;
             category = Category.defense;
             destroyBullet = new ExplosionBulletType(300,50){{
                 buildingDamageMultiplier = 0.05f;
@@ -398,6 +422,7 @@ public class SFBlocks {
             variants = 3;
             size = 2;
             buildVisibility = BuildVisibility.editorOnly;
+            rebuildable = false;
             category = Category.defense;
             destroyBullet = new ExplosionBulletType(390,80){{
                 buildingDamageMultiplier = 0.05f;
@@ -470,6 +495,8 @@ public class SFBlocks {
             outlineColor = SFColor.darkOutline;
             discoveryTime = 480f;
             consumePower(1.8f);
+            rotateSpeed = -0.75f;
+            glowColor = SFColor.tayr;
             requirements(Category.effect,with(Items.titanium,100, Items.silicon,150, SFItems.tayrAlloy,50));
             buildVisibility = BuildVisibility.fogOnly;
         }};
@@ -887,7 +914,8 @@ public class SFBlocks {
             craftTime = 20;
             results = with(SFItems.strontium, 3, SFItems.rubidium, 5, SFItems.chromium, 5);
             consumePower(1.25f);
-            consumeItem(SFItems.rareEarth, 1);
+            //consumeItem(SFItems.rareEarth, 1);
+            consumeItem(Items.sand, 2);
             consumeLiquid(Liquids.water, 0.21f);
 
             ambientSound = Sounds.hum;
@@ -1815,7 +1843,7 @@ public class SFBlocks {
             requirements(Category.distribution, with(Items.thorium, 20, Items.silicon, 15, SFItems.siliSteel, 5, SFItems.discFabric, 5, SFItems.fermium, 5));
             ((Conveyor) rearmoredConveyor).bridgeReplacement = this;
             range = 26;
-            transportTime = 2;
+            transportTime = 40 / 60f;
             arrowSpacing = 8;
             arrowOffset = 4;
             arrowTimeScl = 12;
@@ -2402,6 +2430,7 @@ public class SFBlocks {
             blockedItem = SFItems.fermium;
 
             consumeLiquid(SFLiquids.blastReagent, 0.1f);
+            liquidBoostIntensity = 0;
             drillEffect = new MultiEffect(
                     new WrapEffect() {{
                         effect = Fx.dynamicExplosion;
@@ -2424,6 +2453,7 @@ public class SFBlocks {
 
             consumePower(20);
             consumeLiquid(SFLiquids.nanoFluid, 0.6f);
+            liquidBoostIntensity = 0;
             drillEffect = new ParticleEffect(){{
                 particles = 1;
                 interp = Interp.fastSlow;
@@ -2500,7 +2530,15 @@ public class SFBlocks {
                     new DrawRegion("-top")
             );
         }};
-
+        frontCore = new SFCore("front-line-core") {{
+            size = 3;
+            health = 1000;
+            armor = 8;
+            requirements(Category.effect, with(SFItems.waveSteel, 800, Items.silicon, 800));
+            alwaysUnlocked = true;
+            itemCapacity = 800;
+            unitCapModifier = 3;
+        }};
         industryCore = new CoreBlock("industry-core") {{
             size = 6;
             requirements(Category.effect, with(Items.silicon, 3000, Items.thorium, 2000, SFItems.waveSteel, 3000));
@@ -2522,7 +2560,7 @@ public class SFBlocks {
             unitType = SFUnitTypes.omega;
         }};
         hyperUnloader = new Unloader("hyper-unloader") {{
-            health = 110;
+            health = 220;
             requirements(Category.effect, with(Items.silicon, 25, SFItems.waveSteel, 20));
             group = BlockGroup.transportation;
             speed = 2;
@@ -2536,6 +2574,53 @@ public class SFBlocks {
             itemCapacity = 10000;
         }};
 
+        /*
+    xianqu, huojian, dianguang, bingfengbao, gaosi, liebao, zuodao, longxi, mengma, zheyue,
+    mini, chuanyun, kuodao, longjuan, tieliu, yanglizi, changqiang, namifengbao, manyou, woliu, cijian, chuifa,
+    fangtian, qingning, juhua0,
+    lizipao, sizhao, liemei, cuowei0,
+    dingdaer, guangyin, cimai, fengmang, zuli,
+    poxiao, fenqing, kuosan, zhulin, yuanling, luolong,
+        */
+        xianqu = new PowerTurret("xianqu") {{
+            size = 1;
+            health = 350;
+            unitSort = UnitSorts.weakest;
+            recoil = 0.2f;
+            recoilTime = 10;
+            shootSound = Sounds.bolt;
+            shake = 0.2f;
+            heatColor = Color.valueOf("FF4040");
+            drawer = new DrawTurret() {{
+                parts.add(new RegionPart("-front") {{
+                    mirror = false;
+                    under = true;
+                    progress = PartProgress.recoil;
+                    moveY = -0.8f;
+                }});
+            }};
+            researchCostMultiplier = 0.05f;
+            requirements(Category.turret, with(Items.copper,70, Items.lead, 40));
+
+            reload = 20;
+            rotateSpeed = 13;
+            range = 120;
+            consumePower(1.55f);
+            coolant = consumeCoolant(0.1f);
+            shootType = new BasicBulletType(6,11,"circle-bullet"){{
+                lifetime = 20;
+                ammoMultiplier = 1;
+                status = SFStatusEffects.scrambled;
+                statusDuration = 20;
+
+                frontColor = Color.white;
+                backColor = SFColor.tayrLight;
+                shrinkY = 0;
+                width = height = 3;
+                hitColor = SFColor.tayr;
+                shootEffect = hitEffect = despawnEffect = Fx.hitLaserColor;
+            }};
+        }};
 
         defensePlatform1 = new PowerTurret("defense-platform-cannon"){{
             size = 6;
@@ -2679,6 +2764,7 @@ public class SFBlocks {
             shoot = new ShootBarrel(){{
                 barrels = new float[]{
                         30, 31, -15,
+                        0, 36, 0,
                         -30, 31, 15
                 };
             }};
@@ -2686,10 +2772,10 @@ public class SFBlocks {
             shootCone = 60;
             shake = 5;
             rotateSpeed = 3;
-            reload = 100;
+            reload = 80;
             range = 620;
-            shootType = new BasicBulletType(3,1260,"sfire-mod-missile1"){{
-                drag = -0.016f;
+            shootType = new BasicBulletType(4,1260,"sfire-mod-missile1"){{
+                drag = -0.01f;
                 shrinkY = 0;
                 width = 20;
                 height = 72;
@@ -2700,7 +2786,7 @@ public class SFBlocks {
                 splashDamage = 350;
                 status = StatusEffects.blasted;
                 homingDelay = 15;
-                homingRange = 80;
+                homingRange = 100;
                 homingPower = 0.042f;
                 reflectable = false;
                 collideFloor = true;
@@ -2871,7 +2957,6 @@ public class SFBlocks {
             }};
             shootType = new BulletType(){{
                 ammoMultiplier = 1;
-                homingDelay = 180;
                 smokeEffect = Fx.bigShockwave;
                 speed = 0;
                 spawnUnit = new MissileUnitType("defense-platform-nuke-missile"){{
@@ -2880,7 +2965,7 @@ public class SFBlocks {
                     homingDelay = 70;
                     speed = 4;
                     lifetime = 290;
-                    rotateSpeed = 0.45f;
+                    rotateSpeed = 0.5f;
                     hitSize = 16;
                     health = 3000;
                     targetAir = true;
@@ -2917,7 +3002,7 @@ public class SFBlocks {
                         shootSound = Sounds.explosion;
                         shootOnDeath = true;
                         shootCone = 360;
-                        bullet = new BulletType(0, 180) {{
+                        bullet = new BulletType(0, 100) {{
                             killShooter = true;
                             instantDisappear = true;
                             maxRange = 80f;
@@ -2928,7 +3013,7 @@ public class SFBlocks {
                             statusDuration = 600;
                             hitSound = SFSounds.hugeExplosion;
                             hitSoundVolume = 8;
-                            hitShake = 15;
+                            hitShake = 30;
                             shootEffect = smokeEffect = Fx.none;
                             hitEffect = new MultiEffect(
                                     new WaveEffect() {{
@@ -3069,7 +3154,7 @@ public class SFBlocks {
                 length = 450;
                 pierceArmor = true;
                 status = SFStatusEffects.breakdown;
-                statusDuration = 16;
+                statusDuration = 60;
                 hitEffect = new MultiEffect(Fx.hitLaserBlast,
                         new ParticleEffect(){{
                                 lifetime = 30;
@@ -3328,8 +3413,6 @@ public class SFBlocks {
         }};
 
 
-
-
         terrAssembler = new UnitAssembler("terr-assembler") {{
             health = 80000;
             size = 10;
@@ -3445,7 +3528,6 @@ public class SFBlocks {
             consumePower(18f);
             consumeLiquid(SFLiquids.nanoFluid, 0.6f);
         }};
-
 
     }
 }

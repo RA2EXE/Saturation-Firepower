@@ -10,6 +10,7 @@ import static mindustry.content.Blocks.*;
 import static mindustry.content.SectorPresets.craters;
 import static mindustry.content.SectorPresets.*;
 import static mindustry.content.TechTree.*;
+import static mindustry.content.TechTree.nodeProduce;
 import static mindustry.content.UnitTypes.*;
 
 import static SFire.content.SFBlocks.*;
@@ -22,6 +23,8 @@ public class SFTechTree {
     public static void load() {
         //SFPlanets.tiberia.techTree = nodeRoot("tiberia", frondCore, () -> {}
 
+        //turrets
+        addToNode(arc, () -> node(xianqu));
 
         //crafting
         addToNode(pulverizer, () -> node(crusher));
@@ -78,6 +81,7 @@ public class SFTechTree {
         addToNode(thoriumWall, () -> node(fermWall, () -> node(fermWallLarge, () -> node(leipWall, () -> node(leipWallLarge)))));
         addToNode(mendProjector, () -> node(nanoMendProjector, () -> node(nanoRegenProjector)));
         addToNode(shieldProjector, () -> node(ironCurtain, () -> node(ironDome)));
+
         //transport + liquid
         addToNode(titaniumConveyor, () -> node(waveConveyor, () -> {
             node(waveJunction);
@@ -128,12 +132,12 @@ public class SFTechTree {
                 node(air1, () -> node(air2, () -> node(air3, () -> node(air4, () -> node(air5, () -> node(air6))))))
         );
         addToNode(dagger, () ->
-                node(tank1, () -> node (tank2, () -> node(tank3, () -> node(tank4, () -> node(tank5, () -> node(tank6))))))
+                node(tank1, () -> node(tank2, () -> node(tank3, () -> node(tank4, () -> node(tank5, () -> node(tank6))))))
         );
         addToNode(risso, () ->
-                node(naval1, () -> node (naval2, () -> node(naval3, () -> node(naval4, () -> node(naval5, () -> node(naval6))))))
+                node(naval1, () -> node(naval2, () -> node(naval3, () -> node(naval4, () -> node(naval5, () -> node(naval6))))))
         );
-        addToNode(multiplicativeReconstructor, () -> node(specFactory, () ->{
+        addToNode(multiplicativeReconstructor, () -> node(specFactory, () -> {
             node(farmer);
             node(flamer);
             node(thunder);
@@ -148,27 +152,38 @@ public class SFTechTree {
         addToNode(unitRepairTower, () -> node(nanoUnitRegener));
 
         //items + liquids
-        node(Items.coal, () -> {
-            node(SFItems.strontium, () -> {});
-            node(SFLiquids.mixGas, () -> {});
+        addToNode(Items.coal, () -> {
+            nodeProduce(SFItems.strontium, () -> {
+            });
+            nodeProduce(SFLiquids.mixGas, () -> {
+            });
         });
-        node(Items.sand, () -> node(SFItems.rareEarth, () ->{
-            node(SFItems.rubidium, () -> {});
-            node(SFItems.chromium, () -> {});
+        addToNode(Items.sand, () -> nodeProduce(SFItems.rareEarth, () -> {
+            nodeProduce(SFItems.rubidium, () -> {
+            });
+            nodeProduce(SFItems.chromium, () -> {
+            });
         }));
-        node(Items.titanium, () -> node(SFItems.siliSteel, () -> {}));
-        node(Items.silicon, () -> node(SFItems.nanoCore, () -> {
-            node(SFItems.lens, () -> {});
-            node(SFLiquids.nanoFluid, () -> node(SFLiquids.actiNanofluid, () -> {}));
+        addToNode(Items.titanium, () -> nodeProduce(SFItems.siliSteel, () -> {
         }));
-        node(Items.surgeAlloy, () -> node(SFItems.tayrAlloy, () -> {}));
-        node(Items.thorium, () -> node(SFItems.fermium, () -> node(SFItems.leipAlloy, () -> {})));
-        node(Items.phaseFabric, () -> node(SFItems.discFabric, () -> {}));
-        node(Items.blastCompound, () -> node(SFItems.clusBomb, () -> {}));
-        node(Liquids.water, () -> node(SFLiquids.nitrate, () -> {}));
-        node(Liquids.oil, () -> node(SFLiquids.nitratedOil, () -> node(SFLiquids.blastReagent, () ->{})));
-
-
+        addToNode(Items.silicon, () -> nodeProduce(SFItems.nanoCore, () -> {
+            nodeProduce(SFItems.lens, () -> {
+            });
+            nodeProduce(SFLiquids.nanoFluid, () -> nodeProduce(SFLiquids.actiNanofluid, () -> {
+            }));
+        }));
+        addToNode(Items.surgeAlloy, () -> nodeProduce(SFItems.tayrAlloy, () -> {
+        }));
+        addToNode(Items.thorium, () -> nodeProduce(SFItems.fermium, () -> nodeProduce(SFItems.leipAlloy, () -> {
+        })));
+        addToNode(Items.phaseFabric, () -> nodeProduce(SFItems.discFabric, () -> {
+        }));
+        addToNode(Items.blastCompound, () -> nodeProduce(SFItems.clusBomb, () -> {
+        }));
+        addToNode(Liquids.water, () -> nodeProduce(SFLiquids.nitrate, () -> {
+        }));
+        addToNode(Liquids.oil, () -> nodeProduce(SFLiquids.nitratedOil, () -> nodeProduce(SFLiquids.blastReagent, () -> {
+        })));
 
 
     }
@@ -179,17 +194,17 @@ public class SFTechTree {
         c.run();
     }
 
-    public static void node(UnlockableContent content, Runnable children){
+    public static void node(UnlockableContent content, Runnable children) {
         node(content, content.researchRequirements(), children);
     }
 
-    public static void node(UnlockableContent content, ItemStack[] requirements, Runnable children){
+    public static void node(UnlockableContent content, ItemStack[] requirements, Runnable children) {
         node(content, requirements, null, children);
     }
 
-    public static void node(UnlockableContent content, ItemStack[] requirements, Seq<Objective> objectives, Runnable children){
+    public static void node(UnlockableContent content, ItemStack[] requirements, Seq<Objective> objectives, Runnable children) {
         TechNode node = new TechNode(context, content, requirements);
-        if(objectives != null){
+        if (objectives != null) {
             node.objectives.addAll(objectives);
         }
 
@@ -199,19 +214,20 @@ public class SFTechTree {
         context = prev;
     }
 
-    public static void node(UnlockableContent content, Seq<Objective> objectives, Runnable children){
+    public static void node(UnlockableContent content, Seq<Objective> objectives, Runnable children) {
         node(content, content.researchRequirements(), objectives, children);
     }
 
-    public static void node(UnlockableContent block){
-        node(block, () -> {});
+    public static void node(UnlockableContent block) {
+        node(block, () -> {
+        });
     }
 
-    public static void nodeProduce(UnlockableContent content, Seq<Objective> objectives, Runnable children){
+    public static void nodeProduce(UnlockableContent content, Seq<Objective> objectives, Runnable children) {
         node(content, content.researchRequirements(), objectives.add(new Produce(content)), children);
     }
 
-    public static void nodeProduce(UnlockableContent content, Runnable children){
+    public static void nodeProduce(UnlockableContent content, Runnable children) {
         nodeProduce(content, new Seq<>(), children);
     }
 }

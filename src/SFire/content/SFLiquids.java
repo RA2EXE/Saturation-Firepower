@@ -43,7 +43,7 @@ public class SFLiquids {
             particleEffect = new ParticleEffect(){{
                 particles = 5;
                 length = 13;
-                region = "sfire-mod-lozenge";
+                region = "sfire-mod-loz";
                 sizeInterp = Interp.pow5In;
                 sizeFrom = 1.1f;
                 colorFrom = Color.valueOf("96E6A0");
