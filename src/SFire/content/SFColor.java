@@ -12,7 +12,7 @@ public class SFColor {
             sisteel = Color.valueOf("7595D2"),
             sisteelLight = Color.valueOf("B9C0EB"),
             clusRed = Color.valueOf("FF5845"),
-            clusRedDark = clusRed.cpy().lerp(Color.black, 0.995f),
+            clusRedDark = Color.valueOf("D44939"),
 
             disc = Color.valueOf("FFD59E"),
             discDark = Color.valueOf("EEC591"),

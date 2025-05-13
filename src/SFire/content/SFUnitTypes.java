@@ -4337,53 +4337,54 @@ public class SFUnitTypes {
             trailLength = 7;
             immunities.addAll(StatusEffects.burning, StatusEffects.unmoving);
             circleTarget = faceTarget = true;
-            weapons.add(new Weapon(name("cumulus-gun")) {{
-                            top = false;
-                            x = 4;
-                            y = 5;
-                            shootX = 1;
-                            shootY = 3;
-                            inaccuracy = 1;
-                            layerOffset = -0.001f;
-                            shootSound = Sounds.blaster;
-                            rotate = false;
-                            reload = 6f;
-                            shootCone = 5;
-                            minShootVelocity = 0.1f;
-                            bullet = new RailBulletType() {{
-                                damage = 16;
-                                pierce = false;
-                                pointEffectSpace = 4;
-                                pierceDamageFactor = 0.8f;
-                                pointEffect = new ParticleEffect() {{
-                                    particles = 1;
-                                    line = true;
-                                    randLength = false;
-                                    length = 0;
-                                    baseLength = 1;
-                                    lifetime = 7f;
-                                    lenFrom = lenTo = 4.3f;
-                                    strokeFrom = 3f;
-                                    strokeTo = 0;
-                                    colorFrom = colorTo = Pal.lightPyraFlame;
-                                    cone = 0;
-                                }};
-                                endEffect = new Effect(7, e -> {
-                                    color(e.color);
-                                    Drawf.tri(e.x, e.y, e.fout() * 1.5f, 5f, e.rotation);
-                                });
-                                smokeEffect = Fx.none;
-                                hitEffect = new ParticleEffect() {{
-                                    particles = 5;
-                                    lifetime = 10;
-                                    sizeFrom = 3;
-                                    colorFrom = colorTo = Pal.lightPyraFlame;
-                                }};
-                                status = StatusEffects.burning;
-                                statusDuration = 180;
-                                length = 120;
+            weapons.add(
+                    new Weapon(name("cumulus-gun")) {{
+                        top = false;
+                        x = 4;
+                        y = 5;
+                        shootX = 1;
+                        shootY = 3;
+                        inaccuracy = 1;
+                        layerOffset = -0.001f;
+                        shootSound = Sounds.blaster;
+                        rotate = false;
+                        reload = 6f;
+                        shootCone = 5;
+                        minShootVelocity = 0.1f;
+                        bullet = new RailBulletType() {{
+                            damage = 16;
+                            pierce = false;
+                            pointEffectSpace = 4;
+                            pierceDamageFactor = 0.8f;
+                            pointEffect = new ParticleEffect() {{
+                                particles = 1;
+                                line = true;
+                                randLength = false;
+                                length = 0;
+                                baseLength = 1;
+                                lifetime = 7f;
+                                lenFrom = lenTo = 4.3f;
+                                strokeFrom = 3f;
+                                strokeTo = 0;
+                                colorFrom = colorTo = Pal.lightPyraFlame;
+                                cone = 0;
                             }};
-                        }},
+                            endEffect = new Effect(7, e -> {
+                                color(e.color);
+                                Drawf.tri(e.x, e.y, e.fout() * 1.5f, 5f, e.rotation);
+                            });
+                            smokeEffect = Fx.none;
+                            hitEffect = new ParticleEffect() {{
+                                particles = 5;
+                                lifetime = 10;
+                                sizeFrom = 3;
+                                colorFrom = colorTo = Pal.lightPyraFlame;
+                            }};
+                            status = StatusEffects.burning;
+                            statusDuration = 180;
+                            length = 120;
+                        }};
+                    }},
                     new Weapon(name("cumulus-bomb")) {{
                         x = 4;
                         reload = 130f;

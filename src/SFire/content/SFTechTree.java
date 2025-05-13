@@ -23,8 +23,19 @@ public class SFTechTree {
     public static void load() {
         //SFPlanets.tiberia.techTree = nodeRoot("tiberia", frondCore, () -> {}
 
+        // addToNode(XXX, () -> node(XXX));
+
         //turrets
-        addToNode(arc, () -> node(xianqu));
+        addToNode(arc, () -> node(xianqu, () -> node(liebao)));
+        addToNode(hail, () -> {
+            node(huojian);
+            node(mengma);
+        });
+        addToNode(salvo, () -> node(mini));
+
+        addToNode(lancer, () -> node(dianguang, () -> node(bingfengbao)));
+        addToNode(parallax, () -> node(cuodao));
+        addToNode(scorch, () -> node(longxi));
 
         //crafting
         addToNode(pulverizer, () -> node(crusher));
