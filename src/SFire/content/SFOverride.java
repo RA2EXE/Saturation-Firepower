@@ -2,42 +2,145 @@ package SFire.content;
 
 import arc.graphics.Color;
 import arc.math.Interp;
-import arc.struct.Seq;
 import mindustry.content.*;
-import mindustry.entities.Effect;
-import mindustry.entities.bullet.BulletType;
+import mindustry.entities.bullet.*;
 import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
 import mindustry.entities.effect.WrapEffect;
 import mindustry.gen.Sounds;
+import mindustry.graphics.Layer;
 import mindustry.graphics.Pal;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
 import mindustry.type.UnitType;
-import mindustry.world.Block;
-import mindustry.world.blocks.*;
-import mindustry.world.blocks.distribution.BufferedItemBridge;
-import mindustry.world.blocks.distribution.Conveyor;
-import mindustry.world.blocks.distribution.Junction;
-import mindustry.world.blocks.liquid.Conduit;
-import mindustry.world.blocks.liquid.LiquidBridge;
+import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.power.ConsumeGenerator;
 import mindustry.world.blocks.production.AttributeCrafter;
 import mindustry.world.blocks.production.Drill;
 import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.production.Pump;
-import mindustry.world.blocks.storage.Unloader;
 import mindustry.world.blocks.units.Reconstructor;
 import mindustry.world.blocks.units.UnitFactory;
-import mindustry.world.consumers.ConsumeItemFlammable;
-import mindustry.world.consumers.ConsumeItemRadioactive;
 
 import static mindustry.type.ItemStack.with;
 
 public class SFOverride {
     public static void load() {
 
+        //turrets
+        ((ItemTurret) Blocks.scatter).ammoTypes.putAll(
+                Items.blastCompound, new FlakBulletType(4, 5){{
+                    lifetime = 60;
+                    ammoMultiplier = 6;
+                    width = 6;
+                    height = 8;
+                    splashDamage = 45;
+                    splashDamageRadius = 35;
+                    status = StatusEffects.blasted;
+                    backColor = Pal.blastAmmoBack;
+                    frontColor = Pal.blastAmmoFront;
+                    hitEffect = Fx.flakExplosion;
+                }},
+                SFItems.siliSteel, new FlakBulletType(6,3){{
+                    lifetime = 40f;
+                    ammoMultiplier = 4;
+                    width = 6;
+                    height = 8;
+                    splashDamage = 23;
+                    splashDamageRadius = 20;
+                    status = SFStatusEffects.magnStrif;
+                    statusDuration = 32;
+                    backColor = SFColor.sisteelDark;
+                    frontColor = SFColor.sisteelLight;
+                    hitEffect = Fx.flakExplosion;
+                }}
+        );
+        ((ItemTurret) Blocks.salvo).ammoTypes.put(Items.blastCompound, new BasicBulletType(5,16){{
+            lifetime = 44.4f;
+            rangeChange = 4f * 8f;
+
+            splashDamage = 35;
+            splashDamageRadius = 30 * 0.75f;
+            status = StatusEffects.blasted;
+
+            ammoMultiplier = 6;
+            knockback = 3;
+            frontColor = hitColor = Pal.blastAmmoFront;
+            backColor = Pal.blastAmmoBack;
+            hitEffect = Fx.blastExplosion;
+
+            width = 10;
+            height = 13;
+        }});
+        ((LiquidTurret) Blocks.wave).ammoTypes.putAll(
+                SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.actiNanofluid){{
+                    lifetime = 32;
+                    drag = 0.01f;
+
+                    healAmount = 10;
+                    collidesTeam = true;
+                    statusDuration = 120;
+                    status = SFStatusEffects.disRepair;
+                }},
+                SFLiquids.nitrate, new LiquidBulletType(SFLiquids.nitrate){{
+                    lifetime = 32;
+                    drag = 0.01f;
+
+                    damage = 3.1f;
+                    knockback = 0.5f;
+                    statusDuration = 240;
+                    status = SFStatusEffects.acidded;
+                    layer = 98;
+                }}
+        );
+        ((LiquidTurret) Blocks.tsunami).ammoTypes.putAll(
+                SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.actiNanofluid){{
+                    lifetime = 49f;
+                    speed = 4f;
+                    puddleSize = 8f;
+                    orbSize = 4f;
+                    drag = 0.001f;
+
+                    damage = 0.3f;
+                    knockback = 0.3f;
+                    healAmount = 10;
+                    collidesTeam = true;
+                    statusDuration = 240;
+                    status = SFStatusEffects.disRepair;
+                    ammoMultiplier = 0.4f;
+                }},
+                SFLiquids.nitrate, new LiquidBulletType(SFLiquids.nitrate){{
+                    lifetime = 49f;
+                    speed = 4f;
+                    puddleSize = 8f;
+                    orbSize = 4f;
+                    drag = 0.001f;
+
+                    damage = 4.4f;
+                    knockback = 1.5f;
+                    statusDuration = 240;
+                    status = SFStatusEffects.acidded;
+                    layer = 98;
+                }},
+                SFLiquids.blastReagent, new LiquidBulletType(SFLiquids.blastReagent){{
+                    lifetime = 49f;
+                    speed = 4f;
+                    puddleSize = 8f;
+                    orbSize = 4f;
+                    drag = 0.001f;
+
+                    damage = 3f;
+                    splashDamage = 16;
+                    splashDamageRadius = 8;
+                    hitEffect = despawnEffect = Fx.blastExplosion;
+                    hitColor = SFLiquids.blastReagent.color;
+                    knockback = 1.3f;
+                    statusDuration = 240;
+                    status = StatusEffects.blasted;
+                    layer = 98;
+                }}
+        );
         /*
         ((Drill) Blocks.mechanicalDrill).drillTime = 540;
         ((Drill) Blocks.pneumaticDrill).drillTime = 360;
@@ -52,7 +155,7 @@ public class SFOverride {
         Blocks.impulsePump.consumePower(1.5f);
         Blocks.impulsePump.details = "加量不加价，效率更高60%！";
 
-        //power! unlimitted! POWER!!
+        //power
         ((ConsumeGenerator) Blocks.steamGenerator).powerProduction = 6f;
         ((ConsumeGenerator) Blocks.differentialGenerator).powerProduction = 19.8f;
         Blocks.differentialGenerator.destroyBullet = new BulletType() {{

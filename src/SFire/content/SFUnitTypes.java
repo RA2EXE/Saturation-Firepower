@@ -1102,7 +1102,7 @@ public class SFUnitTypes {
                 }});
                 shootSound = Sounds.mediumCannon;
                 shake = 3.6f;
-                bullet = new BasicBulletType(16, 188, "missile-large") {{
+                bullet = new BasicBulletType(16, 188 * 2f, "missile-large") {{
                     lightningDamage = damage;
                     lightning = 3;
                     lightningLength = 6;
@@ -1332,8 +1332,10 @@ public class SFUnitTypes {
                             }}
                     );
                     fragBullets = 3;
-                    fragBullet = new FlakBulletType(4, 135) {{
+                    fragBullet = new FlakBulletType(4, 135*3) {{
                         frontColor = backColor = SFColor.disc;
+                        homingPower = 0.05f;
+                        homingRange = 60;
                         hitSound = Sounds.explosion;
                         despawnEffect = Fx.flakExplosionBig;
                         status = SFStatusEffects.breakdown;
@@ -1345,6 +1347,9 @@ public class SFUnitTypes {
                         scaledSplashDamage = true;
                         splashDamage = 180;
                         splashDamageRadius = 30;
+                        trailColor = SFColor.disc;
+                        trailWidth = 1.25f;
+                        trailLength = 15;
                     }};
                 }};
             }});

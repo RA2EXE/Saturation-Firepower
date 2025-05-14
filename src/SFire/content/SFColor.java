@@ -1,15 +1,13 @@
 package SFire.content;
 
 import arc.graphics.*;
-import mindustry.content.Items;
-import mindustry.graphics.Pal;
 
 public class SFColor {
     public static Color
             strontium = Color.valueOf("FFB0B0"),
             rubidium = Color.valueOf("D0BAE6"),
             ferium = Color.valueOf("DEDEDE"),
-            sisteel = Color.valueOf("7595D2"),
+            sisteelDark = Color.valueOf("7595D2"),
             sisteelLight = Color.valueOf("B9C0EB"),
             clusRed = Color.valueOf("FF5845"),
             clusRedDark = Color.valueOf("D44939"),
@@ -17,9 +15,9 @@ public class SFColor {
             disc = Color.valueOf("FFD59E"),
             discDark = Color.valueOf("EEC591"),
 
-            tayr = Color.valueOf("25C9AB"),
+            tayrDark = Color.valueOf("25C9AB"),
             tayrLight = Color.valueOf("C4FFDE"),
-            leip = Color.valueOf("5C5D79FF"),
+            leipDark = Color.valueOf("5C5D79FF"),
             leipLight = Color.valueOf("9B9DCF"),
 
             missileGray = Color.valueOf("E3E3E3"),

@@ -246,6 +246,7 @@ public class SFBlocks {
             dragMultiplier = 1.125f;
             wall = induFloorWall;
             decoration = induFloorCover;
+            blendGroup = SFBlocks.induFloor;
         }};
         induFloorHeater = new Floor("industry-heater",2) {{
             speedMultiplier = 0.85f;
@@ -507,7 +508,7 @@ public class SFBlocks {
             discoveryTime = 480f;
             consumePower(1.8f);
             rotateSpeed = -0.75f;
-            glowColor = SFColor.tayr;
+            glowColor = SFColor.tayrDark;
             requirements(Category.effect,with(Items.titanium,100, Items.silicon,150, SFItems.tayrAlloy,50));
             buildVisibility = BuildVisibility.fogOnly;
         }};
@@ -2209,7 +2210,7 @@ public class SFBlocks {
             drawer = new DrawMulti(new DrawRegion("-bottom"),
                     new DrawPlasma() {{
                         plasma1 = SFColor.tayrLight;
-                        plasma2 = SFColor.tayr;
+                        plasma2 = SFColor.tayrDark;
                     }},
                     new DrawDefault(),
                     new DrawFlame() {{flameColor = Color.valueOf("BFFFDB");}},
@@ -2585,14 +2586,6 @@ public class SFBlocks {
             itemCapacity = 10000;
         }};
 
-        /*
-    xianqu, huojian, dianguang, bingfengbao, gaosi, liebao, cuodao, longxi, mengma, zheyue,
-    mini, chuanyun, kuodao, longjuan, tieliu, yanglizi, changqiang, namifengbao, manyou, woliu, cijian, chuifa,
-    fangtian, qingning, juhua0,
-    lizipao, sizhao, liemei, cuowei0,
-    dingdaer, guangyin, cimai, fengmang, zuli,
-    poxiao, fenqing, kuosan, zhulin, yuanling, luolong,
-        */
         xianqu = new PowerTurret("xianqu") {{
             size = 1;
             health = 350;
@@ -2628,7 +2621,7 @@ public class SFBlocks {
                 backColor = SFColor.tayrLight;
                 shrinkY = 0;
                 width = height = 3;
-                hitColor = SFColor.tayr;
+                hitColor = SFColor.tayrDark;
                 shootEffect = hitEffect = despawnEffect = Fx.hitLaserColor;
                 smokeEffect = Fx.none;
             }};
@@ -2778,7 +2771,101 @@ public class SFBlocks {
                 despawnEffect = Fx.hitLaserColor;
             }};
         }};
-        //gaosi
+        gaosi = new PowerTurret("gaosi") {{
+            size = 2;
+            health = 990;
+            recoil = 2f;
+            recoilTime = 60;
+            shootSound = Sounds.spark;
+            soundPitchMax = soundPitchMin = 2.2f;
+            shake = 2f;
+            heatColor = Color.valueOf("FF4040");
+            researchCostMultiplier = 0.05f;
+            requirements(Category.turret, with(Items.titanium,100, SFItems.rubidium,90));
+
+            reload = 135;
+            reloadWhileCharging = false;
+            moveWhileCharging = false;
+            accurateDelay = false;
+            rotateSpeed = 3;
+            chargeSound = Sounds.lasercharge;
+            shoot.firstShotDelay = 60;
+            range = 200;
+            consumePower(11);
+            shootType = new BasicBulletType(2,10, "circle-bullet"){{
+                lifetime = 120;
+                ammoMultiplier = 1;
+                status = SFStatusEffects.magnStrif;
+                statusDuration = 10;
+                buildingDamageMultiplier = 0.25f;
+                pierce = true;
+                pierceCap = 5;
+                homingPower = 0.02f;
+                homingRange = 35;
+
+                frontColor = Color.white;
+                backColor = Pal.lancerLaser;
+                trailInterval = 30/4f;
+                trailEffect = despawnEffect = new ParticleEffect(){{
+                    lifetime = 80;
+                    length = 0;
+                    sizeFrom = 12/2f;
+                    sizeTo = 1;
+                    sizeInterp = Interp.pow2In;
+                    colorFrom = backColor;
+                    colorTo = backColor.cpy().a(0);
+                }};
+                width = height = 12;
+                shrinkY = 0;
+                shootEffect = Fx.shootBigColor;
+                smokeEffect = Fx.sparkShoot;
+                hitEffect = new ExplosionEffect(){{
+                    sparks = 16;
+                    smokes = 0;
+                    sparkLen = 6;
+                    sparkRad = 35;
+                    sparkColor = Pal.lancerLaser.cpy().a(0.4f);
+                    lifetime = 25;
+                    waveRad = 45;
+                    waveLife = 15;
+                    waveStroke = 4;
+                    waveColor = Pal.lancerLaser;
+                }};
+                despawnEffect = Fx.none;
+                lightningDamage = damage / 3f;
+                lightning = 3;
+                lightningLength = 14;
+                lightningLengthRand = 6;
+                lightningColor = Pal.lancerLaser;
+                lightningType = new BulletType(0.00001f, 0f) {{
+                    hitEffect = Fx.hitLancer;
+                    despawnEffect = Fx.none;
+                    lightColor = Color.white;
+                    status = StatusEffects.shocked;
+                    statusDuration = 10f;
+                    hittable = false;
+                    buildingDamageMultiplier = 0.25f;
+                }};
+                chargeEffect = new MultiEffect(
+                        new ParticleEffect() {{
+                            lifetime = 50;
+                            sizeFrom = 0;
+                            sizeTo = 2;
+                            length = -30;
+                            baseLength = 30;
+                            colorTo = Pal.lancerLaser;
+                        }},
+                        new ParticleEffect() {{
+                            lifetime = 61;
+                            sizeFrom = 0;
+                            sizeTo = 6;
+                            length = 0;
+                            colorTo = Pal.lancerLaser;
+                            sizeInterp = Interp.pow2In;
+                        }}
+                );
+            }};
+        }};
         liebao = new PowerTurret("liebao") {{
             size = 2;
             health = 1000;
@@ -2816,7 +2903,7 @@ public class SFBlocks {
             consumePower(6);
             inaccuracy = 1;
             shootType = new BasicBulletType(5,25,"circle-bullet"){{
-                lifetime = 28;
+                lifetime = 30;
                 ammoMultiplier = 1;
                 status = SFStatusEffects.scrambled;
                 statusDuration = 40;
@@ -2829,7 +2916,7 @@ public class SFBlocks {
                 trailWidth = 4;
                 shrinkY = 0;
                 width = height = 13;
-                hitColor = SFColor.tayr;
+                hitColor = SFColor.tayrDark;
                 hitSound = Sounds.plasmaboom;
                 hitEffect = new ExplosionEffect(){{
                     sparks = smokes = 8;
@@ -2891,6 +2978,18 @@ public class SFBlocks {
             inaccuracy = 7;
             velocityRnd = 0.05f;
             shootType = new PointBulletType(){{
+                smokeEffect = new ParticleEffect(){{
+                    particles = 3;
+                    line = true;
+                    lenFrom = 24;
+                    lenTo = 0;
+                    strokeFrom = strokeTo = 0.4f;
+                    length = 60;
+                    lifetime = 12;
+                    cone = 10;
+                    colorFrom = Pal.bulletYellow;
+                    colorTo = Pal.bulletYellowBack;
+                }};
                 collidesGround = false;
                 despawnEffect = hitEffect = Fx.flakExplosion;
                 trailEffect = Fx.none;
@@ -3205,6 +3304,12 @@ public class SFBlocks {
             shootEffect = Fx.shootBig;
             maxAmmo = 150;
         }}*/
+        /*kuodao, longjuan, tieliu, yanglizi, changqiang, namifengbao, manyou, woliu, cijian, chuifa,
+    fangtian, qingning, juhua0,
+    lizipao, sizhao, liemei, cuowei0,
+    dingdaer, guangyin, cimai, fengmang, zuli,
+    poxiao, fenqing, kuosan, zhulin, yuanling, luolong,
+        */
 
         defensePlatform1 = new PowerTurret("defense-platform-cannon"){{
             size = 6;
