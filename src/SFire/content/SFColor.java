@@ -4,7 +4,8 @@ import arc.graphics.*;
 
 public class SFColor {
     public static Color
-            strontium = Color.valueOf("FFB0B0"),
+            strontiumLight = Color.valueOf("FFB0B0"),
+            strontiumDark = Color.valueOf("D97C7C"),
             rubidium = Color.valueOf("D0BAE6"),
             ferium = Color.valueOf("DEDEDE"),
             sisteelDark = Color.valueOf("7595D2"),

@@ -5,6 +5,7 @@
 >Unstable beta!
 > 
 > rebuilding into Java, it may cost some time...
+> it seems like i can finish all content but maps in June
 > 
 > ## Community
 + **Discord Server**

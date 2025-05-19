@@ -2,7 +2,7 @@ displayName: "Saturation Firepower Mod"
 name: "sfire-mod"
 
 author: "RAdea.exe"
-//repo: "RA2EXE/Saturation-Firepower"
+repo: "RA2EXE/Saturation-Firepower"
 
 main: "SFire.SFireMod"
 

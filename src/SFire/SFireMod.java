@@ -12,9 +12,9 @@ public class SFireMod extends Mod {
     public static String name(String add){
         return ModName + "-" + add;
     }
-    public SFireMod() {
-    }
+    public SFireMod() {}
 
+    /*
     @Override
     public void init() {
         BaseDialog dialog = new BaseDialog("Saturation Firepower has loaded");
@@ -23,7 +23,7 @@ public class SFireMod extends Mod {
         dialog.cont.image(Core.atlas.find("sfire-mod-sflog")).pad(20f).row();
         dialog.cont.button("好！很有精神！", dialog::hide).size(150f, 50f);
         dialog.show();
-    }
+    }*/
 
     @Override
     public void loadContent() {

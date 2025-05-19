@@ -74,19 +74,17 @@ public class SFOverride {
             height = 13;
         }});
         ((LiquidTurret) Blocks.wave).ammoTypes.putAll(
-                SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.actiNanofluid){{
+                SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.nanoFluid){{
                     lifetime = 32;
                     drag = 0.01f;
-
+                    statusDuration = 120;
+                    status = SFStatusEffects.scrambled;
                     healAmount = 10;
                     collidesTeam = true;
-                    statusDuration = 120;
-                    status = SFStatusEffects.disRepair;
                 }},
                 SFLiquids.nitrate, new LiquidBulletType(SFLiquids.nitrate){{
                     lifetime = 32;
                     drag = 0.01f;
-
                     damage = 3.1f;
                     knockback = 0.5f;
                     statusDuration = 240;
@@ -95,7 +93,7 @@ public class SFOverride {
                 }}
         );
         ((LiquidTurret) Blocks.tsunami).ammoTypes.putAll(
-                SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.actiNanofluid){{
+                SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.nanoFluid){{
                     lifetime = 49f;
                     speed = 4f;
                     puddleSize = 8f;
@@ -104,10 +102,10 @@ public class SFOverride {
 
                     damage = 0.3f;
                     knockback = 0.3f;
+                    statusDuration = 240;
+                    status = SFStatusEffects.scrambled;
                     healAmount = 10;
                     collidesTeam = true;
-                    statusDuration = 240;
-                    status = SFStatusEffects.disRepair;
                     ammoMultiplier = 0.4f;
                 }},
                 SFLiquids.nitrate, new LiquidBulletType(SFLiquids.nitrate){{
@@ -140,6 +138,51 @@ public class SFOverride {
                     status = StatusEffects.blasted;
                     layer = 98;
                 }}
+        );
+        ((ItemTurret) Blocks.ripple).shoot.shots = 5;
+        ((ItemTurret) Blocks.ripple).ammoTypes.putAll(
+                SFItems.siliSteel, new ArtilleryBulletType(3,15){{
+                    knockback = 0.8f;
+                    lifetime = 80f;
+                    width = height = 12f;
+                    collidesTiles = false;
+                    splashDamageRadius = 25f * 0.75f;
+                    splashDamage = 33f;
+                    ammoMultiplier = 3f;
+                    status = SFStatusEffects.magnStrif;
+                    statusDuration = 10;
+
+                    despawnEffect = Fx.hitBulletColor;
+                    backColor = SFColor.sisteelDark;
+                    frontColor = hitColor = trailColor = SFColor.sisteelLight;
+                }},
+                SFItems.clusBomb, new ArtilleryBulletType(3,15){{
+                    knockback = 1.8f;
+                    inaccuracy = 3;
+                    lifetime = 80f;
+                    splashDamage = 40;
+                    splashDamageRadius = 20;
+                    width = height = 12;
+                    collidesTiles = false;
+                    hitEffect = Fx.flakExplosionBig;
+                    status = StatusEffects.blasted;
+                    backColor = trailColor = SFColor.clusRedDark;
+                    frontColor = SFColor.clusRed;
+                    ammoMultiplier = 6;
+                    fragBullets = 5;
+                    fragBullet = new ArtilleryBulletType(1.5f, 8) {{
+                        lifetime = 20;
+                        splashDamage = 35;
+                        splashDamageRadius = 20;
+                        scaledSplashDamage = true;
+                        width = height = 9;
+                        hitEffect = Fx.blastExplosion;
+                        status = StatusEffects.blasted;
+                        backColor = trailColor = SFColor.clusRedDark;
+                        frontColor = SFColor.clusRed;
+                    }};
+                }}
+
         );
         /*
         ((Drill) Blocks.mechanicalDrill).drillTime = 540;

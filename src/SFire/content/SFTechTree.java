@@ -24,18 +24,25 @@ public class SFTechTree {
         //SFPlanets.tiberia.techTree = nodeRoot("tiberia", frondCore, () -> {}
 
         // addToNode(XXX, () -> node(XXX));
+        //泰伯1图开棱镜科技
 
+        addToNode(blastDrill, () -> node(fermDriller));
         //turrets
         addToNode(arc, () -> node(xianqu, () -> node(liebao)));
         addToNode(hail, () -> {
-            node(huojian);
+            node(huojian, () -> node(changqiang));
             node(mengma);
         });
-        addToNode(salvo, () -> node(mini));
-
+        addToNode(salvo, () -> node(mini, () -> {
+            node(chuanyun);
+            //node(cijian);
+        }));
+        addToNode(arc, () -> node(gaosi));
         addToNode(lancer, () -> node(dianguang, () -> node(bingfengbao)));
         addToNode(parallax, () -> node(cuodao));
         addToNode(scorch, () -> node(longxi));
+        addToNode(tsunami, () -> node(zhenyu));
+        addToNode(meltdown, () -> node(manyou));
 
         //crafting
         addToNode(pulverizer, () -> node(crusher));

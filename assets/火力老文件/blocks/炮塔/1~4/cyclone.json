@@ -93,6 +93,7 @@
 			"explodeRange": 20,
 			"collidesGround": true
 		},
+
 		"硅钢": {
 			"type": "FlakBulletType",
 			"backColor": "7595D2",
@@ -212,3 +213,4 @@
 		}
 	}
 }
+

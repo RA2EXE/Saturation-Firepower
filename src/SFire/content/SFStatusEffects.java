@@ -174,8 +174,8 @@ public class SFStatusEffects {
                 lifetime = 80;
                 interp = Interp.pow3Out;
                 sizeInterp = Interp.pow5In;
-                colorFrom = Color.valueOf("FF8C00");
-                colorTo = Color.valueOf("d0bae6");
+                colorFrom = Color.valueOf("7595D2");
+                colorTo = Color.valueOf("D0BAE6");
             }};
         }};
 
