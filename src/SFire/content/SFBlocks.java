@@ -2479,7 +2479,7 @@ public class SFBlocks {
             blockedItem = SFItems.fermium;
 
             consumeLiquid(SFLiquids.blastReagent, 0.1f);
-            liquidBoostIntensity = 0;
+            liquidBoostIntensity = 1;
             drillEffect = new MultiEffect(
                     new WrapEffect() {{
                         effect = Fx.dynamicExplosion;
@@ -2502,7 +2502,7 @@ public class SFBlocks {
 
             consumePower(20);
             consumeLiquid(SFLiquids.nanoFluid, 0.6f);
-            liquidBoostIntensity = 0;
+            liquidBoostIntensity = 1;
             drillEffect = new ParticleEffect() {{
                 particles = 1;
                 interp = Interp.fastSlow;
