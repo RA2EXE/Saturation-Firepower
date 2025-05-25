@@ -8,6 +8,7 @@ import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
 import mindustry.entities.effect.WrapEffect;
+import mindustry.entities.pattern.ShootBarrel;
 import mindustry.gen.Sounds;
 import mindustry.graphics.Layer;
 import mindustry.graphics.Pal;
@@ -182,8 +183,184 @@ public class SFOverride {
                         frontColor = SFColor.clusRed;
                     }};
                 }}
-
         );
+        Blocks.swarmer.requirements(Category.turret, ItemStack.with( Items.plastanium,45, Items.silicon,70, Items.thorium,60));
+        ((ItemTurret) Blocks.swarmer).reload = 32;
+        ((ItemTurret) Blocks.swarmer).range = 260;
+        ((ItemTurret) Blocks.swarmer).shoot = new ShootBarrel(){{
+            barrels = new float[]{
+                    -4, -1.25f, 0,
+                    0, 0, 0,
+                    4, -1.25f, 0
+            };
+            shots = 6;
+            shotDelay = 2.5f;
+        }};
+        ((ItemTurret) Blocks.swarmer).ammo(
+                Items.blastCompound, new MissileBulletType(3.7f, 10){{
+                    lifetime = 70.27f;
+                    width = height = 8f;
+                    shrinkY = 0f;
+                    splashDamageRadius = 30f;
+                    splashDamage = 50;
+                    ammoMultiplier = 5f;
+                    hitEffect = Fx.blastExplosion;
+                    despawnEffect = Fx.blastExplosion;
+
+                    status = StatusEffects.blasted;
+                    statusDuration = 60f;
+
+                    hitColor = backColor = trailColor = Pal.blastAmmoBack;
+                    frontColor = Pal.blastAmmoFront;
+                }},
+                Items.pyratite, new MissileBulletType(3.7f, 12){{
+                    lifetime = 70.27f;
+                    frontColor = Pal.lightishOrange;
+                    backColor = Pal.lightOrange;
+                    width = 7f;
+                    height = 8f;
+                    shrinkY = 0f;
+                    homingPower = 0.08f;
+                    splashDamageRadius = 20f;
+                    splashDamage = 30f * 1.5f;
+                    makeFire = true;
+                    ammoMultiplier = 5f;
+                    hitEffect = Fx.blastExplosion;
+                    status = StatusEffects.burning;
+                }},
+                Items.surgeAlloy, new MissileBulletType(3.7f, 18){{
+                    lifetime = 70.27f;
+                    width = height = 8f;
+                    shrinkY = 0f;
+                    splashDamageRadius = 25f;
+                    splashDamage = 48;
+                    hitEffect = Fx.blastExplosion;
+                    despawnEffect = Fx.blastExplosion;
+                    ammoMultiplier = 4f;
+                    lightningDamage = 16;
+                    lightning = 2;
+                    lightningLength = 10;
+
+                    hitColor = backColor = trailColor = Pal.surgeAmmoBack;
+                    frontColor = Pal.surgeAmmoFront;
+                }},
+                SFItems.siliSteel, new MissileBulletType(4.1f, 5){{
+                    lifetime = 63.41f;
+                    width = height = 7f;
+                    shrinkY = 0f;
+                    splashDamageRadius = 32f;
+                    splashDamage = 19;
+                    ammoMultiplier = 5f;
+                    hitEffect = Fx.blastExplosion;
+                    despawnEffect = Fx.blastExplosion;
+
+                    status = SFStatusEffects.magnStrif;
+                    statusDuration = 12f;
+
+                    hitColor = backColor = trailColor = SFColor.sisteelDark;
+                    frontColor = SFColor.sisteelLight;
+                }},
+                SFItems.clusBomb, new MissileBulletType(3, 8){{
+                    lifetime = 100;
+                    width = height = 9f;
+                    rangeChange = 44;
+                    shrinkY = 0f;
+                    splashDamageRadius = 32f;
+                    splashDamage = 44;
+                    ammoMultiplier = 5f;
+                    hitEffect = Fx.blastExplosion;
+                    despawnEffect = Fx.blastExplosion;
+
+                    status = StatusEffects.blasted;
+                    statusDuration = 60f;
+
+                    hitColor = backColor = trailColor = SFColor.clusRedDark;
+                    frontColor = SFColor.clusRed;
+                    fragLifeMin = 0.1f;
+                    fragBullets = 3;
+                    fragBullet = new ArtilleryBulletType(1.5f, 8) {{
+                        lifetime = 20;
+                        splashDamage = 35;
+                        splashDamageRadius = 20;
+                        scaledSplashDamage = true;
+                        width = height = 9;
+                        hitEffect = Fx.blastExplosion;
+                        status = StatusEffects.blasted;
+                        backColor = trailColor = SFColor.clusRedDark;
+                        frontColor = SFColor.clusRed;
+                    }};
+                }}
+        );
+
+        ((ItemTurret) Blocks.spectre).reload = 8.28f;
+        ((ItemTurret) Blocks.spectre).range = 280;
+        ((ItemTurret) Blocks.spectre).coolantMultiplier = 1.5f;
+        ((ItemTurret) Blocks.spectre).inaccuracy = 3;
+        ((ItemTurret) Blocks.spectre).maxAmmo = 60;
+        ((ItemTurret) Blocks.spectre).ammo(
+                Items.graphite, new BasicBulletType(9, 50*1.25f){{
+                    lifetime = 31.1f;
+                    hitSize = 4.8f;
+                    width = 15f;
+                    height = 21f;
+                    shootEffect = Fx.shootBig;
+                    ammoMultiplier = 4;
+                    reloadMultiplier = 1.7f;
+                    knockback = 0.3f;
+
+                    hitEffect = despawnEffect = Fx.hitBulletColor;
+                    hitColor = backColor = Pal.graphiteAmmoBack;
+                    frontColor = Pal.graphiteAmmoFront;
+                }},
+                Items.thorium, new BasicBulletType(10f, 80*1.25f){{
+                    lifetime = 28;
+                    hitSize = 5;
+                    width = 16f;
+                    height = 23f;
+                    shootEffect = Fx.shootBig;
+                    pierceCap = 3;
+                    pierceArmor = true;
+                    pierceBuilding = true;
+                    knockback = 0.7f;
+
+                    backColor = hitColor = Pal.thoriumAmmoBack;
+                    frontColor = Pal.thoriumAmmoFront;
+                }},
+                Items.pyratite, new BasicBulletType(10f, 70){{
+                    lifetime = 26;
+                    hitSize = 5;
+                    width = 16f;
+                    height = 21f;
+                    frontColor = Pal.lightishOrange;
+                    backColor = Pal.lightOrange;
+                    status = StatusEffects.burning;
+                    hitEffect = new MultiEffect(Fx.hitBulletSmall, Fx.fireHit);
+                    shootEffect = Fx.shootBig;
+                    makeFire = true;
+                    pierceCap = 2;
+                    pierceBuilding = true;
+                    knockback = 0.6f;
+                    ammoMultiplier = 3;
+                    splashDamage = 38.2f;
+                    splashDamageRadius = 28f;
+                }},
+                SFItems.siliSteel, new BasicBulletType(9,70){{
+                    lifetime = 31.1f;
+                    knockback = 0.2f;
+                    status = SFStatusEffects.magnStrif;
+                    statusDuration = 12;
+                    shootEffect = Fx.shootBig;
+                    hitEffect = Fx.hitBulletBig;
+                    despawnEffect = Fx.hitBulletColor;
+                    frontColor = hitColor = SFColor.sisteelLight;
+                    backColor = SFColor.sisteelDark;
+                    ammoMultiplier = 3;
+                }}
+        );
+
+
+
+
         /*
         ((Drill) Blocks.mechanicalDrill).drillTime = 540;
         ((Drill) Blocks.pneumaticDrill).drillTime = 360;

@@ -28,20 +28,28 @@ public class SFTechTree {
 
         addToNode(blastDrill, () -> node(fermDriller));
         //turrets
-        addToNode(arc, () -> node(xianqu, () -> node(liebao)));
+        addToNode(arc, () -> {
+            node(gaosi);
+            node(xianqu, () -> node(liebao));
+        });
         addToNode(hail, () -> {
             node(huojian, () -> node(changqiang));
             node(mengma);
         });
-        addToNode(salvo, () -> node(mini, () -> {
-            node(chuanyun);
-            //node(cijian);
-        }));
-        addToNode(arc, () -> node(gaosi));
-        addToNode(lancer, () -> node(dianguang, () -> node(bingfengbao)));
+        addToNode(salvo, () -> {
+            node(kuodao, () -> node(longjuan));
+            node(mini, () -> {
+                node(chuanyun);
+                node(cijian);
+            });
+        });
+        addToNode(lancer, () -> {
+            node(dianguang, () -> node(bingfengbao));
+            node(yanglizi);
+        });
         addToNode(parallax, () -> node(cuodao));
         addToNode(scorch, () -> node(longxi));
-        addToNode(tsunami, () -> node(zhenyu));
+        addToNode(tsunami, () -> node(woliu, () -> node(tieliu)));
         addToNode(meltdown, () -> node(manyou));
 
         //crafting
@@ -98,7 +106,7 @@ public class SFTechTree {
         addToNode(surgeWall, () -> node(influxWall, () -> node(influxWallLarge, () -> node(discWall))));
         addToNode(thoriumWall, () -> node(fermWall, () -> node(fermWallLarge, () -> node(leipWall, () -> node(leipWallLarge)))));
         addToNode(mendProjector, () -> node(nanoMendProjector, () -> node(nanoRegenProjector)));
-        addToNode(shieldProjector, () -> node(ironCurtain, () -> node(ironDome)));
+        addToNode(forceProjector, () -> node(ironCurtain, () -> node(ironDome)));
 
         //transport + liquid
         addToNode(titaniumConveyor, () -> node(waveConveyor, () -> {
@@ -180,6 +188,9 @@ public class SFTechTree {
             nodeProduce(SFItems.rubidium, () -> {
             });
             nodeProduce(SFItems.chromium, () -> {
+                nodeProduce(SFItems.waveSteel, () ->{
+
+                });
             });
         }));
         addToNode(Items.titanium, () -> nodeProduce(SFItems.siliSteel, () -> {

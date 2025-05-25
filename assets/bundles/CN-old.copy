@@ -55,8 +55,7 @@ block.sfire-mod-消去.description = 大型远程拦截装置。远程击毁来�
 
 block.sfire-mod-死诏.name = 死诏
 block.sfire-mod-死诏.description = 打击低速重型目标或者远距目标。\n延长射程可能会损失部分杀伤能量，请谨慎取舍射程与杀伤效力。
-block.sfire-mod-阳离子炮.name = 阳离子照射炮
-block.sfire-mod-阳离子炮.description = 使用阳离子聚焦发生器对敌人持续轰击，需要大量水供冷。
+
 block.sfire-mod-丁达尔.name = 丁达尔
 block.sfire-mod-丁达尔.description = 向敌方空中单位发射密集的穿透光束。火力逐渐加强。
 block.sfire-mod-丁达尔.details = 把敌机打成筛子，光线才能透进来。由此可得：当丁达尔效应显现之时，敌机=筛子= 使用涡轮增压器喷射液体，使用水作为弹药时能灭火。
