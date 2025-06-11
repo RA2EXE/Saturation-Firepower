@@ -4650,7 +4650,7 @@ public class SFBlocks {
             reload = 106;
             rotateSpeed = 6;
             range = 640;
-            coolantMultiplier = 0.5f;
+            coolantMultiplier = 1.5f;
             liquidCapacity = 60;
             coolant = consumeCoolant(0.5f);
             shootCone = 180;
@@ -4705,7 +4705,7 @@ public class SFBlocks {
                                     waveLife = 15;
                                     waveRad = splashDamageRadius;
                                     waveStroke = 8;
-                                    waveColor = Pal.bulletYellow;
+                                    waveColor = Pal.bulletYellowBack;
                                 }},
                                 new ParticleEffect(){{
                                     line = true;
@@ -4714,7 +4714,7 @@ public class SFBlocks {
                                     particles = 32;
                                     baseLength = 20;
                                     length = splashDamageRadius*1.25f;
-                                    colorTo = Pal.bulletYellow;
+                                    colorTo = Pal.bulletYellowBack;
                                 }}
                         );
                         despawnEffect = Fx.flakExplosionBig;
@@ -4769,7 +4769,7 @@ public class SFBlocks {
                                     waveLife = 15;
                                     waveRad = splashDamageRadius;
                                     waveStroke = 8;
-                                    waveColor = Pal.bulletYellow;
+                                    waveColor = Pal.surgeAmmoBack;
                                 }},
                                 new ParticleEffect(){{
                                     line = true;
@@ -4778,7 +4778,7 @@ public class SFBlocks {
                                     particles = 32;
                                     baseLength = 20;
                                     length = splashDamageRadius*1.25f;
-                                    colorTo = Pal.bulletYellow;
+                                    colorTo = Pal.bulletYellowBack;
                                 }}
                         );
                         despawnEffect = Fx.flakExplosionBig;
@@ -4791,6 +4791,8 @@ public class SFBlocks {
                         homingRange = 80;
                         homingDelay = 15;
                         homingPower = 0.12f;
+                        pierceArmor = true;
+                        shieldDamageMultiplier = 2.5f;
                         ammoMultiplier = 1;
 
                         width = 15;
@@ -4825,18 +4827,19 @@ public class SFBlocks {
                                     waveLife = 10;
                                     waveRad = 15;
                                     waveStroke = 8;
-                                    waveColor = Pal.bulletYellow;
+                                    waveColor = Pal.bulletYellowBack;
                                 }},
                                 new ParticleEffect(){{
                                     line = true;
                                     sizeInterp = Interp.slope;
                                     lifetime = 12;
-                                    strokeFrom = 4;
-                                    lenFrom = 15;
+                                    lenFrom = strokeFrom = 0;
+                                    strokeTo = 2;
+                                    lenTo = 15;
                                     particles = 32;
                                     baseLength = 20;
                                     length = 50;
-                                    colorTo = Pal.bulletYellow;
+                                    colorTo = Pal.bulletYellowBack;
                                     cone = 40;
                                 }}
                         );

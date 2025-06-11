@@ -1,0 +1,304 @@
+{
+	"type": "ItemTurret",
+	"name": "俎力",
+	"health": 12000,
+	"armor": -15,
+	"size": 6,
+	"reload": 45,
+	"range": 700,
+	"recoilTime": 120,
+	"recoil": 6,
+	"cooldownTime": 40,
+	"shake": 8,
+	"warmupMaintainTime": 60,
+	"unitSort":"weakest",
+	"shoot": {
+		"shots": 1,
+		"type": "ShootBarrel",
+		"barrels": [
+			8,-1.25,0,
+			-8,-1.25,0,
+			-13.25,-2.5,0,
+			13.25,-2.5,0
+		]
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"suffix": "-后",
+				"under": true,
+				"moveX": 2,
+				"moveRot": -5,
+				"progress": "warmup",
+				"moves": [
+					{
+						"progress": "recoil",
+						"rot": -2,
+						"y": -2
+					}
+				]
+			},
+			{
+				"type": "RegionPart",
+				"drawRegion": false,
+				"heatColor": "97FFA8",
+				"heatProgress": "warmup",
+				"suffix": "-热"
+			}
+		]
+	},
+	"consumes": {
+		"power": 150,
+		"liquid": "纳米流体/1.5"
+	},
+	"liquidCapacity": 320,
+	"shootSound": "release",
+	"rotateSpeed": 3,
+	"ammoPerShot": 6,
+	"consumeAmmoOnce": false,
+	"ammoTypes": {
+		"纳米核": {
+			"type": "EmpBulletType",
+			"scaleLife": true,
+			"timeIncrease": 1,
+			"powerDamageScl": 3,
+			"powerSclDecrease": 0.75,
+			"unitDamageScl": 1.25,
+			"radius": 160,
+			"ammoMultiplier": 1,
+			"height": 16,
+			"width": 13,
+			"hitSize": 8,
+			"shrinkY": 0,
+			"weaveScale": 8,
+			"weaveMag": 3,
+			"absorbable": false,
+			"healAmount": 288,
+			"healPercent": 18.8,
+			"homingDelay": 40,
+			"homingPower": 0.08,
+			"homingRange": 80,
+			"damage": 288,
+			"splashDamageRadius": 60,
+			"splashDamage": 288,
+			"status": "拆解",
+			"sprite": "missile-large",
+			"parts": [
+				{
+					"type": "ShapePart",
+					"color": "97FFA8",
+					"circle": true,
+					"hollow": true,
+					"layer": 100,
+					"stroke": 0,
+					"strokeTo": 3,
+					"radius": 100,
+					"radiusTo": 7
+				}
+			],
+			"frontColor": "FFFFFF",
+			"backColor": "97FFA8",
+			"trailLength": 46,
+			"trailWidth": 2,
+			"trailColor": "97FFA8",
+			"speed": 8,
+			"lifetime": 60,
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 33,
+						"sizeFrom": 1.5,
+						"sizeTo": 0,
+						"length": 160,
+						"baseLength": 8,
+						"lifetime": 100,
+						"interp": "fastSlow",
+						"sizeInterp": "pow3In",
+						"colorFrom": "76D081",
+						"colorTo": "76D081"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 43,
+						"sizeFrom": 1.2,
+						"sizeTo": 0,
+						"length": 160,
+						"baseLength": 8,
+						"lifetime": 100,
+						"interp": "fastSlow",
+						"sizeInterp": "pow3In",
+						"colorFrom": "76D081",
+						"colorTo": "76D081"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 160,
+						"sizeTo": 160,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 15,
+						"colorFrom": "97FFA8",
+						"colorTo": "97FFA800"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 60,
+						"sizeFrom": 160,
+						"sizeTo": 160,
+						"strokeFrom": 8,
+						"strokeTo": 0,
+						"interp": "circleOut",
+						"colorFrom": "97FFA8",
+						"colorTo": "97FFA8"
+					}
+				]
+			},
+			"shootEffect": "shootBig2",
+			"smokeEffect": {
+				"type": "ParticleEffect",
+				"particles": 7,
+				"sizeFrom": 5,
+				"interp": "circleOut",
+				"sizeInterp": "pow5In",
+				"sizeTo": 0,
+				"length": 65,
+				"baseLength": 0,
+				"lifetime": 75,
+				"colorFrom": "97FFA8",
+				"colorTo": "97FFA8",
+				"cone": 10
+			},
+			"hitSound": "plasmaboom",
+			"bulletInterval": 4,
+			"intervalBullets": 2,
+			"intervalDelay": 40,
+			"intervalBullet": {
+				"type": "EmpBulletType",
+				"timeIncrease": 1,
+				"powerDamageScl": 2,
+				"powerSclDecrease": 0.88,
+				"unitDamageScl": 1.5,
+				"width": 6,
+				"height": 6,
+				"shrinkY": 0,
+				"sprite": "circle-bullet",
+				"frontColor": "97FFA8",
+				"backColor": "97FFA8",
+				"absorbable": false,
+				"collidesTeam": true,
+				"healAmount": 48,
+				"trailLength": 10,
+				"trailWidth": 1.8,
+				"trailColor": "97FFA8",
+				"homingDelay": 1,
+				"homingPower": 0.24,
+				"homingRange": 200,
+				"speed": 13,
+				"lifetime": 20,
+				"damage": 48,
+				"radius": 100,
+				"knockback": 10,
+				"hitColor": "97FFA8",
+				"hitEffect": {
+					"type": "MultiEffect",
+					"effects": [
+						"hitBulletColor",
+						{
+							"type": "ParticleEffect",
+							"particles": 5,
+							"strokeFrom": 3,
+							"strokeTo": 0,
+							"lenFrom": 18,
+							"lenTo": 0,
+							"line": true,
+							"length": 40,
+							"baseLength": 0,
+							"lifetime": 20,
+							"sizeInterp": "circleOut",
+							"colorFrom": "97FFA8",
+							"colorTo": "97FFA8",
+							"cone": 30
+						}
+					]
+				},
+				"despawnEffect": {
+					"type": "WaveEffect",
+					"strokeFrom": 5,
+					"strokeTo": 0,
+					"lifetime": 30,
+					"sizeFrom": 2,
+					"sizeTo": 10,
+					"interp": "circleOut"
+				},
+				"status": "干扰",
+				"statusDuration": 8
+			},
+			"hitShake": 7,
+			"fragBullets": 18,
+			"fragLifeMin": 0.3,
+			"fragBullet": {
+				"type": "BasicBulletType",
+				"width": 9,
+				"height": 10,
+				"frontColor": "FFFFFF",
+				"backColor": "97FFA8",
+				"absorbable": false,
+				"healAmount": 108,
+				"healPercent": 6,
+				"trailLength": 20,
+				"trailWidth": 2,
+				"trailColor": "97FFA8",
+				"speed": 20,
+				"drag": 0.1,
+				"lifetime": 30,
+				"damage": 108,
+				"splashDamageRadius": 44,
+				"splashDamage": 108,
+				"hitColor": "97FFA8",
+				"hitEffect": {
+					"type": "ExplosionEffect",
+					"lifetime": 30,
+					"waveStroke": 5,
+					"waveLife": 22,
+					"waveRadBase": 7,
+					"waveColor": "97FFA8",
+					"waveRad": 38,
+					"smokes": 6,
+					"smokeColor": "FFFFFF",
+					"sparkColor": "97FFA8",
+					"sparks": 6,
+					"sparkRad": 50,
+					"sparkStroke": 1.5,
+					"sparkLen": 7
+				},
+				"hitShake": 3,
+				"hitSound": "laser",
+				"status": "干扰",
+				"statusDuration": 20
+			}
+		}
+	},
+	"requirements": [
+		"plastanium/800",
+		"镄/750",
+		"silicon/2000",
+		"纳米核/1200",
+		"三级协议/8"
+	],
+	"category": "turret",
+	"research": {
+		"research": "纳米风暴",
+		"objectives": [
+			{
+				"type": "OnSector",
+				"preset": "风沙谷"
+			}
+		]
+	}
+}

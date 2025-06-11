@@ -1,0 +1,354 @@
+{
+	"type": "ItemTurret",
+	"name": "凌汛",
+	"health": 5500,
+	"armor": -8,
+	"size": 5,
+	"reload": 40,
+	"fogRadiusMultiplier": 0.5,
+	"range": 408,
+	"maxAmmo": 60,
+	"xRand": 6,
+	"shootY": 8,
+	"recoilTime": 45,
+	"recoil": 4,
+	"shake": 2.5,
+	"consumes": {
+		"power": 25
+	},
+	"minWarmup": 0.9,
+	"shootWarmupSpeed": 0.055,
+	"warmupMaintainTime": 120,
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"under": true,
+				"x": 12,
+				"y": -8,
+				"suffix": "-后",
+				"moves":[
+					{
+						"progress": "recoil",
+						"x": 0.5,
+						"y": -0.5
+					}
+				],
+				"moveX": 2.5,
+				"moveY": -1.5,
+				"moveRot": -30
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"suffix": "-侧",
+				"moveY": 3.5,
+				"moveRot": -45
+			}
+		]
+	},
+	"liquidCapacity": 60,
+	"shootSound": "none",
+	"targetGround": true,
+	"targetAir": true,
+	"shootCone": 10,
+	"inaccuracy": 0,
+	"rotateSpeed": 4.6,
+	"ammoTypes": {
+		"titanium": {
+			"type": "PointBulletType",
+			"damage": 80,
+			"lifetime": 10,
+			"speed": 100,
+			"reloadMultiplier": 16,
+			"ammoMultiplier": 3,
+			"trailSpacing": 8,
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"length": 0,
+				"baseLength": 1,
+				"lifetime": 12,
+				"line": true,
+				"randLength": false,
+				"lenFrom": 8.1,
+				"lenTo": 8.1,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"sizeInterp": "slowFast",
+				"colorFrom": "8da1e3",
+				"colorTo": "8da1e3",
+				"cone": 0
+			},
+			"shootEffect": {
+				"type": "WaveEffect",
+				"lifetime": 15,
+				"sizeFrom": 1,
+				"sizeTo": 22,
+				"strokeFrom": 1.5,
+				"strokeTo": 0,
+				"colorFrom": "8da1e3",
+				"colorTo": "8da1e3"
+			},
+			"smokeEffect": {
+				"type": "ParticleEffect",
+				"sizeInterp": "pow3In",
+				"interp": "fastSlow",
+				"particles": 3,
+				"strokeFrom": 2,
+				"strokeTo": 0,
+				"line": true,
+				"lenFrom": 15,
+				"lenTo": 0,
+				"length": 45,
+				"baseLength": 0,
+				"lifetime": 16,
+				"colorFrom": "8da1e3",
+				"colorTo": "8da1e3",
+				"cone": 13
+			},
+			"hitEffect": {
+				"type": "ParticleEffect",
+				"interp": "fastSlow",
+				"sizeInterp": "pow3In",
+				"particles": 4,
+				"baseLength": 4,
+				"length": 10,
+				"lifetime": 15,
+				"line": true,
+				"lenFrom": 8,
+				"lenTo": 0,
+				"strokeFrom": 2,
+				"strokeTo": 1,
+				"colorFrom": "8da1e3",
+				"colorTo": "8da1e3"
+			},
+			"despawnEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeFrom": 4,
+				"sizeTo": 0,
+				"length": 0,
+				"baseLength": 0,
+				"lifetime": 14,
+				"sizeInterp": "slowFast",
+				"colorFrom": "8da1e3",
+				"colorTo": "8da1e3"
+			},
+			"spawnBullets": [
+				{
+					"type": "ShrapnelBulletType",
+					"instantDisappear": true,
+					"knockback": 8,
+					"fromColor": "8da1e3",
+					"toColor": "8da1e3",
+					"hitColor": "8da1e3",
+					"hitEffect": "hitLaserBlast",
+					"length": 204,
+					"damage": 72,
+					"despawnSound": "shoot"
+				}
+			]
+		},
+		"冷冻液桶": {
+			"type": "PointBulletType",
+			"damage": 64,
+			"splashDamage": 32,
+			"splashDamageRadius": 10,
+			"rangeChange": 30,
+			"lifetime": 12,
+			"speed": 100,
+			"status": "freezing",
+			"statusDuration": 60,
+			"reloadMultiplier": 10,
+			"ammoMultiplier": 30,
+			"trailSpacing": 5,
+			"trailEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"length": 0,
+						"baseLength": 1,
+						"lifetime": 12,
+						"line": true,
+						"randLength": false,
+						"lenFrom": 5.1,
+						"lenTo": 5.1,
+						"strokeFrom": 3,
+						"strokeTo": 0,
+						"sizeInterp": "slowFast",
+						"colorFrom": "c0ecff",
+						"colorTo": "c0ecff",
+						"cone": 0
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeFrom": 2.5,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 3,
+						"lifetime": 12,
+						"interp": "pow5Out",
+						"sizeInterp": "pow3In",
+						"colorFrom": "c0ecff",
+						"colorTo": "c0ecff"
+					}
+				]
+			},
+			"shootEffect": {
+				"type": "WaveEffect",
+				"lifetime": 15,
+				"sizeFrom": 0,
+				"sizeTo": 26,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "c0ecff",
+				"colorTo": "c0ecff"
+			},
+			"smokeEffect": {
+				"type": "ParticleEffect",
+				"sizeInterp": "pow3In",
+				"interp": "fastSlow",
+				"particles": 6,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 46,
+				"baseLength": 0,
+				"lifetime": 16,
+				"colorFrom": "c0ecff",
+				"colorTo": "c0ecff",
+				"cone": 13
+			},
+			"hitColor": "c0ecff",
+			"hitEffect": "hitBulletColor",
+			"despawnEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeFrom": 4,
+				"sizeTo": 0,
+				"length": 0,
+				"baseLength": 0,
+				"lifetime": 14,
+				"sizeInterp": "slowFast",
+				"colorFrom": "c0ecff",
+				"colorTo": "c0ecff"
+			},
+			"spawnBullets": [
+				{
+					"type": "ShrapnelBulletType",
+					"instantDisappear": true,
+					"fromColor": "c0ecff",
+					"toColor": "c0ecff",
+					"hitColor": "c0ecff",
+					"hitEffect": "hitLaserBlast",
+					"length": 204,
+					"damage": 24,
+					"status": "freezing",
+					"statusDuration": 180,
+					"despawnSound": "bolt"
+				}
+			]
+		},
+		"surge-alloy": {
+			"type": "PointBulletType",
+			"inaccuracy": 3,
+			"damage": 110,
+			"lifetime": 12,
+			"speed": 100,
+			"rangeChange": 40,
+			"status": "shocked",
+			"reloadMultiplier": 8,
+			"ammoMultiplier": 6,
+			"trailSpacing": 8,
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"length": 0,
+				"baseLength": 1,
+				"lifetime": 12,
+				"line": true,
+				"randLength": false,
+				"lenFrom": 8.1,
+				"lenTo": 8.1,
+				"strokeFrom": 3.5,
+				"strokeTo": 0,
+				"sizeInterp": "slowFast",
+				"colorFrom": "F2E770",
+				"colorTo": "F2E770",
+				"cone": 0
+			},
+			"shootEffect": {
+				"type": "WaveEffect",
+				"lifetime": 15,
+				"sizeFrom": 0,
+				"sizeTo": 30,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "F2E770",
+				"colorTo": "F2E770"
+			},
+			"smokeEffect": {
+				"type": "ParticleEffect",
+				"sizeInterp": "pow3In",
+				"interp": "fastSlow",
+				"particles": 3,
+				"strokeFrom": 2.6,
+				"strokeTo": 0,
+				"line": true,
+				"lenFrom": 15,
+				"lenTo": 0,
+				"length": 46,
+				"baseLength": 0,
+				"lifetime": 16,
+				"colorFrom": "F2E770",
+				"colorTo": "F2E770",
+				"cone": 13
+			},
+			"hitColor": "F2E770",
+			"hitEffect": "hitBulletColor",
+			"despawnEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"sizeFrom": 5,
+				"sizeTo": 0,
+				"length": 0,
+				"baseLength": 0,
+				"lifetime": 14,
+				"sizeInterp": "slowFast",
+				"colorFrom": "F2E770",
+				"colorTo": "F2E770"
+			},
+			"spawnBullets": [
+				{
+					"type": "LightningBulletType",
+					"damage": 110,
+					"lightningLength": 64,
+					"lightningLengthRand": 12,
+					"shootEffect": "shootHeal",
+					"smokeEffect": "none",
+					"instantDisappear": true,
+					"lightningColor": "F2E770",
+					"hitColor": "F2E770",
+					"hitEffect": "hitLancer",
+					"status": "shocked",
+					"despawnSound": "laser"
+				}
+			]
+		}
+	},
+	"requirements": [
+		"titanium/1000",
+		"metaglass/600",
+		"硅钢/100",
+		"surge-alloy/500",
+		"二级协议/0"
+	],
+	"category": "turret",
+	"research": "冰风暴"
+}

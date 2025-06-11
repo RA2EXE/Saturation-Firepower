@@ -1,0 +1,430 @@
+{
+	"type": "ItemTurret",
+	"name": "流冲",
+	"health": 2300,
+	"size": 4,
+	"reload": 60,
+	"range": 290,
+	"maxAmmo": 30,
+	"liquidCapacity": 360,
+	"consumes": {
+		"liquid": {
+			"liquid": "water",
+			"amount": 0.5
+		}
+	},
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "RegionPart",
+				"mirror": false,
+				"progress": {
+					"type": "reload",
+					"op": "delay",
+					"amount": 0.2
+				},
+				"x": 0,
+				"y": 0,
+				"suffix": "-1",
+				"under": true,
+				"moveX": 0,
+				"moveY": 6.5
+			}
+		]
+	},
+	"shake": 2,
+	"recoil": 0,
+	"recoilTime": 0,
+	"shootSound": "artillery",
+	"inaccuracy": 0,
+	"rotateSpeed": 6,
+	"ammoPerShot": 2,
+	"ammoUseEffect": "none",
+	"ammoTypes": {
+		"水桶": {
+			"type": "BasicBulletType",
+			"scaleLife": true,
+			"hitSize": 30,
+			"splashDamageRadius": 30,
+			"splashDamage": 33,
+			"speed": 12,
+			"lifetime": 24,
+			"damage": 33,
+			"sprite": "missile-large",
+			"backColor": "596ab8",
+			"frontColor": "FFFFFF",
+			"trailLength": 6,
+			"trailWidth": 2,
+			"trailColor": "596ab8",
+			"status": "blasted",
+			"knockback": 35,
+			"width": 12,
+			"height": 20,
+			"ammoMultiplier": 1,
+			"fragRandomSpread": 30,
+			"fragBullets": 120,
+			"fragBullet": {
+				"type": "LiquidBulletType",
+				"orbSize": 5,
+				"liquid": "water",
+				"status": "wet",
+				"statusDuration": 180,
+				"speed": 12,
+				"lifetime": 20,
+				"knockback": 1.7,
+				"pierce": true,
+				"damage": 0.4
+			},
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 6,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 35,
+				"baseLength": 0,
+				"lifetime": 18,
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
+				"cone": 60
+			},
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"length": 27,
+						"baseLength": 8,
+						"lifetime": 22,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 35,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					}
+				]
+			}
+		},
+		"矿渣桶": {
+			"type": "BasicBulletType",
+			"scaleLife": true,
+			"hitSize": 30,
+			"splashDamageRadius": 30,
+			"splashDamage": 33,
+			"speed": 12,
+			"lifetime": 24,
+			"damage": 33,
+			"sprite": "missile-large",
+			"backColor": "ffa166",
+			"frontColor": "FFFFFF",
+			"trailLength": 6,
+			"trailWidth": 2,
+			"trailColor": "ffa166",
+			"status": "blasted",
+			"knockback": 35,
+			"width": 12,
+			"height": 20,
+			"ammoMultiplier": 1,
+			"fragRandomSpread": 30,
+			"fragBullets": 120,
+			"fragBullet": {
+				"type": "LiquidBulletType",
+				"orbSize": 5,
+				"liquid": "slag",
+				"status": "melting",
+				"statusDuration": 180,
+				"speed": 12,
+				"lifetime": 20,
+				"knockback": 1.5,
+				"pierce": true,
+				"damage": 9.5
+			},
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 6,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 35,
+				"baseLength": 0,
+				"lifetime": 18,
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
+				"cone": 60
+			},
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"length": 27,
+						"baseLength": 8,
+						"lifetime": 22,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 35,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					}
+				]
+			}
+		},
+		"石油桶": {
+			"type": "BasicBulletType",
+			"scaleLife": true,
+			"hitSize": 30,
+			"splashDamageRadius": 30,
+			"splashDamage": 33,
+			"speed": 12,
+			"lifetime": 24,
+			"damage": 33,
+			"sprite": "missile-large",
+			"backColor": "313131",
+			"frontColor": "FFFFFF",
+			"trailLength": 6,
+			"trailWidth": 2,
+			"trailColor": "313131",
+			"status": "blasted",
+			"knockback": 35,
+			"width": 12,
+			"height": 20,
+			"ammoMultiplier": 1,
+			"fragRandomSpread": 30,
+			"fragBullets": 120,
+			"fragBullet": {
+				"type": "LiquidBulletType",
+				"layer": 98,
+				"orbSize": 5,
+				"liquid": "oil",
+				"status": "tarred",
+				"statusDuration": 180,
+				"speed": 12,
+				"lifetime": 20,
+				"knockback": 1.5,
+				"pierce": true,
+				"damage": 0.4
+			},
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 6,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 35,
+				"baseLength": 0,
+				"lifetime": 18,
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
+				"cone": 60
+			},
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"length": 27,
+						"baseLength": 8,
+						"lifetime": 22,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 35,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					}
+				]
+			}
+		},
+		"冷冻液桶": {
+			"type": "BasicBulletType",
+			"scaleLife": true,
+			"hitSize": 30,
+			"splashDamageRadius": 30,
+			"splashDamage": 33,
+			"speed": 12,
+			"lifetime": 24,
+			"damage": 33,
+			"sprite": "missile-large",
+			"backColor": "6ecdec",
+			"frontColor": "FFFFFF",
+			"trailLength": 6,
+			"trailWidth": 2,
+			"trailColor": "6ecdec",
+			"status": "blasted",
+			"knockback": 35,
+			"width": 12,
+			"height": 20,
+			"ammoMultiplier": 1,
+			"fragRandomSpread": 30,
+			"fragBullets": 120,
+			"fragBullet": {
+				"type": "LiquidBulletType",
+				"orbSize": 5,
+				"liquid": "cryofluid",
+				"status": "freezing",
+				"statusDuration": 180,
+				"speed": 12,
+				"lifetime": 20,
+				"knockback": 1.3,
+				"pierce": true,
+				"damage": 0.4
+			},
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 6,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 35,
+				"baseLength": 0,
+				"lifetime": 18,
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
+				"cone": 60
+			},
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"length": 27,
+						"baseLength": 8,
+						"lifetime": 22,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 35,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					}
+				]
+			}
+		},
+		"纳米流体桶": {
+			"type": "BasicBulletType",
+			"scaleLife": true,
+			"hitSize": 30,
+			"splashDamageRadius": 30,
+			"splashDamage": 33,
+			"speed": 12,
+			"lifetime": 24,
+			"damage": 33,
+			"sprite": "missile-large",
+			"backColor": "76D081",
+			"frontColor": "FFFFFF",
+			"trailLength": 6,
+			"trailWidth": 2,
+			"trailColor": "76D081",
+			"status": "blasted",
+			"knockback": 35,
+			"width": 12,
+			"height": 20,
+			"ammoMultiplier": 1,
+			"fragRandomSpread": 30,
+			"fragBullets": 120,
+			"fragBullet": {
+				"type": "LiquidBulletType",
+				"orbSize": 5,
+				"liquid": "纳米流体",
+				"status": "拆解",
+				"statusDuration": 180,
+				"speed": 12,
+				"lifetime": 20,
+				"knockback": 0.6,
+				"pierce": true,
+				"healPercent": 5,
+				"collidesTeam": true,
+				"damage": 1.5
+			},
+			"shootEffect": {
+				"type": "ParticleEffect",
+				"particles": 6,
+				"sizeFrom": 3,
+				"sizeTo": 0,
+				"length": 35,
+				"baseLength": 0,
+				"lifetime": 18,
+				"colorFrom": "FFFFFF",
+				"colorTo": "FFFFFF",
+				"cone": 60
+			},
+			"despawnEffect": "none",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 12,
+						"line": true,
+						"length": 27,
+						"baseLength": 8,
+						"lifetime": 22,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					},
+					{
+						"type": "WaveEffect",
+						"lifetime": 10,
+						"sizeFrom": 1,
+						"sizeTo": 35,
+						"strokeFrom": 4,
+						"strokeTo": 0,
+						"colorFrom": "FFFFFF",
+						"colorTo": "FFFFFF"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		{
+			"item": "lead",
+			"amount": 220
+		},
+		{
+			"item": "titanium",
+			"amount": 120
+		},
+		{
+			"item": "metaglass",
+			"amount": 60
+		}
+	],
+	"category": "turret",
+	"research": "铁流"
+}
