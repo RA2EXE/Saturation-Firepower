@@ -13,11 +13,13 @@ public class SFColor {
             clusRed = Color.valueOf("FF5845"),
             clusRedDark = Color.valueOf("EA4343"),
 
-            disc = Color.valueOf("FFD59E"),
+            discLight = Color.valueOf("FFD59E"),
             discDark = Color.valueOf("EEC591"),
 
             tayrDark = Color.valueOf("25C9AB"),
             tayrLight = Color.valueOf("C4FFDE"),
+            chromiumDark = Color.valueOf("666484"),
+            chromiumLight = Color.valueOf("929DB5"),
             leipDark = Color.valueOf("5C5D79FF"),
             leipLight = Color.valueOf("9B9DCF"),
 

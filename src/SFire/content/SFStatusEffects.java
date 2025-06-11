@@ -1,9 +1,7 @@
 package SFire.content;
 
 import arc.graphics.*;
-import arc.math.Angles;
 import arc.math.Mathf;
-import arc.net.dns.SRVRecord;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
@@ -15,7 +13,6 @@ import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
 import mindustry.type.StatusEffect;
 
-import static mindustry.Vars.*;
 import static mindustry.content.StatusEffects.*;
 
 public class SFStatusEffects {
@@ -180,7 +177,7 @@ public class SFStatusEffects {
         }};
 
         marked = new StatusEffect("marked") {{
-            color = SFColor.disc;
+            color = SFColor.discLight;
             healthMultiplier = 0.6f;
             speedMultiplier = 1.5f;
             reloadMultiplier = 0.5f;
@@ -193,7 +190,7 @@ public class SFStatusEffects {
                 sizeFrom = 10f;
                 sizeTo = 30;
                 interp = Interp.circleOut;
-                colorFrom = SFColor.disc;
+                colorFrom = SFColor.discLight;
                 colorTo = SFColor.discDark;
             }};
         }};
@@ -270,7 +267,7 @@ public class SFStatusEffects {
                         length = 35;
                         lifetime = 60;
                         interp = Interp.fastSlow;
-                        sizeInterp = Interp.pow3In;
+                        sizeInterp = Interp.bounce;
                         region = "sfire-mod-star";
                         sizeFrom = 16;
                         colorFrom = colorTo = SFColor.plastLight;
@@ -280,7 +277,7 @@ public class SFStatusEffects {
                         length = 125;
                         lifetime = 30;
                         interp = Interp.fastSlow;
-                        sizeInterp = Interp.pow3In;
+                        sizeInterp = Interp.bounce;
                         region = "sfire-mod-star";
                         sizeFrom = 9;
                         colorFrom = SFColor.plastLight.cpy().a(0.05f);

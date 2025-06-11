@@ -1,20 +1,16 @@
 package SFire.content;
 
-import SFire.SFireMod;
-import SFire.ai.GunShipAI;
 import arc.graphics.Blending;
 import arc.graphics.Color;
 import arc.math.*;
 import arc.math.geom.Rect;
 import arc.struct.ObjectSet;
-import jdk.jshell.Snippet;
 import mindustry.ai.UnitCommand;
 import mindustry.ai.types.AssemblerAI;
 import mindustry.ai.types.BuilderAI;
 import mindustry.ai.types.DefenderAI;
 import mindustry.ai.types.SuicideAI;
 import mindustry.content.*;
-import mindustry.entities.Damage;
 import mindustry.entities.Effect;
 import mindustry.entities.abilities.*;
 import mindustry.entities.bullet.*;
@@ -29,12 +25,6 @@ import mindustry.type.unit.*;
 import mindustry.type.weapons.PointDefenseWeapon;
 import mindustry.type.weapons.RepairBeamWeapon;
 import mindustry.world.meta.*;
-import rhino.UintMap;
-
-import javax.swing.*;
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 import static SFire.SFireMod.name;
 import static arc.graphics.g2d.Draw.color;
@@ -988,13 +978,13 @@ public class SFUnitTypes {
                 bullet = new BasicBulletType(16, 83, "missile-large") {{
                     lightning = 2;
                     lightningDamage = damage;
-                    lightningColor = SFColor.disc;
+                    lightningColor = SFColor.discLight;
                     lightningLength = 3;
                     lightningLengthRand = 5;
                     lightningType = new BulletType(0.00001f, 0f) {{
-                        hitEffect = new WrapEffect(Fx.hitLaserColor, SFColor.disc);
+                        hitEffect = new WrapEffect(Fx.hitLaserColor, SFColor.discLight);
                         despawnEffect = Fx.none;
-                        lightColor = SFColor.disc;
+                        lightColor = SFColor.discLight;
                         status = StatusEffects.shocked;
                         statusDuration = 10f;
                         hittable = false;
@@ -1010,8 +1000,8 @@ public class SFUnitTypes {
                     status = SFStatusEffects.breakdown;
                     statusDuration = 99;
                     frontColor = Color.white;
-                    backColor = SFColor.disc;
-                    trailColor = SFColor.disc;
+                    backColor = SFColor.discLight;
+                    trailColor = SFColor.discLight;
                     trailLength = 3;
                     trailWidth = 2;
                     hitShake = 2.2f;
@@ -1025,7 +1015,7 @@ public class SFUnitTypes {
                         lenFrom = 25;
                         length = 30;
                         lifetime = 19;
-                        colorTo = SFColor.disc;
+                        colorTo = SFColor.discLight;
                         cone = 15f;
                     }};
                     smokeEffect = new ParticleEffect() {{
@@ -1035,8 +1025,8 @@ public class SFUnitTypes {
                         sizeFrom = 3;
                         length = 30;
                         lifetime = 19;
-                        colorFrom = SFColor.disc;
-                        colorTo = SFColor.disc.cpy().a(0.8f);
+                        colorFrom = SFColor.discLight;
+                        colorTo = SFColor.discLight.cpy().a(0.8f);
                         cone = 15f;
                     }};
                     despawnEffect = Fx.hitBulletBig;
@@ -1046,7 +1036,7 @@ public class SFUnitTypes {
                         lifetime = 65;
                         smokeRad = 30;
                         smokeSize = 6;
-                        smokeColor = waveColor = SFColor.disc;
+                        smokeColor = waveColor = SFColor.discLight;
                         waveLife = 10;
                         waveStroke = 6;
                         waveRad = 20;
@@ -1108,9 +1098,9 @@ public class SFUnitTypes {
                     lightningLength = 6;
                     lightningLengthRand = 8;
                     lightningType = new BulletType(0.00001f, 0f) {{
-                        hitEffect = new WrapEffect(Fx.hitLaserColor, SFColor.disc);
+                        hitEffect = new WrapEffect(Fx.hitLaserColor, SFColor.discLight);
                         despawnEffect = Fx.none;
-                        lightColor = SFColor.disc;
+                        lightColor = SFColor.discLight;
                         status = StatusEffects.shocked;
                         statusDuration = 10f;
                         hittable = false;
@@ -1129,8 +1119,8 @@ public class SFUnitTypes {
                     status = SFStatusEffects.breakdown;
                     statusDuration = 200;
                     frontColor = Color.white;
-                    backColor = SFColor.disc;
-                    trailColor = SFColor.disc;
+                    backColor = SFColor.discLight;
+                    trailColor = SFColor.discLight;
                     trailLength = 10;
                     trailWidth = 4;
                     hitShake = 8f;
@@ -1141,7 +1131,7 @@ public class SFUnitTypes {
                         lifetime = 28;
                         sizeTo = 30;
                         strokeFrom = 3;
-                        colorFrom = colorTo = SFColor.disc;
+                        colorFrom = colorTo = SFColor.discLight;
                     }};
                     smokeEffect = new ParticleEffect() {{
                         particles = 9;
@@ -1150,8 +1140,8 @@ public class SFUnitTypes {
                         sizeFrom = 6;
                         length = 30;
                         lifetime = 65;
-                        colorFrom = SFColor.disc;
-                        colorTo = SFColor.disc.cpy().a(0.8f);
+                        colorFrom = SFColor.discLight;
+                        colorTo = SFColor.discLight.cpy().a(0.8f);
                         cone = 18f;
                     }};
                     despawnEffect = new WaveEffect() {{
@@ -1159,7 +1149,7 @@ public class SFUnitTypes {
                         sizeFrom = 5;
                         sizeTo = 90;
                         strokeFrom = 11;
-                        colorFrom = colorTo = SFColor.disc;
+                        colorFrom = colorTo = SFColor.discLight;
                     }};
                     hitEffect = new ExplosionEffect() {{
                         smokes = 13;
@@ -1167,8 +1157,8 @@ public class SFUnitTypes {
                         lifetime = 95;
                         smokeRad = 60;
                         smokeSize = 8;
-                        smokeColor = SFColor.disc.cpy().a(0.8f);
-                        waveColor = SFColor.disc;
+                        smokeColor = SFColor.discLight.cpy().a(0.8f);
+                        waveColor = SFColor.discLight;
                         waveLife = 26;
                         waveStroke = 8;
                         waveRad = 70;
@@ -1275,8 +1265,8 @@ public class SFUnitTypes {
                         sizeFrom = 5;
                         length = 38;
                         lifetime = 65;
-                        colorFrom = SFColor.disc;
-                        colorTo = SFColor.disc.cpy().a(0.8f);
+                        colorFrom = SFColor.discLight;
+                        colorTo = SFColor.discLight.cpy().a(0.8f);
                         cone = 22f;
                     }};
                     despawnEffect = new ParticleEffect() {{
@@ -1284,7 +1274,7 @@ public class SFUnitTypes {
                         sizeFrom = 50;
                         length = 0;
                         lifetime = 105;
-                        colorFrom = colorTo = SFColor.disc;
+                        colorFrom = colorTo = SFColor.discLight;
                     }};
                     hitEffect = new ExplosionEffect() {{
                         smokes = 8;
@@ -1292,17 +1282,17 @@ public class SFUnitTypes {
                         lifetime = 35;
                         smokeRad = 55;
                         smokeSize = 8;
-                        smokeColor = SFColor.disc.cpy().a(0.8f);
+                        smokeColor = SFColor.discLight.cpy().a(0.8f);
                         sparkLen = 35;
                         sparkStroke = 1.33f;
                         sparkRad = 75;
-                        waveColor = sparkColor = SFColor.disc;
+                        waveColor = sparkColor = SFColor.discLight;
                         waveLife = 16;
                         waveStroke = 11;
                         waveRad = 60;
                         waveRadBase = 5;
                     }};
-                    trailColor = SFColor.disc;
+                    trailColor = SFColor.discLight;
                     trailWidth = 2;
                     trailLength = 15;
                     trailRotation = true;
@@ -1315,7 +1305,7 @@ public class SFUnitTypes {
                                 lifetime = 60;
                                 interp = Interp.pow5Out;
                                 sizeInterp = Interp.pow5In;
-                                colorFrom = colorTo = SFColor.disc.cpy().a(0.5f);
+                                colorFrom = colorTo = SFColor.discLight.cpy().a(0.5f);
                                 cone = 19f;
                             }},
                             new ParticleEffect() {{
@@ -1327,27 +1317,27 @@ public class SFUnitTypes {
                                 length = -70;
                                 lifetime = 15;
                                 interp = Interp.pow5Out;
-                                colorFrom = colorTo = SFColor.disc;
+                                colorFrom = colorTo = SFColor.discLight;
                                 cone = 16;
                             }}
                     );
                     fragBullets = 3;
                     fragBullet = new FlakBulletType(4, 135*3) {{
-                        frontColor = backColor = SFColor.disc;
+                        frontColor = backColor = SFColor.discLight;
                         homingPower = 0.05f;
                         homingRange = 60;
                         hitSound = Sounds.explosion;
                         despawnEffect = Fx.flakExplosionBig;
                         status = SFStatusEffects.breakdown;
                         statusDuration = 206f;
-                        hitEffect = new WrapEffect(Fx.dynamicSpikes, SFColor.disc, 30);
+                        hitEffect = new WrapEffect(Fx.dynamicSpikes, SFColor.discLight, 30);
                         lifetime = 20;
                         pierceArmor = true;
                         hittable = false;
                         scaledSplashDamage = true;
                         splashDamage = 180;
                         splashDamageRadius = 30;
-                        trailColor = SFColor.disc;
+                        trailColor = SFColor.discLight;
                         trailWidth = 1.25f;
                         trailLength = 15;
                     }};
@@ -1673,13 +1663,13 @@ public class SFUnitTypes {
                                                     interp = Interp.pow10Out;
                                                     sizeInterp = Interp.pow3In;
                                                     colorFrom = SFColor.enemyRedLight;
-                                                    colorTo = SFColor.disc;
+                                                    colorTo = SFColor.discLight;
                                                 }},
                                                 new ParticleEffect() {{
                                                     particles = 1;
                                                     sizeTo = 200;
                                                     colorFrom = SFColor.enemyRedLight;
-                                                    colorTo = SFColor.disc;
+                                                    colorTo = SFColor.discLight;
                                                     sizeInterp = Interp.pow3Out;
                                                     lifetime = 20;
                                                     length = 0;
@@ -1688,7 +1678,7 @@ public class SFUnitTypes {
                                                     particles = 1;
                                                     sizeFrom = 200;
                                                     sizeTo = 0;
-                                                    colorFrom = SFColor.disc;
+                                                    colorFrom = SFColor.discLight;
                                                     colorTo = SFColor.discDark.cpy().a(0.5f);
                                                     startDelay = 18;
                                                     lifetime = 120;
@@ -1903,7 +1893,7 @@ public class SFUnitTypes {
                                 lifetime = 120;
                                 sizeTo = 80;
                                 strokeFrom = 10;
-                                colorFrom = SFColor.disc;
+                                colorFrom = SFColor.discLight;
                                 colorTo = SFColor.discDark;
                             }};
                             smokeEffect = Fx.none;
@@ -4329,24 +4319,24 @@ public class SFUnitTypes {
             constructor = UnitTypes.zenith.constructor;
             flying = true;
             lowAltitude = false;
-            rotateSpeed = 5f;
-            speed = 2.1f;
-            drag = 0.015f;
-            accel = 0.02f;
+            rotateSpeed = 6f;
+            speed = 2.45f;
+            drag = 0.035f;
+            accel = 0.04f;
             hitSize = 24;
             health = 1000;
             armor = 4;
-            itemCapacity = 20;
+            itemCapacity = 10;
             engineSize = 3.5f;
             engineOffset = 13f;
-            trailLength = 7;
+            trailLength = 11;
             immunities.addAll(StatusEffects.burning, StatusEffects.unmoving);
             circleTarget = faceTarget = true;
             weapons.add(
                     new Weapon(name("cumulus-gun")) {{
                         top = false;
                         x = 4;
-                        y = 5;
+                        y = 4.5f;
                         shootX = 1;
                         shootY = 3;
                         inaccuracy = 1;
@@ -4355,9 +4345,8 @@ public class SFUnitTypes {
                         rotate = false;
                         reload = 6f;
                         shootCone = 5;
-                        minShootVelocity = 0.1f;
                         bullet = new RailBulletType() {{
-                            damage = 16;
+                            damage = 12;
                             pierce = false;
                             pointEffectSpace = 4;
                             pierceDamageFactor = 0.8f;
@@ -4376,7 +4365,7 @@ public class SFUnitTypes {
                             }};
                             endEffect = new Effect(7, e -> {
                                 color(e.color);
-                                Drawf.tri(e.x, e.y, e.fout() * 1.5f, 5f, e.rotation);
+                                Drawf.tri(e.x, e.y, e.fout() * 3f, 5f, e.rotation);
                             });
                             smokeEffect = Fx.none;
                             hitEffect = new ParticleEffect() {{
@@ -4390,51 +4379,52 @@ public class SFUnitTypes {
                             length = 120;
                         }};
                     }},
-                    new Weapon(name("cumulus-bomb")) {{
+                    new Weapon(name("cumulus-missile")) {{
                         x = 4;
-                        reload = 130f;
+                        reload = 17f;
                         rotate = false;
-                        minShootVelocity = 0.2f;
                         shootY = 3f;
-                        shootCone = 180f;
-                        shoot.shots = 5;
-                        shoot.shotDelay = 6f;
+                        shoot = new ShootAlternate(10);
+                        shootCone = 30f;
                         ejectEffect = Fx.none;
                         inaccuracy = 15f;
                         ignoreRotation = true;
-                        shootSound = Sounds.none;
-                        bullet = new BombBulletType(20, 35, "missile-large") {{
+                        shootSound = Sounds.missile;
+                        minWarmup = 0.9f;
+                        shootWarmupSpeed = 0.05f;
+                        minShootVelocity = 0.01f;
+                        bullet = new MissileBulletType(10, 35, "sfire-mod-missile2") {{
                             splashDamage = 20;
-                            maxRange = 30f;
-                            incendAmount = 2;
+                            lifetime = 35;
+                            incendAmount = 1;
                             incendChance = 0.35f;
                             incendSpread = 30;
                             makeFire = true;
-                            width = height = 9;
-                            shrinkX = shrinkY = 0.5f;
-                            frontColor = Color.white;
+                            width = 10;
+                            height = 35;
+                            shrinkY = 0;
+                            frontColor = SFColor.missileGray;
+                            trailEffect = Fx.none;
+                            trailColor = SFColor.missileGray.cpy().a(0.5f);
                             backColor = Pal.lightPyraFlame;
-                            hitEffect = new MultiEffect(
-                                    new ParticleEffect() {{
-                                        particles = 9;
-                                        sizeFrom = 6;
-                                        length = 30;
-                                        lifetime = 25;
-                                        colorFrom = Pal.lightPyraFlame;
-                                    }},
-                                    new WaveEffect() {{
-                                        sizeTo = 35;
-                                        strokeFrom = 4;
-                                        lifetime = 15;
-                                        colorFrom = colorTo = Pal.lightPyraFlame;
-                                    }}
-                            );
+                            trailWidth = 1.5f;
+                            trailLength = 15;
+                            hitEffect = new ExplosionEffect(){{
+                                smokes = 9;
+                                smokeSize = 6;
+                                smokeRad = 35;
+                                lifetime = 25;
+                                sparks = 0;
+                                smokeColor = waveColor = Pal.lightPyraFlame;
+                                waveStroke = 4;
+                                waveRad = 35;
+                                waveLife = 15;
+                            }};
                             despawnEffect = Fx.flakExplosion;
                             shootEffect = Fx.none;
                             smokeEffect = Fx.none;
-
                             status = StatusEffects.burning;
-                            statusDuration = 600f;
+                            statusDuration = 180f;
                         }};
                     }}
             );
@@ -5400,9 +5390,9 @@ public class SFUnitTypes {
                         ejectEffect = Fx.none;
                         bullet = new FlakBulletType(12, 48) {{
                             collidesGround = true;
-                            backColor = SFColor.disc;
+                            backColor = SFColor.discLight;
                             frontColor = Color.white;
-                            trailColor = SFColor.disc;
+                            trailColor = SFColor.discLight;
                             trailLength = 8;
                             trailWidth = 2.25f;
                             status = SFStatusEffects.breakdown;
@@ -5417,7 +5407,7 @@ public class SFUnitTypes {
                                 sizeFrom = 6;
                                 length = 40;
                                 lifetime = 30;
-                                colorFrom = SFColor.disc;
+                                colorFrom = SFColor.discLight;
                                 colorTo = SFColor.discDark;
                                 cone = 16;
                             }};
@@ -5638,9 +5628,9 @@ public class SFUnitTypes {
                         }};
                         bullet = new FlakBulletType(12, 110) {{
                             collidesGround = true;
-                            backColor = SFColor.disc;
+                            backColor = SFColor.discLight;
                             frontColor = Color.white;
-                            trailColor = SFColor.disc;
+                            trailColor = SFColor.discLight;
                             trailLength = 8;
                             trailWidth = 3.3f;
                             status = SFStatusEffects.breakdown;
@@ -5659,7 +5649,7 @@ public class SFUnitTypes {
                                 lenFrom = 20;
                                 interp = Interp.pow10Out;
                                 sizeInterp = Interp.pow5In;
-                                colorFrom = SFColor.disc;
+                                colorFrom = SFColor.discLight;
                                 cone = 10;
                             }};
                             smokeEffect = Fx.bigShockwave;
@@ -5669,7 +5659,7 @@ public class SFUnitTypes {
                                 smokes = 9;
                                 smokeRad = 50;
                                 smokeSize = 7;
-                                smokeColor = waveColor = SFColor.disc;
+                                smokeColor = waveColor = SFColor.discLight;
                                 waveRad = 50;
                                 waveStroke = 5;
                                 waveLife = 16;
@@ -7157,7 +7147,7 @@ public class SFUnitTypes {
                                     sizeFrom = sizeTo = 30;
                                     strokeFrom = 3;
                                     interp = Interp.circleIn;
-                                    colorFrom = SFColor.disc;
+                                    colorFrom = SFColor.discLight;
                                     colorTo = SFColor.energyYellow;
                                 }},
                                 new WaveEffect() {{
@@ -7167,7 +7157,7 @@ public class SFUnitTypes {
                                     sizeFrom = sizeTo = 59;
                                     strokeFrom = 4;
                                     interp = Interp.circleIn;
-                                    colorFrom = SFColor.disc;
+                                    colorFrom = SFColor.discLight;
                                     colorTo = SFColor.energyYellow;
                                 }},
                                 new WaveEffect() {{
@@ -7177,7 +7167,7 @@ public class SFUnitTypes {
                                     sizeFrom = sizeTo = 88;
                                     strokeFrom = 5;
                                     interp = Interp.circleIn;
-                                    colorFrom = SFColor.disc;
+                                    colorFrom = SFColor.discLight;
                                     colorTo = SFColor.energyYellow;
                                 }}
                         );
@@ -7212,7 +7202,7 @@ public class SFUnitTypes {
                                     lifetime = 90;
                                     sizeTo = 640;
                                     strokeFrom = 10;
-                                    colorTo = colorFrom = SFColor.disc;
+                                    colorTo = colorFrom = SFColor.discLight;
                                 }};
                                 smokeEffect = Fx.none;
                                 splashDamageRadius = 640;

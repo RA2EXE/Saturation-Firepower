@@ -2,15 +2,17 @@ package SFire.content;
 
 import arc.graphics.Color;
 import arc.math.Interp;
+import arc.math.Mathf;
 import mindustry.content.*;
+import mindustry.entities.Effect;
 import mindustry.entities.bullet.*;
 import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
 import mindustry.entities.effect.WrapEffect;
 import mindustry.entities.pattern.ShootBarrel;
+import mindustry.entities.pattern.ShootSpread;
 import mindustry.gen.Sounds;
-import mindustry.graphics.Layer;
 import mindustry.graphics.Pal;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -24,6 +26,10 @@ import mindustry.world.blocks.production.Pump;
 import mindustry.world.blocks.units.Reconstructor;
 import mindustry.world.blocks.units.UnitFactory;
 
+import static arc.graphics.g2d.Draw.color;
+import static arc.graphics.g2d.Lines.lineAngle;
+import static arc.graphics.g2d.Lines.stroke;
+import static arc.math.Angles.randLenVectors;
 import static mindustry.type.ItemStack.with;
 
 public class SFOverride {
@@ -60,17 +66,14 @@ public class SFOverride {
         ((ItemTurret) Blocks.salvo).ammoTypes.put(Items.blastCompound, new BasicBulletType(5,16){{
             lifetime = 44.4f;
             rangeChange = 4f * 8f;
-
             splashDamage = 35;
             splashDamageRadius = 30 * 0.75f;
             status = StatusEffects.blasted;
-
             ammoMultiplier = 6;
             knockback = 3;
             frontColor = hitColor = Pal.blastAmmoFront;
             backColor = Pal.blastAmmoBack;
             hitEffect = Fx.blastExplosion;
-
             width = 10;
             height = 13;
         }});
@@ -196,54 +199,11 @@ public class SFOverride {
             shots = 6;
             shotDelay = 2.5f;
         }};
-        ((ItemTurret) Blocks.swarmer).ammo(
-                Items.blastCompound, new MissileBulletType(3.7f, 10){{
-                    lifetime = 70.27f;
-                    width = height = 8f;
-                    shrinkY = 0f;
-                    splashDamageRadius = 30f;
-                    splashDamage = 50;
-                    ammoMultiplier = 5f;
-                    hitEffect = Fx.blastExplosion;
-                    despawnEffect = Fx.blastExplosion;
-
-                    status = StatusEffects.blasted;
-                    statusDuration = 60f;
-
-                    hitColor = backColor = trailColor = Pal.blastAmmoBack;
-                    frontColor = Pal.blastAmmoFront;
-                }},
-                Items.pyratite, new MissileBulletType(3.7f, 12){{
-                    lifetime = 70.27f;
-                    frontColor = Pal.lightishOrange;
-                    backColor = Pal.lightOrange;
-                    width = 7f;
-                    height = 8f;
-                    shrinkY = 0f;
-                    homingPower = 0.08f;
-                    splashDamageRadius = 20f;
-                    splashDamage = 30f * 1.5f;
-                    makeFire = true;
-                    ammoMultiplier = 5f;
-                    hitEffect = Fx.blastExplosion;
-                    status = StatusEffects.burning;
-                }},
-                Items.surgeAlloy, new MissileBulletType(3.7f, 18){{
-                    lifetime = 70.27f;
-                    width = height = 8f;
-                    shrinkY = 0f;
-                    splashDamageRadius = 25f;
-                    splashDamage = 48;
-                    hitEffect = Fx.blastExplosion;
-                    despawnEffect = Fx.blastExplosion;
-                    ammoMultiplier = 4f;
-                    lightningDamage = 16;
-                    lightning = 2;
-                    lightningLength = 10;
-
-                    hitColor = backColor = trailColor = Pal.surgeAmmoBack;
-                    frontColor = Pal.surgeAmmoFront;
-                }},
+        ((ItemTurret) Blocks.swarmer).ammoTypes.get(Items.blastCompound).lifetime = 70.27f;
+        ((ItemTurret) Blocks.swarmer).ammoTypes.get(Items.blastCompound).splashDamage = 50;
+        ((ItemTurret) Blocks.swarmer).ammoTypes.get(Items.pyratite).lifetime = 70.27f;
+        ((ItemTurret) Blocks.swarmer).ammoTypes.get(Items.surgeAlloy).lifetime = 70.27f;
+        ((ItemTurret) Blocks.swarmer).ammoTypes.putAll(
                 SFItems.siliSteel, new MissileBulletType(4.1f, 5){{
                     lifetime = 63.41f;
                     width = height = 7f;
@@ -292,26 +252,60 @@ public class SFOverride {
                 }}
         );
 
+        ((ItemTurret) Blocks.fuse).reload = 40;
+        ((ItemTurret) Blocks.fuse).range = 100;
+        ((ItemTurret) Blocks.fuse).shoot = new ShootSpread(4,12.5f);
+        Blocks.fuse.health = 2230;
+        ((ItemTurret) Blocks.fuse).ammoTypes.get(Items.titanium).damage = 88;
+        ((ItemTurret) Blocks.fuse).ammoTypes.get(Items.thorium).damage = 135.2f;
+        ((ItemTurret) Blocks.fuse).ammoTypes.get(Items.thorium).rangeChange = 10;
+        ((ItemTurret) Blocks.fuse).ammoTypes.put(SFItems.discFabric, new ShrapnelBulletType() {{
+            inaccuracy = 3;
+            length = 125;
+            rangeChange = 20;
+            damage = 130;
+            status = SFStatusEffects.breakdown;
+            statusDuration = 44;
+            ammoMultiplier = 4f;
+            fromColor = SFColor.discLight.cpy().a(0.5f);
+            toColor = SFColor.discLight;
+            shootEffect = smokeEffect = new Effect(12f, e -> {
+                color(Color.white, SFColor.discLight, e.fin());
+                stroke(e.fout() * 1.2f + 0.5f);
+
+                randLenVectors(e.id, 7, 25f * e.finpow(), e.rotation, 50f, (x, y) -> {
+                    lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), e.fin() * 5f + 2f);
+                });
+            });
+            reloadMultiplier = 0.9f;
+            spawnBullets.add(new ShrapnelBulletType() {{
+                length = 125;
+                rangeChange = 10;
+                damage = 130;
+                ammoMultiplier = 4f;
+                fromColor = SFColor.discLight.cpy().a(0.5f);
+                toColor = SFColor.discLight;
+                status = SFStatusEffects.breakdown;
+                statusDuration = 44;
+            }});
+        }});
+
         ((ItemTurret) Blocks.spectre).reload = 8.28f;
         ((ItemTurret) Blocks.spectre).range = 280;
         ((ItemTurret) Blocks.spectre).coolantMultiplier = 1.5f;
         ((ItemTurret) Blocks.spectre).inaccuracy = 3;
         ((ItemTurret) Blocks.spectre).maxAmmo = 60;
-        ((ItemTurret) Blocks.spectre).ammo(
-                Items.graphite, new BasicBulletType(9, 50*1.25f){{
-                    lifetime = 31.1f;
-                    hitSize = 4.8f;
-                    width = 15f;
-                    height = 21f;
-                    shootEffect = Fx.shootBig;
-                    ammoMultiplier = 4;
-                    reloadMultiplier = 1.7f;
-                    knockback = 0.3f;
-
-                    hitEffect = despawnEffect = Fx.hitBulletColor;
-                    hitColor = backColor = Pal.graphiteAmmoBack;
-                    frontColor = Pal.graphiteAmmoFront;
-                }},
+        var yl1 = ((ItemTurret) Blocks.spectre).ammoTypes.get(Items.graphite);
+        var yl2 = ((ItemTurret) Blocks.spectre).ammoTypes.get(Items.pyratite);
+        yl1.damage = 50*1.25f;
+        yl1.speed = 9;
+        yl1.lifetime = 31.1f;
+        yl2.damage = 70f;
+        yl2.speed = 10;
+        yl2.lifetime = 26f;
+        yl2.splashDamage = 38.2f;
+        yl2.splashDamageRadius = 28f;
+        ((ItemTurret) Blocks.spectre).ammoTypes.putAll(
                 Items.thorium, new BasicBulletType(10f, 80*1.25f){{
                     lifetime = 28;
                     hitSize = 5;
@@ -326,26 +320,11 @@ public class SFOverride {
                     backColor = hitColor = Pal.thoriumAmmoBack;
                     frontColor = Pal.thoriumAmmoFront;
                 }},
-                Items.pyratite, new BasicBulletType(10f, 70){{
-                    lifetime = 26;
-                    hitSize = 5;
-                    width = 16f;
-                    height = 21f;
-                    frontColor = Pal.lightishOrange;
-                    backColor = Pal.lightOrange;
-                    status = StatusEffects.burning;
-                    hitEffect = new MultiEffect(Fx.hitBulletSmall, Fx.fireHit);
-                    shootEffect = Fx.shootBig;
-                    makeFire = true;
-                    pierceCap = 2;
-                    pierceBuilding = true;
-                    knockback = 0.6f;
-                    ammoMultiplier = 3;
-                    splashDamage = 38.2f;
-                    splashDamageRadius = 28f;
-                }},
                 SFItems.siliSteel, new BasicBulletType(9,70){{
                     lifetime = 31.1f;
+                    hitSize = 5;
+                    width = 15f;
+                    height = 21f;
                     knockback = 0.2f;
                     status = SFStatusEffects.magnStrif;
                     statusDuration = 12;
@@ -357,6 +336,48 @@ public class SFOverride {
                     ammoMultiplier = 3;
                 }}
         );
+
+        ((PowerTurret) Blocks.meltdown).range = 216;
+        ((PowerTurret) Blocks.meltdown).reload = 240;
+        ((PowerTurret) Blocks.meltdown).shootType = new ContinuousLaserBulletType(86){{
+            length = 216;
+            hitEffect = Fx.hitMeltdown;
+            hitColor = Pal.meltdownHit;
+            status = StatusEffects.melting;
+            drawSize = 500f;
+            timescaleDamage = true;
+            pierceArmor = true;
+            hitSize = 7.5f;
+
+            incendChance = 0.4f;
+            incendSpread = 5f;
+            incendAmount = 1;
+            ammoMultiplier = 1f;
+            bulletInterval = 8;
+            intervalBullets = 1;
+            intervalRandomSpread = 0;
+            intervalBullet = new LaserBulletType(33){{
+                hitEffect = Fx.hitMeltdown;
+                lightningSpacing = 21.6f;
+                lightningDelay = 1;
+                lightningLength = 4;
+                lightningLengthRand = 2;
+                lightningDamage = 33;
+                lightningColor = Color.valueOf("D86E56");
+                pierceCap = 6;
+                pierceArmor = true;
+                knockback = 2;
+                sideAngle = 20;
+                sideWidth = 1;
+                sideLength = 35;
+                colors = new Color[]{Color.valueOf("ec745855"), Color.valueOf("ec7458aa"), Color.valueOf("ff9c5a"), Color.white};
+                status = SFStatusEffects.postive;
+                statusDuration = 12;
+                lifetime = 10;
+                length = 216;
+                width = 16;
+            }};
+        }};
 
 
 
@@ -373,7 +394,6 @@ public class SFOverride {
         Blocks.blastDrill.requirements(Category.production, ItemStack.with(Items.copper, 120, Items.titanium, 60, Items.silicon, 80, Items.thorium, 90));
         ((Pump) Blocks.impulsePump).pumpAmount = 1/3f;
         Blocks.impulsePump.consumePower(1.5f);
-        Blocks.impulsePump.details = "加量不加价，效率更高60%！";
 
         //power
         ((ConsumeGenerator) Blocks.steamGenerator).powerProduction = 6f;
@@ -417,7 +437,6 @@ public class SFOverride {
             splashDamage = 80;
             splashDamageRadius = 60;
         }};
-        Blocks.differentialGenerator.details = "得益于材料进步，我们能够用更少的材料控制更强大的燃烧、进行更大面积的换热、产出更多的电力……以及发生更危险的生产安全事故！";
 
         //faster than faste
         /*
@@ -446,7 +465,6 @@ public class SFOverride {
         Blocks.siliconCrucible.consumePower(3.5f);
         Blocks.siliconCrucible.floating = true;
         Blocks.siliconCrucible.itemCapacity = 40;
-        Blocks.siliconCrucible.details = "升级高耐热外壳，优良热传导底座。得以更高的热转化效率。\n可以安置在液体上。";
 
         //cores
         Blocks.coreShard.health = 2000;

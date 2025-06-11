@@ -33,13 +33,13 @@ public class SFTechTree {
             node(xianqu, () -> node(liebao));
         });
         addToNode(hail, () -> {
-            node(huojian, () -> node(changqiang));
+            node(huojian, () -> node(changqiang, () -> node(fangtian)));
             node(mengma);
         });
         addToNode(salvo, () -> {
-            node(kuodao, () -> node(longjuan));
+            node(kuodao, () -> node(longjuan, () -> node(liemei)));
             node(mini, () -> {
-                node(chuanyun);
+                node(chuanyun, () -> node(cimai));
                 node(cijian);
             });
         });
@@ -50,7 +50,17 @@ public class SFTechTree {
         addToNode(parallax, () -> node(cuodao));
         addToNode(scorch, () -> node(longxi));
         addToNode(tsunami, () -> node(woliu, () -> node(tieliu)));
-        addToNode(meltdown, () -> node(manyou));
+        addToNode(meltdown, () -> {
+            node(manyou,  () -> {
+                node(guangyin/*, () -> node(fenqing)*/);
+                node(dingdaer/*, () -> node(poxiao)*/);
+            });
+            //node(fengmang);
+        });
+        addToNode(foreshadow, () -> {
+            node(relang);
+            //node(sizhao);
+        });
 
         //crafting
         addToNode(pulverizer, () -> node(crusher));
