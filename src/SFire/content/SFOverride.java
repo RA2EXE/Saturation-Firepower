@@ -481,7 +481,7 @@ public class SFOverride {
         StatusEffects.fast.effectChance = 0.05f;
         StatusEffects.fast.effect = new MultiEffect(new WrapEffect(){{effect=Fx.colorSparkBig;color=Color.orange;rotation=45;}},
                                                     new WrapEffect(){{effect=Fx.colorSparkBig;color=Color.orange;rotation=-135;}});
-        StatusEffects.slow.healthMultiplier = 2f;
+        StatusEffects.slow.effectChance = 0.05f;
         StatusEffects.slow.effect = new MultiEffect(new WrapEffect(){{effect=Fx.colorSparkBig;color=Color.gray;rotation=135;}},
                                                     new WrapEffect(){{effect=Fx.colorSparkBig;color=Color.gray;rotation=-45;}});
 

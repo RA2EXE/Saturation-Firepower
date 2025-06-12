@@ -59,7 +59,7 @@ public class SFTechTree {
         });
         addToNode(foreshadow, () -> {
             node(relang);
-            //node(sizhao);
+            node(sizhao);
         });
 
         //crafting
