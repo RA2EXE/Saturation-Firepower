@@ -2528,7 +2528,8 @@ public class SFUnitTypes {
                                 fragRandomSpread = 5;
                                 fragVelocityMin = 0.95f;
                                 fragVelocityMax = 1.05f;
-                                fragBullet = new BasicBulletType(10, 840, "circle-bullet") {{
+                                fragBullet = new BasicBulletType(10, 400, "circle-bullet") {{
+                                    shieldDamageMultiplier = 3.5f;
                                     splashDamage = 180;
                                     splashDamageRadius = 150;
                                     scaledSplashDamage = true;
@@ -3273,6 +3274,7 @@ public class SFUnitTypes {
                         shake = 12;
                         bullet = new BasicBulletType(14, 950, "sfire-mod-arrow-bullet") {{
                             scaleLife = true;
+                            shieldDamageMultiplier = 1.5f;
                             statusDuration = 200;
                             status = SFStatusEffects.breakdown;
                             pierceArmor = true;
@@ -3344,6 +3346,7 @@ public class SFUnitTypes {
                                 intervalRandomSpread = 35;
                                 intervalBullet = new BasicBulletType(9, 20) {{
                                     hitShake = 3;
+                                    shieldDamageMultiplier = 2f;
                                     splashDamage = 35;
                                     splashDamageRadius = 35;
                                     lightningDamage = 20;
@@ -3751,7 +3754,7 @@ public class SFUnitTypes {
                 shootStatus = StatusEffects.unmoving;
                 shootStatusDuration = 200;
                 velocityRnd = 0.1f;
-                bullet = new ArtilleryBulletType(8, 16, "sfire-mod-missile1") {{
+                bullet = new ArtilleryBulletType(8, 8, "sfire-mod-missile1") {{
                     lifetime = 37.5f;
                     splashDamage = 55;
                     splashDamageRadius = 40;

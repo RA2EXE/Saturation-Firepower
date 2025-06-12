@@ -1,6 +1,7 @@
 package SFire.content;
 
 import SFire.world.blocks.SFCore;
+import arc.Core;
 import arc.graphics.Color;
 import arc.graphics.g2d.Fill;
 import arc.graphics.g2d.Lines;
@@ -14,6 +15,7 @@ import mindustry.entities.abilities.MoveEffectAbility;
 import mindustry.entities.abilities.StatusFieldAbility;
 import mindustry.entities.bullet.*;
 import mindustry.entities.effect.*;
+import mindustry.entities.part.DrawPart;
 import mindustry.entities.part.HaloPart;
 import mindustry.entities.part.RegionPart;
 import mindustry.entities.pattern.ShootAlternate;
@@ -46,10 +48,10 @@ import mindustry.world.draw.*;
 import mindustry.world.meta.*;
 
 import static SFire.SFireMod.name;
-import static arc.graphics.g2d.Draw.color;
+import static arc.graphics.g2d.Draw.*;
 import static arc.graphics.g2d.Lines.lineAngle;
 import static arc.graphics.g2d.Lines.stroke;
-import static arc.math.Angles.randLenVectors;
+import static arc.math.Angles.*;
 import static arc.math.Mathf.len;
 import static arc.math.Mathf.random;
 import static mindustry.type.ItemStack.*;
@@ -4671,7 +4673,7 @@ public class SFBlocks {
                 layer = 49;
             }};
             ammo(
-                    Items.blastCompound, new FlakBulletType(6, 40){{
+                    Items.blastCompound, new FlakBulletType(6, 30){{
                         lifetime = 135f;
                         splashDamageRadius = 64;
                         splashDamage = 80;
@@ -4722,15 +4724,15 @@ public class SFBlocks {
                         );
                         despawnEffect = Fx.flakExplosionBig;
                     }},
-                    Items.surgeAlloy, new FlakBulletType(7, 50){{
+                    Items.surgeAlloy, new FlakBulletType(7, 60){{
                         lifetime = 115f;
                         splashDamageRadius = 40;
-                        splashDamage = 70;
+                        splashDamage = 75;
                         lightningColor = Pal.surgeAmmoBack;
-                        lightningLength = 7;
+                        lightningLength = 6;
                         lightningLengthRand = 2;
                         lightning = 4;
-                        lightningDamage = 15;
+                        lightningDamage = 18;
                         lightningType = new BulletType(0.0001f, 0f){{
                             lifetime = Fx.lightning.lifetime;
                             hitEffect = Fx.hitLancer;
@@ -4787,6 +4789,7 @@ public class SFBlocks {
                         despawnEffect = Fx.flakExplosionBig;
                     }},
                     SFItems.fermium, new BasicBulletType(10, 110){{
+                        inaccuracy = -7;
                         rangeChange = 80;
                         collidesGround = false;
                         lifetime = 88f;
@@ -5908,7 +5911,297 @@ public class SFBlocks {
         }};
         //fengmang
     //8*8//
-        //poxiao, fenqing, kuosan, zhulin, yuanling, luolong,
+        poxiao = new PowerTurret("poxiao") {{
+            size = 8;
+            armor = -10;
+            health = 10800;
+            recoil = 6;
+            recoilTime = 180;
+            cooldownTime = 300;
+            shootSound = Sounds.laserblast;
+            chargeSound = Sounds.lasercharge;
+            accurateDelay = false;
+            moveWhileCharging = false;
+            reloadWhileCharging = false;
+            shake = 15f;
+            shoot.firstShotDelay = 120;
+            warmupMaintainTime = 580;
+            heatColor = Color.valueOf("FF4040");
+            drawer = new DrawTurret(){{parts.addAll(
+                    new RegionPart("-side"){{
+                        mirror = true;
+                        under = true;
+                        moveX = 4;
+                        moveRot = -25;
+                        heatColor = Color.valueOf("FF4040");
+                        moves.add(new PartMove(PartProgress.recoil,0,-2,-5));
+                    }},
+                    new RegionPart("-blade"){{
+                        under = true;
+                        y = -8;
+                        moveY = 8;
+                    }},
+                    new RegionPart("-front"){{
+                        mirror = true;
+                        moveX = 2.75f;
+                        moveY = -2.75f;
+                        heatProgress = PartProgress.warmup;
+                    }}
+            );}};
+            requirements(Category.turret, with(SFItems.siliSteel,800, SFItems.tayrAlloy,800, SFItems.discFabric,600, SFItems.lens,380));
+
+            reload = 600;
+            rotateSpeed = 2f;
+            range = 1750;
+            coolantMultiplier = 0.5f;
+            consumePower(110f);
+            liquidCapacity = 300;
+            coolant = consumeCoolant(2f);
+
+            shootType = new LaserBulletType(2200){{
+                length = 1800;
+                width = 75f;
+                lightningColor = SFColor.tayrDark;
+                lightningSpacing = 43.5f;
+                lightningDelay = 1.2f;
+                lightningLength = 8;
+                lightningLengthRand = 4;
+                lightningAngleRand = 50;
+                lightningDamage = 120;
+
+                sideAngle = 25;
+                sideWidth = 2;
+                sideLength = 420;
+                pierceCap = 18;
+                pierceArmor = true;
+                buildingDamageMultiplier = 0.001f;
+                lifetime = 84;
+                colors = new Color[]{SFColor.tayrDark.cpy().a(0.5f), SFColor.tayrDark, SFColor.tayrLight.cpy().mul(1.2f), Color.white};
+                shootEffect = Fx.bigShockwave;
+                smokeEffect = Fx.smokeCloud;
+                hitColor = SFColor.tayrDark;
+                hitEffect = new MultiEffect(Fx.hitLaserBlast,
+                        new ParticleEffect(){{
+                            particles = 14;
+                            lifetime = 15;
+                            line = true;
+                            lenFrom = 0;
+                            lenTo = 45;
+                            strokeFrom = strokeTo = 3.2f;
+                            colorFrom = colorTo = SFColor.tayrLight;
+                            sizeInterp = Interp.slope;
+                            interp = Interp.circleOut;
+                            length = 166;
+                            cone = 40;
+                        }});
+                chargeEffect = new MultiEffect(
+                        new WaveEffect(){{
+                            lifetime = 40;
+                            startDelay = 10;
+                            sizeFrom = 180;
+                            sizeTo = 0;
+                            strokeTo = 6;
+                            interp = Interp.circleIn;
+                            colorFrom = SFColor.tayrDark;
+                            colorTo = SFColor.tayrLight;
+                        }},
+                        new WaveEffect(){{
+                            lifetime = 40;
+                            startDelay = 20;
+                            sizeFrom = 180;
+                            sizeTo = 0;
+                            strokeTo = 6;
+                            interp = Interp.circleIn;
+                            colorFrom = SFColor.tayrDark;
+                            colorTo = SFColor.tayrLight;
+                        }},
+                        new WaveEffect(){{
+                            lifetime = 40;
+                            startDelay = 30;
+                            sizeFrom = 180;
+                            sizeTo = 0;
+                            strokeTo = 6;
+                            interp = Interp.circleIn;
+                            colorFrom = SFColor.tayrDark;
+                            colorTo = SFColor.tayrLight;
+                        }},
+                        new WaveEffect(){{
+                            lifetime = 40;
+                            startDelay = 40;
+                            sizeFrom = 180;
+                            sizeTo = 0;
+                            strokeTo = 6;
+                            interp = Interp.circleIn;
+                            colorFrom = SFColor.tayrDark;
+                            colorTo = SFColor.tayrLight;
+                        }},
+                        new Effect(120f, 100f, e -> {
+                            color(SFColor.tayrLight);
+                            stroke(e.fin() * 6f);
+                            Lines.circle(e.x, e.y, 8f + e.fout() * 100f);
+                            Fill.circle(e.x, e.y, e.fin() * 20);
+
+                            randLenVectors(e.id, 35, 160f * e.fout(), (x, y) -> {
+                                Fill.circle(e.x + x, e.y + y, e.fin() * 5f);
+                                Drawf.light(e.x + x, e.y + y, e.fin() * 15f, SFColor.tayrLight, 0.7f);
+                            });
+
+                            color();
+                            Fill.circle(e.x, e.y, e.fin() * 12);
+                            Drawf.light(e.x, e.y, e.fin() * 80f, SFColor.tayrDark, 0.7f);
+                        }).followParent(true).rotWithParent(true)
+                );
+            }};
+        }};
+        // fenqing, kuosan, zhulin,
+        yuanling = new ItemTurret("yuanling") {{
+            size = 8;
+            health = 33000;
+            armor = 46;
+            recoil = 2f;
+            recoilTime = 18;
+            cooldownTime = 90;
+            shake = 6f;
+            shoot = new ShootAlternate(24);
+            recoils = 2;
+            drawer = new DrawTurret(){{parts.add(
+                    new RegionPart("-barrel-l") {{
+                        under = true;
+                        moveY = -6;
+                        progress = PartProgress.recoil;
+                        heatProgress = PartProgress.recoil;
+                        recoilIndex = 0;
+                    }},
+                    new RegionPart("-barrel-r") {{
+                        under = true;
+                        moveY = -6;
+                        progress = PartProgress.recoil;
+                        heatProgress = PartProgress.recoil;
+                        recoilIndex = 1;
+                    }}
+            );}};
+            requirements(Category.turret, with(Items.graphite,600, Items.plastanium,800, Items.surgeAlloy,450, SFItems.fermium,560));
+
+            reload = 9;
+            rotateSpeed = 3.5f;
+            range = 520;
+            coolantMultiplier = 0.77f;
+            coolant = consumeCoolant(4.5f);
+            liquidCapacity = 120;
+            shootSound = Sounds.shootBig;
+            shootEffect = Fx.shootTitan;
+            smokeEffect = Fx.shootBigSmoke2;
+            ammoEjectBack = 8;
+            ammoUseEffect = new Effect(45f, e -> {
+                color(Pal.lightOrange, Pal.lightishGray, Pal.lightishGray, e.fin());
+                alpha(e.fout(0.5f));
+                float rot = Math.abs(e.rotation) + 90f;
+                int i = -Mathf.sign(e.rotation);
+                float len = (4f + e.finpow() * 9f) * i;
+                float lr = rot + Mathf.randomSeedRange(e.id + i + 6, 28+20f * e.fin()) * i;
+
+                rect(Core.atlas.find("casing"),
+                        e.x + trnsx(lr, len) + Mathf.randomSeedRange(e.id + i + 7, 3f * e.fin()),
+                        e.y + trnsy(lr, len) + Mathf.randomSeedRange(e.id + i + 8, 3f * e.fin()),
+                        6f, 11f,
+                        rot + e.fin() * 50f * i
+                );
+            }).layer(Layer.bullet);
+            ammoPerShot = 3;
+            maxAmmo = 48;
+            inaccuracy = 1.6f;
+            ammo(
+                    Items.thorium, new BasicBulletType(21,192f){{
+                        lifetime = 23;
+                        knockback = 4;
+                        pierce = pierceArmor = true;
+                        pierceCap = 2;
+                        ammoMultiplier = 1;
+
+                        width = 16;
+                        height = 21;
+                        frontColor = Pal.thoriumAmmoFront;
+                        backColor = hitColor = Pal.thoriumAmmoBack;
+                        hitSound = Sounds.explosion;
+                        hitEffect = Fx.hitBulletBig;
+                        despawnEffect = Fx.hitBulletColor;
+                    }},
+                    SFItems.fermium, new BasicBulletType(26,227f){{
+                        lifetime = 18;
+                        knockback = 0.5f;
+                        status = StatusEffects.melting;
+                        statusDuration = 20;
+                        pierce = pierceArmor = pierceBuilding = true;
+                        pierceCap = 3;
+                        ammoMultiplier = 3;
+
+                        width = 20;
+                        height = 26;
+                        hitColor = Pal.bulletYellowBack;
+                        hitSound = Sounds.explosion;
+                        hitEffect = Fx.hitBulletBig;
+                        despawnEffect = Fx.hitBulletColor;
+                        fragBullets = 5;
+                        fragRandomSpread = 30;
+                        fragBullet = new BasicBulletType(26,56){{
+                            width = 9;
+                            height = 10;
+                            status = StatusEffects.melting;
+                            statusDuration = 10;
+                            pierce = pierceBuilding = true;
+                            lifetime = 9;
+                            drag = 0.05f;
+                            hitEffect = Fx.hitBulletBig;
+                        }};
+                    }},
+                    SFItems.chromium, new BasicBulletType(21,158f){{
+                        lifetime = 23;
+                        knockback = 12;
+                        pierceArmor = true;
+                        status = SFStatusEffects.inBreak;
+                        ammoMultiplier = 3;
+
+                        width = 20;
+                        height = 25;
+                        frontColor = SFColor.chromiumLight;
+                        backColor = hitColor = SFColor.chromiumDark;
+                        hitSound = Sounds.explosion;
+                        hitEffect = Fx.hitBulletBig;
+                        despawnEffect = Fx.hitBulletColor;
+                        fragBullets = 5;
+                        fragRandomSpread = 60;
+                        fragBullet = new BasicBulletType(26,56){{
+                            width = 9;
+                            height = 10;
+                            status = StatusEffects.slow;
+                            statusDuration = 10;
+                            pierce = pierceBuilding = true;
+                            lifetime = 6;
+                            knockback = 5;
+                            frontColor = SFColor.chromiumLight;
+                            backColor = hitColor = SFColor.chromiumDark;
+                            hitEffect = Fx.hitBulletBig;
+                        }};
+                    }},
+                    SFItems.discFabric, new BasicBulletType(18,220f, "sfire-mod-arrow-bullet"){{
+                        lifetime = 23;
+                        pierce = pierceArmor = true;
+                        reflectable = hittable = false;
+                        pierceDamageFactor = 0.75f;
+                        shieldDamageMultiplier = 2.5f;
+                        reloadMultiplier = 1.25f;
+                        ammoMultiplier = 1;
+
+                        width = 16;
+                        height = 26;
+                        frontColor = hitColor = SFColor.discLight;
+                        backColor = SFColor.discDark;
+                        hitSound = Sounds.laser;
+                        hitEffect = despawnEffect = Fx.instBomb;
+                    }}
+            );
+        }};
+        // luolong,
 
         defensePlatform1 = new PowerTurret("defense-platform-cannon"){{
             size = 6;

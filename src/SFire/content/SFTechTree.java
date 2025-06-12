@@ -49,6 +49,7 @@ public class SFTechTree {
         });
         addToNode(parallax, () -> node(cuodao));
         addToNode(scorch, () -> node(longxi));
+        addToNode(spectre, () -> node(yuanling));
         addToNode(tsunami, () -> node(woliu, () -> node(tieliu)));
         addToNode(meltdown, () -> {
             node(manyou,  () -> {

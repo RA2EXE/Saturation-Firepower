@@ -65,9 +65,6 @@ block.sfire-mod-垂发.description = 大范围防御的最佳选择。锁定多�
 block.sfire-mod-垂发.details = [red]不要往导弹发射井里灌液体！！！
 
 
-block.sfire-mod-怨灵.name = 怨灵
-block.sfire-mod-怨灵.description = 向目标发射巨型被帽钝头弹，造成严重杀伤并击退敌人。
-block.sfire-mod-怨灵.details = 怨灵修之浩荡兮，终不察夫民心。厚重的装甲与高装药量过威力弹使其拥有强悍的正面受敌与输出能力。\n维护简单的武器是复杂战场状况下的最优选择。怨灵虽建造消耗较高，但事实证明这种坚实的过冗余结构底座是一个正确的选择，它正在逐渐取代大部分武器成为当前也可能是以后大部分战场的绝对主力之一
 
 block.sfire-mod-侵蚀.name = 侵蚀
 block.sfire-mod-侵蚀.description = 发射纳米流束，拆解敌人并修复己方建筑。\n[green]能够自主对受损建筑进行修复。
@@ -78,10 +75,6 @@ block.sfire-mod-灾灵.description = 三联装改进幽灵炮，向敌人发射�
 block.sfire-mod-灾灵.details = 射速逐渐加快，火力逐渐变态。就是根哥来了也救不了你
 
 
-
-block.sfire-mod-破晓.name = 破晓
-block.sfire-mod-破晓.description = 脆弱的激光发生器，向指定方向发射一道爆破能量束。需要时间充能。
-block.sfire-mod-破晓.details = 一道光，划破夜空。多门破晓射击时的光芒足以照亮天下，同时会给电力系统带来极大负担，确保你的电网实时供应充足，或者安装更多的蓄电池
 block.sfire-mod-天际.name = 天际
 block.sfire-mod-天际.description = 短暂蓄力后向空中敌人发射强力的定向贯彻能量束，穿透护盾与敌人。
 
