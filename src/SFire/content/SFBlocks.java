@@ -4884,16 +4884,16 @@ public class SFBlocks {
             warmupMaintainTime = 60;
             targetHealing = true;
             shoot = new ShootHelix(3,1);
+            shootY = 10;
             
             requirements(Category.turret, with(Items.plastanium,260, Items.silicon,670,SFItems.fermium,120, SFItems.nanoCore,400));
             consumePower(65);
             consumeLiquid(SFLiquids.nanoFluid,1);
             liquidCapacity = 360;
 
-            reload = 165;
+            reload = 175;
             rotateSpeed = 3;
             range = 750;
-            velocityRnd = 0.3f;
             ammoPerShot = 8;
             ammo(SFItems.nanoCore, new EmpBulletType(){{
                 ammoMultiplier = 1;
@@ -4916,13 +4916,13 @@ public class SFBlocks {
                 shrinkY = shrinkX = 0.1f;
                 healAmount = 280;
                 homingDelay = 40;
-                homingPower = 0.08f;
+                homingPower = 0.04f;
                 homingRange = 80;
 
                 speed = 3.35f;
                 damage = 70;
                 splashDamageRadius = 160;
-                splashDamage = 40;
+                splashDamage = 20;
                 status = SFStatusEffects.disRepair;
                 statusDuration = 480;
 
