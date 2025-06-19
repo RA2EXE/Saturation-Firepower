@@ -59,6 +59,7 @@ public class SFTechTree {
             //node(fengmang);
         });
         addToNode(foreshadow, () -> {
+            node(chongchao);
             node(relang);
             node(sizhao);
         });
@@ -93,10 +94,9 @@ public class SFTechTree {
             node(nitrPrecipitator);
         });
         addToNode(kiln, () -> {
-            node(airCollector);
-            node(nitrateMixer);
+            node(airCollector, () -> node(lensAtomizer));
+            node(nitrateMixer, () -> node(airCooler));
             node(fractionator);
-            node(lensAtomizer);
         });
         addToNode(phaseWeaver, () -> {
             node(discPhaseKnitter);

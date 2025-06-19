@@ -57,9 +57,7 @@ block.sfire-mod-错位.name = 错位
 block.sfire-mod-错位.description = 发射高相位震荡波，对护盾杀伤效果显著。主射弹以及前三次能量爆炸每穿过一个敌方单位，剩余伤害增加一倍。撕碎敌人！
 block.sfire-mod-错位.details = [red]连你的设备一起！不到万不得已，不要使用裂位能直接攻击敌方单位！\n错位如他的名字一样，试着摆放在防线中的"错误"位置，充分发挥其伤害递增特性可以快速清理后排敌人
 
-.sfire-mod-竹林.name = 竹林
-block.sfire-mod-竹林.description = 利用裂位能预设近真空轨道后释放近炸游弋弹群进行轰炸。[red]需要大量电力与冷冻液支持运行！
-block.sfire-mod-竹林.details = [yellow]王 的 问 候 ！
+
 block.sfire-mod-垂发.name = 垂直发射系统
 block.sfire-mod-垂发.description = 大范围防御的最佳选择。锁定多个目标并发射数枚导弹。可以配合逻辑处理器进行饱和式打击。
 block.sfire-mod-垂发.details = [red]不要往导弹发射井里灌液体！！！

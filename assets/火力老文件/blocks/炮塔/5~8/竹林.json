@@ -124,8 +124,6 @@
 					"op": "delay",
 					"amount": 0.25
 				},
-				"rotateSpeed": 0,
-				"shapeRotation": 0,
 				"y": 40,
 				"sides": 3,
 				"shapes": 1,
@@ -138,8 +136,6 @@
 				"triLength": 500,
 				"triLengthTo": 16,
 				"haloRadius": 0,
-				"haloRotation": 0,
-				"haloRotateSpeed": 0,
 				"layer": 51
 			},
 			{

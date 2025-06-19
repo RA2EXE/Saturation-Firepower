@@ -10,8 +10,8 @@ public class SFColor {
             ferium = Color.valueOf("DEDEDE"),
             sisteelDark = Color.valueOf("7595D2"),
             sisteelLight = Color.valueOf("B9C0EB"),
-            clusRed = Color.valueOf("FF5845"),
-            clusRedDark = Color.valueOf("EA4343"),
+            clusRed = Color.valueOf("FE7777"),
+            clusRedDark = Color.valueOf("FF5845"),
 
             discLight = Color.valueOf("FFD59E"),
             discDark = Color.valueOf("EEC591"),

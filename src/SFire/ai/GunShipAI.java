@@ -17,9 +17,8 @@ public class GunShipAI extends FlyingAI {
     public float orbitRadius = 30 * 8;
     //度/秒
     public float orbitSpeed = 360 / 5f;
-    // 攻击范围
+    //攻击范围
     public float attackRange = 30;
-    // 目标
     public @Nullable Unit target;
 
     public GunShipAI() {
@@ -28,11 +27,9 @@ public class GunShipAI extends FlyingAI {
 
     public GunShipAI(float orbitRadius, float orbitSpeed, float attackRange) {
         super();
-        this.orbitRadius = orbitRadius;
-        this.orbitSpeed = orbitSpeed;
-        this.attackRange = attackRange;
     }
 
+    //选取目标-靠近到range-获取目标地XY-三角函数计算对应转圈速度的移动位置-开火
     @Override
     public void updateMovement() {
         if (target != null && unit.hasWeapons()) {
@@ -52,7 +49,6 @@ public class GunShipAI extends FlyingAI {
             float rad = Mathf.degreesToRadians * angle;
             float offsetX = orbitRadius * Mathf.cos(rad);
             float offsetY = orbitRadius * Mathf.sin(rad);
-            //操控不规范，大哥低头转
             float newX = targetX + offsetX;
             float newY = targetY + offsetY;
             unit.move(newX, newY);

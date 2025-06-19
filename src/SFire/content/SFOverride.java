@@ -251,7 +251,55 @@ public class SFOverride {
                     }};
                 }}
         );
+        ((ItemTurret) Blocks.cyclone).range = 228;
+        ((ItemTurret) Blocks.cyclone).ammoTypes.get(Items.metaglass).lifetime = 56;
+        ((ItemTurret) Blocks.cyclone).ammoTypes.get(Items.blastCompound).lifetime = 57;
+        ((ItemTurret) Blocks.cyclone).ammoTypes.get(Items.plastanium).lifetime = 57;
+        ((ItemTurret) Blocks.cyclone).ammoTypes.get(Items.surgeAlloy).speed = 4.5f;
+        ((ItemTurret) Blocks.cyclone).ammoTypes.get(Items.surgeAlloy).lifetime = 52;
+        ((ItemTurret) Blocks.cyclone).ammoTypes.putAll(
+                SFItems.siliSteel, new FlakBulletType(4f, 8){{
+                    shootEffect = Fx.shootBig;
+                    ammoMultiplier = 3f;
+                    splashDamage = 23f;
+                    splashDamageRadius = 28f;
+                    collidesGround = true;
 
+                    status = SFStatusEffects.magnStrif;
+                    statusDuration = 30f;
+
+                    backColor = hitColor = trailColor = SFColor.sisteelDark;
+                    frontColor = SFColor.sisteelLight;
+                    despawnEffect = Fx.hitBulletColor;
+                }},
+                SFItems.clusBomb, new FlakBulletType(4f, 8){{
+                    shootEffect = Fx.shootBig;
+                    ammoMultiplier = 6f;
+                    splashDamage = 35f;
+                    splashDamageRadius = 25f;
+                    collidesGround = true;
+                    status = StatusEffects.blasted;
+
+                    backColor = hitColor = trailColor = SFColor.clusRedDark;
+                    frontColor = SFColor.clusRed;
+                    despawnEffect = Fx.hitBulletColor;
+                    fragBullets = 4;
+                    fragLifeMin = 0.1f;
+                    fragBullet = new FlakBulletType(2.5f, 8) {{
+                        lifetime = 20;
+                        drag = 0.005f;
+                        collidesGround = true;
+                        splashDamage = 35;
+                        splashDamageRadius = 38;
+                        scaledSplashDamage = true;
+                        width = height = 8;
+                        hitEffect = Fx.blastExplosion;
+                        status = StatusEffects.blasted;
+                        backColor = trailColor = SFColor.clusRedDark;
+                        frontColor = SFColor.clusRed;
+                    }};
+                }}
+        );
         ((ItemTurret) Blocks.fuse).reload = 40;
         ((ItemTurret) Blocks.fuse).range = 100;
         ((ItemTurret) Blocks.fuse).shoot = new ShootSpread(4,12.5f);
@@ -267,8 +315,7 @@ public class SFOverride {
             status = SFStatusEffects.breakdown;
             statusDuration = 44;
             ammoMultiplier = 4f;
-            fromColor = SFColor.discLight.cpy().a(0.5f);
-            toColor = SFColor.discLight;
+            toColor = fromColor = SFColor.discLight.cpy().a(0.5f);
             shootEffect = smokeEffect = new Effect(12f, e -> {
                 color(Color.white, SFColor.discLight, e.fin());
                 stroke(e.fout() * 1.2f + 0.5f);
@@ -279,12 +326,10 @@ public class SFOverride {
             });
             reloadMultiplier = 0.9f;
             spawnBullets.add(new ShrapnelBulletType() {{
-                length = 125;
-                rangeChange = 10;
+                length = 85;
                 damage = 130;
                 ammoMultiplier = 4f;
-                fromColor = SFColor.discLight.cpy().a(0.5f);
-                toColor = SFColor.discLight;
+                toColor = fromColor = SFColor.discLight;
                 status = SFStatusEffects.breakdown;
                 statusDuration = 44;
             }});

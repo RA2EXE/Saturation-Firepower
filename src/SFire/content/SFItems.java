@@ -30,7 +30,7 @@ public class SFItems {
         }};
 
         chromium = new Item("chromium", Color.valueOf("666484")){{
-            hardness = 7;
+            hardness = 4;
             cost = 6f;
             healthScaling = 2f;
         }};
