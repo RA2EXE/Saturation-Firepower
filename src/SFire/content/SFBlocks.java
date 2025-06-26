@@ -1213,9 +1213,9 @@ public class SFBlocks {
             liquidCapacity = 120;
 
             craftTime = 60;
-            outputLiquid = new LiquidStack(Liquids.nitrogen, 1f);
+            outputLiquid = new LiquidStack(Liquids.nitrogen, 12/60f);
             consumePower(2.5f);
-            consumeLiquid(Liquids.cryofluid, 0.2f);
+            consumeLiquid(Liquids.cryofluid, 0.1f);
 
             drawer = new DrawMulti(
                     new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.cryofluid){{alpha=0.9f;}},
@@ -1236,8 +1236,8 @@ public class SFBlocks {
             consumeLiquids(LiquidStack.with(Liquids.water, 3f, Liquids.nitrogen, 1f));
 
             drawer = new DrawMulti(new DrawRegion("-bottom"),
-                    new DrawLiquidRegion(Liquids.water) {{suffix = "-liquid1";}},
-                    new DrawLiquidRegion(Liquids.nitrogen) {{suffix = "-liquid2";}},
+                    new DrawLiquidTile(Liquids.water),
+                    new DrawLiquidTile(Liquids.nitrogen,0.5f),
                     new DrawLiquidTile(SFLiquids.nitrate),
                     new DrawArcSmelt() {{
                         midColor = Color.valueOf("eeffc7");
@@ -4701,7 +4701,7 @@ public class SFBlocks {
                     Items.blastCompound, new FlakBulletType(6, 30){{
                         lifetime = 135f;
                         splashDamageRadius = 64;
-                        splashDamage = 80;
+                        splashDamage = 80*1.5f;
                         scaledSplashDamage = true;
                         status = StatusEffects.blasted;
                         homingRange = 80;
@@ -4753,7 +4753,7 @@ public class SFBlocks {
                     Items.surgeAlloy, new FlakBulletType(7, 60){{
                         lifetime = 115f;
                         splashDamageRadius = 40;
-                        splashDamage = 75;
+                        splashDamage = 75*1.5f;
                         scaledSplashDamage = true;
                         lightningColor = Pal.surgeAmmoBack;
                         lightningLength = 6;
@@ -4817,7 +4817,7 @@ public class SFBlocks {
                         );
                         despawnEffect = Fx.flakExplosionBig;
                     }},
-                    SFItems.fermium, new BasicBulletType(10, 110){{
+                    SFItems.fermium, new BasicBulletType(10, 110*1.5f){{
                         inaccuracy = -7;
                         rangeChange = 80;
                         collidesGround = false;
