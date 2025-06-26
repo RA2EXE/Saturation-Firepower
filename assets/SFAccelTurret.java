@@ -1,4 +1,4 @@
-package SFire.world.blocks;
+package SFire.expand.blocks;
 
 import mindustry.world.blocks.defense.turrets.*;
 

@@ -9,9 +9,6 @@ block.sfire-mod-缉踪.description = 发射密集的小型集束追踪防空导�
 block.sfire-mod-碎影.name = 碎影
 block.sfire-mod-碎影.description = 向敌人发射高温锻化弹头钨核穿甲弹，对目标造成严重损伤并熔毁其内在。\n需要大量热量启动。
 
-block.sfire-mod-俎力.name = 俎力
-block.sfire-mod-俎力.description = 大型纳米发射器，向范围内生命值上限最低的目标位置发射一枚威力巨大的子母纳米弹，损坏敌方电子设备，修复我方建筑。
-block.sfire-mod-俎力.details = watch out the [green]flash!
 block.sfire-mod-络龙.name = 络龙
 block.sfire-mod-络龙.description = 重型动能打击复合动力炮，对每一个命中的目标造成两次伤害。
 block.sfire-mod-络龙.details = 暂不支持在旋转时充能，可能导致能源线路过载或炮击失效······\n-谁教你把线圈加速跟轨道加速组合在一起的？是，我知道，材料学是攻克了，但是你是不是忘记了这玩意依然是[stat] 电[] 磁 炮 ？\n-我们还没给裂位引擎适配电动能转化？！
@@ -39,9 +36,7 @@ block.sfire-mod-菊花.details = [yellow]射程盲区较大，对中远距离的
 block.sfire-mod-电极.name = 电极
 block.sfire-mod-电极.description = 发射两种过载电极打击敌人。\n需要大规模集群作战，能够快速形成战斗力。
 block.sfire-mod-电极.details = 永信之怒！
-block.sfire-mod-光阴.name = 光阴
-block.sfire-mod-光阴.description = 发射由纯能量包裹的重氢弹，造成小型聚变爆炸。
-block.sfire-mod-光阴.details = 让氚核飞~
+
 block.sfire-mod-流冲.name = 流冲
 block.sfire-mod-流冲.description = 液压发射器，向敌人发射大型冲击弹，使用近炸引信。
 block.sfire-mod-流冲.details = 退！退！退！
@@ -49,13 +44,6 @@ block.sfire-mod-流冲.details = 退！退！退！
 block.sfire-mod-消去.name = 消去
 block.sfire-mod-消去.description = 大型远程拦截装置。远程击毁来袭的子弹或导弹。需要持续冷却供应。
 
-
-block.sfire-mod-丁达尔.name = 丁达尔
-block.sfire-mod-丁达尔.description = 向敌方空中单位发射密集的穿透光束。火力逐渐加强。
-block.sfire-mod-丁达尔.details = 把敌机打成筛子，光线才能透进来。由此可得：当丁达尔效应显现之时，敌机=筛子= 使用涡轮增压器喷射液体，使用水作为弹药时能灭火。
-block.sfire-mod-错位.name = 错位
-block.sfire-mod-错位.description = 发射高相位震荡波，对护盾杀伤效果显著。主射弹以及前三次能量爆炸每穿过一个敌方单位，剩余伤害增加一倍。撕碎敌人！
-block.sfire-mod-错位.details = [red]连你的设备一起！不到万不得已，不要使用裂位能直接攻击敌方单位！\n错位如他的名字一样，试着摆放在防线中的"错误"位置，充分发挥其伤害递增特性可以快速清理后排敌人
 
 
 block.sfire-mod-垂发.name = 垂直发射系统
@@ -76,12 +64,7 @@ block.sfire-mod-灾灵.details = 射速逐渐加快，火力逐渐变态。就�
 block.sfire-mod-天际.name = 天际
 block.sfire-mod-天际.description = 短暂蓄力后向空中敌人发射强力的定向贯彻能量束，穿透护盾与敌人。
 
-block.sfire-mod-扩散轨道炮.name = 扩散轨道炮
-block.sfire-mod-扩散轨道炮.description = 发射集束能量弹，毁灭目标及其周边区域。
-block.sfire-mod-扩散轨道炮.details = 一种实验性的新型装药方案：裂能引信战斗部能均匀的将爆炸能量散布到爆炸范围内，从而保护弹药的全向杀伤性避免因距离导致的严重能量衰减。\n这也是一种极度危险的弹药方案，意味着能量将不再能精准聚集而是均匀分布，这可能对某些重型装甲目标失去有效杀伤性，但巨大的杀伤半径仍然使其值得一试。\n为什么不试试EU的连续轨道炮呢？
-block.sfire-mod-雷阵雨.name = 雷阵雨
-block.sfire-mod-雷阵雨.description = 发射6枚远程高爆火箭，安装末端制导系统。对靠近的敌人毫无还手之力，注意保护！
-block.sfire-mod-雷阵雨.details = 火力压制
+
 block.lancer.details = 优化能量阀，升级激光发生器，增设电弧引信
 block.swarmer.details = 适配更多弹药，优化结构以提升火力密度
 block.fuse.details = 更强的透射聚焦棱镜与先进火控系统是个不错的选择，事实也证明确实如此。\n谁再把不稳定还有安全隐患的裂能设备往小型化炮塔上装就给我军法处置！\n[darkgray]下不为例

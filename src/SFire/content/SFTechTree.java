@@ -61,7 +61,7 @@ public class SFTechTree {
         addToNode(foreshadow, () -> {
             node(chongchao);
             node(relang);
-            node(sizhao);
+            node(sizhao, () -> node(kuosan));
         });
 
         //crafting
