@@ -1093,10 +1093,10 @@ public class SFUnitTypes {
                 shootSound = Sounds.mediumCannon;
                 shake = 3.6f;
                 bullet = new BasicBulletType(16, 188 * 2f, "missile-large") {{
-                    lightningDamage = damage;
-                    lightning = 3;
-                    lightningLength = 6;
-                    lightningLengthRand = 8;
+                    lightningDamage = damage / 2;
+                    lightning = 2;
+                    lightningLength = 10;
+                    lightningLengthRand = 4;
                     lightningType = new BulletType(0.00001f, 0f) {{
                         hitEffect = new WrapEffect(Fx.hitLaserColor, SFColor.discLight);
                         despawnEffect = Fx.none;
@@ -1337,6 +1337,7 @@ public class SFUnitTypes {
                         scaledSplashDamage = true;
                         splashDamage = 180;
                         splashDamageRadius = 30;
+                        hitSound = Sounds.boom;
                         trailColor = SFColor.discLight;
                         trailWidth = 1.25f;
                         trailLength = 15;
@@ -4586,7 +4587,7 @@ public class SFUnitTypes {
             engineSize = 15;
             immunities.addAll(StatusEffects.wet, StatusEffects.freezing);
             drawShields = false;
-            abilities.add(new ForceFieldAbility(82, 6, 3500, 360));
+            abilities.add(new ForceFieldAbility(82, 3, 1800, 600));
             weapons.add(
                     new Weapon(name("cirrus-weapon")) {{
                         rotate = true;
@@ -4598,7 +4599,7 @@ public class SFUnitTypes {
                         shoot = new ShootAlternate(8);
                         shake = 2;
                         shootSound = Sounds.laser;
-                        bullet = new BasicBulletType(8, 45, "circle-bullet") {{
+                        bullet = new BasicBulletType(8, 35, "circle-bullet") {{
                             reflectable = false;
                             width = height = 10;
                             lifetime = 33.75f;
@@ -4621,13 +4622,14 @@ public class SFUnitTypes {
                             shootEffect = Fx.lancerLaserShoot;
                             smokeEffect = Fx.none;
 
-                            splashDamage = 60;
+                            splashDamage = 45;
                             splashDamageRadius = 38;
                             status = SFStatusEffects.magnStrif;
                             statusDuration = 30;
-                            lightning = 5;
-                            lightningDamage = 24;
-                            lightningLength = lightningLengthRand = 3;
+                            lightning = 3;
+                            lightningDamage = 15;
+                            lightningLength = 5;
+                            lightningLengthRand = 3;
                             lightningColor = SFColor.energySky;
                             despawnEffect = Fx.lancerLaserShoot;
                             hitSound = Sounds.laser;
@@ -4665,7 +4667,7 @@ public class SFUnitTypes {
                         reload = 400;
                         shootSound = Sounds.release;
                         shootCone = 10;
-                        bullet = new BasicBulletType(8, 150, "missile-large") {{
+                        bullet = new BasicBulletType(8, 50, "missile-large") {{
                             reflectable = false;
                             collides = false;
                             scaleLife = true;
@@ -4717,7 +4719,7 @@ public class SFUnitTypes {
                                 colorTo = SFColor.smoke.cpy().a(0.5f);
                             }};
                             hitShake = 12;
-                            fragBullets = 20;
+                            fragBullets = 15;
                             fragLifeMin = 0.5f;
                             fragBullet = new BasicBulletType(1.3f, 10) {{
                                 lifetime = 100;
@@ -4730,7 +4732,7 @@ public class SFUnitTypes {
                                 splashDamageRadius = 38;
                                 status = SFStatusEffects.magnStrif;
                                 statusDuration = 30;
-                                lightning = 9;
+                                lightning = 5;
                                 lightningDamage = 25;
                                 lightningLength = 12;
                                 lightningLengthRand = 5;

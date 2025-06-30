@@ -83,8 +83,8 @@ public class SFStatusEffects {
         }};
         scrambled = new StatusEffect("scrambled") {{
             color = Pal.heal;
-            speedMultiplier = 0.3f;
-            reloadMultiplier = 0.5f;
+            speedMultiplier = 0.45f;
+            reloadMultiplier = 0.45f;
             effectChance = 0.4f;
             effect = new ParticleEffect() {{
                 particles = 5;

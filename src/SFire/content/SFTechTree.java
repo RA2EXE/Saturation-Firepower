@@ -26,11 +26,10 @@ public class SFTechTree {
         // addToNode(XXX, () -> node(XXX));
         //泰伯1图开棱镜科技
 
-        addToNode(blastDrill, () -> node(fermDriller));
         //turrets
         addToNode(arc, () -> {
             node(gaosi);
-            node(xianqu, () -> node(liebao));
+            node(xianqu, () -> node(liebao, () -> node(qingning)));
         });
         addToNode(hail, () -> {
             node(huojian, () -> node(changqiang, () -> node(fangtian)));
@@ -61,7 +60,7 @@ public class SFTechTree {
         addToNode(foreshadow, () -> {
             node(chongchao);
             node(relang);
-            node(sizhao, () -> node(kuosan));
+            node(sizhao, () -> node(kuosan, () ->  node(zhulin)));
         });
 
         //crafting

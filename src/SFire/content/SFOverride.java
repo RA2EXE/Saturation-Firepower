@@ -1,18 +1,18 @@
 package SFire.content;
 
 import arc.graphics.Color;
+import arc.graphics.g2d.Fill;
+import arc.graphics.g2d.Lines;
 import arc.math.Interp;
 import arc.math.Mathf;
 import mindustry.content.*;
 import mindustry.entities.Effect;
 import mindustry.entities.bullet.*;
-import mindustry.entities.effect.MultiEffect;
-import mindustry.entities.effect.ParticleEffect;
-import mindustry.entities.effect.WaveEffect;
-import mindustry.entities.effect.WrapEffect;
+import mindustry.entities.effect.*;
 import mindustry.entities.pattern.ShootBarrel;
 import mindustry.entities.pattern.ShootSpread;
 import mindustry.gen.Sounds;
+import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -63,6 +63,8 @@ public class SFOverride {
                     hitEffect = Fx.flakExplosion;
                 }}
         );
+        ((ItemTurret) Blocks.salvo).shoot.shots = 6;
+        ((ItemTurret) Blocks.salvo).shoot.shotDelay = 2;
         ((ItemTurret) Blocks.salvo).ammoTypes.put(Items.blastCompound, new BasicBulletType(5,16){{
             lifetime = 44.4f;
             rangeChange = 4f * 8f;
@@ -77,6 +79,33 @@ public class SFOverride {
             width = 10;
             height = 13;
         }});
+
+        ((PowerTurret) Blocks.lancer).range = 226;
+        ((PowerTurret) Blocks.lancer).reload = 130;
+        ((PowerTurret) Blocks.lancer).targetAir = true;
+        ((PowerTurret) Blocks.lancer).shootType = new LaserBulletType() {{
+            damage = 230;
+            length = 226;
+            width = 18;
+            ammoMultiplier = 1;
+            buildingDamageMultiplier = 0.35f;
+            colors = new Color[]{Pal.lancerLaser.cpy().a(0.4f), Pal.lancerLaser, Color.white};
+            lightningColor = Pal.lancerLaser;
+            lightningSpacing = 25;
+            lightningDelay = 0.6f;
+            lightningLength = 4;
+            lightningLengthRand = 2;
+            lightningAngleRand = 16;
+            lightningDamage = 13;
+
+            chargeEffect = new MultiEffect(Fx.lancerLaserCharge, Fx.lancerLaserChargeBegin);
+            hitEffect = Fx.hitLancer;
+            hitSize = 4;
+            shootEffect = Fx.lancerLaserShoot;
+            smokeEffect = Fx.lancerLaserShootSmoke;
+            drawSize = 400f;
+        }};
+
         ((LiquidTurret) Blocks.wave).ammoTypes.putAll(
                 SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.nanoFluid){{
                     lifetime = 32;
@@ -96,6 +125,7 @@ public class SFOverride {
                     layer = 98;
                 }}
         );
+
         ((LiquidTurret) Blocks.tsunami).ammoTypes.putAll(
                 SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.nanoFluid){{
                     lifetime = 49f;
@@ -382,10 +412,11 @@ public class SFOverride {
                 }}
         );
 
-        ((PowerTurret) Blocks.meltdown).range = 216;
+        ((PowerTurret) Blocks.meltdown).range = 250;
         ((PowerTurret) Blocks.meltdown).reload = 240;
+        Blocks.meltdown.liquidCapacity = 120f;
         ((PowerTurret) Blocks.meltdown).shootType = new ContinuousLaserBulletType(86){{
-            length = 216;
+            length = 250;
             hitEffect = Fx.hitMeltdown;
             hitColor = Pal.meltdownHit;
             status = StatusEffects.melting;
@@ -419,11 +450,95 @@ public class SFOverride {
                 status = SFStatusEffects.postive;
                 statusDuration = 12;
                 lifetime = 10;
-                length = 216;
+                length = 250;
                 width = 16;
             }};
         }};
 
+        ((ItemTurret) Blocks.foreshadow).ammoTypes.put(SFItems.tayrAlloy, new PointBulletType(){{
+            damage = 1750;
+            hitSound = Sounds.boom;
+            speed = 100;
+            hitShake = 5;
+            buildingDamageMultiplier = 0.3f;
+            trailSpacing = 20;
+            trailEffect = new Effect(30, e -> {
+                for(int i = 0; i < 2; i++){
+                    color(i == 0 ? SFColor.tayrDark : SFColor.tayrLight);
+
+                    float m = i == 0 ? 1f : 0.5f;
+
+                    float rot = e.rotation + 180f;
+                    float w = 15f * e.fout() * m;
+                    Drawf.tri(e.x, e.y, w, (30f + Mathf.randomSeedRange(e.id, 15f)) * m, rot);
+                    Drawf.tri(e.x, e.y, w, 10f * m, rot + 180f);
+                }
+
+                Drawf.light(e.x, e.y, 60f, SFColor.tayrDark, 0.6f * e.fout());
+            });
+            shootEffect = new Effect(24f, e -> {
+                e.scaled(10f, b -> {
+                    color(Color.white, SFColor.tayrDark, b.fin());
+                    stroke(b.fout() * 3f + 0.2f);
+                    Lines.circle(b.x, b.y, b.fin() * 50f);
+                });
+
+                color(SFColor.tayrDark);
+
+                for(int i : Mathf.signs){
+                    Drawf.tri(e.x, e.y, 13f * e.fout(), 85f, e.rotation + 90f * i);
+                    Drawf.tri(e.x, e.y, 13f * e.fout(), 50f, e.rotation + 20f * i);
+                }
+
+                Drawf.light(e.x, e.y, 180f, SFColor.tayrDark, 0.9f * e.fout());
+            });
+            smokeEffect = Fx.smokeCloud;
+            hitEffect =  new Effect(20f, 200f, e -> {
+                color(SFColor.tayrDark);
+
+                for(int i = 0; i < 2; i++){
+                    color(i == 0 ? SFColor.tayrDark : SFColor.tayrLight);
+
+                    float m = i == 0 ? 1f : 0.5f;
+
+                    for(int j = 0; j < 5; j++){
+                        float rot = e.rotation + Mathf.randomSeedRange(e.id + j, 50f);
+                        float w = 23f * e.fout() * m;
+                        Drawf.tri(e.x, e.y, w, (80f + Mathf.randomSeedRange(e.id + j, 40f)) * m, rot);
+                        Drawf.tri(e.x, e.y, w, 20f * m, rot + 180f);
+                    }
+                }
+
+                e.scaled(10f, c -> {
+                    color(SFColor.tayrLight);
+                    stroke(c.fout() * 2f + 0.2f);
+                    Lines.circle(e.x, e.y, c.fin() * 30f);
+                });
+
+                e.scaled(12f, c -> {
+                    color(SFColor.tayrDark);
+                    randLenVectors(e.id, 25, 5f + e.fin() * 80f, e.rotation, 60f, (x, y) -> {
+                        Fill.square(e.x + x, e.y + y, c.fout() * 3f, 45f);
+                    });
+                });
+            });
+            despawnEffect = new Effect(15f, 100f, e -> {
+                color(SFColor.tayrDark);
+                stroke(e.fout() * 4f);
+                Lines.circle(e.x, e.y, 4f + e.finpow() * 20f);
+
+                for(int i = 0; i < 4; i++){
+                    Drawf.tri(e.x, e.y, 6f, 80f * e.fout(), i*90 + 45);
+                }
+
+                color();
+                for(int i = 0; i < 4; i++){
+                    Drawf.tri(e.x, e.y, 3f, 30f * e.fout(), i*90 + 45);
+                }
+
+                Drawf.light(e.x, e.y, 150f, SFColor.tayrDark, 0.9f * e.fout());
+            });
+        }});
 
 
 
@@ -482,6 +597,7 @@ public class SFOverride {
             splashDamage = 80;
             splashDamageRadius = 60;
         }};
+        Blocks.impactReactor.requirements(Category.power, with(Items.lead,500, SFItems.siliSteel,250, Items.graphite,400, Items.thorium,200, Items.surgeAlloy,300, Items.metaglass,350));
 
         //faster than faste
         /*

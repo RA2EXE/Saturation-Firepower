@@ -9,23 +9,13 @@ block.sfire-mod-缉踪.description = 发射密集的小型集束追踪防空导�
 block.sfire-mod-碎影.name = 碎影
 block.sfire-mod-碎影.description = 向敌人发射高温锻化弹头钨核穿甲弹，对目标造成严重损伤并熔毁其内在。\n需要大量热量启动。
 
-block.sfire-mod-络龙.name = 络龙
-block.sfire-mod-络龙.description = 重型动能打击复合动力炮，对每一个命中的目标造成两次伤害。
-block.sfire-mod-络龙.details = 暂不支持在旋转时充能，可能导致能源线路过载或炮击失效······\n-谁教你把线圈加速跟轨道加速组合在一起的？是，我知道，材料学是攻克了，但是你是不是忘记了这玩意依然是[stat] 电[] 磁 炮 ？\n-我们还没给裂位引擎适配电动能转化？！
 block.sfire-mod-凌汛.name = 凌汛
 block.sfire-mod-凌汛.description = 扫射前方区域，对小型目标的命中率较低，对半程以内目标造成两倍伤害。
 block.sfire-mod-凌汛.details = 尽管该型武器的精确度并不能称得上优秀，但他在让我们失望的方面上从不让人失望。\n针对远程大型目标的打击从不失手，一旦锁定轻型机动部队，远程打击能力几乎尽数丧失。多亏了拟合曲面折射棱镜，能量流束在中短程依然能保持杀伤力
-block.sfire-mod-锋芒.name = 锋芒
-block.sfire-mod-锋芒.description = 对单个目标发射急冻光束，造成[red]些许[]伤害的同时溅射到其附近的目标。
-block.sfire-mod-锋芒.details = 高效制冷。\n裂能科技的的最新进展：曾经裂位能引擎由于其过于高昂的成本而根本不能随意改造研究，这台通过批准的改造引擎取得了成功，它允许使用另一种形式来转移能量。\n谁能想到一台热交换器能够成为制敌利器呢？
 
 
 .sfire-mod-大垂发.name = 弹道导弹发射阵列
 block.sfire-mod-大垂发.description = 发射大型多弹头导弹，需要根据目标的预测路径预设弹道位置，对于移动轨迹难以预测的目标命中率几乎为零且导弹会偏航。
-block.sfire-mod-愤倾.name = 愤倾
-block.sfire-mod-愤倾.description = 向敌人倾泻密度递增的瘫痪弹阵列，瘫痪系统功能并造成严重损毁。
-block.sfire-mod-清宁.name = 清宁
-block.sfire-mod-清宁.description = 抛射2对过载能量弹，对机械、电气装置造成严重损害，同时过载敌人的武器系统。
 
 block.sfire-mod-前狼.name = 前狼
 block.sfire-mod-前狼.description = 被动式火控系统，发射引导式地空火箭，确保摧毁目标。\n[red]没有自主制导能力，完全依靠辅助制导！
@@ -65,9 +55,6 @@ block.sfire-mod-天际.name = 天际
 block.sfire-mod-天际.description = 短暂蓄力后向空中敌人发射强力的定向贯彻能量束，穿透护盾与敌人。
 
 
-block.lancer.details = 优化能量阀，升级激光发生器，增设电弧引信
-block.swarmer.details = 适配更多弹药，优化结构以提升火力密度
-block.fuse.details = 更强的透射聚焦棱镜与先进火控系统是个不错的选择，事实也证明确实如此。\n谁再把不稳定还有安全隐患的裂能设备往小型化炮塔上装就给我军法处置！\n[darkgray]下不为例
 
 block.sfire-mod-陨星.name = 陨星
 block.sfire-mod-陨星.description = 毁灭工程学的优秀作品，通过核爆炸来获得毁灭性的动能。很抱歉，当下最坚硬的材料也不能充当其能量导轨，我们暂时无法控制核爆炸的方向
