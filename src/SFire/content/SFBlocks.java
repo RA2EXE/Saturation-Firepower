@@ -118,7 +118,6 @@ public class SFBlocks {
     finalWeapon1, finalWeapon2,
     defensePlatform1, defensePlatform2, defensePlatform3, defensePlatform4, defensePlatform5, defensePlatform6,
 
-
     //units
     terrAssembler, hoveAssembler, payloadConstrustor, specFactory, pentativeReconstrustor,
     nanoUnitRegener
@@ -2458,7 +2457,9 @@ public class SFBlocks {
             tier = 3;
 
             consumePower(1.75f);
+            //consumeLiquid(Liquids.water, 0.3f).boost();
             liquidBoostIntensity = 1;
+
             drillEffect = Fx.mineBig;
             updateEffect = Fx.pulverizeMedium;
         }};

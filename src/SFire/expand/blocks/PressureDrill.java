@@ -11,29 +11,35 @@ public class PressureDrill extends Drill {
         super(name);
     }
 
-    /*
-    float lastPower;
-    public float getLastPowerProduced(){return lastPower;}
-
-    //实时硬度惩罚 = 基础硬度惩罚 - 5 *（电网余电/钻头本体耗电）
-    //draw转速同步提升
-
-    @Override
-    public float getDrillTime(Item item){
-        float totalHardness = hardnessDrillMultiplier - 5 * (lastPower / 1.75f);
-        return (drillTime + totalHardness * item.hardness) / drillMultipliers.get(item, 1f);
-    }*/
-
-
     public class PressureDrillBuild extends Drill.DrillBuild {
 
+        public PressureDrillBuild(){
+            super();
+        }
+
+        @Override
         public void updateTile(){
-            super.updateTile();
+            if(timer(timerDump, dumpTime)){
+                dump(dominantItem != null && items.has(dominantItem) ? dominantItem : null);
+            }
+
+            if(dominantItem == null){
+                return;
+            }
+
+            timeDrilled += warmup * delta();
+
             float delay = getDrillTime(dominantItem);
 
+            float maxFactor = 3f;
+            float minPowerNeed = 10f;
             if(items.total() < itemCapacity && dominantItems > 0 && efficiency > 0){
-                float powerFactor = Math.min((power.graph.getLastPowerProduced()-power.graph.getLastPowerNeeded())/5/consPower.requestedPower(this), 2);
-                float speed = Mathf.lerp(1f, liquidBoostIntensity, optionalEfficiency) * efficiency * Math.max(1,powerFactor);
+
+                float powerFactor = power.graph.getPowerBalance() / (minPowerNeed * consPower.requestedPower(this));
+                float finalFactor = (float) Math.sqrt(Math.min(powerFactor > 1 ? powerFactor : 1, maxFactor));
+
+                float speed = Mathf.lerp(1f, liquidBoostIntensity, optionalEfficiency) * efficiency * finalFactor;
+                //float speed = Mathf.lerp(1f, liquidBoostIntensity, optionalEfficiency) * efficiency;
 
                 lastDrillSpeed = (speed * dominantItems * warmup) / delay;
                 warmup = Mathf.approachDelta(warmup, speed, warmupSpeed);
@@ -52,8 +58,8 @@ public class PressureDrill extends Drill {
                 for(int i = 0; i < amount; i++){
                     offload(dominantItem);
                 }
-
                 progress %= delay;
+                if(wasVisible && Mathf.chanceDelta(drillEffectChance * warmup)) drillEffect.at(x + Mathf.range(drillEffectRnd), y + Mathf.range(drillEffectRnd), dominantItem.color);
             }
         }
     }
