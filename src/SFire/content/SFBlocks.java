@@ -109,8 +109,8 @@ public class SFBlocks {
 
     //turrets
     xianqu, huojian, dianguang, bingfengbao, gaosi, liebao, cuodao, longxi, mengma, zheyue,
-    kuodao, mini, woliu, tieliu, yanglizi, changqiang, namifengbao, longjuan, manyou, chuanyun, cijian, chuifa,
-    fangtian, qingning, chongchao,
+    kuodao, mini, woliu, tieliu, yanglizi, changqiang, longjuan, manyou, chuanyun, cijian, chuifa,
+    fangtian, leizhenyu, qingning, chongchao,
     relang, sizhao, liemei, cuowei,
     dingdaer, guangyin, cimai, fengmang,
     yuanling, kuosan, poxiao, fenqing, zhulin, luolong,
@@ -1266,7 +1266,7 @@ public class SFBlocks {
             consumePower(25f);
             consumeLiquid(Liquids.oil, 3.6f);
             outputItem = new ItemStack(Items.coal, 3);
-            outputLiquid = new LiquidStack(SFLiquids.mixGas, 5 / 3f);
+            outputLiquid = new LiquidStack(SFLiquids.mixGas, 2f);
 
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.oil), new DrawLiquidTile(SFLiquids.mixGas) {{
                 alpha = 0.35f;
@@ -1966,8 +1966,8 @@ public class SFBlocks {
         silisteelConduit = new Conduit("silisteel-conduit") {{
             health = 220;
             requirements(Category.liquid, with(Items.lead, 1, Items.metaglass, 2, SFItems.siliSteel, 1));
-            liquidCapacity = 35;
-            liquidPressure = 2.25f;
+            liquidCapacity = 40;
+            liquidPressure = 2f;
             bridgeReplacement = Blocks.phaseConduit;
             explosivenessScale = flammabilityScale = 16f / 50f;
         }};
@@ -1976,7 +1976,7 @@ public class SFBlocks {
             armor = 8;
             requirements(Category.liquid, with(Items.titanium, 1, Items.metaglass, 2, SFItems.siliSteel, 1, SFItems.fermium, 1));
             liquidCapacity = 150;
-            liquidPressure = 2.25f;
+            liquidPressure = 2f;
             bridgeReplacement = discConduit;
             insulated = absorbLasers = placeableLiquid = true;
             explosivenessScale = flammabilityScale = 16f / 50f;
@@ -1985,7 +1985,7 @@ public class SFBlocks {
             size = 4;
             health = 3600;
             armor = 8;
-            requirements(Category.liquid, with(Items.plastanium, 70, Items.metaglass, 220, SFItems.siliSteel, 60, SFItems.chromium, 110));
+            requirements(Category.liquid, with(Items.plastanium, 70, Items.metaglass, 250, SFItems.siliSteel, 60, SFItems.chromium, 110));
             liquidCapacity = 6000;
             absorbLasers = true;
         }};
@@ -3803,7 +3803,7 @@ public class SFBlocks {
                         inaccuracy = 4;
                         hitShake = 2;
                         trailChance = 0.8f;
-                        trailColor = backColor = hitColor = SFColor.sisteelLight;
+                        trailColor = backColor = hitColor = SFColor.sisteelDark;
                         frontColor = SFColor.missileGray;
                         despawnEffect = Fx.flakExplosion;
                         hitEffect = new ExplosionEffect(){{
@@ -4644,7 +4644,6 @@ public class SFBlocks {
                     }}
             );
         }};
-        //zheyue
         //chuifa
     //4*4//
         fangtian = new ItemTurret("fangtian") {{
@@ -4659,7 +4658,7 @@ public class SFBlocks {
             shoot = new ShootAlternate(18);
             shoot.shots = 2;
             shoot.shotDelay = 12;
-            requirements(Category.turret, with(Items.copper,560, Items.graphite,200, Items.silicon,220, SFItems.waveSteel,200));
+            requirements(Category.turret, with(Items.lead,560, Items.graphite,200, Items.silicon,220, SFItems.waveSteel,200));
             consumePower(7);
             targetGround = false;
 
@@ -4792,6 +4791,7 @@ public class SFBlocks {
                             hittable = false;
                             lightColor = Color.yellow;
                             collidesGround = false;
+                            hitSound = Sounds.spark;
                         }};
                         homingRange = 80;
                         homingDelay = 15;
@@ -4905,6 +4905,207 @@ public class SFBlocks {
                         despawnEffect = Fx.flakExplosionBig;
                     }}
             );
+        }};
+        leizhenyu = new ItemTurret("leizhenyu") {{
+            size = 4;
+            health = 2900;
+            recoil = 4f;
+            recoilTime = 60;
+            shootSound = Sounds.missileSmall;
+            shake = 3f;
+            inaccuracy = 10;
+            shootY = -3;
+            shoot = new ShootBarrel(){{
+                barrels = new float[]{
+                        2.5f, 15, 0,
+                        -2.5f, 15, 0,
+                        6, 14.25f, 0,
+                        -6, 14.25f, 0,
+                        9.5f, 13.5f, 0,
+                        -9.5f, 13.5f, 0
+                };
+                shots = 3;
+                shotDelay = 5;
+            }};
+            requirements(Category.turret, with(Items.graphite,220, Items.silicon,180, Items.plastanium,160, SFItems.waveSteel,220));
+            targetAir = false;
+
+            reload = 45f;
+            rotateSpeed = 3.5f;
+            range = 600;
+            minRange = 80;
+            liquidCapacity = 60;
+
+            coolant = consumeCoolant(0.5f);
+            shootEffect = Fx.shootBig;
+            ammoPerShot = 2;
+            ammoUseEffect = new ParticleEffect(){{
+                particles = 9;
+                interp = Interp.pow10Out;
+                sizeInterp = Interp.pow5In;
+                sizeFrom = 5.5f;
+                length = 40;
+                lifetime = 65;
+                colorFrom = colorTo = SFColor.smoke.cpy().a(0.5f);
+                layer = 49;
+            }};
+            velocityRnd = 0.05f;
+            ammo(
+                    Items.graphite, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                        splashDamage = 33f;
+                        splashDamageRadius = 32f;
+                        scaledSplashDamage = true;
+                        lifetime = 180;
+
+                        homingDelay = homingRange = 40;
+                        homingPower = 0.08f;
+
+                        height = 60;
+                        width = 12;
+                        backColor = trailColor = hitColor =  Pal.graphiteAmmoBack;
+                        frontColor = SFColor.missileGray;
+                        smokeEffect = Fx.shootSmallFlame;
+                        hitEffect = Fx.flakExplosion;
+                        hitShake = 3;
+                        hitSoundVolume = 3;
+                    }},
+                    Items.pyratite, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                        splashDamage = 40f;
+                        splashDamageRadius = 32f;
+                        scaledSplashDamage = true;
+                        lifetime = 180;
+                        ammoMultiplier = 4;
+                        status = StatusEffects.burning;
+                        statusDuration = 360;
+                        makeFire = true;
+
+                        homingDelay = homingRange = 40;
+                        homingPower = 0.08f;
+
+                        height = 60;
+                        width = 12;
+                        backColor = trailColor = hitColor =  Pal.lightPyraFlame;
+                        frontColor = SFColor.missileGray;
+                        smokeEffect = Fx.shootSmallFlame;
+                        hitEffect = Fx.flakExplosion;
+                        hitShake = 3;
+                        hitSoundVolume = 3;
+                    }},
+                    Items.blastCompound, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                        splashDamage = 50f;
+                        splashDamageRadius = 45f;
+                        scaledSplashDamage = true;
+                        lifetime = 180;
+                        ammoMultiplier = 5;
+                        status = StatusEffects.blasted;
+
+                        homingDelay = homingRange = 40;
+                        homingPower = 0.08f;
+
+                        height = 65;
+                        width = 14;
+                        backColor = trailColor = hitColor = Pal.blastAmmoBack;
+                        frontColor = SFColor.missileGray;
+                        smokeEffect = Fx.shootPyraFlame;
+                        hitEffect = Fx.flakExplosionBig;
+                        hitShake = 3;
+                        hitSoundVolume = 3;
+                    }},
+                    Items.surgeAlloy, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                        splashDamage = 75f;
+                        splashDamageRadius = 40f;
+                        lifetime = 180;
+                        ammoMultiplier = 6;
+                        lightning = 2;
+                        lightningDamage = 18f;
+                        lightningLength = 8;
+                        lightningType = new BulletType(0.0001f, 0f){{
+                            lifetime = Fx.lightning.lifetime;
+                            hitEffect = Fx.hitLancer;
+                            despawnEffect = Fx.none;
+                            status = StatusEffects.shocked;
+                            statusDuration = 10f;
+                            hittable = false;
+                            lightColor = Color.yellow;
+                            collidesAir = false;
+                            hitSound = Sounds.spark;
+                        }};
+
+                        homingDelay = homingRange = 40;
+                        homingPower = 0.08f;
+
+                        height = 65;
+                        width = 15;
+                        backColor = trailColor = hitColor = Pal.surgeAmmoBack;
+                        frontColor = SFColor.missileGray;
+                        smokeEffect = Fx.shootPyraFlame;
+                        hitEffect = Fx.flakExplosion;
+                        hitShake = 3;
+                        hitSoundVolume = 3;
+                    }},
+                    SFItems.siliSteel, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                        splashDamage = 28f;
+                        splashDamageRadius = 35f;
+                        scaledSplashDamage = true;
+                        lifetime = 180;
+                        ammoMultiplier = 3;
+                        status = SFStatusEffects.magnStrif;
+                        statusDuration = 60;
+
+                        homingDelay = homingRange = 40;
+                        homingPower = 0.08f;
+
+                        height = 60;
+                        width = 10;
+                        backColor = trailColor = hitColor = SFColor.sisteelDark;
+                        frontColor = SFColor.missileGray;
+                        smokeEffect = Fx.shootSmallFlame;
+                        hitEffect = Fx.flakExplosion;
+                        hitShake = 3;
+                        hitSoundVolume = 3;
+                    }},
+                    SFItems.clusBomb, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                        splashDamage = 45f;
+                        splashDamageRadius = 45f;
+                        scaledSplashDamage = true;
+                        lifetime = 180;
+                        ammoMultiplier = 6;
+                        status = StatusEffects.burning;
+                        statusDuration = 60;
+                        makeFire = true;
+
+                        homingDelay = 60;
+                        homingRange = 40;
+                        homingPower = 0.02f;
+
+                        height = 65;
+                        width = 15;
+                        backColor = trailColor = hitColor = SFColor.clusRedDark;
+                        frontColor = SFColor.missileGray;
+                        smokeEffect = Fx.shootPyraFlame;
+                        hitEffect = Fx.flakExplosionBig;
+                        hitShake = 3;
+                        hitSoundVolume = 3;
+                        fragLifeMin = 0.1f;
+                        fragBullets = 5;
+                        fragBullet = new BasicBulletType(2.5f,10){{
+                            splashDamage = 45f;
+                            splashDamageRadius = 50f;
+                            scaledSplashDamage = true;
+                            status = StatusEffects.blasted;
+                            lifetime = 20;
+                            drag = 0.005f;
+
+                            height = width = 8;
+                            shrinkY = 1;
+                            backColor = trailColor = hitColor = SFColor.clusRedDark;
+                            frontColor = SFColor.clusRed;
+                            despawnEffect = hitEffect = Fx.blastExplosion;
+                            hitSoundVolume = 3;
+                        }};
+                    }}
+            );
+
         }};
         qingning = new PowerTurret("qingning") {{
             size = 4;
