@@ -9,6 +9,7 @@ import mindustry.content.*;
 import mindustry.entities.Effect;
 import mindustry.entities.bullet.*;
 import mindustry.entities.effect.*;
+import mindustry.entities.part.RegionPart;
 import mindustry.entities.pattern.ShootBarrel;
 import mindustry.entities.pattern.ShootSpread;
 import mindustry.gen.Sounds;
@@ -25,6 +26,7 @@ import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.blocks.production.Pump;
 import mindustry.world.blocks.units.Reconstructor;
 import mindustry.world.blocks.units.UnitFactory;
+import mindustry.world.draw.DrawTurret;
 
 import static arc.graphics.g2d.Draw.color;
 import static arc.graphics.g2d.Lines.lineAngle;
@@ -35,7 +37,7 @@ import static mindustry.type.ItemStack.with;
 public class SFOverride {
     public static void load() {
 
-        //turrets
+        //region turrets
         ((ItemTurret) Blocks.scatter).ammoTypes.putAll(
                 Items.blastCompound, new FlakBulletType(4, 5){{
                     lifetime = 60;
@@ -104,7 +106,12 @@ public class SFOverride {
             smokeEffect = Fx.lancerLaserShootSmoke;
             drawSize = 400f;
         }};
-
+        ((PowerTurret) Blocks.lancer).drawer = new DrawTurret() {{
+            parts.add(new RegionPart("-barrel") {{
+                progress = PartProgress.recoil;
+                moveY = -1;
+            }});
+        }};
         ((LiquidTurret) Blocks.wave).ammoTypes.putAll(
                 SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.nanoFluid){{
                     lifetime = 32;
@@ -539,13 +546,8 @@ public class SFOverride {
                 Drawf.light(e.x, e.y, 150f, SFColor.tayrDark, 0.9f * e.fout());
             });
         }});
-
-
-
-        /*
-        ((Drill) Blocks.mechanicalDrill).drillTime = 540;
-        ((Drill) Blocks.pneumaticDrill).drillTime = 360;
-        */
+        //endregion
+        //region drill + production
         ((Drill) Blocks.laserDrill).drillTime = 252;
         ((Drill) Blocks.laserDrill).updateEffect = Fx.hitLancer;
         ((Drill) Blocks.blastDrill).drillTime = 252;
@@ -555,7 +557,19 @@ public class SFOverride {
         ((Pump) Blocks.impulsePump).pumpAmount = 1/3f;
         Blocks.impulsePump.consumePower(1.5f);
 
-        //power
+        ((GenericCrafter)Blocks.siliconSmelter).craftTime = 40;
+        Blocks.siliconSmelter.consumePower(0.25f);
+        ((AttributeCrafter)Blocks.siliconCrucible).craftTime = 90;
+        ((AttributeCrafter)Blocks.siliconCrucible).minEfficiency = 1;
+        ((AttributeCrafter)Blocks.siliconCrucible).boostScale = 1/3f;
+        ((AttributeCrafter)Blocks.siliconCrucible).maxBoost = 2.5f;
+        ((AttributeCrafter)Blocks.siliconCrucible).outputItem = new ItemStack(Items.silicon,10);
+        Blocks.siliconCrucible.consumePower(3.5f);
+        Blocks.siliconCrucible.floating = true;
+        Blocks.siliconCrucible.itemCapacity = 40;
+        //endregion
+        Blocks.armoredConveyor.placeableLiquid = true;
+        //region power
         ((ConsumeGenerator) Blocks.steamGenerator).powerProduction = 6f;
         ((ConsumeGenerator) Blocks.differentialGenerator).powerProduction = 19.8f;
         Blocks.differentialGenerator.destroyBullet = new BulletType() {{
@@ -598,34 +612,8 @@ public class SFOverride {
             splashDamageRadius = 60;
         }};
         Blocks.impactReactor.requirements(Category.power, with(Items.lead,500, SFItems.siliSteel,250, Items.graphite,400, Items.thorium,200, Items.surgeAlloy,300, Items.metaglass,350));
+        //endregion
 
-        //faster than faste
-        /*
-        ((Conveyor) Blocks.conveyor).speed = 0.08f;
-        ((Conveyor) Blocks.conveyor).displayedSpeed = 8;
-        ((Junction) Blocks.junction).speed = 20;
-        ((Junction) Blocks.junction).capacity = 9;
-        ((BufferedItemBridge) Blocks.itemBridge).speed = 20;
-        ((BufferedItemBridge) Blocks.itemBridge).bufferCapacity = 16;
-        ((Conveyor) Blocks.titaniumConveyor).speed = 0.15f;
-        ((Conveyor) Blocks.titaniumConveyor).displayedSpeed = 15;
-        ((Conveyor) Blocks.armoredConveyor).speed = 0.15f;
-        ((Conveyor) Blocks.armoredConveyor).displayedSpeed = 15;
-        ((Unloader)Blocks.unloader).speed = 3;
-        */
-        Blocks.armoredConveyor.placeableLiquid = true;
-
-        //crafting
-        ((GenericCrafter)Blocks.siliconSmelter).craftTime = 40;
-        Blocks.siliconSmelter.consumePower(0.25f);
-        ((AttributeCrafter)Blocks.siliconCrucible).craftTime = 90;
-        ((AttributeCrafter)Blocks.siliconCrucible).minEfficiency = 1;
-        ((AttributeCrafter)Blocks.siliconCrucible).boostScale = 1/3f;
-        ((AttributeCrafter)Blocks.siliconCrucible).maxBoost = 2.5f;
-        ((AttributeCrafter)Blocks.siliconCrucible).outputItem = new ItemStack(Items.silicon,10);
-        Blocks.siliconCrucible.consumePower(3.5f);
-        Blocks.siliconCrucible.floating = true;
-        Blocks.siliconCrucible.itemCapacity = 40;
 
         //cores
         Blocks.coreShard.health = 2000;
@@ -635,7 +623,7 @@ public class SFOverride {
         Blocks.coreNucleus.health = 8000;
         Blocks.coreNucleus.armor = 12;
 
-        //status
+        //region status
         StatusEffects.boss.damageMultiplier = 1.5f;
         StatusEffects.boss.healthMultiplier = 2f;
 
@@ -654,15 +642,15 @@ public class SFOverride {
             particles = 1;
             baseLength = 10;
             length = 5;
-            region = "sfire-mod-lozenge";
+            region = "sfire-mod-loz";
             sizeInterp = Interp.pow3;
             sizeFrom = 1;
             sizeTo = 5;
             colorFrom = Color.valueOf("A278E1");
             colorTo = Color.valueOf("A278E100");
         }});
-
-        //units
+        //endregion
+        //region units
         ((UnitFactory)Blocks.airFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.air1, 60 * 25f, with(Items.silicon,15,Items.titanium,20)));
         ((UnitFactory)Blocks.groundFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.tank1, 60 * 40f, with(Items.silicon,30,Items.titanium,25,Items.lead,25)));
         ((UnitFactory)Blocks.navalFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.naval1, 60 * 50f, with(Items.silicon,35,Items.titanium,35,Items.metaglass,25)));
@@ -687,6 +675,7 @@ public class SFOverride {
                 new UnitType[]{SFUnitTypes.air4, SFUnitTypes.air5},
                 new UnitType[]{SFUnitTypes.naval4, SFUnitTypes.naval5}
         );
+        //endregion
 
 
     }

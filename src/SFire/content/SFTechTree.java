@@ -53,7 +53,7 @@ public class SFTechTree {
         addToNode(tsunami, () -> node(woliu, () -> node(tieliu)));
         addToNode(meltdown, () -> {
             node(manyou,  () -> {
-                node(guangyin/*, () -> node(fenqing)*/);
+                node(guangyin, () -> node(fenqing));
                 node(dingdaer, () -> node(poxiao));
             });
             //node(fengmang);

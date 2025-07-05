@@ -28,7 +28,6 @@ public class SFCore extends CoreBlock {
         return state.teams.cores(team).size < 7;
     }
 
-
 }
 
 

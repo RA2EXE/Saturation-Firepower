@@ -11,7 +11,7 @@ public class SFItems {
     tayrAlloy, leipAlloy;
     public static void load(){
         strontium = new Item("strontium", Color.valueOf("FFB0B0")){{
-            hardness = 2;
+            hardness = 3;
             flammability = 1.6f;
             explosiveness = 0.3f;
             buildable = false;
@@ -31,7 +31,7 @@ public class SFItems {
 
         chromium = new Item("chromium", Color.valueOf("666484")){{
             hardness = 4;
-            cost = 6f;
+            cost = 2.5f;
             healthScaling = 2f;
         }};
 
@@ -41,7 +41,7 @@ public class SFItems {
         }};
 
         siliSteel = new Item("silisteel", Color.valueOf("7595D2")){{
-            cost = 1.75f;
+            cost = 1.2f;
             healthScaling = 0.4f;
         }};
 
@@ -57,13 +57,13 @@ public class SFItems {
         }};
 
         discFabric = new Item("discordance-fabric", Color.valueOf("EEC591")){{
-            cost = 1.5f;
+            cost = 2f;
             radioactivity = 2.5f;
             explosiveness = 0.85f;
         }};
 
         nanoCore = new Item("nano-core", Color.valueOf("76D081")){{
-            cost = -0.75f;
+            cost = -1f;
         }};
 
         lens = new Item("lens", Color.valueOf("E8EEFF")){{
@@ -71,12 +71,12 @@ public class SFItems {
         }};
 
         tayrAlloy = new Item("tayrium-alloy", Color.valueOf("25C9AB")){{
-            cost = 6f;
+            cost = 5f;
             charge = 1.2f;
         }};
 
         leipAlloy = new Item("leippium-alloy", Color.valueOf("5C5D79")){{
-            cost = 6f;
+            cost = 5f;
             healthScaling = 3f;
         }};
 
