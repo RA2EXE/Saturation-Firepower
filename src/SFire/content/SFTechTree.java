@@ -24,7 +24,6 @@ public class SFTechTree {
         //SFPlanets.tiberia.techTree = nodeRoot("tiberia", frondCore, () -> {}
 
         // addToNode(XXX, () -> node(XXX));
-        //泰伯1图开棱镜科技
 
         //turrets
         addToNode(arc, () -> {
@@ -44,7 +43,7 @@ public class SFTechTree {
         });
         addToNode(lancer, () -> {
             node(dianguang, () -> node(bingfengbao));
-            node(yanglizi);
+            node(dianji);
         });
         addToNode(parallax, () -> node(cuodao));
         addToNode(scorch, () -> node(longxi));
@@ -175,11 +174,9 @@ public class SFTechTree {
                 node(naval1, () -> node(naval2, () -> node(naval3, () -> node(naval4, () -> node(naval5, () -> node(naval6))))))
         );
         addToNode(multiplicativeReconstructor, () -> node(specFactory, () -> {
-            node(farmer);
-            node(flamer);
-            node(thunder);
+            node(farmer, () -> node(thunder));
+            node(hammer, () -> node(flamer));
             node(banisher);
-            node(hammer);
         }));
         addToNode(specFactory, () -> node(payloadConstrustor, () -> {
             node(tayrContainmentUnit);

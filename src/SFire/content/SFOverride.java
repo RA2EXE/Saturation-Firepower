@@ -196,12 +196,12 @@ public class SFOverride {
                     backColor = SFColor.sisteelDark;
                     frontColor = hitColor = trailColor = SFColor.sisteelLight;
                 }},
-                SFItems.clusBomb, new ArtilleryBulletType(3,15){{
+                SFItems.clusBomb, new ArtilleryBulletType(2,15){{
                     knockback = 1.8f;
                     inaccuracy = 3;
                     lifetime = 80f;
-                    splashDamage = 40;
-                    splashDamageRadius = 20;
+                    splashDamage = 50;
+                    splashDamageRadius = 28;
                     width = height = 12;
                     collidesTiles = false;
                     hitEffect = Fx.flakExplosionBig;
@@ -210,10 +210,10 @@ public class SFOverride {
                     frontColor = SFColor.clusRed;
                     ammoMultiplier = 6;
                     fragBullets = 5;
-                    fragBullet = new ArtilleryBulletType(1.5f, 8) {{
+                    fragBullet = new ArtilleryBulletType(1.5f, 10) {{
                         lifetime = 20;
-                        splashDamage = 35;
-                        splashDamageRadius = 20;
+                        splashDamage = 50;
+                        splashDamageRadius = 28;
                         scaledSplashDamage = true;
                         width = height = 9;
                         hitEffect = Fx.blastExplosion;

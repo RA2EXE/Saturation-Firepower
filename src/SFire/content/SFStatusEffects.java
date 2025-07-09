@@ -66,8 +66,8 @@ public class SFStatusEffects {
         }};
         disRepair = new StatusEffect("dismantle") {{
             color = Pal.heal;
-            damage = 3;
-            speedMultiplier = 0.8f;
+            damage = 1.5f;
+            speedMultiplier = 0.92f;
             effectChance = 0.1f;
             effect = new ParticleEffect() {{
                 particles = 6;
@@ -159,9 +159,8 @@ public class SFStatusEffects {
         }};
         magnStrif = new StatusEffect("magnetic-strif") {{
             color = Color.gray;
-            speedMultiplier = 0.85f;
-            reloadMultiplier = 0.9f;
-            dragMultiplier = 3.5f;
+            speedMultiplier = 0.95f;
+            dragMultiplier = 1.5f;
             effectChance = 0.05f;
             effect = new ParticleEffect() {{
                 line = true;
@@ -478,8 +477,8 @@ public class SFStatusEffects {
         charging = new StatusEffect("charging") {{
             //show = false;
             color = SFColor.tayrLight;
-            damageMultiplier = 3.78f;
-            healthMultiplier = 1.949f;
+            damageMultiplier = 3f;
+            healthMultiplier = 2f;
             reloadMultiplier = 0.22f;
             speedMultiplier = 0f;
             effectChance = 0.25f;

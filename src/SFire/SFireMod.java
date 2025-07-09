@@ -36,6 +36,7 @@ public class SFireMod extends Mod {
         SFUnitTypes.loadUnit();
         SFBlocks.load();
         SFOverride.load();
+        SFPlanets.load();
         SFTechTree.load();
     }
 
