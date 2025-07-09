@@ -4034,7 +4034,7 @@ public class SFUnitTypes {
                             trailColor = backColor = SFColor.energyYellow;
                             trailWidth = 3.6f;
                             trailLength = 12;
-                            trailChance = 0.05f;
+                            trailChance = 0.1f;
                             trailEffect = new ParticleEffect() {{
                                 particles = 3;
                                 sizeFrom = 4;
@@ -4154,7 +4154,7 @@ public class SFUnitTypes {
                 shootY = 40;
                 mirror = false;
                 cooldownTime = 160;
-                recoil = 6;
+                recoil = shake = 6;
                 reload = 98;
                 shoot = new ShootAlternate(18) {{
                     shots = 2;
