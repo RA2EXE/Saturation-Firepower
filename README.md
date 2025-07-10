@@ -1,17 +1,13 @@
 # 饱和火力/Saturation Firepower
 ![logo](https://github.com/RA2EXE/Saturation-Firepower/assets/119042209/e39d7de5-09ea-4fd6-b815-674141e0557c)
 
-# WARNING
->Unstable beta!
+# Prepare to publish
+> mapping campaigns 
 > 
-> rebuilding into Java, it may cost some time...
-> it seems like i can finish all content but maps in June
-> 
-> ## Community
+> rebalance turrets and units
+
+## Community
 + **Discord Server**
-
-  [![Discord](https://img.shields.io/discord/825801593466388520.svg?logo=discord&logoColor=white&logoWidth=20&labelColor=7289DA&label=Discord&color=17cf48)](https://discord.gg/wfs97YEA)
-
+>https://discord.gg/uScpeSRr8D
 + **QQ Group | QQ群**
-
-  181108928
+>181108928

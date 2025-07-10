@@ -3761,6 +3761,7 @@ public class SFUnitTypes {
                     splashDamageRadius = 40;
                     buildingDamageMultiplier = 2.25f;
                     collides = false;
+                    makeFire = true;
                     status = StatusEffects.blasted;
                     backColor = SFColor.enemyRedLight;
                     frontColor = SFColor.missileGray;
@@ -3952,7 +3953,7 @@ public class SFUnitTypes {
             speed = 0.8f;
             hitSize = 52f;
             crushDamage = 6;
-            treadRects = new Rect[]{new Rect(-98, -130, 46, 255)};
+            treadRects = new Rect[]{new Rect(-98, -125, 46, 255)};
             treadFrames = 8;
             drownTimeMultiplier = 5;
             health = 25000;
@@ -4019,13 +4020,13 @@ public class SFUnitTypes {
                         shootSound = Sounds.boom;
                         mirror = false;
                         shootY = 46.5f;
-                        recoil = 0;
+                        recoil = 2;
                         shake = 8;
-                        bullet = new BasicBulletType(16, 220) {{
+                        bullet = new BasicBulletType(16, 270, "missile-large") {{
                             lifetime = 22;
                             status = SFStatusEffects.breakdown;
                             statusDuration = 120;
-                            pierce = true;
+                            pierce = pierceBuilding = true;
                             pierceCap = 2;
 
                             hittable = absorbable = false;
@@ -4034,7 +4035,7 @@ public class SFUnitTypes {
                             trailColor = backColor = SFColor.energyYellow;
                             trailWidth = 3.6f;
                             trailLength = 12;
-                            trailChance = 0.1f;
+                            trailChance = 0.5f;
                             trailEffect = new ParticleEffect() {{
                                 particles = 3;
                                 sizeFrom = 4;

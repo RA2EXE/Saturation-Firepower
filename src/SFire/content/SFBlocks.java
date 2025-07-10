@@ -6360,7 +6360,7 @@ public class SFBlocks {
                 trailColor = backColor = SFColor.energyYellow;
                 trailWidth = 3.6f;
                 trailLength = 12;
-                trailChance = 0.03f;
+                trailInterval = 1f;
                 trailEffect = new ParticleEffect() {{
                     particles = 3;
                     sizeFrom = 4;
