@@ -172,9 +172,75 @@ public class SFBlocks {
             unitMoveBreakable = true;
         }};
 
+        magstoneWall = new StaticWall("magstone-wall") {{
+            variants = 2;
+        }};
+        magbasaltWall = new StaticWall("magbasalt-wall") {{
+            variants = 2;
+        }};
+        magshaleWall = new StaticWall("magshale-wall") {{
+            variants = 2;
+        }};
+        calciteWall = new StaticWall("calcite-wall") {{
+            variants = 2;
+        }};
+        celestiteWall = new StaticWall("celestite-wall") {{
+            variants = 2;
+        }};
+        crackrockWall = new StaticWall("crackrock-wall") {{
+            variants = 2;
+        }};
+        combinationWall = new StaticWall("combination-wall") {{
+            variants = 2;
+        }};
+        radiquartzWall = new StaticWall("radiquartz-wall") {{
+            variants = 2;
+        }};
+        radiamphiboleWall = new StaticWall("radiamphibole-wall") {{
+            variants = 2;
+        }};
+        radigabbroWall = new StaticWall("radigabbro-wall") {{
+            variants = 2;
+        }};
+
+        magstoneStone = new Prop("magstone-stone") {{
+            variants = 2;
+        }};
+        magbasaltStone = new Prop("magbasalt-stone") {{
+            variants = 2;
+        }};
+        magshaleStone = new Prop("magshale-stone") {{
+            variants = 2;
+        }};
+        calciteStone = new Prop("calcite-stone") {{
+            variants = 2;
+        }};
+        celestiteStone = new Prop("celestite-stone") {{
+            variants = 2;
+        }};
+        crackrockStone = new Prop("crackrock-stone") {{
+            variants = 2;
+        }};
+        combinationStone = new Prop("combination-stone") {{
+            variants = 2;
+        }};
+        radiquartzStone = new TallBlock("radiquartz-stone") {{
+            variants = 2;
+            clipSize = 120f;
+            breakable = true;
+            breakSound = Sounds.rockBreak;
+            buildCostMultiplier = 10;
+        }};
+        radiamphiboleStone = new Prop("radiamphibole-stone") {{
+            variants = 2;
+        }};
+        radigabbroStone = new Prop("radigabbro-stone") {{
+            variants = 2;
+        }};
+
         magstoneFloor = new Floor("magstone-floor") {{
             wall = magstoneWall;
-            decoration = magshaleWall;
+            decoration = magstoneStone;
             dragMultiplier = 1.25f;
             walkSound = Sounds.spark;
         }};
@@ -263,72 +329,13 @@ public class SFBlocks {
             lightRadius = 8f;
         }};
 
-        magstoneWall = new StaticWall("magstone-wall") {{
-            variants = 2;
+        induFloorCover = new Prop("industry-floor-cover") {{
+            variants = 6;
+            breakSound = Sounds.breaks;
         }};
-        magbasaltWall = new StaticWall("magbasalt-wall") {{
-            variants = 2;
+        induFloorWall = new StaticWall("industry-wall") {{
+            variants = 0;
         }};
-        magshaleWall = new StaticWall("magshale-wall") {{
-            variants = 2;
-        }};
-        calciteWall = new StaticWall("calcite-wall") {{
-            variants = 2;
-        }};
-        celestiteWall = new StaticWall("celestite-wall") {{
-            variants = 2;
-        }};
-        crackrockWall = new StaticWall("crackrock-wall") {{
-            variants = 2;
-        }};
-        combinationWall = new StaticWall("combination-wall") {{
-            variants = 2;
-        }};
-        radiquartzWall = new StaticWall("radiquartz-wall") {{
-            variants = 2;
-        }};
-        radiamphiboleWall = new StaticWall("radiamphibole-wall") {{
-            variants = 2;
-        }};
-        radigabbroWall = new StaticWall("radigabbro-wall") {{
-            variants = 2;
-        }};
-
-        magstoneStone = new Prop("magstone-stone") {{
-            variants = 2;
-        }};
-        magbasaltStone = new Prop("magbasalt-stone") {{
-            variants = 2;
-        }};
-        magshaleStone = new Prop("magshale-stone") {{
-            variants = 2;
-        }};
-        calciteStone = new Prop("calcite-stone") {{
-            variants = 2;
-        }};
-        celestiteStone = new Prop("celestite-stone") {{
-            variants = 2;
-        }};
-        crackrockStone = new Prop("crackrock-stone") {{
-            variants = 2;
-        }};
-        combinationStone = new Prop("combination-stone") {{
-            variants = 2;
-        }};
-        radiquartzStone = new TallBlock("radiquartz-stone") {{
-            variants = 2;
-            clipSize = 120f;
-            breakable = true;
-            breakSound = Sounds.rockBreak;
-            buildCostMultiplier = 10;
-        }};
-        radiamphiboleStone = new Prop("radiamphibole-stone") {{
-            variants = 2;
-        }};
-        radigabbroStone = new Prop("radigabbro-stone") {{
-            variants = 2;
-        }};
-
         induFloor = new Floor("industry-floor", 0) {{
             speedMultiplier = 1.125f;
             dragMultiplier = 0.95f;
@@ -385,12 +392,8 @@ public class SFBlocks {
             decoration = induFloorCover;
             blendGroup = SFBlocks.induFloor;
         }};
-        induFloorCover = new Prop("industry-floor-cover") {{
-            variants = 6;
-            breakSound = Sounds.breaks;
-        }};
-        induFloorWall = new StaticWall("industry-wall") {{
-            variants = 0;
+        induFloorNanowall = new StaticWall("industry-nanowall") {{
+            variants = 4;
         }};
         induFloorNano = new Floor("nano-panel", 16) {{
             emitLight = true;
@@ -402,9 +405,6 @@ public class SFBlocks {
             dragMultiplier = 0.95f;
             statusDuration = 10;
             status = SFStatusEffects.repair;
-        }};
-        induFloorNanowall = new StaticWall("industry-nanowall") {{
-            variants = 4;
         }};
 
         lightRed = new Floor("light-red", 0) {{
@@ -616,7 +616,6 @@ public class SFBlocks {
             buildCostMultiplier = 0.5f;
             fogRadius = 82;
             health = 1500;
-            outlineColor = SFColor.darkOutline;
             discoveryTime = 480f;
             consumePower(1.8f);
             rotateSpeed = -0.75f;
