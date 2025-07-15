@@ -3867,7 +3867,8 @@ public class SFUnitTypes {
                 layerOffset = 0.001f;
                 reload = 90;
                 shootY = 27f;
-                x = y = 0;
+                x = 0;
+                y = 3;
                 rotate = true;
                 rotateSpeed = 1.9f;
                 shootSound = Sounds.mediumCannon;

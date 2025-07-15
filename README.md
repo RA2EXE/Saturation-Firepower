@@ -5,6 +5,8 @@
 > mapping campaigns 
 > 
 > rebalance turrets and units
+> 
+> The translation coverage is 99%, but we still need some help to perfect it
 
 ## Community
 + **Discord Server**

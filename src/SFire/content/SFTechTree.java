@@ -100,6 +100,7 @@ public class SFTechTree {
         addToNode(phaseWeaver, () -> {
             node(discPhaseKnitter);
             node(discPhaseWaver);
+            node(phaseActiver);
         });
         addToNode(siliconCrucible, () -> node(chemicalSiSmelter, () -> node(blastSiSmelter)));
         addToNode(nitrateMixer, () -> {
@@ -128,7 +129,7 @@ public class SFTechTree {
         addToNode(phaseConveyor, () -> node(discConveyor));
 
         addToNode(impulsePump, () -> node(tidalPump));
-        addToNode(pulseConduit, () -> node(silisteelConduit));
+        addToNode(pulseConduit, () -> node(silisteelConduit, () -> node(silesteelBridgeConduit)));
         addToNode(platedConduit, () -> node(reArmoredConduit));
         addToNode(phaseConduit, () -> node(discConduit));
         addToNode(liquidTank, () -> node(silisteelTank));
@@ -183,7 +184,7 @@ public class SFTechTree {
             node(armorContainmentUnit);
             node(discContainmentUnit);
         }));
-        addToNode(unitRepairTower, () -> node(nanoUnitRegener));
+        addToNode(repairTurret, () -> node(nanoUnitRegener));
 
         //items + liquids
         addToNode(Items.coal, () -> {

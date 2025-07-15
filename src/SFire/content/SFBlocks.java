@@ -69,13 +69,14 @@ public class SFBlocks {
             lightRed, lightYellow, lightBlue, lightGreen,
     reforcedFloor, reforcedFloor1, reforcedFloor2, reforcedFloor3, perimeter,
 
-    discEngine, oilDrums, oilDrumsLarge, oilDrumsArmor, radarBig,
+    discEngine, oilDrums, oilDrumsLarge, oilDrumsArmor, radarBig, radarStation,
 
     strontium, rubidium, fermium, chromium,
 
     //crafting
     crusher, sporeCompressor, flywheelCentrifuge,
-    pyraBlender, blastBlender, clusBlender, cryoCentrifuge, plasMultiCompresser, surgeTheSmelter, surgeElesmelter,
+    pyraBlender, blastBlender, clusBlender, cryoCentrifuge,
+    plasMultiCompresser, surgeTheSmelter, surgeElesmelter, phaseActiver,
 
     silisteelSmelter, silisteelSmelterLarge, silisteelSmelterHuge, silisteelCrucible, wavesteelCompresseor, wavesteelForger, metalAnalyzer,
     nanoConstructor, nanoPrinter, lensAtomizer, airCollector, airCooler, nitrateMixer, fractionator,
@@ -95,7 +96,7 @@ public class SFBlocks {
     waveConveyor, rearmoredConveyor, silisteelConveyor, waveJunction, waveBridge,
     discConveyor, discMassDriver,
     //liquid
-    tidalPump, silisteelConduit, reArmoredConduit, silisteelTank, discConduit,
+    tidalPump, silisteelConduit, reArmoredConduit, silesteelBridgeConduit, silisteelTank, discConduit,
 
     //power
     armorBattery, armorNode, discNodeTower,
@@ -613,15 +614,25 @@ public class SFBlocks {
         }};
         radarBig = new Radar("big-radar") {{
             size = 3;
-            buildCostMultiplier = 0.5f;
-            fogRadius = 82;
+            fogRadius = 50;
             health = 1500;
             discoveryTime = 480f;
             consumePower(1.8f);
-            rotateSpeed = -0.75f;
+            outlineColor = Color.valueOf("4a4b53");
             glowColor = SFColor.tayrDark;
-            requirements(Category.effect, with(Items.titanium, 100, Items.silicon, 150, SFItems.tayrAlloy, 50));
-            buildVisibility = BuildVisibility.fogOnly;
+            requirements(Category.effect, BuildVisibility.fogOnly, with(Items.titanium, 100, Items.silicon, 150, SFItems.tayrAlloy, 50));
+        }};
+        radarStation = new Radar("radar-station") {{
+            size = 5;
+            fogRadius = 100;
+            health = 3500;
+            consumePower(5f);
+            glowMag = 1f;
+            rotateSpeed = -0.75f;
+            outlineColor = Color.valueOf("4a4b53");
+            glowColor = SFColor.discLight;
+            category = Category.effect;
+            buildVisibility = BuildVisibility.campaignOnly;
         }};
 
         strontium = new OreBlock(SFItems.strontium) {{
@@ -838,6 +849,30 @@ public class SFBlocks {
             }});
             ambientSound = Sounds.smelter;
             ambientSoundVolume = 0.88f;
+        }};
+        phaseActiver = new GenericCrafter("phase-activer"){{
+            size = 3;
+            requirements(Category.crafting, with(Items.silicon,65, SFItems.fermium,45, SFItems.waveSteel,80, SFItems.lens,50));
+            hasPower = hasItems = true;
+            itemCapacity = 24;
+
+            craftTime = 80;
+            outputItem = new ItemStack(Items.phaseFabric,4);
+            consumePower(3.5f);
+            consumeItems(with(Items.sand,8, SFItems.discFabric,1));
+
+            craftEffect = new WaveEffect() {{
+                interp = Interp.circleOut;
+                lifetime = 60;
+                sizeFrom = 0;
+                sizeTo = 10;
+                strokeFrom = 6;
+                colorFrom = Color.valueOf("FFF1D2A8");
+                colorTo = Color.valueOf("FFD197A8");
+            }};
+            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawWeave(), new DrawDefault());
+            ambientSound = Sounds.techloop;
+            ambientSoundVolume = 0.28f;
         }};
 
         silisteelSmelter = new GenericCrafter("silistell-smelter") {{
@@ -1242,11 +1277,11 @@ public class SFBlocks {
                         stroke = 0.8f;
                         length = 8;
                         radius = 1;
-                        color = Color.valueOf("FFD197");
+                        color = SFColor.discLight;
                     }},
                     new DrawDefault(),
                     new DrawGlowRegion() {{
-                        color = Color.valueOf("EEC951");
+                        color = SFColor.discLight;
                     }}
             );
         }};
@@ -1819,8 +1854,8 @@ public class SFBlocks {
             health = 450;
             size = 3;
             requirements(Category.effect, with(Items.lead,180, Items.plastanium,90, Items.surgeAlloy,75, SFItems.nanoCore,80));
-            range = 100f;
-            phaseRangeBoost = 100;
+            range = 150f;
+            phaseRangeBoost = 50;
             reload = 120;
             healPercent = 8;
             phaseBoost = 4;
@@ -2037,21 +2072,32 @@ public class SFBlocks {
         }};
         silisteelConduit = new Conduit("silisteel-conduit") {{
             health = 220;
-            requirements(Category.liquid, with(Items.lead, 1, Items.metaglass, 2, SFItems.siliSteel, 1));
+            requirements(Category.liquid, with(Items.lead,1, Items.metaglass,2, SFItems.siliSteel,1));
             liquidCapacity = 40;
             liquidPressure = 2f;
-            bridgeReplacement = Blocks.phaseConduit;
-            explosivenessScale = flammabilityScale = 16f / 50f;
+            explosivenessScale = flammabilityScale = 16f/50f;
         }};
         reArmoredConduit = new ArmoredConduit("complex-armored-conduit") {{
             health = 560;
             armor = 8;
-            requirements(Category.liquid, with(Items.titanium, 1, Items.metaglass, 2, SFItems.siliSteel, 1, SFItems.fermium, 1));
+            requirements(Category.liquid, with(Items.titanium,1, Items.metaglass,2, SFItems.siliSteel,1, SFItems.fermium,1));
             liquidCapacity = 150;
             liquidPressure = 2f;
-            bridgeReplacement = discConduit;
             insulated = absorbLasers = placeableLiquid = true;
             explosivenessScale = flammabilityScale = 16f / 50f;
+        }};
+        silesteelBridgeConduit = new LiquidBridge("silisteel-bridge-conduit"){{
+            health = 220;
+            requirements(Category.liquid, with(Items.graphite,6, Items.metaglass,12, SFItems.siliSteel,2, SFItems.waveSteel,2));
+            fadeIn = moveArrows = false;
+            ((Conduit) silisteelConduit).bridgeReplacement = this;
+            range = 6;
+            hasPower = false;
+            liquidCapacity = 120f;
+            explosivenessScale = flammabilityScale = 16f/50f;
+            bridgeWidth = 8f;
+            arrowSpacing = 6f;
+            placeableLiquid = true;
         }};
         silisteelTank = new LiquidRouter("silisteel-tank") {{
             size = 4;

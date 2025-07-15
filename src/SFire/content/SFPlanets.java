@@ -9,6 +9,7 @@ import mindustry.graphics.g3d.HexSkyMesh;
 import mindustry.graphics.g3d.MultiMesh;
 import mindustry.maps.planet.SerpuloPlanetGenerator;
 import mindustry.type.Planet;
+import mindustry.world.meta.Attribute;
 
 public class SFPlanets {
     public static Planet tiberia;
@@ -37,6 +38,8 @@ public class SFPlanets {
             atmosphereRadOut = 0.3f;
             landCloudColor = SFColor.tayrDark.cpy().a(0.5f);
 
+            defaultAttributes.set(Attribute.heat, 0.005f);
+            defaultAttributes.set(SFAttribute.radioactivity, 0.005f);
 
             allowWaves = true;
             allowLegacyLaunchPads = false;
@@ -57,12 +60,8 @@ public class SFPlanets {
             };
 
             allowCampaignRules = false;
-            showRtsAIRule = true;
             campaignRuleDefaults.showSpawns = true;
             campaignRuleDefaults.rtsAI = true;
-
-
-
 
 
 
