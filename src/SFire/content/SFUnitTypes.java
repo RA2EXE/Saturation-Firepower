@@ -6843,7 +6843,7 @@ public class SFUnitTypes {
             buildBeamOffset = 11;
             buildSpeed = 2.25f;
             itemCapacity = 150;
-            mineRange = 50;
+            mineRange = 90;
             mineTier = 4;
             mineSpeed = 10;
             health = 1000;
@@ -6853,21 +6853,22 @@ public class SFUnitTypes {
             weapons.add(new Weapon(name("tau-weapon")) {{
                 x = y = 0;
                 recoil = 0;
-                reload = 30;
+                reload = 36;
                 rotate = false;
                 shootSound = Sounds.missile;
                 inaccuracy = 3;
                 baseRotation = 45;
                 shootCone = 60;
-                shoot = new ShootSpread(6, 3);
+                shoot = new ShootSpread(4, 4);
                 bullet = new MissileBulletType(8, 12) {{
-                    splashDamage = 10;
-                    splashDamageRadius = 10;
+                    splashDamage = 12;
+                    splashDamageRadius = 16;
                     buildingDamageMultiplier = 0.3f;
+                    hitSound = Sounds.none;
                     hitEffect = new WrapEffect(Fx.hitSquaresColor, Pal.heal);
                     despawnEffect = new WrapEffect(Fx.hitBulletColor, Pal.heal);
+                    healPercent = 5f;
                     collidesTeam = true;
-                    healPercent = 1 / 6f;
                     reflectable = false;
                     trailColor = Pal.heal;
                     frontColor = Color.white;

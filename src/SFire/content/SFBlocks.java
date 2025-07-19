@@ -58,7 +58,7 @@ import static mindustry.type.ItemStack.*;
 public class SFBlocks {
     public static Block
     //environment + wall + ores
-    snowSand, sporeSand, quartzSand, rareEarth, rareEarthWater, calrareEarth, calrareEarthWall,
+    snowSand, sporeSand, quartzSand, rareMound, rareEarth, rareEarthWater, calrareEarth, calrareEarthWall,
     magstoneFloor, magstoneWall, magstoneStone, magbasaltFloor, magbasaltWall, magbasaltStone, magshaleFloor, magshaleWall, magshaleStone,
     calciteFloor, calciteWall, calciteStone, celestiteFloor, celestiteVent, celestiteWall, celestiteStone,
     crackrockFloor, crackrockWall, crackrockStone, combinationFloor, combinationVent, combinationWall, combinationStone,
@@ -135,22 +135,28 @@ public class SFBlocks {
             playerUnmineable = true;
             attributes.set(Attribute.oil, 0.35f);
             attributes.set(Attribute.water, 0.2f);
+            decoration = Blocks.snowBoulder;
         }};
         sporeSand = new Floor("spore-sand") {{
             itemDrop = Items.sand;
             playerUnmineable = true;
             attributes.set(Attribute.oil, 0.4f);
             attributes.set(Attribute.spores, 0.2f);
+            decoration = Blocks.sporeCluster;
         }};
         quartzSand = new Floor("quartz-sand") {{
             itemDrop = Items.sand;
             playerUnmineable = true;
             attributes.set(SFAttribute.radioactivity, 0.08f);
         }};
+        rareMound = new Prop("rare-mound") {{
+            variants = 2;
+        }};
         rareEarth = new Floor("rare-earth-floor", 4) {{
             itemDrop = SFItems.rareEarth;
             playerUnmineable = true;
             dragMultiplier = 1.08f;
+            decoration = rareMound;
         }};
         rareEarthWater = new Floor("rare-earth-water", 4) {{
             speedMultiplier = 0.8f;
@@ -231,6 +237,7 @@ public class SFBlocks {
             breakable = true;
             breakSound = Sounds.rockBreak;
             buildCostMultiplier = 10;
+            ((Floor)quartzSand).decoration = this;
         }};
         radiamphiboleStone = new Prop("radiamphibole-stone") {{
             variants = 2;
@@ -3868,10 +3875,7 @@ public class SFBlocks {
             reload = 35;
             rotateSpeed = 5;
             range = 280;
-            shootEffect = new MultiEffect(
-                    Fx.shootBig2,
-                    Fx.shootPyraFlame
-            );
+            shootEffect = new MultiEffect(Fx.shootBig2, Fx.shootPyraFlame);
             smokeEffect = new ParticleEffect(){{
                 particles = 8;
                 strokeFrom = 3;
@@ -4160,8 +4164,9 @@ public class SFBlocks {
 
                         bulletInterval = 1.75f;
                         intervalBullets = 2;
-                        intervalRandomSpread = 30;
-                        intervalBullet = new BasicBulletType(9.2f,10){{
+                        intervalRandomSpread = fragRandomSpread = 30;
+                        fragBullets = 15;
+                        intervalBullet = fragBullet = new BasicBulletType(9.2f,10){{
                             lifetime = 8;
                             knockback = 2;
                             frontColor = hitColor = Pal.plastaniumFront;
@@ -4184,7 +4189,7 @@ public class SFBlocks {
                         pierceCap = 5;
                         pierceDamageFactor = 0.01f;
                         lightning = 3;
-                        lightningLength = 9;
+                        lightningLength = 18;
                         lightningDamage = 27;
 
                         width = height = 35;
