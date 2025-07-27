@@ -39,7 +39,7 @@ public class SFPlanets {
             landCloudColor = SFColor.tayrDark.cpy().a(0.5f);
 
             defaultAttributes.set(Attribute.heat, 0.005f);
-            defaultAttributes.set(SFAttribute.radioactivity, 0.005f);
+            defaultAttributes.set(SFAttribute.radioactivity, 0.01f);
 
             allowWaves = true;
             allowLegacyLaunchPads = false;
