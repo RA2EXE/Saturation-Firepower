@@ -1651,7 +1651,7 @@ public class SFBlocks {
             craftTime = 80;
             outputItem = new ItemStack(SFItems.tayrAlloy, 1);
             consumePower(5.25f);
-            consumeItems(with(SFItems.strontium, 1, SFItems.siliSteel, 1, Items.silicon, 1));
+            consumeItems(with(SFItems.strontium,2, SFItems.siliSteel, 1, Items.silicon,2));
 
             craftEffect = new RadialEffect() {{
                 amount = 4;
@@ -2650,6 +2650,8 @@ public class SFBlocks {
             drillMultipliers.put(Items.sand,2);
             drillMultipliers.put(Items.scrap,2);
             drillMultipliers.put(SFItems.rareEarth,2);
+            drillMultipliers.put(Items.copper,1.25f);
+            drillMultipliers.put(Items.lead,1.25f);
             blockedItem = SFItems.fermium;
 
             consumeLiquid(Liquids.water, 0.3f);
@@ -3182,7 +3184,7 @@ public class SFBlocks {
         }};
         cuodao = new PowerTurret("cuodao") {{
             size = 2;
-            health = 360;
+            health = 1000;
             recoil = 2f;
             recoilTime = 10;
             targetGround = false;
@@ -3224,7 +3226,7 @@ public class SFBlocks {
         }};
         longxi = new ItemTurret("longxi") {{
             size = 2;
-            health = 1420;
+            health = 960;
             recoil = 2f;
             cooldownTime = recoilTime = 105;
             heatColor = Color.valueOf("f68021");
@@ -3339,7 +3341,7 @@ public class SFBlocks {
         }};
         mengma = new ItemTurret("mengma") {{
             size = 2;
-            health = 1420;
+            health = 980;
             recoil = 0.5f;
             cooldownTime = recoilTime = 20;
             shootSound = Sounds.artillery;
@@ -3447,7 +3449,7 @@ public class SFBlocks {
                     progress = PartProgress.reload;
                 }});
             }};
-            requirements(Category.turret, with(Items.copper, 140, Items.graphite, 35, Items.titanium, 80));
+            requirements(Category.turret, with(Items.copper,340, Items.graphite,55, Items.titanium,80));
 
             reload = 22;
             rotateSpeed = 12;
@@ -3562,7 +3564,7 @@ public class SFBlocks {
             shake = 1.5f;
             inaccuracy = 3;
             shoot = new ShootAlternate(9);
-            requirements(Category.turret, with(Items.graphite,40, SFItems.waveSteel,85, Items.metaglass,30));
+            requirements(Category.turret, with(Items.copper,130, Items.graphite,80, SFItems.waveSteel,85, Items.metaglass,30));
 
             reload = 4.5f;
             rotateSpeed = 6;
@@ -3595,9 +3597,9 @@ public class SFBlocks {
                         height = 13;
                         ammoMultiplier = 5;
 
-                        frontColor = hitColor = SFColor.strontiumDark;
-                        backColor = SFColor.strontiumLight;
-                        hitEffect = new MultiEffect(Fx.hitBulletColor, new Effect(35f, e -> {
+                        frontColor = hitColor = SFColor.strontiumLight;
+                        backColor = SFColor.strontiumDark;
+                        hitEffect = despawnEffect = new MultiEffect(Fx.hitBulletColor, new Effect(35f, e -> {
                             color(SFColor.strontiumLight, SFColor.strontiumDark, e.fin());
                             randLenVectors(e.id, 3, 2f + e.fin() * 10f, (x, y) -> {
                                 Fill.circle(e.x + x, e.y + y, 0.2f + e.fout() * 1.6f);

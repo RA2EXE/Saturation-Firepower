@@ -6117,6 +6117,7 @@ public class SFUnitTypes {
             mineSpeed = 11;
             mineTier = 4;
             mineRange = 70;
+            mineItems.add(SFItems.strontium,SFItems.chromium,SFItems.rubidium,SFItems.rareEarth);
             trailLength = 6;
             engineSize = 2.8f;
             engineOffset = 16;

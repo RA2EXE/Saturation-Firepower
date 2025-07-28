@@ -65,11 +65,12 @@ public class SFOverride {
                     hitEffect = Fx.flakExplosion;
                 }}
         );
+        Blocks.salvo.health = 1060;
         ((ItemTurret) Blocks.salvo).shoot.shots = 6;
         ((ItemTurret) Blocks.salvo).shoot.shotDelay = 2;
         ((ItemTurret) Blocks.salvo).ammoTypes.put(Items.blastCompound, new BasicBulletType(5,16){{
             lifetime = 44.4f;
-            rangeChange = 4f * 8f;
+            rangeChange = 32;
             splashDamage = 35;
             splashDamageRadius = 30 * 0.75f;
             status = StatusEffects.blasted;
@@ -81,6 +82,10 @@ public class SFOverride {
             width = 10;
             height = 13;
         }});
+        var qs1 = ((ItemTurret) Blocks.salvo).ammoTypes.get(Items.thorium);
+        qs1.lifetime = 37;
+        qs1.speed = 6;
+        qs1.rangeChange = 32;
 
         ((PowerTurret) Blocks.lancer).range = 226;
         ((PowerTurret) Blocks.lancer).reload = 100;
@@ -398,6 +403,7 @@ public class SFOverride {
                     pierceArmor = true;
                     pierceBuilding = true;
                     knockback = 0.7f;
+                    hitEffect = Fx.hitBulletBig;
 
                     backColor = hitColor = Pal.thoriumAmmoBack;
                     frontColor = Pal.thoriumAmmoFront;
@@ -569,6 +575,7 @@ public class SFOverride {
         Blocks.siliconCrucible.itemCapacity = 40;
         //endregion
         Blocks.armoredConveyor.placeableLiquid = true;
+        Blocks.platedConduit.placeableLiquid = true;
         //region power
         ((ConsumeGenerator) Blocks.steamGenerator).powerProduction = 6f;
         ((ConsumeGenerator) Blocks.differentialGenerator).powerProduction = 19.8f;
