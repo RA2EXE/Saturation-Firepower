@@ -17,7 +17,7 @@ import static mindustry.content.StatusEffects.*;
 
 public class SFStatusEffects {
     public static StatusEffect
-            repair, repairX, disRepair, scrambled, strengthen, negative, postive,
+            repair, repairX, disRepair, fastBuild, scrambled, strengthen, negative, postive,
             magnStrif, marked, acidded, inBreak, breakdown, echoFlame, overLoad,
             stormed, shattered, overFreezing, chemicalFlame, fullFire,
             skewed, charging;
@@ -80,6 +80,13 @@ public class SFStatusEffects {
                 colorFrom = Pal.heal;
             }};
             init(() -> opposite(repair, repairX));
+        }};
+        fastBuild = new StatusEffect("fast-build") {{
+            color = Pal.heal;
+           buildSpeedMultiplier = 1.25f;
+           speedMultiplier = 1.1f;
+            effectChance = 0.1f;
+            effect = Fx.overdriven;
         }};
         scrambled = new StatusEffect("scrambled") {{
             color = Pal.heal;

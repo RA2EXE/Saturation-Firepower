@@ -6850,7 +6850,18 @@ public class SFUnitTypes {
             health = 1000;
             engineSize = 2.8f;
             engineOffset = 16;
-            setEnginesMirror(new UnitEngine(-10, -11, 3f, -112.5f));
+            setEnginesMirror(new UnitEngine(10, -11, 3f, 292.5f));
+            abilities.add(new StatusFieldAbility(SFStatusEffects.fastBuild, 240, 360, 80) {{
+                applyEffect = Fx.heal;
+                activeEffect = new WaveEffect() {{
+                    lifetime = 60;
+                    sizeTo = 80;
+                    strokeFrom = 2f;
+                    colorTo = colorFrom = Pal.heal;
+                    interp = Interp.circleOut;
+                }};
+            }});
+
             weapons.add(new Weapon(name("tau-weapon")) {{
                 x = y = 0;
                 recoil = 0;
@@ -6902,10 +6913,11 @@ public class SFUnitTypes {
             health = 4800;
             armor = 12;
             engineSize = 5.5f;
-            engineOffset = 16;
+            engineOffset = 18;
             setEnginesMirror(
-                    new UnitEngine(-13, -15, 2.5f, 225),
-                    new UnitEngine(-16, -9.5f, 2, 225));
+                    new UnitEngine(13.5f, -15.5f, 2.5f, 315)
+                    //,new UnitEngine(16.5f, -10f, 2, 315)
+            );
             weapons.add(
                     new Weapon(name("omega-gun")) {{
                         x = y = 0;
