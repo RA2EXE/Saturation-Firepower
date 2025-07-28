@@ -6546,7 +6546,7 @@ public class SFUnitTypes {
                         mirror = false;
                         shootSound = Sounds.laserblast;
                         bullet = new BasicBulletType(3, 200, "large-bomb") {{
-                            collides = false;
+                            laserAbsorb = true;
                             hitSize = 15;
                             hitShake = 3;
                             height = width = 38;
@@ -6554,9 +6554,8 @@ public class SFUnitTypes {
                             shrinkY = 0;
                             trailLength = 13;
                             trailWidth = 4;
-                            trailColor = SFColor.energyYellow;
-                            frontColor = SFColor.energyYellow;
-                            backColor = Color.white;
+                            trailColor = backColor = SFColor.energyYellow;
+                            frontColor= Color.white;
                             lifetime = 120;
                             pierce = true;
                             status = SFStatusEffects.breakdown;

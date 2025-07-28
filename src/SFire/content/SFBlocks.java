@@ -1,5 +1,6 @@
 package SFire.content;
 
+import SFire.expand.blocks.ExplodeWall;
 import SFire.expand.blocks.PressureDrill;
 import SFire.expand.bullets.PowerupBulletType;
 import SFire.expand.blocks.SFCore;
@@ -68,7 +69,7 @@ public class SFBlocks {
 
     induFloor, induFloorSupplyer, induFloorBroken, induFloorHeater, induHeatBroken, induFloorCover, induFloorWall, induFloorNano, induFloorNanowall,
             lightRed, lightYellow, lightBlue, lightGreen,
-    reforcedFloor, reforcedFloor1, reforcedFloor2, reforcedFloor3, perimeter,
+    reforcedFloor1, reforcedFloor2,  perimeter,
 
     discEngine, oilDrums, oilDrumsLarge, oilDrumsArmor, radarBig, radarStation,
 
@@ -87,7 +88,7 @@ public class SFBlocks {
     //primaryLab, seniorLab, warfareLab
 
     //wall
-    steelWall, steelWallLarge, influxWall, influxWallLarge, discWall,
+    steelWall, steelWallLarge, influxWall, influxWallLarge, expWall, expWallLarge, discWall,
     fermWall, fermWallLarge, fermDoor, leipWall, leipWallLarge,
     discContainmentUnit, armorContainmentUnit, tayrContainmentUnit,
 
@@ -446,30 +447,28 @@ public class SFBlocks {
             lightColor = Color.green.cpy().a(0.6f);
         }};
 
-        reforcedFloor = new Floor("reforced-floor", 0) {{
+
+        reforcedFloor1 = new Floor("reforced-floor-1",0) {{
             speedMultiplier = 1.3f;
             dragMultiplier = 1.15f;
             attributes.set(Attribute.oil, -0.125f);
             attributes.set(Attribute.water, -0.125f);
+
+            /*autotile = true;
+            drawEdgeOut = false;
+            drawEdgeIn = false;*/
         }};
-        reforcedFloor1 = new Floor("reforced-floor-1", 0) {{
+        reforcedFloor2 = new Floor("reforced-floor-2",0) {{
             speedMultiplier = 1.3f;
             dragMultiplier = 1.15f;
             attributes.set(Attribute.oil, -0.125f);
             attributes.set(Attribute.water, -0.125f);
-            blendGroup = SFBlocks.reforcedFloor;
+
+            /*autotile = true;
+            drawEdgeOut = false;
+            drawEdgeIn = false;*/
         }};
-        reforcedFloor2 = new Floor("reforced-floor-2", 0) {{
-            speedMultiplier = 1.3f;
-            dragMultiplier = 1.15f;
-            attributes.set(Attribute.oil, -0.125f);
-            attributes.set(Attribute.water, -0.125f);
-            blendGroup = SFBlocks.reforcedFloor;
-        }};
-        reforcedFloor3 = new OverlayFloor("reforced-floor-3") {{
-            variants = 0;
-        }};
-        perimeter = new Floor("perimeter", 0) {{
+        perimeter = new Floor("perimeter",0) {{
             placeableOn = false;
             speedMultiplier = 1.3f;
             dragMultiplier = 1.15f;
@@ -1793,6 +1792,18 @@ public class SFBlocks {
             lightningLength = 25;
             insulated = true;
             absorbLasers = true;
+        }};
+        expWall = new ExplodeWall("explosive-armor") {{
+            size = 1;
+            requirements(Category.defense, with(SFItems.waveSteel,4, SFItems.strontium,3, Items.blastCompound,8));
+            health = 560;
+        }};
+        expWallLarge = new ExplodeWall("explosive-armor-large") {{
+            size = 2;
+            requirements(Category.defense, ItemStack.mult(expWall.requirements, 4));
+            health = 560 * largeHealth;
+            range = 60 * 1.5f;
+            expDamage = 300*4;
         }};
         discWall = new ShieldWall("discfabric-wall") {{
             size = 2;

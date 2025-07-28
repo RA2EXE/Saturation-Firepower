@@ -32,7 +32,6 @@ public class SFireMod extends Mod {
         SFAttribute.load();
         SFItems.load();
         SFLiquids.load();
-        //SFBulletTypes.load();
         SFUnitTypes.loadUnit();
         SFBlocks.load();
         SFOverride.load();
