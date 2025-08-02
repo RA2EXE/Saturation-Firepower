@@ -90,7 +90,7 @@ public class SFOverride {
 
         ((PowerTurret) Blocks.lancer).range = 226;
         ((PowerTurret) Blocks.lancer).reload = 100;
-        ((PowerTurret) Blocks.lancer).shootType = new LaserBulletType(200) {{
+        ((PowerTurret) Blocks.lancer).shootType = new LaserBulletType(180) {{
             length = 226;
             width = 18;
             ammoMultiplier = 1;
@@ -99,10 +99,10 @@ public class SFOverride {
             lightningColor = Pal.lancerLaser;
             lightningSpacing = 25;
             lightningDelay = 0.6f;
-            lightningLength = 4;
-            lightningLengthRand = 2;
+            lightningLength = 0;
+            lightningLengthRand = 4;
             lightningAngleRand = 16;
-            lightningDamage = 15;
+            lightningDamage = 10;
             collidesAir = false;
 
             chargeEffect = new MultiEffect(Fx.lancerLaserCharge, Fx.lancerLaserChargeBegin);
@@ -345,7 +345,7 @@ public class SFOverride {
         ((ItemTurret) Blocks.fuse).reload = 40;
         ((ItemTurret) Blocks.fuse).range = 100;
         ((ItemTurret) Blocks.fuse).shoot = new ShootSpread(4,12.5f);
-        Blocks.fuse.health = 2230;
+        Blocks.fuse.health = 2300;
         Blocks.fuse.armor = 8;
         ((ItemTurret) Blocks.fuse).ammoTypes.get(Items.titanium).damage = 88;
         ((ItemTurret) Blocks.fuse).ammoTypes.get(Items.thorium).damage = 135.2f;

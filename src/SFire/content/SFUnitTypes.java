@@ -3069,8 +3069,9 @@ public class SFUnitTypes {
                         reload = 10;
                         targetInterval = 8;
                         targetSwitchInterval = 8;
+                        alternate = false;
                         bullet = new BulletType() {{
-                            maxRange = 250;
+                            maxRange = 260;
                             damage = 80;
                             shootEffect = Fx.sparkShoot;
                             hitEffect = Fx.pointHit;
@@ -3713,7 +3714,7 @@ public class SFUnitTypes {
             omniMovement = false;
             rotateMoveFirst = true;
             rotateSpeed = 2;
-            speed = 0.975f;
+            speed = 0.75f;
             hitSize = 20f;
             treadRects = new Rect[]{new Rect(-45f, -45f, 24, 88)};
 
@@ -3735,39 +3736,40 @@ public class SFUnitTypes {
             }});
             weapons.add(new Weapon(name("skyfire-weapon")) {{
                 x = y = 0;
-                reload = 400;
+                reload = 300;
                 rotate = true;
                 rotateSpeed = 2;
                 minWarmup = 0.93f;
                 shootWarmupSpeed = 0.05f;
-                mirror = true;
-                alternate = false;
+                mirror = false;
                 parts.add(new RegionPart("-front") {{
                     moveY = -4;
                     under = true;
                     mirror = true;
                 }});
-                shoot.shots = 25;
-                shoot.shotDelay = 6;
+                shoot.shots = 12;
+                shoot.shotDelay = 8;
                 xRand = 4;
                 inaccuracy = 6;
-                shootSound = Sounds.missile;
+                shootSound = Sounds.missileSmall;
                 shootStatus = StatusEffects.unmoving;
-                shootStatusDuration = 200;
+                shootStatusDuration = 160;
                 velocityRnd = 0.1f;
-                bullet = new ArtilleryBulletType(8, 8, "sfire-mod-missile1") {{
-                    lifetime = 37.5f;
-                    splashDamage = 55;
+                bullet = new ArtilleryBulletType(6, 10, "sfire-mod-missile1") {{
+                    lifetime = 60f;
+                    splashDamage = 35;
                     splashDamageRadius = 40;
-                    buildingDamageMultiplier = 2.25f;
+                    buildingDamageMultiplier = 2.8f;
                     collides = false;
-                    makeFire = true;
                     status = StatusEffects.blasted;
-                    backColor = SFColor.enemyRedLight;
+                    backColor = Pal.blastAmmoBack;
                     frontColor = SFColor.missileGray;
-                    width = 12;
+                    width = 10;
                     height = 40;
-                    trailInterval = 1;
+                    trailInterval = 2;
+                    trailColor = Color.white.cpy().a(0.5f);
+                    trailWidth = 2;
+                    trailLength = 18;
                     trailEffect = new ParticleEffect() {{
                         particles = 3;
                         length = 30;

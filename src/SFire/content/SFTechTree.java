@@ -28,6 +28,7 @@ public class SFTechTree {
         //turrets
         addToNode(arc, () -> {
             node(gaosi);
+            node(bingfengbao);
             node(xianqu, () -> node(liebao, () -> node(qingning)));
         });
         addToNode(hail, () -> {
@@ -42,7 +43,7 @@ public class SFTechTree {
             });
         });
         addToNode(lancer, () -> {
-            node(dianguang, () -> node(bingfengbao));
+            node(dianguang);
             node(dianji);
         });
         addToNode(parallax, () -> node(cuodao));
