@@ -415,6 +415,8 @@ public class SFBlocks {
             dragMultiplier = 0.95f;
             statusDuration = 10;
             status = SFStatusEffects.repair;
+            drawEdgeOut = false;
+            drawEdgeIn = false;
         }};
 
         lightRed = new Floor("light-red", 0) {{
