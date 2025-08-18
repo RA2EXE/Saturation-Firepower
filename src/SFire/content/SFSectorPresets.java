@@ -13,9 +13,10 @@ public class SFSectorPresets {
     crackHills,sandValley,craterBay
     ;
     public static void load(){
-        /*frozenFront = new SectorPreset("frozenFront", tiberia, 15){{
+        frozenFront = new SectorPreset("frozenFront", tiberia, 15){{
             difficulty = 1;
             addStartingItems = true;
-        }};*/
+            
+        }};
     }
 }

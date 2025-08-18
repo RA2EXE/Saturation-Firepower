@@ -1,11 +1,13 @@
 package SFire.content;
 
+import arc.Events;
 import arc.graphics.*;
 import arc.math.Mathf;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
 import mindustry.entities.effect.WrapEffect;
+import mindustry.game.EventType;
 import mindustry.graphics.*;
 import arc.math.Interp;
 import mindustry.entities.effect.MultiEffect;
@@ -13,6 +15,7 @@ import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
 import mindustry.type.StatusEffect;
 
+import static mindustry.Vars.state;
 import static mindustry.content.StatusEffects.*;
 
 public class SFStatusEffects {
@@ -203,7 +206,7 @@ public class SFStatusEffects {
         acidded = new StatusEffect("acidded") {{
             damage = 1.88f;
             speedMultiplier = 0.98f;
-            healthMultiplier = 0.85f;
+            healthMultiplier = 0.95f;
             effectChance = 0.6f;
             effect = new ParticleEffect() {{
                 particles = 3;
@@ -220,8 +223,7 @@ public class SFStatusEffects {
         }};
         inBreak = new StatusEffect("inside-break") {{
             color = Color.valueOf("666484");
-            healthMultiplier = 0.9f;
-            reloadMultiplier = 0.9f;
+            healthMultiplier = 0.93f;
             effectChance = 0;
             effect = null;
             permanent = true;
@@ -252,65 +254,47 @@ public class SFStatusEffects {
                         color = Color.valueOf("FEEBB3");
                     }}
             );
-            transitionDamage = 1000;
+            transitionDamage = 18f;
             init(() -> {
                 affinity(melting, (unit, result, time) -> {
-                    unit.damagePierce(8f);
+                    unit.damagePierce(transitionDamage);
                     breakdown.effect.at(unit.x + Mathf.range(unit.bounds() / 2f), unit.y + Mathf.range(unit.bounds() / 2f));
                     result.set(breakdown, Math.min(time + result.time, 200f));
                 });
             });
         }};
         echoFlame = new StatusEffect("echo-flame") {{
-            color = SFColor.plastLight;
+            color = SFColor.energyGreen;
             damage = 120;
             dragMultiplier = 1.8f;
+            applyEffect = new WrapEffect(Fx.titanSmoke, SFColor.energyGreen);
             effectChance = 1;
-            effect = new MultiEffect(
-                    new ParticleEffect() {{
-                        particles = 1;
-                        baseLength = 25;
-                        length = 35;
-                        lifetime = 60;
-                        interp = Interp.fastSlow;
-                        sizeInterp = Interp.bounce;
-                        region = "sfire-mod-star";
-                        sizeFrom = 16;
-                        colorFrom = colorTo = SFColor.plastLight;
-                    }},
-                    new ParticleEffect() {{
-                        particles = 3;
-                        length = 125;
-                        lifetime = 30;
-                        interp = Interp.fastSlow;
-                        sizeInterp = Interp.bounce;
-                        region = "sfire-mod-star";
-                        sizeFrom = 9;
-                        colorFrom = SFColor.plastLight.cpy().a(0.05f);
-                        colorTo = SFColor.plastLight;
-                    }}
-            );
-            transitionDamage = 1000;
+            effect = new ParticleEffect() {{
+                particles = 1;
+                baseLength = 25;
+                length = 35;
+                lifetime = 60;
+                interp = Interp.fastSlow;
+                sizeInterp = Interp.bounce;
+                region = "sfire-mod-star";
+                sizeFrom = 16;
+                colorFrom = colorTo = SFColor.energyGreen;
+            }};
+            transitionDamage = 600;
             init(() -> {
                 affinity(breakdown, (unit, result, time) -> {
-                    float transitionDamageMultiplier = 1.5f;
-                    new WrapEffect() {{
-                        effect = Fx.dynamicSpikes;
-                        color = SFColor.plastLight;
-                        rotation = 60;
-                    }}.at(unit.x, unit.y);
-                    unit.damagePierce(transitionDamage * transitionDamageMultiplier);
-                    unit.damage(transitionDamage * transitionDamageMultiplier);
-                    result.set(echoFlame, Math.min(time + result.time, 10f));
+                    new WrapEffect(Fx.dynamicSpikes, SFColor.energyGreen, 60).at(unit.x, unit.y);
+                    unit.damage(transitionDamage);
+                    //result.set(echoFlame, Math.min(time + result.time, 20f));
                 });
             });
         }};
         overLoad = new StatusEffect("over-load") {{
             color = SFColor.energyYellow;
             damage = 20 / 3f;
-            damageMultiplier = 25 / 3f;
+            damageMultiplier = 1.5f;
             healthMultiplier = 0.54f;
-            reloadMultiplier = 0.36f;
+            reloadMultiplier = 0.45f;
             effectChance = 0.08f;
             effect = new WaveEffect() {{
                 sizeFrom = 8;
@@ -319,8 +303,8 @@ public class SFStatusEffects {
                 strokeFrom = 12;
                 interp = Interp.circleOut;
                 lifetime = 16;
-                colorFrom = SFColor.energyYellow.cpy().a(0.08f);
-                colorTo = SFColor.energyYellow;
+                colorFrom = SFColor.discDark.cpy().a(0.08f);
+                colorTo = SFColor.discLight;
                 lightOpacity = 0.12f;
             }};
         }};
@@ -377,6 +361,14 @@ public class SFStatusEffects {
                 sizeFrom = 5;
                 colorFrom = colorTo = Liquids.cryofluid.color;
             }};
+            transitionDamage = 20f;
+            init(() -> {
+                opposite(melting, burning);
+
+                affinity(blasted, (unit, result, time) -> {
+                    unit.damagePierce(transitionDamage);
+                });
+            });
         }};
         chemicalFlame = new StatusEffect("chemical-flame") {{
             color = SFColor.enemyRedLight;
@@ -407,12 +399,11 @@ public class SFStatusEffects {
                         colorTo = Color.valueOf("585858A8");
                     }}
             );
-            transitionDamage = 60;
+            transitionDamage = 30;
             init(() -> {
+                opposite(freezing, overFreezing);
                 affinity(tarred, (unit, result, time) -> {
                     unit.damagePierce(transitionDamage);
-                    Fx.burning.at(unit.x + Mathf.range(unit.bounds() / 2f), unit.y + Mathf.range(unit.bounds() / 2f));
-                    result.set(burning, Math.min(time + result.time, 300f));
                 });
             });
         }};

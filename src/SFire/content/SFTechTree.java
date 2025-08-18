@@ -7,13 +7,12 @@ import mindustry.game.Objectives.*;
 import mindustry.type.ItemStack;
 
 import static mindustry.content.Blocks.*;
-import static mindustry.content.SectorPresets.craters;
 import static mindustry.content.SectorPresets.*;
 import static mindustry.content.TechTree.*;
-import static mindustry.content.TechTree.nodeProduce;
 import static mindustry.content.UnitTypes.*;
 
 import static SFire.content.SFBlocks.*;
+import static SFire.content.SFSectorPresets.*;
 import static SFire.content.SFUnitTypes.*;
 
 
@@ -224,10 +223,26 @@ public class SFTechTree {
         addToNode(Liquids.oil, () -> nodeProduce(SFLiquids.nitratedOil, () -> nodeProduce(SFLiquids.blastReagent, () -> {
         })));
 
+        //sector
+        addToNode(planetaryTerminal, () -> {
+            node(frozenFront, Seq.with(
+            new SectorComplete(planetaryTerminal),
+            new Research(oct),
+            new Research(corvus),
+            new Research(reign),
+            new Research(eclipse),
+            new Research(tank5),
+            new Research(air5),
+            new Research(toxopid)
+            ), () -> {
+
+            });
+        });
+
 
     }
 
-    //虽然看不懂，但是能用，GUIY这么写一定有他的深意......能run的东西就别乱动了
+
     public static void addToNode(UnlockableContent p, Runnable c) {
         context = TechTree.all.find(t -> t.content == p);
         c.run();

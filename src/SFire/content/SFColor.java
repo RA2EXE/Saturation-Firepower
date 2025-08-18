@@ -25,7 +25,6 @@ public class SFColor {
 
             missileGray = Color.valueOf("E3E3E3"),
             smoke = Color.valueOf("737373"),
-            plastLight = Color.valueOf("F2FF9C"),
             energyYellow = Color.valueOf("FEEBB3"),
             energySky = Color.valueOf("c0ecff"),
             energyGreen = Color.valueOf("F2FF9C"),

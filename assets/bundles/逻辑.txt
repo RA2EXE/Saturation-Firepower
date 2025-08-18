@@ -1,61 +1,56 @@
-getflag go "start"
-jump 0 notEqual go 1
-makemarker shapeText 1 95 55 true
-setmarker shape 1 6 0 1
-setmarker radius 1 15 0 0
-setmarker rotation 1 -90 0 0
-print "@ff.a0"
-setmarker flushText 1 0 0 0
-setmarker fontSize 1 2 0 0
-makemarker shapeText 2 100 40 true
-setmarker shape 2 6 0 1
-setmarker radius 2 15 0 0
-print "@ff.b0"
-setmarker flushText 2 0 0 0
-setmarker fontSize 2 2 0 0
-radar any any any distance @this 1 pl
-sensor px pl @shootX
-sensor py pl @shootY
-sensor st pl @shooting
-jump 15 notEqual st 1
-op sub sx1 px 95
-op sub sy1 py 55
-op sub sx2 px 100
-op sub sy2 py 40
-op len s1 sx1 sy1
-op len s2 sx2 sy2
-jump 29 lessThan s1 2
-jump 44 lessThan s2 2
-jump 15 always x false
-print "@ff.a1"
+getflag start "a"
+jump 0 notEqual start 1
+control enabled processor1 0 0 0 0
+wait 7
+print "@ff.a6"
 message notify 3 @wait
-wait 2
-setmarker remove 1 0 0 0
-setmarker remove 2 0 0 0
-print "@ff.a2"
-message announce 4 @wait
-print "@ff.a3"
-message announce 4 @wait
-print "@ff.a4"
-message announce 4 @wait
-print "@ff.c"
-message announce 4 @wait
-setflag "a" true
-stop
-print "@ff.b1"
+spawn @sfire-mod-circulation 70 43 50 @sharded result
+spawn @sfire-mod-circulation 83 50 45 @sharded result
+spawn @sfire-mod-circulation 93 36 35 @sharded result
+print "@ff.a7"
+message announce 5 @wait
+setprop @copper core1 1000
+setprop @lead core1 1000
+setprop @graphite core1 1000
+setprop @titanium core1 1000
+setprop @thorium core1 1000
+set time 120
+wait 1
+op sub time time 1
+print "@ff.a"
+print time
+message mission 3 @wait
+jump 16 greaterThan time 0
+op rand amm 3 b
+print "@ff.rif"
 message notify 3 @wait
-wait 2
-setmarker remove 1 0 0 0
-setmarker remove 2 0 0 0
-print "@ff.b2"
-message announce 4 @wait
-print "@ff.b3"
-message announce 4 @wait
-print "@ff.b4"
-message announce 4 @wait
-print "@ff.b5"
-message announce 4 @wait
-print "@ff.c"
-message announce 4 @wait
-setflag "b" true
-stop
+jump -1 lessThan amm 1
+jump -1 lessThan amm 2
+op rand x 50 b
+op add x 50 x
+op rand y 13 b
+op add y 12 y
+spawn @sfire-mod-executioner x y 90 @sharded result
+op add i i 1
+jump 28 lessThan i 5
+set i 0
+jump 16 always x false
+op rand x 50 b
+op add x 50 x
+op rand y 13 b
+op add y 12 y
+spawn @sfire-mod-executioner x y 90 @sharded result
+op add i i 1
+jump 28 lessThan i 5
+set i 0
+jump 16 always x false
+op rand x 50 b
+op add x 50 x
+op rand y 13 b
+op add y 12 y
+spawn @sfire-mod-executioner x y 90 @sharded result
+op add i i 1
+jump 28 lessThan i 5
+set i 0
+jump 16 always x false
+ubind @sfire-mod-executioner
