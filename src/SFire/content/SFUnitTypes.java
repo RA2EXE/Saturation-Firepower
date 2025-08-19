@@ -2487,31 +2487,33 @@ public class SFUnitTypes {
                         shootY = 24;
                         shoot.shotDelay = 5;
                         shoot.shots = 6;
-                        parts.add(new ShapePart() {{
-                            circle = true;
-                            hollow = false;
-                            radius = 0;
-                            radiusTo = 5;
-                            y = 24;
-                            color = Pal.heal;
-                            layerOffset = -0.001f;
-                        }});
-                        parts.add(new ShapePart() {{
-                            circle = true;
-                            hollow = false;
-                            radius = 0;
-                            radiusTo = 5;
-                            y = 24;
-                            color = Pal.heal;
-                            layer = 100;
-                            progress = PartProgress.reload;
-                        }});
-                        parts.add(new RegionPart("-front") {{
-                            layerOffset = -0.001f;
-                            y = -24;
-                            moveY = 24;
-                            mirror = false;
-                        }});
+                        parts.addAll(
+                                new ShapePart() {{
+                                    circle = true;
+                                    hollow = false;
+                                    radius = 0;
+                                    radiusTo = 5;
+                                    y = 24;
+                                    color = Pal.heal;
+                                    layerOffset = -0.001f;
+                                }},
+                                new ShapePart() {{
+                                    circle = true;
+                                    hollow = false;
+                                    radius = 0;
+                                    radiusTo = 5;
+                                    y = 24;
+                                    color = Pal.heal;
+                                    layer = 100;
+                                    progress = PartProgress.reload;
+                                }},
+                                new RegionPart("-front") {{
+                                    layerOffset = -0.001f;
+                                    y = -24;
+                                    moveY = 24;
+                                    mirror = false;
+                                }}
+                        );
                         rotate = false;
                         mirror = false;
                         cooldownTime = 300;
@@ -2521,6 +2523,7 @@ public class SFUnitTypes {
                             damage = 20;
                             lifetime = 8;
                             speed = 60;
+                            collides = false;
                             hitSound = Sounds.none;
                             despawnEffect = new ParticleEffect() {{
                                 particles = 1;
@@ -2541,6 +2544,7 @@ public class SFUnitTypes {
                                 colorFrom = colorTo = Pal.heal;
                             }};
                             trailEffect = Fx.none;
+
                             fragBullets = 1;
                             fragAngle = 180;
                             fragRandomSpread = 40;

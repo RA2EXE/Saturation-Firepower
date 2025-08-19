@@ -221,6 +221,8 @@ public class SFOverride {
                         lifetime = 20;
                         splashDamage = 50;
                         splashDamageRadius = 28;
+                        sticky = true;
+                        stickyExtraLifetime = 10;
                         scaledSplashDamage = true;
                         width = height = 9;
                         hitEffect = Fx.blastExplosion;
@@ -285,6 +287,8 @@ public class SFOverride {
                         lifetime = 20;
                         splashDamage = 35;
                         splashDamageRadius = 20;
+                        sticky = true;
+                        stickyExtraLifetime = 10;
                         scaledSplashDamage = true;
                         width = height = 9;
                         hitEffect = Fx.blastExplosion;
@@ -334,6 +338,8 @@ public class SFOverride {
                         collidesGround = true;
                         splashDamage = 35;
                         splashDamageRadius = 38;
+                        sticky = true;
+                        stickyExtraLifetime = 10;
                         scaledSplashDamage = true;
                         width = height = 8;
                         hitEffect = Fx.blastExplosion;

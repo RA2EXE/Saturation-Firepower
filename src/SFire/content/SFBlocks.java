@@ -3441,6 +3441,8 @@ public class SFBlocks {
                             lifetime = 20;
                             splashDamage = 50;
                             splashDamageRadius = 28;
+                            sticky = true;
+                            stickyExtraLifetime = 10;
                             scaledSplashDamage = true;
                             width = height = 9;
                             hitEffect = Fx.blastExplosion;
@@ -4477,6 +4479,8 @@ public class SFBlocks {
                             lifetime = 10;
                             splashDamage = 45;
                             splashDamageRadius = 35;
+                            sticky = true;
+                            stickyExtraLifetime = 10;
                             status = StatusEffects.blasted;
                             knockback = 2;
                             hitShake = 2;
@@ -5344,6 +5348,8 @@ public class SFBlocks {
                         fragBullet = new BasicBulletType(2.5f,10){{
                             splashDamage = 45f;
                             splashDamageRadius = 50f;
+                            sticky = true;
+                            stickyExtraLifetime = 10;
                             scaledSplashDamage = true;
                             status = StatusEffects.blasted;
                             lifetime = 20;
@@ -5760,6 +5766,7 @@ public class SFBlocks {
                     lifetime = 30;
                     hitSize = 40;
                     pierce = true;
+                    hittable = false;
                     width = height = 9;
                     shrinkY = 0;
                     weaveMag = 3;
@@ -6294,6 +6301,8 @@ public class SFBlocks {
                         fragBullet = new ArtilleryBulletType(2,28, "shell"){{
                             splashDamage = 85;
                             splashDamageRadius = 60;
+                            sticky = true;
+                            stickyExtraLifetime = 10;
                             lifetime = 20;
                             drag = 0.005f;
                             scaledSplashDamage = true;
