@@ -1,0 +1,38 @@
+{
+  "root": [
+    {
+      "planet":"tiberia",
+      "items": ["scrap", "copper", "lead", "graphite", "coal", "titanium", "thorium", "silicon", "plastanium", "phase-fabric", "surge-alloy", "spore-pod", "sand", "blast-compound", "pyratite", "metaglass",
+      "strontium", "rubidium", "fermium", "chromium", "rare-earth", "silisteel", "wavesteel", "cluster-bomb", "discordance-fabric", "nano-core", "lens", "tayrium-alloy", "leippium-alloy"],
+      "liquids": ["water","slag","oil","cryofluid","nitrogen",
+        "nanofluid", "nitrated-oil", "actived-nanofluid",
+        "nitrate","blast-reagent","mix-gas"],
+      "units": [
+        "dagger","mace","fortress","secepter","regin",
+        "nova","pulsar","quasar","vela","corvus",
+        "crawler","atrax","spiroct","arkyid","toxopid",
+        "flare","horizon","zenith","antumbra","eclipse",
+        "mono","poly","mega","quad","oct",
+        "risso","minke","bryde","sei","omura",
+        "retusa","oxynoe","cyerce","aegires","navanax",
+        //T6
+        "ordinance", "libra", "agelenid", "hepta", "sundown", "dorudon", "cerberilla",
+        //制式部队
+        "vanguard","striker","skyfire","flanker","executioner", "enforcer",
+        "convection", "sleet", "cumulus", "circulation", "cirrus", "stratosphere",
+        "altnitak", "polaris", "antares", "merak", "regulus", "alioth",
+        //特种
+        "farmer", "carrier", "flamer", "thunder", "banisher", "hammer", "tau", "omega",
+        "UTV", "UTV-Artillery", "UTV-Command", "UTV-Defense", "UTV-Missile",
+        "assembler-drone", "assembler-drone-large", "armed-drone",
+        "farmer", "carrier", "flamer", "thunder", "banisher", "hammer", "tau", "omega",
+        "utv", "utvA", "utvC", "utvD", "utvM",
+        "assemblerDrone", "assemblerDrone2", "armedDrone",
+
+        "flareX", "flareY", "electrodile", "knocker",
+        "partiality-A", "partiality-B", "partiality-C", "partiality-D",
+        "blade", "titan", "vast"
+      ]
+    }
+  ]
+}

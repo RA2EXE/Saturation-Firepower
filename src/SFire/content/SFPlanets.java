@@ -17,9 +17,9 @@ public class SFPlanets {
         tiberia = new Planet("tiberia", Planets.sun,1,3){{
             visible = accessible = alwaysUnlocked = true;
 
-
             sectorSeed = 3164;
             generator = new SerpuloPlanetGenerator();
+
             //generator = new TiberiaPlanetGenerator();
             meshLoader = () -> new HexMesh(this, 8);
             cloudMeshLoader = () -> new MultiMesh(
@@ -30,7 +30,8 @@ public class SFPlanets {
             atmosphereColor = lightColor = SFColor.tayrDark.cpy().a(0.8f);
             prebuildBase = false;
             bloom = false;
-            startSector = 1;
+            startSector = 15;
+
             orbitRadius = 85;
             orbitTime = 180 * 60;
             rotateTime = 30 * 60;
