@@ -2,7 +2,9 @@ package SFire.content;
 
 import arc.graphics.*;
 //import javafx.scene.paint.Color;
+import mindustry.content.Blocks;
 import mindustry.type.*;
+import mindustry.world.blocks.power.ConsumeGenerator;
 
 public class SFItems {
     public static Item

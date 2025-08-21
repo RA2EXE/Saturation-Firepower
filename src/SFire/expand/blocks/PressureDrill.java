@@ -4,11 +4,24 @@ package SFire.expand.blocks;
 import arc.math.Mathf;
 import mindustry.type.Item;
 import mindustry.world.blocks.production.Drill;
+import mindustry.world.meta.Stat;
+import mindustry.world.meta.StatCat;
+import mindustry.world.meta.StatValue;
 
 public class PressureDrill extends Drill {
-    
+
+    public float maxFactor = 1f;
+    public float minPowerNeed = 1f;
+
     public PressureDrill(String name) {
         super(name);
+    }
+
+    @Override
+    public void setStats(){
+        super.setStats();
+        stats.add(Stat.speedIncrease, "x" + (int)(maxFactor*100) + "%");
+        stats.add(new Stat("minpowerneed", StatCat.function), (int)(minPowerNeed*100) + "%");
     }
 
     public class PressureDrillBuild extends Drill.DrillBuild {
@@ -31,8 +44,7 @@ public class PressureDrill extends Drill {
 
             float delay = getDrillTime(dominantItem);
 
-            float maxFactor = 3f;
-            float minPowerNeed = 10f;
+
             if(items.total() < itemCapacity && dominantItems > 0 && efficiency > 0){
 
                 float powerFactor = power.graph.getPowerBalance() / (minPowerNeed * consPower.requestedPower(this));

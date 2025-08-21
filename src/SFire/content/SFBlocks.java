@@ -5,7 +5,6 @@ import SFire.expand.bullets.*;
 
 import arc.Core;
 import arc.graphics.Color;
-import arc.graphics.g2d.Draw;
 import arc.graphics.g2d.Fill;
 import arc.graphics.g2d.Lines;
 import arc.math.*;
@@ -53,8 +52,7 @@ import static arc.graphics.g2d.Draw.*;
 import static arc.graphics.g2d.Lines.lineAngle;
 import static arc.graphics.g2d.Lines.stroke;
 import static arc.math.Angles.*;
-import static arc.math.Mathf.random;
-import static arc.math.Mathf.sqr;
+import static arc.math.Mathf.*;
 import static mindustry.type.ItemStack.*;
 
 public class SFBlocks {
@@ -2611,6 +2609,8 @@ public class SFBlocks {
         //region drill
         energyDrill = new PressureDrill("energe-drill") {{
             size = 4;
+            maxFactor = 2.5f;
+            minPowerNeed = 5f;
             requirements(Category.production, with(Items.copper,75, Items.silicon,40, Items.graphite,40));
             hasPower = hasItems = true;
             hasLiquids = false;
@@ -2625,20 +2625,22 @@ public class SFBlocks {
             drillEffect = Fx.mineBig;
             updateEffect = Fx.pulverizeMedium;
         }};
-        heavyDrill = new Drill("heavy-drill") {{
+        heavyDrill = new PressureDrill("heavy-drill") {{
             size = 4;
+            maxFactor = 2f;
+            minPowerNeed = 10f;
             health = 1200;
             requirements(Category.production, with(Items.silicon, 160, Items.plastanium, 45, Items.surgeAlloy, 80, SFItems.siliSteel, 70));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
             liquidCapacity = 30;
-            drillTime = 252 * 0.7f;
+            drillTime = 252f;
             tier = 10;
             hardnessDrillMultiplier = 10;
 
             consumePower(7f);
             consumeLiquid(Liquids.cryofluid, 0.2f).boost();
-            liquidBoostIntensity = 1.8f;
+            liquidBoostIntensity = 1.6f;
 
             rotateSpeed = 1.5f;
             warmupSpeed = 0.002f;
@@ -2781,9 +2783,9 @@ public class SFBlocks {
         //region storage
         frontCore = new SFCore("front-line-core") {{
             size = 3;
-            health = 1000;
-            armor = 8;
-            requirements(Category.effect, with(SFItems.waveSteel, 800, Items.silicon, 800));
+            health = 1100;
+            armor = 6;
+            requirements(Category.effect, with(SFItems.waveSteel, 600, Items.silicon, 800));
             alwaysUnlocked = true;
             itemCapacity = 800;
             unitCapModifier = 3;
@@ -3036,7 +3038,7 @@ public class SFBlocks {
             shoot.firstShotDelay = 60;
             range = 200;
             consumePower(11);
-            shootType = new PowerupBulletType(2, 10, "circle-bullet") {{
+            shootType = new PowerupBullet(2, 10, "circle-bullet") {{
                 damageUp = 0.5f;
                 maxDamageMultiplier = 3f;
 
@@ -4928,7 +4930,6 @@ public class SFBlocks {
             reload = 112;
             rotateSpeed = 6;
             range = 640;
-            coolantMultiplier = 1.5f;
             liquidCapacity = 60;
             coolant = consumeCoolant(0.5f);
             shootCone = 180;
@@ -4991,7 +4992,7 @@ public class SFBlocks {
                         homingDelay = 15;
                         homingPower = 0.08f;
                         ammoMultiplier = 4;
-                        reloadMultiplier = 1.7f;
+                        reloadMultiplier = 1.25f;
 
                         width = 15;
                         height = 55;
@@ -5110,6 +5111,7 @@ public class SFBlocks {
                         pierceArmor = true;
                         shieldDamageMultiplier = 2.5f;
                         ammoMultiplier = 1;
+                        reloadMultiplier = 1.25f;
 
                         width = 15;
                         height = 53;
@@ -5169,6 +5171,7 @@ public class SFBlocks {
             recoil = 4f;
             recoilTime = 60;
             shootSound = Sounds.missileSmall;
+            accurateDelay = false;
             shake = 3f;
             inaccuracy = 10;
             shootY = -3;
@@ -5222,8 +5225,8 @@ public class SFBlocks {
                         backColor = trailColor = hitColor =  Pal.graphiteAmmoBack;
                         frontColor = SFColor.missileGray;
                         smokeEffect = Fx.shootSmallFlame;
-                        hitEffect = Fx.flakExplosion;
-                        hitShake = 3;
+                        hitEffect = Fx.flakExplosionBig;
+                        hitShake = 2;
                         hitSoundVolume = 3;
                     }},
                     Items.pyratite, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
@@ -5244,9 +5247,9 @@ public class SFBlocks {
                         backColor = trailColor = hitColor =  Pal.lightPyraFlame;
                         frontColor = SFColor.missileGray;
                         smokeEffect = Fx.shootSmallFlame;
-                        hitEffect = Fx.flakExplosion;
+                        hitEffect = Fx.flakExplosionBig;
                         hitShake = 3;
-                        hitSoundVolume = 3;
+                        hitSoundVolume = 2;
                     }},
                     Items.blastCompound, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
                         splashDamage = 50f;
@@ -5265,7 +5268,7 @@ public class SFBlocks {
                         frontColor = SFColor.missileGray;
                         smokeEffect = Fx.shootPyraFlame;
                         hitEffect = Fx.flakExplosionBig;
-                        hitShake = 3;
+                        hitShake = 4;
                         hitSoundVolume = 3;
                     }},
                     Items.surgeAlloy, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
@@ -5296,7 +5299,7 @@ public class SFBlocks {
                         backColor = trailColor = hitColor = Pal.surgeAmmoBack;
                         frontColor = SFColor.missileGray;
                         smokeEffect = Fx.shootPyraFlame;
-                        hitEffect = Fx.flakExplosion;
+                        hitEffect = Fx.flakExplosionBig;
                         hitShake = 3;
                         hitSoundVolume = 3;
                     }},
@@ -5317,7 +5320,7 @@ public class SFBlocks {
                         backColor = trailColor = hitColor = SFColor.sisteelDark;
                         frontColor = SFColor.missileGray;
                         smokeEffect = Fx.shootSmallFlame;
-                        hitEffect = Fx.flakExplosion;
+                        hitEffect = Fx.flakExplosionBig;
                         hitShake = 3;
                         hitSoundVolume = 3;
                     }},
@@ -6481,7 +6484,7 @@ public class SFBlocks {
                             });
                         }};
                     }},
-                    SFItems.discFabric, new PowerupBulletType(16,150,"sfire-mod-arrow-bullet"){{
+                    SFItems.discFabric, new PowerupBullet(16,150,"sfire-mod-arrow-bullet"){{
                         lifetime = 21.6f;
                         hittable = absorbable = reflectable = false;
                         shieldDamageMultiplier = 5;
@@ -7371,7 +7374,7 @@ public class SFBlocks {
                             });*/
                         }};
                     }},
-                    SFItems.discFabric, new PowerupBulletType(8,2250,"sfire-mod-arrow-bullet"){{
+                    SFItems.discFabric, new PowerupBullet(8,2250,"sfire-mod-arrow-bullet"){{
                         damageUp = 0.5f;
                         maxDamageMultiplier = 7;
                         knockback = 80;
@@ -8070,7 +8073,7 @@ public class SFBlocks {
                         despawnEffect = Fx.none;
                         fragBullets = 3;
                         fragRandomSpread = 45;
-                        fragBullet = new PowerupBulletType(3,65,"sfire-mod-arrow-bullet"){{
+                        fragBullet = new PowerupBullet(3,65,"sfire-mod-arrow-bullet"){{
                             splashDamage = 30;
                             splashDamageRadius = 75;
                             shieldDamageMultiplier = 5f;
@@ -8165,7 +8168,7 @@ public class SFBlocks {
             inaccuracy = 0.63f;
             liquidCapacity = 300;
             ammoPerShot = 15;
-            ammo(SFItems.leipAlloy, new PowerupBulletType(40,7500,"missile-large"){{
+            ammo(SFItems.leipAlloy, new PowerupBullet(40,7500,"missile-large"){{
                 lifetime = 29;
                 drag = 0.007f;
                 hitSize = 36f;
@@ -8318,17 +8321,33 @@ public class SFBlocks {
             rotateSpeed = 3;
             reload = 22;
             range = 526;
-            shootType = new BasicBulletType(17,155){{
+            shootType = new ShieldBreakBullet(17,155){{
                 lifetime = 28;
                 splashDamage = damage;
                 splashDamageRadius = 60;
                 status = SFStatusEffects.breakdown;
                 statusDuration = 160f;
+                hittable = true;
+
+                shieldDamagePercent = 0.1f;
+                shbreakEffect = new Effect(15f, 100f, e -> {
+                    for(int i = 0; i < 4; i++){
+
+                        float angle = i*90+45;
+                        float length = 10 + e.fin() * 50;
+                        Tmp.v1.trns(angle, length);
+                        color(e.color, SFColor.discDark, e.fin());
+                        Drawf.tri(e.x + Tmp.v1.x, e.y + Tmp.v1.y, 15f*e.fout(), 80f * e.fin(), angle);
+                        Drawf.tri(e.x + Tmp.v1.x, e.y + Tmp.v1.y, 15f*e.fout(), 40f * e.fin(), angle+180);
+                    }
+
+                    Drawf.light(e.x, e.y, 150f, hitColor, 0.9f * e.fout());
+                });
 
                 lightningDamage = 50;
                 lightning = 2;
                 lightningLength = 7;
-                lightningColor = frontColor = backColor = SFColor.discLight;
+                lightningColor = frontColor = backColor = hitColor = SFColor.discLight;
 
                 knockback = 16;
                 ammoMultiplier = 1;

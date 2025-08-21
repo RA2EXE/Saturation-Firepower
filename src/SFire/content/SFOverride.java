@@ -585,6 +585,8 @@ public class SFOverride {
         Blocks.armoredConveyor.placeableLiquid = true;
         Blocks.platedConduit.placeableLiquid = true;
         //region power
+        ((ConsumeGenerator) Blocks.combustionGenerator).itemDurationMultipliers.put(SFItems.strontium, 0.8f);
+        ((ConsumeGenerator) Blocks.steamGenerator).itemDurationMultipliers.put(SFItems.strontium, 0.8f);
         ((ConsumeGenerator) Blocks.steamGenerator).powerProduction = 6f;
         ((ConsumeGenerator) Blocks.differentialGenerator).powerProduction = 19.8f;
         Blocks.differentialGenerator.destroyBullet = new BulletType() {{

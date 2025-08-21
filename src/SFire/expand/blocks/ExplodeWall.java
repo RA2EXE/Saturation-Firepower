@@ -1,13 +1,9 @@
 package SFire.expand.blocks;
 
 import arc.graphics.*;
-import arc.graphics.g2d.Draw;
-import arc.graphics.g2d.Fill;
-import arc.graphics.g2d.Lines;
+import arc.graphics.g2d.*;
 import arc.math.Mathf;
 import arc.struct.Seq;
-import arc.util.Time;
-import arc.util.Tmp;
 import mindustry.content.*;
 import mindustry.entities.*;
 import mindustry.gen.*;
@@ -19,18 +15,17 @@ import static arc.graphics.g2d.Draw.color;
 import static arc.graphics.g2d.Lines.lineAngle;
 import static arc.graphics.g2d.Lines.stroke;
 import static arc.math.Angles.randLenVectors;
-import static mindustry.Vars.tilesize;
-import static mindustry.Vars.world;
+import static mindustry.Vars.*;
 
 public class ExplodeWall extends Block {
-    public int timerCheck = timers ++;
+    public int timerCheck = timers++;
     public float checkInterval = 8f;
 
     public float range = 60;
     public float expDamage = 300;
     public float shake = size * 2f;
     public float expLimit = 0.1f;
-    public float buildingDamageMultiplier = 0.25f;
+    public float buildingDamageMultiplier = 0.1f;
 
     public Effect hitEffect = Fx.hitSquaresColor;
     public Effect waveEffect = new Effect(20, e -> {
@@ -40,7 +35,7 @@ public class ExplodeWall extends Block {
         randLenVectors(e.id + 1, 8, 1f + 23f * e.finpow(), (x, y) ->
                 lineAngle(e.x + x, e.y + y, Mathf.angle(x, y), 1f + e.fout() * 3f));
     }),
-    destroyEffect = Fx.massiveExplosion;
+            destroyEffect = Fx.massiveExplosion;
 
     public Color waveColor = Pal.blastAmmoBack;
 
@@ -63,12 +58,12 @@ public class ExplodeWall extends Block {
         super.setStats();
 
         stats.add(Stat.damage, expDamage, StatUnit.none);
-        stats.add(Stat.damageMultiplier, buildingDamageMultiplier, StatUnit.none);
+        stats.add(new Stat("damagemul", StatCat.function), (int)(buildingDamageMultiplier*100)+"%");
         stats.add(Stat.range, range / tilesize, StatUnit.blocks);
     }
 
     @Override
-    public void drawPlace(int x, int y, int rotation, boolean valid){
+    public void drawPlace(int x, int y, int rotation, boolean valid) {
         super.drawPlace(x, y, rotation, valid);
 
         Drawf.dashCircle(x * tilesize + offset, y * tilesize + offset, range, waveColor);
@@ -112,12 +107,12 @@ public class ExplodeWall extends Block {
 
             float explosionDamage = expDamage * buildingDamageMultiplier;
             Damage.damage(x, y, range, explosionDamage);
-            destroyEffect.at(x,y,(size+1) * tilesize);
+            destroyEffect.at(x, y, (size + 1) * tilesize);
         }
 
 
         @Override
-        public void drawSelect(){
+        public void drawSelect() {
             Drawf.dashCircle(x, y, range, waveColor);
         }
 

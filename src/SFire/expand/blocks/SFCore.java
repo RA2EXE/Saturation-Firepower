@@ -4,6 +4,8 @@ import mindustry.game.Team;
 import mindustry.world.Block;
 import mindustry.world.Tile;
 import mindustry.world.blocks.storage.CoreBlock;
+import mindustry.world.meta.Stat;
+import mindustry.world.meta.StatCat;
 
 import static mindustry.Vars.*;
 
@@ -12,6 +14,7 @@ public class SFCore extends CoreBlock {
         super(name);
     }
 
+    public int maxNumber = 7;
 
     @Override
     public boolean canBreak(Tile tile){
@@ -25,9 +28,14 @@ public class SFCore extends CoreBlock {
 
     @Override
     public boolean canPlaceOn(Tile tile, Team team, int rotation) {
-        return state.teams.cores(team).size < 7;
+        return state.teams.cores(team).size < maxNumber;
     }
 
+    @Override
+    public void setStats(){
+        super.setStats();
+        stats.add(new Stat("maxcore"), maxNumber);
+    }
 }
 
 

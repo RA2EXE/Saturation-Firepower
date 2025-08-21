@@ -57,7 +57,6 @@ public class SFPlanets {
                 r.placeRangeCheck = false;
                 r.showSpawns = false;
                 r.coreDestroyClear = true;
-                r.onlyDepositCore = true;
             };
 
             allowCampaignRules = false;

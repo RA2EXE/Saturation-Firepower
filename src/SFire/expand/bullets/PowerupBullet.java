@@ -3,14 +3,14 @@ package SFire.expand.bullets;
 import mindustry.entities.bullet.BasicBulletType;
 import mindustry.gen.Bullet;
 
-public class PowerupBulletType extends BasicBulletType {
+public class PowerupBullet extends BasicBulletType {
 
     //最高伤害倍率
     public float maxDamageMultiplier = 5f;
     //每次穿透后伤害提升倍率
     public float damageUp = 1f;
 
-    public PowerupBulletType(float speed, float damage, String bulletSprite){
+    public PowerupBullet(float speed, float damage, String bulletSprite){
         super(speed, damage);
         this.sprite = bulletSprite;
 

@@ -12,10 +12,15 @@ public class ShieldBreakBullet extends BasicBulletType {
     public float shieldDamagePercent = 0.02f;
     public Effect shbreakEffect = Fx.none;
 
+    public ShieldBreakBullet(float speed, float damage){
+        this(speed, damage, "bullet");
+        hittable = false;
+        reflectable = false;
+        absorbable = false;
+    }
 
     public ShieldBreakBullet(float speed, float damage, String bulletSprite){
-        super(speed, damage);
-        this.sprite = bulletSprite;
+        super(speed, damage, bulletSprite);
         hittable = false;
         reflectable = false;
         absorbable = false;
