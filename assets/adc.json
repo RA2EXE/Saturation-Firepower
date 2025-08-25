@@ -8,7 +8,7 @@
         "nanofluid", "nitrated-oil", "actived-nanofluid",
         "nitrate","blast-reagent","mix-gas"],
       "units": [
-        "dagger","mace","fortress","secepter","regin",
+        "dagger","mace","fortress","scepter","reign",
         "nova","pulsar","quasar","vela","corvus",
         "crawler","atrax","spiroct","arkyid","toxopid",
         "flare","horizon","zenith","antumbra","eclipse",
@@ -20,14 +20,14 @@
         //制式部队
         "vanguard","striker","skyfire","flanker","executioner", "enforcer",
         "convection", "sleet", "cumulus", "circulation", "cirrus", "stratosphere",
-        "altnitak", "polaris", "antares", "merak", "regulus", "alioth",
+        "alnitak", "polaris", "antares", "merak", "regulus", "alioth",
         //特种
         "farmer", "carrier", "flamer", "thunder", "banisher", "hammer", "tau", "omega",
         "UTV", "UTV-Artillery", "UTV-Command", "UTV-Defense", "UTV-Missile",
         "assembler-drone", "assembler-drone-large", "armed-drone",
-        "farmer", "carrier", "flamer", "thunder", "banisher", "hammer", "tau", "omega",
-        "utv", "utvA", "utvC", "utvD", "utvM",
-        "assemblerDrone", "assemblerDrone2", "armedDrone",
+        "farmer", "carrier", "flamer", "thunder", "banisher", "hammer", "tau", "omega", "terrascape",
+        "utv", "utv-Artillery", "utv-Command", "utv-Defense", "utv-Missile",
+        "assembler-drone", "assembler-drone-large", "armed-drone",
 
         "flareX", "flareY", "electrodile", "knocker",
         "partiality-A", "partiality-B", "partiality-C", "partiality-D",

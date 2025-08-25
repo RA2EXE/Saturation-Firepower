@@ -40,6 +40,7 @@ public class SFItems {
         rareEarth = new Item("rare-earth", Color.valueOf("D0DEB1")){{
             hardness = 2;
             buildable = false;
+            lowPriority = true;
         }};
 
         siliSteel = new Item("silisteel", Color.valueOf("7595D2")){{

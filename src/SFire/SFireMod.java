@@ -4,15 +4,18 @@ import SFire.content.*;
 
 import arc.*;
 import arc.util.*;
+import mindustry.game.EventType;
 import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 
 public class SFireMod extends Mod {
+    public SFireMod() {
+        //Events.on(EventType.ContentInitEvent.class, e -> {});
+    }
     public static String ModName = "sfire-mod";
     public static String name(String add){
         return ModName + "-" + add;
     }
-    public SFireMod() {}
 
 
    /* @Override
@@ -24,6 +27,7 @@ public class SFireMod extends Mod {
         dialog.cont.button("确认", dialog::hide).size(150f, 50f);
         dialog.show();
     }*/
+
 
     @Override
     public void loadContent() {

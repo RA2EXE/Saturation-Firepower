@@ -30,6 +30,7 @@ import mindustry.world.meta.*;
 
 import static SFire.SFireMod.name;
 import static arc.graphics.g2d.Draw.color;
+import static arc.graphics.g2d.Lines.lineAngle;
 import static arc.graphics.g2d.Lines.stroke;
 
 public class SFUnitTypes {
@@ -531,14 +532,15 @@ public class SFUnitTypes {
                         );
                         ejectEffect = Fx.none;
                         velocityRnd = 0.06f;
-                        bullet = new BasicBulletType(15, 135) {{
-                            splashDamage = 122;
+                        bullet = new BasicBulletType(8, 135 / 2f) {{
+                            lifetime = 36f;
+                            splashDamage = 122 / 2f;
                             splashDamageRadius = 56;
+                            lightningDamage = 10;
                             lightningColor = SFColor.enemyRedLight;
                             lightning = 3;
                             lightningLength = 7;
                             lightningLengthRand = 3;
-                            lifetime = 28;
                             hitShake = 3;
                             width = 12;
                             height = 18;
@@ -4458,7 +4460,7 @@ public class SFUnitTypes {
         air3 = new UnitType("cumulus") {{
             constructor = UnitTypes.zenith.constructor;
             flying = true;
-            lowAltitude = false;
+            lowAltitude = true;
             rotateSpeed = 6f;
             speed = 2.45f;
             drag = 0.035f;
@@ -6229,6 +6231,7 @@ public class SFUnitTypes {
             constructor = UnitTypes.mega.constructor;
             outlineColor = SFColor.darkOutline;
             flying = true;
+            lowAltitude = true;
             payloadCapacity = 64 * 4 * 4;
             aiController = BuilderAI::new;
             defaultCommand = UnitCommand.rebuildCommand;
@@ -6339,6 +6342,9 @@ public class SFUnitTypes {
             mechFrontSway = 0.98f;
             mechSideSway = 0.4f;
             singleTarget = true;
+            buildRange = 15*8;
+            buildBeamOffset = 10;
+            buildSpeed = 1.5f;
             abilities.add(new LiquidExplodeAbility() {{
                 liquid = SFLiquids.nitratedOil;
                 amount = 300;
@@ -6834,6 +6840,7 @@ public class SFUnitTypes {
             outlineColor = SFColor.darkOutline;
             aiController = BuilderAI::new;
             flying = true;
+            lowAltitude = true;
             rotateSpeed = 8;
             speed = 3.8f;
             accel = 0.06f;
@@ -6902,6 +6909,7 @@ public class SFUnitTypes {
             outlineColor = SFColor.darkOutline;
             aiController = BuilderAI::new;
             flying = true;
+            lowAltitude = true;
             rotateSpeed = 6;
             speed = 3.4f;
             accel = 0.05f;
@@ -6987,6 +6995,250 @@ public class SFUnitTypes {
                     }}
             );
             immunities = ObjectSet.with(StatusEffects.sapped, StatusEffects.slow, StatusEffects.unmoving, StatusEffects.sporeSlowed, StatusEffects.electrified, SFStatusEffects.acidded, SFStatusEffects.breakdown);
+        }};
+        terrascape = new UnitType("terrascape") {{
+            constructor = UnitTypes.gamma.constructor;
+            outlineColor = SFColor.darkOutline;
+            flying = true;
+            lowAltitude = true;
+            rotateSpeed = 0.85f;
+            speed = 0.73f;
+            accel = 0.05f;
+            drag = 0.04f;
+            hitSize = 150;
+            buildRange = 350;
+            buildBeamOffset = 16;
+            buildSpeed = 5;
+            health = 125000;
+            armor = 80;
+            itemCapacity = 0;
+            engineSize = 18f;
+            engineOffset = 82;
+            setEnginesMirror(
+                    new UnitEngine(-54, -79, 9 ,-120),
+                    new UnitEngine(-60, -42, 12, -135)
+            );
+            abilities.add(new EnergyFieldAbility(185, 120, 360) {{
+                healPercent = 1.5f;
+                sameTypeHealMult = 0.45f;
+                effectRadius = 9;
+                sectors = 8;
+                sectorRad = 0.06f;
+                rotateSpeed = 2;
+                color = SFColor.energyYellow;
+                hitEffect = new Effect(24f, e -> {
+                    color(Color.white, e.color, e.fin());
+                    stroke(e.fout() * 1.5f + 0.5f);
+
+                    rand.setSeed(e.id);
+                    for (int i = 0; i < 15; i++) {
+                        float ang = rand.range(360f), len = rand.random(90f * e.finpow());
+                        e.scaled(e.lifetime * rand.random(0.5f, 1f), p -> {
+                            v.trns(ang, len);
+                            lineAngle(e.x + v.x, e.y + v.y, ang, p.fout() * 7f + 0.5f);
+                        });
+                    }
+                });
+                status = StatusEffects.slow;
+                statusDuration = 360;
+                y = 16;
+                targetGround = false;
+                hitBuildings = false;
+                maxTargets = 8;
+            }});
+            for (int i=0; i<2; i++){
+                abilities.add(new ForceFieldAbility(250,20,10000,1800,4,i*45));
+            };
+            Weapon terrGun = new Weapon(name("terrascape-weapon")) {{
+                reload = 70f;
+                rotate = true;
+                rotateSpeed = 2.5f;
+                shootSound = Sounds.laser;
+                soundPitchMin = soundPitchMax = 1.5f;
+                recoil = 4f;
+                cooldownTime = 160;
+                shake = 5;
+                bullet = new BasicBulletType(15,220f) {{
+                    lifetime = 60f;
+                    trailLength = 16;
+                    trailWidth = 5;
+                    trailColor = backColor = frontColor = SFColor.energyYellow;
+                    width = 18;
+                    height = 25;
+                    hitShake = 6f;
+                    hitSound = Sounds.explosion;
+                    splashDamage = damage;
+                    splashDamageRadius = 50;
+                    shootEffect = new ParticleEffect() {{
+                        line = true;
+                        particles = 6;
+                        interp = Interp.pow5Out;
+                        sizeInterp = Interp.pow5In;
+                        strokeFrom = 1;
+                        lenFrom = 18;
+                        length = 60;
+                        lifetime = 30;
+                        colorTo = SFColor.energyYellow;
+                        cone = 15f;
+                    }};
+                    smokeEffect = new ParticleEffect() {{
+                        particles = 7;
+                        interp = Interp.pow5Out;
+                        sizeFrom = 6;
+                        length = 50;
+                        lifetime = 45;
+                        colorFrom = SFColor.energyYellow;
+                        colorTo = SFColor.energyYellow.cpy().a(0.8f);
+                        cone = 15f;
+                    }};
+                    despawnEffect = new ExplosionEffect() {{
+                        sparks = 0;
+                        smokes = 11;
+                        smokeRad = 23f;
+                        smokeSize = 5;
+                        lifetime = 45;
+                        smokeColor = waveColor = SFColor.energyYellow;
+                        waveStroke = 3;
+                        waveRad = 30;
+                        waveLife = 20;
+                    }};
+                    hitEffect = new ParticleEffect() {{
+                        particles = 8;
+                        sizeFrom = 6;
+                        length = 50;
+                        interp = Interp.pow5Out;
+                        sizeInterp = Interp.pow10In;
+                        lifetime = 30;
+                        colorTo = SFColor.energyYellow;
+                        cone = 20;
+                    }};
+                    fragBullets = 1;
+                    fragRandomSpread = 0;
+                    fragBullet = new ShrapnelBulletType() {{
+                        damage = 120;
+                        knockback = 20f;
+                        length = 40f;
+                        width = 8f;
+                        fromColor = toColor = SFColor.energyYellow;
+                    }};
+                }};
+            }};
+            PointDefenseWeapon terrPoint = new PointDefenseWeapon("terrascape-point"){{
+                alternate = false;
+                rotate = true;
+                rotateSpeed = 11f;
+                reload = 10;
+                recoil = 0;
+                x = 0;
+                y = -14 / 4f;
+                shootY = 4;
+                targetInterval = 5f;
+                targetSwitchInterval = 5f;
+                shootSound = Sounds.bolt;
+                bullet = new BulletType() {{
+                    maxRange = 8 * 46;
+                    damage = 260;
+                    shootEffect = Fx.shootBig2;
+                    smokeEffect = Fx.shootBigSmoke2;
+                    hitEffect = new WrapEffect(Fx.hitBulletColor, SFColor.energyYellow);
+                }};
+            }};
+            weapons.addAll(
+                    copy(terrGun,39.25f,30),
+                    copy(terrGun,49.25f,-10.5f),
+                    new Weapon(name("terrascape-weapon")) {{
+                        x = -58.75f;
+                        y = 18.5f;
+                        controllable = false;
+                        autoTarget = true;
+                        reload = 70f;
+                        rotate = true;
+                        rotateSpeed = 2.5f;
+                        layerOffset = -0.01f;
+                        shootSound = Sounds.laser;
+                        soundPitchMin = soundPitchMax = 1.5f;
+                        recoil = 4f;
+                        cooldownTime = 160;
+                        shake = 5;
+                        bullet = new BasicBulletType(15,220f) {{
+                            lifetime = 60f;
+                            trailLength = 16;
+                            trailWidth = 5;
+                            trailColor = backColor = frontColor = SFColor.energyYellow;
+                            width = 18;
+                            height = 25;
+                            hitShake = 6f;
+                            hitSound = Sounds.explosion;
+                            splashDamage = damage;
+                            splashDamageRadius = 50;
+                            shootEffect = new ParticleEffect() {{
+                                line = true;
+                                particles = 6;
+                                interp = Interp.pow5Out;
+                                sizeInterp = Interp.pow5In;
+                                strokeFrom = 1;
+                                lenFrom = 18;
+                                length = 60;
+                                lifetime = 30;
+                                colorTo = SFColor.energyYellow;
+                                cone = 15f;
+                            }};
+                            smokeEffect = new ParticleEffect() {{
+                                particles = 7;
+                                interp = Interp.pow5Out;
+                                sizeFrom = 6;
+                                length = 50;
+                                lifetime = 45;
+                                colorFrom = SFColor.energyYellow;
+                                colorTo = SFColor.energyYellow.cpy().a(0.8f);
+                                cone = 15f;
+                            }};
+                            despawnEffect = new ExplosionEffect() {{
+                                sparks = 0;
+                                smokes = 11;
+                                smokeRad = 23f;
+                                smokeSize = 5;
+                                lifetime = 45;
+                                smokeColor = waveColor = SFColor.energyYellow;
+                                waveStroke = 3;
+                                waveRad = 30;
+                                waveLife = 20;
+                            }};
+                            hitEffect = new ParticleEffect() {{
+                                particles = 8;
+                                sizeFrom = 6;
+                                length = 50;
+                                interp = Interp.pow5Out;
+                                sizeInterp = Interp.pow10In;
+                                lifetime = 30;
+                                colorTo = SFColor.energyYellow;
+                                cone = 20;
+                            }};
+                            fragBullets = 1;
+                            fragRandomSpread = 0;
+                            fragBullet = new ShrapnelBulletType() {{
+                                damage = 120;
+                                knockback = 20f;
+                                length = 40f;
+                                width = 8f;
+                                fromColor = toColor = SFColor.energyYellow;
+                            }};
+                        }};
+                    }},
+                    copy(terrPoint, 15.5f, 24),
+                    copy(terrPoint, 53.75f, -38f)
+                    /*new Weapon(name("terrascape-cannon")) {{
+                        rotate = false;
+                        x = 175/4f;
+                        y = 384/4f;
+                        reload = 300;
+                        alternate = false;
+
+                    }}*/
+                    //missile 242 245
+                    //laser  126 362
+
+            );
         }};
 
         utv = new TankUnitType("UTV") {{
@@ -7684,4 +7936,7 @@ public class SFUnitTypes {
             );
         }};
     }
+
+    public static final Rand rand = new Rand();
+    public static final Vec2 v = new Vec2();
 }

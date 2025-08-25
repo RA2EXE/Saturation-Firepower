@@ -1,13 +1,14 @@
 package SFire.content;
 
-import arc.Events;
 import arc.graphics.*;
 import arc.math.Mathf;
+import arc.math.Rand;
+import arc.math.geom.Vec2;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
+import mindustry.entities.Effect;
 import mindustry.entities.effect.WrapEffect;
-import mindustry.game.EventType;
 import mindustry.graphics.*;
 import arc.math.Interp;
 import mindustry.entities.effect.MultiEffect;
@@ -15,7 +16,7 @@ import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
 import mindustry.type.StatusEffect;
 
-import static mindustry.Vars.state;
+import static arc.graphics.g2d.Draw.color;
 import static mindustry.content.StatusEffects.*;
 
 public class SFStatusEffects {

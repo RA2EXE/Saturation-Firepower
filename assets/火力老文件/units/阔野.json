@@ -1,71 +1,7 @@
 {
 	"type": "flying",
 	"name": "阔野",
-	"ammoType": {
-		"type": "PowerAmmoType",
-		"totalPower": 150000
-	},
-	"ammoCapacity": 2300,
-	"speed": 0.783,
-	"rotateSpeed": 0.622,
-	"drag": 0.05,
-	"accel": 0.08,
-	"fogRadius": 85,
-	"lightRadius": 560,
-	"flying": true,
-	"buildRange": 400,
-	"buildSpeed": 15,
-	"buildBeamOffset": 20,
-	"engineOffset": 82,
-	"engineSize": 18,
-	"engines": [
-		{
-			"x": -54,
-			"y": -79,
-			"radius": 9,
-			"rotation": -120
-		},
-		{
-			"x": 54,
-			"y": -79,
-			"radius": 9,
-			"rotation": -30
-		},
-		{
-			"x": -60,
-			"y": -42,
-			"radius": 12,
-			"rotation": -135
-		},
-		{
-			"x": 60,
-			"y": -42,
-			"radius": 12,
-			"rotation": -45
-		}
-	],
-	"parts": [
-		{
-			"type": "RegionPart",
-			"mirror": true,
-			"x": -36,
-			"y": 0.5,
-			"suffix": "-外",
-			"under": true,
-			"layer": 89.99,
-			"moveX": -4.75
-		},
-		{
-			"type": "RegionPart",
-			"mirror": true,
-			"x": -36,
-			"y": 0,
-			"suffix": "-内",
-			"under": true,
-			"layer": 89.99,
-			"moveX": 6.75
-		},
-		{
+		/*{
 			"type": "HaloPart",
 			"progress": "warmup",
 			"rotateSpeed": 0,
@@ -84,14 +20,7 @@
 			"haloRadiusTo": 15,
 			"haloRotation": 0,
 			"haloRotateSpeed": -0.3
-		}
-	],
-	"hitSize": 150,
-	"faceTarget": true,
-	"lowAltitude": true,
-	"health": 200000,
-	"armor": 166,
-	"itemCapacity": 1800,
+		}*/
 	"research": {
 		"parent": "阔野管理中心",
 		"objectives": [

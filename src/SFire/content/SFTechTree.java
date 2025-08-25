@@ -74,7 +74,7 @@ public class SFTechTree {
         });
         addToNode(cryofluidMixer, () -> {
             node(cryoCentrifuge);
-            node(nanoActivator);
+            node(nanoActivator, () -> node(nanoMixer));
         });
         addToNode(plastaniumCompressor, () -> node(plasMultiCompresser));
         addToNode(surgeSmelter, () -> {
