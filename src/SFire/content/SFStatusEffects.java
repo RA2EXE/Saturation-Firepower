@@ -7,6 +7,7 @@ import arc.math.geom.Vec2;
 import mindustry.content.Fx;
 import mindustry.content.Items;
 import mindustry.content.Liquids;
+import mindustry.content.StatusEffects;
 import mindustry.entities.Effect;
 import mindustry.entities.effect.WrapEffect;
 import mindustry.graphics.*;
@@ -87,8 +88,8 @@ public class SFStatusEffects {
         }};
         fastBuild = new StatusEffect("fast-build") {{
             color = Pal.heal;
-           buildSpeedMultiplier = 1.25f;
-           speedMultiplier = 1.1f;
+            buildSpeedMultiplier = 1.25f;
+            speedMultiplier = 1.1f;
             effectChance = 0.1f;
             effect = Fx.overdriven;
         }};

@@ -667,201 +667,199 @@ public class SFUnitTypes {
                 }});
             }
             faceTarget = true;
-            weapons.add(
-                    new Weapon(name("knocker-weapon")) {{
-                        rotate = false;
-                        reload = 180;
-                        x = 0;
-                        mirror = false;
-                        shootCone = 4;
-                        ejectEffect = Fx.none;
-                        shootSound = Sounds.missileLaunch;
-                        shootStatusDuration = 180;
-                        shootStatus = StatusEffects.slow;
-                        shoot = new ShootPattern() {{
-                            firstShotDelay = 180;
-                        }};
-                        parts.add(new RegionPart("-side") {{
-                            mirror = true;
-                            progress = PartProgress.warmup;
-                            moveX = 3.5f;
-                            moveRot = -35;
-                            moves.add(new PartMove(PartProgress.charge, 0.5f, -2, -10));
-                        }});
-                        shootWarmupSpeed = 0.05f;
-                        minWarmup = 0.9f;
-                        bullet = new BulletType() {{
-                            killShooter = true;
-                            keepVelocity = false;
-                            collidesAir = true;
-                            hitShake = 8;
-                            speed = 0;
-                            shootEffect = Fx.massiveExplosion;
-                            smokeEffect = new MultiEffect(
-                                    new ParticleEffect() {{
-                                        particles = 16;
-                                        interp = Interp.slowFast;
-                                        sizeInterp = Interp.slowFast;
-                                        sizeFrom = 9;
-                                        length = 65;
-                                        lifetime = 88;
-                                        colorFrom = SFColor.enemyRedLight.cpy().a(0.5f);
-                                        colorTo = SFColor.enemyRedLight.cpy().a(0.6f);
-                                    }},
-                                    new ParticleEffect() {{
-                                        particles = 36;
-                                        interp = Interp.pow10Out;
-                                        sizeInterp = Interp.pow10In;
-                                        sizeFrom = 7;
-                                        length = -77;
-                                        lifetime = 60;
-                                        colorFrom = SFColor.enemyRedLight;
-                                        colorTo = SFColor.enemyRedLight;
-                                        cone = 25;
-                                    }}
-                            );
-                            spawnUnit = new MissileUnitType("knocker-missile") {{
-                                outlineColor = SFColor.darkOutline;
-                                armor = 33;
-                                speed = 11.6f;
-                                lifetime = 35;
-                                drag = 0.1f;
-                                rotateSpeed = 0;
-                                hitSize = 13;
-                                health = 1800;
-                                targetAir = true;
-                                collidesAir = true;
-                                deathSound = Sounds.explosionbig;
-                                engineColor = trailColor = SFColor.enemyRedLight;
-                                trailLength = 14;
-                                engineLayer = 110;
-                                engineOffset = 16;
-                                engineSize = 4;
-                                abilities.add(new StatusFieldAbility(StatusEffects.shielded, 30, 60, 8) {{
-                                    applyEffect = Fx.none;
-                                    activeEffect = new WaveEffect() {{
-                                        interp = Interp.circleOut;
-                                        lifetime = 10;
-                                        sizeTo = 45;
-                                        strokeFrom = 8;
-                                        colorFrom = SFColor.enemyRedLight;
-                                        colorTo = Pal.sap.cpy().a(0.1f);
-                                    }};
-                                }});
-                                abilities.add(new MoveEffectAbility() {{
-                                    minVelocity = 5;
-                                    rotation = 0;
-                                    rotateEffect = true;
-                                    interval = 3;
-                                    y = -8;
-                                    effect = new MultiEffect(
-                                            new ParticleEffect() {{
-                                                particles = 1;
-                                                sizeTo = 18;
-                                                lifetime = 30;
-                                                sizeInterp = Interp.pow5Out;
-                                                length = 0;
-                                                region = "sfire-mod-arrow";
-                                                colorFrom = SFColor.enemyRedLight.cpy();
-                                                colorTo = SFColor.enemyRedLight.cpy();
-                                                cone = 0;
-                                            }},
-                                            new ParticleEffect() {{
-                                                particles = 1;
-                                                sizeFrom = 18;
-                                                sizeTo = 0;
-                                                startDelay = 6;
-                                                lifetime = 30;
-                                                length = 0;
-                                                region = "sfire-mod-arrow";
-                                                colorFrom = SFColor.enemyRedLight;
-                                                colorTo = SFColor.enemyRedLight;
-                                                cone = 0;
-                                            }}
-                                    );
-                                }});
-                                maxRange = 45;
-                                for (int i = 1; i <= 3; i++) {
-                                    int fi = i;
-                                    parts.add(new RegionPart("-wing") {{
-                                        mirror = true;
-                                        under = true;
-                                        layerOffset = -0.001f;
-                                        heatProgress = PartProgress.warmup;
-                                        heatColor = Color.valueOf("A278E1");
-                                        x = 6 + fi;
-                                        y = -13.25f + 1.5f * fi;
-                                        rotation = -180 + 30 * fi;
-                                        children.add(new RegionPart("-wing-heat") {{
-                                            layerOffset = 0.1f;
-                                            blending = Blending.additive;
-                                            color = SFColor.enemyRedLight;
-                                            outline = false;
-                                        }});
+            weapons.add(new Weapon(name("knocker-weapon")) {{
+                            rotate = false;
+                            reload = 60;
+                            x = 0;
+                            mirror = false;
+                            shootCone = 10;
+                            ejectEffect = Fx.none;
+                            shootSound = Sounds.missileLaunch;
+                            shootStatusDuration = 180;
+                            shootStatus = StatusEffects.slow;
+                            shoot = new ShootPattern() {{
+                                firstShotDelay = 180;
+                            }};
+                            parts.add(new RegionPart("-side") {{
+                                mirror = true;
+                                progress = PartProgress.warmup;
+                                moveX = 3.5f;
+                                moveRot = -35;
+                                moves.add(new PartMove(PartProgress.charge, 0.5f, -2, -10));
+                            }});
+                            shootWarmupSpeed = 0.05f;
+                            minWarmup = 0.9f;
+                            bullet = new BulletType(11.6f,10) {{
+                                killShooter = true;
+                                keepVelocity = false;
+                                collidesAir = false;
+                                hitShake = 8;
+                                shootEffect = Fx.massiveExplosion;
+                                smokeEffect = new MultiEffect(
+                                        new ParticleEffect() {{
+                                            particles = 16;
+                                            interp = Interp.slowFast;
+                                            sizeInterp = Interp.slowFast;
+                                            sizeFrom = 9;
+                                            length = 65;
+                                            lifetime = 88;
+                                            colorFrom = SFColor.enemyRedLight.cpy().a(0.5f);
+                                            colorTo = SFColor.enemyRedLight.cpy().a(0.6f);
+                                        }},
+                                        new ParticleEffect() {{
+                                            particles = 36;
+                                            interp = Interp.pow10Out;
+                                            sizeInterp = Interp.pow10In;
+                                            sizeFrom = 7;
+                                            length = -77;
+                                            lifetime = 60;
+                                            colorFrom = SFColor.enemyRedLight;
+                                            colorTo = SFColor.enemyRedLight;
+                                            cone = 25;
+                                        }}
+                                );
+                                spawnUnit = new MissileUnitType("knocker-missile") {{
+                                    outlineColor = SFColor.darkOutline;
+                                    armor = 33;
+                                    speed = 11.6f;
+                                    lifetime = 35;
+                                    drag = 0.1f;
+                                    rotateSpeed = 0;
+                                    hitSize = 13;
+                                    health = 1800;
+                                    targetAir = true;
+                                    collidesAir = true;
+                                    deathSound = Sounds.explosionbig;
+                                    engineColor = trailColor = SFColor.enemyRedLight;
+                                    trailLength = 14;
+                                    engineLayer = 110;
+                                    engineOffset = 16;
+                                    engineSize = 4;
+                                    abilities.add(new StatusFieldAbility(StatusEffects.shielded, 30, 60, 8) {{
+                                        applyEffect = Fx.none;
+                                        activeEffect = new WaveEffect() {{
+                                            interp = Interp.circleOut;
+                                            lifetime = 10;
+                                            sizeTo = 45;
+                                            strokeFrom = 8;
+                                            colorFrom = SFColor.enemyRedLight;
+                                            colorTo = Pal.sap.cpy().a(0.1f);
+                                        }};
                                     }});
-                                }
-                                weapons.add(new Weapon(name("knocker-weapon")) {{
-                                    reload = 60;
-                                    x = 0;
-                                    mirror = false;
-                                    rotate = true;
-                                    shake = 10;
-                                    shootSound = Sounds.none;
-                                    shootOnDeath = true;
-                                    shootCone = 360;
-                                    bullet = new BulletType(0, 3000) {{
-                                        killShooter = true;
-                                        splashDamage = 1200;
-                                        splashDamageRadius = 30;
-                                        suppressionRange = 380;
-                                        suppressionDuration = 300;
-                                        pierceArmor = true;
-                                        buildingDamageMultiplier = 6;
-                                        status = SFStatusEffects.shattered;
-                                        statusDuration = 100;
-                                        hitSound = Sounds.titanExplosion;
-                                        hitShake = 8;
-                                        shootEffect = smokeEffect = despawnEffect = Fx.massiveExplosion;
-                                        hitEffect = new MultiEffect(
-                                                new WrapEffect(Fx.dynamicSpikes, SFColor.enemyRedLight, 380),
-                                                new WaveEffect() {{
-                                                    interp = Interp.circleOut;
-                                                    lifetime = 20;
-                                                    sizeTo = 380;
-                                                    strokeFrom = 22;
-                                                    strokeTo = 10;
-                                                    colorFrom = SFColor.enemyRedLight;
-                                                    colorTo = SFColor.enemyRedLight.cpy().a(0);
+                                    abilities.add(new MoveEffectAbility() {{
+                                        minVelocity = 5;
+                                        rotation = 0;
+                                        rotateEffect = true;
+                                        interval = 3;
+                                        y = -8;
+                                        effect = new MultiEffect(
+                                                new ParticleEffect() {{
+                                                    particles = 1;
+                                                    sizeTo = 18;
+                                                    lifetime = 30;
+                                                    sizeInterp = Interp.pow5Out;
+                                                    length = 0;
+                                                    region = "sfire-mod-arrow";
+                                                    colorFrom = SFColor.enemyRedLight.cpy();
+                                                    colorTo = SFColor.enemyRedLight.cpy();
+                                                    cone = 0;
                                                 }},
                                                 new ParticleEffect() {{
-                                                    particles = 92;
-                                                    line = true;
-                                                    strokeFrom = 8;
-                                                    lenFrom = 35;
-                                                    length = 400;
-                                                    baseLength = 33;
-                                                    lifetime = 45;
-                                                    interp = Interp.fastSlow;
-                                                    sizeInterp = Interp.pow3In;
-                                                    colorFrom = Color.white;
+                                                    particles = 1;
+                                                    sizeFrom = 18;
+                                                    sizeTo = 0;
+                                                    startDelay = 6;
+                                                    lifetime = 30;
+                                                    length = 0;
+                                                    region = "sfire-mod-arrow";
+                                                    colorFrom = SFColor.enemyRedLight;
                                                     colorTo = SFColor.enemyRedLight;
-                                                }},
-                                                new ParticleEffect() {{
-                                                    particles = 26;
-                                                    sizeFrom = 10;
-                                                    length = 65;
-                                                    lifetime = 120;
-                                                    interp = Interp.fastSlow;
-                                                    sizeInterp = Interp.pow5In;
-                                                    colorFrom = SFColor.enemyRedLight;
-                                                    colorTo = SFColor.enemyRedLight.cpy().a(0.1f);
+                                                    cone = 0;
                                                 }}
                                         );
-                                    }};
-                                }});
+                                    }});
+                                    maxRange = 45;
+                                    for (int i = 1; i <= 3; i++) {
+                                        int fi = i;
+                                        parts.add(new RegionPart("-wing") {{
+                                            mirror = true;
+                                            under = true;
+                                            layerOffset = -0.001f;
+                                            heatProgress = PartProgress.warmup;
+                                            heatColor = Color.valueOf("A278E1");
+                                            x = 6 + fi;
+                                            y = -13.25f + 1.5f * fi;
+                                            rotation = -180 + 30 * fi;
+                                            children.add(new RegionPart("-wing-heat") {{
+                                                layerOffset = 0.1f;
+                                                blending = Blending.additive;
+                                                color = SFColor.enemyRedLight;
+                                                outline = false;
+                                            }});
+                                        }});
+                                    }
+                                    weapons.add(new Weapon(name("knocker-weapon")) {{
+                                        reload = 60;
+                                        x = 0;
+                                        mirror = false;
+                                        rotate = true;
+                                        shake = 10;
+                                        shootSound = Sounds.none;
+                                        shootOnDeath = true;
+                                        shootCone = 360;
+                                        bullet = new BulletType(0, 3000) {{
+                                            killShooter = true;
+                                            splashDamage = 1200;
+                                            splashDamageRadius = 30;
+                                            suppressionRange = 380;
+                                            suppressionDuration = 300;
+                                            pierceArmor = true;
+                                            buildingDamageMultiplier = 6;
+                                            status = SFStatusEffects.shattered;
+                                            statusDuration = 100;
+                                            hitSound = Sounds.titanExplosion;
+                                            hitShake = 8;
+                                            shootEffect = smokeEffect = despawnEffect = Fx.massiveExplosion;
+                                            hitEffect = new MultiEffect(
+                                                    new WrapEffect(Fx.dynamicSpikes, SFColor.enemyRedLight, 380),
+                                                    new WaveEffect() {{
+                                                        interp = Interp.circleOut;
+                                                        lifetime = 20;
+                                                        sizeTo = 380;
+                                                        strokeFrom = 22;
+                                                        strokeTo = 10;
+                                                        colorFrom = SFColor.enemyRedLight;
+                                                        colorTo = SFColor.enemyRedLight.cpy().a(0);
+                                                    }},
+                                                    new ParticleEffect() {{
+                                                        particles = 92;
+                                                        line = true;
+                                                        strokeFrom = 8;
+                                                        lenFrom = 35;
+                                                        length = 400;
+                                                        baseLength = 33;
+                                                        lifetime = 45;
+                                                        interp = Interp.fastSlow;
+                                                        sizeInterp = Interp.pow3In;
+                                                        colorFrom = Color.white;
+                                                        colorTo = SFColor.enemyRedLight;
+                                                    }},
+                                                    new ParticleEffect() {{
+                                                        particles = 26;
+                                                        sizeFrom = 10;
+                                                        length = 65;
+                                                        lifetime = 120;
+                                                        interp = Interp.fastSlow;
+                                                        sizeInterp = Interp.pow5In;
+                                                        colorFrom = SFColor.enemyRedLight;
+                                                        colorTo = SFColor.enemyRedLight.cpy().a(0.1f);
+                                                    }}
+                                            );
+                                        }};
+                                    }});
+                                }};
                             }};
-                        }};
-                    }}
+                        }}
             );
         }};
         painA = new UnitType("partiality-A") {{
@@ -5223,6 +5221,7 @@ public class SFUnitTypes {
                         shoot = new ShootSpread(2, 15);
                         ignoreRotation = true;
                         bullet = new BasicBulletType(5, 25, "missile") {{
+                            underwater = true;
                             lifetime = 45;
                             splashDamage = 15;
                             splashDamageRadius = 35;
@@ -5610,6 +5609,7 @@ public class SFUnitTypes {
                         inaccuracy = 20f;
                         autoTarget = true;
                         bullet = new BasicBulletType(5,110, "sfire-mod-missile1"){{
+                            underwater = true;
                             splashDamageRadius = 50;
                             splashDamage = 240;
                             homingDelay = 15f;

@@ -257,7 +257,6 @@ public class SFBlocks {
             wall = magbasaltWall;
             decoration = magbasaltStone;
             dragMultiplier = 1.1f;
-            attributes.set(Attribute.oil, 1.88f);
             walkSound = Sounds.spark;
         }};
         magshaleFloor = new Floor("magshale-floor") {{
@@ -3059,7 +3058,7 @@ public class SFBlocks {
             shake = 2f;
             heatColor = Color.valueOf("FF4040");
             researchCostMultiplier = 0.05f;
-            requirements(Category.turret, with(Items.titanium, 100, SFItems.rubidium, 90));
+            requirements(Category.turret, with(Items.silicon,40, Items.titanium,100, SFItems.rubidium,60));
 
             reload = 135;
             reloadWhileCharging = false;
@@ -3070,23 +3069,24 @@ public class SFBlocks {
             shoot.firstShotDelay = 60;
             range = 200;
             consumePower(11);
-            shootType = new PowerupBullet(2, 10, "circle-bullet") {{
-                damageUp = 0.5f;
-                maxDamageMultiplier = 3f;
-
+            shootType = new BasicBulletType(2, 15, "circle-bullet") {{
+                //damageUp = 0.5f;
+                //maxDamageMultiplier = 3f;
                 lifetime = 120;
                 ammoMultiplier = 1;
                 status = SFStatusEffects.magnStrif;
                 statusDuration = 10;
-                pierceBuilding = false;
                 buildingDamageMultiplier = 0.25f;
                 homingPower = 0.02f;
                 homingRange = 35;
 
+                sticky = true;
+                stickyExtraLifetime = 120;
+
                 frontColor = Color.white;
                 backColor = Pal.lancerLaser;
                 trailInterval = 30 / 4f;
-                trailEffect = despawnEffect = new ParticleEffect() {{
+                trailEffect = new ParticleEffect() {{
                     lifetime = 80;
                     length = 0;
                     sizeFrom = 12 / 2f;
@@ -3101,17 +3101,26 @@ public class SFBlocks {
                 smokeEffect = Fx.sparkShoot;
                 hitSound = Sounds.spark;
                 hitEffect = new ExplosionEffect() {{
-                    sparks = 16;
+                    sparks = 12;
                     smokes = 0;
                     sparkLen = 6;
+                    sparkStroke = 1.5f;
                     sparkRad = 35;
                     sparkColor = Pal.lancerLaser.cpy().a(0.4f);
                     lifetime = 25;
-                    waveRad = 45;
-                    waveLife = 15;
-                    waveStroke = 4;
-                    waveColor = Pal.lancerLaser;
+                    waveRad = waveStroke = 0;
                 }};
+                despawnEffect = new MultiEffect(
+                        new WaveEffect(){{
+                            strokeFrom = 8;
+                            sizeFrom = 0;
+                            sizeTo = 24;
+                            interp = Interp.circleOut;
+                            lifetime = 40;
+                            colorFrom = colorTo = Pal.lancerLaser;
+                        }},
+                        trailEffect
+                );
                 lightningDamage = damage / 3f;
                 lightning = 3;
                 lightningLength = 14;
@@ -3145,6 +3154,22 @@ public class SFBlocks {
                             sizeInterp = Interp.bounceIn;
                         }}
                 );
+                intervalDelay = bulletInterval = 12;
+                intervalBullets = 2;
+                intervalBullet = new LightningBulletType(){{
+                    damage = 5f;
+                    lightningLength = 7;
+                    lightningLengthRand = 4;
+                    lightningType = new BulletType(0.00001f, 0f) {{
+                        hitEffect = Fx.hitLancer;
+                        despawnEffect = Fx.none;
+                        lightColor = Color.white;
+                        status = StatusEffects.shocked;
+                        statusDuration = 10f;
+                        hittable = false;
+                        buildingDamageMultiplier = 0.25f;
+                    }};
+                }};
             }};
         }};
         liebao = new PowerTurret("liebao") {{
@@ -4513,8 +4538,6 @@ public class SFBlocks {
                             lifetime = 10;
                             splashDamage = 45;
                             splashDamageRadius = 35;
-                            sticky = true;
-                            stickyExtraLifetime = 10;
                             status = StatusEffects.blasted;
                             knockback = 2;
                             hitShake = 2;
@@ -8428,6 +8451,7 @@ public class SFBlocks {
             reload = 80;
             range = 620;
             shootType = new BasicBulletType(4,2610,"sfire-mod-missile1"){{
+                underwater = true;
                 drag = -0.01f;
                 shrinkY = 0;
                 width = 20;
@@ -8501,7 +8525,6 @@ public class SFBlocks {
                             Floor floor = tileOn() == null ? Blocks.air.asFloor() : tileOn().floor();
                             Color color = Tmp.c1.set(floor.mapColor.equals(Color.black) ? Blocks.water.mapColor : floor.mapColor).mul(1.5f);
                         })*/
-
                         new ParticleEffect(){{
                             particles = 5;
                             sizeFrom = 6;
@@ -9066,7 +9089,7 @@ public class SFBlocks {
             consumeLiquid(SFLiquids.nanoFluid, 4f);
             areaSize = 28;
             plans.add(
-                    new AssemblerUnitPlan(SFUnitTypes.electrodile, 60f * 360f, PayloadStack.list(discContainmentUnit,60,armorContainmentUnit,100))
+                    new AssemblerUnitPlan(SFUnitTypes.terrascape, 60f * 360f, PayloadStack.list(discContainmentUnit,60,armorContainmentUnit,100))
             );
             droneType = SFUnitTypes.assemblerDrone2;
         }};
