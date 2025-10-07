@@ -5,7 +5,7 @@ import mindustry.gen.Bullet;
 
 public class PowerupBullet extends BasicBulletType {
 
-    //最高伤害倍率
+    //最高伤害倍率, -1则无上限
     public float maxDamageMultiplier = 5f;
     //每次穿透后伤害提升倍率
     public float damageUp = 1f;
@@ -25,7 +25,13 @@ public class PowerupBullet extends BasicBulletType {
         //float sub = Math.max(initialHealth * pierceDamageFactor, 0);
 
         //穿透后伤害*伤害提升倍数，最大伤害倍数  取小的一个
-        b.damage = Math.min(b.damage + damage * damageUp, damage * maxDamageMultiplier);
+        if(maxDamageMultiplier > 0) {
+            b.damage = Math.min(b.damage + damage * damageUp, damage * maxDamageMultiplier);
+
+        }else {
+            b.damage = b.damage + damage * damageUp;
+        }
+
         createSplashDamage(b, x, y);
 
         //默认的结束穿透

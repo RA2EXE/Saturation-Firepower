@@ -159,15 +159,14 @@ public class SFTechTree {
         addToNode(vault, () -> node(molecularDatabase));
 
         //units + payloads
-        addToNode(tetrativeReconstructor, () -> node(pentativeReconstrustor, () -> {
-            node(liXian, Seq.with(new Research(UnitTypes.reign)), () -> {});
-            node(diXing, Seq.with(new Research(UnitTypes.corvus)), () -> {});
-            node(panLong, Seq.with(new Research(UnitTypes.toxopid)), () -> {});
-            node(guangHan, Seq.with(new Research(UnitTypes.oct)), () -> {});
-            node(yuHui, Seq.with(new Research(UnitTypes.eclipse)), () -> {});
-            node(tengWang, Seq.with(new Research(UnitTypes.omura)), () -> {});
-            node(luoHan, Seq.with(new Research(UnitTypes.navanax)), () -> {});
-        }));
+        addToNode(tetrativeReconstructor, () -> node(pentativeReconstrustor));
+        addToNode(reign, () -> node(liXian));
+        addToNode(corvus, () -> node(diXing));
+        addToNode(toxopid, () -> node(panLong));
+        addToNode(oct, () -> node(guangHan));
+        addToNode(eclipse, () -> node(yuHui));
+        addToNode(omura, () -> node(tengWang));
+        addToNode(navanax, () -> node(luoHan));
 
         addToNode(flare, () ->
                 node(air1, () -> node(air2, () -> node(air3, () -> node(air4, () -> node(air5, () -> node(air6))))))

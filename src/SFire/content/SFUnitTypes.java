@@ -19,6 +19,7 @@ import mindustry.entities.bullet.*;
 import mindustry.entities.effect.*;
 import mindustry.entities.part.*;
 import mindustry.entities.pattern.*;
+import mindustry.entities.units.WeaponMount;
 import mindustry.gen.*;
 import mindustry.graphics.Drawf;
 import mindustry.graphics.Pal;
@@ -110,6 +111,17 @@ public class SFUnitTypes {
             targetFlags = new BlockFlag[]{BlockFlag.battery, BlockFlag.core};
 
             abilities.add(new StatusFieldAbility(SFStatusEffects.stormed, 60, 60, -1));
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.negative,SFStatusEffects.postive,
+                    SFStatusEffects.magnStrif,SFStatusEffects.shattered,
+                    SFStatusEffects.echoFlame
+            );
             weapons.add(
                     new Weapon(name("flareX-1")) {{
                         x = 0;
@@ -420,6 +432,17 @@ public class SFUnitTypes {
                         }}
                 );
             }});
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.negative,SFStatusEffects.postive,
+                    SFStatusEffects.magnStrif,SFStatusEffects.shattered,
+                    SFStatusEffects.echoFlame
+            );
             parts.add(
                     new HoverPart() {{
                         x = 12f;
@@ -667,6 +690,17 @@ public class SFUnitTypes {
                 }});
             }
             faceTarget = true;
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.negative,SFStatusEffects.postive,
+                    SFStatusEffects.magnStrif,SFStatusEffects.shattered,
+                    SFStatusEffects.echoFlame
+            );
             weapons.add(new Weapon(name("knocker-weapon")) {{
                             rotate = false;
                             reload = 60;
@@ -778,6 +812,17 @@ public class SFUnitTypes {
                                                 }}
                                         );
                                     }});
+                                    immunities.addAll(
+                                            StatusEffects.wet,StatusEffects.freezing,
+                                            StatusEffects.burning,StatusEffects.melting,
+                                            StatusEffects.disarmed,StatusEffects.electrified,
+                                            StatusEffects.sapped,StatusEffects.slow,
+                                            StatusEffects.tarred,StatusEffects.unmoving,
+                                            StatusEffects.sporeSlowed,StatusEffects.corroded,
+                                            SFStatusEffects.negative,SFStatusEffects.postive,
+                                            SFStatusEffects.magnStrif,SFStatusEffects.shattered,
+                                            SFStatusEffects.echoFlame
+                                    );
                                     maxRange = 45;
                                     for (int i = 1; i <= 3; i++) {
                                         int fi = i;
@@ -862,6 +907,7 @@ public class SFUnitTypes {
                         }}
             );
         }};
+
         painA = new UnitType("partiality-A") {{
             constructor = UnitTypes.corvus.constructor;
             outlineColor = SFColor.darkOutline;
@@ -888,6 +934,16 @@ public class SFUnitTypes {
             abilities.add(new ArmorPlateAbility() {{
                 healthMultiplier = 1.88f;
             }});
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.marked,SFStatusEffects.breakdown,
+                    SFStatusEffects.scrambled,SFStatusEffects.magnStrif
+            );
 
             weapons.add(new Weapon(name("pain-gun")) {{
                 rotate = true;
@@ -1004,6 +1060,16 @@ public class SFUnitTypes {
             abilities.add(new ArmorPlateAbility() {{
                 healthMultiplier = 1.88f;
             }});
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.marked,SFStatusEffects.breakdown,
+                    SFStatusEffects.scrambled,SFStatusEffects.magnStrif
+            );
 
             weapons.add(new Weapon(name("pain-cannon")) {{
                 rotate = true;
@@ -1145,6 +1211,16 @@ public class SFUnitTypes {
             abilities.add(new ArmorPlateAbility() {{
                 healthMultiplier = 1.88f;
             }});
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.marked,SFStatusEffects.breakdown,
+                    SFStatusEffects.scrambled,SFStatusEffects.magnStrif
+            );
 
             weapons.add(new Weapon(name("pain-missile")) {{
                 rotate = true;
@@ -1302,6 +1378,16 @@ public class SFUnitTypes {
             abilities.add(new ArmorPlateAbility() {{
                 healthMultiplier = 1.88f;
             }});
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.marked,SFStatusEffects.breakdown,
+                    SFStatusEffects.scrambled,SFStatusEffects.magnStrif
+            );
 
             weapons.add(
                     new RepairBeamWeapon(name("pain-heal")) {{
@@ -1439,6 +1525,16 @@ public class SFUnitTypes {
             abilities.add(new ForceFieldAbility(150, 100, 18000, 900) {{
                 sides = 4;
             }});
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    /*SFStatusEffects.marked,SFStatusEffects.breakdown,*/
+                    SFStatusEffects.scrambled,SFStatusEffects.disRepair
+            );
             drawShields = false;
             faceTarget = false;
             BulletType bladePoint = new PointBulletType() {{
@@ -1694,6 +1790,18 @@ public class SFUnitTypes {
                     colorFrom = colorTo = SFColor.energyYellow.cpy().a(0.45f);
                 }};
             }});
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    /*SFStatusEffects.marked,SFStatusEffects.breakdown,
+                    SFStatusEffects.scrambled,SFStatusEffects.disRepair*/
+                    SFStatusEffects.magnStrif,SFStatusEffects.acidded
+            );
+
             weapons.add(
                     new Weapon(name("titan-weapon")) {{
                         reload = 28;
@@ -1847,6 +1955,17 @@ public class SFUnitTypes {
             armor = 77;
             faceTarget = true;
             forceMultiTarget = false;
+            immunities.addAll(
+                    StatusEffects.wet,StatusEffects.freezing,
+                    StatusEffects.burning,StatusEffects.melting,
+                    StatusEffects.disarmed,StatusEffects.electrified,
+                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.tarred,StatusEffects.unmoving,
+                    StatusEffects.sporeSlowed,StatusEffects.corroded,
+                    SFStatusEffects.marked,SFStatusEffects.breakdown,
+                    SFStatusEffects.scrambled,SFStatusEffects.magnStrif,
+                    SFStatusEffects.acidded
+            );
             Weapon vastGun = new Weapon(name("vast-gun")) {{
                 shootCone = 5.5f;
                 shootSound = Sounds.blaster;
@@ -2777,6 +2896,8 @@ public class SFUnitTypes {
                                 splashDamage = 40;
                                 splashDamageRadius = 16;
                                 scaledSplashDamage = true;
+                                suppressionDuration = 180;
+                                suppressionRange = 8 * 15;
                                 absorbable = false;
                                 lifetime = 30;
                                 homingPower = 0.5f;
@@ -4017,7 +4138,7 @@ public class SFUnitTypes {
             singleTarget = true;
             weapons.add(
                     new Weapon(name("executioner-laser")) {{
-                        reload = 30;
+                        reload = 54;
                         x = y = 0;
                         rotate = true;
                         display = false;
@@ -4046,8 +4167,7 @@ public class SFUnitTypes {
                             pointEffect = Fx.none;
                             shootEffect = Fx.hitBulletColor;
                             smokeEffect = Fx.shootSmallColor;
-                            pierceEffect = despawnEffect = hitEffect =
-                            new ParticleEffect() {{
+                            pierceEffect = despawnEffect = hitEffect = new ParticleEffect() {{
                                 particles = 1;
                                 sizeFrom = 4;
                                 length = 0;
@@ -4152,7 +4272,7 @@ public class SFUnitTypes {
                                 statusDuration = 120;
                                 buildingDamageMultiplier = 1.5f;
                                 scaledSplashDamage = true;
-                                splashDamage = 270;
+                                splashDamage = 180;
                                 splashDamageRadius = 65;
                                 hitShake = 4;
                                 hitSound = Sounds.plasmaboom;
@@ -6839,24 +6959,23 @@ public class SFUnitTypes {
             constructor = UnitTypes.gamma.constructor;
             outlineColor = SFColor.darkOutline;
             aiController = BuilderAI::new;
-            flying = true;
             lowAltitude = true;
-            rotateSpeed = 8;
-            speed = 3.8f;
-            accel = 0.06f;
-            drag = 0.04f;
-            hitSize = 30;
+            flying = true;
+            rotateSpeed = 7;
+            speed = 3.89f;
+            drag = 0.07f;
+            accel = 0.08f;
+            hitSize = 24;
             buildRange = 220;
-            buildBeamOffset = 11;
             buildSpeed = 2.25f;
+            mineBeamOffset = buildBeamOffset = 17;
             itemCapacity = 150;
             mineRange = 90;
             mineTier = 4;
             mineSpeed = 10;
-            health = 1000;
-            engineSize = 2.8f;
-            engineOffset = 16;
-            setEnginesMirror(new UnitEngine(10, -11, 3f, 292.5f));
+            health = 800;
+            engineOffset = 14f;
+            engineSize = 3.5f;
             abilities.add(new StatusFieldAbility(SFStatusEffects.fastBuild, 300, 360, 90) {{
                 applyEffect = Fx.heal;
                 activeEffect = new WaveEffect() {{
@@ -6873,16 +6992,16 @@ public class SFUnitTypes {
                 x = y = 0;
                 recoil = 0;
                 reload = 36;
-                rotate = false;
+                mirror = false;
                 shootSound = Sounds.missile;
                 inaccuracy = 3;
-                baseRotation = 45;
                 shootCone = 60;
-                shoot = new ShootSpread(4, 4);
-                bullet = new MissileBulletType(8, 12) {{
+                shoot = new ShootSpread(3, 4);
+                shootY = 60/4f;
+                bullet = new MissileBulletType(6, 12) {{
                     splashDamage = 12;
                     splashDamageRadius = 16;
-                    buildingDamageMultiplier = 0.3f;
+                    buildingDamageMultiplier = 0.01f;
                     hitSound = Sounds.none;
                     hitEffect = new WrapEffect(Fx.hitSquaresColor, Pal.heal);
                     despawnEffect = new WrapEffect(Fx.hitBulletColor, Pal.heal);
@@ -7226,15 +7345,22 @@ public class SFUnitTypes {
                         }};
                     }},
                     copy(terrPoint, 15.5f, 24),
-                    copy(terrPoint, 53.75f, -38f)
-                    /*new Weapon(name("terrascape-cannon")) {{
+                    copy(terrPoint, 53.75f, -38f),
+                    new Weapon(name("terrascape-cannon")) {{
                         rotate = false;
                         x = 175/4f;
                         y = 384/4f;
                         reload = 300;
                         alternate = false;
-
-                    }}*/
+                        shootSound = Sounds.laser;
+                        soundPitchMin = soundPitchMax = 0.7f;
+                        recoil = 4f;
+                        cooldownTime = 160;
+                        shake = 8;
+                        bullet = new BasicBulletType(15,220f){{
+                            lifetime = 60;
+                        }};
+                    }}
                     //missile 242 245
                     //laser  126 362
 
@@ -7675,7 +7801,7 @@ public class SFUnitTypes {
                             ejectEffect = Fx.none;
                             shoot = new ShootBarrel() {{
                                 shots = 4;
-                                shotDelay = 12;
+                                shotDelay = 8;
                                 barrels = new float[]{
                                         6.75f, 0, 0,
                                         -11.25f, 0, 0,
@@ -7695,8 +7821,8 @@ public class SFUnitTypes {
                                 sprite = "sfire-mod-missile2";
                                 width = 12;
                                 height = 46;
-                                frontColor = Color.darkGray;
-                                backColor = trailColor = SFColor.energyYellow;
+                                shrinkY = 0;
+                                frontColor = backColor = trailColor = SFColor.energyYellow;
                                 trailChance = 1;
                                 trailRotation = true;
                                 trailEffect = new ParticleEffect() {{

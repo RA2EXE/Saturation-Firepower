@@ -1,9 +1,7 @@
 package SFire.expand.bullets;
 
-import arc.Events;
 import arc.util.Tmp;
 import mindustry.entities.bullet.BasicBulletType;
-import mindustry.game.EventType;
 import mindustry.gen.*;
 
 public class SizeDamageBullet extends BasicBulletType {
@@ -12,7 +10,7 @@ public class SizeDamageBullet extends BasicBulletType {
     public float sizeDamageMul = 1f;
     //基础体积大小
     public float basicSize = 30f;
-    //30内造成基础伤害，30以上造成 基础*体积多出30的倍*修正系数
+    //30内造成基础伤害，30以上造成 基础 * 体积/30 * 修正系数
 
     //是否要考虑同体积/大体积 的 过穿/击飞？
 

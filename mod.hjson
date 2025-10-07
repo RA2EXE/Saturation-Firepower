@@ -8,7 +8,7 @@ main: "SFire.SFireMod"
 
 description: "Hell time, once for all"
 
-version: 4.0.0
+version: 4.0.1
 minGameVersion: 150
 java: true
 

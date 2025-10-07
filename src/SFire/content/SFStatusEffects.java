@@ -2,13 +2,8 @@ package SFire.content;
 
 import arc.graphics.*;
 import arc.math.Mathf;
-import arc.math.Rand;
-import arc.math.geom.Vec2;
 import mindustry.content.Fx;
-import mindustry.content.Items;
-import mindustry.content.Liquids;
-import mindustry.content.StatusEffects;
-import mindustry.entities.Effect;
+import mindustry.content.*;
 import mindustry.entities.effect.WrapEffect;
 import mindustry.graphics.*;
 import arc.math.Interp;
@@ -18,12 +13,14 @@ import mindustry.entities.effect.WaveEffect;
 import mindustry.type.StatusEffect;
 
 import static arc.graphics.g2d.Draw.color;
+import static arc.math.Angles.randLenVectors;
 import static mindustry.content.StatusEffects.*;
 
 public class SFStatusEffects {
     public static StatusEffect
-            repair, repairX, disRepair, fastBuild, scrambled, strengthen, negative, postive,
-            magnStrif, marked, acidded, inBreak, breakdown, echoFlame, overLoad,
+            repair, repairX, disRepair, fastBuild, scrambled, strengthen,
+            negative, postive, magnStrif,
+            marked, acidded, inBreak, breakdown, echoFlame, overLoad,
             stormed, shattered, overFreezing, chemicalFlame, fullFire,
             skewed, charging;
 
@@ -143,11 +140,10 @@ public class SFStatusEffects {
                 colorFrom = colorTo = Color.valueOf("AB99D3");
             }};
             init(() -> {
-                opposite(burning, melting, breakdown, magnStrif);
+                opposite(burning, melting, breakdown);
                 affinity(postive, (unit, result, time) -> {
-                    float pierceFraction = 0.5f;
-                    unit.damagePierce(transitionDamage * pierceFraction);
-                    unit.damage(transitionDamage * (1f - pierceFraction));
+                    unit.damage(transitionDamage);
+                    result.set(magnStrif, 60f);
                 });
             });
         }};
@@ -167,7 +163,10 @@ public class SFStatusEffects {
                 lifetime = 10;
                 colorFrom = colorTo = Color.valueOf("EAC2A9");
             }};
-            init(() -> opposite(burning, melting, breakdown, magnStrif));
+            init(() -> {
+                opposite(burning, melting, breakdown);
+                affinity(negative, (unit, result, time) -> result.set(magnStrif, 60f));
+            });
         }};
         magnStrif = new StatusEffect("magnetic-strif") {{
             color = Color.gray;
@@ -374,10 +373,10 @@ public class SFStatusEffects {
         }};
         chemicalFlame = new StatusEffect("chemical-flame") {{
             color = SFColor.enemyRedLight;
-            damage = 16.6f;
+            damage = 45 / 60f;
             speedMultiplier = 0.95f;
             dragMultiplier = 1.2f;
-            effectChance = 1;
+            effectChance = 0.55f;
             effect = new MultiEffect(
                     new ParticleEffect() {{
                         particles = 4;
@@ -385,7 +384,7 @@ public class SFStatusEffects {
                         lifetime = 19;
                         spin = -3;
                         sizeInterp = Interp.fastSlow;
-                        sizeFrom = 1;
+                        sizeFrom = 1.5f;
                         colorFrom = SFColor.enemyRedLight;
                         colorTo = SFColor.enemyRedLight.cpy().a(0.5f);
                     }},
@@ -406,7 +405,9 @@ public class SFStatusEffects {
                 opposite(freezing, overFreezing);
                 affinity(tarred, (unit, result, time) -> {
                     unit.damagePierce(transitionDamage);
+                    SFFx.chemFlame.at(unit.x + Mathf.range(unit.bounds() / 2.0F), unit.y + Mathf.range(unit.bounds() / 2.0F));
                 });
+                tarred.affinities.add(this);
             });
         }};
         fullFire = new StatusEffect("saturation-attack") {{
