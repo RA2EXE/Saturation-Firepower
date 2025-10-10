@@ -47,7 +47,8 @@ public class SFPlanets {
             allowWaveSimulation = true;
             allowSectorInvasion = true;
             allowLaunchSchematics = false;
-            allowLaunchToNumbered = false;
+            //allowLaunchToNumbered = false;
+            allowLaunchToNumbered = true;
             enemyCoreSpawnReplace = true;
             allowLaunchLoadout = true;
             prebuildBase = false;

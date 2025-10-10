@@ -58,7 +58,8 @@ import static mindustry.type.ItemStack.*;
 public class SFBlocks {
     public static Block
     //environment + wall + ores
-    snowSand, sporeSand, quartzSand, rareMound, rareEarth, rareEarthWater, calrareEarth, calrareEarthWall,
+    snowSand, sporeSand, quartzSand, rareMound, rareEarth, rareEarthWater, calrareEarth, calrareEarthCraters, calrareEarthWall,
+    muddySwamp, swamp, swampWater,
     magstoneFloor, magstoneWall, magstoneStone, magbasaltFloor, magbasaltWall, magbasaltStone, magshaleFloor, magshaleWall, magshaleStone,
     calciteFloor, calciteWall, calciteStone, celestiteFloor, celestiteVent, celestiteWall, celestiteStone,
     crackrockFloor, crackrockWall, crackrockStone, combinationFloor, combinationVent, combinationWall, combinationStone,
@@ -175,9 +176,49 @@ public class SFBlocks {
             dragMultiplier = 1.08f;
             attributes.set(Attribute.water, -0.1f);
         }};
+        calrareEarthCraters = new Floor("calrare-earth-craters", 3) {{
+            itemDrop = SFItems.rareEarth;
+            playerUnmineable = true;
+            dragMultiplier = 1.08f;
+            attributes.set(Attribute.water, -0.1f);
+        }};
         calrareEarthWall = new StaticWall("calrare-earth-wall") {{
             variants = 2;
             unitMoveBreakable = true;
+        }};
+        muddySwamp = new Floor("muddy-swamp",4){{
+            speedMultiplier = 0.9f;
+            dragMultiplier = 1.1f;
+            attributes.set(Attribute.water, 0.8f);
+            status = StatusEffects.muddy;
+            statusDuration = 60f;
+            cacheLayer = CacheLayer.mud;
+            walkSound = Sounds.mud;
+            walkSoundVolume = 0.08f;
+            walkSoundPitchMin = 0.4f;
+            walkSoundPitchMax = 0.5f;
+        }};
+        swamp = new Floor("swamp",0) {{
+            speedMultiplier = 0.7f;
+            dragMultiplier = 1.5f;
+            attributes.set(Attribute.water, 1.3f);
+            status = StatusEffects.muddy;
+            statusDuration = 30f;
+            cacheLayer = CacheLayer.mud;
+            walkSound = Sounds.mud;
+            walkSoundVolume = 0.08f;
+            walkSoundPitchMin = 0.4f;
+            walkSoundPitchMax = 0.5f;
+        }};
+        swampWater = new Floor("swamp-water",0){{
+            speedMultiplier = 0.5f;
+            status = StatusEffects.wet;
+            statusDuration = 90f;
+            liquidDrop = Liquids.water;
+            isLiquid = true;
+            cacheLayer = CacheLayer.mud;
+            albedo = 0.9f;
+            supportsOverlay = true;
         }};
 
         magstoneWall = new StaticWall("magstone-wall") {{
@@ -194,6 +235,8 @@ public class SFBlocks {
         }};
         celestiteWall = new StaticWall("celestite-wall") {{
             variants = 2;
+            mapColor = Color.valueOf("4C7587");
+            hasColor = true;
         }};
         crackrockWall = new StaticWall("crackrock-wall") {{
             variants = 2;
@@ -279,6 +322,7 @@ public class SFBlocks {
             parent = blendGroup = celestiteFloor;
             attributes.set(Attribute.steam, 1f);
             attributes.set(Attribute.water, 0.5f);
+            attributes.set(Attribute.heat, 0.05f);
             effectColor = Color.white.cpy().a(0.55f);
         }};
         crackrockFloor = new Floor("crackrock-floor", 4) {{
@@ -293,6 +337,7 @@ public class SFBlocks {
             parent = blendGroup = combinationFloor;
             attributes.set(Attribute.steam, 1f);
             attributes.set(Attribute.water, 0.5f);
+            attributes.set(Attribute.heat, 0.05f);
             effectColor = Color.white.cpy().a(0.55f);
         }};
         radiquartzFloor = new Floor("radiquartz-floor", 4) {{
@@ -343,6 +388,8 @@ public class SFBlocks {
         }};
         induFloorWall = new StaticWall("industry-wall") {{
             variants = 0;
+            mapColor = Color.valueOf("5A5C63");
+            hasColor = true;
         }};
         induFloor = new Floor("industry-floor", 0) {{
             speedMultiplier = 1.125f;
@@ -360,6 +407,8 @@ public class SFBlocks {
             attributes.set(Attribute.water, 2);
             attributes.set(Attribute.spores, 2);
             blendGroup = SFBlocks.induFloor;
+            mapColor = Color.valueOf("B3A890");
+            hasColor = true;
         }};
         induFloorBroken = new Floor("industry-floor-broken", 9) {{
             speedMultiplier = 0.95f;
@@ -367,6 +416,8 @@ public class SFBlocks {
             wall = induFloorWall;
             decoration = induFloorCover;
             blendGroup = SFBlocks.induFloor;
+            mapColor = Color.valueOf("F19583");
+            hasColor = true;
         }};
         induFloorHeater = new Floor("industry-heater", 2) {{
             speedMultiplier = 0.85f;
@@ -393,6 +444,8 @@ public class SFBlocks {
             damageTaken = 8;
             status = StatusEffects.melting;
             blendGroup = SFBlocks.induFloor;
+            mapColor = Color.valueOf("545454");
+            hasColor = true;
         }};
         induHeatBroken = new Floor("industry-heater-broken", 4) {{
             speedMultiplier = 0.85f;
