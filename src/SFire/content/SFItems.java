@@ -8,9 +8,9 @@ import mindustry.world.blocks.power.ConsumeGenerator;
 
 public class SFItems {
     public static Item
-            strontium, rubidium, fermium, chromium, rareEarth,
+            strontium, rubidium, fermium, chromium, rareEarth, crystalGallium,
     siliSteel, waveSteel, clusBomb, discFabric, nanoCore, lens,
-    tayrAlloy, leipAlloy;
+    tayrAlloy, leipAlloy, memoryAlloy;
     public static void load(){
         strontium = new Item("strontium", Color.valueOf("FFB0B0")){{
             hardness = 3;
@@ -41,6 +41,11 @@ public class SFItems {
             hardness = 2;
             buildable = false;
             lowPriority = true;
+        }};
+
+        crystalGallium = new Item("crystal-gallium", Color.valueOf("9A9DBF")){{
+            hardness = 3;
+            cost = 1f;
         }};
 
         siliSteel = new Item("silisteel", Color.valueOf("7595D2")){{
@@ -81,6 +86,11 @@ public class SFItems {
         leipAlloy = new Item("leippium-alloy", Color.valueOf("5C5D79")){{
             cost = 5f;
             healthScaling = 3f;
+        }};
+
+        memoryAlloy = new Item("memory-alloy", Color.valueOf("C9A997")){{
+            cost = 3f;
+            healthScaling = 1.5f;
         }};
 
     }

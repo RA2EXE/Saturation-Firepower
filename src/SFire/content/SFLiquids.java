@@ -2,6 +2,7 @@ package SFire.content;
 
 import arc.graphics.*;
 import arc.math.Interp;
+import mindustry.content.StatusEffects;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.type.*;
 
@@ -27,7 +28,7 @@ public class SFLiquids {
             viscosity = 0.8f;
             flammability = 1.5f;
             explosiveness = 1.8f;
-            effect = SFStatusEffects.acidded;
+            effect = StatusEffects.tarred;
         }};
 
         actiNanofluid = new CellLiquid("actived-nanofluid", Color.valueOf("7FD489")){{
@@ -73,7 +74,7 @@ public class SFLiquids {
         }};
 
         mixGas = new Liquid("mix-gas", Color.valueOf("FFD0D0AA")){{
-            flammability = 1.25f;
+            flammability = 2f;
             explosiveness = 0.25f;
             gas = true;
         }};

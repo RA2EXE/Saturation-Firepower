@@ -640,9 +640,9 @@ public class SFUnitTypes {
             outlineColor = SFColor.darkOutline;
             itemCapacity = 0;
             armor = 15;
-            speed = 1.36f;
+            speed = 1.12f;
             drag = 0.1f;
-            rotateSpeed = 1.52f;
+            rotateSpeed = 2f;
             hitSize = 18;
             health = 3600;
             stepShake = 0;
@@ -694,7 +694,7 @@ public class SFUnitTypes {
                     StatusEffects.wet,StatusEffects.freezing,
                     StatusEffects.burning,StatusEffects.melting,
                     StatusEffects.disarmed,StatusEffects.electrified,
-                    StatusEffects.sapped,StatusEffects.slow,
+                    StatusEffects.sapped,
                     StatusEffects.tarred,StatusEffects.unmoving,
                     StatusEffects.sporeSlowed,StatusEffects.corroded,
                     SFStatusEffects.negative,SFStatusEffects.postive,
@@ -706,14 +706,12 @@ public class SFUnitTypes {
                             reload = 60;
                             x = 0;
                             mirror = false;
-                            shootCone = 10;
+                            shootCone = 30;
                             ejectEffect = Fx.none;
                             shootSound = Sounds.missileLaunch;
                             shootStatusDuration = 180;
                             shootStatus = StatusEffects.slow;
-                            shoot = new ShootPattern() {{
-                                firstShotDelay = 180;
-                            }};
+                            shoot.firstShotDelay = 180;
                             parts.add(new RegionPart("-side") {{
                                 mirror = true;
                                 progress = PartProgress.warmup;
@@ -721,12 +719,12 @@ public class SFUnitTypes {
                                 moveRot = -35;
                                 moves.add(new PartMove(PartProgress.charge, 0.5f, -2, -10));
                             }});
-                            shootWarmupSpeed = 0.05f;
-                            minWarmup = 0.9f;
-                            bullet = new BulletType(11.6f,10) {{
+                            minWarmup = 0.95f;
+                            shootWarmupSpeed = 0.1f;
+                            bullet = new BulletType() {{
+                                speed = 0f;
                                 killShooter = true;
                                 keepVelocity = false;
-                                collidesAir = false;
                                 hitShake = 8;
                                 shootEffect = Fx.massiveExplosion;
                                 smokeEffect = new MultiEffect(
@@ -761,8 +759,6 @@ public class SFUnitTypes {
                                     rotateSpeed = 0;
                                     hitSize = 13;
                                     health = 1800;
-                                    targetAir = true;
-                                    collidesAir = true;
                                     deathSound = Sounds.explosionbig;
                                     engineColor = trailColor = SFColor.enemyRedLight;
                                     trailLength = 14;
@@ -844,18 +840,14 @@ public class SFUnitTypes {
                                         }});
                                     }
                                     weapons.add(new Weapon(name("knocker-weapon")) {{
-                                        reload = 60;
-                                        x = 0;
+                                        reload = 1;
                                         mirror = false;
                                         rotate = true;
-                                        shake = 10;
                                         shootSound = Sounds.none;
                                         shootOnDeath = true;
                                         shootCone = 360;
-                                        bullet = new BulletType(0, 3000) {{
-                                            killShooter = true;
-                                            splashDamage = 1200;
-                                            splashDamageRadius = 30;
+                                        bullet = new ExplosionBulletType(1200, 30) {{
+                                            collidesAir = true;
                                             suppressionRange = 380;
                                             suppressionDuration = 300;
                                             pierceArmor = true;
@@ -3198,6 +3190,8 @@ public class SFUnitTypes {
                     hitEffect = Fx.flakExplosion;
                 }};
             }};
+            range = 290f;
+            maxRange = 90 * 8f;
             weapons.addAll(
                     new Weapon(name("sundown-weapon")) {{
                         reload = 33;
@@ -4136,6 +4130,7 @@ public class SFUnitTypes {
             immunities.addAll(StatusEffects.burning, StatusEffects.wet, SFStatusEffects.breakdown);
             targetFlags = new BlockFlag[]{BlockFlag.core};
             singleTarget = true;
+            maxRange = 44 * 8;
             weapons.add(
                     new Weapon(name("executioner-laser")) {{
                         reload = 54;
@@ -4158,8 +4153,8 @@ public class SFUnitTypes {
                         minWarmup = 0.9f;
                         inaccuracy = 1;
                         bullet = new RailBulletType() {{
-                            length = 352;
-                            damage = 45;
+                            length = 22*13;
+                            damage = 40;
                             status = SFStatusEffects.breakdown;
                             statusDuration = 60;
                             buildingDamageMultiplier = 0.6f;
@@ -4184,7 +4179,7 @@ public class SFUnitTypes {
                         }});
                     }},
                     new Weapon(name("executioner-weapon")) {{
-                        reload = 110;
+                        reload = 120;
                         x = y = 0;
                         layerOffset = 0.001f;
                         rotate = true;
@@ -4194,7 +4189,7 @@ public class SFUnitTypes {
                         shootY = 46.5f;
                         recoil = 2;
                         shake = 8;
-                        bullet = new BasicBulletType(16, 270, "missile-large") {{
+                        bullet = new BasicBulletType(13, 270, "missile-large") {{
                             lifetime = 22;
                             status = SFStatusEffects.breakdown;
                             statusDuration = 120;
@@ -4271,9 +4266,8 @@ public class SFUnitTypes {
                                 status = SFStatusEffects.breakdown;
                                 statusDuration = 120;
                                 buildingDamageMultiplier = 1.5f;
-                                scaledSplashDamage = true;
                                 splashDamage = 180;
-                                splashDamageRadius = 65;
+                                splashDamageRadius = 48;
                                 hitShake = 4;
                                 hitSound = Sounds.plasmaboom;
                                 hitEffect = new ParticleEffect() {{
@@ -4532,7 +4526,7 @@ public class SFUnitTypes {
                     );
                     buildingDamageMultiplier = 0.68f;
                     damage = 35f;
-                    lifetime = 10;
+                    lifetime = 9;
                     speed = 16;
                     status = StatusEffects.freezing;
                     statusDuration = 240;

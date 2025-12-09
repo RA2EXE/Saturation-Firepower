@@ -23,14 +23,14 @@ public class SFPlanets {
             //generator = new TiberiaPlanetGenerator();
             meshLoader = () -> new HexMesh(this, 8);
             cloudMeshLoader = () -> new MultiMesh(
-                    new HexSkyMesh(this, 11, 0.15f, 0.13f, 5, new Color().set(SFItems.tayrAlloy.color).mul(0.9f).a(0.75f), 2, 0.42f, 0.2f, 0.43f),
-                    new HexSkyMesh(this, 1, 0.6f, 0.16f, 5, Color.white.cpy().lerp(SFItems.tayrAlloy.color, 0.55f).a(0.75f), 2, 0.42f, 0.5f, 0.45f)
+                    new HexSkyMesh(this, 11, 0.6f, 0.16f, 5, new Color().set(SFItems.tayrAlloy.color).mul(0.9f).a(0.75f), 2, 0.3f, 0.5f, 0.4f),
+                    new HexSkyMesh(this, 1, 0.15f, 0.13f, 5, Color.white.cpy().lerp(SFItems.tayrAlloy.color, 0.55f).a(0.75f), 2, 0.8f, 0.2f, 0.45f)
             );
             iconColor = SFColor.tayrDark;
             atmosphereColor = lightColor = SFColor.tayrDark.cpy().a(0.8f);
             prebuildBase = false;
             bloom = false;
-            startSector = 15;
+            startSector = 218;
 
             orbitRadius = 85;
             orbitTime = 180 * 60;

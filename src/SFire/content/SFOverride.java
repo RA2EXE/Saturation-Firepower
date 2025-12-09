@@ -628,6 +628,7 @@ public class SFOverride {
             splashDamage = 80;
             splashDamageRadius = 60;
         }};
+        ((ConsumeGenerator) Blocks.rtgGenerator).itemDurationMultipliers.put(SFItems.discFabric, 0.7f);
         Blocks.impactReactor.requirements(Category.power, with(Items.lead,500, SFItems.siliSteel,250, Items.graphite,400, Items.thorium,200, Items.surgeAlloy,300, Items.metaglass,350));
         //endregion
 
