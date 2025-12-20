@@ -4,8 +4,10 @@ import arc.struct.*;
 import mindustry.content.*;
 import mindustry.ctype.UnlockableContent;
 import mindustry.game.Objectives.*;
+import mindustry.type.Item;
 import mindustry.type.ItemStack;
 
+import static mindustry.Vars.content;
 import static mindustry.content.Blocks.*;
 import static mindustry.content.SectorPresets.*;
 import static mindustry.content.TechTree.*;
@@ -20,18 +22,91 @@ public class SFTechTree {
     public static TechNode context = null;
 
     public static void load() {
-        //SFPlanets.tiberia.techTree = nodeRoot("tiberia", frondCore, () -> {}
+        SFPlanets.tiberia.techTree = nodeRoot("tiberia", frontCore, true, () -> addToNode(frontCore, () -> {
+
+            node(xianqu, () -> {
+                node(gaosi);
+                node(liebao, () -> node(qingning));
+            });
+            node(mengma, () -> node(changqiang, () -> node(fangtian)));
+
+
+            node(frozenFront, Seq.with(
+                    new SectorComplete(planetaryTerminal),
+                    new Research(oct),
+                    new Research(corvus),
+                    new Research(reign),
+                    new Research(eclipse),
+                    new Research(tank5),
+                    new Research(air5),
+                    new Research(toxopid)
+            ), () -> {});
+
+            nodeProduce(Items.copper, () -> {
+                node(Liquids.water, () -> node(Liquids.nitrogen, () -> nodeProduce(SFLiquids.nitrate, () -> {})));
+                node(Items.lead, () -> {
+                    node(Items.titanium, () -> {
+                        node(Liquids.cryofluid, () ->
+                            node(SFLiquids.nanoFluid, Seq.with(new Research(SFLiquids.nanoFluid)), () ->
+                                node(SFLiquids.actiNanofluid, Seq.with(new Research(woliu)),() -> {})));
+
+                        node(Items.thorium, () -> {
+                            node(Items.surgeAlloy, () -> node(SFItems.tayrAlloy, () -> {}));
+                            node(Items.phaseFabric, () -> nodeProduce(SFItems.discFabric, () -> {}));
+                            nodeProduce(SFItems.fermium, () -> nodeProduce(SFItems.leipAlloy, () -> {}));
+                        });
+                    });
+
+                    node(Items.metaglass, () -> {});
+                });
+
+                node(SFItems.rareEarth, () -> {
+                    nodeProduce(SFItems.strontium, () -> {});
+                    nodeProduce(SFItems.rubidium, () -> {
+                    });
+                    nodeProduce(SFItems.chromium, () -> {
+                        nodeProduce(SFItems.waveSteel, () ->{
+
+                        });
+                    });
+                });
+
+                node(Items.sand, () -> {
+                    node(Items.scrap, () -> node(Liquids.slag, () ->
+                            nodeProduce(SFItems.crystalGallium,() ->
+                                    nodeProduce(SFItems.lens, () -> {}))));
+
+                    node(Items.coal, () -> {
+                        node(Items.graphite, () ->
+                            node(Items.silicon, () -> nodeProduce(SFItems.nanoCore, () -> {})));
+                        nodeProduce(SFLiquids.mixGas, () -> {});
+
+                        node(Items.pyratite, () ->
+                            node(Items.blastCompound, () ->
+                                nodeProduce(SFItems.clusBomb, () -> {})));
+
+                        node(Items.sporePod, () -> {});
+
+                        node(Liquids.oil, () -> {
+                            nodeProduce(SFLiquids.nitratedOil, () -> nodeProduce(SFLiquids.blastReagent, () -> {}));
+                            node(Items.plastanium, () -> {});
+                        });
+                    });
+                });
+            });
+        }));
+
 
         // addToNode(XXX, () -> node(XXX));
 
         //turrets
         addToNode(arc, () -> {
-            node(gaosi);
+            //node(gaosi);
             node(bingfengbao);
-            node(xianqu, () -> node(liebao, () -> node(qingning)));
+            node(xianqu, () -> node(liebao, () -> {}/*node(qingning)*/));
         });
         addToNode(hail, () -> {
-            node(huojian, () -> node(changqiang, () -> node(fangtian)));
+            node(huojian, () -> {}/*node(changqiang, () -> node(fangtian))*/);
             node(mengma);
         });
         addToNode(salvo, () -> {
@@ -190,12 +265,7 @@ public class SFTechTree {
         addToNode(repairTurret, () -> node(nanoUnitRegener));
 
         //items + liquids
-        addToNode(Items.coal, () -> {
-            nodeProduce(SFItems.strontium, () -> {
-            });
-            nodeProduce(SFLiquids.mixGas, () -> {
-            });
-        });
+        /*
         addToNode(Items.sand, () -> nodeProduce(SFItems.rareEarth, () -> {
             nodeProduce(SFItems.rubidium, () -> {
             });
@@ -204,43 +274,23 @@ public class SFTechTree {
 
                 });
             });
-        }));
-        addToNode(Items.titanium, () -> nodeProduce(SFItems.siliSteel, () -> {
-        }));
-        addToNode(Items.silicon, () -> nodeProduce(SFItems.nanoCore, () -> {
+        }));*/
+        addToNode(Items.titanium, () -> nodeProduce(SFItems.siliSteel, () -> {}));
+        /*addToNode(Items.silicon, () -> nodeProduce(SFItems.nanoCore, () -> {
             nodeProduce(SFItems.lens, () -> {
             });
             nodeProduce(SFLiquids.nanoFluid, () -> node(SFLiquids.actiNanofluid, () -> {
             }));
-        }));
-        addToNode(Items.surgeAlloy, () -> nodeProduce(SFItems.tayrAlloy, () -> {
-        }));
-        addToNode(Items.thorium, () -> nodeProduce(SFItems.fermium, () -> nodeProduce(SFItems.leipAlloy, () -> {
-        })));
-        addToNode(Items.phaseFabric, () -> nodeProduce(SFItems.discFabric, () -> {
-        }));
-        addToNode(Items.blastCompound, () -> nodeProduce(SFItems.clusBomb, () -> {
-        }));
-        addToNode(Liquids.water, () -> nodeProduce(SFLiquids.nitrate, () -> {
-        }));
-        addToNode(Liquids.oil, () -> nodeProduce(SFLiquids.nitratedOil, () -> nodeProduce(SFLiquids.blastReagent, () -> {
-        })));
+        }));*/
+        addToNode(Items.surgeAlloy, () -> nodeProduce(SFItems.tayrAlloy, () -> {}));
+        //addToNode(Items.thorium, () -> nodeProduce(SFItems.fermium, () -> nodeProduce(SFItems.leipAlloy, () -> {})));
+        //addToNode(Items.phaseFabric, () -> nodeProduce(SFItems.discFabric, () -> {}));
+        //addToNode(Items.blastCompound, () -> nodeProduce(SFItems.clusBomb, () -> {}));
+        //addToNode(Liquids.water, () -> nodeProduce(SFLiquids.nitrate, () -> {}));
+        //addToNode(Liquids.oil, () -> nodeProduce(SFLiquids.nitratedOil, () -> nodeProduce(SFLiquids.blastReagent, () -> {})));
 
         //sector
-        addToNode(planetaryTerminal, () -> {
-            node(frozenFront, Seq.with(
-            new SectorComplete(planetaryTerminal),
-            new Research(oct),
-            new Research(corvus),
-            new Research(reign),
-            new Research(eclipse),
-            new Research(tank5),
-            new Research(air5),
-            new Research(toxopid)
-            ), () -> {
 
-            });
-        });
 
 
     }

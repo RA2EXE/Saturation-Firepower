@@ -1166,7 +1166,7 @@ public class SFBlocks {
         }};
         galliumSupercooler = new GenericCrafter("gallium-supercooler") {{
             size = 2;
-            requirements(Category.crafting, with(Items.metaglass,30, Items.surgeAlloy,20, Items.silicon,60, SFItems.rubidium,45));
+            requirements(Category.crafting, with(Items.metaglass,30, Items.plastanium,30, Items.silicon,60, SFItems.rubidium,45));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 10;
             liquidCapacity = 60;
@@ -1213,7 +1213,7 @@ public class SFBlocks {
             craftTime = 20;
             outputItem = new ItemStack(SFItems.nanoCore, 2);
             consumePower(15f);
-            consumeItems(with(Items.silicon, 1, SFItems.rubidium, 1));
+            consumeItems(with(SFItems.crystalGallium,1, SFItems.rubidium,1));
 
             ambientSound = Sounds.techloop;
             ambientSoundVolume = 0.3f;
@@ -2867,6 +2867,7 @@ public class SFBlocks {
             health = 3000;
             requirements(Category.production, with(SFItems.siliSteel, 800, SFItems.discFabric, 400, SFItems.leipAlloy, 500));
             hasLiquids = hasItems = true;
+            placeableLiquid = true;
             itemCapacity = 100;
             liquidCapacity = 60;
             drillTime = 6.25f;
