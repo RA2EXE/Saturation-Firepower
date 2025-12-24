@@ -44,7 +44,7 @@ public class SFPlanets {
 
             allowWaves = true;
             allowLegacyLaunchPads = false;
-            allowWaveSimulation = true;
+            //allowWaveSimulation = true;
             allowSectorInvasion = true;
             allowLaunchSchematics = false;
             //allowLaunchToNumbered = false;

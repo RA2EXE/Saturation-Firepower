@@ -478,7 +478,7 @@ public class SFOverride {
 
         ((ItemTurret) Blocks.foreshadow).ammoTypes.put(SFItems.tayrAlloy, new PointBulletType(){{
             damage = 1750;
-            hitSound = Sounds.boom;
+            hitSound = SFSounds.boom;
             speed = 100;
             hitShake = 5;
             buildingDamageMultiplier = 0.3f;
@@ -592,7 +592,7 @@ public class SFOverride {
         Blocks.differentialGenerator.destroyBullet = new BulletType() {{
             instantDisappear = true;
             hitShake = 5;
-            hitSound = Sounds.explosionbig;
+            hitSound = SFSounds.explosionbig;
             hitEffect = new MultiEffect(
                     new ParticleEffect() {{
                         particles = 16;

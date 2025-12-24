@@ -193,7 +193,7 @@ public class SFBlocks {
             status = StatusEffects.muddy;
             statusDuration = 30f;
             cacheLayer = CacheLayer.mud;
-            walkSound = Sounds.mud;
+            walkSound = Sounds.stepMud;
             walkSoundVolume = 0.08f;
             walkSoundPitchMin = 0.4f;
             walkSoundPitchMax = 0.5f;
@@ -205,7 +205,7 @@ public class SFBlocks {
             status = StatusEffects.muddy;
             statusDuration = 60f;
             cacheLayer = CacheLayer.mud;
-            walkSound = Sounds.mud;
+            walkSound = Sounds.stepMud;
             walkSoundVolume = 0.08f;
             walkSoundPitchMin = 0.4f;
             walkSoundPitchMax = 0.5f;
@@ -307,20 +307,20 @@ public class SFBlocks {
             wall = magstoneWall;
             decoration = magstoneStone;
             dragMultiplier = 1.25f;
-            walkSound = Sounds.spark;
+            walkSound = Sounds.shootArc;
         }};
         magbasaltFloor = new Floor("magbasalt-floor") {{
             wall = magbasaltWall;
             decoration = magbasaltStone;
             dragMultiplier = 1.1f;
-            walkSound = Sounds.spark;
+            walkSound = Sounds.shootArc;
         }};
         magshaleFloor = new Floor("magshale-floor") {{
             wall = magshaleWall;
             decoration = magshaleStone;
             dragMultiplier = 1.1f;
             attributes.set(Attribute.oil, 1.88f);
-            walkSound = Sounds.spark;
+            walkSound = Sounds.shootArc;
         }};
         calciteFloor = new Floor("calcite-floor") {{
             wall = calciteWall;
@@ -397,7 +397,7 @@ public class SFBlocks {
 
         induFloorCover = new Prop("industry-floor-cover") {{
             variants = 6;
-            breakSound = Sounds.breaks;
+            breakSound = Sounds.blockBreak2;
         }};
         induFloorWall = new StaticWall("industry-wall") {{
             variants = 0;
@@ -557,7 +557,7 @@ public class SFBlocks {
             destroyBullet = new ExplosionBulletType(300, 50) {{
                 buildingDamageMultiplier = 0.05f;
                 status = StatusEffects.blasted;
-                hitSound = Sounds.explosionbig;
+                hitSound = SFSounds.explosionbig;
                 hitSoundVolume = 3;
                 hitShake = 5;
                 hitEffect = new MultiEffect(
@@ -593,7 +593,7 @@ public class SFBlocks {
                     lifetime = 13.5f;
                     hitShake = 3.5f;
                     width = height = 0;
-                    hitSound = Sounds.boom;
+                    hitSound = SFSounds.boom;
                     hitSoundVolume = 3;
                     hitEffect = despawnEffect = Fx.blastExplosion;
                     intervalDelay = 1;
@@ -621,7 +621,7 @@ public class SFBlocks {
             destroyBullet = new ExplosionBulletType(390, 80) {{
                 buildingDamageMultiplier = 0.05f;
                 status = StatusEffects.blasted;
-                hitSound = Sounds.explosionbig;
+                hitSound = SFSounds.explosionbig;
                 hitSoundVolume = 3;
                 hitShake = 5;
                 hitEffect = new MultiEffect(
@@ -657,7 +657,7 @@ public class SFBlocks {
                     lifetime = 13.5f;
                     hitShake = 3.5f;
                     width = height = 0;
-                    hitSound = Sounds.boom;
+                    hitSound = SFSounds.boom;
                     hitSoundVolume = 3;
                     hitEffect = despawnEffect = Fx.blastExplosion;
                     intervalDelay = 1;
@@ -752,7 +752,7 @@ public class SFBlocks {
                         spinSprite = true;
                         rotateSpeed = -0.85f;
                     }}, new DrawRegion("-top"));
-            ambientSound = Sounds.grinding;
+            ambientSound = Sounds.loopGrind;
             ambientSoundVolume = 0.5f;
         }};
         sporeCompressor = new GenericCrafter("spore-compressor") {{
@@ -892,7 +892,7 @@ public class SFBlocks {
 
             craftEffect = Fx.smeltsmoke;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame());
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.28f;
         }};
         surgeElesmelter = new GenericCrafter("surge-electric-smelter") {{
@@ -921,7 +921,7 @@ public class SFBlocks {
                 flameRadiusIn = 6;
                 flameColor = Pal.surge.cpy().a(0.5f);
             }});
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.88f;
         }};
         phaseActiver = new AttributeCrafter("phase-activer"){{
@@ -952,7 +952,7 @@ public class SFBlocks {
                 colorTo = Color.valueOf("FFD197A8");
             }};
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawWeave(), new DrawLiquidTile(Liquids.nitrogen), new DrawDefault());
-            ambientSound = Sounds.techloop;
+            ambientSound = Sounds.loopTech;
             ambientSoundVolume = 0.28f;
         }};
 
@@ -967,7 +967,7 @@ public class SFBlocks {
             consumeItems(with(Items.silicon, 1, Items.titanium, 1));
 
             craftEffect = Fx.smeltsmoke;
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame() {{
                 flameColor = Color.valueOf("E1E4C8");
@@ -995,7 +995,7 @@ public class SFBlocks {
                 colorFrom = SFItems.siliSteel.color.cpy().a(0.66f);
                 colorTo = SFItems.siliSteel.color;
             }};
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.65f;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame() {{
                 flameColor = Color.valueOf("E1E4C8");
@@ -1027,7 +1027,7 @@ public class SFBlocks {
                 region = "sfire-mod-loz";
                 colorTo = SFItems.siliSteel.color.cpy().a(0.66f);
             }};
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.88f;
             drawer = new DrawMulti(new DrawDefault(), new DrawGlowRegion() {{
                 glowScale = 8;
@@ -1063,7 +1063,7 @@ public class SFBlocks {
                 colorFrom = SFItems.siliSteel.color.cpy().a(0.66f);
                 colorTo = SFItems.siliSteel.color;
             }};
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame() {{
                 flameColor = Color.valueOf("E1E4C8");
@@ -1157,7 +1157,7 @@ public class SFBlocks {
             //consumeItem(Items.sand, 2);  test only
             consumeLiquid(Liquids.water, 0.2f);
 
-            ambientSound = Sounds.hum;
+            ambientSound = Sounds.loopHum;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.water), new DrawRegion("-rot1") {{
                 rotateSpeed = 1.36f;
             }}, new DrawRegion("-rot2") {{
@@ -1195,7 +1195,7 @@ public class SFBlocks {
             consumePower(10f);
             consumeItems(with(Items.silicon, 3, SFItems.rubidium, 3));
 
-            ambientSound = Sounds.techloop;
+            ambientSound = Sounds.loopTech;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawFlame() {{
                 flameColor = Color.valueOf("7CF389B6");
@@ -1215,7 +1215,7 @@ public class SFBlocks {
             consumePower(15f);
             consumeItems(with(SFItems.crystalGallium,1, SFItems.rubidium,1));
 
-            ambientSound = Sounds.techloop;
+            ambientSound = Sounds.loopTech;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawFade() {{
                 alpha = 0.99f;
@@ -1235,7 +1235,7 @@ public class SFBlocks {
             consumeItems(with(Items.silicon,2, SFItems.crystalGallium,2));
             consumeLiquid(Liquids.nitrogen, 1 / 30f);
 
-            ambientSound = Sounds.techloop;
+            ambientSound = Sounds.loopTech;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawCrucibleFlame() {{
                 midColor = Color.valueOf("97A5F7");
@@ -1272,7 +1272,7 @@ public class SFBlocks {
             consumeItems(with(SFItems.fermium, 1, Items.phaseFabric, 8));
             consumeLiquid(SFLiquids.nanoFluid, 0.45f);
 
-            ambientSound = Sounds.pulse;
+            ambientSound = Sounds.loopPulse;
             ambientSoundVolume = 0.68f;
             updateEffect = new WaveEffect() {{
                 interp = Interp.circleOut;
@@ -1361,7 +1361,7 @@ public class SFBlocks {
             consumePower(8);
             consumeItems(with(SFItems.fermium, 1, SFItems.rareEarth, 3));
 
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.5f;
             craftEffect = new ParticleEffect() {{
                 particles = 3;
@@ -1480,7 +1480,7 @@ public class SFBlocks {
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.oil), new DrawLiquidTile(SFLiquids.mixGas) {{
                 alpha = 0.35f;
             }}, new DrawDefault(), new DrawGlowRegion());
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.3f;
             craftEffect = Fx.smokeCloud;
         }};
@@ -1514,7 +1514,7 @@ public class SFBlocks {
                         rotateScl = 1.7f;
                     }},
                     new DrawDefault());
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.5f;
         }};
         blastSiSmelter = new GenericCrafter("blast-silicon-smelter") {{
@@ -1615,7 +1615,7 @@ public class SFBlocks {
             consumePower(4.5f);
             consumeLiquid(SFLiquids.nitratedOil, 0.9f);
 
-            ambientSound = Sounds.grinding;
+            ambientSound = Sounds.loopGrind;
             ambientSoundVolume = 0.13f;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawCultivator() {{
                 plantColor = Color.valueOf("36312D");
@@ -1742,7 +1742,7 @@ public class SFBlocks {
                 sizeInterp = Interp.pow2In;
                 colorFrom = colorTo = Color.valueOf("2CCDB1");
             }};
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame() {{
                 flameColor = Color.valueOf("2CCDB1");
@@ -1778,7 +1778,7 @@ public class SFBlocks {
                     colorFrom = colorTo = Color.valueOf("2CCDB1");
                 }};
             }};
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame() {{
                 flameColor = Color.valueOf("2CCDB1");
@@ -1812,7 +1812,7 @@ public class SFBlocks {
                     colorFrom = colorTo = Color.valueOf("9B9DCF");
                 }};
             }};
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame() {{
                 flameColor = Color.valueOf("9B9DCF");
@@ -1863,7 +1863,7 @@ public class SFBlocks {
                         colorTo = Color.valueOf("737373A8");
                     }}
             );
-            ambientSound = Sounds.smelter;
+            ambientSound = Sounds.loopSmelter;
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(SFLiquids.blastReagent), new DrawDefault());
         }};
@@ -2229,7 +2229,7 @@ public class SFBlocks {
             range = 800;
 
             consumePower(13f);
-            shootSound = Sounds.laser;
+            shootSound = Sounds.shootLaser;
             shootEffect = Fx.instShoot;
             smokeEffect = new ParticleEffect() {{
                 particles = 19;
@@ -2320,7 +2320,7 @@ public class SFBlocks {
                     }},
                     new DrawRegion("-top")
             );
-            destroySound = Sounds.release;
+            destroySound = SFSounds.release;
             destroyEffect = new MultiEffect(
                     new ParticleEffect() {{
                         particles = 16;
@@ -2370,6 +2370,8 @@ public class SFBlocks {
             laserRange = 22;
             laserScale = 0.5f;
             laserColor2 = Color.valueOf("5F6A89");
+            breakSound = Sounds.explosionQuad;
+            
 
             placeableLiquid = true;
             destroyBullet = new BulletType(0, 1600) {{
@@ -2381,7 +2383,6 @@ public class SFBlocks {
                 absorbable = false;
                 instantDisappear = true;
                 hitShake = 4;
-                hitSound = Sounds.plasmaboom;
                 hitEffect = Fx.instBomb;
             }};
         }};
@@ -2425,7 +2426,7 @@ public class SFBlocks {
                     new DrawRegion("-top"),
                     new DrawLiquidRegion(Liquids.water),
                     new DrawLiquidRegion(SFLiquids.mixGas));
-            ambientSound = Sounds.steam;
+            ambientSound = Sounds.loopSteam;
             ambientSoundVolume = 0.04f;
         }};
         gasSmoker = new ConsumeGenerator("gas-generator") {{
@@ -2439,7 +2440,7 @@ public class SFBlocks {
             generateEffect = Fx.steam;
             effectChance = 0.01f;
             drawer = new DrawMulti(new DrawDefault(), new DrawWarmupRegion());
-            ambientSound = Sounds.steam;
+            ambientSound = Sounds.loopSteam;
             ambientSoundVolume = 0.02f;
         }};
         gasTurbine = new GasTurbineGenerator("gas-turbine"){{
@@ -2459,7 +2460,7 @@ public class SFBlocks {
             consumeLiquid(Liquids.water,0.2f);
             consume(new ConsumeLiquidFlammable(0.3f){{minFlammability=1f;}});
 
-            ambientSound = Sounds.steam;
+            ambientSound = Sounds.loopSteam;
             ambientSoundVolume = 0.02f;
 
             drawer = new DrawMulti(
@@ -2483,7 +2484,7 @@ public class SFBlocks {
                 scale = 10;
             }});
             floating = true;
-            ambientSound = Sounds.hum;
+            ambientSound = Sounds.loopHum;
         }};
         radiGenerator = new ThermalGenerator("radiation-generator") {{
             size = 2;
@@ -2508,7 +2509,7 @@ public class SFBlocks {
             drawer = new DrawMulti(new DrawDefault(), new DrawFade() {{
                 scale = 10;
             }});
-            ambientSound = Sounds.hum;
+            ambientSound = Sounds.loopHum;
         }};
         fermReactor = new NuclearReactor("fermium-reactor") {{
             size = 3;
@@ -2659,7 +2660,7 @@ public class SFBlocks {
                     splashDamageRadius = 180f;
                     buildingDamageMultiplier = 8f;
                     makeFire = true;
-                    hitSound = Sounds.explosionbig;
+                    hitSound = SFSounds.explosionbig;
                     hitSoundVolume = 10;
                     hitShake = 20f;
                     width = height = 30f;
@@ -2723,7 +2724,7 @@ public class SFBlocks {
             itemDurationMultipliers.put(SFItems.discFabric, 1.25f);
 
             generateEffect = Fx.generatespark;
-            ambientSound = Sounds.techloop;
+            ambientSound = Sounds.loopTech;
             ambientSoundVolume = 0.5f;
             drawer = new DrawMulti(new DrawRegion("-bottom"),
                     new DrawArcSmelt() {{
@@ -3007,7 +3008,7 @@ public class SFBlocks {
             unitSort = UnitSorts.weakest;
             recoil = 0.2f;
             recoilTime = 10;
-            shootSound = Sounds.bolt;
+            shootSound = Sounds.shootLocus;
             shake = 0.2f;
             heatColor = Color.valueOf("FF4040");
             drawer = new DrawTurret() {{
@@ -3045,7 +3046,7 @@ public class SFBlocks {
             size = 1;
             health = 220;
             recoil = 1f;
-            shootSound = Sounds.missile;
+            shootSound = Sounds.shootMissile;
             shake = 1;
             inaccuracy = 5;
             researchCostMultiplier = 0.05f;
@@ -3106,7 +3107,7 @@ public class SFBlocks {
             health = 1100;
             recoil = 1f;
             recoilTime = 10;
-            shootSound = Sounds.laser;
+            shootSound = Sounds.shootLaser;
             shake = 2f;
             heatColor = Color.valueOf("FF4040");
             researchCostMultiplier = 0.05f;
@@ -3155,7 +3156,7 @@ public class SFBlocks {
             health = 1200;
             recoil = 1f;
             recoilTime = 10;
-            shootSound = Sounds.missile;
+            shootSound = Sounds.shootMissile;
             soundPitchMax = soundPitchMin = 0.5f;
             heatColor = Color.valueOf("7090EA80");
             shake = 0.2f;
@@ -3195,7 +3196,7 @@ public class SFBlocks {
             health = 990;
             recoil = 2f;
             recoilTime = cooldownTime = 60;
-            shootSound = Sounds.spark;
+            shootSound = Sounds.shootArc;
             soundPitchMax = soundPitchMin = 2.2f;
             shootY = 12;
             shake = 2f;
@@ -3208,7 +3209,7 @@ public class SFBlocks {
             moveWhileCharging = false;
             accurateDelay = false;
             rotateSpeed = 3;
-            chargeSound = Sounds.lasercharge;
+            chargeSound = Sounds.chargeCorvus;
             shoot.firstShotDelay = 60;
             range = 200;
             consumePower(11);
@@ -3242,7 +3243,7 @@ public class SFBlocks {
                 shrinkY = 0;
                 shootEffect = Fx.shootBigColor;
                 smokeEffect = Fx.sparkShoot;
-                hitSound = Sounds.spark;
+                hitSound = Sounds.shootArc;
                 hitEffect = new ExplosionEffect() {{
                     sparks = 12;
                     smokes = 0;
@@ -3320,8 +3321,8 @@ public class SFBlocks {
             health = 1000;
             recoil = 2f;
             recoilTime = 30;
-            shootSound = Sounds.laser;
-            chargeSound = Sounds.lasercharge2;
+            shootSound = Sounds.shootMissilePlasma;
+            chargeSound = Sounds.chargeVela;
             shake = 2f;
             heatColor = Color.valueOf("FF4040");
             moveWhileCharging = false;
@@ -3365,7 +3366,7 @@ public class SFBlocks {
                 trailWidth = 4;
                 shrinkY = 0;
                 width = height = 13;
-                hitSound = Sounds.plasmaboom;
+                hitSound = Sounds.explosionQuad;
                 hitEffect = new ExplosionEffect() {{
                     sparks = smokes = 8;
                     smokeSize = 6;
@@ -3411,7 +3412,7 @@ public class SFBlocks {
             recoil = 2f;
             recoilTime = 10;
             targetGround = false;
-            shootSound = Sounds.shootBig;
+            //shootSound = Sounds.shootBig;
             shoot.shots = 4;
             shootEffect = Fx.shootBig;
             shake = 2f;
@@ -3453,7 +3454,7 @@ public class SFBlocks {
             recoil = 2f;
             cooldownTime = recoilTime = 105;
             heatColor = Color.valueOf("f68021");
-            shootSound = Sounds.flame;
+            shootSound = Sounds.shootFlame;
             researchCostMultiplier = 0.5f;
             drawer = new DrawTurret() {{
                 parts.add(
@@ -3567,7 +3568,7 @@ public class SFBlocks {
             health = 980;
             recoil = 0.5f;
             cooldownTime = recoilTime = 20;
-            shootSound = Sounds.artillery;
+            shootSound = Sounds.shootArtillery;
             targetAir = false;
             shake = 1.7f;
             shoot.shots = 2;
@@ -3662,7 +3663,7 @@ public class SFBlocks {
             armor = 5;
             recoil = 2f;
             recoilTime = 25;
-            shootSound = Sounds.shotgun;
+            shootSound = Sounds.shootFuse;
             shake = 3;
             inaccuracy = 25;
             shoot = new ShootSpread(35, 0.77f);
@@ -3785,7 +3786,7 @@ public class SFBlocks {
             armor = 5;
             recoil = 2.88f;
             recoilTime = 25;
-            shootSound = Sounds.shootBig;
+            //shootSound = Sounds.shootBig;
             shake = 1.5f;
             inaccuracy = 3;
             shoot = new ShootAlternate(9);
@@ -4067,7 +4068,7 @@ public class SFBlocks {
 
             inaccuracy = 2f;
             liquidCapacity = 60;
-            shootSound = Sounds.shotgun;
+            shootSound = Sounds.shootFuse;
             shootEffect = Fx.shootLiquid;
             range = 230f;
             ammoPerShot = 10;
@@ -4124,7 +4125,7 @@ public class SFBlocks {
             requirements(Category.turret, with(Items.lead,350, Items.metaglass,180, Items.thorium,100, SFItems.siliSteel,80));
             consumePower(8f);
             liquidCapacity = 120;
-            loopSound = Sounds.torch;
+            loopSound = Sounds.shootSublimate;
             shootSound = Sounds.none;
             smokeEffect = Fx.shootBigSmoke2;
 
@@ -4192,7 +4193,7 @@ public class SFBlocks {
             recoil = 2f;
             recoilTime = 30;
             unitSort = UnitSorts.weakest;
-            shootSound = Sounds.missileSmall;
+            shootSound = Sounds.shootMissileSmall;
             shake = 2f;
             drawer = new DrawTurret(){{parts.add(new RegionPart("-side"){{
                 mirror = true;
@@ -4404,7 +4405,7 @@ public class SFBlocks {
             recoil = 3;
             recoilTime = 80;
             shoot = new ShootHelix(6,1.5f);
-            shootSound = Sounds.cannon;
+            shootSound = Sounds.shootAfflict;
             shake = 2.8f;
             drawer = new DrawTurret(){{parts.add(new RegionPart("-side"){{
                 mirror = true;
@@ -4734,7 +4735,7 @@ public class SFBlocks {
                         }};
                         shootEffect = Fx.shootBigColor;
                         hitShake = 3;
-                        hitSound = Sounds.plasmaboom;
+                        hitSound = Sounds.explosionQuad;
                         hitEffect = new ExplosionEffect(){{
                             sparks = 0;
                             smokes = 20;
@@ -4763,7 +4764,7 @@ public class SFBlocks {
                             statusDuration = 20;
 
                             lightningColor = frontColor = hitColor = SFColor.tayrLight;
-                            hitSound = Sounds.spark;
+                            hitSound = Sounds.shootArc;
                             despawnEffect = Fx.none;
                             hitEffect = Fx.hitLancer;
                             lightningType = new BulletType(0.0001f, 0f){{
@@ -4790,7 +4791,7 @@ public class SFBlocks {
             health = 1450;
             recoil = 3;
             recoilTime = 20;
-            shootSound = Sounds.laser;
+            shootSound = Sounds.shootLaser;
             shake = 2.5f;
             inaccuracy = 3;
             requirements(Category.turret, with(Items.silicon,220, Items.surgeAlloy,110, SFItems.siliSteel,130));
@@ -4817,7 +4818,7 @@ public class SFBlocks {
                 width = 6;
                 height = 35;
                 hitColor = Pal.lightPyraFlame;
-                hitSound = Sounds.plasmaboom;
+                hitSound = SFSounds.laser;
                 shootEffect = Fx.shootBigColor;
                 smokeEffect = Fx.bigShockwave;
                 hitEffect = new ExplosionEffect() {{
@@ -4845,7 +4846,7 @@ public class SFBlocks {
             armor = 4;
             recoil = 2.88f;
             recoilTime = 30;
-            shootSound = Sounds.artillery;
+            shootSound = Sounds.shootArtillery;
             shake = 3.5f;
             drawer = new DrawTurret(){{parts.add(new RegionPart("-barrel"){{
                 mirror = false;
@@ -5049,7 +5050,7 @@ public class SFBlocks {
             armor = 4;
             recoil = 3;
             recoilTime = 30;
-            shootSound = Sounds.shotgun;
+            shootSound = Sounds.shootFuse;
             shake = 2;
             requirements(Category.turret, with(Items.graphite,80, SFItems.siliSteel,90, SFItems.fermium, 220));
 
@@ -5207,7 +5208,7 @@ public class SFBlocks {
                         trailLength = 40;
 
                         hitShake = 5;
-                        hitSound = Sounds.explosionbig;
+                        hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 2;
                         hitEffect = new MultiEffect(
                                 new ExplosionEffect(){{
@@ -5253,7 +5254,7 @@ public class SFBlocks {
                             hittable = false;
                             lightColor = Color.yellow;
                             collidesGround = false;
-                            hitSound = Sounds.spark;
+                            hitSound = Sounds.shootArc;
                         }};
                         homingRange = 80;
                         homingDelay = 15;
@@ -5362,7 +5363,7 @@ public class SFBlocks {
             health = 2900;
             recoil = 4f;
             recoilTime = 60;
-            shootSound = Sounds.missileSmall;
+            shootSound = Sounds.shootMissileSmall;
             accurateDelay = false;
             shake = 3f;
             inaccuracy = 10;
@@ -5480,7 +5481,7 @@ public class SFBlocks {
                             hittable = false;
                             lightColor = Color.yellow;
                             collidesAir = false;
-                            hitSound = Sounds.spark;
+                            hitSound = Sounds.shootArc;
                         }};
 
                         homingDelay = homingRange = 40;
@@ -5571,8 +5572,8 @@ public class SFBlocks {
             );*/
             recoil = 2;
             recoilTime = 120;
-            shootSound = Sounds.laser;
-            chargeSound = Sounds.lasercharge2;
+            shootSound = Sounds.shootLaser;
+            chargeSound = Sounds.chargeVela;
             shoot.firstShotDelay = 60;
             accurateDelay = false;
             shootWarmupSpeed = 0.02f;
@@ -5662,7 +5663,7 @@ public class SFBlocks {
                     colorFrom = backColor;
                     colorTo = backColor.cpy().a(0);
                 }};
-                hitSound = Sounds.plasmaboom;
+                hitSound = Sounds.explosionQuad;
                 despawnEffect = new ParticleEffect(){{
                     sizeFrom = 8f;
                     sizeTo = 0;
@@ -5727,7 +5728,7 @@ public class SFBlocks {
                         lightningType = new BulletType(0.00001f, 0f) {{
                             hitEffect = Fx.hitLancer;
                             hitColor = lightColor = SFColor.tayrLight;
-                            hitSound = Sounds.spark;
+                            hitSound = Sounds.shootArc;
                             despawnEffect = Fx.none;
                             status = SFStatusEffects.scrambled;
                             statusDuration = 9f;
@@ -5746,7 +5747,7 @@ public class SFBlocks {
             recoilTime = 125;
             cooldownTime = 40;
             unitSort = UnitSorts.weakest;
-            shootSound = Sounds.release;
+            shootSound = SFSounds.release;
             soundPitchMax = soundPitchMin = 2;
             shake = 5f;
             warmupMaintainTime = 60;
@@ -5796,7 +5797,7 @@ public class SFBlocks {
                 status = SFStatusEffects.disRepair;
                 statusDuration = 120;
 
-                hitSound = Sounds.plasmaboom;
+                hitSound = Sounds.explosionQuad;
                 hitShake = 4;
                 float rad = splashDamageRadius;
                 hitEffect = new Effect(60,100,e ->{
@@ -5883,7 +5884,7 @@ public class SFBlocks {
             recoil = 4;
             cooldownTime = 290;
             recoilTime = 120;
-            shootSound = Sounds.laser;
+            shootSound = Sounds.shootLaser;
             moveWhileCharging = reloadWhileCharging = false;
             shake = 5f;
             inaccuracy = 2;
@@ -5904,7 +5905,7 @@ public class SFBlocks {
                 lifetime = 55;
                 colorFrom = colorTo = SFColor.energyGreen;
             }};
-            chargeSound = Sounds.lasercharge;
+            chargeSound = Sounds.chargeCorvus;
             shootType = new PointBulletType(){{
                 speed = 100;
                 damage = splashDamage = 1130;
@@ -5925,7 +5926,7 @@ public class SFBlocks {
                     colorFrom = colorTo = SFColor.energyGreen;
                     cone = 0;
                 }};
-                hitSound = Sounds.plasmaboom;
+                hitSound = Sounds.explosionQuad;
                 hitSoundVolume = 2;
                 hitShake = 7;
                 smokeEffect = new ParticleEffect() {{
@@ -6021,7 +6022,7 @@ public class SFBlocks {
             health = 5000;
             recoil = 5;
             recoilTime = 65;
-            shootSound = Sounds.release;
+            shootSound = SFSounds.release;
             shake = 8f;
             cooldownTime = 100;
             minWarmup = 0.8f;
@@ -6084,7 +6085,7 @@ public class SFBlocks {
                             hittable = false;
                             lightColor = Color.yellow;
                             collidesGround = false;
-                            hitSound = Sounds.spark;
+                            hitSound = Sounds.shootArc;
                         }};
 
                         hitSound = SFSounds.hugeExplosion;
@@ -6182,7 +6183,7 @@ public class SFBlocks {
                             cone = 40;
                         }};
                         pierceEffect = hitEffect = Fx.instHit;
-                        hitSound = Sounds.explosionbig;
+                        hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 3;
                         spawnBullets.add(new BasicBulletType(22f, 1800) {{
                             shieldDamageMultiplier = 6;
@@ -6208,7 +6209,7 @@ public class SFBlocks {
                             trailLength = 13;
                             trailWidth = 7;
                             hitShake = 5;
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             despawnEffect = Fx.instBomb;
                             hitEffect = Fx.instHit;
                         }});
@@ -6220,7 +6221,7 @@ public class SFBlocks {
             health = 3500;
             recoil = 5f;
             recoilTime = 90;
-            shootSound = Sounds.dullExplosion;
+            shootSound = Sounds.explosionDull;
             shake = 4f;
             minWarmup = 0.89f;
             shootWarmupSpeed = 0.03f;
@@ -6392,7 +6393,7 @@ public class SFBlocks {
                         trailLength = 11;
                         trailWidth = 4;
                         shrinkY = 0.6f;
-                        hitSound = Sounds.explosionbig;
+                        hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 0.8f;
                         hitShake = 3;
                         hitEffect = new ExplosionEffect(){{
@@ -6495,7 +6496,7 @@ public class SFBlocks {
                         frontColor = hitColor = SFColor.clusRed;
                         trailChance = 0.008f;
                         trailEffect = new MultiEffect(Fx.artilleryTrail, Fx.artilleryTrailSmoke);
-                        hitSound = Sounds.explosionbig;
+                        hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 0.8f;
                         hitShake = 4;
                         hitEffect = new ExplosionEffect(){{
@@ -6561,7 +6562,7 @@ public class SFBlocks {
             health = 3600;
             recoil = 5;
             recoilTime = 65;
-            shootSound = Sounds.plasmaboom;
+            shootSound = Sounds.explosionQuad;
             shake = 4f;
             cooldownTime = 100;
             shootY = 15;
@@ -6618,7 +6619,7 @@ public class SFBlocks {
                    waveRad = 50;
                    waveStroke = 6;
                 }};
-                hitSound = Sounds.plasmaboom;
+                hitSound = Sounds.explosionQuad;
                 hitSoundVolume = 0.5f;
             }};
             //}
@@ -6638,7 +6639,7 @@ public class SFBlocks {
                         shrinkY = 0;
                         shootEffect = Fx.shootBigColor;
                         smokeEffect = Fx.none;
-                        hitSound = Sounds.laser;
+                        hitSound = Sounds.shootLaser;
                         despawnEffect = new Effect(28, e -> {
                             color(Color.white, e.color, e.fin());
 
@@ -6689,7 +6690,7 @@ public class SFBlocks {
                             trailLength = 5;
                             trailWidth = 1;
                             shrinkY = 0;
-                            hitSound = Sounds.spark;
+                            hitSound = Sounds.shootArc;
                             hitEffect = despawnEffect = new Effect(14, e -> {
                                 color(Color.white, e.color, e.fin());
 
@@ -6731,7 +6732,7 @@ public class SFBlocks {
                         trailLength = 10;
                         trailWidth = 3;
                         shrinkY = 0;
-                        hitSound = Sounds.plasmaboom;
+                        hitSound = Sounds.explosionQuad;
                         despawnEffect = Fx.none;
                         hitEffect = new ExplosionEffect(){{
                             smokes =  15;
@@ -6864,7 +6865,7 @@ public class SFBlocks {
             recoil = 6;
             recoilTime = 100;
             cooldownTime = 120;
-            shootSound = Sounds.laser;
+            shootSound = Sounds.shootLaser;
             shake = 5f;
             inaccuracy = 3;
             shoot = new ShootAlternate(16){{shots=6;shotDelay=2;}};
@@ -6903,7 +6904,7 @@ public class SFBlocks {
                 width = 18;
                 height = 24;
                 hitSize = 30f;
-                hitSound = Sounds.lasercharge2;
+                hitSound = Sounds.chargeVela;
                 shootEffect = Fx.shootBigColor;
                 smokeEffect = new MultiEffect(
                         Fx.smokeCloud,
@@ -6958,7 +6959,7 @@ public class SFBlocks {
                     splashDamageRadius = 56;
                     status = SFStatusEffects.breakdown;
                     statusDuration = 180;
-                    hitSound = Sounds.plasmaboom;
+                    hitSound = Sounds.explosionQuad;
                     hitShake = 5;
                     hitEffect = new ExplosionEffect() {{
                         sparks = 22;
@@ -7023,7 +7024,7 @@ public class SFBlocks {
                     colorTo = colorFrom = Pal.surgeAmmoBack;
                     cone = 30;
                 }};
-                hitSound = Sounds.plasmaboom;
+                hitSound = Sounds.explosionQuad;
                 hitShake = 6;
                 hitEffect = new ExplosionEffect() {{
                     sparks = 15;
@@ -7050,7 +7051,7 @@ public class SFBlocks {
             recoil = 3f;
             recoilTime = 60;
             cooldownTime = 40;
-            shootSound = Sounds.artillery;
+            shootSound = Sounds.shootArtillery;
             shake = 8f;
             minWarmup = 0.9f;
             warmupMaintainTime = 180;
@@ -7089,7 +7090,7 @@ public class SFBlocks {
             coolantMultiplier = 0.5f;
             coolant = consumeCoolant(3f);
             liquidCapacity = 120;
-            shootSound = Sounds.mediumCannon;
+            shootSound = Sounds.shootTank;
             shootEffect = Fx.shootBig;
             smokeEffect = Fx.shootBigSmoke;
             ammoUseEffect = Fx.casing3Double;
@@ -7310,7 +7311,7 @@ public class SFBlocks {
             coolantMultiplier = 0.77f;
             coolant = consumeCoolant(4.5f);
             liquidCapacity = 180;
-            shootSound = Sounds.shootBig;
+            shootSound = Sounds.shootScepter;
             soundPitchMin = 0.5f;
             soundPitchMax = 0.8f;
             shootEffect = Fx.shootTitan;
@@ -7422,7 +7423,7 @@ public class SFBlocks {
                         backColor = trailColor = SFColor.discDark;
                         trailLength = 11;
                         trailWidth = 2.5f;
-                        hitSound = Sounds.laser;
+                        hitSound = Sounds.shootLaser;
                         hitSoundVolume = 0.25f;
                         hitEffect = despawnEffect = Fx.instBomb;
                     }}
@@ -7451,7 +7452,7 @@ public class SFBlocks {
             coolantMultiplier = 0.5f;
             coolant = consumeCoolant(3.5f);
             liquidCapacity = 300;
-            shootSound = Sounds.release;
+            shootSound = SFSounds.release;
             ammoUseEffect = Fx.none;
             ammoPerShot = 40;
             maxAmmo = 45;
@@ -7554,7 +7555,7 @@ public class SFBlocks {
                             frontColor = Color.white;
                             shrinkY = 0;
                             height = width = 16;
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             hitShake = 11f;
                             hitEffect = new ExplosionEffect(){{
                                 smokes = 6;
@@ -7599,7 +7600,7 @@ public class SFBlocks {
                             strokeFrom = 8;
                             colorTo = colorFrom = trailColor;
                         }};
-                        hitSound = Sounds.plasmaboom;
+                        hitSound = Sounds.explosionQuad;
                         hitShake = 15f;
                         hitEffect = Fx.instBomb;
                         despawnEffect = new MultiEffect(Fx.instBomb, new WaveEffect(){{
@@ -7626,8 +7627,8 @@ public class SFBlocks {
             recoil = 6;
             recoilTime = 180;
             cooldownTime = 300;
-            shootSound = Sounds.laserblast;
-            chargeSound = Sounds.lasercharge;
+            shootSound = Sounds.shootCorvus;
+            chargeSound = Sounds.chargeCorvus;
             accurateDelay = false;
             moveWhileCharging = false;
             reloadWhileCharging = false;
@@ -7794,7 +7795,7 @@ public class SFBlocks {
             recoil = 8;
             recoilTime = 180f;
             cooldownTime = 360;
-            shootSound = Sounds.malignShoot;
+            shootSound = Sounds.shootMalign;
             accurateDelay = false;
 
             shootY = 15f;
@@ -7902,7 +7903,7 @@ public class SFBlocks {
                 shrinkY = 0;
                 sprite = "circle-bullet";
                 width = height = 12;
-                hitSound = Sounds.plasmaboom;
+                hitSound = Sounds.explosionQuad;
                 float rad = splashDamageRadius;
                 hitPowerEffect = new Effect(40, e -> {
                     color(hitColor);
@@ -7969,7 +7970,7 @@ public class SFBlocks {
             health = 15000;
             recoil = 6;
             recoilTime = 165;
-            shootSound = Sounds.plasmadrop;
+            shootSound = Sounds.shootQuad;
             shake = 4f;
             cooldownTime = 300;
             minWarmup = 0.8f;
@@ -8114,7 +8115,7 @@ public class SFBlocks {
                         frontColor = SFColor.clusRed;
                         trailWidth = 5;
                         trailLength = 12;
-                        hitSound = Sounds.explosionbig;
+                        hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 2;
                         hitShake = 5;
                         shootEffect = Fx.shootBigColor;
@@ -8196,7 +8197,7 @@ public class SFBlocks {
                         hitColor = frontColor = backColor = trailColor = Pal.surgeAmmoBack;
                         trailWidth = 4;
                         trailLength = 9;
-                        hitSound = Sounds.plasmaboom;
+                        hitSound = Sounds.explosionQuad;
                         hitSoundVolume = 0.4f;
                         hitShake = 4;
                         shootEffect = Fx.shootBigColor;
@@ -8233,7 +8234,7 @@ public class SFBlocks {
                         hitColor = frontColor = backColor = trailColor = SFColor.discLight;
                         trailWidth = 2;
                         trailLength = 6;
-                        hitSound = Sounds.plasmaboom;
+                        hitSound = Sounds.explosionQuad;
                         hitShake = 4;
                         shootEffect = Fx.shootBigColor;
                         smokeEffect = new ParticleEffect(){{
@@ -8273,7 +8274,7 @@ public class SFBlocks {
                             hitColor = frontColor = backColor = trailColor = SFColor.discLight;
                             trailWidth = 2;
                             trailLength = 6;
-                            hitSound = Sounds.laser;
+                            hitSound = Sounds.shootLaser;
                             hitShake = 4;
                             despawnEffect = new ParticleEffect(){{
                                 sizeFrom = 8;
@@ -8293,7 +8294,7 @@ public class SFBlocks {
             armor = 16;
             recoil = 13;
             recoilTime = 180;
-            shootSound = Sounds.railgun;
+            shootSound = Sounds.shootForeshadow;
             soundPitchMax = 1.2f;
             soundPitchMin = 0.8f;
             shake = 10f;
@@ -8449,7 +8450,7 @@ public class SFBlocks {
                             fromColor = SFColor.leipDark;
                             toColor = SFColor.leipLight;
                             laserAbsorb = false;
-                            hitSound = Sounds.laser;
+                            hitSound = Sounds.shootLaser;
                         }}
                 );
             }});
@@ -8500,7 +8501,7 @@ public class SFBlocks {
             recoil = 4;
             shootY = 25.5f;
             shoot = new ShootAlternate(23f){{shots=2;}};
-            shootSound = Sounds.laser;
+            shootSound = SFSounds.laser;
             shootCone = 5;
             shake = 5;
             rotateSpeed = 3;
@@ -8555,7 +8556,7 @@ public class SFBlocks {
                     colorTo = SFColor.discLight;
                 }};
                 despawnEffect = Fx.instBomb;
-                hitSound = Sounds.explosionbig;
+                hitSound = SFSounds.explosionbig;
                 hitSoundVolume = 0.6f;
                 hitEffect = new ExplosionEffect(){{
                     lifetime = 30;
@@ -8617,7 +8618,7 @@ public class SFBlocks {
                         -30, 31, 15
                 };
             }};
-            shootSound = Sounds.mineDeploy;
+            shootSound = Sounds.shootRetusa;
             shootCone = 60;
             shake = 5;
             rotateSpeed = 3;
@@ -8677,7 +8678,7 @@ public class SFBlocks {
                         }}
                 );
                 despawnEffect = Fx.none;
-                hitSound = Sounds.explosionbig;
+                hitSound = SFSounds.explosionbig;
                 hitSoundVolume = 5;
                 hitShake = 12;
                 trailWidth = 2.6f;
@@ -8782,7 +8783,7 @@ public class SFBlocks {
             recoilTime = 150;
             recoil = 0;
             shootY = 8;
-            shootSound = Sounds.missileLaunch;
+            shootSound = Sounds.shootScathe;
             shootCone = 30;
             shake = 8;
             rotateSpeed = 1.25f;
@@ -8824,7 +8825,7 @@ public class SFBlocks {
                     health = 3000;
                     targetAir = true;
                     collidesAir = true;
-                    deathSound = Sounds.explosionbig;
+                    deathSound = SFSounds.explosionbig;
                     engineColor = trailColor = SFColor.discLight;
                     trailLength = 80;
                     engineLayer = 110;
@@ -8996,7 +8997,7 @@ public class SFBlocks {
             recoil = 2;
             recoils = 2;
             shootY = 24;
-            shootSound = Sounds.laser;
+            shootSound = SFSounds.laser;
             soundPitchMax = soundPitchMin = 1.5f;
             shootCone = 8;
             shake = 6;
@@ -9069,8 +9070,8 @@ public class SFBlocks {
             rotateSpeed = 1.92f;
             range = 880;
             shootY = 8;
-            shootSound = Sounds.laserblast;
-            shootEffect = new ParticleEffect(){{
+            shootSound = Sounds.shootCorvus;
+             shootEffect = new ParticleEffect(){{
                 particles = 13;
                 line = true;
                 interp = Interp.pow5Out;
@@ -9119,7 +9120,7 @@ public class SFBlocks {
                 splashDamageRadius = 80;
                 status = SFStatusEffects.echoFlame;
                 statusDuration = 60;
-                hitSound = Sounds.largeExplosion;
+                hitSound = Sounds.explosionMissile;
                 hitSoundVolume = 3;
                 despawnEffect = new ParticleEffect(){{
                     particles = 16;
@@ -9178,7 +9179,7 @@ public class SFBlocks {
                     splashDamage = damage;
                     splashDamageRadius = 50;
                     hitShake = 16;
-                    hitSound = Sounds.explosionbig;
+                    hitSound = SFSounds.explosionbig;
                     hitSoundVolume = 3;
                     hitEffect = new ExplosionEffect(){{
                         smokes = 8;
@@ -9221,7 +9222,7 @@ public class SFBlocks {
                         splashDamage = damage;
                         splashDamageRadius = 50;
                         hitShake = 16;
-                        hitSound = Sounds.explosionbig;
+                        hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 3;
                         hitEffect = new ExplosionEffect(){{
                             smokes = 8;

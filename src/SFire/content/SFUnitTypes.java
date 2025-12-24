@@ -130,7 +130,7 @@ public class SFUnitTypes {
                         alternate = true;
                         rotate = false;
                         ignoreRotation = true;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         shoot = new ShootBarrel() {{
                             shots = 2;
                             shotDelay = 10;
@@ -190,7 +190,7 @@ public class SFUnitTypes {
                         inaccuracy = 100;
                         rotate = false;
                         mirror = false;
-                        shootSound = Sounds.mineDeploy;
+                        shootSound = Sounds.shootRetusa;
                         shootCone = 180;
                         ignoreRotation = true;
                         minShootVelocity = 0.3f;
@@ -265,7 +265,7 @@ public class SFUnitTypes {
                 y = 3;
                 inaccuracy = 2;
                 ignoreRotation = true;
-                shootSound = Sounds.missile;
+                shootSound = Sounds.shootMissile;
                 soundPitchMax = 0.5f;
                 soundPitchMin = 0.5f;
                 shoot.shots = 3;
@@ -477,7 +477,7 @@ public class SFUnitTypes {
                         mirror = false;
                         inaccuracy = 3;
                         shake = 1;
-                        shootSound = Sounds.laser;
+                        shootSound = Sounds.shootLancer;
                         layerOffset = 0.001f;
                         minWarmup = 0.88f;
                         shootY = 23.5f;
@@ -708,7 +708,7 @@ public class SFUnitTypes {
                             mirror = false;
                             shootCone = 30;
                             ejectEffect = Fx.none;
-                            shootSound = Sounds.missileLaunch;
+                            shootSound = Sounds.shootScathe;
                             shootStatusDuration = 180;
                             shootStatus = StatusEffects.slow;
                             shoot.firstShotDelay = 180;
@@ -759,7 +759,7 @@ public class SFUnitTypes {
                                     rotateSpeed = 0;
                                     hitSize = 13;
                                     health = 1800;
-                                    deathSound = Sounds.explosionbig;
+                                    deathSound = SFSounds.explosionbig;
                                     engineColor = trailColor = SFColor.enemyRedLight;
                                     trailLength = 14;
                                     engineLayer = 110;
@@ -854,7 +854,7 @@ public class SFUnitTypes {
                                             buildingDamageMultiplier = 6;
                                             status = SFStatusEffects.shattered;
                                             statusDuration = 100;
-                                            hitSound = Sounds.titanExplosion;
+                                            hitSound = Sounds.explosionTitan;
                                             hitShake = 8;
                                             shootEffect = smokeEffect = despawnEffect = Fx.massiveExplosion;
                                             hitEffect = new MultiEffect(
@@ -952,7 +952,7 @@ public class SFUnitTypes {
                 }};
                 cooldownTime = 100;
                 recoil = 2;
-                shootSound = Sounds.malignShoot;
+                shootSound = Sounds.shootMalign;
                 shake = 3.6f;
                 bullet = new BasicBulletType(16, 83, "missile-large") {{
                     lightning = 2;
@@ -1079,7 +1079,7 @@ public class SFUnitTypes {
                     under = true;
                     moveY = -4f;
                 }});
-                shootSound = Sounds.mediumCannon;
+                shootSound = Sounds.shootTank;
                 shake = 3.6f;
                 bullet = new BasicBulletType(16, 188 * 2f, "missile-large") {{
                     lightningDamage = damage / 2;
@@ -1232,7 +1232,7 @@ public class SFUnitTypes {
                     moveY = -8f;
                 }});
                 shootCone = 30;
-                shootSound = Sounds.missileLarge;
+                shootSound = Sounds.shootMissileLarge;
                 shake = 3.6f;
                 bullet = new MissileBulletType(1, 135, "sfire-mod-missile1") {{
                     splashDamage = 180;
@@ -1253,7 +1253,7 @@ public class SFUnitTypes {
                     frontColor = Color.white;
                     backColor = SFColor.enemyRedLight;
                     hitShake = 8f;
-                    hitSound = Sounds.titanExplosion;
+                    hitSound = Sounds.explosionTitan;
                     hitSoundVolume = 3;
                     shrinkY = 0;
                     shootEffect = Fx.shootTitan;
@@ -1336,7 +1336,7 @@ public class SFUnitTypes {
                         scaledSplashDamage = true;
                         splashDamage = 180;
                         splashDamageRadius = 30;
-                        hitSound = Sounds.boom;
+                        hitSound = SFSounds.boom;
                         trailColor = SFColor.discLight;
                         trailWidth = 1.25f;
                         trailLength = 15;
@@ -1538,7 +1538,7 @@ public class SFUnitTypes {
                 splashDamageRadius = 45;
                 buildingDamageMultiplier = 3;
                 hitShake = 1.8f;
-                hitSound = Sounds.shotgun;
+                hitSound = Sounds.shootFuse;
                 hitSoundPitch = 1.6f;
                 speed = 30;
                 lifetime = 16;
@@ -1598,7 +1598,7 @@ public class SFUnitTypes {
                         rotate = false;
                         reload = 280;
                         x = 9;
-                        shootSound = Sounds.missileLarge;
+                        shootSound = Sounds.shootMissileLarge;
                         shootCone = 360;
                         minWarmup = 0.9f;
                         shootWarmupSpeed = 0.022f;
@@ -1621,7 +1621,7 @@ public class SFUnitTypes {
                                 armor = 15;
                                 targetAir = true;
                                 collidesAir = true;
-                                deathSound = Sounds.explosionbig;
+                                deathSound = SFSounds.explosionbig;
                                 engineColor = trailColor = SFColor.enemyRedLight;
                                 trailLength = 35;
                                 engineLayer = 110;
@@ -1663,7 +1663,7 @@ public class SFUnitTypes {
                                         splashDamage = 1200;
                                         status = SFStatusEffects.shattered;
                                         statusDuration = 600;
-                                        hitSound = Sounds.titanExplosion;
+                                        hitSound = Sounds.explosionTitan;
                                         hitSoundVolume = 8;
                                         hitShake = 15;
                                         shootEffect = new WrapEffect(Fx.scatheExplosion, SFColor.enemyRedLight);
@@ -1735,7 +1735,7 @@ public class SFUnitTypes {
                         alternate = true;
                         rotateSpeed = 4;
                         shake = 1;
-                        shootSound = Sounds.railgun;
+                        shootSound = Sounds.shootOmura;
                         soundPitchMax = 1.5f;
                         bullet = bladePoint;
                     }},
@@ -1748,7 +1748,7 @@ public class SFUnitTypes {
                         alternate = true;
                         rotateSpeed = 4;
                         shake = 1;
-                        shootSound = Sounds.railgun;
+                        shootSound = Sounds.shootOmura;
                         soundPitchMax = 1.5f;
                         bullet = bladePoint;
                     }},
@@ -1806,7 +1806,7 @@ public class SFUnitTypes {
                         top = false;
                         shake = 5;
                         recoil = 6;
-                        shootSound = Sounds.largeCannon;
+                        shootSound = Sounds.shootConquer;
                         velocityRnd = 0.35f;
                         bullet = new BasicBulletType(23, 180) {{
                             pierce = pierceBuilding = true;
@@ -1854,7 +1854,7 @@ public class SFUnitTypes {
                         top = true;
                         shake = 8;
                         recoil = 4;
-                        shootSound = Sounds.mediumCannon;
+                        shootSound = Sounds.shootTank;
                         bullet = new BasicBulletType(15, 285) {{
                             lifetime = 27f;
                             buildingDamageMultiplier = 2.35f;
@@ -1880,7 +1880,7 @@ public class SFUnitTypes {
                             shootEffect = Fx.shootTitan;
                             smokeEffect = Fx.shootBigSmoke2;
                             hitShake = 8;
-                            hitSound = Sounds.dullExplosion;
+                            hitSound = Sounds.explosionDull;
                             despawnEffect = hitEffect = new ExplosionEffect() {{
                                 waveRad = 89;
                                 waveLife = 30;
@@ -1960,7 +1960,7 @@ public class SFUnitTypes {
             );
             Weapon vastGun = new Weapon(name("vast-gun")) {{
                 shootCone = 5.5f;
-                shootSound = Sounds.blaster;
+                shootSound = Sounds.shootElude;
                 shoot = new ShootAlternate(4.5f);
                 shootY = 6.5f;
                 recoil = 1;
@@ -2029,7 +2029,7 @@ public class SFUnitTypes {
                         shootWarmupSpeed = 0.0075f;
                         shootStatus = SFStatusEffects.fullFire;
                         shootStatusDuration = 180;
-                        shootSound = Sounds.lasercharge;
+                        shootSound = Sounds.chargeCorvus;
                         parts.add(new ShapePart() {{
                             rotateSpeed = 0.05f;
                             sides = 4;
@@ -2071,7 +2071,7 @@ public class SFUnitTypes {
                         rotateSpeed = 2.4f;
                         alternate = false;
                         inaccuracy = 3;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         reload = 76;
                         shootY = 0;
                         shoot = new ShootBarrel() {{
@@ -2141,7 +2141,7 @@ public class SFUnitTypes {
                         reload = 40;
                         shootCone = 360;
                         rotate = false;
-                        shootSound = Sounds.missileSmall;
+                        shootSound = Sounds.shootMissileSmall;
                         controllable = false;
                         autoTarget = true;
                         inaccuracy = 90;
@@ -2232,7 +2232,7 @@ public class SFUnitTypes {
                         reload = 60;
                         shootCone = 360;
                         rotate = false;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissilePlasma;
                         controllable = false;
                         autoTarget = true;
                         inaccuracy = 90;
@@ -2301,7 +2301,7 @@ public class SFUnitTypes {
                                 cone = 10;
                             }};
                             hitEffect = new WrapEffect(Fx.dynamicSpikes, SFColor.enemyRedLight, 50);
-                            hitSound = Sounds.laser;
+                            hitSound = SFSounds.laser;
                             hitSoundVolume = 0.5f;
                             despawnEffect = new ParticleEffect() {{
                                 particles = 1;
@@ -2374,7 +2374,7 @@ public class SFUnitTypes {
                         rotate = false;
                         top = false;
                         inaccuracy = 0.5f;
-                        shootSound = Sounds.shootBig;
+                        //shootSound = Sounds.shootBig;
                         ejectEffect = Fx.casing4;
                         shootCone = 15;
                         bullet = new BasicBulletType(14.3f, 115) {{
@@ -2423,7 +2423,7 @@ public class SFUnitTypes {
                         rotate = true;
                         rotateSpeed = 6;
                         rotationLimit = 50;
-                        shootSound = Sounds.spark;
+                        shootSound = Sounds.shootArc;
                         inaccuracy = 16;
                         bullet = new LightningBulletType() {{
                             damage = 32;
@@ -2508,7 +2508,7 @@ public class SFUnitTypes {
                         rotate = false;
                         shootCone = 5;
                         top = false;
-                        shootSound = Sounds.malignShoot;
+                        shootSound = Sounds.shootMalign;
                         cooldownTime = 120;
                         heatColor = Color.red;
                         bullet = new BasicBulletType(25, 100, "circle-bullet") {{
@@ -2537,7 +2537,7 @@ public class SFUnitTypes {
                             width = 14;
                             height = 14;
                             despawnEffect = Fx.none;
-                            hitSound = Sounds.laser;
+                            hitSound = SFSounds.laser;
                             hitEffect = new MultiEffect(
                                     new ExplosionEffect() {{
                                         sparks = 32;
@@ -2628,7 +2628,7 @@ public class SFUnitTypes {
                         rotate = false;
                         mirror = false;
                         cooldownTime = 300;
-                        shootSound = Sounds.plasmadrop;
+                        shootSound = Sounds.shootQuad;
                         recoil = 0;
                         bullet = new PointBulletType() {{
                             damage = 20;
@@ -2720,7 +2720,7 @@ public class SFUnitTypes {
                                     status = SFStatusEffects.scrambled;
                                     statusDuration = 30;
                                     pierceBuilding = true;
-                                    hitSound = Sounds.plasmaboom;
+                                    hitSound = Sounds.explosionQuad;
                                     hitEffect = new MultiEffect(
                                             new ExplosionEffect() {{
                                                 lifetime = 40;
@@ -2801,7 +2801,7 @@ public class SFUnitTypes {
                         shootCone = 30;
                         shootY = 16;
                         ejectEffect = Fx.none;
-                        shootSound = Sounds.missileLaunch;
+                        shootSound = Sounds.shootScathe;
                         bullet = new BasicBulletType(2, 120, "sfire-mod-dragon") {{
                             lifetime = 300;
                             homingDelay = 30;
@@ -2813,7 +2813,7 @@ public class SFUnitTypes {
                             weaveScale = 10;
                             hitShake = 4;
                             shrinkX = shrinkY = 0;
-                            hitSound = Sounds.explosionbig;
+                            hitSound = SFSounds.explosionbig;
                             pierce = pierceBuilding = true;
                             status = StatusEffects.sapped;
                             statusDuration = 600;
@@ -2936,7 +2936,7 @@ public class SFUnitTypes {
                         y = 20;
                         shoot.shotDelay = 3;
                         shoot.shots = 3;
-                        shootSound = Sounds.sap;
+                        shootSound = Sounds.shootSap;
                         top = true;
                         shootY = 8;
                         reload = 33;
@@ -2963,7 +2963,7 @@ public class SFUnitTypes {
                         y = 12;
                         shoot.shotDelay = 3;
                         shoot.shots = 3;
-                        shootSound = Sounds.sap;
+                        shootSound = Sounds.shootSap;
                         top = true;
                         shootY = 8;
                         reload = 33;
@@ -3025,7 +3025,7 @@ public class SFUnitTypes {
                 sectors = 6;
                 sectorRad = 0.11f;
                 sameTypeHealMult = 0.3f;
-                shootSound = Sounds.shotgun;
+                shootSound = Sounds.shootFuse;
                 hitEffect = new ParticleEffect() {{
                     particles = 1;
                     sizeFrom = 16;
@@ -3059,7 +3059,7 @@ public class SFUnitTypes {
                         inaccuracy = 1;
                         xRand = 8;
                         mirror = false;
-                        shootSound = Sounds.laser;
+                        shootSound = SFSounds.laser;
                         shake = 3;
                         shoot.shotDelay = 3;
                         shoot.shots = 5;
@@ -3205,7 +3205,7 @@ public class SFUnitTypes {
                         rotateSpeed = 2.3f;
                         recoil = 2;
                         shake = 1;
-                        shootSound = Sounds.shootBig;
+                        //shootSound = Sounds.shootBig;
                         ejectEffect = Fx.casing3;
                         bullet = sundownBullet;
                     }},
@@ -3221,7 +3221,7 @@ public class SFUnitTypes {
                         rotateSpeed = 2.3f;
                         recoil = 2;
                         shake = 1;
-                        shootSound = Sounds.shootBig;
+                        //shootSound = Sounds.shootBig;
                         ejectEffect = Fx.casing3;
                         bullet = sundownBullet;
                     }},
@@ -3248,7 +3248,7 @@ public class SFUnitTypes {
                         baseRotation = -90;
                         x = 18;
                         y = -20;
-                        shootSound = Sounds.missileSmall;
+                        shootSound = Sounds.shootMissileSmall;
                         shootWarmupSpeed = 0.085f;
                         minWarmup = 0.98f;
                         shake = 5;
@@ -3315,7 +3315,7 @@ public class SFUnitTypes {
                                         lifetime = 2.5f;
                                         instantDisappear = true;
                                         collides = false;
-                                        hitSound = Sounds.titanExplosion;
+                                        hitSound = Sounds.explosionTitan;
                                         killShooter = true;
                                         scaledSplashDamage = true;
                                         splashDamageRadius = 50;
@@ -3364,7 +3364,7 @@ public class SFUnitTypes {
                         reload = 30;
                         shootCone = 60;
                         shoot = new ShootSpread(5, 8);
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         rotate = true;
                         rotateSpeed = 4;
                         inaccuracy = 6;
@@ -3394,7 +3394,7 @@ public class SFUnitTypes {
                         shootCone = 60;
                         shoot.shotDelay = 1;
                         shoot.shots = 5;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         rotate = true;
                         rotateSpeed = 4;
                         inaccuracy = 10;
@@ -3438,7 +3438,7 @@ public class SFUnitTypes {
                         inaccuracy = 0;
                         recoil = 12;
                         cooldownTime = 160;
-                        shootSound = Sounds.release;
+                        shootSound = SFSounds.release;
                         shake = 12;
                         bullet = new BasicBulletType(14, 950, "sfire-mod-arrow-bullet") {{
                             scaleLife = true;
@@ -3507,7 +3507,7 @@ public class SFUnitTypes {
                                 frontColor = Color.white;
                                 spin = 10;
                                 shrinkY = shrinkX = 0.5f;
-                                hitSound = Sounds.plasmaboom;
+                                hitSound = Sounds.explosionQuad;
                                 hitShake = 8;
                                 bulletInterval = 2.5f;
                                 intervalBullets = 2;
@@ -3540,7 +3540,7 @@ public class SFUnitTypes {
                                         lifetime = 35;
                                         colorFrom = colorTo = SFColor.energyYellow;
                                     }};
-                                    hitSound = Sounds.laser;
+                                    hitSound = SFSounds.laser;
                                     hitSoundVolume = 0.3f;
                                     status = SFStatusEffects.breakdown;
                                     statusDuration = 20;
@@ -3606,7 +3606,7 @@ public class SFUnitTypes {
                         reload = 40;
                         alternate = true;
                         shootCone = 60;
-                        shootSound = Sounds.laser;
+                        shootSound = SFSounds.laser;
                         shootY = 5;
                         shake = 3;
                         bullet = new EmpBulletType() {{
@@ -3648,7 +3648,7 @@ public class SFUnitTypes {
                                 colorFrom = Pal.heal;
                                 cone = 30;
                             }};
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             despawnEffect = new WaveEffect() {{
                                 lifetime = 45;
                                 sizeFrom = 90;
@@ -3716,7 +3716,7 @@ public class SFUnitTypes {
                         x = 23.25f;
                         y = -29f;
                         alternate = true;
-                        shootSound = Sounds.laser;
+                        shootSound = Sounds.shootLaser;
                         shootY = 5;
                         shake = 3;
                         reload = 110;
@@ -3758,7 +3758,7 @@ public class SFUnitTypes {
                                 colorFrom = Pal.heal;
                                 cone = 30;
                             }};
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             despawnEffect = Fx.none;
                             hitEffect = new MultiEffect(
                                     new ParticleEffect() {{
@@ -3855,7 +3855,7 @@ public class SFUnitTypes {
                 mirror = false;
                 inaccuracy = 1;
                 ejectEffect = Fx.casing2;
-                shootSound = Sounds.artillery;
+                shootSound = Sounds.shootArtillery;
                 bullet = new MissileBulletType(8, 80, "sfire-mod-missile1") {{
                     splashDamage = 66;
                     splashDamageRadius = 46;
@@ -3915,7 +3915,7 @@ public class SFUnitTypes {
                 shoot.shotDelay = 8;
                 xRand = 4;
                 inaccuracy = 6;
-                shootSound = Sounds.missileSmall;
+                shootSound = Sounds.shootMissileSmall;
                 shootStatus = StatusEffects.unmoving;
                 shootStatusDuration = 160;
                 velocityRnd = 0.1f;
@@ -4037,7 +4037,7 @@ public class SFUnitTypes {
                 y = 3;
                 rotate = true;
                 rotateSpeed = 1.9f;
-                shootSound = Sounds.mediumCannon;
+                shootSound = Sounds.shootTank;
                 shake = 4;
                 mirror = false;
                 bullet = new BasicBulletType(12, 180) {{
@@ -4138,7 +4138,7 @@ public class SFUnitTypes {
                         rotate = true;
                         display = false;
                         rotateSpeed = 1f;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         mirror = false;
                         shootY = 12;
                         shoot = new ShootBarrel(){{
@@ -4184,7 +4184,7 @@ public class SFUnitTypes {
                         layerOffset = 0.001f;
                         rotate = true;
                         rotateSpeed = 1f;
-                        shootSound = Sounds.boom;
+                        shootSound = SFSounds.boom;
                         mirror = false;
                         shootY = 46.5f;
                         recoil = 2;
@@ -4214,7 +4214,7 @@ public class SFUnitTypes {
                             width = 18;
                             height = 24;
                             hitSize = 10f;
-                            hitSound = Sounds.lasercharge2;
+                            hitSound = Sounds.chargeVela;
                             shootEffect = Fx.shootBigColor;
                             smokeEffect = new MultiEffect(
                                     Fx.smokeCloud,
@@ -4269,7 +4269,7 @@ public class SFUnitTypes {
                                 splashDamage = 180;
                                 splashDamageRadius = 48;
                                 hitShake = 4;
-                                hitSound = Sounds.plasmaboom;
+                                hitSound = Sounds.explosionQuad;
                                 hitEffect = new ParticleEffect() {{
                                     particles = 15;
                                     sizeFrom = 8;
@@ -4327,7 +4327,7 @@ public class SFUnitTypes {
                     shots = 2;
                     shotDelay = 8;
                 }};
-                shootSound = Sounds.largeCannon;
+                shootSound = Sounds.shootConquer;
                 bullet = new BasicBulletType(24, 325, "missile-large") {{
                     lifetime = 15;
                     drag = -0.01f;
@@ -4360,7 +4360,7 @@ public class SFUnitTypes {
                         colorFrom = colorTo = SFColor.energyYellow;
                         lifetime = 8;
                     }};
-                    hitSound = Sounds.plasmaboom;
+                    hitSound = Sounds.explosionQuad;
                     hitSoundVolume = 3;
                     hitShake = 8;
                     hitEffect = new ExplosionEffect() {{
@@ -4433,7 +4433,7 @@ public class SFUnitTypes {
                 mirror = false;
                 reload = 60;
                 x = y = 0;
-                shootSound = Sounds.missile;
+                shootSound = Sounds.shootMissile;
                 shoot = new ShootSpread(2, 20) {{
                     shotDelay = 8;
                 }};
@@ -4485,7 +4485,7 @@ public class SFUnitTypes {
                 shootY = 4;
                 shootCone = 15;
                 recoil = 0;
-                shootSound = Sounds.missile;
+                shootSound = Sounds.shootMissile;
                 heatColor = Color.red;
                 cooldownTime = 20;
                 shoot = new ShootPattern() {{
@@ -4595,7 +4595,7 @@ public class SFUnitTypes {
                         shootY = 3;
                         inaccuracy = 1;
                         layerOffset = -0.001f;
-                        shootSound = Sounds.blaster;
+                        shootSound = Sounds.shootElude;
                         rotate = false;
                         reload = 6f;
                         shootCone = 5;
@@ -4643,7 +4643,7 @@ public class SFUnitTypes {
                         ejectEffect = Fx.none;
                         inaccuracy = 15f;
                         ignoreRotation = true;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         minWarmup = 0.9f;
                         shootWarmupSpeed = 0.05f;
                         minShootVelocity = 0.01f;
@@ -4739,7 +4739,7 @@ public class SFUnitTypes {
                         shootY = 3;
                         inaccuracy = 1.2f;
                         layerOffset = -0.001f;
-                        shootSound = Sounds.blaster;
+                        shootSound = Sounds.shootElude;
                         reload = 7f;
                         shootCone = 13;
                         bullet = energyBulletSky;
@@ -4755,7 +4755,7 @@ public class SFUnitTypes {
                         shootY = 3;
                         inaccuracy = 1.2f;
                         layerOffset = -0.001f;
-                        shootSound = Sounds.blaster;
+                        shootSound = Sounds.shootElude;
                         reload = 8f;
                         shootCone = 13;
                         bullet = energyBulletSky;
@@ -4775,7 +4775,7 @@ public class SFUnitTypes {
                             };
                         }};
                         inaccuracy = 5f;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         reload = 50f;
                         shootCone = 30;
                         velocityRnd = 0.1f;
@@ -4848,7 +4848,7 @@ public class SFUnitTypes {
                         shootY = 11;
                         shoot = new ShootAlternate(8);
                         shake = 2;
-                        shootSound = Sounds.laser;
+                        shootSound = SFSounds.laser;
                         bullet = new BasicBulletType(8, 35, "circle-bullet") {{
                             reflectable = false;
                             width = height = 10;
@@ -4882,7 +4882,7 @@ public class SFUnitTypes {
                             lightningLengthRand = 3;
                             lightningColor = SFColor.energySky;
                             despawnEffect = Fx.lancerLaserShoot;
-                            hitSound = Sounds.laser;
+                            hitSound = SFSounds.laser;
                             hitShake = 3;
                             hitEffect = new MultiEffect(
                                     new ExplosionEffect() {{
@@ -4915,7 +4915,7 @@ public class SFUnitTypes {
                         x = 28;
                         y = 24;
                         reload = 400;
-                        shootSound = Sounds.release;
+                        shootSound = SFSounds.release;
                         shootCone = 10;
                         bullet = new BasicBulletType(8, 50, "missile-large") {{
                             reflectable = false;
@@ -4998,7 +4998,7 @@ public class SFUnitTypes {
                                     buildingDamageMultiplier = 0.58f;
                                 }};
                                 hitShake = 5;
-                                hitSound = Sounds.plasmaboom;
+                                hitSound = Sounds.explosionQuad;
                                 despawnEffect = Fx.lancerLaserShoot;
                                 hitEffect = new MultiEffect(
                                         new ExplosionEffect() {{
@@ -5073,7 +5073,7 @@ public class SFUnitTypes {
                         shootStatus = StatusEffects.shielded;
                         shootStatusDuration = 90;
                         shootCone = 60;
-                        shootSound = Sounds.plasmadrop;
+                        shootSound = Sounds.shootQuad;
                         xRand = 6;
                         bullet = new EmpBulletType() {{
                             maxRange = 80f;
@@ -5081,7 +5081,7 @@ public class SFUnitTypes {
                             width = 24;
                             height = 32;
                             hitShake = 20;
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             frontColor = Color.white;
                             backColor = SFColor.energySky;
                             trailLength = 24;
@@ -5161,7 +5161,7 @@ public class SFUnitTypes {
                         shootStatus = StatusEffects.shielded;
                         shootStatusDuration = 90;
                         shootCone = 60;
-                        shootSound = Sounds.plasmadrop;
+                        shootSound = Sounds.shootQuad;
                         xRand = 6;
                         bullet = new BasicBulletType() {{
                             maxRange = 80f;
@@ -5169,7 +5169,7 @@ public class SFUnitTypes {
                             width = 24;
                             height = 32;
                             hitShake = 20;
-                            hitSound = Sounds.explosionbig;
+                            hitSound = SFSounds.explosionbig;
                             frontColor = Color.white;
                             backColor = Pal.lightPyraFlame;
                             trailLength = 24;
@@ -5228,7 +5228,7 @@ public class SFUnitTypes {
                         rotateSpeed = 9;
                         controllable = false;
                         autoTarget = true;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         shootY = 3;
                         bullet = new PointBulletType() {{
                             trailSpacing = 3;
@@ -5392,7 +5392,7 @@ public class SFUnitTypes {
                         rotate = true;
                         rotateSpeed = 6;
                         ejectEffect = Fx.none;
-                        shootSound = Sounds.bolt;
+                        shootSound = Sounds.shootLocus;
                         bullet = new RailBulletType() {{
                             damage = 13;
                             knockback = 0.3f;
@@ -5429,7 +5429,7 @@ public class SFUnitTypes {
                         rotate = true;
                         rotateSpeed = 6;
                         ejectEffect = Fx.none;
-                        shootSound = Sounds.bolt;
+                        shootSound = Sounds.shootLocus;
                         bullet = new SapBulletType() {{
                             damage = 22;
                             shootEffect = Fx.shootSmall;
@@ -5468,7 +5468,7 @@ public class SFUnitTypes {
                         reload = 45f;
                         mirror = false;
                         inaccuracy = 2;
-                        shootSound = Sounds.shootBig;
+                        //shootSound = Sounds.shootBig;
                         ejectEffect = Fx.casing3;
                         layerOffset = 0.001f;
                         parts.add(new RegionPart("-front") {{
@@ -5503,7 +5503,7 @@ public class SFUnitTypes {
                                 waveRad = 28;
                                 waveColor = smokeColor = SFColor.energyYellow;
                             }};
-                            hitSound = Sounds.laser;
+                            hitSound = Sounds.shootLaser;
                             hitShake = 2;
                             despawnEffect = Fx.none;
                         }};
@@ -5512,7 +5512,7 @@ public class SFUnitTypes {
                         x = y = 0;
                         mirror = false;
                         shootCone = 360;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         rotate = false;
                         inaccuracy = 0;
                         reload = 110;
@@ -5567,7 +5567,7 @@ public class SFUnitTypes {
                         rotateSpeed = 9;
                         mirror = false;
                         shootY = 4;
-                        shootSound = Sounds.lasershoot;
+                        shootSound = SFSounds.laser;
                         recoil = 0.6f;
                         reload = 15;
                         targetInterval = 5;
@@ -5590,7 +5590,7 @@ public class SFUnitTypes {
                         recoil = 0;
                         reload = 30f;
                         shootCone = 360;
-                        shootSound = Sounds.missileSmall;
+                        shootSound = Sounds.shootMissileSmall;
                         inaccuracy = 5;
                         autoTarget = true;
                         controllable = false;
@@ -5643,7 +5643,7 @@ public class SFUnitTypes {
                         reload = 68f;
                         mirror = false;
                         inaccuracy = 3;
-                        shootSound = Sounds.laser;
+                        shootSound = SFSounds.laser;
                         ejectEffect = Fx.none;
                         bullet = new FlakBulletType(12, 48) {{
                             collidesGround = true;
@@ -5670,7 +5670,7 @@ public class SFUnitTypes {
                             }};
                             smokeEffect = Fx.bigShockwave;
                             despawnEffect = hitEffect = Fx.instBomb;
-                            hitSound = Sounds.laser;
+                            hitSound = Sounds.shootLaser;
                             hitShake = 6;
                         }};
                     }}
@@ -5717,7 +5717,7 @@ public class SFUnitTypes {
                                     -20, 0, 22.5f
                             };
                         }};
-                        shootSound = Sounds.mineDeploy;
+                        shootSound = Sounds.shootRetusa;
                         rotate =false;
                         shootCone = 360f;
                         inaccuracy = 20f;
@@ -5777,7 +5777,7 @@ public class SFUnitTypes {
                             trailWidth = 2.6f;
                             trailLength = 10;
                             hitShake = 8;
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             hitSoundVolume = 5;
                             shootEffect = smokeEffect = Fx.none;
                             despawnEffect = new ParticleEffect(){{
@@ -5825,7 +5825,7 @@ public class SFUnitTypes {
                         reload = 60;
                         rotate = true;
                         rotateSpeed = 6;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         shoot.shots = 3;
                         shoot.shotDelay = 3f;
                         alternate = false;
@@ -5841,7 +5841,7 @@ public class SFUnitTypes {
                         reload = 60;
                         rotate = true;
                         rotateSpeed = 6;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         shoot.shots = 3;
                         shoot.shotDelay = 3f;
                         alternate = false;
@@ -5857,7 +5857,7 @@ public class SFUnitTypes {
                         reload = 60;
                         rotate = true;
                         rotateSpeed = 6;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         shoot.shots = 3;
                         shoot.shotDelay = 3f;
                         alternate = false;
@@ -5875,7 +5875,7 @@ public class SFUnitTypes {
                         shootY = 20f;
                         reload = 70f;
                         mirror = false;
-                        shootSound = Sounds.railgun;
+                        shootSound = Sounds.shootOmura;
                         soundPitchMax = soundPitchMin = 0.5f;
                         cooldownTime = 120;
                         ejectEffect = Fx.none;
@@ -5922,7 +5922,7 @@ public class SFUnitTypes {
                                 waveStroke = 5;
                                 waveLife = 16;
                             }};
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             hitShake = 6;
                         }};
                     }}
@@ -5954,7 +5954,7 @@ public class SFUnitTypes {
                 shootWarmupSpeed = 0.03f;
                 inaccuracy = 3;
                 recoil = 2;
-                shootSound = Sounds.mediumCannon;
+                shootSound = Sounds.shootTank;
                 parts.add(new RegionPart("-barrel") {{
                     under = true;
                     moveY = -2;
@@ -5989,7 +5989,7 @@ public class SFUnitTypes {
                     trailLength = 10;
                     trailWidth = 4;
                     hitShake = 8;
-                    hitSound = Sounds.plasmaboom;
+                    hitSound = Sounds.explosionQuad;
                     hitEffect = new ExplosionEffect() {{
                         sparks = 22;
                         sparkLen = 30;
@@ -6023,8 +6023,8 @@ public class SFUnitTypes {
                         shoot.firstShotDelay = 120;
                         inaccuracy = 3;
                         recoil = 2;
-                        shootSound = Sounds.railgun;
-                        chargeSound = Sounds.lasercharge;
+                        shootSound = Sounds.shootOmura;
+                        chargeSound = Sounds.chargeCorvus;
                         cooldownTime = 500;
                         shootStatusDuration = 360;
                         shootStatus = StatusEffects.overclock;
@@ -6184,7 +6184,7 @@ public class SFUnitTypes {
                                 status = SFStatusEffects.breakdown;
                                 statusDuration = 125;
                                 hitShake = 6;
-                                hitSound = Sounds.plasmaboom;
+                                hitSound = Sounds.explosionQuad;
                                 hitEffect = new WrapEffect(Fx.dynamicSpikes, SFColor.energyYellow, 65);
                                 despawnEffect = new WaveEffect() {{
                                     lifetime = 15;
@@ -6259,7 +6259,7 @@ public class SFUnitTypes {
                         top = false;
                         recoil = 3.25f;
                         mirror = false;
-                        shootSound = Sounds.laser;
+                        shootSound = Sounds.shootLaser;
                         continuous = true;
                         bullet = new LaserBulletType() {{
                             healPercent = 16;
@@ -6297,7 +6297,7 @@ public class SFUnitTypes {
                         rotate = false;
                         alternate = true;
                         layerOffset = -0.001f;
-                        shootSound = Sounds.lasershoot;
+                        shootSound = Sounds.shootLaser;
                         shootWarmupSpeed = 0.1f;
                         minWarmup = 0.98f;
                         parts.add(new RegionPart("-preview") {{
@@ -6404,7 +6404,7 @@ public class SFUnitTypes {
                         recoil = 0;
                         cooldownTime = 60;
                         mirror = false;
-                        shootSound = Sounds.torch;
+                        shootSound = Sounds.shootSublimate;
                         alwaysContinuous = true;
                         shootWarmupSpeed = 0.125f;
                         minWarmup = 0.98f;
@@ -6482,7 +6482,7 @@ public class SFUnitTypes {
                         cooldownTime = 300;
                         recoilTime = 160;
                         alternate = false;
-                        shootSound = Sounds.torch;
+                        shootSound = Sounds.shootSublimate;
                         heatColor = Color.valueOf("FF4040");
                         bullet = new ContinuousFlameBulletType(60) {{
                             recoil = 0.01f;
@@ -6532,7 +6532,7 @@ public class SFUnitTypes {
                         reload = 28.5f;
                         inaccuracy = 2;
                         recoil = 0;
-                        shootSound = Sounds.artillery;
+                        shootSound = Sounds.shootArtillery;
                         velocityRnd = 0.1f;
                         shoot.shots = 3;
                         shootCone = 30f;
@@ -6589,7 +6589,7 @@ public class SFUnitTypes {
                         shootWarmupSpeed = 0.13f;
                         minWarmup = 0.9f;
                         reload = 48;
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         shootStatus = StatusEffects.shielded;
                         shootStatusDuration = 50;
                         shoot = new ShootPattern() {{
@@ -6664,7 +6664,7 @@ public class SFUnitTypes {
                         reload = 180;
                         rotate = false;
                         mirror = false;
-                        shootSound = Sounds.laserblast;
+                        shootSound = Sounds.shootCorvus;
                         bullet = new BasicBulletType(3, 200, "large-bomb") {{
                             laserAbsorb = true;
                             hitSize = 15;
@@ -6690,7 +6690,7 @@ public class SFUnitTypes {
                                 damage = 16;
                             }};
                             despawnEffect = Fx.none;
-                            hitSound = Sounds.plasmaboom;
+                            hitSound = Sounds.explosionQuad;
                             hitColor = SFColor.energyYellow;
                             hitEffect = new MultiEffect(
                                     new ParticleEffect() {{
@@ -6800,7 +6800,7 @@ public class SFUnitTypes {
                         rotate = true;
                         rotateSpeed = 6;
                         shootCone = 5;
-                        shootSound = Sounds.sap;
+                        shootSound = Sounds.shootSap;
                         soundPitchMin = soundPitchMax = 0.5f;
                         recoil = 1f;
                         continuous = true;
@@ -6813,7 +6813,7 @@ public class SFUnitTypes {
                         rotate = true;
                         rotateSpeed = 6;
                         shootCone = 5;
-                        shootSound = Sounds.sap;
+                        shootSound = Sounds.shootSap;
                         recoil = 1f;
                         continuous = true;
                         bullet = banisherLaser;
@@ -6826,11 +6826,11 @@ public class SFUnitTypes {
                         rotate = true;
                         rotateSpeed = 2f;
                         shootCone = 5;
-                        shootSound = Sounds.laser;
+                        shootSound = Sounds.shootLaser;
                         soundPitchMin = soundPitchMax = 1.5f;
                         recoil = 4f;
                         shoot.firstShotDelay = 40f;
-                        chargeSound = Sounds.lasercharge2;
+                        chargeSound = Sounds.chargeVela;
                         bullet = new BasicBulletType(18,120f,"sfire-mod-arrow-bullet") {{
                             lifetime = 32f;
                             drag = 0.022f;
@@ -6926,7 +6926,7 @@ public class SFUnitTypes {
                 recoil = 8;
                 cooldownTime = 120;
                 ejectEffect = Fx.casing4;
-                shootSound = Sounds.artillery;
+                shootSound = Sounds.shootArtillery;
                 bullet = new ArtilleryBulletType(5, 95) {{
                     collides = true;
                     collidesTiles = true;
@@ -6987,7 +6987,7 @@ public class SFUnitTypes {
                 recoil = 0;
                 reload = 36;
                 mirror = false;
-                shootSound = Sounds.missile;
+                shootSound = Sounds.shootMissile;
                 inaccuracy = 3;
                 shootCone = 60;
                 shoot = new ShootSpread(3, 4);
@@ -7047,7 +7047,7 @@ public class SFUnitTypes {
                         shootY = 22;
                         reload = 6;
                         rotate = false;
-                        shootSound = Sounds.bolt;
+                        shootSound = Sounds.shootLocus;
                         bullet = new BasicBulletType(10, 45) {{
                             pierceArmor = true;
                             pierce = true;
@@ -7084,7 +7084,7 @@ public class SFUnitTypes {
                                     0, 1, -30
                             };
                         }};
-                        shootSound = Sounds.missile;
+                        shootSound = Sounds.shootMissile;
                         inaccuracy = 2;
                         shootCone = 180;
                         bullet = new MissileBulletType(11, 33) {{
@@ -7166,7 +7166,7 @@ public class SFUnitTypes {
                 reload = 70f;
                 rotate = true;
                 rotateSpeed = 2.5f;
-                shootSound = Sounds.laser;
+                shootSound = Sounds.shootLaser;
                 soundPitchMin = soundPitchMax = 1.5f;
                 recoil = 4f;
                 cooldownTime = 160;
@@ -7247,7 +7247,7 @@ public class SFUnitTypes {
                 shootY = 4;
                 targetInterval = 5f;
                 targetSwitchInterval = 5f;
-                shootSound = Sounds.bolt;
+                shootSound = Sounds.shootLocus;
                 bullet = new BulletType() {{
                     maxRange = 8 * 46;
                     damage = 260;
@@ -7268,7 +7268,7 @@ public class SFUnitTypes {
                         rotate = true;
                         rotateSpeed = 2.5f;
                         layerOffset = -0.01f;
-                        shootSound = Sounds.laser;
+                        shootSound = Sounds.shootLaser;
                         soundPitchMin = soundPitchMax = 1.5f;
                         recoil = 4f;
                         cooldownTime = 160;
@@ -7346,7 +7346,7 @@ public class SFUnitTypes {
                         y = 384/4f;
                         reload = 300;
                         alternate = false;
-                        shootSound = Sounds.laser;
+                        shootSound = Sounds.shootLaser;
                         soundPitchMin = soundPitchMax = 0.7f;
                         recoil = 4f;
                         cooldownTime = 160;
@@ -7395,7 +7395,7 @@ public class SFUnitTypes {
                 x = 0;
                 shootY = 18.5f;
                 shootCone = 31.8f;
-                shootSound = Sounds.bolt;
+                shootSound = Sounds.shootLocus;
                 ejectEffect = Fx.casing3Double;
                 shoot = new ShootAlternate(16);
                 bullet = new BasicBulletType(6, 85) {{
@@ -7501,7 +7501,7 @@ public class SFUnitTypes {
                 }});
                 shootY = 33f;
                 shootCone = 8;
-                shootSound = Sounds.mediumCannon;
+                shootSound = Sounds.shootTank;
                 shootStatus = StatusEffects.unmoving;
                 shootStatusDuration = 195;
                 shootWarmupSpeed = 0.013f;
@@ -7579,7 +7579,7 @@ public class SFUnitTypes {
                         colorFrom = SFColor.energyYellow.cpy().a(0.5f);
                         colorTo = SFColor.energyYellow.cpy().a(0.3f);
                     }};
-                    hitSound = Sounds.explosionbig;
+                    hitSound = SFSounds.explosionbig;
                     hitSoundPitch = 0.5f;
                     hitSoundVolume = 3;
                     hitShake = 8;
@@ -7672,7 +7672,7 @@ public class SFUnitTypes {
                             recoil = 0;
                             x = 0;
                             y = -3;
-                            shootSound = Sounds.wave;
+                            shootSound = Sounds.waveSpawn;
                             shootCone = 360;
                             bullet = new BasicBulletType(640, 0) {{
                                 instantDisappear = true;
@@ -7728,7 +7728,7 @@ public class SFUnitTypes {
                 shootY = 10;
                 targetInterval = 6.5f;
                 targetSwitchInterval = 7.5f;
-                shootSound = Sounds.bolt;
+                shootSound = Sounds.shootLocus;
                 bullet = new BulletType() {{
                     maxRange = 8 * 46;
                     damage = 260;
@@ -7789,7 +7789,7 @@ public class SFUnitTypes {
                             y = -2;
                             shootY = 10;
                             shootCone = 30;
-                            shootSound = Sounds.missileLaunch;
+                            shootSound = Sounds.shootScathe;
                             shootStatus = StatusEffects.overclock;
                             shootStatusDuration = 90;
                             ejectEffect = Fx.none;
@@ -7844,7 +7844,7 @@ public class SFUnitTypes {
                                     cone = 16;
                                 }};
                                 hitShake = 3;
-                                hitSound = Sounds.explosionbig;
+                                hitSound = SFSounds.explosionbig;
                                 hitSoundPitch = hitSoundVolume = 2;
                                 hitColor = SFColor.energyYellow;
                                 hitEffect = new MultiEffect(
@@ -7975,7 +7975,7 @@ public class SFUnitTypes {
                         top = false;
                         rotate = false;
                         shootCone = 11;
-                        shootSound = Sounds.blaster;
+                        shootSound = Sounds.shootElude;
                         shoot = new ShootBarrel() {{
                             shots = 2;
                             barrels = new float[]{
