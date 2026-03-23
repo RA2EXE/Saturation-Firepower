@@ -1215,8 +1215,8 @@ public class SFBlocks {
             craftTime = 20;
             results = with(Items.thorium,4, SFItems.strontium,3, SFItems.rubidium,3, SFItems.chromium,6);
             consumePower(1.25f);
-            //consumeItem(SFItems.rareEarth, 1);
-            consumeItem(Items.sand, 2);  //test only
+            consumeItem(SFItems.rareEarth, 1);
+            //consumeItem(Items.sand, 2);  //test only
             consumeLiquid(Liquids.water, 0.2f);
 
             ambientSound = Sounds.loopHum;

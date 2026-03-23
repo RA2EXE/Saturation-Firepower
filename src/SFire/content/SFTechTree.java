@@ -179,7 +179,7 @@ public class SFTechTree {
         });
 
         //wall + defense
-        addToNode(titaniumWall, () -> node(expWall, () -> node(expWallLarge)));
+        addToNode(thoriumWallLarge, () -> node(expWall, () -> node(expWallLarge)));
         addToNode(titaniumWallLarge, () -> node(steelWall, () -> node(steelWallLarge)));
         addToNode(surgeWall, () -> node(influxWall, () -> node(influxWallLarge, () -> node(discWall))));
         addToNode(thoriumWall, () -> node(fermWall, () -> node(fermWallLarge, () -> node(leipWall, () -> node(leipWallLarge)))));
