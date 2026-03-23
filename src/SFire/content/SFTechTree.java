@@ -24,25 +24,18 @@ public class SFTechTree {
     public static void load() {
         SFPlanets.tiberia.techTree = nodeRoot("tiberia", frontCore, true, () -> addToNode(frontCore, () -> {
 
-            node(xianqu, () -> {
+            /*node(xianqu, () -> {
                 node(gaosi);
                 node(liebao, () -> node(qingning));
             });
-            node(mengma, () -> node(changqiang, () -> node(fangtian)));
+            node(mengma, () -> node(changqiang, () -> node(fangtian)));*/
 
 
             node(frozenFront, Seq.with(
-                    new SectorComplete(planetaryTerminal),
-                    new Research(oct),
-                    new Research(corvus),
-                    new Research(reign),
-                    new Research(eclipse),
-                    new Research(tank5),
-                    new Research(air5),
-                    new Research(toxopid)
+                    new SectorComplete(planetaryTerminal)
             ), () -> {});
 
-            nodeProduce(Items.copper, () -> {
+            /*nodeProduce(Items.copper, () -> {
                 node(Liquids.water, () -> node(Liquids.nitrogen, () -> nodeProduce(SFLiquids.nitrate, () -> {})));
                 node(Items.lead, () -> {
                     node(Items.titanium, () -> {
@@ -93,20 +86,17 @@ public class SFTechTree {
                         });
                     });
                 });
-            });
+            });*/
         }));
-
-
-        // addToNode(XXX, () -> node(XXX));
 
         //turrets
         addToNode(arc, () -> {
-            //node(gaosi);
+            node(gaosi);//改动
             node(bingfengbao);
-            node(xianqu, () -> node(liebao, () -> {}/*node(qingning)*/));
+            node(xianqu, () -> node(liebao, () -> node(qingning)));//改动
         });
         addToNode(hail, () -> {
-            node(huojian, () -> {}/*node(changqiang, () -> node(fangtian))*/);
+            node(huojian, () -> node(changqiang, () -> node(fangtian)));//改动
             node(mengma);
         });
         addToNode(salvo, () -> {
@@ -148,9 +138,8 @@ public class SFTechTree {
             node(clusBlender, () -> node(blastReagentMixer, () -> node(clusMaker)));
         });
         addToNode(cryofluidMixer, () -> {
-            node(cryoCentrifuge);
-            node(nanoActivator
-                    //, () -> node(nanoMixer)
+            node(cryoCentrifuge, () -> node(galliumSupercooler));
+            node(nanoActivator, () -> node(nanoMixer)//改动
             );
         });
         addToNode(plastaniumCompressor, () -> node(plasMultiCompresser));
@@ -190,6 +179,7 @@ public class SFTechTree {
         });
 
         //wall + defense
+        addToNode(titaniumWall, () -> node(expWall, () -> node(expWallLarge)));
         addToNode(titaniumWallLarge, () -> node(steelWall, () -> node(steelWallLarge)));
         addToNode(surgeWall, () -> node(influxWall, () -> node(influxWallLarge, () -> node(discWall))));
         addToNode(thoriumWall, () -> node(fermWall, () -> node(fermWallLarge, () -> node(leipWall, () -> node(leipWallLarge)))));
@@ -215,7 +205,7 @@ public class SFTechTree {
         addToNode(batteryLarge, () -> node(armorBattery));
         addToNode(powerNodeLarge, () -> node(armorNode));
         addToNode(surgeTower, () -> node(discNodeTower));
-        addToNode(steamGenerator, () -> node(coalPyrolyzer, () -> node(gasSmoker)));
+        addToNode(steamGenerator, () -> node(coalPyrolyzer, () -> node(gasSmoker, () -> node(gasTurbine))));
         addToNode(thermalGenerator, () -> node(heatGenerator, () -> node(radiGenerator)));
         addToNode(thoriumReactor, () -> node(fermReactor));
         addToNode(impactReactor, () -> node(fissionReactor, () -> node(arcFissionReactor)));
@@ -225,7 +215,7 @@ public class SFTechTree {
         addToNode(laserDrill, () -> node(heavyDrill));
         addToNode(blastDrill, () -> node(blastWell, () -> node(quantumOreExtractor)));
         addToNode(Blocks.waterExtractor, () -> node(SFBlocks.waterExtractor));
-        addToNode(oilExtractor, () -> node(oilPressurePump));
+        addToNode(oilExtractor, () -> node(oilPressurePump, () -> node(gasExtractor)));
         addToNode(cultivator, () -> node(sporeCultivator));
 
         //storage
@@ -265,29 +255,30 @@ public class SFTechTree {
         addToNode(repairTurret, () -> node(nanoUnitRegener));
 
         //items + liquids
-        /*
+
         addToNode(Items.sand, () -> nodeProduce(SFItems.rareEarth, () -> {
             nodeProduce(SFItems.rubidium, () -> {
             });
+            nodeProduce(SFItems.strontium, () -> {});
             nodeProduce(SFItems.chromium, () -> {
                 nodeProduce(SFItems.waveSteel, () ->{
 
                 });
             });
-        }));*/
+        }));//改动
         addToNode(Items.titanium, () -> nodeProduce(SFItems.siliSteel, () -> {}));
-        /*addToNode(Items.silicon, () -> nodeProduce(SFItems.nanoCore, () -> {
+        addToNode(Items.silicon, () -> nodeProduce(SFItems.nanoCore, () -> {
             nodeProduce(SFItems.lens, () -> {
             });
             nodeProduce(SFLiquids.nanoFluid, () -> node(SFLiquids.actiNanofluid, () -> {
             }));
-        }));*/
+        }));//改动
         addToNode(Items.surgeAlloy, () -> nodeProduce(SFItems.tayrAlloy, () -> {}));
-        //addToNode(Items.thorium, () -> nodeProduce(SFItems.fermium, () -> nodeProduce(SFItems.leipAlloy, () -> {})));
-        //addToNode(Items.phaseFabric, () -> nodeProduce(SFItems.discFabric, () -> {}));
-        //addToNode(Items.blastCompound, () -> nodeProduce(SFItems.clusBomb, () -> {}));
-        //addToNode(Liquids.water, () -> nodeProduce(SFLiquids.nitrate, () -> {}));
-        //addToNode(Liquids.oil, () -> nodeProduce(SFLiquids.nitratedOil, () -> nodeProduce(SFLiquids.blastReagent, () -> {})));
+        addToNode(Items.thorium, () -> nodeProduce(SFItems.fermium, () -> nodeProduce(SFItems.leipAlloy, () -> {})));//改动
+        addToNode(Items.phaseFabric, () -> nodeProduce(SFItems.discFabric, () -> {}));
+        addToNode(Items.blastCompound, () -> nodeProduce(SFItems.clusBomb, () -> {}));
+        addToNode(Liquids.water, () -> nodeProduce(SFLiquids.nitrate, () -> {}));
+        addToNode(Liquids.oil, () -> nodeProduce(SFLiquids.nitratedOil, () -> nodeProduce(SFLiquids.blastReagent, () -> {})));
 
         //sector
 

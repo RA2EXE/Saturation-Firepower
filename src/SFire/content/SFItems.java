@@ -3,6 +3,7 @@ package SFire.content;
 import arc.graphics.*;
 //import javafx.scene.paint.Color;
 import mindustry.content.Blocks;
+import mindustry.content.Planets;
 import mindustry.type.*;
 import mindustry.world.blocks.power.ConsumeGenerator;
 

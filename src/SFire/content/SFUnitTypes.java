@@ -108,6 +108,7 @@ public class SFUnitTypes {
             setEnginesMirror(new UnitEngine(-5.5f, -9.7f, 1.8f, 247.5f));
             trailLength = 6;
             circleTarget = true;
+            circleTargetRadius = 100f;
             targetFlags = new BlockFlag[]{BlockFlag.battery, BlockFlag.core};
 
             abilities.add(new StatusFieldAbility(SFStatusEffects.stormed, 60, 60, -1));
@@ -253,7 +254,8 @@ public class SFUnitTypes {
             armor = 36f;
             faceTarget = true;
             circleTarget = true;
-            engineLayer = 110f;
+            circleTargetRadius = 160f;
+            engineLayer = 100f;
             engineSize = 0;
             setEnginesMirror(new UnitEngine(-3.75f, -18.8f, 2.35f, -90));
             abilities.add(new RegenAbility() {{
@@ -2374,7 +2376,7 @@ public class SFUnitTypes {
                         rotate = false;
                         top = false;
                         inaccuracy = 0.5f;
-                        //shootSound = Sounds.shootBig;
+                        shootSound = Sounds.shootSpectre;
                         ejectEffect = Fx.casing4;
                         shootCone = 15;
                         bullet = new BasicBulletType(14.3f, 115) {{
@@ -3205,7 +3207,7 @@ public class SFUnitTypes {
                         rotateSpeed = 2.3f;
                         recoil = 2;
                         shake = 1;
-                        //shootSound = Sounds.shootBig;
+                        shootSound = Sounds.shootSpectre;
                         ejectEffect = Fx.casing3;
                         bullet = sundownBullet;
                     }},
@@ -3221,7 +3223,7 @@ public class SFUnitTypes {
                         rotateSpeed = 2.3f;
                         recoil = 2;
                         shake = 1;
-                        //shootSound = Sounds.shootBig;
+                        shootSound = Sounds.shootSpectre;
                         ejectEffect = Fx.casing3;
                         bullet = sundownBullet;
                     }},
@@ -4586,6 +4588,7 @@ public class SFUnitTypes {
             trailLength = 11;
             immunities.addAll(StatusEffects.burning, StatusEffects.unmoving);
             circleTarget = faceTarget = true;
+            circleTargetRadius = 130f;
             weapons.add(
                     new Weapon(name("cumulus-gun")) {{
                         top = false;
@@ -4649,6 +4652,7 @@ public class SFUnitTypes {
                         minShootVelocity = 0.01f;
                         bullet = new MissileBulletType(10, 35, "sfire-mod-missile2") {{
                             splashDamage = 20;
+                            splashDamageRadius = 30;
                             lifetime = 35;
                             incendAmount = 1;
                             incendChance = 0.35f;
@@ -5052,6 +5056,7 @@ public class SFUnitTypes {
             immunities.addAll(StatusEffects.electrified, StatusEffects.slow, StatusEffects.freezing, StatusEffects.unmoving, SFStatusEffects.negative, SFStatusEffects.postive, SFStatusEffects.scrambled, SFStatusEffects.disRepair, SFStatusEffects.magnStrif);
             targetFlags = new BlockFlag[]{BlockFlag.turret, BlockFlag.core};
             circleTarget = true;
+            circleTargetRadius = 240f;
 
             weapons.add(
                     new Weapon(name("stratosphere-emp")) {{
@@ -5468,7 +5473,7 @@ public class SFUnitTypes {
                         reload = 45f;
                         mirror = false;
                         inaccuracy = 2;
-                        //shootSound = Sounds.shootBig;
+                        shootSound = Sounds.shootLaser;
                         ejectEffect = Fx.casing3;
                         layerOffset = 0.001f;
                         parts.add(new RegionPart("-front") {{

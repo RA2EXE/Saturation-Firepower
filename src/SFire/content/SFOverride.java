@@ -188,13 +188,13 @@ public class SFOverride {
         );
         ((ItemTurret) Blocks.ripple).shoot.shots = 5;
         ((ItemTurret) Blocks.ripple).ammoTypes.putAll(
-                SFItems.siliSteel, new ArtilleryBulletType(3,15){{
+                SFItems.siliSteel, new ArtilleryBulletType(3,30){{
                     knockback = 0.8f;
                     lifetime = 80f;
                     width = height = 12f;
                     collidesTiles = false;
                     splashDamageRadius = 25f * 0.75f;
-                    splashDamage = 33f;
+                    splashDamage = 66f;
                     ammoMultiplier = 3f;
                     status = SFStatusEffects.magnStrif;
                     statusDuration = 10;
@@ -203,11 +203,11 @@ public class SFOverride {
                     backColor = SFColor.sisteelDark;
                     frontColor = hitColor = trailColor = SFColor.sisteelLight;
                 }},
-                SFItems.clusBomb, new ArtilleryBulletType(2,15){{
+                SFItems.clusBomb, new ArtilleryBulletType(2,30){{
                     knockback = 1.8f;
                     inaccuracy = 3;
                     lifetime = 80f;
-                    splashDamage = 50;
+                    splashDamage = 100;
                     splashDamageRadius = 28;
                     width = height = 12;
                     collidesTiles = false;
@@ -217,9 +217,9 @@ public class SFOverride {
                     frontColor = SFColor.clusRed;
                     ammoMultiplier = 6;
                     fragBullets = 5;
-                    fragBullet = new ArtilleryBulletType(1.5f, 10) {{
+                    fragBullet = new ArtilleryBulletType(1.5f, 15) {{
                         lifetime = 20;
-                        splashDamage = 50;
+                        splashDamage = 75;
                         splashDamageRadius = 28;
                         sticky = true;
                         stickyExtraLifetime = 10;

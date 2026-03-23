@@ -60,9 +60,9 @@ public class SFBlocks {
     //environment + wall + ores
     snowSand, sporeSand, quartzSand, rareMound, rareEarth, rareEarthWater, calrareEarth, calrareEarthCraters, calrareEarthWall,
     swamp, muddySwamp, swampWater, swampWaterDeep,
-    magstoneFloor, magstoneWall, magstoneStone, magbasaltFloor, magbasaltWall, magbasaltStone, magshaleFloor, magshaleWall, magshaleStone,
-    calciteFloor, calciteWall, calciteStone, celestiteFloor, celestiteVent, celestiteWall, celestiteStone,
-    crackrockFloor, crackrockWall, crackrockStone, combinationFloor, combinationVent, combinationWall, combinationStone,
+    magstoneFloor, magstoneWall, magstoneStone, magbasaltFloor, magbasaltWall, magbasaltStone, magshaleFloor, magshaleWall, magshaleStone, magshaleFissure, shaleFissure,
+    calciteFloor, calciteWall, calciteStone, celestiteFloor, celestiteVent, celestiteWall, celestiteStone, saltdilutedFloor, saltdilutedWall, inkrockFloor, inkrockVent, inkrockWall, inkrockStone,
+    crackrockFloor, crackrockWall, crackrockStone, combinationFloor, combinationVent, combinationWall, combinationStone, sulfurFloor, sulfurVent, sulfurWall, sulfurStone, pyriterockFloor, pyriterockVent, pyriterockWall, pyriterockStone,
     radiquartzFloor, radiquartzWall, radiquartzStone, radiamphiboleFloor, radiamphiboleWall, radiamphiboleStone,
     radigabbroFloor, radigabbroWall, radigabbroStone, radimacadam1Floor, radimacadam2Floor,
 
@@ -108,7 +108,7 @@ public class SFBlocks {
     //production
     energyDrill, heavyDrill, blastWell, quantumOreExtractor,
     waterExtractor, /*slagExtractor,*/
-    oilPressurePump, sporeCultivator,
+    oilPressurePump, gasExtractor, sporeCultivator,
 
     //storage
     frontCore, industryCore, finalCommandCenter, hyperUnloader, molecularDatabase,
@@ -248,14 +248,24 @@ public class SFBlocks {
         }};
         celestiteWall = new StaticWall("celestite-wall") {{
             variants = 2;
-            mapColor = Color.valueOf("4C7587");
-            hasColor = true;
+        }};
+        saltdilutedWall = new StaticWall("saltdiluted-wall") {{
+            variants = 2;
+        }};
+        inkrockWall = new StaticWall("inkrock-wall") {{
+            variants = 2;
         }};
         crackrockWall = new StaticWall("crackrock-wall") {{
             variants = 2;
         }};
         combinationWall = new StaticWall("combination-wall") {{
             variants = 2;
+        }};
+        sulfurWall = new StaticWall("sulfur-wall") {{
+            variants = 2;
+        }};
+        pyriterockWall = new StaticWall("pyriterock-wall") {{
+            variants = 3;
         }};
         radiquartzWall = new StaticWall("radiquartz-wall") {{
             variants = 2;
@@ -282,10 +292,19 @@ public class SFBlocks {
         celestiteStone = new Prop("celestite-stone") {{
             variants = 2;
         }};
+        inkrockStone = new Prop("inkrock-stone") {{
+            variants = 2;
+        }};
         crackrockStone = new Prop("crackrock-stone") {{
             variants = 2;
         }};
         combinationStone = new Prop("combination-stone") {{
+            variants = 2;
+        }};
+        sulfurStone = new Prop("sulfur-stone") {{
+            variants = 2;
+        }};
+        pyriterockStone = new Prop("pyriterock-stone") {{
             variants = 2;
         }};
         radiquartzStone = new TallBlock("radiquartz-stone") {{
@@ -319,8 +338,20 @@ public class SFBlocks {
             wall = magshaleWall;
             decoration = magshaleStone;
             dragMultiplier = 1.1f;
-            attributes.set(Attribute.oil, 1.88f);
+            attributes.set(Attribute.oil, 2f);
             walkSound = Sounds.shootArc;
+        }};
+        magshaleFissure = new SteamVent("mashale-fissure") {{
+            parent = blendGroup = magshaleFloor;
+            attributes.set(Attribute.oil, 2);
+            attributes.set(SFAttribute.gas, 2);
+            effectColor = SFLiquids.mixGas.color.cpy().a(0.55f);
+        }};
+        shaleFissure = new SteamVent("shale-fissure") {{
+            parent = blendGroup = Blocks.shale;
+            attributes.set(Attribute.oil, 2);
+            attributes.set(SFAttribute.gas, 2);
+            effectColor = SFLiquids.mixGas.color.cpy().a(0.55f);
         }};
         calciteFloor = new Floor("calcite-floor") {{
             wall = calciteWall;
@@ -334,7 +365,22 @@ public class SFBlocks {
         celestiteVent = new SteamVent("celestite-vent"){{
             parent = blendGroup = celestiteFloor;
             attributes.set(Attribute.steam, 1f);
-            attributes.set(Attribute.water, 0.5f);
+            attributes.set(SFAttribute.gas, 1f);
+            attributes.set(Attribute.heat, 0.05f);
+            effectColor = Color.white.cpy().a(0.55f);
+        }};
+        saltdilutedFloor = new Floor("saltdiluted-floor",4) {{
+            wall = saltdilutedWall;
+            attributes.set(Attribute.water, -0.25f);
+        }};
+        inkrockFloor = new Floor("inkrock-floor") {{
+            wall = inkrockWall;
+            decoration = inkrockStone;
+        }};
+        inkrockVent = new SteamVent("inkrock-vent"){{
+            parent = blendGroup = inkrockFloor;
+            attributes.set(Attribute.steam, 1f);
+            attributes.set(SFAttribute.gas, 1f);
             attributes.set(Attribute.heat, 0.05f);
             effectColor = Color.white.cpy().a(0.55f);
         }};
@@ -349,8 +395,30 @@ public class SFBlocks {
         combinationVent = new SteamVent("combination-vent"){{
             parent = blendGroup = combinationFloor;
             attributes.set(Attribute.steam, 1f);
-            attributes.set(Attribute.water, 0.5f);
+            attributes.set(SFAttribute.gas, 1f);
             attributes.set(Attribute.heat, 0.05f);
+            effectColor = Color.white.cpy().a(0.55f);
+        }};
+        sulfurFloor = new Floor("sulfur-floor") {{
+            wall = sulfurWall;
+            decoration = sulfurStone;
+        }};
+        sulfurVent = new SteamVent("sulfur-vent"){{
+            parent = blendGroup = sulfurFloor;
+            attributes.set(Attribute.steam, 1f);
+            attributes.set(SFAttribute.gas, 1f);
+            attributes.set(Attribute.heat, 0.1f);
+            effectColor = Color.white.cpy().a(0.55f);
+        }};
+        pyriterockFloor = new Floor("pyriterock-floor") {{
+            wall = pyriterockWall;
+            decoration = pyriterockStone;
+        }};
+        pyriterockVent = new SteamVent("pyriterock-vent"){{
+            parent = blendGroup = pyriterockFloor;
+            attributes.set(Attribute.steam, 1f);
+            attributes.set(SFAttribute.gas, 1f);
+            attributes.set(Attribute.heat, 0.1f);
             effectColor = Color.white.cpy().a(0.55f);
         }};
         radiquartzFloor = new Floor("radiquartz-floor", 4) {{
@@ -405,20 +473,18 @@ public class SFBlocks {
             hasColor = true;
         }};
         induFloor = new Floor("industry-floor", 0) {{
-            speedMultiplier = 1.125f;
-            dragMultiplier = 0.95f;
             wall = induFloorWall;
             decoration = induFloorCover;
             attributes.set(Attribute.oil, 1f);
             attributes.set(Attribute.water, 0.25f);
             attributes.set(Attribute.spores, 0.25f);
+            attributes.set(SFAttribute.gas, 2.25f);
         }};
         induFloorSupplyer = new Floor("industry-supplyer", 7) {{
-            speedMultiplier = 1.125f;
-            dragMultiplier = 0.95f;
             attributes.set(Attribute.oil, 2);
             attributes.set(Attribute.water, 2);
             attributes.set(Attribute.spores, 2);
+            attributes.set(SFAttribute.gas, 3);
             blendGroup = SFBlocks.induFloor;
             mapColor = Color.valueOf("B3A890");
             hasColor = true;
@@ -433,8 +499,6 @@ public class SFBlocks {
             hasColor = true;
         }};
         induFloorHeater = new Floor("industry-heater", 2) {{
-            speedMultiplier = 0.85f;
-            dragMultiplier = 1.35f;
             decoration = induFloorCover;
             attributes.set(Attribute.oil, -2);
             attributes.set(Attribute.water, -2);
@@ -461,8 +525,6 @@ public class SFBlocks {
             hasColor = true;
         }};
         induHeatBroken = new Floor("industry-heater-broken", 4) {{
-            speedMultiplier = 0.85f;
-            dragMultiplier = 1.35f;
             decoration = induFloorCover;
             blendGroup = SFBlocks.induFloor;
         }};
@@ -1153,8 +1215,8 @@ public class SFBlocks {
             craftTime = 20;
             results = with(Items.thorium,4, SFItems.strontium,3, SFItems.rubidium,3, SFItems.chromium,6);
             consumePower(1.25f);
-            consumeItem(SFItems.rareEarth, 1);
-            //consumeItem(Items.sand, 2);  test only
+            //consumeItem(SFItems.rareEarth, 1);
+            consumeItem(Items.sand, 2);  //test only
             consumeLiquid(Liquids.water, 0.2f);
 
             ambientSound = Sounds.loopHum;
@@ -1166,7 +1228,7 @@ public class SFBlocks {
         }};
         galliumSupercooler = new GenericCrafter("gallium-supercooler") {{
             size = 2;
-            requirements(Category.crafting, with(Items.metaglass,30, Items.plastanium,30, Items.silicon,60, SFItems.rubidium,45));
+            requirements(Category.crafting, with(Items.metaglass,30, Items.plastanium,30, SFItems.siliSteel,65));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 10;
             liquidCapacity = 60;
@@ -1174,7 +1236,7 @@ public class SFBlocks {
             craftTime = 50;
             outputItem = new ItemStack(SFItems.crystalGallium, 1);
             consumePower(3.5f);
-            consumeLiquids(LiquidStack.with(Liquids.slag,0.6f, Liquids.cryofluid, 0.05f));
+            consumeLiquids(LiquidStack.with(Liquids.slag,0.3f, Liquids.cryofluid, 0.05f));
 
             drawer = new DrawMulti(
                     new DrawRegion("-bottom"),
@@ -2786,6 +2848,7 @@ public class SFBlocks {
             maxFactor = 2.5f;
             minPowerNeed = 5f;
             requirements(Category.production, with(Items.copper,75, Items.silicon,40, Items.graphite,40));
+            group = BlockGroup.drills;
             hasPower = hasItems = true;
             hasLiquids = false;
             itemCapacity = 20;
@@ -2805,6 +2868,7 @@ public class SFBlocks {
             minPowerNeed = 10f;
             health = 1200;
             requirements(Category.production, with(Items.silicon, 160, Items.surgeAlloy, 80, SFItems.waveSteel, 70, SFItems.siliSteel, 70));
+            group = BlockGroup.drills;
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 20;
             liquidCapacity = 30;
@@ -2931,6 +2995,29 @@ public class SFBlocks {
                 suffix = "-liq2";
             }});
         }};
+        gasExtractor = new AttributeCrafter("gas-extractor") {{
+            size = 3;
+            requirements(Category.production, with(Items.graphite,140, Items.metaglass,60, SFItems.siliSteel,50));
+            hasLiquids = true;
+            attribute = SFAttribute.gas;
+            minEfficiency = 9 - 0.0001f;
+            boostScale = 1f / 9f;
+            baseEfficiency = 0f;
+            maxBoost = 3f;
+
+            craftEffect = Fx.turbinegenerate;
+            drawer = new DrawMulti(new DrawRegion("-bottom"),new DrawLiquidRegion(SFLiquids.mixGas), new DrawRegion("-rotator", 6f){{spinSprite=true;}}, new DrawDefault());
+            group = BlockGroup.liquids;
+
+            itemCapacity = 0;
+            liquidCapacity = 60f;
+            craftTime = 120f;
+            outputLiquid = new LiquidStack(SFLiquids.mixGas, 0.2f);
+            consumePower(0.4f);
+
+            ambientSound = Sounds.loopHum;
+            ambientSoundVolume = 0.06f;
+        }};
         sporeCultivator = new AttributeCrafter("spore-cultivator") {{
             size = 4;
             requirements(Category.production, with(Items.silicon,100, Items.metaglass,130, Items.titanium,80, SFItems.waveSteel,70));
@@ -2987,7 +3074,7 @@ public class SFBlocks {
         }};
         hyperUnloader = new Unloader("hyper-unloader") {{
             health = 220;
-            requirements(Category.effect, with(Items.silicon,30, SFItems.waveSteel,40));
+            requirements(Category.distribution, with(Items.silicon,30, SFItems.waveSteel,40));
             group = BlockGroup.transportation;
             speed = 60/40f;
         }};
@@ -3107,7 +3194,7 @@ public class SFBlocks {
             health = 1100;
             recoil = 1f;
             recoilTime = 10;
-            shootSound = Sounds.shootLaser;
+            shootSound = Sounds.shootLancer;
             shake = 2f;
             heatColor = Color.valueOf("FF4040");
             researchCostMultiplier = 0.05f;
@@ -3786,7 +3873,7 @@ public class SFBlocks {
             armor = 5;
             recoil = 2.88f;
             recoilTime = 25;
-            //shootSound = Sounds.shootBig;
+            //shootSound = Sounds.shootSalvo;
             shake = 1.5f;
             inaccuracy = 3;
             shoot = new ShootAlternate(9);
@@ -3878,7 +3965,7 @@ public class SFBlocks {
             recoil = 1f;
             recoilTime = 60;
             reload = 6;
-            shoot = new ShootHelix(6,1.2f){{shots=3;shotDelay=1.5f;}};
+            shoot = new ShootHelix(3,1.2f){{shots=3;shotDelay=1.5f;}};
             velocityRnd = 0.1f;
             requirements(Category.turret, with(Items.lead,300, Items.metaglass,130, Items.thorium,90, SFItems.siliSteel,70));
 
@@ -5404,8 +5491,8 @@ public class SFBlocks {
             }};
             velocityRnd = 0.05f;
             ammo(
-                    Items.graphite, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
-                        splashDamage = 33f;
+                    Items.graphite, new ArtilleryBulletType(5,15,"sfire-mod-missile1"){{
+                        splashDamage = 35f;
                         splashDamageRadius = 32f;
                         scaledSplashDamage = true;
                         lifetime = 180;
@@ -5422,8 +5509,8 @@ public class SFBlocks {
                         hitShake = 2;
                         hitSoundVolume = 3;
                     }},
-                    Items.pyratite, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
-                        splashDamage = 40f;
+                    Items.pyratite, new ArtilleryBulletType(5,15,"sfire-mod-missile1"){{
+                        splashDamage = 45f;
                         splashDamageRadius = 32f;
                         scaledSplashDamage = true;
                         lifetime = 180;
@@ -5444,7 +5531,7 @@ public class SFBlocks {
                         hitShake = 3;
                         hitSoundVolume = 2;
                     }},
-                    Items.blastCompound, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                    Items.blastCompound, new ArtilleryBulletType(5,18,"sfire-mod-missile1"){{
                         splashDamage = 50f;
                         splashDamageRadius = 45f;
                         scaledSplashDamage = true;
@@ -5464,7 +5551,7 @@ public class SFBlocks {
                         hitShake = 4;
                         hitSoundVolume = 3;
                     }},
-                    Items.surgeAlloy, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                    Items.surgeAlloy, new ArtilleryBulletType(5,22,"sfire-mod-missile1"){{
                         splashDamage = 75f;
                         splashDamageRadius = 40f;
                         lifetime = 180;
@@ -5496,8 +5583,8 @@ public class SFBlocks {
                         hitShake = 3;
                         hitSoundVolume = 3;
                     }},
-                    SFItems.siliSteel, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
-                        splashDamage = 28f;
+                    SFItems.siliSteel, new ArtilleryBulletType(5,13,"sfire-mod-missile1"){{
+                        splashDamage = 30f;
                         splashDamageRadius = 35f;
                         scaledSplashDamage = true;
                         lifetime = 180;
@@ -5517,7 +5604,7 @@ public class SFBlocks {
                         hitShake = 3;
                         hitSoundVolume = 3;
                     }},
-                    SFItems.clusBomb, new ArtilleryBulletType(5,10,"sfire-mod-missile1"){{
+                    SFItems.clusBomb, new ArtilleryBulletType(5,18,"sfire-mod-missile1"){{
                         splashDamage = 45f;
                         splashDamageRadius = 45f;
                         scaledSplashDamage = true;
@@ -6865,7 +6952,7 @@ public class SFBlocks {
             recoil = 6;
             recoilTime = 100;
             cooldownTime = 120;
-            shootSound = Sounds.shootLaser;
+            shootSound = Sounds.shootLancer;
             shake = 5f;
             inaccuracy = 3;
             shoot = new ShootAlternate(16){{shots=6;shotDelay=2;}};
@@ -8040,7 +8127,7 @@ public class SFBlocks {
                             }});
                 }
             }};
-            requirements(Category.turret, with(Items.titanium,3500, Items.silicon,1500, SFItems.fermium,1450, SFItems.tayrAlloy,1500, SFItems.discFabric,2000, SFItems.lens,800));
+            requirements(Category.turret, with(Items.titanium,3500, Items.silicon,1500, SFItems.memoryAlloy,1650, SFItems.tayrAlloy,1500, SFItems.discFabric,2000, SFItems.lens,800));
             consumePower(360);
             consumeLiquid(Liquids.cryofluid,3);
             unitSort = UnitSorts.farthest;
@@ -8343,7 +8430,7 @@ public class SFBlocks {
                     }});
                 }}
             }};
-            requirements(Category.turret, with(Items.graphite,3600, Items.silicon,2000, Items.surgeAlloy,1300, SFItems.siliSteel,2500, SFItems.discFabric,2000, SFItems.leipAlloy,1500));
+            requirements(Category.turret, with(Items.graphite,3600, Items.silicon,2000, Items.surgeAlloy,1300, SFItems.siliSteel,2500, SFItems.discFabric,2000, SFItems.memoryAlloy,1500));
             consumePower(360);
             consumeLiquid(SFLiquids.nanoFluid,3.75f);
             unitSort = UnitSorts.strongest;
@@ -9257,7 +9344,9 @@ public class SFBlocks {
             size = 10;
             liquidCapacity = 600;
 
+            //requirements(Category.units, with(Items.titanium,5000, SFItems.tayrAlloy,3000, SFItems.nanoCore,1600, SFItems.memoryAlloy,2500));
             category = Category.units;
+
             buildVisibility = BuildVisibility.sandboxOnly;
 
             consumePower(600);
@@ -9288,6 +9377,7 @@ public class SFBlocks {
             size = 6;
             health = 2000;
 
+            //requirements(Category.units, with(SFItems.siliSteel,500, SFItems.nanoCore,350, SFItems.discFabric,600, SFItems.leipAlloy,200));
             category = Category.units;
             buildVisibility = BuildVisibility.sandboxOnly;
 
