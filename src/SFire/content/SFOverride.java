@@ -306,6 +306,7 @@ public class SFOverride {
         ((ItemTurret) Blocks.cyclone).ammoTypes.get(Items.surgeAlloy).lifetime = 52;
         ((ItemTurret) Blocks.cyclone).ammoTypes.putAll(
                 SFItems.siliSteel, new FlakBulletType(4f, 8){{
+                    lifetime = 56;
                     shootEffect = Fx.shootBig;
                     ammoMultiplier = 3f;
                     splashDamage = 23f;
@@ -320,6 +321,7 @@ public class SFOverride {
                     despawnEffect = Fx.hitBulletColor;
                 }},
                 SFItems.clusBomb, new FlakBulletType(4f, 8){{
+                    lifetime = 54;
                     shootEffect = Fx.shootBig;
                     ammoMultiplier = 6f;
                     splashDamage = 35f;
@@ -408,8 +410,8 @@ public class SFOverride {
                     height = 23f;
                     shootEffect = Fx.shootBig;
                     pierceCap = 3;
-                    pierceArmor = true;
                     pierceBuilding = true;
+                    armorMultiplier = 0.5f;
                     knockback = 0.7f;
                     hitEffect = Fx.hitBulletBig;
 
@@ -422,6 +424,7 @@ public class SFOverride {
                     width = 15f;
                     height = 21f;
                     knockback = 0.2f;
+                    armorMultiplier = 1.25f;
                     status = SFStatusEffects.magnStrif;
                     statusDuration = 12;
                     shootEffect = Fx.shootBig;

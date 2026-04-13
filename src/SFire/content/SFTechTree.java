@@ -91,12 +91,12 @@ public class SFTechTree {
 
         //turrets
         addToNode(arc, () -> {
-            node(gaosi);//改动
+            node(gaosi);
             node(bingfengbao);
-            node(xianqu, () -> node(liebao, () -> node(qingning)));//改动
+            node(xianqu, () -> node(liebao, () -> node(qingning)));
         });
         addToNode(hail, () -> {
-            node(huojian, () -> node(changqiang, () -> node(fangtian)));//改动
+            node(huojian, () -> node(changqiang, () -> node(fangtian)));
             node(mengma);
         });
         addToNode(salvo, () -> {
@@ -138,9 +138,8 @@ public class SFTechTree {
             node(clusBlender, () -> node(blastReagentMixer, () -> node(clusMaker)));
         });
         addToNode(cryofluidMixer, () -> {
-            node(cryoCentrifuge, () -> node(galliumSupercooler));
-            node(nanoActivator, () -> node(nanoMixer)//改动
-            );
+            node(galliumSupercooler, () -> node(largeMelter));
+            node(cryoCentrifuge, () ->node(nanoActivator, () -> node(nanoMixer)));
         });
         addToNode(plastaniumCompressor, () -> node(plasMultiCompresser));
         addToNode(surgeSmelter, () -> {
@@ -159,7 +158,7 @@ public class SFTechTree {
             node(nitrPrecipitator);
         });
         addToNode(kiln, () -> {
-            node(airCollector, () -> node(lensAtomizer));
+            node(airCollector, () -> node(lensAtomizer, () -> node(memoryLocator)));
             node(nitrateMixer, () -> node(airCooler));
             node(fractionator);
         });
@@ -177,6 +176,8 @@ public class SFTechTree {
             node(tayriumSlelter, () -> node(leippiumSmelter));
             node(tayriumCrucible, () -> node(leippiumCrucible));
         });
+
+        addToNode(pulverizer, () -> node(rareCraft,()-> node(fermCraft)));
 
         //wall + defense
         addToNode(thoriumWallLarge, () -> node(expWall, () -> node(expWallLarge)));

@@ -20,12 +20,12 @@ public class SFireMod extends Mod {
 
     @Override
     public void init() {
-        BaseDialog dialog = new BaseDialog("饱和火力mod加载");
+       /* BaseDialog dialog = new BaseDialog("饱和火力mod加载");
         Log.info("Saturation Firepower【饱和火力】 has loaded");
         dialog.cont.add("当前版本4.0.2").row();
         dialog.cont.image(Core.atlas.find("sfire-mod-gked")).pad(20f).row();
         dialog.cont.button("OK", dialog::hide).size(150f, 50f);
-        dialog.show();
+        dialog.show();*/
         TechFix.init();
     }
 

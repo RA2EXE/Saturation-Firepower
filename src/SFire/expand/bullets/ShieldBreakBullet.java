@@ -36,7 +36,7 @@ public class ShieldBreakBullet extends BasicBulletType {
             if(shield*shieldDamagePercent > damage){
                 /*shield -= shield*shieldDamagePercent;
                 health += shield;*/
-                h.damage(shield*shieldDamagePercent);
+                h.damage(shield * shieldDamagePercent);
                 shbreakEffect.at(entity.x(), entity.y());
                 Effect.shake(hitShake, hitShake, b);
             }else{
