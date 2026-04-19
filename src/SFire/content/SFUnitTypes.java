@@ -7453,7 +7453,6 @@ public class SFUnitTypes {
                 ejectEffect = Fx.casing3Double;
                 shoot = new ShootAlternate(16);
                 bullet = new ShieldBreakBullet(6, 85) {{
-                    shieldDamagePercent = 2;
                     //shieldDamageMultiplier = 3f;
                     width = 9;
                     height = 12;

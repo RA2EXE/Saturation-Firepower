@@ -18,10 +18,10 @@ public class SFSectorPresets {
             addStartingItems = true;
             
         }};
-        centerCore = new SectorPreset("centerCore", tiberia, 125){{
+        /*centerCore = new SectorPreset("centerCore", tiberia, 125){{
             difficulty = 2;
             addStartingItems = true;
             captureWave = 60;
-        }};
+        }};*/
     }
 }

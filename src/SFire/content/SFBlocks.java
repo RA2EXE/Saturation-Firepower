@@ -2001,15 +2001,16 @@ public class SFBlocks {
         int largeHealth = 4;
         steelWall = new Wall("steel-wall") {{
             size = 1;
-
+            buildCostMultiplier = 0.8f;
             requirements(Category.defense, with(Items.lead, 6, SFItems.waveSteel, 6));
-            health = 700;
+            health = 650;
             armor = 12;
         }};
         steelWallLarge = new Wall("steel-wall-large") {{
             size = 2;
+            buildCostMultiplier = 0.8f;
             requirements(Category.defense, ItemStack.mult(steelWall.requirements, 4));
-            health = 700 * largeHealth;
+            health = 650 * largeHealth;
             armor = 12;
         }};
         influxWall = new Wall("influx-wall") {{
@@ -3405,7 +3406,7 @@ public class SFBlocks {
                     statusDuration = 10f;
                     hittable = false;
                     buildingDamageMultiplier = 0.25f;
-                    armorMultiplier = -1.3f;
+                    armorMultiplier = -0.25f;
                 }};
                 chargeEffect = new MultiEffect(
                         new ParticleEffect() {{
@@ -4007,22 +4008,22 @@ public class SFBlocks {
         woliu = new LiquidTurret("woliu") {{
             size = 3;
             health = 1900;
-            recoil = 1f;
-            recoilTime = 60;
+            recoil = 1.5f;
+            recoilTime = 90;
             reload = 6;
             shoot = new ShootHelix(3,1.2f){{shots=3;shotDelay=1.5f;}};
             velocityRnd = 0.1f;
-            requirements(Category.turret, with(Items.lead,300, Items.metaglass,130, Items.thorium,90, SFItems.siliSteel,70));
+            requirements(Category.turret, with(SFItems.waveSteel,150, Items.metaglass,130, Items.thorium,90, SFItems.siliSteel,70));
 
-            velocityRnd = 0.1f;
             inaccuracy = 2f;
             shootCone = 45f;
             liquidCapacity = 150f;
             shootEffect = Fx.shootLiquid;
-            range = 250f;
+            range = 250+30f;
+            consumePower(1f);
             ammo(
                     Liquids.water, new LiquidBulletType(Liquids.water){{
-                        lifetime = 30;
+                        lifetime = 34;
                         speed = 8f;
                         puddleSize = 8f;
                         orbSize = 5;
@@ -4045,7 +4046,7 @@ public class SFBlocks {
                         }};
                     }},
                     Liquids.slag,  new LiquidBulletType(Liquids.slag){{
-                        lifetime = 30;
+                        lifetime = 34;
                         speed = 8f;
                         puddleSize = 8f;
                         orbSize = 5;
@@ -4066,7 +4067,7 @@ public class SFBlocks {
                         }};
                     }},
                     Liquids.cryofluid, new LiquidBulletType(Liquids.cryofluid){{
-                        lifetime = 30;
+                        lifetime = 34;
                         speed = 8f;
                         puddleSize = 8f;
                         orbSize = 5;
@@ -4087,7 +4088,7 @@ public class SFBlocks {
                         }};
                     }},
                     Liquids.oil, new LiquidBulletType(Liquids.oil){{
-                        lifetime = 30;
+                        lifetime = 34;
                         speed = 8f;
                         puddleSize = 8f;
                         orbSize = 5;
@@ -4110,7 +4111,7 @@ public class SFBlocks {
                         }};
                     }},
                     SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.actiNanofluid){{
-                        lifetime = 30;
+                        lifetime = 34;
                         speed = 8f;
                         puddleSize = 8f;
                         orbSize = 5;
@@ -4133,7 +4134,7 @@ public class SFBlocks {
                         }};
                     }},
                     SFLiquids.nitrate, new LiquidBulletType(SFLiquids.nitrate){{
-                        lifetime = 30;
+                        lifetime = 34;
                         speed = 8f;
                         puddleSize = 8f;
                         orbSize = 5;
@@ -4157,7 +4158,7 @@ public class SFBlocks {
                         }};
                     }},
                     SFLiquids.blastReagent, new LiquidBulletType(SFLiquids.blastReagent){{
-                        lifetime = 30;
+                        lifetime = 34;
                         speed = 8f;
                         puddleSize = 8f;
                         orbSize = 5;
@@ -5870,7 +5871,7 @@ public class SFBlocks {
                             statusDuration = 9f;
                             hittable = false;
                             buildingDamageMultiplier = 0.25f;
-                            armorMultiplier = -1.15f;
+                            armorMultiplier = -0.25f;
                         }};
                     }};
                 }};
@@ -6195,7 +6196,7 @@ public class SFBlocks {
                     moveY = 8;
                 }}
             );}};
-            requirements(Category.turret, with(Items.lead,1100, Items.silicon,500, SFItems.crystalGallium,800, SFItems.fermium,600, SFItems.tayrAlloy,600, Items.phaseFabric,600));
+            requirements(Category.turret, with(Items.lead,1100, SFItems.crystalGallium,850, SFItems.fermium,600, SFItems.tayrAlloy,600, Items.phaseFabric,600));
             consumePower(28);
 
             reload = 360;
@@ -6324,7 +6325,7 @@ public class SFBlocks {
                         hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 3;
                         spawnBullets.add(new ShieldBreakBullet(22f, 600) {{
-                            shieldDamagePercent = 6;
+                            shieldDamagePercent = 1.25f;
                             lifetime = 40f;
                             lightning = 2;
                             lightningLength = 6;
@@ -6424,7 +6425,7 @@ public class SFBlocks {
                         backColor = trailColor = Pal.blastAmmoBack;
                         frontColor = hitColor = Pal.blastAmmoFront;
                         trailChance = 0.008f;
-                        trailEffect = new MultiEffect(Fx.artilleryTrail, Fx.artilleryTrailSmoke);
+                        trailEffect = Fx.artilleryTrailSmoke;
                         hitSound = Sounds.explosion;
                         hitSoundVolume = 5;
                         hitShake = 3;
@@ -6472,13 +6473,13 @@ public class SFBlocks {
                         reloadMultiplier = 1.2f;
                         collidesTiles = false;
                         absorbable = false;
-                        status = StatusEffects.blasted;
 
                         width = height = 15;
                         backColor = hitColor = trailColor = Pal.plastaniumBack;
                         frontColor = Pal.plastaniumFront;
                         trailChance = 0.008f;
-                        trailEffect = new MultiEffect(Fx.artilleryTrail, Fx.artilleryTrailSmoke);
+                        trailEffect = Fx.artilleryTrailSmoke;
+
                         hitSound = Sounds.explosion;
                         hitSoundVolume = 5;
                         hitShake = 3;
@@ -6496,9 +6497,9 @@ public class SFBlocks {
                             waveLife = 10;
                         }};
                         despawnEffect = Fx.bigShockwave;
-                        fragBullets = 9;
-                        fragRandomSpread = 0;
-                        fragSpread = 40;
+                        fragBullets = 16;
+                        fragRandomSpread = 2.5f;
+                        fragSpread = 22.5f;
                         fragBullet = new BasicBulletType(3.5f, 35, "shell") {{
                             despawnEffect = Fx.none;
                             width = 10;
@@ -6534,24 +6535,13 @@ public class SFBlocks {
                         hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 0.8f;
                         hitShake = 3;
-                        hitEffect = new ExplosionEffect(){{
-                            smokes = 8;
-                            smokeRad = splashDamageRadius * 0.75f;
-                            smokeSize = 8;
-                            smokeColor = hitColor;
-                            sparks = 0;
-                            lifetime = 25;
-                            waveColor = hitColor;
-                            waveRad = splashDamageRadius;
-                            waveStroke = 8;
-                            waveLife = 13;
-                        }};
+                        hitEffect = SFFx.TriExplosion(25,4,8,24,4,hitColor);
                         despawnEffect = Fx.bigShockwave;
                         lightColor = Pal.surgeAmmoFront;
                         lightning = 2;
                         lightningLength = 14;
                         lightningLengthRand = 4;
-                        lightningDamage = 15;
+                        lightningDamage = 17;
                         lightningType = new BulletType(0.0001f, 0f){{
                             collidesAir = false;
                             lifetime = Fx.lightning.lifetime;
@@ -6577,7 +6567,7 @@ public class SFBlocks {
                         backColor = trailColor = SFColor.sisteelDark;
                         frontColor = hitColor = SFColor.sisteelLight;
                         trailChance = 0.008f;
-                        trailEffect = new MultiEffect(Fx.artilleryTrail, Fx.artilleryTrailSmoke);
+                        trailEffect = Fx.artilleryTrailSmoke;
                         hitSound = Sounds.explosion;
                         hitSoundVolume = 5;
                         hitShake = 3;
@@ -6633,16 +6623,16 @@ public class SFBlocks {
                         backColor = trailColor = SFColor.clusRedDark;
                         frontColor = hitColor = SFColor.clusRed;
                         trailChance = 0.008f;
-                        trailEffect = new MultiEffect(Fx.artilleryTrail, Fx.artilleryTrailSmoke);
+                        trailEffect = Fx.artilleryTrailSmoke;
                         hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 0.8f;
                         hitShake = 4;
                         hitEffect = new ExplosionEffect(){{
-                            smokes = 12;
+                            smokes = 6;
                             smokeRad = splashDamageRadius * 0.75f;
                             smokeSize = 12;
                             smokeColor = hitColor.cpy().a(0.8f);
-                            sparks = 15;
+                            sparks = 8;
                             sparkRad = splashDamageRadius + 35;
                             sparkLen = 16;
                             sparkStroke = 1.5f;
@@ -6650,8 +6640,8 @@ public class SFBlocks {
                             lifetime = 25;
                             waveColor = hitColor;
                             waveRad = splashDamageRadius;
-                            waveStroke = 6;
-                            waveLife = 10;
+                            waveStroke = 9;
+                            waveLife = 15;
                         }};
                         despawnEffect = Fx.bigShockwave;
                         fragBullets = 10;
@@ -6674,14 +6664,14 @@ public class SFBlocks {
                             backColor = trailColor = SFColor.clusRedDark;
                             frontColor = hitColor = SFColor.clusRed;
                             hitEffect = new ExplosionEffect(){{
-                                smokes = 5;
+                                smokes = 4;
                                 smokeRad = splashDamageRadius * 0.75f;
-                                smokeSize = 9;
+                                smokeSize = 6;
                                 smokeColor = hitColor.cpy().a(0.8f);
-                                sparks = 10;
+                                sparks = 9;
                                 sparkRad = splashDamageRadius + 35;
                                 sparkLen = 8;
-                                sparkStroke = 1.5f;
+                                sparkStroke = 1f;
                                 sparkColor = Pal.bulletYellow;
                                 lifetime = 25;
                                 waveColor = hitColor;
@@ -6766,8 +6756,8 @@ public class SFBlocks {
                         lifetime = 38f;
                         ammoMultiplier = 3;
                         reloadMultiplier = 1.75f;
-                        shieldDamageMultiplier = 1.05f;
-                        shieldDamagePercent = 0.05f;
+                        shieldDamageMultiplier = 2f;
+                        shieldDamagePercent = 0.1f;
 
                         width = height = 18;
                         frontColor = Color.white;
@@ -6818,7 +6808,8 @@ public class SFBlocks {
                         fragSpread = 6;
                         fragBullet = new ShieldBreakBullet(11, 10, "large-orb") {{
                             lifetime = 10f;
-                            shieldDamageMultiplier = 1.02f;
+                            shieldDamageMultiplier = 1.05f;
+                            shieldDamagePercent = 0.05f;
                             pierce = true;
                             pierceCap = 2;
 
@@ -7596,6 +7587,111 @@ public class SFBlocks {
             ammoPerShot = 40;
             maxAmmo = 45;
             ammo(
+                    SFItems.clusBomb, new BasicBulletType(8,250,"missile-large"){{
+                        lifetime = 100;
+                        scaleLife = true;
+
+                        splashDamage = 150;
+                        splashDamageRadius = 100f;
+                        scaledSplashDamage = true;
+                        status = StatusEffects.blasted;
+                        ammoMultiplier = 1;
+                        smokeEffect = new ParticleEffect(){{
+                            particles = 10;
+                            sizeFrom = 10;
+                            lifetime = 80;
+                            interp = Interp.pow10Out;
+                            sizeInterp = Interp.pow5In;
+                            colorFrom = SFColor.clusRed;
+                            colorTo = SFColor.clusRedDark;
+                            cone = 15;
+                        }};
+
+                        width = 32;
+                        height = 40;
+                        shrinkY = 0f;
+                        backColor = trailColor = SFColor.clusRedDark;
+                        frontColor = hitColor = SFColor.clusRed;
+                        trailWidth = 6;
+                        trailLength = 25;
+                        trailInterval = 5f;
+                        trailEffect = new Effect(50, e -> {
+                            color(e.color);
+                            rand.setSeed(e.id);
+                            for(int i = 0; i < 18; i++){
+                                float fin = e.fin() / rand.random(0.5f, 1f), fout = 1f - fin, angle = rand.random(360f), len = rand.random(0.5f, 1f);
+
+                                if(fin <= 1f){
+                                    Tmp.v1.trns(angle, fin * 35f * len);
+
+                                    alpha((0.5f - Math.abs(fin - 0.5f)) * 2f);
+                                    Fill.circle(e.x + Tmp.v1.x, e.y + Tmp.v1.y, 4f + fout * 4f);
+                                }
+                            }
+                        });
+                        hitEffect = new MultiEffect(
+                                new ExplosionEffect(){{
+                                    sparks = 0;
+                                    smokes = 18;
+                                    smokeSize = 10;
+                                    smokeRad = splashDamageRadius * 0.85f;
+                                    lifetime = 55f;
+                                    smokeColor = SFColor.smoke;
+                                    waveLife = 30;
+                                    waveRad = splashDamageRadius * 2;
+                                    waveStroke = 20;
+                                    waveColor = Pal.bulletYellowBack;
+                                }},
+                                new ParticleEffect(){{
+                                    line = true;
+                                    lifetime = 22;
+                                    lenFrom = 9;
+                                    particles = 32;
+                                    baseLength = 20;
+                                    length = splashDamageRadius * 1.35f;
+                                    colorTo = Pal.bulletYellowBack;
+                                }}
+                        );
+                        hitShake = 8;
+                        hitSound = Sounds.explosionTitan;
+                        hitSoundVolume = 2;
+
+                        fragVelocityMax = 1.1f;
+                        fragVelocityMin = 0.9f;
+                        fragLifeMin = 0.3f;
+                        fragBullets = 60;
+                        fragBullet = new BasicBulletType(6,30,"shell"){{
+                            lifetime = 40;
+                            splashDamage = 285;
+                            splashDamageRadius = 80;
+                            scaledSplashDamage = true;
+                            status = StatusEffects.blasted;
+
+                            width = height = 16;
+                            backColor = trailColor = SFColor.clusRedDark;
+                            frontColor = hitColor = SFColor.clusRed;
+                            trailWidth = 4;
+                            trailLength = 10;
+                            hitEffect = new ExplosionEffect(){{
+                                smokes = 20;
+                                smokeRad = splashDamageRadius * 0.75f;
+                                smokeSize = 7;
+                                smokeColor = hitColor.cpy().a(0.8f);
+                                sparks = 11;
+                                sparkRad = splashDamageRadius + 35;
+                                sparkLen = 18;
+                                sparkStroke = 2f;
+                                sparkColor = Pal.bulletYellow;
+                                lifetime = 35;
+                                waveColor = Pal.bulletYellowBack;
+                                waveRad = splashDamageRadius;
+                                waveStroke = 8;
+                                waveLife = 20;
+                            }};
+                            hitSound = Sounds.explosion;
+                            hitShake = 5;
+                        }};
+                    }},
                     SFItems.tayrAlloy, new BasicBulletType(10, 400,"sfire-mod-star-bullet"){{
                         lifetime = 32.5f *2;
                         splashDamage = 1800;
@@ -7629,22 +7725,30 @@ public class SFBlocks {
                         hitSound = SFSounds.hugeExplosion;
                         hitShake = 20;
                         hitSize = 50;
-                        hitEffect = new ExplosionEffect(){{
-                            smokes = 80;
-                            smokeSize = 50;
-                            smokeRad = 165;
-                            smokeColor =  hitColor.cpy().a(0.6f);
-                            sparkColor = hitColor;
-                            sparks = 92;
-                            sparkStroke = 8;
-                            sparkLen = 45;
-                            sparkRad = 253;
-                            lifetime = 35;
-                            waveStroke = 8;
-                            waveColor = hitColor;
-                            waveRad = 240;
-                            waveLife = 15;
-                        }};
+                        hitEffect = new MultiEffect(
+                                new ExplosionEffect(){{
+                                    smokes = 0;
+                                    sparkColor = hitColor;
+                                    sparks = 92;
+                                    sparkStroke = 8;
+                                    sparkLen = 45;
+                                    sparkRad = 253;
+                                    lifetime = 35;
+                                    waveStroke = 8;
+                                    waveColor = hitColor;
+                                    waveRad = 240;
+                                    waveLife = 15;
+                                }},
+                                new ParticleEffect(){{
+                                    particles = 50;
+                                    lifetime = 95;
+                                    sizeFrom = 35;
+                                    colorFrom = SFColor.tayrDark;
+                                    colorTo = SFColor.tayrLight.cpy().a(0.5f);
+                                    sizeInterp = Interp.pow2In;
+                                    length = 250;
+                                }}
+                                );
                         despawnEffect = new WaveEffect(){{
                             lifetime = 90;
                             sizeFrom = 20;
@@ -7700,20 +7804,20 @@ public class SFBlocks {
                                 smokes = 6;
                                 smokeSize = 30;
                                 smokeRad = 133;
-                                smokeColor = hitColor.cpy().a(0.1f);
+                                smokeColor = hitColor.cpy().a(0.6f);
                                 sparks = 0;
                                 lifetime = 35;
-                                waveStroke = 4;
+                                waveStroke = 15;
                                 waveColor = hitColor;
                                 waveRad = 70;
-                                waveLife = 12;
+                                waveLife = 18;
                             }};
-                            despawnEffect = SFFx.TriExplosion(22,5,25,85,30,hitColor);
+                            despawnEffect = SFFx.TriExplosion(22,5,25,105,5,hitColor);
                         }};
                     }},
                     SFItems.discFabric, new PowerupBullet(8,2250,"sfire-mod-arrow-bullet"){{
                         damageUp = 0.5f;
-                        maxDamageMultiplier = 7;
+                        maxDamageMultiplier = -1;
                         knockback = 80;
                         status = SFStatusEffects.breakdown;
                         statusDuration = 180;
@@ -7721,6 +7825,7 @@ public class SFBlocks {
                         pierceBuilding = true;
                         shieldDamageMultiplier = 15f;
                         ammoMultiplier = 1;
+                        reloadMultiplier = 1.75f;
                         lifetime = 33;
                         drag = -0.06f;
 
@@ -9445,7 +9550,7 @@ public class SFBlocks {
         specFactory = new UnitFactory("special-factory") {{
             health = 3000;
             size = 5;
-            requirements(Category.units, with(Items.thorium, 360, Items.plastanium, 100, SFItems.siliSteel, 400, SFItems.nanoCore, 200));
+            requirements(Category.units, with(Items.thorium, 360, Items.plastanium, 100, Items.silicon, 500, SFItems.waveSteel, 300));
             hasLiquids = true;
             liquidCapacity = 60;
             consumePower(8.5f);
@@ -9490,10 +9595,10 @@ public class SFBlocks {
 
             consumePower(30*2f);
             consumeItems(with(Items.silicon, 1300, SFItems.waveSteel, 800, SFItems.tayrAlloy, 600, SFItems.discFabric, 550));
-            consumeLiquid(Liquids.cryofluid, 4.8f);
+            consumeLiquid(SFLiquids.nanoFluid, 200f / 60f);
         }};
         nanoUnitRegener = new RepairTower("nano-unit-regener") {{
-            requirements(Category.units, with(Items.metaglass,300, Items.plastanium,400,Items.surgeAlloy,300,SFItems.nanoCore,400));
+            requirements(Category.units, with(Items.metaglass,300, Items.plastanium,400, SFItems.waveSteel,400, Items.surgeAlloy,300,SFItems.nanoCore,400));
             size = 4;
             health = 1200;
             liquidCapacity = 128f;

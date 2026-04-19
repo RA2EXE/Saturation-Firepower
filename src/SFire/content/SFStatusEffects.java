@@ -29,7 +29,7 @@ public class SFStatusEffects {
             color = Pal.heal;
             damage = -4f;
             healthMultiplier = 1.15f;
-            effectChance = 0.3f;
+            effectChance = 0.08f;
             effect = new ParticleEffect() {{
                 particles = 1;
                 spin = 6;
@@ -49,7 +49,7 @@ public class SFStatusEffects {
             color = Pal.heal;
             damage = -18f;
             speedMultiplier = 0.92f;
-            effectChance = 1f;
+            effectChance = 0.3f;
             effect = new ParticleEffect() {{
                 particles = 1;
                 line = true;
