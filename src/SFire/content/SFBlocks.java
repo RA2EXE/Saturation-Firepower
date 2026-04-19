@@ -5343,7 +5343,7 @@ public class SFBlocks {
                         trailWidth = 2;
                         trailLength = 40;
 
-                        hitShake = 5;
+                        hitShake = 6;
                         hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 2;
                         hitEffect = new MultiEffect(
@@ -5370,6 +5370,74 @@ public class SFBlocks {
                                 }}
                         );
                         despawnEffect = Fx.flakExplosionBig;
+                    }},
+                    SFItems.clusBomb, new FlakBulletType(8, 30){{
+                        rangeChange = 80;
+                        lifetime = 100f;
+                        splashDamageRadius = 45;
+                        splashDamage = 80f;
+                        explodeRange = 80;
+                        status = StatusEffects.blasted;
+                        homingRange = 80;
+                        homingDelay = 15;
+                        homingPower = 0.08f;
+                        ammoMultiplier = 8;
+
+                        width = 15;
+                        height = 55;
+                        shrinkY = 0;
+                        sprite = "sfire-mod-missile3";
+                        frontColor = SFColor.missileGray;
+                        backColor = SFColor.clusRedDark;
+                        trailColor = backColor.cpy().a(0.6f);
+                        trailWidth = 2;
+                        trailLength = 40;
+
+                        hitShake = 2;
+                        hitSound = SFSounds.explosionbig;
+                        hitSoundVolume = 2;
+                        hitEffect = new MultiEffect(
+                                new ExplosionEffect(){{
+                                    sparks = 0;
+                                    smokes = 18;
+                                    smokeSize = 10;
+                                    smokeRad = splashDamageRadius*0.55f;
+                                    lifetime = 35f;
+                                    smokeColor = SFColor.smoke;
+                                    waveLife = 15;
+                                    waveRad = splashDamageRadius;
+                                    waveStroke = 8;
+                                    waveColor = Pal.bulletYellowBack;
+                                }},
+                                new ParticleEffect(){{
+                                    line = true;
+                                    lifetime = 22;
+                                    lenFrom = 9;
+                                    particles = 32;
+                                    baseLength = 20;
+                                    length = splashDamageRadius*1.25f;
+                                    colorTo = Pal.bulletYellowBack;
+                                }}
+                        );
+                        despawnEffect = Fx.flakExplosionBig;
+                        fragBullets = 3;
+                        fragLifeMin = 0.3f;
+                        fragRandomSpread = 60;
+                        fragBullet = new BasicBulletType(4f,15){{
+                            splashDamage = 120;
+                            splashDamageRadius = 50;
+                            lifetime = 20;
+                            height = 12;
+                            width = 10;
+                            hitShake = 3;
+                            shrinkY = 1;
+                            hitEffect = Fx.flakExplosionBig;
+                            hitSound = Sounds.explosion;
+                            hitSoundVolume = 3;
+                            backColor = SFColor.clusRedDark;
+                            frontColor = SFColor.clusRed;
+                            despawnEffect = Fx.none;
+                        }};
                     }},
                     Items.surgeAlloy, new FlakBulletType(10, 60){{
                         lifetime = 80f;
@@ -7596,16 +7664,6 @@ public class SFBlocks {
                         scaledSplashDamage = true;
                         status = StatusEffects.blasted;
                         ammoMultiplier = 1;
-                        smokeEffect = new ParticleEffect(){{
-                            particles = 10;
-                            sizeFrom = 10;
-                            lifetime = 80;
-                            interp = Interp.pow10Out;
-                            sizeInterp = Interp.pow5In;
-                            colorFrom = SFColor.clusRed;
-                            colorTo = SFColor.clusRedDark;
-                            cone = 15;
-                        }};
 
                         width = 32;
                         height = 40;
@@ -7629,6 +7687,8 @@ public class SFBlocks {
                                 }
                             }
                         });
+                        shootEffect = Fx.smokeCloud;
+                        smokeEffect = trailEffect;
                         hitEffect = new MultiEffect(
                                 new ExplosionEffect(){{
                                     sparks = 0;
@@ -7652,7 +7712,7 @@ public class SFBlocks {
                                     colorTo = Pal.bulletYellowBack;
                                 }}
                         );
-                        hitShake = 8;
+                        hitShake = 18;
                         hitSound = Sounds.explosionTitan;
                         hitSoundVolume = 2;
 
@@ -7688,8 +7748,8 @@ public class SFBlocks {
                                 waveStroke = 8;
                                 waveLife = 20;
                             }};
-                            hitSound = Sounds.explosion;
-                            hitShake = 5;
+                            hitSound = Sounds.explosionReactor;
+                            hitShake = 9;
                         }};
                     }},
                     SFItems.tayrAlloy, new BasicBulletType(10, 400,"sfire-mod-star-bullet"){{
@@ -7741,7 +7801,7 @@ public class SFBlocks {
                                 }},
                                 new ParticleEffect(){{
                                     particles = 50;
-                                    lifetime = 95;
+                                    lifetime = 95*0.8f;
                                     sizeFrom = 35;
                                     colorFrom = SFColor.tayrDark;
                                     colorTo = SFColor.tayrLight.cpy().a(0.5f);
@@ -7750,7 +7810,7 @@ public class SFBlocks {
                                 }}
                                 );
                         despawnEffect = new WaveEffect(){{
-                            lifetime = 90;
+                            lifetime = 90 * 0.8f;
                             sizeFrom = 20;
                             sizeTo = 240;
                             colorFrom = SFColor.tayrDark;
@@ -7782,7 +7842,7 @@ public class SFBlocks {
                         fragBullets = 35;
                         fragLifeMin = 0.3f;
                         fragBullet = new BasicBulletType(2.2f,50,"circle-bullet"){{
-                            lifetime = 90;
+                            lifetime = 90 * 0.8f;
                             splashDamage = 100;
                             splashDamageRadius = 60;
                             scaledSplashDamage = true;
