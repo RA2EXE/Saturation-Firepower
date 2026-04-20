@@ -5376,12 +5376,11 @@ public class SFBlocks {
                         lifetime = 100f;
                         splashDamageRadius = 45;
                         splashDamage = 80f;
-                        explodeRange = 80;
                         status = StatusEffects.blasted;
                         homingRange = 80;
                         homingDelay = 15;
                         homingPower = 0.08f;
-                        ammoMultiplier = 8;
+                        ammoMultiplier = 4;
 
                         width = 15;
                         height = 55;
@@ -5407,7 +5406,7 @@ public class SFBlocks {
                                     waveLife = 15;
                                     waveRad = splashDamageRadius;
                                     waveStroke = 8;
-                                    waveColor = Pal.bulletYellowBack;
+                                    waveColor = SFColor.clusRedDark;
                                 }},
                                 new ParticleEffect(){{
                                     line = true;
@@ -5426,6 +5425,7 @@ public class SFBlocks {
                         fragBullet = new BasicBulletType(4f,15){{
                             splashDamage = 120;
                             splashDamageRadius = 50;
+                            scaledSplashDamage = true;
                             lifetime = 20;
                             height = 12;
                             width = 10;
@@ -7794,10 +7794,10 @@ public class SFBlocks {
                                     sparkLen = 45;
                                     sparkRad = 253;
                                     lifetime = 35;
-                                    waveStroke = 8;
+                                    waveStroke = 19;
                                     waveColor = hitColor;
                                     waveRad = 240;
-                                    waveLife = 15;
+                                    waveLife = 20;
                                 }},
                                 new ParticleEffect(){{
                                     particles = 50;
@@ -7808,7 +7808,7 @@ public class SFBlocks {
                                     sizeInterp = Interp.pow2In;
                                     length = 250;
                                 }}
-                                );
+                        );
                         despawnEffect = new WaveEffect(){{
                             lifetime = 90 * 0.8f;
                             sizeFrom = 20;
