@@ -6,8 +6,8 @@ repo: "RA2EXE/Saturation-Firepower"
 
 main: "SFire.SFireMod"
 
-description: "Hell time, once for all"
+description: [red]"Hell time, once for all[]\n\nThis mod adds new items, buildings, units, and turrets, and has a planet for you to explore.\nMore campaign maps WIP.\nWarning: This mod makes certain modifications to the original game content to accommodate the mod's operation."
 
-version: 4.0.3-beta-2
+version: 4.0.3
 minGameVersion: 157
 java: true

@@ -5422,7 +5422,7 @@ public class SFBlocks {
                         fragBullets = 3;
                         fragLifeMin = 0.3f;
                         fragRandomSpread = 60;
-                        fragBullet = new BasicBulletType(4f,15){{
+                        fragBullet = new FlakBulletType(4f,15){{
                             splashDamage = 120;
                             splashDamageRadius = 50;
                             scaledSplashDamage = true;
