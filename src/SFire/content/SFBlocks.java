@@ -5431,7 +5431,22 @@ public class SFBlocks {
                             width = 10;
                             hitShake = 3;
                             shrinkY = 1;
-                            hitEffect = Fx.flakExplosionBig;
+                            hitEffect = new ExplosionEffect(){{
+                                waveLife = 18;
+                                waveRad = splashDamageRadius+8;
+                                waveStroke = 6;
+                                waveColor = SFColor.clusRedDark;
+                                sparks = 12;
+                                sparkLen = 10;
+                                sparkStroke = 1f;
+                                sparkColor = Pal.bulletYellow;
+                                sparkRad = splashDamageRadius*1.25f;
+                                lifetime = 35;
+                                smokes = 12;
+                                smokeColor = SFColor.smoke;
+                                smokeSize = 5;
+                                smokeRad = splashDamageRadius*0.75f;
+                            }};
                             hitSound = Sounds.explosion;
                             hitSoundVolume = 3;
                             backColor = SFColor.clusRedDark;

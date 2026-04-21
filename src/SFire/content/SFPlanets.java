@@ -1,6 +1,7 @@
 package SFire.content;
 
 import arc.graphics.Color;
+import mindustry.content.Blocks;
 import mindustry.content.Planets;
 import mindustry.game.Team;
 import mindustry.graphics.Pal;
@@ -58,13 +59,12 @@ public class SFPlanets {
                 r.placeRangeCheck = false;
                 r.showSpawns = false;
                 r.coreDestroyClear = true;
+                r.bannedBlocks.addAll(Blocks.overdriveDome,Blocks.overdriveProjector,Blocks.smallHeatRedirector);
             };
 
             allowCampaignRules = false;
             campaignRuleDefaults.showSpawns = true;
             campaignRuleDefaults.rtsAI = true;
-
-
 
 
         }};
