@@ -3,12 +3,14 @@ package SFire.expand.blocks;
 
 import arc.Core;
 import arc.math.Mathf;
+import arc.struct.EnumSet;
 import arc.util.Strings;
 import mindustry.graphics.Pal;
 import mindustry.type.Item;
 import mindustry.ui.Bar;
 import mindustry.world.blocks.defense.OverdriveProjector;
 import mindustry.world.blocks.production.Drill;
+import mindustry.world.meta.BlockFlag;
 import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatCat;
 import mindustry.world.meta.StatValue;
@@ -20,6 +22,7 @@ public class PressureDrill extends Drill {
 
     public PressureDrill(String name) {
         super(name);
+        flags = EnumSet.of(BlockFlag.drill);
     }
 
     @Override
@@ -29,7 +32,26 @@ public class PressureDrill extends Drill {
         stats.add(new Stat("minpowerneed", StatCat.function), (int)(minPowerNeed*100) + "%");
     }
 
+    @Override
+    public void setBars(){
+        super.setBars();
+        addBar("drillspeed", (PressureDrillBuild e) -> new Bar(
+                () -> Core.bundle.format("bar.drillspeed", Strings.fixed(e.lastDrillSpeed * 60 * e.timeScale(), 2)),
+                () -> Pal.ammo,
+                () -> e.warmup
+        ));
+
+        addBar("boost", (PressureDrillBuild e) -> new Bar(
+                () -> Core.bundle.format("bar.boost",Strings.fixed((e.finalFactor*e.finalFactor-1) * 100,0)),
+                () -> Pal.accent,
+                () -> (e.finalFactor*e.finalFactor-1) / (maxFactor-1)
+               // () -> ((e.finalFactor>1 ? e.finalFactor*e.finalFactor : 0) -1) / (maxFactor-1)
+        ));
+
+    }
+
     public class PressureDrillBuild extends Drill.DrillBuild {
+        public float finalFactor=1;
 
         public PressureDrillBuild(){
             super();
@@ -53,7 +75,7 @@ public class PressureDrill extends Drill {
             if(items.total() < itemCapacity && dominantItems > 0 && efficiency > 0){
 
                 float powerFactor = power.graph.getPowerBalance() / (minPowerNeed * consPower.requestedPower(this));
-                float finalFactor = (float) Math.sqrt(Math.min(powerFactor > 1 ? powerFactor : 1, maxFactor));
+                finalFactor = (float) Math.sqrt(Math.min(Math.max(1,powerFactor), maxFactor));
 
                 float speed = Mathf.lerp(1f, liquidBoostIntensity, optionalEfficiency) * efficiency * finalFactor;
                 //float speed = Mathf.lerp(1f, liquidBoostIntensity, optionalEfficiency) * efficiency;

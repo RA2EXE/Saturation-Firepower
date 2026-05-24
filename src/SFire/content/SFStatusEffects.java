@@ -2,15 +2,23 @@ package SFire.content;
 
 import arc.graphics.*;
 import arc.math.Mathf;
+import arc.util.Time;
+import arc.util.Tmp;
+import mindustry.Vars;
 import mindustry.content.Fx;
 import mindustry.content.*;
+import mindustry.entities.Effect;
 import mindustry.entities.effect.WrapEffect;
+import mindustry.entities.units.StatusEntry;
+import mindustry.gen.Unit;
 import mindustry.graphics.*;
 import arc.math.Interp;
 import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.entities.effect.WaveEffect;
 import mindustry.type.StatusEffect;
+import mindustry.world.meta.Stat;
+import mindustry.world.meta.StatCat;
 
 import static arc.graphics.g2d.Draw.color;
 import static arc.math.Angles.randLenVectors;
@@ -208,7 +216,6 @@ public class SFStatusEffects {
             damage = 1.88f;
             speedMultiplier = 0.98f;
             healthMultiplier = 0.95f;
-            effectChance = 0.6f;
             effect = new ParticleEffect() {{
                 particles = 3;
                 baseLength = 0;
@@ -221,7 +228,31 @@ public class SFStatusEffects {
                 colorFrom = Color.valueOf("a0b46e");
                 colorTo = Color.valueOf("a0b46e00");
             }};
-        }};
+        }
+            public float armorAcidDown = 1;
+            @Override
+            public void update(Unit unit, StatusEntry entry){
+                super.update(unit, entry);
+                if(unit.armor > 0){
+                    effectChance = 0.05f;
+                    unit.armor = Mathf.approachDelta(unit.armor, 0, armorAcidDown/60f);
+                    if (Mathf.equal(unit.armor, 0, 0.1f)) {
+                        unit.armor = 0;
+                    }
+                }else {
+                    effectChance = 0.6f;
+                    //额外300%增伤
+                    unit.damageContinuous(3 * damage);
+                    effectChance = 1f;
+                }
+
+            }
+            @Override
+            public void setStats(){
+                super.setStats();
+                stats.add(new Stat("armoraciddown", StatCat.function), armorAcidDown);
+            }
+        };
         inBreak = new StatusEffect("inside-break") {{
             color = Color.valueOf("666484");
             healthMultiplier = 0.93f;

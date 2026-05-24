@@ -941,6 +941,7 @@ public class SFUnitTypes {
             );
 
             weapons.add(new Weapon(name("pain-gun")) {{
+                layerOffset = 0.001f;
                 rotate = true;
                 rotateSpeed = 3.6f;
                 mirror = false;
@@ -1077,6 +1078,7 @@ public class SFUnitTypes {
                 shootStatusDuration = 219.12f;
                 cooldownTime = 130;
                 recoil = 2;
+                layerOffset = 0.001f;
                 parts.add(new RegionPart("-barrel") {{
                     progress = PartProgress.recoil;
                     under = true;
@@ -1222,18 +1224,30 @@ public class SFUnitTypes {
                 rotateSpeed = 6.3f;
                 x = 0;
                 reload = 98f;
-                shootY = 21;
-                shootX = 14;
                 shootStatus = SFStatusEffects.stormed;
                 shootStatusDuration = 66f;
                 recoil = 0;
                 recoilTime = 80;
-                parts.add(new RegionPart("-barrel") {{
-                    progress = PartProgress.recoil;
-                    under = true;
-                    mirror = false;
-                    moveY = -8f;
-                }});
+                mirror = false;
+                layerOffset = 0.001f;
+
+                shootY = 21;
+                //shootX = 14;
+                shoot = new ShootAlternate(28);
+                recoils = 2;
+                parts.addAll(
+                        new RegionPart("-barrel-l") {{
+                            under = true;
+                            moveY = -8f;
+                            progress = PartProgress.recoil;
+                            recoilIndex = 0;
+                        }},
+                        new RegionPart("-barrel-r") {{
+                            under = true;
+                            moveY = -5.5f;
+                            progress = PartProgress.recoil;
+                            recoilIndex = 1;
+                        }});
                 shootCone = 30;
                 shootSound = Sounds.shootMissileLarge;
                 shake = 3.6f;
@@ -1396,6 +1410,7 @@ public class SFUnitTypes {
                         repairSpeed = 22f;
                         laserColor = SFColor.enemyRedLight;
                         laserTopColor = Color.white;
+                        layerOffset = 0.001f;
                         bullet = new BulletType() {{
                             maxRange = 150f;
                         }};
@@ -1974,6 +1989,7 @@ public class SFUnitTypes {
                 bullet = new RailBulletType() {{
                     damage = 78;
                     length = 330;
+                    hittable = false;
                     pierce = false;
                     pierceDamageFactor = 0.4f;
                     pierceEffect = Fx.none;
@@ -4156,6 +4172,7 @@ public class SFUnitTypes {
                         minWarmup = 0.9f;
                         inaccuracy = 1;
                         bullet = new RailBulletType() {{
+                            hittable = false;
                             length = 22*13;
                             damage = 40;
                             status = SFStatusEffects.breakdown;
@@ -4604,6 +4621,7 @@ public class SFUnitTypes {
                         reload = 6f;
                         shootCone = 5;
                         bullet = new RailBulletType() {{
+                            hittable = false;
                             damage = 12;
                             pierce = false;
                             pointEffectSpace = 4;
@@ -5400,6 +5418,7 @@ public class SFUnitTypes {
                         ejectEffect = Fx.none;
                         shootSound = Sounds.shootLocus;
                         bullet = new RailBulletType() {{
+                            hittable = false;
                             damage = 13;
                             knockback = 0.3f;
                             pierce = false;
@@ -8072,6 +8091,7 @@ public class SFUnitTypes {
                             }});
                         }
                         bullet = new RailBulletType() {{
+                            hittable = false;
                             damage = 32;
                             status = SFStatusEffects.breakdown;
                             statusDuration = 10;

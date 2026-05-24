@@ -3,6 +3,7 @@ package SFire.expand.blocks;
 import arc.graphics.*;
 import arc.graphics.g2d.*;
 import arc.math.Mathf;
+import arc.struct.EnumSet;
 import arc.struct.Seq;
 import mindustry.content.*;
 import mindustry.entities.*;
@@ -19,7 +20,7 @@ import static mindustry.Vars.*;
 
 public class ExplodeWall extends Block {
     public int timerCheck = timers++;
-    public float checkInterval = 8f;
+    public float checkInterval = 10f;
 
     public float range = 60;
     public float expDamage = 300;
@@ -43,6 +44,8 @@ public class ExplodeWall extends Block {
         super(name);
         update = true;
         solid = true;
+        flags = EnumSet.of(BlockFlag.turret);
+        priority = TargetPriority.turret;
 
         destructible = true;
         canOverdrive = false;
@@ -50,7 +53,6 @@ public class ExplodeWall extends Block {
         group = BlockGroup.walls;
         buildCostMultiplier = 4f;
         crushDamageMultiplier = 5f;
-        priority = TargetPriority.wall;
     }
 
     @Override

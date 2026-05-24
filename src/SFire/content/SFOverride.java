@@ -6,29 +6,20 @@ import arc.graphics.g2d.Lines;
 import arc.math.Interp;
 import arc.math.Mathf;
 import mindustry.content.*;
-import mindustry.entities.Effect;
+import mindustry.entities.*;
 import mindustry.entities.bullet.*;
 import mindustry.entities.effect.*;
-import mindustry.entities.part.RegionPart;
-import mindustry.entities.pattern.ShootBarrel;
-import mindustry.entities.pattern.ShootSpread;
+import mindustry.entities.part.*;
+import mindustry.entities.pattern.*;
 import mindustry.gen.Sounds;
-import mindustry.graphics.Drawf;
-import mindustry.graphics.Pal;
-import mindustry.type.Category;
-import mindustry.type.ItemStack;
-import mindustry.type.UnitType;
-import mindustry.type.Weather;
+import mindustry.graphics.*;
+import mindustry.type.*;
 import mindustry.world.blocks.defense.turrets.*;
-import mindustry.world.blocks.power.ConsumeGenerator;
-import mindustry.world.blocks.production.AttributeCrafter;
-import mindustry.world.blocks.production.Drill;
-import mindustry.world.blocks.production.GenericCrafter;
-import mindustry.world.blocks.production.Pump;
-import mindustry.world.blocks.units.Reconstructor;
-import mindustry.world.blocks.units.UnitFactory;
+import mindustry.world.blocks.power.*;
+import mindustry.world.blocks.production.*;
+import mindustry.world.blocks.units.*;
 import mindustry.world.draw.DrawTurret;
-import mindustry.world.meta.Stat;
+import mindustry.content.*;
 
 import static arc.graphics.g2d.Draw.color;
 import static arc.graphics.g2d.Lines.lineAngle;
@@ -696,6 +687,51 @@ public class SFOverride {
                 new UnitType[]{SFUnitTypes.air4, SFUnitTypes.air5},
                 new UnitType[]{SFUnitTypes.naval4, SFUnitTypes.naval5}
         );
+
+        UnitTypes.crawler.weapons.remove(0);
+        UnitTypes.crawler.weapons.add(new Weapon("crawler-weapon"){{
+            shootOnDeath = true;
+            reload = 24f;
+            shootCone = 180f;
+            ejectEffect = Fx.none;
+            shootSound = Sounds.explosionCrawler;
+            shootSoundVolume = 0.4f;
+            x = shootY = 0f;
+            mirror = false;
+            bullet = new BulletType(){{
+                collidesTiles = false;
+                collides = false;
+
+                rangeOverride = 28f;
+                hitEffect = Fx.pulverize;
+                speed = 0f;
+                splashDamageRadius = 50f;
+                instantDisappear = true;
+                splashDamage = 80f;
+                killShooter = true;
+                hittable = false;
+                collidesAir = true;
+                hitEffect = new ExplosionEffect(){{
+                    waveLife = 10;
+                    waveRad = splashDamageRadius;
+                    waveStroke = 8;
+                    waveColor = hitColor;
+                    sparks = 12;
+                    sparkLen = 30;
+                    sparkColor = Pal.bulletYellow;
+                    sparkRad = splashDamageRadius*1.15f;
+                    lifetime = 25;
+                    smokes = 8;
+                    smokeColor = SFColor.smoke;
+                    smokeSize = 8;
+                    smokeRad = splashDamageRadius*0.75f;
+                }};
+            }};
+        }});
+        UnitTypes.flare.weapons.get(0).name = new String("flare-weapon");
+        UnitTypes.horizon.weapons.get(0).name = new String("horizon-weapon");
+        UnitTypes.retusa.weapons.get(2).name = new String("retusa-mine");
+
         //endregion
 
 

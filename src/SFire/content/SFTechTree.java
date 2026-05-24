@@ -195,6 +195,7 @@ public class SFTechTree {
         addToNode(armoredConveyor, () -> node(rearmoredConveyor));
         addToNode(plastaniumConveyor, () -> node(silisteelConveyor));
         addToNode(phaseConveyor, () -> node(discConveyor));
+        addToNode(massDriver, () -> node(discMassDriver));
 
         addToNode(impulsePump, () -> node(tidalPump));
         addToNode(pulseConduit, () -> node(silisteelConduit, () -> node(silesteelBridgeConduit)));

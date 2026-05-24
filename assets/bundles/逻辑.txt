@@ -1,3 +1,8 @@
+
+name:刀哥武器换UI
+unit.dagger.weapons.0.name:retusa-mine
+
+
 [{type:crawler,end:3,scaling:1,shields:333,shieldScaling:333,amount:6,effect:sfire-mod-repair-X},
 {type:atrax,end:11,scaling:4.166667,shields:120,shieldScaling:25,amount:2},
 {type:flare,end:2,scaling:0.6666667,shields:80,shieldScaling:35,amount:2},

@@ -1,6 +1,9 @@
 package SFire.expand.blocks;
 
+import arc.Core;
 import mindustry.game.Team;
+import mindustry.graphics.Pal;
+import mindustry.ui.Bar;
 import mindustry.world.Block;
 import mindustry.world.Tile;
 import mindustry.world.blocks.storage.CoreBlock;
@@ -35,6 +38,16 @@ public class SFCore extends CoreBlock {
     public void setStats(){
         super.setStats();
         stats.add(new Stat("maxcore"), maxNumber);
+    }
+
+    @Override
+    public void setBars(){
+        super.setBars();
+        addBar("lastcorenumber",(CoreBuild e) -> new Bar(
+                () -> Core.bundle.format("bar.lastcorenumber", Math.max(0, maxNumber - e.team.cores().size)),
+                () -> Pal.accent,
+                () -> (float) (maxNumber - e.team.cores().size) / maxNumber
+        ));
     }
 }
 

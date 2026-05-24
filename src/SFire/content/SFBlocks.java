@@ -124,7 +124,7 @@ public class SFBlocks {
 
     finalWeapon1, finalWeapon2,
     defensePlatform1, defensePlatform2, defensePlatform3, defensePlatform4, defensePlatform5, defensePlatform6,
-
+    DUO,
     //units
     terrAssembler, hoveAssembler, payloadConstrustor, specFactory, pentativeReconstrustor,
     nanoUnitRegener
@@ -822,6 +822,7 @@ public class SFBlocks {
             size = 2;
             requirements(Category.crafting, with(SFItems.siliSteel,30, Items.metaglass,50, SFItems.crystalGallium,30));
 
+            itemCapacity = 30;
             hasLiquids = hasPower = true;
             liquidCapacity = 200f;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(), new DrawDefault());
@@ -1251,6 +1252,7 @@ public class SFBlocks {
             outputItem = new ItemStack(SFItems.crystalGallium, 1);
             consumePower(3.5f);
             consumeLiquids(LiquidStack.with(Liquids.slag,0.3f, Liquids.cryofluid, 0.05f));
+            //consumeLiquid(Liquids.slag,0.3f);consumeCoolant(0.05f);
 
             drawer = new DrawMulti(
                     new DrawRegion("-bottom"),
@@ -1721,11 +1723,12 @@ public class SFBlocks {
 
             craftEffect = new WaveEffect() {{
                 lifetime = 120;
-                strokeFrom = 0.8f;
+                strokeFrom = 1.2f;
                 strokeTo = 0;
                 sizeFrom = 0;
                 sizeTo = 24;
                 sides = 4;
+                interp = Interp.pow3Out;
                 colorTo = colorFrom = Color.valueOf("7CF389A8");
             }};
             lightLiquid = SFLiquids.nanoFluid;
@@ -1748,11 +1751,12 @@ public class SFBlocks {
 
             craftEffect = new WaveEffect() {{
                 lifetime = 100;
-                strokeFrom = 1.6f;
+                strokeFrom = 2.4f;
                 strokeTo = 0;
                 sizeFrom = 0;
-                sizeTo = 24;
+                sizeTo = 20;
                 sides = 6;
+                interp = Interp.swingOut;
                 colorTo = colorFrom = Color.valueOf("7CF389A8");
             }};
             lightLiquid = SFLiquids.nanoFluid;
@@ -2041,12 +2045,13 @@ public class SFBlocks {
             size = 1;
             requirements(Category.defense, with(SFItems.waveSteel,2, SFItems.strontium,1, Items.blastCompound,3));
             health = 560;
+            range = 10 * 8;
         }};
         expWallLarge = new ExplodeWall("explosive-armor-large") {{
             size = 2;
             requirements(Category.defense, ItemStack.mult(expWall.requirements, 4));
             health = 560 * largeHealth;
-            range = 60 * 1.5f;
+            range = 10 * 1.5f * 8;
             expDamage = 300*4;
         }};
         discWall = new ShieldWall("discfabric-wall") {{
@@ -3091,6 +3096,7 @@ public class SFBlocks {
             alwaysUnlocked = true;
             itemCapacity = 800;
             unitCapModifier = 3;
+            maxNumber = 7;
         }};
         industryCore = new CoreBlock("industry-core") {{
             size = 6;
@@ -3211,7 +3217,7 @@ public class SFBlocks {
                         hitEffect = Fx.flakExplosion;
                         makeFire = true;
                         status = StatusEffects.burning;
-                        statusDuration = 100;
+                        statusDuration = 60f * 10;
                     }},
                     Items.blastCompound, new MissileBulletType(8, 14 ) {{
                         ammoMultiplier = 4;
@@ -3620,7 +3626,7 @@ public class SFBlocks {
                         reflectable = false;
                         makeFire = true;
                         status = StatusEffects.burning;
-                        statusDuration = 360;
+                        statusDuration = 60f * 10;
                         shootEffect = new Effect(33f, 80f, e -> {
                             color(Pal.lightPyraFlame, Pal.darkPyraFlame, Color.gray, e.fin());
 
@@ -3738,7 +3744,7 @@ public class SFBlocks {
                         collidesTiles = false;
                         hitEffect = Fx.blastExplosion;
                         status = StatusEffects.burning;
-                        statusDuration = 360;
+                        statusDuration = 60f * 12;
                         frontColor = Pal.lightishOrange;
                         backColor = hitColor = trailColor = Pal.lightOrange;
                         makeFire = true;
@@ -3764,7 +3770,8 @@ public class SFBlocks {
                         width = height = 12;
                         collidesTiles = false;
                         hitEffect = Fx.flakExplosionBig;
-                        status = StatusEffects.blasted;
+                        status = StatusEffects.burning;
+                        statusDuration = 480f;
                         backColor = trailColor = SFColor.clusRedDark;
                         frontColor = SFColor.clusRed;
                         ammoMultiplier = 6;
@@ -4207,6 +4214,7 @@ public class SFBlocks {
             ammoPerShot = 10;
             ammo(
                     Liquids.slag, new RailBulletType(){{
+                        hittable = false;
                         ammoMultiplier = 0.2f;
                         displayAmmoMultiplier = false;
                         instantDisappear = true;
@@ -4367,7 +4375,7 @@ public class SFBlocks {
                         splashDamageRadius = 36;
                         homingRange = 80;
                         status = StatusEffects.burning;
-                        statusDuration = 600;
+                        statusDuration = 60f * 10;
 
                         shrinkY = 0;
                         width = 16;
@@ -4484,7 +4492,8 @@ public class SFBlocks {
                         homingRange = 80;
                         reloadMultiplier = 0.75f;
                         ammoMultiplier = 4;
-                        status = StatusEffects.blasted;
+                        status = StatusEffects.burning;
+                        statusDuration = 480f;
                         knockback = 2.6f;
 
                         shrinkY = 0;
@@ -5262,7 +5271,7 @@ public class SFBlocks {
             shoot = new ShootAlternate(18);
             shoot.shots = 2;
             shoot.shotDelay = 12;
-            requirements(Category.turret, with(Items.lead,560, Items.graphite,200, Items.silicon,220, SFItems.waveSteel,200));
+            requirements(Category.turret, with(Items.lead,560, Items.graphite,200, SFItems.siliSteel,240, SFItems.waveSteel,200));
             consumePower(7);
             targetGround = false;
 
@@ -5376,7 +5385,8 @@ public class SFBlocks {
                         lifetime = 100f;
                         splashDamageRadius = 45;
                         splashDamage = 80f;
-                        status = StatusEffects.blasted;
+                        status = StatusEffects.burning;
+                        statusDuration = 480f;
                         homingRange = 80;
                         homingDelay = 15;
                         homingPower = 0.08f;
@@ -5649,7 +5659,7 @@ public class SFBlocks {
                         lifetime = 180;
                         ammoMultiplier = 4;
                         status = StatusEffects.burning;
-                        statusDuration = 360;
+                        statusDuration = 60f * 12;
                         makeFire = true;
 
                         homingDelay = homingRange = 40;
@@ -5657,7 +5667,7 @@ public class SFBlocks {
 
                         height = 60;
                         width = 12;
-                        backColor = trailColor = hitColor =  Pal.lightPyraFlame;
+                        backColor = trailColor = hitColor = Pal.lightPyraFlame;
                         frontColor = SFColor.missileGray;
                         smokeEffect = Fx.shootSmallFlame;
                         hitEffect = Fx.flakExplosionBig;
@@ -5744,7 +5754,7 @@ public class SFBlocks {
                         lifetime = 180;
                         ammoMultiplier = 6;
                         status = StatusEffects.burning;
-                        statusDuration = 60;
+                        statusDuration = 480;
                         makeFire = true;
 
                         homingDelay = 60;
@@ -6374,6 +6384,7 @@ public class SFBlocks {
                         );
                     }},
                     SFItems.discFabric, new RailBulletType(){{
+                        hittable = false;
                         damage = 1200;
                         maxDamageFraction = 0.8f;
                         buildingDamageMultiplier = 0.12f;
@@ -6407,8 +6418,10 @@ public class SFBlocks {
                         pierceEffect = hitEffect = Fx.instHit;
                         hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 3;
-                        spawnBullets.add(new ShieldBreakBullet(22f, 600) {{
-                            shieldDamagePercent = 1.25f;
+                        spawnBullets.add(new PowerupBullet(22f, 600, "bullet") {{
+                            buildingDamageMultiplier = 0.12f;
+                            damageUp = 2;
+                            maxDamageMultiplier = 8;
                             lifetime = 40f;
                             lightning = 2;
                             lightningLength = 6;
@@ -6700,7 +6713,8 @@ public class SFBlocks {
                         ammoMultiplier = 3;
                         collidesTiles = false;
                         absorbable = false;
-                        status = StatusEffects.blasted;
+                        status = StatusEffects.burning;
+                        statusDuration = 480f;
 
                         width = height = 17;
                         backColor = trailColor = SFColor.clusRedDark;
@@ -6915,10 +6929,11 @@ public class SFBlocks {
                             });
                         }};
                     }},
-                    SFItems.discFabric, new PowerupBullet(16,150,"sfire-mod-arrow-bullet"){{
+                    SFItems.discFabric, new ShieldBreakBullet(16,150,"sfire-mod-arrow-bullet"){{
                         lifetime = 21.6f;
-                        hittable = absorbable = reflectable = false;
-                        shieldDamageMultiplier = 5;
+                        pierce = true;
+                        pierceCap = 3;
+                        shieldDamagePercent = 1.25f;
                         lightningDamage = 0.16f * damage;
                         lightning = 3;
                         lightningLength = 13;
@@ -6946,6 +6961,18 @@ public class SFBlocks {
                         shrinkY = 0;
                         hitSound = Sounds.explosionQuad;
                         despawnEffect = Fx.none;
+                        shbreakEffect = new Effect(15f, 100f, e -> {
+                            for(int i = 0; i < 6; i++){
+                                float angle = i * 60 + 45;
+                                float length = 10 + e.fin() * 50;
+                                Tmp.v1.trns(angle, length);
+                                color(e.color, SFColor.discDark, e.fin());
+                                Drawf.tri(e.x + Tmp.v1.x, e.y + Tmp.v1.y, 9f*e.fout(), 50f * e.fin(), angle);
+                                Drawf.tri(e.x + Tmp.v1.x, e.y + Tmp.v1.y, 9f*e.fout(), 30f * e.fin(), angle+180);
+                            }
+
+                            Drawf.light(e.x, e.y, 150f, hitColor, 0.9f * e.fout());
+                        });
                         hitEffect = new ExplosionEffect(){{
                             smokes =  15;
                             sparks = 0;
@@ -6970,11 +6997,11 @@ public class SFBlocks {
                         intervalRandomSpread = fragRandomSpread = 60;
                         intervalAngle = fragAngle = 0;
 
-                        fragBullets = 3;
+                        /*fragBullets = 3;
                         fragVelocityMin = 2;
                         fragVelocityMax = 5;
                         fragLifeMax = 2;
-                        fragBullet = discFrag;
+                        fragBullet = discFrag;*/
 
                         bulletInterval = 0.5f;
                         intervalBullets = 1;
@@ -7001,7 +7028,7 @@ public class SFBlocks {
                         13.25f,-2.5f,0
                 };
                 shots = 8;
-                shotDelay = 4;
+                shotDelay = 5;
             }};
             drawer = new DrawTurret(){{parts.add(
                     new RegionPart("-back") {{
@@ -7021,7 +7048,7 @@ public class SFBlocks {
             warmupMaintainTime = 50;
             requirements(Category.turret, with(SFItems.rubidium,1100, Items.plastanium,600, SFItems.siliSteel,560, SFItems.tayrAlloy,750, SFItems.discFabric,850, SFItems.lens,500));
 
-            reload = 16;
+            reload = 20;
             rotateSpeed = 3.6f;
             range = 500;
             coolantMultiplier = 1;
@@ -7030,7 +7057,8 @@ public class SFBlocks {
             coolant = consumeCoolant(2);
             targetGround = false;
             shootType = new RailBulletType() {{
-                damage = 85;
+                hittable = false;
+                damage = 115;
                 pierceArmor = true;
                 length = 500 - 24;
                 ammoMultiplier = 1;
@@ -7059,14 +7087,14 @@ public class SFBlocks {
                     stroke(e.fout() * 2.5f + 1.5f);
 
                     e.scaled(15f, b -> {
-                        stroke(b.fout() * 4f);
+                        stroke(b.fout() * 6f);
                         color(e.color);
                         Lines.line(e.x, e.y, v.x, v.y);
                     });
                 });
                 endEffect = new Effect(15f, e -> {
                     color(e.color);
-                    Drawf.tri(e.x, e.y, e.fout() * 3f, 24f, e.rotation);
+                    Drawf.tri(e.x, e.y, e.fout() * 6f, 24f, e.rotation);
                 });
             }};
         }};
@@ -7484,7 +7512,8 @@ public class SFBlocks {
                     }}
             );
         }};
-        //fengmang
+        //fengmang = new ContinuousLiquidTurret(""){{
+        //}};
     //8*8//
         yuanling = new ItemTurret("yuanling") {{
             size = 8;
@@ -7501,15 +7530,15 @@ public class SFBlocks {
             drawer = new DrawTurret(){{parts.add(
                     new RegionPart("-barrel-l") {{
                         under = true;
-                        moveY = -6;
-                        progress = PartProgress.recoil;
+                        moveY = -5.5f;
+                        progress = PartProgress.recoil.curve(Interp.swingOut);
                         heatProgress = PartProgress.recoil;
                         recoilIndex = 0;
                     }},
                     new RegionPart("-barrel-r") {{
                         under = true;
-                        moveY = -6;
-                        progress = PartProgress.recoil;
+                        moveY = -5.5f;
+                        progress = PartProgress.recoil.curve(Interp.swingOut);
                         heatProgress = PartProgress.recoil;
                         recoilIndex = 1;
                     }}
@@ -7677,7 +7706,8 @@ public class SFBlocks {
                         splashDamage = 150;
                         splashDamageRadius = 100f;
                         scaledSplashDamage = true;
-                        status = StatusEffects.blasted;
+                        status = StatusEffects.burning;
+                        statusDuration = 600f;
                         ammoMultiplier = 1;
 
                         width = 32;
@@ -7715,7 +7745,7 @@ public class SFBlocks {
                                     waveLife = 30;
                                     waveRad = splashDamageRadius * 2;
                                     waveStroke = 20;
-                                    waveColor = Pal.bulletYellowBack;
+                                    waveColor = Pal.lightPyraFlame;
                                 }},
                                 new ParticleEffect(){{
                                     line = true;
@@ -7955,13 +7985,18 @@ public class SFBlocks {
             warmupMaintainTime = 580;
             heatColor = Color.valueOf("FF4040");
             drawer = new DrawTurret(){{parts.addAll(
-                    new RegionPart("-side"){{
+                    new RegionPart("-in"){{
                         mirror = true;
                         under = true;
-                        moveX = 4;
+                        moveX = 4 + 3.5f;
                         moveRot = -25;
-                        heatColor = Color.valueOf("FF4040");
                         moves.add(new PartMove(PartProgress.recoil,0,-2,-5));
+                        children.add(new RegionPart("-side"){{
+                            mirror = true;
+                            under = true;
+                            moveX = -3.5f;
+                            heatColor = Color.valueOf("FF4040");
+                        }});
                     }},
                     new RegionPart("-blade"){{
                         under = true;
@@ -8009,7 +8044,8 @@ public class SFBlocks {
             }};
 
             enhancerItem = SFItems.lens;
-            ammoPerShot = maxEnhanced = 30;
+            ammoPerShot = 30;
+            maxEnhanced = 60;
             enhancedPattern = new ShootPattern(){{firstShotDelay=120f;}};
             enhancedBullet = new LaserBulletType(4800){{
                 ammoMultiplier = 1;
@@ -8137,6 +8173,7 @@ public class SFBlocks {
                         y = 22;
                         color = SFColor.tayrDark.cpy().a(0);
                         colorTo = SFColor.tayrLight;
+                        progress = PartProgress.warmup.curve(Interp.pow5In);
                         circle = true;
                         hollow = false;
                         radius = 99;

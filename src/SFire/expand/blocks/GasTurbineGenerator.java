@@ -27,11 +27,14 @@ public class GasTurbineGenerator extends ConsumeGenerator {
     @Override
     public void setBars() {
         super.setBars();
-        addBar("power", (GeneratorBuild entity) -> new Bar(() ->
-                Core.bundle.format("bar.poweroutput",
-                        Strings.fixed(entity.getPowerProduction() * 60 * entity.timeScale(), 1)),
+        addBar("power", (GeneratorBuild entity) -> new Bar(
+                () -> Core.bundle.format("bar.poweroutput", Strings.fixed(entity.getPowerProduction() * 60 * entity.timeScale(), 1)),
                 () -> Pal.powerBar,
                 () -> entity.productionEfficiency));
+        addBar("boost", (GasTurbineGeneratorBuild e) -> new Bar(
+                () -> Core.bundle.format("bar.boost", Strings.fixed((e.exPower-1f)*100 ,0)),
+                () -> Pal.accent,
+                () -> ((e.exPower>1 ? e.exPower : 0)-1) / (extraPower-1) ));
     }
 
     @Override
