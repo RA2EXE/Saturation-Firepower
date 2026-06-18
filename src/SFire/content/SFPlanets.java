@@ -55,6 +55,7 @@ public class SFPlanets {
             prebuildBase = false;
             clearSectorOnLose = true;
             ruleSetter = r -> {
+                r.worldProcessorPlayerLink = true;
                 r.waveTeam = Team.crux;
                 r.placeRangeCheck = false;
                 r.showSpawns = false;
