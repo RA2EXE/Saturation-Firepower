@@ -2502,7 +2502,7 @@ public class SFBlocks {
             insulated = absorbLasers = placeableLiquid = true;
         }};
         silisteelConveyor = new StackConveyor("silisteel-conveyor") {{
-            requirements(Category.distribution, with(Items.lead,2, Items.metaglass,1, Items.plastanium,1, SFItems.siliSteel,1));
+            requirements(Category.distribution, with(SFItems.waveSteel,1, Items.metaglass,1, SFItems.waveSteel,2));
             health = 130;
             speed = 8 / 60f;
             itemCapacity = 30;

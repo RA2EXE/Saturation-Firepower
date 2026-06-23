@@ -24,54 +24,6 @@ block.sfire-mod-菊花.name = 菊花
 block.sfire-mod-菊花.description = 超远程火箭发射器，以低下的弹药利用率为代价，快速对敌人所在地发动轰炸。\n内置定时激活，支持发射纳米弹。
 block.sfire-mod-菊花.details = [yellow]射程盲区较大，对中远距离的目标命中率极低[]\n常用于弥补远程火力的不足，并不能作为中近程防御的主力设施，注意保护。
 
-
-block.sfire-mod-流冲.name = 流冲
-block.sfire-mod-流冲.description = 液压发射器，向敌人发射大型冲击弹，使用近炸引信。
-block.sfire-mod-流冲.details = 退！退！退！
-
-block.sfire-mod-消去.name = 消去
-block.sfire-mod-消去.description = 大型远程拦截装置。远程击毁来袭的子弹或导弹。需要持续冷却供应。
-
-
-
-block.sfire-mod-垂发.name = 垂直发射系统
-block.sfire-mod-垂发.description = 大范围防御的最佳选择。锁定多个目标并发射数枚导弹。可以配合逻辑处理器进行饱和式打击。
-block.sfire-mod-垂发.details = [red]不要往导弹发射井里灌液体！！！
-
-
-
-block.sfire-mod-侵蚀.name = 侵蚀
-block.sfire-mod-侵蚀.description = 发射纳米流束，拆解敌人并修复己方建筑。\n[green]能够自主对受损建筑进行修复。
-
-
-block.sfire-mod-灾灵.name = 灾灵
-block.sfire-mod-灾灵.description = 三联装改进幽灵炮，向敌人发射三枚穿甲爆破弹或大型破甲弹。其恐怖的穿透力足以击穿建筑物装甲。
-block.sfire-mod-灾灵.details = 射速逐渐加快，火力逐渐变态。就是根哥来了也救不了你
-
-
-block.sfire-mod-天际.name = 天际
-block.sfire-mod-天际.description = 短暂蓄力后向空中敌人发射强力的定向贯彻能量束，穿透护盾与敌人。
-
-
-
-block.sfire-mod-陨星.name = 陨星
-block.sfire-mod-陨星.description = 毁灭工程学的优秀作品，通过核爆炸来获得毁灭性的动能。很抱歉，当下最坚硬的材料也不能充当其能量导轨，我们暂时无法控制核爆炸的方向
-block.sfire-mod-屠龙宝刀.name = 零丁【在建】
-block.sfire-mod-屠龙宝刀.description = 从'灭绝'行动中缴获的实验性原型武器。
-block.sfire-mod-屠龙宝刀.details = 技术标准全部未知，不是一个好消息，敌人可能已经掌握了相关技术，尽快研究它
-block.sfire-mod-余温.name = 余温
-block.sfire-mod-余温.description = 锁定，充能，消灭。
-block.sfire-mod-余温.details = 首台具有快速射击能力的超巨型轨道炮，然而巨大的能耗严重限制了其应用空间
-block.sfire-mod-纳米风暴.name = 纳米风暴
-block.sfire-mod-纳米风暴.description = 发射激活的纳米核，拆解敌人，修复友方建筑并提供加速。
-block.sfire-mod-纳米风暴.details = 纳米核自动预激活，能在落地时迅速启动。适用于长间隔需求修复压力较高处
-block.sfire-mod-气溶胶扩散塔.name = 气溶胶扩散塔
-block.sfire-mod-气溶胶扩散塔.description = 裂爆液体桶并将其扩散到范围内，使用水桶、冷冻液桶时可以灭火。
-block.sfire-mod-裂位雷达.name = 裂位雷达
-block.sfire-mod-裂位雷达.description = 使用高能粒子束持续照射并标记敌人，辅助炮台瞄准。被标记的单位会试图摆脱。
-block.sfire-mod-短波雷达.name = 短波雷达
-block.sfire-mod-短波雷达.description = 每3秒扫描并标记100单位距离内的敌人，辅助炮台瞄准。被标记的单位会试图摆脱。
-
 #——协议——#
 block.sfire-mod-实验室.name = 实验室
 block.sfire-mod-实验室.description = 提供初期广泛科技研究。\n[red]不要急于求成[white]，科研不是短时间内可以成功的。
@@ -79,25 +31,7 @@ block.sfire-mod-前沿实验室.name = 前沿实验室
 block.sfire-mod-前沿实验室.description = 研究并改进尖端高级技术。\n[red]不要急于求成[white]，科研不是短时间内可以成功的。\n[red]急急急急急！
 block.sfire-mod-战研.name = 战争实验室
 block.sfire-mod-战研.description = 研发能够制衡其他究级科技的新式机械。需要大量冷冻液支持运行。必须优先保护！\n[red]不要急于求成[white]，科研不是短时间内可以成功的。\n[scarlet]急 急 急 急 急 急 急\n我是[stat]急急国王！
-block.sfire-mod-手段.name = 最终手段
-block.sfire-mod-手段.description = [yellow]呼叫一次[red]无视敌我的轨道轰炸[yellow]毁灭附近的区域。[white]检测范围小，需要机载投放。\n[yellow]需要5秒开机准备时间。
 
-#——电力——#
-block.sfire-mod-缓冲引擎.name = 缓冲引擎
-block.sfire-mod-缓冲引擎.description = 直接引爆少量炸药推动飞轮转子，提供稳定持续的低额度发电量。
-
-block.sfire-mod-磁暴反应堆.name = 磁暴反应堆
-block.sfire-mod-磁暴反应堆.description = 在受控超导环形空间中诱发天气效应，从中获取大量能源。\n每分钟更换一次线圈，绝缘设施和超压导体，务必完善绝缘处理！
-block.sfire-mod-磁暴反应堆.details = 高压！勿近！[red]电压舱一旦被摧毁会导致失导毁灭性爆炸！
-
-#——单位工厂——#
-
-block.sfire-mod-阔野管理中心.name = 阔野管理中心
-block.sfire-mod-阔野管理中心.description = 携带大量纳米机器人，分级建造方案，更快组装阔野战舰。\n可以修复附近的单位。\n[red]需要占用4台纳米组装无人机部署位！一旦部署位被占满，则失去建造阔野的能力！
-block.sfire-mod-阔野管理中心.details = [red]最高建造权限已授权！\n[white]这是要塞数据库中的意外惊喜，这种新技术允许我们[yellow]也能[white]在相对较短的时间中建造大型单位\n[red]现在正是 破局之时！
-block.sfire-mod-实验工厂.name = 实验工厂
-block.sfire-mod-实验工厂.description = 生产强大的[YELLOW]特殊战斗单位\n[red]谨慎使用。
-block.sfire-mod-实验工厂.details = 由泰特级单位重构工厂改造而来，其完备的设施足以直接组建大型单位
 
 #——物流——#
 block.sfire-mod-裂位驱动器.name = 裂位驱动器
@@ -126,9 +60,6 @@ block.sfire-mod-任务-稳定塔.name = 相位稳定塔
 block.sfire-mod-任务-稳定塔.description = 大型实验性现实稳定塔，为所在区域附近的数百单位距离内稳定虚数指数。\n这可以隔绝任何从虚轴逸散的裂能导致的影响，代价便是需要主动填补这块能量空穴。\n[goldenrod]“尽管是否成功修复都无法观测，其无用损耗也不可避免，但总比在背后发现一道塞得下泰特单位的裂缝要好”\n——■■■■■■
 block.sfire-mod-任务-油站.name = 重油精炼站
 block.sfire-mod-任务-油站.description = 实验性的硝化重油量产工厂，夺取它并研究相关技术。\n[red]切莫摧毁！
-#——辅助——#
-block.sfire-mod-裂位超速穹顶.name = 裂位穹顶投射器
-block.sfire-mod-裂位超速穹顶.description = 在中等范围内提供较高超速力场，使用裂位能提高效率。
 
 #——物品——#
 item.sfire-mod-溢裂数据库.name = 溢裂要塞数据库
@@ -186,21 +117,6 @@ unit.mindustry-navanax.details = 升级极限电容以及新型电磁脉冲炮�
 unit.sfire-mod-海辅6.name = 罗汉
 unit.sfire-mod-海辅6.description = 攻击附近所有敌人。发射大量脉冲弹与震爆弹，对敌方供给链造成毁灭性打击。\n保护并修复临近的友方单位。
 
-unit.sfire-mod-组装机.name = 组装无人机
-unit.sfire-mod-组装无人机.name = 组装无人机
-unit.sfire-mod-武装无人机.name = 默途
-unit.sfire-mod-武装无人机.description = 搭载4门并列脉冲枪，自主侦察推进并攻击附近所有敌人。\n拥有一个护盾力墙。
-unit.sfire-mod-武装无人机.details = 中型查打一体作战单位，泛用性并不高，但是作为廉价的突进部队来说，它足够优秀；但作为作战部队来说，它太过脆弱。请不要指望它能为你杀出一条血路，妥善利用它的侦察设备为战局掌握更多主动性。\n[red]信息闭塞是可怕的
-
-unit.sfire-mod-工农.name = 工农
-unit.sfire-mod-工农.description = 自动修复损坏的建筑并攻击靠近的敌人。发射瘫痪激光与纳米弹。修复附近的友方单位。
-unit.sfire-mod-工农.details = [lime]工农武装割据！[]\n为适应泰伯利亚战场复杂环境而打造的一代全能勤务舰只，搭载“红星”核心系统，能够自动适应各种任务的行为操控与能源分配。
-unit.sfire-mod-工农A.name = 民兵
-unit.sfire-mod-工农A.description = 自动修复损坏的建筑并攻击靠近的敌人。发射修复光束与密集的纳米导弹。修复附近的友方单位。
-unit.sfire-mod-工农A.details = 由原型工农改造而来的一型仅执行战线维护任务的勤务舰只，搭载“红星-甲”核心操控系统。\n[green]抛弃载荷货舱与精密飞控[]，安装强化装甲与更好的战场态势系统，支持长时间前线维护并准确追杀漏网之鱼
-unit.sfire-mod-工农B.name = 群众
-unit.sfire-mod-工农B.description = 提供更强大的战场运载能力。\n搭载短程强酸喷枪。
-unit.sfire-mod-工农B.details = 由原型工农改造而来的一型仅执行载荷运载任务的勤务舰只，搭载“红星-乙”核心操控系统。\n[red]抛弃武器系统与火控雷达[]，优秀飞控系统能精准分配更强悍的动力体系。
 
 unit.sfire-mod-阔野.name = 阔野
 unit.sfire-mod-阔野.description = 投送超载引力发生器与光子导弹。间歇性发射冲击束，配备空域静电场。
@@ -266,143 +182,15 @@ unit.sfire-mod-利刃.description = 标准化轻型护航舰只，携带激光�
 unit.sfire-mod-亚龙.name = 亚龙
 unit.sfire-mod-亚龙.description = 信息缺失！
 
-#——炮塔——#
-block.sfire-mod-叶脉.name = 叶脉
-block.sfire-mod-叶脉.description = 释放高能闪电破碎护盾
-block.sfire-mod-叶脉.details = 通过对裂位引擎的反向研究，若强行存储其释放的能量于尖端并瞬间放出理论上可以达到在一定区域内撕裂空间的程度。倘若方向正确这能直接穿过护盾达到后侧，由于其优先沿低能量势差传播的特性，这使得他能直接击中护盾发动器并灌输能量直接使其过载。\n[red]所有关于此研究所导致的损失数据需全部隐藏！并于1个泰伯利亚自转周期内物理销毁！
-
-block.sfire-mod-草酸.name = 草酸
-block.sfire-mod-草酸.description = 基础多重发射器，射出硝液涂层弹。
-block.sfire-mod-草酸.details = 
-
-#——电力——#
-block.sfire-mod-无机燃烧室.name = 无机燃烧室
-block.sfire-mod-无机燃烧室.description = 燃烧可燃物质产生能量，需要臭氧作为氧化剂。
-#——墙壁——#
-block.sfire-mod-爆炸装甲.name = 爆炸装甲
-block.sfire-mod-爆炸装甲.description = 拦截敌方火力，保护后方建筑。\n被摧毁后产生大型破片爆炸。
-block.sfire-mod-爆炸装甲大.name = 大型爆炸装甲
-block.sfire-mod-爆炸装甲大.description = 拦截敌方火力，保护后方建筑。\n被摧毁后产生大型破片爆炸。
-block.sfire-mod-磁钢墙.name = 磁钢墙
-block.sfire-mod-磁钢墙.description = 阻挡光电武器，拦截动能弹药。\n被摧毁时释放能量脉冲瘫痪附近的单位。
-block.sfire-mod-磁钢墙大.name = 大型磁钢墙
-block.sfire-mod-磁钢墙大.description = 阻挡光电武器，拦截动能弹药。\n被摧毁时释放能量脉冲瘫痪附近的单位。
-block.sfire-mod-钢质墙.name = 钢质墙
-block.sfire-mod-钢质墙.description = 拦截敌方火力，保护后方建筑。
-block.sfire-mod-钢质墙大.name = 大型钢质墙
-block.sfire-mod-钢质墙大.description = 拦截敌方火力，保护后方建筑。
-block.sfire-mod-应反墙.name = 应反墙
-block.sfire-mod-应反墙.description = 拦截并反射部分敌方火力，保护后方建筑。
-block.sfire-mod-应反墙大.name = 大型应反墙
-block.sfire-mod-应反墙大.description = 拦截并反射部分敌方火力，保护后方建筑。
-#——生产——#
-block.sfire-mod-爆破配置器.name = 爆破配置器
-block.sfire-mod-爆破配置器.description = 调配稳定爆炸流体
-block.sfire-mod-爆破配置器.details = [red]易燃易爆硝化地，一燃一丢不剩滴
-block.sfire-mod-XXX.name = XXX
-block.sfire-mod-XXX.description = XXX
-block.sfire-mod-XXX.details = XXX
-block.sfire-mod-磁钢冶炼炉.name = 磁钢冶炼炉
-block.sfire-mod-磁钢冶炼炉.description = 使用铷和铬冶炼磁钢。
-block.sfire-mod-磁钢冶炼炉.details = XXX
-block.sfire-mod-电弧硝化室.name = 电弧硝化室
-block.sfire-mod-电弧硝化室.description = 真空舱室内使用高压电弧催化臭氧与氮气生成硝气。
-block.sfire-mod-电弧硝化室.details = XXX
-block.sfire-mod-电解池.name = 电解池
-block.sfire-mod-电解池.description = 电解水并在相邻两侧输出臭氧或氢气。
-block.sfire-mod-电解池.details = XXX
-block.sfire-mod-纲稀硅炼化器.name = 纲稀硅炼化器
-block.sfire-mod-纲稀硅炼化器.description = 以钛和稀土为原料冶炼纲稀硅
-block.sfire-mod-纲稀硅炼化器.details = XXX
-block.sfire-mod-金属分析仪.name = 金属分析仪
-block.sfire-mod-金属分析仪.description = 经典重结晶，这种简单的方法能直接分离稀土中的简易材料。
-block.sfire-mod-金属分析仪.details = XXX
-block.sfire-mod-莱普合金冲压炉.name = 莱普合金冲压炉
-block.sfire-mod-莱普合金冲压炉.description = 使用爆炸冲压生产莱普合金。
-block.sfire-mod-莱普合金冲压炉.details = 当地环境太过寒冷，倘若再使用温度加工方法会得不偿失，或许爆炸冲压能够更加节省能量[？]
-block.sfire-mod-裂位能激发器.name = 裂位能激发器
-block.sfire-mod-裂位能激发器.description = 使用镄与稀土直接聚合裂位能。
-block.sfire-mod-裂位能激发器.details = XXX
-block.sfire-mod-流体冲压器.name = 流体冲压器
-block.sfire-mod-流体冲压器.description = 液压引擎动力冲压波纹钢。
-block.sfire-mod-流体冲压器.details = XXX
-block.sfire-mod-燃气发酵舱.name = 燃气发酵舱
-block.sfire-mod-燃气发酵舱.description = 为青藓缓慢的生命活动供水，并收集其有机活动产生的气体。
-block.sfire-mod-燃气发酵舱.details = 此处气温太低，有机体的生产严重受限，并且暂时没有可替代的高效燃气合成方式，或许我们应该试着为其设置保温层舱室？
-block.sfire-mod-软化锻压机.name = 软化锻压机
-block.sfire-mod-软化锻压机.description = 使用硝液软化铬并与铷锻压生产磁钢。
-block.sfire-mod-软化锻压机.details = 比起“软化”更确切的来说是“溶解”，铬熔点过高，与外界温差过大，除非采用彻底封闭高炉，否则熔融合金永远不是一个可行之迹
-block.sfire-mod-泰勒合金冶炼炉.name = 泰勒合金冶炼炉
-block.sfire-mod-泰勒合金冶炼炉.description = 使用锶，磁钢，纲稀硅冶炼泰勒合金。
-block.sfire-mod-泰勒合金冶炼炉.details = 直至此刻，你或许应该明白：泰勒合金不过是一个统称，一个“具有优良电磁性能”的合金方案的统称，也许物理应力性能不如老式配方，但这些合金的最终追求都是极致的电磁性能
-
-
-
-#——单位工厂——#
-block.sfire-mod-空天船坞.name = 基础空天船坞
-block.sfire-mod-空天船坞.description = 生产多种基础空天舰船。
-block.sfire-mod-空天船坞大.name = 深度空天船坞
-block.sfire-mod-空天船坞大.description = 组装生产多种重型空天军舰船。
-#——辅助——#
-block.sfire-mod-临时空间站.name = 临时空间站
-block.sfire-mod-临时空间站.description = 可被占领，占领后提供视野与5只舰船调度能力。
-block.sfire-mod-中央空间站.name = 中央空间站
-block.sfire-mod-中央空间站.description = 主战场指挥空间站，装甲厚重但需要保护，务必确保不被摧毁。
 #——物品——#
-item.sfire-mod-波纹钢.name = 波纹钢
-item.sfire-mod-波纹钢.description = 新型空天材料，耐冷耐热，[gray]这可比莱普便宜多了[]多用于空天舰体与真空环境下的建筑。
-item.sfire-mod-波纹钢.details = 温压挤压工艺与流体腐蚀带来的奇特表面纹理而得名波纹钢
-item.sfire-mod-磁钢.name = 磁钢
-item.sfire-mod-磁钢.description = 质地坚硬，延展性良好，用于高级磁能装置。
 item.sfire-mod-纲稀硅.name = 纲稀硅
 item.sfire-mod-纲稀硅.description = 半导体PNP电磁晶体，质地硬脆，用于极端环境电子设备以及流体存储与运输。
-item.sfire-mod-镓.name = 镓
-item.sfire-mod-镓.description = 低熔点金属元素，用于高端电子元件与大型半导体材料。
+
 item.sfire-mod-青藓.name = 青藓
 item.sfire-mod-青藓.description = 主动培育的有机体，其有效生命活动会释放多种含碳物质。
 item.sfire-mod-青藓.details = 生命力顽强且对外界呈现出一定的活动惰性，适于大规模培育且不易造成泄露事故
-item.sfire-mod-铷.name = 铷
-item.sfire-mod-铷.description = 优质磁电能力，用于磁力产生器、阻滞锁定器的建造。
-item.sfire-mod-铷.details = 据说这玩意的单质与某种恒星终点物质混合后会对机械体产生极大的影响\n——有待考证
-item.sfire-mod-锶.name = 锶
-item.sfire-mod-锶.description = 易燃金属元素，用作反应装甲，特殊战斗部以及引火组件。
-item.sfire-mod-锶.details = 这种物质的化学性质过于活泼，温度稍高一点就会立刻剧烈氧化，但在真空环境中相当稳定
-item.sfire-mod-碳化钛.name = 碳化钛
-item.sfire-mod-碳化钛.description = 结构强度优秀，用于高硬度金属陶瓷与工业切削工具。
-item.sfire-mod-碳化钛.details = 你知道么孩子，钛其实有八种颜色，分别是【】【】【】【】【】【】【】【】
-item.sfire-mod-稀土.name = 稀土
-item.sfire-mod-稀土.description = 富含多种金属元素，用于前沿产业加工。
-item.sfire-mod-稀土.details = 来！打贸易战！看看谁才是站到最后的那一个！
+
 #——单位——#
-unit.sfire-mod-空7.name = 玉落
-unit.sfire-mod-空7.description = 如明月般灿烂，若陨落般璀璨
-
-unit.sfire-mod-海7.name = 汐明
-unit.sfire-mod-海7.description = 云与山与天与水，皆染辉色
-
-unit.sfire-mod-陆7.name = 解放
-unit.sfire-mod-陆7.description = 跑？还跑？全国都解放了你往哪里跑？
-
-unit.sfire-mod-陆战7.name = 民主
-unit.sfire-mod-陆战7.description = 宪法是由人民书写的······
-
-unit.sfire-mod-路辅7.name = 航星
-unit.sfire-mod-路辅7.description = 藏起火种，告别黎明。宣诏天下，远渡而行。
-
-unit.sfire-mod-爬爬7.name = 孽蜥
-unit.sfire-mod-爬爬7.description = 不瞑不灭，杀消不当。
-
-unit.sfire-mod-空战7.name = 灭瞑
-unit.sfire-mod-空战7.description = 生不逢时？死不瞑目？
-
-unit.sfire-mod-空辅7.name = 南天
-unit.sfire-mod-空辅7.description = 来者不拒，往者莫去。
-
-unit.sfire-mod-海战7.name = 瓦梁
-unit.sfire-mod-海战7.description = 豫章岂堪故郡，洪都何当新府······
-
-unit.sfire-mod-海辅7.name = 如来
-unit.sfire-mod-海辅7.description = 即见如来，为何不拜。
 
 unit.sfire-mod-兵刃.name = 兵刃
 unit.sfire-mod-兵刃.description = 中坚战斗舰船，这将是你的长期主力战舰。\n搭载反舰导弹发射器来击毁敌方舰船。\n舰炮可以拦截敌方导弹或者攻击舰船。
@@ -412,14 +200,6 @@ unit.sfire-mod-定远.name = 定远
 unit.sfire-mod-定远.description = 重型火力支援舰船，搭载大量弹药并携带单体护盾。\n搭载反舰导弹发射器来击毁敌方舰船。\n舰炮可以拦截敌方导弹或者攻击舰船。
 unit.sfire-mod-摧坚.name = 摧坚
 unit.sfire-mod-摧坚.description = 火力突袭舰船，搭载更多弹药。\n搭载反舰导弹发射器来击毁敌方舰船。\n舰炮可以拦截敌方导弹或者攻击舰船。
-
-
-unit.sfire-mod-云龙.name = 云龙
-unit.sfire-mod-云龙.description = 超大型脉冲轨道炮的载体空天战略平台，搭载数十门泰勒载体的裂位能加农炮与两种近距离爆冲光束塔。\n可以修复临近的友方单位。\n[crimson]什么他娘的精锐？
-unit.sfire-mod-云龙.details = [coral]我就不信这个邪，老子打的就是精锐！
-
-unit.sfire-mod-flareY.name = 独蹚
-unit.sfire-mod-flareY.description = 空天战斗机。发射脉冲束流，对电子设备造成严重干扰。
 
 #——状态——#
 status.sfire-mod-磁扰.name = 磁扰

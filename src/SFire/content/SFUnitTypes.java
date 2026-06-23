@@ -51,6 +51,14 @@ public class SFUnitTypes {
         n.baseRotation = br;
         return n;
     }
+    public static Weapon copyRotRel(Weapon weapon, float x, float y, float br, float re) {
+        Weapon n = weapon.copy();
+        n.x = x;
+        n.y = y;
+        n.baseRotation = br;
+        n.reload = n.reload + re;
+        return n;
+    }
 
     /*redPointDefenseBig = new PointDefenseWeapon(name("red-point-gun")) {{
         reload = 9;
@@ -5576,59 +5584,61 @@ public class SFUnitTypes {
         }};
         naval4 = new UnitType("merak") {{
             constructor = UnitTypes.risso.constructor;
-            speed = 0.52f;
-            rotateSpeed = 0.825f;
-            trailLength = 36;
-            waveTrailX = 14;
-            waveTrailY = -30;
+            speed = 0.54f;
+            rotateSpeed = 0.83f;
+            trailLength = 45;
+            waveTrailX = 16;
+            waveTrailY = -35;
             trailScl = 3;
             hitSize = 50;
             health = 9300;
             armor = 8;
             faceTarget = false;
+            targetGround = false;
 
             Weapon merakMissile = new Weapon(name("merak-missile")) {{
-                rotate = false;
-                alternate = false;
+                rotate = true;
+                rotateSpeed = 1;
+                rotationLimit = 15f;
+                mirror = false;
                 recoil = 0;
-                reload = 45f;
+                reload = 20;
                 shootY = 7.5f;
+
                 shoot = new ShootBarrel(){{
-                    shots = 2;
-                    shotDelay = 12;
                     barrels = new float[]{
-                            0, 0, -45f,
+                            //0, 0, -45f,
                             0, 0, -22.5f,
                             0, 0, 0,
                             0, 0, 22.5f,
-                            0, 0, 45f
+                            //0, 0, 45f
                     };
                 }};
                 shootCone = 360;
-                inaccuracy = 3;
                 autoTarget = true;
                 controllable = false;
                 shootSound = Sounds.shootMissileSmall;
-                bullet = new FlakBulletType(10, 130) {{
+                bullet = new FlakBulletType(8, 130) {{
                     sprite = "sfire-mod-missile2";
                     splashDamage = 55;
                     splashDamageRadius = 55f;
                     scaledSplashDamage = true;
                     status = StatusEffects.blasted;
-                    lifetime = 40;
+                    lifetime = 50;
                     homingRange = 60;
-                    homingDelay = 6f;
+                    homingDelay = 4f;
                     homingPower = 0.25f;
                     shootEffect = Fx.shootBig2;
                     smokeEffect = Fx.shootSmallFlame;
                     hitEffect = Fx.flakExplosionBig;
                     hitSound = Sounds.explosion;
+                    hitSoundVolume = 2;
                     hitShake = 3;
                     shrinkY = 0;
-                    trailLength = 8;
+                    trailLength = 10;
                     trailWidth = 2;
                     trailColor = Color.white.cpy().a(0.8f);
-                    trailChance = 1f;
+                    trailChance = 0.06f;
                     trailEffect = new ParticleEffect() {{
                         particles = 4;
                         sizeFrom = 2;
@@ -5651,54 +5661,44 @@ public class SFUnitTypes {
             }};
 
             weapons.addAll(
-                    new PointDefenseWeapon(name("striker-weapon")) {{
-                        x = 0;
-                        y = 11.5f;
-                        rotate = true;
-                        rotateSpeed = 9;
-                        mirror = false;
-                        shootY = 4;
-                        shootSound = SFSounds.laser;
-                        recoil = 0.6f;
-                        reload = 15;
-                        targetInterval = 5;
-                        targetSwitchInterval = 5;
-                        bullet = new BulletType() {{
-                            maxRange = 240;
-                            shootEffect = Fx.sparkShoot;
-                            hitEffect = Fx.pointHit;
-                            damage = 30f;
-                        }};
-                    }},
-                    copyRotate(merakMissile, 12,-18, -45),
-                    copyRotate(merakMissile, -14.25f,24, 35),
+                    copyRotRel(merakMissile, -48/4f,6/4f, 35,2),
+                    copyRotRel(merakMissile, 48/4f,6/4f, -35,1),
+                    copyRotRel(merakMissile, -67/4f,-46/4f, 45,-1),
+                    copyRotRel(merakMissile, 67/4f,-46/4f, -45,-2),
                     new Weapon(name("merak-cannon")) {{
                         rotate = true;
                         x = 0;
-                        y = -8f;
                         rotateSpeed = 3.85f;
-                        shootY = 4f;
-                        reload = 68f;
+                        shootY = 70/4f;
+                        shoot = new ShootAlternate(12);
+                        shoot.shots = 6;
+                        shoot.shotDelay = 3;
+                        reload = 100f;
                         mirror = false;
-                        inaccuracy = 3;
+                        inaccuracy = 6;
+                        velocityRnd = 0.02f;
                         shootSound = SFSounds.laser;
                         ejectEffect = Fx.none;
-                        bullet = new FlakBulletType(12, 48) {{
-                            collidesGround = true;
+                        shootCone = 15f;
+                        recoil = 4;
+                        recoilTime = 80f;
+                        bullet = new FlakBulletType(10, 22) {{
+                            //collidesGround = true;
+                            scaleLife = true;
                             backColor = SFColor.discLight;
                             frontColor = Color.white;
                             trailColor = SFColor.discLight;
-                            trailLength = 8;
-                            trailWidth = 2.25f;
+                            trailLength = 7;
+                            trailWidth = 2f;
                             status = SFStatusEffects.breakdown;
                             statusDuration = 300;
                             splashDamage = 64;
-                            splashDamageRadius = 35;
-                            buildingDamageMultiplier = 2.25f;
-                            width = 10;
-                            height = 20;
-                            lifetime = 20;
-                            shootEffect = new ParticleEffect() {{
+                            splashDamageRadius = 45;
+                            width = 8;
+                            height = 24;
+                            lifetime = 30;
+                            shootEffect = Fx.shootBigColor;
+                            smokeEffect = new ParticleEffect() {{
                                 sizeFrom = 6;
                                 length = 40;
                                 lifetime = 30;
@@ -5706,10 +5706,8 @@ public class SFUnitTypes {
                                 colorTo = SFColor.discDark;
                                 cone = 16;
                             }};
-                            smokeEffect = Fx.bigShockwave;
                             despawnEffect = hitEffect = Fx.instBomb;
-                            hitSound = Sounds.shootLaser;
-                            hitShake = 6;
+                            hitSound = SFSounds.laser;
                         }};
                     }}
             );
