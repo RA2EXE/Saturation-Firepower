@@ -670,64 +670,58 @@ public class SFOverride {
         ((Reconstructor)Blocks.additiveReconstructor).upgrades.addAll(
                 new UnitType[]{SFUnitTypes.tank1, SFUnitTypes.tank2},
                 new UnitType[]{SFUnitTypes.air1, SFUnitTypes.air2},
-                new UnitType[]{SFUnitTypes.naval1, SFUnitTypes.naval2}
+                new UnitType[]{SFUnitTypes.naval1, SFUnitTypes.naval2},
+                new UnitType[]{SFUnitTypes.hover1, SFUnitTypes.hover2}
         );
         ((Reconstructor)Blocks.multiplicativeReconstructor).upgrades.addAll(
                 new UnitType[]{SFUnitTypes.tank2, SFUnitTypes.tank3},
                 new UnitType[]{SFUnitTypes.air2, SFUnitTypes.air3},
-                new UnitType[]{SFUnitTypes.naval2, SFUnitTypes.naval3}
+                new UnitType[]{SFUnitTypes.naval2, SFUnitTypes.naval3},
+                new UnitType[]{SFUnitTypes.hover2, SFUnitTypes.hover3}
         );
         ((Reconstructor)Blocks.exponentialReconstructor).upgrades.addAll(
                 new UnitType[]{SFUnitTypes.tank3, SFUnitTypes.tank4},
                 new UnitType[]{SFUnitTypes.air3, SFUnitTypes.air4},
-                new UnitType[]{SFUnitTypes.naval3, SFUnitTypes.naval4}
+                new UnitType[]{SFUnitTypes.naval3, SFUnitTypes.naval4},
+                new UnitType[]{SFUnitTypes.hover3, SFUnitTypes.hover4}
         );
         ((Reconstructor)Blocks.tetrativeReconstructor).upgrades.addAll(
                 new UnitType[]{SFUnitTypes.tank4, SFUnitTypes.tank5},
                 new UnitType[]{SFUnitTypes.air4, SFUnitTypes.air5},
-                new UnitType[]{SFUnitTypes.naval4, SFUnitTypes.naval5}
+                new UnitType[]{SFUnitTypes.naval4, SFUnitTypes.naval5},
+                new UnitType[]{SFUnitTypes.hover4, SFUnitTypes.hover5}
         );
 
-        UnitTypes.crawler.weapons.remove(0);
-        UnitTypes.crawler.weapons.add(new Weapon("crawler-weapon"){{
-            shootOnDeath = true;
-            reload = 24f;
-            shootCone = 180f;
-            ejectEffect = Fx.none;
-            shootSound = Sounds.explosionCrawler;
-            shootSoundVolume = 0.4f;
-            x = shootY = 0f;
-            mirror = false;
-            bullet = new BulletType(){{
-                collidesTiles = false;
-                collides = false;
+        UnitTypes.crawler.weapons.get(0).name = new String("crawler-weapon");
+        UnitTypes.crawler.weapons.get(0).bullet = new BulletType(){{
+            collidesTiles = false;
+            collides = false;
 
-                rangeOverride = 28f;
-                hitEffect = Fx.pulverize;
-                speed = 0f;
-                splashDamageRadius = 50f;
-                instantDisappear = true;
-                splashDamage = 80f;
-                killShooter = true;
-                hittable = false;
-                collidesAir = true;
-                hitEffect = new ExplosionEffect(){{
-                    waveLife = 10;
-                    waveRad = splashDamageRadius;
-                    waveStroke = 8;
-                    waveColor = hitColor;
-                    sparks = 12;
-                    sparkLen = 30;
-                    sparkColor = Pal.bulletYellow;
-                    sparkRad = splashDamageRadius*1.15f;
-                    lifetime = 25;
-                    smokes = 8;
-                    smokeColor = SFColor.smoke;
-                    smokeSize = 8;
-                    smokeRad = splashDamageRadius*0.75f;
-                }};
+            rangeOverride = 28f;
+            hitEffect = Fx.pulverize;
+            speed = 0f;
+            splashDamageRadius = 50f;
+            instantDisappear = true;
+            splashDamage = 80f;
+            killShooter = true;
+            hittable = false;
+            collidesAir = true;
+            hitEffect = new ExplosionEffect(){{
+                waveLife = 10;
+                waveRad = splashDamageRadius;
+                waveStroke = 8;
+                waveColor = hitColor;
+                sparks = 12;
+                sparkLen = 30;
+                sparkColor = Pal.bulletYellow;
+                sparkRad = splashDamageRadius*1.15f;
+                lifetime = 25;
+                smokes = 8;
+                smokeColor = SFColor.smoke;
+                smokeSize = 8;
+                smokeRad = splashDamageRadius*0.75f;
             }};
-        }});
+        }};
         UnitTypes.flare.weapons.get(0).name = new String("flare-weapon");
         UnitTypes.horizon.weapons.get(0).name = new String("horizon-weapon");
         UnitTypes.retusa.weapons.get(2).name = new String("retusa-mine");

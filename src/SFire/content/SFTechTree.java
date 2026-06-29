@@ -244,6 +244,9 @@ public class SFTechTree {
         addToNode(risso, () ->
                 node(naval1, () -> node(naval2, () -> node(naval3, () -> node(naval4, () -> node(naval5, () -> node(naval6))))))
         );
+        addToNode(retusa, () ->
+                node(hover1, () -> node(hover2, () -> node(hover3, () -> node(hover4, () -> node(hover5, () -> node(hover6))))))
+        );
         addToNode(multiplicativeReconstructor, () -> node(specFactory, () -> {
             node(farmer, () -> node(thunder));
             node(hammer, () -> node(flamer));

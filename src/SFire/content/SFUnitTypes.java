@@ -1,13 +1,17 @@
 package SFire.content;
 
 import SFire.expand.bullets.ShieldBreakBullet;
+import SFire.expand.bullets.SizeDamageBullet;
 import arc.graphics.Blending;
 import arc.graphics.Color;
+import arc.graphics.g2d.Draw;
+import arc.graphics.g2d.Fill;
 import arc.graphics.g2d.Lines;
 import arc.math.*;
 import arc.math.geom.Rect;
 import arc.math.geom.Vec2;
 import arc.struct.ObjectSet;
+import arc.util.Time;
 import mindustry.ai.UnitCommand;
 import mindustry.ai.types.AssemblerAI;
 import mindustry.ai.types.BuilderAI;
@@ -23,6 +27,7 @@ import mindustry.entities.pattern.*;
 import mindustry.entities.units.WeaponMount;
 import mindustry.gen.*;
 import mindustry.graphics.Drawf;
+import mindustry.graphics.Layer;
 import mindustry.graphics.Pal;
 import mindustry.type.*;
 import mindustry.type.unit.*;
@@ -83,12 +88,16 @@ public class SFUnitTypes {
             falcon, wyvern,
     //T6
     liXian, diXing, panLong, guangHan, yuHui, tengWang, luoHan,
+
     //tanks
     tank1, tank2, tank3, tank4, tank5, tank6,
     //air
     air1, air2, air3, air4, air5, air6,
     //naval
     naval1, naval2, naval3, naval4, naval5, naval6,
+    //hover
+    hover1, hover2, hover3, hover4, hover5, hover6,
+
     //special force + flagship*/
     farmer, carrier, flamer, thunder, banisher, hammer, tau, omega, terrascape,
     //campaign only
@@ -390,7 +399,17 @@ public class SFUnitTypes {
             abilities.add(new MoveEffectAbility() {{
                 minVelocity = 0;
                 interval = 10;
-                effect = new MultiEffect(
+                effect = /*new Effect(30f, 60f, e -> {
+                    color(SFColor.enemyRedLight.cpy().a(0.8f),Color.white.cpy().a(0.1f),e.fin(Interp.pow2Out));
+                    rand.setSeed(e.id);
+
+                    for(int i = 0; i < 5; i++){
+                        v.trns(rand.range(360), rand.random(e.finpow() * 90f)).add(rand.range(3f), 0);
+                        e.scaled(e.lifetime * rand.random(0.2f, 1f), b -> {
+                            Fill.circle(e.x + v.x, e.y + v.y, b.fout(5) * 3f + 0.3f);
+                        });
+                    }
+                }); */new MultiEffect(
                         new ParticleEffect() {{
                             particles = 2;
                             sizeFrom = 9;
@@ -2409,7 +2428,7 @@ public class SFUnitTypes {
                             splashDamageRadius = 40;
                             pierce = true;
                             pierceBuilding = true;
-                            pierceCap = 10;
+                            pierceCap = 5;
                             lifetime = 28;
                             hitSound = Sounds.explosion;
                             shootEffect = Fx.shootBig2;
@@ -3824,8 +3843,8 @@ public class SFUnitTypes {
 
             health = 155;
             armor = 4;
-            drag = 0.08f;
-            accel = 0.1f;
+            drag = 0.1f;
+            accel = 0.2f;
             itemCapacity = 5;
             faceTarget = false;
             abilities.add(new StatusFieldAbility(StatusEffects.overclock, 250, 300, 30) {{
@@ -3870,8 +3889,8 @@ public class SFUnitTypes {
 
             health = 530;
             armor = 5;
-            drag = 0.08f;
-            accel = 0.1f;
+            drag = 0.18f;
+            accel = 0.3f;
             faceTarget = false;
             weapons.add(new Weapon(name("striker-weapon")) {{
                 reload = 90;
@@ -3912,8 +3931,6 @@ public class SFUnitTypes {
 
             health = 1100;
             armor = 8;
-            drag = 0.08f;
-            accel = 0.1f;
             itemCapacity = 0;
             faceTarget = false;
             targetAir = false;
@@ -4146,6 +4163,7 @@ public class SFUnitTypes {
             rotateMoveFirst = true;
             rotateSpeed = 1.22f;
             speed = 0.8f;
+            accel = 0.45f;
             hitSize = 52f;
             crushDamage = 6;
             treadRects = new Rect[]{new Rect(-98, -125, 46, 255)};
@@ -4328,7 +4346,7 @@ public class SFUnitTypes {
             rotateMoveFirst = false;
             rotateSpeed = 1.22f;
             speed = 0.75f;
-            drag = 0.3f;
+            accel = 0.4f;
             hitSize = 66;
             crushDamage = 10;
             treadRects = new Rect[]{
@@ -4604,8 +4622,8 @@ public class SFUnitTypes {
             lowAltitude = true;
             rotateSpeed = 6f;
             speed = 2.45f;
-            drag = 0.035f;
-            accel = 0.04f;
+            drag = 0.2f;
+            accel = 0.4f;
             hitSize = 24;
             health = 1000;
             armor = 4;
@@ -4746,12 +4764,13 @@ public class SFUnitTypes {
                 particleSize = 2;
                 applyParticleChance = 0;
             }});
-            BulletType energyBulletSky = new BasicBulletType(6, 12) {{
+            BulletType energyBulletSky = new BasicBulletType(6, 18) {{
                 reflectable = false;
                 shrinkY = 0;
                 shootEffect = hitEffect = hitEnergySky;
                 smokeEffect = Fx.none;
                 despawnEffect = desEnergySky;
+                armorMultiplier = 1.05f;
                 buildingDamageMultiplier = 0.68f;
                 width = 7;
                 height = 10;
@@ -4811,7 +4830,8 @@ public class SFUnitTypes {
                         reload = 50f;
                         shootCone = 30;
                         velocityRnd = 0.1f;
-                        bullet = new MissileBulletType(6, 18, "circle-bullet") {{
+                        bullet = new MissileBulletType(6, 30, "circle-bullet") {{
+                            armorMultiplier = 1.1f;
                             reflectable = false;
                             drag = -0.01f;
                             width = height = 6;
@@ -4859,9 +4879,9 @@ public class SFUnitTypes {
             lowAltitude = true;
             faceTarget = true;
             rotateSpeed = 1.22f;
-            speed = 0.6f;
-            drag = 0.05f;
+            speed = 0.7f;
             accel = 0.04f;
+            drag = 0.018f;
             hitSize = 59;
             health = 20000;
             armor = 8;
@@ -5607,11 +5627,11 @@ public class SFUnitTypes {
 
                 shoot = new ShootBarrel(){{
                     barrels = new float[]{
-                            //0, 0, -45f,
-                            0, 0, -22.5f,
+                            0, 0, -35f,
+                            0, 0, -35/2f,
                             0, 0, 0,
-                            0, 0, 22.5f,
-                            //0, 0, 45f
+                            0, 0, 35/2f,
+                            0, 0, 35f
                     };
                 }};
                 shootCone = 360;
@@ -5638,7 +5658,7 @@ public class SFUnitTypes {
                     trailLength = 10;
                     trailWidth = 2;
                     trailColor = Color.white.cpy().a(0.8f);
-                    trailChance = 0.06f;
+                    trailChance = 0.8f;
                     trailEffect = new ParticleEffect() {{
                         particles = 4;
                         sizeFrom = 2;
@@ -5668,6 +5688,7 @@ public class SFUnitTypes {
                     new Weapon(name("merak-cannon")) {{
                         rotate = true;
                         x = 0;
+                        y = -21/4f;
                         rotateSpeed = 3.85f;
                         shootY = 70/4f;
                         shoot = new ShootAlternate(12);
@@ -6102,7 +6123,7 @@ public class SFUnitTypes {
                         mirror = false;
                         rotate = true;
                         rotateSpeed = 0.7f;
-                        layerOffset = 0.001f;
+                        layerOffset = 0.0011f;
                         shootY = 8;
                         shoot.firstShotDelay = 120;
                         inaccuracy = 3;
@@ -6294,6 +6315,490 @@ public class SFUnitTypes {
             );
         }};
 
+        hover1 = new UnitType("tadpole") {{
+            isEnemy = false;
+            constructor = UnitTypes.mega.constructor;
+            flying = true;
+            payloadCapacity = 64+32;
+            itemCapacity = 50;
+            rotateSpeed = 4f;
+            speed = 1.5f;
+            drag = 0.2f;
+            accel = 0.3f;
+            hitSize = 10;
+            health = 130f;
+            armor = 3;
+            moveSound = Sounds.loopExtract;
+            setEnginesMirror(
+                    new UnitEngine(6,-18/4f-1, 1.5f, -45f),
+                    new UnitEngine(6,17/4f+1,1.5f,45));
+            abilities.add(new MoveEffectAbility(0f, -7f, Pal.sapBulletBack, Fx.missileTrailShort, 4f){{
+                teamColor = true;
+            }});
+        }};
+        hover2 = new UnitType("dendrobate") {{
+            constructor = UnitTypes.elude.constructor;
+            hovering = true;
+            canDrown = false;
+            flying = false;
+            shadowElevation = 0.1f;
+            rotateSpeed = 4f;
+            speed = 1.2f;
+            hitSize = 14;
+            health = 450f;
+            parts.add(new HoverPart(){{
+                circles = 3;
+                rotation = 90;
+
+                radius = 15f;
+                phase = 45;
+                stroke = 2.5f;
+                layerOffset = -0.001f;
+                color = SFColor.discLight;
+            }});
+            faceTarget = true;
+            weapons.add(new Weapon(name("dendrobate-weapon")){{
+                mirror = false;
+                x = 0;
+                y = -5 /4f;
+                reload = 4f;
+                rotate = true;
+                rotationLimit = 90;
+                rotateSpeed = 3.5f;
+                shootSound = Sounds.loopSpray;
+                recoil = 0;
+                shootY = 8f;
+
+                bullet = new LiquidBulletType(SFLiquids.nitrate){{
+                    lifetime = 32;
+                    speed = 3;
+                    drag = 0.01f;
+                    shootEffect = Fx.shootLiquid;
+
+                    damage = 1.5f;
+                    buildingDamageMultiplier = 0.3f;
+                    knockback = 0.5f;
+                    statusDuration = 30;
+                    status = SFStatusEffects.acidded;
+                    layer = 98;
+                }};
+            }});
+        }};
+        hover3 = new UnitType("bombina") {{
+            constructor = UnitTypes.elude.constructor;
+            hovering = true;
+            canDrown = false;
+            flying = false;
+            shadowElevation = 0.35f;
+            canBoost = true;
+            boostMultiplier = 1.2f;
+            riseSpeed = 0.03f;
+            engineOffset = 13f;
+            engineSize = 3.2f;
+            rotateSpeed = 4f;
+            speed = 1.2f;
+            drag = 0.08f;
+            hitSize = 22;
+            health = 800f;
+            parts.add(new HoverPart(){{
+                circles = 2;
+                sides = 6;
+                mirror = false;
+                rotation = 60f;
+
+                radius = 26f;
+                phase = 120f;
+                stroke = 3f;
+                layerOffset = -0.001f;
+                color = SFColor.discDark;
+            }});
+            abilities.addAll(new MoveEffectAbility(){{
+                minVelocity = 0;
+                interval = 10;
+                y = -14f;
+                effect = new Effect(40, 40, e-> {
+                    rand.setSeed(e.id);
+                    Draw.color(Color.white.cpy().a(0.3f));
+
+                    for (int i = 0; i < 5; i++) {
+                        v.trns(rand.range(360), rand.random(e.finpow() * 24f), 0);
+                        e.scaled(e.lifetime * rand.random(0.8f, 1), b -> {
+                            Fill.circle(e.x + v.x, e.y + v.y, b.fout(Interp.pow2In) * rand.random(3f,8f));
+                        });
+                    }
+                }).layer(Layer.groundUnit-1);
+            }});
+
+            faceTarget = true;
+            weapons.add(new Weapon(name("bombina-gun")){{
+                x = 10;
+                y = -14/4f;
+                reload = 27;
+                recoil = 1;
+                inaccuracy = 3;
+                rotate = true;
+                rotationLimit = 45;
+                rotateSpeed = 1.5f;
+                shootSound = Sounds.shootLocus;
+                shootY = 0;
+                shoot = new ShootBarrel() {{
+                    barrels = new float[]{
+                            0.5f, 26/4f, 0,
+                            11/4f, 24/4f, 0,
+                            -2, 28/4f, 0
+                    };
+                    shots = 2;
+                }};
+                bullet = new BasicBulletType(6f, 18, "missile") {{
+                    lifetime = 8 * 26 / 6f;
+                    width = 4;
+                    height = 6;
+                    shrinkY = 0;
+                    reflectable = false;
+                    absorbable = false;
+                    frontColor = Color.white;
+                    backColor = Pal.heal;
+                    trailColor = Pal.heal.cpy().a(0.3f);
+                    trailWidth = 2;
+                    trailLength = 6;
+                    shootEffect = Fx.shootHeal;
+                    hitEffect = new ParticleEffect() {{
+                        particles = 5;
+                        sizeFrom = 3;
+                        length = 25;
+                        lifetime = 25;
+                        colorFrom = Pal.heal;
+                        colorTo = Pal.heal.cpy().a(0.02f);
+                    }};
+                    despawnEffect = Fx.none;
+
+                    sticky = true;
+                    stickyExtraLifetime = 183;
+                    intervalDelay = lifetime + 1;
+                    bulletInterval = 60;
+                    intervalBullet = new EmptyBulletType(){{
+                        splashDamage = 18;
+                        splashDamageRadius = 30f;
+                        status = SFStatusEffects.disRepair;
+                        statusDuration = 60;
+                        collidesGround = collidesAir = true;
+                        collides = false;
+                        hitEffect = despawnEffect = Fx.none;
+                        instantDisappear = true;
+                        buildingDamageMultiplier = 0f;
+                        hitEffect = new WaveEffect(){{
+                            sizeTo = 30;
+                            strokeFrom = 3;
+                            interp = Interp.circleOut;
+                            colorFrom = colorTo = Pal.heal;
+                        }};
+                        despawnEffect = Fx.none;
+                    }};
+
+                    fragOnHit = false;
+                    fragBullets = 1;
+                    fragBullet = new EmptyBulletType(){{
+                        instantDisappear = true;
+                        healAmount = 60;
+                        splashDamage = 0;
+                        splashDamageRadius = 24;
+                        collidesTiles = true;
+                        collidesTeam = true;
+                        hitEffect = despawnEffect = Fx.none;
+                    }};
+                }};
+            }});
+        }};
+        hover4 = new UnitType("bullfrog") {{
+            constructor = UnitTypes.elude.constructor;
+            hovering = true;
+            canDrown = false;
+            flying = false;
+            shadowElevation = 0.15f;
+            rotateSpeed = 2.6f;
+            speed = 1.1f;
+            drag = 0.1f;
+            accel = 0.16f;
+            hitSize = 46;
+            health = 10000;
+            armor = 6;
+            parts.add(new HoverPart(){{
+                x = 62/4f;
+                y = 76/4f;
+                circles = 3;
+                sides = 4;
+                mirror = true;
+
+                radius = 16f;
+                phase = 90f;
+                stroke = 1.8f;
+                layerOffset = -0.001f;
+                color = SFColor.discDark;
+            }});
+            parts.add(new HoverPart(){{
+                x = 68/4f;
+                y = -80/4f;
+                circles = 3;
+                sides = 6;
+                mirror = true;
+
+                radius = 24f;
+                phase = 180f;
+                stroke = 2.8f;
+                layerOffset = -0.001f;
+                color = SFColor.discDark;
+            }});
+            abilities.add(new MoveEffectAbility() {{
+                minVelocity = 0;
+                interval = 9;
+                effect = new Effect(45, 60, e -> {
+                    rand.setSeed(e.id);
+                    color(SFColor.discLight.cpy().a(0.8f), Color.white.cpy().a(0.1f), e.fin(Interp.pow5In));
+
+                    for (int i = 0; i < 3; i++) {
+                        v.trns(rand.range(360), rand.random(e.finpow() * 48f), 0);
+                        e.scaled(e.lifetime * rand.random(0.8f, 1), b -> {
+                            Fill.circle(e.x + v.x, e.y + v.y, b.fout(Interp.pow10Out) * rand.random(6f, 10f));
+                        });
+                    }
+                }).layer(Layer.groundUnit - 1);
+            }});
+
+            faceTarget = false;
+            weapons.addAll(
+                    new Weapon(name("regulus-missile")){{
+                        x = 62/4f;
+                        y = 76/4f;
+                        reload = 22;
+                        rotate = true;
+                        rotateSpeed = 6;
+                        shootSound = Sounds.shootCyclone;
+                        shoot.shots = 3;
+
+                        inaccuracy = 5;
+                        velocityRnd = 0.08f;
+                        xRand = 3;
+                        controllable = false;
+                        autoTarget = true;
+                        bullet = new PointBulletType() {{
+                            shootEffect = Fx.shootBig2;
+                            smokeEffect = new ParticleEffect() {{
+                                particles = 3;
+                                line = true;
+                                lenFrom = 24;
+                                lenTo = 0;
+                                strokeFrom = strokeTo = 0.4f;
+                                length = 60;
+                                lifetime = 12;
+                                cone = 10;
+                                colorFrom = Pal.bulletYellow;
+                                colorTo = Pal.bulletYellowBack;
+                            }};
+                            collidesGround = false;
+                            despawnEffect = hitEffect = Fx.flakExplosionBig;
+                            trailEffect = Fx.none;
+                            damage = 26;
+                            splashDamage = 30;
+                            splashDamageRadius = 45;
+                            status = StatusEffects.blasted;
+                            lifetime = 8;
+                            speed = 36;
+                        }};
+                    }},
+                    new Weapon(name("bullfrog-mount")){{
+                        x = 0;
+                        y = -30/4f;
+                        mirror = false;
+                        reload = 15;
+                        inaccuracy = 1.5f;
+                        rotate = true;
+                        rotateSpeed = 3f;
+
+                        recoil = 1;
+                        recoilTime = 20;
+                        shoot = new ShootAlternate(10);
+                        ejectEffect = Fx.casing3;
+                        shootY = 19;
+                        shootSound = Sounds.shootCyclone;
+                        bullet = new BasicBulletType(7.5f,38){{
+                            armorMultiplier = blockArmorMultiplier = 0.6f;
+                            lifetime = 8 * 32 / 7.5f;
+                            width = 10;
+                            height = 15;
+                            frontColor = Color.valueOf("EEFFC7");
+                            backColor = trailColor = hitColor = Color.valueOf("BECF99");
+
+                            trailChance = 0.3f;
+                            trailSpread = 6;
+                            trailParam = 1.6f;
+                            trailEffect = Fx.artilleryTrail;
+                            trailWidth = 2f;
+                            trailLength = 8;
+
+                            status = SFStatusEffects.acidded;
+                            statusDuration = 20;
+                            shootEffect = Fx.shootSmallColor;
+                            hitEffect = Fx.hitBulletBig;
+                            despawnEffect = Fx.hitLiquid;
+                        }};
+                    }}
+            );
+        }};
+        hover5 = new UnitType("salamander"){{
+            constructor = UnitTypes.elude.constructor;
+            hovering = true;
+            canDrown = false;
+            flying = false;
+            shadowElevation = 0.25f;
+
+            rotateSpeed = 1.6f;
+            speed = 0.7f;
+            drag = 0.11f;
+            accel = 0.2f;
+            hitSize = 45;
+            health = 20600f;
+            parts.add(new HoverPart(){{
+                circles = 4;
+                sides = 8;
+                mirror = false;
+
+                radius = 37f;
+                phase = 190f;
+                stroke = 3.6f;
+                layerOffset = -0.001f;
+                color = SFColor.discDark;
+            }});
+
+            for(int i=0;i<2;i++){
+                int fi = i;
+                abilities.add(new ShieldArcAbility() {{
+                    x = -8 * (fi>0 ? 1 : -1);
+                    y = -45/4f;
+                    angleOffset = fi>0 ? 80f : -80f;
+
+                    radius = 40+16;
+                    width = 8;
+                    max = 800;
+                    regen = 4;
+                    cooldown = 360;
+                    angle = 110;
+                }});
+            }
+
+            Weapon salamGun = new Weapon(name("salamander-gun")) {{
+                rotate = true;
+                rotateSpeed = 3.8f;
+                reload = 24;
+                shootSound = Sounds.shootLaser;
+                recoil = 4;
+                recoilTime = 60;
+
+                velocityRnd = 0.02f;
+                bullet = new MissileBulletType(6, 34, "circle-bullet") {{
+                    splashDamageRadius = 20;
+                    splashDamage = damage;
+
+                    armorMultiplier = -1.15f;
+                    shieldDamageMultiplier = 4f;
+                    homingPower = 0.08f;
+                    weaveMag = 4;
+                    weaveScale = 4;
+
+                    width = height = 6;
+                    lifetime = 32 * 8 / 6f;
+                    reflectable = false;
+                    frontColor = Color.white;
+                    backColor = hitColor = SFColor.energyYellow;
+                    trailColor = SFColor.energyYellow;
+                    trailLength = 6;
+                    trailWidth = 2;
+                    trailEffect = Fx.none;
+
+                    hitEffect = new WrapEffect(Fx.dynamicSpikes, hitColor, 20);
+                    despawnEffect = new WaveEffect() {{
+                        lifetime = 10;
+                        sizeFrom = 1;
+                        sizeTo = 8;
+                        strokeFrom = 2.5f;
+                        colorFrom = colorTo = hitColor;
+                    }};
+                    shootEffect = Fx.shootSmallColor;
+                    smokeEffect = Fx.hitLaserColor;
+                    status = SFStatusEffects.magnStrif;
+                    statusDuration = 30;
+                }};
+            }};
+
+            weapons.addAll(
+                    copyRotRel(salamGun, 86/4f, 78/4f, 0, 2),
+                    copyRotRel(salamGun, 106/4f, 64/4f, 0, 1),
+                    copyRotRel(salamGun, 82/4f, 12/4f, 0, -2),
+                    new Weapon(name("salamander-weapon")){{
+                        x = 0;
+                        y = -39/4f;
+                        mirror = false;
+                        rotate = true;
+                        rotateSpeed = 1.8f;
+                        reload = 110;
+                        cooldownTime = 120;
+                        shake = 4;
+                        shootSound = Sounds.shootSpectre;
+                        shoot.shots = 3;
+                        shoot.shotDelay = 12;
+
+                        shootY = 16;
+                        bullet = new SizeDamageBullet(10,100,"missile-large"){{
+                            frontColor = Color.white;
+                            backColor = hitColor = trailColor = SFColor.energyYellow;
+                            sizeDamageMul = 1.5f;
+                            basicSize = 20;
+                            status = SFStatusEffects.breakdown;
+                            statusDuration = 160;
+
+                            width = 11;
+                            height = 24;
+                            trailWidth = 3;
+                            trailLength = 16;
+
+                            hitShake = 3;
+                            hitEffect = new WrapEffect(Fx.dynamicExplosion, hitColor, 1);
+                            despawnEffect = new ExplosionEffect(){{
+                                lifetime = 60;
+                                sparks = 15;
+                                sparkStroke = 2;
+                                sparkLen = 20;
+                                sparkRad = 46;
+                                smokes = 8;
+                                smokeRad = 38;
+                                smokeSize = 3;
+
+                                sparkColor = SFColor.energyYellow;
+                                smokeColor = SFColor.energyYellow.cpy().a(0.8f);
+                                waveColor = SFColor.energyYellow;
+                            }};
+                            shootEffect = Fx.shootTitan;
+                            smokeEffect = Fx.shootSmokeTitan;
+
+                        }};
+                    }}
+            );
+        }};
+        hover6 = new UnitType("gharial"){{
+            constructor = UnitTypes.elude.constructor;
+            hovering = true;
+            canDrown = false;
+            flying = false;
+            shadowElevation = 0.2f;
+
+            rotateSpeed = 3f;
+            speed = 1.2f;
+            drag = 0.04f;
+            accel = 0.05f;
+            hitSize = 14;
+            health = 450f;
+        }};
+
+
         farmer = new UnitType("farmer") {{
             constructor = UnitTypes.mega.constructor;
             flying = true;
@@ -6316,7 +6821,7 @@ public class SFUnitTypes {
             itemCapacity = 150;
             mineSpeed = 11;
             mineTier = 4;
-            mineRange = 70;
+            mineRange = range =70;
             mineItems.add(SFItems.strontium,SFItems.chromium,SFItems.rubidium,SFItems.rareEarth);
             trailLength = 6;
             engineSize = 2.8f;
@@ -6378,7 +6883,6 @@ public class SFUnitTypes {
                         x = 9;
                         y = -2;
                         shootY = 6;
-                        rotate = false;
                         alternate = true;
                         layerOffset = -0.001f;
                         shootSound = Sounds.shootLaser;

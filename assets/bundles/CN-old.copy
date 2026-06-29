@@ -173,14 +173,7 @@ unit.sfire-mod-沧海B.details = [#a3ba73]溢裂数据库已解码：\n[]代号�
 #unit.sfire-mod-沧海D.details = [#a3ba73]溢裂数据库已解 ：\n[]代号“刃海”\n刃海级导弹巡洋舰，全波段雷达隐身，武库级导弹配置\n搭载几乎所有已知和未知（有待考证）种类的导弹，只搭载了少部分近防炮与常规舰炮。\n与之作战显然不是一个好主意，一旦遭遇则最先抵达雷达范围内的应会是各种型号的导弹，不奢求舰队对其有多少反击能力，应当立刻报告坐标并警告周围部队远离此处。
 
 #unit.sfire-mod-沧海D.description = 标准化重型海面主战船只，搭载近防炮与多种型号导弹。
-unit.sfire-mod-泰坦.name = 泰坦
-unit.sfire-mod-泰坦.description = 标准化重型地面战斗机甲，安装中程大口径霰弹炮与中程炸弹弹射器。
-unit.sfire-mod-伯劳.name = 伯劳
-unit.sfire-mod-伯劳.description = 信息缺失！
-unit.sfire-mod-利刃.name = 利刃
-unit.sfire-mod-利刃.description = 标准化轻型护航舰只，携带激光照射炮与多种导弹系统。
-unit.sfire-mod-亚龙.name = 亚龙
-unit.sfire-mod-亚龙.description = 信息缺失！
+
 
 #——物品——#
 item.sfire-mod-纲稀硅.name = 纲稀硅
@@ -189,18 +182,3 @@ item.sfire-mod-纲稀硅.description = 半导体PNP电磁晶体，质地硬脆�
 item.sfire-mod-青藓.name = 青藓
 item.sfire-mod-青藓.description = 主动培育的有机体，其有效生命活动会释放多种含碳物质。
 item.sfire-mod-青藓.details = 生命力顽强且对外界呈现出一定的活动惰性，适于大规模培育且不易造成泄露事故
-
-#——单位——#
-
-unit.sfire-mod-兵刃.name = 兵刃
-unit.sfire-mod-兵刃.description = 中坚战斗舰船，这将是你的长期主力战舰。\n搭载反舰导弹发射器来击毁敌方舰船。\n舰炮可以拦截敌方导弹或者攻击舰船。
-unit.sfire-mod-穿行.name = 穿行
-unit.sfire-mod-穿行.description = 高速侦察舰船，牺牲部分防御力量换取更高的速度。\n搭载反舰导弹发射器来击毁敌方舰船。\n舰炮可以拦截敌方导弹或者攻击舰船，[red]但效率较低[]。
-unit.sfire-mod-定远.name = 定远
-unit.sfire-mod-定远.description = 重型火力支援舰船，搭载大量弹药并携带单体护盾。\n搭载反舰导弹发射器来击毁敌方舰船。\n舰炮可以拦截敌方导弹或者攻击舰船。
-unit.sfire-mod-摧坚.name = 摧坚
-unit.sfire-mod-摧坚.description = 火力突袭舰船，搭载更多弹药。\n搭载反舰导弹发射器来击毁敌方舰船。\n舰炮可以拦截敌方导弹或者攻击舰船。
-
-#——状态——#
-status.sfire-mod-磁扰.name = 磁扰
-status.sfire-mod-酸蚀.name = 酸蚀

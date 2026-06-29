@@ -620,6 +620,7 @@ public class SFBlocks {
             buildVisibility = BuildVisibility.sandboxOnly;
             rebuildable = false;
             category = Category.defense;
+            baseExplosiveness = 50;
             destroyBullet = new ExplosionBulletType(220, 50) {{
                 status = StatusEffects.blasted;
                 hitSound = SFSounds.explosionbig;
@@ -675,6 +676,7 @@ public class SFBlocks {
             buildVisibility = BuildVisibility.sandboxOnly;
             rebuildable = false;
             category = Category.defense;
+            baseExplosiveness = 50;
             destroyBullet = new ExplosionBulletType(440, 100) {{
                 status = StatusEffects.blasted;
                 hitSound = SFSounds.explosionbig;
@@ -800,19 +802,19 @@ public class SFBlocks {
                 fragLifeMin = 0.8f;
                 fragVelocityMax = 1.2f;
                 fragVelocityMin = 0.6f;
-                fragBullet = new BasicBulletType(10, 820) {{
+                fragBullet = new BasicBulletType(10/3f, 820) {{
                     buildingDamageMultiplier = 45.5f;
                     hitSize = 16f;
                     hittable = absorbable = false;
                     pierce = true;
-                    lifetime = 13.5f;
+                    lifetime = 13.5f *3;
                     hitShake = 3.5f;
                     width = height = 0;
                     hitSound = SFSounds.boom;
                     hitSoundVolume = 3;
                     hitEffect = despawnEffect = Fx.blastExplosion;
-                    intervalDelay = 1;
-                    bulletInterval = 0.12f;
+                    intervalDelay = 3;
+                    bulletInterval = 0.2f*3;
                     intervalBullets = 1;
                     intervalBullet = new FireBulletType(4, 280) {{
                         lifetime = 10;
@@ -864,19 +866,19 @@ public class SFBlocks {
                 fragLifeMin = 0.8f;
                 fragVelocityMax = 1.2f;
                 fragVelocityMin = 0.6f;
-                fragBullet = new BasicBulletType(10, 820) {{
+                fragBullet = new BasicBulletType(10/3f, 820) {{
                     buildingDamageMultiplier = 45.5f;
                     hitSize = 16f;
                     hittable = absorbable = false;
                     pierce = true;
-                    lifetime = 13.5f;
+                    lifetime = 13.5f *3;
                     hitShake = 3.5f;
                     width = height = 0;
                     hitSound = SFSounds.boom;
                     hitSoundVolume = 3;
                     hitEffect = despawnEffect = Fx.blastExplosion;
-                    intervalDelay = 1;
-                    bulletInterval = 0.12f;
+                    intervalDelay = 3;
+                    bulletInterval = 0.2f*3;
                     intervalBullets = 1;
                     intervalBullet = new FireBulletType(4, 280) {{
                         lifetime = 10;
@@ -905,9 +907,10 @@ public class SFBlocks {
             buildVisibility = BuildVisibility.sandboxOnly;
             rebuildable = false;
             category = Category.defense;
-            destroyBullet = new ExplosionBulletType(1300, 200) {{
+            baseExplosiveness = 50;
+            destroyBullet = new ExplosionBulletType(1300, 240) {{
                 status = SFStatusEffects.acidded;
-                statusDuration = 60 * 20;
+                statusDuration = 60 * 25;
                 scaledSplashDamage = true;
                 hitSound = Sounds.blockExplodeFlammable;
                 hitSoundVolume = 5;
@@ -2502,7 +2505,7 @@ public class SFBlocks {
             insulated = absorbLasers = placeableLiquid = true;
         }};
         silisteelConveyor = new StackConveyor("silisteel-conveyor") {{
-            requirements(Category.distribution, with(SFItems.waveSteel,1, Items.metaglass,1, SFItems.waveSteel,2));
+            requirements(Category.distribution, with(SFItems.siliSteel,1, Items.metaglass,1, SFItems.waveSteel,2));
             health = 130;
             speed = 8 / 60f;
             itemCapacity = 30;
@@ -7935,7 +7938,7 @@ public class SFBlocks {
                         backColor = trailColor = SFColor.discDark;
                         trailLength = 11;
                         trailWidth = 2.5f;
-                        hitSound = Sounds.shootLaser;
+                        hitSound = SFSounds.laser;
                         hitSoundVolume = 0.25f;
                         hitEffect = despawnEffect = Fx.instBomb;
                     }}
@@ -10100,16 +10103,17 @@ public class SFBlocks {
             size = 11;
             liquidCapacity = 300;
             upgrades.addAll(
-                    new UnitType[]{UnitTypes.reign, SFUnitTypes.liXian},
-                    new UnitType[]{UnitTypes.corvus, SFUnitTypes.diXing},
-                    new UnitType[]{UnitTypes.toxopid, SFUnitTypes.panLong},
-                    new UnitType[]{UnitTypes.oct, SFUnitTypes.guangHan},
-                    new UnitType[]{UnitTypes.eclipse, SFUnitTypes.yuHui},
-                    new UnitType[]{UnitTypes.omura, SFUnitTypes.tengWang},
-                    new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan},
-                    new UnitType[]{SFUnitTypes.tank5, SFUnitTypes.tank6},
-                    new UnitType[]{SFUnitTypes.air5, SFUnitTypes.air6},
-                    new UnitType[]{SFUnitTypes.naval5, SFUnitTypes.naval6}
+                new UnitType[]{UnitTypes.reign, SFUnitTypes.liXian},
+                new UnitType[]{UnitTypes.corvus, SFUnitTypes.diXing},
+                new UnitType[]{UnitTypes.toxopid, SFUnitTypes.panLong},
+                new UnitType[]{UnitTypes.oct, SFUnitTypes.guangHan},
+                new UnitType[]{UnitTypes.eclipse, SFUnitTypes.yuHui},
+                new UnitType[]{UnitTypes.omura, SFUnitTypes.tengWang},
+                new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan},
+                new UnitType[]{SFUnitTypes.tank5, SFUnitTypes.tank6},
+                new UnitType[]{SFUnitTypes.air5, SFUnitTypes.air6},
+                new UnitType[]{SFUnitTypes.naval5, SFUnitTypes.naval6}
+                //new UnitType[]{SFUnitTypes.hover5, SFUnitTypes.hover6}
             );
             researchCostMultiplier = 0.2f;
             buildCostMultiplier = 0.7f;

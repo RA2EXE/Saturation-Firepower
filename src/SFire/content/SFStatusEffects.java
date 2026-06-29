@@ -213,9 +213,10 @@ public class SFStatusEffects {
             }};
         }};
         acidded = new StatusEffect("acidded") {{
-            damage = 1.88f;
             speedMultiplier = 0.98f;
             healthMultiplier = 0.95f;
+            intervalDamage = 1.88f * 5;
+            intervalDamageTime = 5;
             effect = new ParticleEffect() {{
                 particles = 3;
                 baseLength = 0;
@@ -233,6 +234,7 @@ public class SFStatusEffects {
             @Override
             public void update(Unit unit, StatusEntry entry){
                 super.update(unit, entry);
+
                 if(unit.armor > 0){
                     effectChance = 0.05f;
                     unit.armor = Mathf.approachDelta(unit.armor, 0, armorAcidDown/60f);
@@ -240,10 +242,10 @@ public class SFStatusEffects {
                         unit.armor = 0;
                     }
                 }else {
-                    effectChance = 0.6f;
-                    //额外300%增伤
-                    unit.damageContinuous(3 * damage);
                     effectChance = 1f;
+                    //额外300%增伤
+                    intervalDamage = 1.88f*5 * 3;
+                    //unit.damageContinuous(3 * damage);
                 }
 
             }
