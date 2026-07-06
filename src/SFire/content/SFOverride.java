@@ -666,6 +666,7 @@ public class SFOverride {
         ((UnitFactory)Blocks.airFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.air1, 60 * 25f, with(Items.silicon,15,Items.titanium,20)));
         ((UnitFactory)Blocks.groundFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.tank1, 60 * 40f, with(Items.silicon,30,Items.titanium,25,Items.lead,25)));
         ((UnitFactory)Blocks.navalFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.naval1, 60 * 50f, with(Items.silicon,35,Items.titanium,35,Items.metaglass,25)));
+        ((UnitFactory)Blocks.navalFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.hover1, 60 * 40f, with(Items.silicon,40,Items.titanium,30)));
 
         ((Reconstructor)Blocks.additiveReconstructor).upgrades.addAll(
                 new UnitType[]{SFUnitTypes.tank1, SFUnitTypes.tank2},
