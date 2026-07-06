@@ -6319,10 +6319,10 @@ public class SFUnitTypes {
             isEnemy = false;
             constructor = UnitTypes.mega.constructor;
             flying = true;
-            payloadCapacity = 64+32;
-            itemCapacity = 50;
+            payloadCapacity = 1.5f * (8*8);
+            itemCapacity = 60;
             rotateSpeed = 4f;
-            speed = 1.5f;
+            speed = 2.1f;
             drag = 0.2f;
             accel = 0.3f;
             hitSize = 10;
@@ -6343,7 +6343,7 @@ public class SFUnitTypes {
             flying = false;
             shadowElevation = 0.1f;
             rotateSpeed = 4f;
-            speed = 1.2f;
+            speed = 1.3f;
             hitSize = 14;
             health = 450f;
             immunities.addAll(StatusEffects.corroded,SFStatusEffects.acidded);
