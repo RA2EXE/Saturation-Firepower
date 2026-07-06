@@ -6367,6 +6367,7 @@ public class SFUnitTypes {
                 rotationLimit = 90;
                 rotateSpeed = 3.5f;
                 shootSound = Sounds.loopSpray;
+                shootSoundVolume = 0.2f;
                 recoil = 0;
                 shootY = 8f;
 
@@ -6401,6 +6402,7 @@ public class SFUnitTypes {
             drag = 0.08f;
             hitSize = 22;
             health = 800f;
+            armor = 6;
             parts.add(new HoverPart(){{
                 circles = 2;
                 sides = 6;
@@ -6487,13 +6489,23 @@ public class SFUnitTypes {
                         hitEffect = despawnEffect = Fx.none;
                         instantDisappear = true;
                         buildingDamageMultiplier = 0f;
-                        hitEffect = new WaveEffect(){{
+                        hitEffect = new ParticleEffect() {{
+                            region = "shell";
+                            particles = 3;
+                            sizeFrom = 4;
+                            length = 25;
+                            lifetime = 25;
+                            interp = Interp.pow2Out;
+                            sizeInterp = Interp.pow2In;
+                            colorFrom = Pal.heal;
+                            colorTo = Pal.heal.cpy().a(0.02f);
+                        }};
+                        despawnEffect = new WaveEffect(){{
                             sizeTo = 30;
                             strokeFrom = 3;
                             interp = Interp.circleOut;
                             colorFrom = colorTo = Pal.heal;
                         }};
-                        despawnEffect = Fx.none;
                     }};
 
                     fragOnHit = false;
@@ -6522,7 +6534,7 @@ public class SFUnitTypes {
             accel = 0.16f;
             hitSize = 46;
             health = 10000;
-            armor = 6;
+            armor = 9;
             immunities.addAll(StatusEffects.corroded,SFStatusEffects.acidded);
             parts.add(new HoverPart(){{
                 x = 62/4f;
@@ -6571,18 +6583,26 @@ public class SFUnitTypes {
                     new Weapon(name("regulus-missile")){{
                         x = 62/4f;
                         y = 76/4f;
-                        reload = 22;
+                        reload = 12;
                         rotate = true;
                         rotateSpeed = 6;
                         shootSound = Sounds.shootCyclone;
-                        shoot.shots = 3;
+                        shoot.shots = 2;
+                        shoot.shotDelay = 2;
 
                         inaccuracy = 5;
-                        velocityRnd = 0.08f;
+                        velocityRnd = 0.1f;
                         xRand = 3;
                         controllable = false;
                         autoTarget = true;
                         bullet = new PointBulletType() {{
+                            damage = splashDamage = 45;
+                            splashDamageRadius = 40;
+                            armorMultiplier = 1.15f;
+                            lifetime = 8;
+                            speed = 36;
+                            status = StatusEffects.blasted;
+
                             shootEffect = Fx.shootBig2;
                             smokeEffect = new ParticleEffect() {{
                                 particles = 3;
@@ -6599,12 +6619,6 @@ public class SFUnitTypes {
                             collidesGround = false;
                             despawnEffect = hitEffect = Fx.flakExplosionBig;
                             trailEffect = Fx.none;
-                            damage = 26;
-                            splashDamage = 30;
-                            splashDamageRadius = 45;
-                            status = StatusEffects.blasted;
-                            lifetime = 8;
-                            speed = 36;
                         }};
                     }},
                     new Weapon(name("bullfrog-mount")){{
@@ -6660,7 +6674,7 @@ public class SFUnitTypes {
             hitSize = 45;
             health = 20600f;
             parts.add(new HoverPart(){{
-                circles = 4;
+                circles = 5;
                 sides = 8;
                 mirror = false;
 
@@ -6692,11 +6706,12 @@ public class SFUnitTypes {
                 rotateSpeed = 3.8f;
                 reload = 24;
                 shootSound = Sounds.shootLaser;
-                recoil = 4;
+                shootSoundVolume = 2f;
+                recoil = 2;
                 recoilTime = 60;
 
                 velocityRnd = 0.02f;
-                bullet = new MissileBulletType(6, 34, "circle-bullet") {{
+                bullet = new MissileBulletType(6, 32, "circle-bullet") {{
                     splashDamageRadius = 20;
                     splashDamage = damage;
 
@@ -6748,6 +6763,8 @@ public class SFUnitTypes {
                         shoot.shots = 3;
                         shoot.shotDelay = 12;
 
+                        recoil = 4;
+                        recoilTime = 90;
                         shootY = 16;
                         bullet = new SizeDamageBullet(10,100,"missile-large"){{
                             frontColor = Color.white;
@@ -6794,8 +6811,8 @@ public class SFUnitTypes {
 
             rotateSpeed = 1.25f;
             speed = 0.4f;
-            drag = 0.05f;
-            accel = 0.06f;
+            drag = 0.07f;
+            accel = 0.1f;
             hitSize = 60;
 
             health = 19800f;
@@ -6812,10 +6829,10 @@ public class SFUnitTypes {
                 sides = 6;
                 mirror = true;
 
-                x = 176/4f;
+                x = 160/4f;
                 y = 37/4f;
 
-                radius = 60/4f;
+                radius = 80/4f;
                 phase = 120f;
                 stroke = 4f;
                 layerOffset = -0.001f;
@@ -6829,7 +6846,7 @@ public class SFUnitTypes {
                 x = 95/4f;
                 y = -122/4f;
 
-                radius = 60/4f;
+                radius = 80/4f;
                 phase = 120f;
                 stroke = 4f;
                 layerOffset = -0.001f;
@@ -6860,7 +6877,7 @@ public class SFUnitTypes {
                         y = -16f;
                         reload = 260;
                         rotate = true;
-                        rotateSpeed = 0.3f;
+                        rotateSpeed = 1.3f;
 
                         shootCone = 6;
                         linearWarmup = true;
@@ -6881,19 +6898,17 @@ public class SFUnitTypes {
                             damage = splashDamage = 830;
                             buildingDamageMultiplier = 1.5f;
                             splashDamageRadius = 50;
-
                             status = SFStatusEffects.echoFlame;
                             statusDuration = 10;
+
                             trailSpacing = 9;
                             trailEffect = new ParticleEffect() {{
                                 line = true;
-                                sizeInterp = Interp.slope;
                                 lenFrom = lenTo = 10;
                                 length = baseLength = 1;
-                                strokeFrom = 0;
-                                strokeTo = 8.5f;
+                                strokeFrom = 8.5f;
                                 randLength = false;
-                                lifetime = 50;
+                                lifetime = 30;
                                 colorFrom = colorTo = SFColor.energyGreen;
                                 cone = 0;
                             }};
