@@ -12,5 +12,7 @@
 ## Community
 + **Discord Server**
 >https://discord.gg/uScpeSRr8D
+>Note: Due to regional laws restricting online access, I don’t use this software very often. But you can still give your feedback here, and someone will help pass it along.
 + **QQ Group | QQ群**
->181108928
+> 一群：181108928
+> 二群：824207818

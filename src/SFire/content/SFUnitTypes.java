@@ -6346,6 +6346,7 @@ public class SFUnitTypes {
             speed = 1.2f;
             hitSize = 14;
             health = 450f;
+            immunities.addAll(StatusEffects.corroded,SFStatusEffects.acidded);
             parts.add(new HoverPart(){{
                 circles = 3;
                 rotation = 90;
@@ -6522,6 +6523,7 @@ public class SFUnitTypes {
             hitSize = 46;
             health = 10000;
             armor = 6;
+            immunities.addAll(StatusEffects.corroded,SFStatusEffects.acidded);
             parts.add(new HoverPart(){{
                 x = 62/4f;
                 y = 76/4f;
@@ -6788,14 +6790,169 @@ public class SFUnitTypes {
             hovering = true;
             canDrown = false;
             flying = false;
-            shadowElevation = 0.2f;
+            shadowElevation = 0.1f;
 
-            rotateSpeed = 3f;
-            speed = 1.2f;
-            drag = 0.04f;
-            accel = 0.05f;
-            hitSize = 14;
-            health = 450f;
+            rotateSpeed = 1.25f;
+            speed = 0.4f;
+            drag = 0.05f;
+            accel = 0.06f;
+            hitSize = 60;
+
+            health = 19800f;
+            armor = 12;
+            immunities.addAll(
+                    StatusEffects.melting,StatusEffects.freezing,StatusEffects.burning,
+                    SFStatusEffects.breakdown,SFStatusEffects.magnStrif,
+                    SFStatusEffects.negative,SFStatusEffects.postive,
+                    SFStatusEffects.chemicalFlame
+            );
+
+            parts.add(new HoverPart(){{
+                circles = 3;
+                sides = 6;
+                mirror = true;
+
+                x = 176/4f;
+                y = 37/4f;
+
+                radius = 60/4f;
+                phase = 120f;
+                stroke = 4f;
+                layerOffset = -0.001f;
+                color = SFColor.discLight;
+            }});
+            parts.add(new HoverPart(){{
+                circles = 3;
+                sides = 6;
+                mirror = true;
+
+                x = 95/4f;
+                y = -122/4f;
+
+                radius = 60/4f;
+                phase = 120f;
+                stroke = 4f;
+                layerOffset = -0.001f;
+                color = SFColor.discLight;
+            }});
+
+            faceTarget = false;
+            parts.add(new HaloPart() {{
+                hollow = true;
+                shapes = 1;
+                y = -16;
+                rotateSpeed = 0.3f;
+                sides = 6;
+                radius = 180;
+                radiusTo = 60;
+                stroke = 0;
+                strokeTo = 8;
+                color = SFColor.energyGreen.cpy().a(0.2f);
+                colorTo = SFColor.energyGreen.cpy().a(0.5f);
+                layer = 110;
+            }});
+            weapons.addAll(
+                    new Weapon(name("gharial-weapon")) {{
+                        shootStatus = StatusEffects.unmoving;
+                        shootStatusDuration = 90;
+                        mirror = false;
+                        x = 0;
+                        y = -16f;
+                        reload = 260;
+                        rotate = true;
+                        rotateSpeed = 0.3f;
+
+                        shootCone = 6;
+                        linearWarmup = true;
+                        shootWarmupSpeed = 1 / 180f;
+                        minWarmup = 0.99f;
+                        shootY = 30f;
+
+                        shoot.firstShotDelay = 80;
+                        chargeSound = Sounds.chargeCorvus;
+                        shootSound = SFSounds.laser;
+                        shake = 8;
+                        recoilTime = 160;
+                        recoil = 4;
+                        bullet = new PointBulletType() {{
+                            speed = 8 * 10;
+                            lifetime = 55 / 10f;
+
+                            damage = splashDamage = 830;
+                            buildingDamageMultiplier = 1.5f;
+                            splashDamageRadius = 50;
+
+                            status = SFStatusEffects.echoFlame;
+                            statusDuration = 10;
+                            trailSpacing = 9;
+                            trailEffect = new ParticleEffect() {{
+                                line = true;
+                                sizeInterp = Interp.slope;
+                                lenFrom = lenTo = 10;
+                                length = baseLength = 1;
+                                strokeFrom = 0;
+                                strokeTo = 8.5f;
+                                randLength = false;
+                                lifetime = 50;
+                                colorFrom = colorTo = SFColor.energyGreen;
+                                cone = 0;
+                            }};
+                            hitSound = Sounds.explosionQuad;
+                            hitSoundVolume = 2;
+                            hitShake = 6;
+                            smokeEffect = new ParticleEffect() {{
+                                particles = 25;
+                                interp = Interp.pow5Out;
+                                sizeInterp = Interp.fade;
+                                sizeFrom = 8;
+                                lifetime = 125;
+                                length = 60;
+                                colorFrom = SFColor.energyGreen.cpy().a(0.8f);
+                                colorTo = SFColor.energyGreen.cpy().a(0.2f);
+                            }};
+                            despawnEffect = Fx.bigShockwave;
+                            hitColor = SFColor.energyGreen.cpy().a(0.3f);
+                            hitEffect = new MultiEffect(Fx.titanSmoke,
+                                    new WaveEffect() {{
+                                        lifetime = 22;
+                                        sizeTo = 100;
+                                        strokeFrom = 50;
+                                        colorFrom = SFColor.energyGreen;
+                                        colorTo = SFColor.energyGreen.cpy().a(0.2f);
+                                    }},
+                                    new ParticleEffect() {{
+                                        sizeInterp = Interp.pow10In;
+                                        sizeFrom = 20;
+                                        lifetime = 60;
+                                        length = 0;
+                                        colorFrom = SFColor.energyGreen;
+                                        colorTo = SFColor.energyGreen.cpy().a(0.1f);
+                                    }}
+                            );
+                            chargeEffect = new MultiEffect(
+                                    new ParticleEffect() {{
+                                        particles = 12;
+                                        interp = Interp.pow5In;
+                                        sizeInterp = Interp.bounce;
+                                        sizeFrom = 0;
+                                        sizeTo = 3.5f;
+                                        lifetime = 60;
+                                        length = 100;
+                                        baseLength = -100;
+                                        colorFrom = colorTo = SFColor.energyGreen;
+                                    }},
+                                    new ParticleEffect() {{
+                                        sizeInterp = Interp.elastic;
+                                        sizeTo = 10;
+                                        lifetime = 80;
+                                        length = 0;
+                                        colorFrom = colorTo = SFColor.energyGreen;
+                                    }}
+                            );
+
+                        }};
+                    }}
+            );
         }};
 
 

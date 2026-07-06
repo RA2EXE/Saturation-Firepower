@@ -1,0 +1,147 @@
+
+#this bundle was the old one, it still could work but needs Ctrl+CV
+
+#\u2014\u2014Turrets\u2014\u2014#
+block.\u9971\u548C\u706B\u529B-\u950B\u8292.name = Coldfront
+block.\u9971\u548C\u706B\u529B-\u950B\u8292.description = Emits single-target endothermal ray at enemy.
+block.\u9971\u548C\u706B\u529B-\u950B\u8292.details = Generates ultra low temperature through discordance energy source. Can embrittle most kind of armor.
+block.\u9971\u548C\u706B\u529B-\u523A\u973E.name = Hazexcluder
+block.\u9971\u548C\u706B\u529B-\u523A\u973E.description =
+block.\u9971\u548C\u706B\u529B-\u523A\u973E.details = [red]And can also destroy our supply chain in a blink of an eye....\n[white]Sure, Brain, but where are you going to get enough leippium alloy for this?
+block.\u9971\u548C\u706B\u529B-\u5927\u5782\u53D1.name = Tomahawk
+block.\u9971\u548C\u706B\u529B-\u5927\u5782\u53D1.description = Launches tactical cluster ballistic missiles at targets over long ranges.\nHas poor accuracy at closer ranges.
+block.\u9971\u548C\u706B\u529B-\u6124\u503E.name = Violence
+block.\u9971\u548C\u706B\u529B-\u6124\u503E.description = Fires a massive hail of energy projectiles that disrupts enemy weapon systems and temporarily disarm them. Requires cryofluid to operate.
+
+block.\u9971\u548C\u706B\u529B-\u524D\u72FC.name = Timberwolf
+block.\u9971\u548C\u706B\u529B-\u524D\u72FC.description = Launches anti-air guided missiles at enemy air targets.
+block.\u9971\u548C\u706B\u529B-\u524D\u72FC.details = Removed auto targeting system for extreme damage output.\n[red]Recommened to be controled manually or by logic.
+
+
+
+block.\u9971\u548C\u706B\u529B-\u6298\u8DC3.name = Separation
+block.\u9971\u548C\u706B\u529B-\u6298\u8DC3.description = Releases discordance energy to neutralize incoming projectiles.
+
+block.\u9971\u548C\u706B\u529B-\u5782\u53D1.name = Missile Silo
+block.\u9971\u548C\u706B\u529B-\u5782\u53D1.description = Launches homing missiles at enemy targets in a wide range area. \nIt can be coordinated with a logic processor for saturation strikes.
+block.\u9971\u548C\u706B\u529B-\u5782\u53D1.details = [red]Not support liquid cooling. What do you expect?
+
+
+block.\u9971\u548C\u706B\u529B-\u5929\u62F3\u9632\u5FA1\u5E73\u53F0.name = "Retribution" Nuke Launcher Platform
+block.\u9971\u548C\u706B\u529B-\u6C34\u9762\u9632\u5FA1\u5E73\u53F0.name = "Current" Torpedo Platform
+block.\u9971\u548C\u706B\u529B-\u626C\u5B50\u9CC4\u9632\u5FA1\u5E73\u53F0.name = "Alligator" Proton Autocannon Platform
+block.\u9971\u548C\u706B\u529B-\u70ED\u8F68\u9053\u9632\u5FA1\u5E73\u53F0.name = E.S.H.T.R.G.
+block.\u9971\u548C\u706B\u529B-\u70ED\u8F68\u9053\u9632\u5FA1\u5E73\u53F0.description = E.S.H.T.R.G. stands for Experimental Super Heated Thermal Railgun.
+block.\u9971\u548C\u706B\u529B-\u70ED\u8F68\u9053\u9632\u5FA1\u5E73\u53F0.details = The li'l brother-kun of The Echoing Flare.
+block.\u9971\u548C\u706B\u529B-\u7586\u571F\u9632\u5FA1\u5E73\u53F0.name = Homeland
+block.\u9971\u548C\u706B\u529B-\u7586\u571F\u9632\u5FA1\u5E73\u53F0.description = Specialized railgun that fires powerful heavy shells in bursts of three at enemies over extreme ranges. \n[red]Becomes very effective against structures when loaded with cluster explosive.
+
+block.\u9971\u548C\u706B\u529B-\u9668\u661F.name = Comet
+block.\u9971\u548C\u706B\u529B-\u9668\u661F.description = Releases nuclear explosions in the form of kinetic energy blasts, but has an exceedingly low fire rate and horrible accuracy. \nRecommended to use with overdrive projectors to increase fire rate.
+block.\u9971\u548C\u706B\u529B-\u9668\u661F.details = "I'm sorry, but even the toughest materials today can't act as an energy redirector, and we can't control the direction of the nuclear explosion for now."
+block.\u9971\u548C\u706B\u529B-\u5C60\u9F99\u5B9D\u5200.name = Rhongomyniad (WIP)
+block.\u9971\u548C\u706B\u529B-\u5C60\u9F99\u5B9D\u5200.description = A prototype superweapon which is captured from Operation 'Extinction'.
+block.\u9971\u548C\u706B\u529B-\u5C60\u9F99\u5B9D\u5200.details = Extremely powerful, but it's not good news. Enemies may have researched relative technologies, just research it as soon as possible.
+block.\u9971\u548C\u706B\u529B-\u4F59\u6E29.name = "The Echoing Flare"
+block.\u9971\u548C\u706B\u529B-\u4F59\u6E29.description = Locate, Charge, Destroy.
+block.\u9971\u548C\u706B\u529B-\u4F59\u6E29.details = The very first ultraheavy railgun capable of quick response and attack. But huge power consumption severely restricts its viability.
+block.\u9971\u548C\u706B\u529B-\u7EB3\u7C73\u98CE\u66B4.name = Nanostorm
+block.\u9971\u548C\u706B\u529B-\u7EB3\u7C73\u98CE\u66B4.description = Launches an active nanocore to scramble enemies and repair allied structures.
+block.\u9971\u548C\u706B\u529B-\u7EB3\u7C73\u98CE\u66B4.details = Auto pre-activates nanocores
+block.\u9971\u548C\u706B\u529B-\u6C14\u6EB6\u80F6\u6269\u6563\u5854.name = Aerosol Diffusion Tower
+block.\u9971\u548C\u706B\u529B-\u6C14\u6EB6\u80F6\u6269\u6563\u5854.description = Diffuses liquid in its vicinity. Automatically extinguishes fires when supplied with water or cryofluid canisters.
+
+
+#\u2014\u2014Units\u2014\u2014#
+unit.mindustry-dagger.details = Surprise!
+unit.mindustry-mace.details = New armor structure and power system. Switch to leaded fuel for higher adhesion and injection strength.
+unit.mindustry-fortress.details = New barrel with large knockback blaster, extra armor plate equiped
+unit.mindustry-scepter.details = A lot of practical experience makes this model more and more perfect
+unit.mindustry-reign.details = Optimized firing methods to improve stability, and replaced with new split warheads and missile launchers
+
+
+unit.mindustry-nova.details = Serpulo fast Gunners
+unit.mindustry-quasar.details = Upgraded fire control system, install high concentration equipment, can even forcibly break through plastanium walls.
+unit.mindustry-vela.details = Optimized chassis stability with small corruption beam. Installs more powerful thrusters.\n[red]SURPRISE!
+unit.mindustry-corvus.details = High-strength frontal armor, straight line blasting beams, more suitable for frontal confrontation
+
+unit.mindustry-crawler.details = More action! Larger charge! Charge!
+unit.mindustry-atrax.details = Stronger fluid injector, installation of small slag barrel launchers
+unit.mindustry-spiroct.details = Refurbished powertrain for greater mobility and sustained combat capability
+
+unit.mindustry-flare.details = Installed air search radar and combat gun.\nBite the tail of the enemy!
+unit.mindustry-horizon.details = Professional anti-construction incendiary bombs
+unit.mindustry-zenith.details = Amplify the size of the missile pod
+unit.mindustry-antumbra.details = We repaired and upgraded the prototype missile pod and replaced it with a miniaturized spectre
+unit.mindustry-eclipse.details = Upgrade the artillery firing system and ammunition, and install more powerful laser generators
+
+unit.mindustry-mono.details = Engine upgrades, capacity expanded
+unit.mindustry-poly.details = Install a more reliable guidance system for missiles
+unit.mindustry-mega.details = In order to adapt to the frontline, install stronger laser emitters and armor, and carry nano repair devices
+unit.mindustry-quad.details = EMP bomber on the way
+unit.mindustry-oct.details = Equipped with repair beams and Nanotech missile pods
+
+unit.mindustry-risso.details = \u5148\u8FDB\u53CD\u5236\u673A\u70AE\uFF0C\u81EA\u4E3B\u5BFB\u7684\u5BFC\u5F39
+unit.mindustry-minke.details = \u65E0\u540E\u5EA7\u52A0\u519C\u70AE\uFF0C\u5347\u7EA7\u9632\u7A7A\u7CFB\u7EDF
+unit.mindustry-bryde.details = Switch to cluster blasting warheads and update the missile system
+unit.mindustry-sei.details = Switch to an surge-alloy missile launcher and a water-cooled spectre
+
+unit.mindustry-retusa.details = Strengthened hull structure and replaced with torpedo launchers Type II
+unit.mindustry-oxynoe.details = Upgrading the energy supply system can store and release excess energy
+unit.mindustry-cyerce.details = Higher bomb load, greater repair capabilities, and a sonic system, but energy distribution can be problematic
+unit.mindustry-navanax.details = Upgraded limit capacitors and a new electromagnetic pulse cannon with a small corruption beam
+
+
+
+
+#\u2014\u2014BOSS\u2014\u2014#
+unit.\u9971\u548C\u706B\u529B-\u663C\u9611.name = Luna
+unit.\u9971\u548C\u706B\u529B-\u663C\u9611.description = Operation:"Meridian"-\n[red]Need the auth code from fractured fortress for more informations...
+unit.\u9971\u548C\u706B\u529B-\u663C\u9611.details = [#ebf2a2]ACCESS GRANTED:\n[]Dame it, nothing about it can be found...
+#Still WIP\u2193
+unit.\u9971\u548C\u706B\u529B-\u6CE2\u521A.name = \u6CE2\u521A
+unit.\u9971\u548C\u706B\u529B-\u6CE2\u521A.description = 
+unit.\u9971\u548C\u706B\u529B-\u6CE2\u521A.details = 
+unit.\u9971\u548C\u706B\u529B-\u5578\u98CE.name = Aeolus
+unit.\u9971\u548C\u706B\u529B-\u5578\u98CE.description = Operation:"Skyfall"-One of the targets of our assault operation.\n[red]Need the auth code from fractured fortress for more informations...
+unit.\u9971\u548C\u706B\u529B-\u5578\u98CE.details = [#ebf2a2]ACCESS GRANTED:\n[]\u8D85\u7EA7\u7A7A\u4E2D\u5821\u5792\uFF0C\u6709\u533A\u57DF\u6027\u6C14\u8C61\u6539\u53D8\u80FD\u529B\u3002\u521D\u6B65\u63A8\u6D4B\u662F\u4E0E\u96F7\u66B4\u540C\u578B\u53F7\u7684\u96F7\u4E91\u53D1\u5C04\u5668\uFF0C\u5176\u4ED6\u6280\u672F\u9879\u76EE\u5C1A\u4E0D\u660E\u786E\u3002\n\u5176\u52A8\u529B\u4F9B\u7ED9\u4E0E\u9A71\u52A8\u88C5\u7F6E[stat]\u5341\u5206\u5E9E\u5927[red]\u4E14\u6548\u7387\u8F83\u9AD8[white]\u3002\n\u8981\u585E\u6570\u636E\u5E93\u5185\u5173\u4E8E\u5B83\u7684\u4FE1\u606F\u635F\u5931\u8FC7\u534A\uFF0C\u5C3D\u53EF\u80FD\u56DE\u6536\u5B8C\u6574\u6216\u6B8B\u4F59\u96F6\u90E8\u4EF6\uFF0C\u4E5F\u8BB8\u5BF9\u6211\u4EEC\u7684\u5927\u578B\u8230\u53EA\u5F00\u53D1\u6709\u6240\u5E2E\u52A9\u3002\n\u201C\u4ED6\u5988\u7684\uFF0C\u4F46\u51E1\u54B1\u6709\u8FD9\u6280\u672F\uFF0C\u9614\u91CE\u80FD\u53D7\u8FD9\u59D4\u5C48\uFF1F\u201D\u2014\u2014\u67D0\u9614\u91CE\u4E2D\u5FC3
+unit.\u9971\u548C\u706B\u529B-\u987D\u51A5.name = Uranus
+unit.\u9971\u548C\u706B\u529B-\u987D\u51A5.description = Operation:"Mica"-\n[red]Need the auth code from fractured fortress for more informations...
+unit.\u9971\u548C\u706B\u529B-\u987D\u51A5.details = [#ebf2a2]ACCESS GRANTED:\n[]\u642D\u8F7D\u5929\u6C14\u6539\u53D8\u5668\u4E0E\u8D85\u8F7D\u5F15\u6D41\u5668\uFF0C\u6839\u672C\u65E0\u6CD5\u9760\u8FD1\uFF0C\u5B83\u662F\u600E\u4E48\u60AC\u6D6E\u5728\u6C34\u9762\u4E4B\u4E0A\u4E0D\u53D7\u5F71\u54CD\u7684\uFF1F\n\u8FD9\u5BB6\u4F19\u8EAB\u8FB9\u4F3C\u4E4E\u5B58\u5728\u5F02\u5E38\u78C1\u573A\uFF0C\u5F3A\u884C\u762B\u75EA\u4E86\u6211\u65B9\u5355\u4F4D\uFF0C\u6839\u672C\u65E0\u6CD5\u9760\u8FD1\u3002\n\u8F9B\u4E8F\u6211\u4EEC\u6709\u8DB3\u591F\u7684\u706B\u529B\u62E6\u622A\u5B83\u7684\u96F7\u573A\u53D1\u5C04\u5668\uFF0C\u5426\u5219\u540E\u679C\u5C06\u4E0D\u582A\u8BBE\u60F3\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7
+unit.\u9971\u548C\u706B\u529B-\u575D\u715E.name = Neptune
+unit.\u9971\u548C\u706B\u529B-\u575D\u715E.description = Operation\uFF1A"Afterglow"-the flagship launched an attack to our hydro-power plant.\n[red]Need the auth code from fractured fortress for more informations...
+unit.\u9971\u548C\u706B\u529B-\u575D\u715E.details = [#ebf2a2]ACCESS GRANTED:\n[]\u4E00\u5EA7\u4EBA\u9020\u5C9B\u5C7F\uFF0C\u6218\u6597\u8981\u585E\u89C4\u6A21\u7684\u5927\u5C0F\u4E3A\u5B83\u63D0\u4F9B\u4E86\u5F3A\u5927\u7684\u6B66\u5668\u642D\u8F7D\u80FD\u529B\u3002\u9632\u536B\u6027\u6B66\u5668\u914D\u7F6E\u9AD8\u6807\u51C6\u4E14\u5168\u9762\uFF1A\u5305\u62EC\u4F46\u4E0D\u9650\u4E8E\u52A0\u519C\u70AE\u3001\u8109\u51B2\u67AA\u3001\u5355\u70B9\u9632\u5FA1\u5854\u3001\u9C7C\u96F7\u53D1\u5C04\u5668\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\n\u8FDB\u653B\u6027\u6B66\u5668\u914D\u7F6E\u9488\u5BF9\u6027\u53CA\u5176\u660E\u663E\u2014\u2014\u53CD\u91CD\u578B\u88C5\u7532\u8BBE\u65BD\u7684\u900F\u5F7B\u578B\u5F39\u836F\u3002\u663E\u7136\u662F\u4E8B\u51FA\u7A81\u7136\u800C\u65E0\u6CD5\u53CA\u65F6\u5207\u6362\u80FD\u591F\u8FDB\u884C\u9AD8\u5EA6\u843D\u5DEE\u6253\u51FB\u7684\u4E3B\u6B66\u5668\u914D\u7F6E\u3002\n\u201C\u771F\u662F\u4E07\u5E78\u201D
+#Still WIP \u2191
+unit.\u9971\u548C\u706B\u529B-\u795E\u6E0E.name = Sol
+unit.\u9971\u548C\u706B\u529B-\u795E\u6E0E.description = Operation:"Inferno Flame"-The superheavy mech attacked our Terrascape construction center.\n[red]Need the auth code from fractured fortress for more informations...
+unit.\u9971\u548C\u706B\u529B-\u795E\u6E0E.details = \u5916\u5F62\u795E\u4F3C\u6CF0\u5766\uFF0C\u4F3C\u4E4E\u662F\u6CBF\u7528\u4E86\u6CF0\u5766\u7684\u90E8\u5206\u8BBE\u8BA1\uFF0C\u4F46\u6B66\u5668\u914D\u7F6E\u622A\u7136\u4E0D\u540C\u3002\u5341\u5206\u4E0D\u7406\u89E3\u5B83\u662F\u5982\u4F55\u5728\u6B64\u7B49\u9AD8\u6E29\u6761\u4EF6\u4E0B\u5B89\u5168\u50A8\u5B58\u643A\u5E26\u5982\u6B64\u591A\u9AD8\u80FD\u71C3\u6599\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u8FD1\u4E4E\u9971\u548C\u7684\u7EB3\u7C73\u50A8\u5B58\u89C4\u6A21\uFF0C\u8DB3\u4EE5\u652F\u6491\u5176\u4F5C\u6218\u76F4\u81F3\u5F7B\u5E95\u6467\u6BC1\u4E00\u6574\u4E2A\u533A\u5757\u7684\u654C\u4EBA\u3002\u6211\u4EEC\u9700\u8981\u56DE\u6536\u6B8B\u9AB8\u4EE5\u7814\u7A76\u5176\u5185\u90E8\u6784\u9020
+unit.\u9971\u548C\u706B\u529B-\u5730\u9B41.name = Jupiter
+unit.\u9971\u548C\u706B\u529B-\u5730\u9B41.description = Operation:"Afforestation"-The superheavy tank attacked our bio-research lab.\n[red]Need the auth code from fractured fortress for more informations...
+unit.\u9971\u548C\u706B\u529B-\u5730\u9B41.details = [#ebf2a2]ACCESS GRANTED:\n[]\u53CC\u8054\u88C5\u672B\u654F\u7206\u7834\u4E3B\u70AE\uFF0C\u4E24\u95E8\u653B\u57CE\u706B\u70AE\uFF0C\u5185\u7206\u9632\u7A7A\u5BFC\u5F39\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u51E0\u4E4E\u9762\u9762\u4FF1\u5230\u7684\u6B66\u5668\u914D\u7F6E\uFF0C\u5DE8\u5927\u7684\u672C\u4F53\u4F7F\u5176\u78BE\u538B\u80FD\u529B\u65E0\u53EF\u6BD4\u62DF\uFF0C\u4ECE\u9646\u4E0A\u63A5\u8FD1\u5B9E\u5728\u4E0D\u662F\u4E00\u4E2A\u660E\u667A\u4E4B\u4E3E\u3002\n\u8F7B\u578B\u7A7A\u4E2D\u5355\u4F4D\u65E0\u6CD5\u627F\u53D7\u4ED6\u7684\u9632\u7A7A\u706B\u529B\uFF0C\u91CD\u578B\u7A7A\u4E2D\u5355\u4F4D\u4E5F\u6CA1\u6709\u8DB3\u591F\u7684\u65F6\u95F4\u63A5\u8FD1\u5E76\u9020\u6210\u6709\u6548\u7684\u4F24\u5BB3\u3002\n\u4E00\u4E2A\u975E\u5E38\u68D8\u624B\u7684\u654C\u4EBA\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7
+unit.\u9971\u548C\u706B\u529B-\u897F\u6728.name = Saturn
+unit.\u9971\u548C\u706B\u529B-\u897F\u6728.description = Operation:"Skyfall"-One of the targets of our assault operation.\n[red]Need the auth code from fractured fortress for more informations...
+unit.\u9971\u548C\u706B\u529B-\u897F\u6728.details = [#ebf2a2]ACCESS GRANTED:\n[]\u6218\u7565\u7EA7\u8F68\u9053\u8F70\u70B8\u673A\uFF0C\u6280\u672F\u6210\u719F\uFF08\u8279\uFF0C\u662F\u4E2A\u574F\u6D88\u606F\uFF09\u3002\u642D\u8F7D\u4E00\u95E8\u5CF0\u538B\u5C04\u7EBF\u548C\u51B7\u8109\u51B2\u70AE\u3002\u80FD\u591F\u591A\u6B21\u53CD\u590D\u8FDB\u51FA\u6218\u573A\uFF0C\u643A\u5E26\u5404\u79CD\u70B8\u836F\u3001\u5355\u4F4D\u5BF9\u76EE\u6807\u8FDB\u884C\u6BC1\u706D\u6027\u6253\u51FB\u3002
+
+
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77A.name = Triton
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77A.description = Elite Arsenal ship.
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77A.details = [#a3ba73]ACCESS GRANTED:\n[]Project"Triton"\n\u5168\u6CE2\u6BB5\u96F7\u8FBE\u9690\u8EAB\uFF0C\u6D77\u9762\u4F5C\u6218\u4E3B\u529B\u8230\u79CD\u3002\u6211\u4EEC\u7684\u6D77\u9762\u9632\u5FA1\u5927\u591A\u6570\u90FD\u88AB\u5176\u6B66\u5668\u7CFB\u7EDF\u538B\u5236\uFF0C\u5176\u5BFC\u5F39\u914D\u7F6E\u88AB\u52A0\u5BC6\uFF0C\u5176\u4F59\u7531\u578B\u53F7\u7F16\u53F7\u63A8\u6D4B\u4E3A\u5347\u7EA7\u4F18\u5316\u7684\u53E6\u4E00\u6279\u5236\u5F0F\u88C5\u5907\u3002\n\u5343\u500D\u8B66\u60D5\uFF0C\u4E07\u5206\u5C0F\u5FC3\uFF01\u5C24\u5176\u662F\u5B83\u7684\u5BFC\u5F39\u7CFB\u7EDF\uFF0C\u80FD\u91CF\u4E0E\u5B9E\u5F39\u7684\u6DF7\u5408\u6253\u51FB\u65B9\u6848\u80FD\u8F7B\u6613\u8FC7\u8F7D\u7EDD\u5927\u591A\u6570\u62E6\u622A\u4F53\u7CFB\uFF0C\u5018\u82E5\u65F6\u8FD0\u4E0D\u4F73\u518D\u627F\u53D7\u4E00\u6B21\u5176\u4ED6\u65B9\u5411\u7684\u9971\u548C\u6253\u51FB\uFF0C\u90A3\u5C06\u5FC5\u6B7B\u65E0\u7591\uFF01
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77B.name = Nereid
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77B.description = Elite Landing ship.
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77B.details = [#a3ba73]ACCESS GRANTED:\n[]Project"Nereid"\n\u5168\u6CE2\u6BB5\u96F7\u8FBE\u9690\u8EAB\uFF0C\u5927\u578B\u767B\u9646\u8230\u3002\u4ED3\u5E93\u5BB9\u91CF\u6781\u5927\uFF0C\u80FD\u591F\u5BB9\u7EB3\u591A\u6570\u5355\u4F4D\u5E76\u4E14\u642D\u8F7D\u66F4\u591A\u5F39\u836F\uFF0C\u8FD9\u4F7F\u5F97\u5B83\u7684\u6218\u6597\u65B9\u5F0F\u4E0E\u5176\u4ED6\u201C\u4E00\u6B21\u6027\u201D\u767B\u9646\u8230\u6709\u6240\u4E0D\u540C\uFF0C\u901A\u5E38\u4F1A\u8DDF\u968F\u767B\u9646\u90E8\u961F\u884C\u52A8\u5E76\u627F\u62C5\u7279\u6B8A\u706B\u529B\u6216\u4FEE\u590D\u7B49\u4E8B\u9879\u3002\n\u201C\u5916\u4FA7\u4E3A\u83B1\u666E\u786C\u5316\u88C5\u7532\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\u8FD9\u4E1C\u897F\u662F\u600E\u4E48\u4E0A\u5CB8\u7684\uFF1F\u6216\u8005\u8BF4\uFF0C\u8FD9\u9B3C\u73A9\u610F\u662F\u600E\u4E48\u6D6E\u8D77\u6765\u7684\uFF1F\uFF1F\uFF1F\u201D
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77C.name = Naiad
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77C.description = Elite Defender ship.\nFully activates weapon system after depolyed.
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77C.details = [#a3ba73]ACCESS GRANTED:\n[]Project"Naiad"\n\u91CD\u578B\u591A\u529F\u80FD\u96C6\u6210\u5DE1\u6D0B\u8230\uFF0C\u4E3B\u8981\u6218\u6597\u4F4D\u7C7B\u4F3C\u5929\u7F61\uFF0C\u4F46\u5B83\u7684\u529F\u80FD\u66F4\u52A0\u5168\u9762\u4E14\u8FC7\u5206\u5F3A\u608D\uFF1A\u9632\u7A7A\u53CD\u8230\u3001\u5B9E\u5F39\u62E6\u622A\u3001\u7EF4\u4FEE\u63F4\u52A9\u00B7\u00B7\u00B7\u00B7\u00B7\u00B7\n\u4F3C\u4E4E\u91C7\u7528\u65B0\u578B\u88C5\u7532\u7ED3\u6784\uFF0C\u5E38\u89C4\u6B66\u5668\uFF08\u5C24\u5176\u662F\u80FD\u91CF\u6B66\u5668\uFF09\u5BF9\u4F5C\u7528\u5FAE\u4E4E\u5176\u5FAE\u3002\n\u6240\u5E78[darkerGray]\u8BE5\u79CD\u578B\u53F7\u7684[]\u8230\u53EA\u5E76\u6CA1\u6709\u5F62\u6210\u591A\u5C11\u6218\u6597\u529B\uFF0C\u63A8\u6D4B\u6295\u5165\u5B9E\u6218\u65F6\u95F4\u5E76\u4E0D\u4E45
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77D.name = Thalassa
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77D.description = Elite Barrager ship.
+unit.\u9971\u548C\u706B\u529B-\u6CA7\u6D77D.details = [#a3ba73]ACCESS GRANTED:\n[]Project"Thalassa"\n\u5203\u6D77\u7EA7\u5BFC\u5F39\u5DE1\u6D0B\u8230\uFF0C\u5168\u6CE2\u6BB5\u96F7\u8FBE\u9690\u8EAB\uFF0C\u6B66\u5E93\u7EA7\u5BFC\u5F39\u914D\u7F6E\n\u642D\u8F7D\u51E0\u4E4E\u6240\u6709\u5DF2\u77E5\u548C\u672A\u77E5\uFF08\u6709\u5F85\u8003\u8BC1\uFF09\u79CD\u7C7B\u7684\u5BFC\u5F39\uFF0C\u53EA\u642D\u8F7D\u4E86\u5C11\u90E8\u5206\u8FD1\u9632\u70AE\u4E0E\u5E38\u89C4\u8230\u70AE\u3002\n\u4E0E\u4E4B\u4F5C\u6218\u663E\u7136\u4E0D\u662F\u4E00\u4E2A\u597D\u4E3B\u610F\uFF0C\u4E00\u65E6\u906D\u9047\u5219\u6700\u5148\u62B5\u8FBE\u96F7\u8FBE\u8303\u56F4\u5185\u7684\u5E94\u4F1A\u662F\u5404\u79CD\u578B\u53F7\u7684\u5BFC\u5F39\uFF0C\u4E0D\u5962\u6C42\u8230\u961F\u5BF9\u5176\u6709\u591A\u5C11\u53CD\u51FB\u80FD\u529B\uFF0C\u5E94\u5F53\u7ACB\u523B\u62A5\u544A\u5750\u6807\u5E76\u8B66\u544A\u5468\u56F4\u90E8\u961F\u8FDC\u79BB\u6B64\u5904\u3002
+
+
+unit.\u9971\u548C\u706B\u529B-\u5229\u5203.name = Claymore
+unit.\u9971\u548C\u706B\u529B-\u5229\u5203.description = "Claymore" class Frigate airship. Equiped with beam blasters and multiple missile launcher system.
+unit.\u9971\u548C\u706B\u529B-\u4F2F\u52B3.name = Falcon
+unit.\u9971\u548C\u706B\u529B-\u4F2F\u52B3.description = **NODATA**
+unit.\u9971\u548C\u706B\u529B-\u6CF0\u5766.name = Hyperion
+unit.\u9971\u548C\u706B\u529B-\u6CF0\u5766.description = "Hyperion" class superheavy mech. Equiped with heavy shotcannons and bomb ejectors.
+unit.\u9971\u548C\u706B\u529B-\u4E9A\u9F99.name = Wyvern
+unit.\u9971\u548C\u706B\u529B-\u4E9A\u9F99.description = **NODATA**

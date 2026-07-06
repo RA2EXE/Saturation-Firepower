@@ -10112,8 +10112,8 @@ public class SFBlocks {
                 new UnitType[]{UnitTypes.navanax, SFUnitTypes.luoHan},
                 new UnitType[]{SFUnitTypes.tank5, SFUnitTypes.tank6},
                 new UnitType[]{SFUnitTypes.air5, SFUnitTypes.air6},
-                new UnitType[]{SFUnitTypes.naval5, SFUnitTypes.naval6}
-                //new UnitType[]{SFUnitTypes.hover5, SFUnitTypes.hover6}
+                new UnitType[]{SFUnitTypes.naval5, SFUnitTypes.naval6},
+                new UnitType[]{SFUnitTypes.hover5, SFUnitTypes.hover6}
             );
             researchCostMultiplier = 0.2f;
             buildCostMultiplier = 0.7f;

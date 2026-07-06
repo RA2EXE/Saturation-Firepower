@@ -1,0 +1,353 @@
+{
+	"type": "ContinuousTurret",
+	"name": "锋芒",
+	"unitSort": "strongest",
+	"health": 12000,
+	"armor": 29,
+	"size": 6,
+	"shootSound": "laserblast",
+	"loopSound": "laserbeam",
+	"loopSoundVolume": 10,
+	"shake": 1.5,
+	"recoil": 0,
+	"heatColor": "FF4040",
+	"cooldownTime": 300,
+	"placeableLiquid": true,
+	"canOverdrive": false,
+	"reload": 12,
+	"aimChangeSpeed": 6.25,
+	"rotateSpeed": 1.25,
+	"range": 683,
+	"shootY": 8,
+	"shootCone": 10,
+	"shootWarmupSpeed": 0.033,
+	"minWarmup": 0.88,
+	"drawer": {
+		"type": "DrawTurret",
+		"parts": [
+			{
+				"type": "HaloPart",
+				"shapes": 3,
+				"y": 7,
+				"color": "c0ecff",
+				"layer": 110,
+				"tri": true,
+				"radius": 0,
+				"radiusTo": 8,
+				"triLength": 0,
+				"triLengthTo": 30,
+				"haloRadius": 0,
+				"haloRadiusTo": 20,
+				"haloRotateSpeed": 2
+			},
+			{
+				"type": "HaloPart",
+				"shapeRotation": 180,
+				"shapes": 3,
+				"y": 7,
+				"color": "c0ecff",
+				"layer": 110,
+				"tri": true,
+				"radius": 0,
+				"radiusTo": 8,
+				"triLength": 0,
+				"triLengthTo": 8,
+				"haloRadius": 0,
+				"haloRadiusTo": 20,
+				"haloRotateSpeed": 2
+			},
+			{
+				"type": "HaloPart",
+				"y": 7,
+				"sides": 3,
+				"shapes": 1,
+				"rotateSpeed": 0.2,
+				"color": "c0ecff",
+				"layer": 110,
+				"tri": false,
+				"hollow": true,
+				"stroke": 0,
+				"strokeTo": 2.1,
+				"radius": 0,
+				"radiusTo": 16,
+				"haloRadius": 0
+			},
+			{
+				"type": "HaloPart",
+				"shapeRotation": -10,
+				"y": 24,
+				"sides": 3,
+				"shapes": 1,
+				"rotateSpeed": 0.2,
+				"color": "c0ecff",
+				"layer": 110,
+				"tri": false,
+				"hollow": true,
+				"stroke": 0,
+				"strokeTo": 1.8,
+				"radius": 0,
+				"radiusTo": 15,
+				"haloRadius": 0
+			},
+			{
+				"type": "HaloPart",
+				"shapeRotation": -20,
+				"y": 41,
+				"sides": 3,
+				"shapes": 1,
+				"rotateSpeed": 0.2,
+				"color": "c0ecff",
+				"layer": 110,
+				"tri": false,
+				"hollow": true,
+				"stroke": 0,
+				"strokeTo": 1.5,
+				"radius": 0,
+				"radiusTo": 14,
+				"haloRadius": 0
+			},
+			{
+				"type": "RegionPart",
+				"mirror": true,
+				"suffix": "-侧",
+				"moveX": 5,
+				"moveY": 0,
+				"moveRot": 8.5,
+				"heatProgress": "warmup",
+				"heatColor": "FF4040",
+				"children": [
+					{
+						"type": "RegionPart",
+						"x": 16,
+						"y": -15,
+						"mirror": true,
+						"suffix": "-后",
+						"under": true,
+						"moveX": -10,
+						"moveY": -10
+					}
+				]
+			}
+		]
+	},
+	"consumes": {
+		"power": 180,
+		"liquid": "纳米流体/2.7"
+	},
+	"chargeSound": "lasercharge",
+	"accurateDelay": false,
+	"moveWhileCharging": true,
+	"shoot": {
+		"type": "ShootPattern",
+		"firstShotDelay": 40,
+		"shotDelay": 90,
+		"shots": 4
+	},
+	"shootType": {
+		"type": "PointLaserBulletType",
+		"sprite": "饱和火力-寒光束",
+		"status": "急冻",
+		"statusDuration": 60,
+		"oscScl": 2.5,
+		"oscMag": 0.05,
+		"beamEffect": {
+			"type": "ParticleEffect",
+			"interp": "pow5Out",
+			"particles": 2,
+			"sizeFrom": 2.6,
+			"sizeTo": 10,
+			"length": 20,
+			"baseLength": 0,
+			"lifetime": 30,
+			"colorFrom": "c0ecff",
+			"colorTo": "c0ecff00"
+		},
+		"hitEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 3,
+					"baseLength": 0,
+					"length": 40,
+					"lifetime": 9,
+					"line": true,
+					"lenFrom": 16,
+					"lenTo": 50,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "FFFFFF",
+					"colorTo": "c0ecff"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 3,
+					"startDelay": 2.5,
+					"baseLength": 0,
+					"length": 40,
+					"lifetime": 10,
+					"line": true,
+					"lenFrom": 16,
+					"lenTo": 50,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "FFFFFF",
+					"colorTo": "c0ecff"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 3,
+					"startDelay": 5,
+					"baseLength": 0,
+					"length": 40,
+					"lifetime": 10,
+					"line": true,
+					"lenFrom": 16,
+					"lenTo": 50,
+					"strokeFrom": 2,
+					"strokeTo": 0,
+					"colorFrom": "FFFFFF",
+					"colorTo": "c0ecff"
+				},
+				{
+					"type": "ParticleEffect",
+					"region": "饱和火力-菱形",
+					"particles": 5,
+					"interp": "pow3Out",
+					"sizeInterp": "pow3In",
+					"sizeFrom": 3,
+					"sizeTo": 0,
+					"length": 46,
+					"baseLength": 0,
+					"lifetime": 60,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				}
+			]
+		},
+		"beamEffectInterval": 3,
+		"damage": 550,
+		"splashDamageRadius": 36,
+		"splashDamage": 24,
+		"pierceArmor": true,
+		"damageInterval": 6,
+		"hitShake": 3,
+		"hitColor": "c0ecff80",
+		"color": "c0ecffb80",
+		"drawSize": 420,
+		"fragBullets": 2,
+		"fragBullet": {
+			"type": "PointBulletType",
+			"trailSpacing": 9,
+			"trailEffect": {
+				"type": "ParticleEffect",
+				"particles": 1,
+				"length": 0,
+				"baseLength": 1,
+				"lifetime": 15,
+				"sizeInterp": "pow3In",
+				"line": true,
+				"randLength": false,
+				"lenFrom": 10,
+				"lenTo": 10,
+				"strokeFrom": 3,
+				"strokeTo": 0,
+				"colorFrom": "c0ecff",
+				"colorTo": "c0ecff",
+				"cone": 0
+			},
+			"lifetime": 8,
+			"speed": 10,
+			"status": "急冻",
+			"statusDuration": 20,
+			"damage": 172,
+			"splashDamageRadius": 12,
+			"splashDamage": 8,
+			"hitShake": 1,
+			"hitSound": "blot",
+			"hitEffect": {
+				"type": "MultiEffect",
+				"effects": [
+					{
+						"type": "ParticleEffect",
+						"particles": 1,
+						"sizeInterp": "pow10In",
+						"sizeFrom": 6,
+						"sizeTo": 0,
+						"length": 0,
+						"baseLength": 0,
+						"lifetime": 10,
+						"colorFrom": "c0ecff",
+						"colorTo": "c0ecffAA"
+					},
+					{
+						"type": "ParticleEffect",
+						"particles": 5,
+						"length": 40,
+						"baseLength": 0,
+						"lifetime": 8,
+						"line": true,
+						"lenFrom": 30,
+						"lenTo": 0,
+						"strokeFrom": 2.3,
+						"strokeTo": 0,
+						"colorFrom": "c0ecff",
+						"colorTo": "c0ecff"
+					}
+				]
+			},
+			"despawnEffect": "none"
+		},
+		"chargeEffect": {
+			"type": "MultiEffect",
+			"effects": [
+				{
+					"type": "ParticleEffect",
+					"particles": 13,
+					"baseLength": 80,
+					"length": -80,
+					"line": true,
+					"lenFrom": 0,
+					"lenTo": 23,
+					"strokeFrom": 0,
+					"strokeTo": 1.6,
+					"sizeInterp": "pow5Out",
+					"interp": "pow5In",
+					"lifetime": 40,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				},
+				{
+					"type": "ParticleEffect",
+					"particles": 1,
+					"sizeFrom": 0,
+					"sizeTo": 8,
+					"length": 0,
+					"baseLength": 0,
+					"lifetime": 55,
+					"colorFrom": "c0ecff",
+					"colorTo": "c0ecff"
+				}
+			]
+		}
+	},
+	"category": "turret",
+	"research": {
+		"parent": "凌汛",
+		"objectives": [
+			//{"type": "OnSector","preset": "锯刃山岭"},
+			{
+				"type": "SectorComplete",
+				"preset": "灭绝"
+			}
+		]
+	},
+	"requirements": [
+		"metaglass/1500",
+		"硅钢/2200",
+		"纳米核/1000",
+		"裂位能/1600",
+		"莱普合金/750",
+		"三级协议/30"
+	]
+}
