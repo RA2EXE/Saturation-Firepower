@@ -1,6 +1,3 @@
-
-
-
 buildscript {
     ext{
         sdkRoot = System.getenv("ANDROID_HOME")

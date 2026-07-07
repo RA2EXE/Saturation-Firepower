@@ -58,13 +58,12 @@ public class SFPlanets {
                 r.worldProcessorPlayerLink = true;
                 r.waveTeam = Team.crux;
                 r.placeRangeCheck = false;
-                r.showSpawns = false;
                 r.coreDestroyClear = true;
                 r.bannedBlocks.addAll(Blocks.overdriveDome,Blocks.overdriveProjector,Blocks.smallHeatRedirector);
             };
 
             allowCampaignRules = false;
-            campaignRuleDefaults.showSpawns = true;
+            //campaignRuleDefaults.showSpawns = true;
             campaignRuleDefaults.rtsAI = true;
 
 

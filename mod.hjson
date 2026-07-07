@@ -8,6 +8,6 @@ main: "SFire.SFireMod"
 
 description: "[red]Hell time, once for all[]\n\nThis mod adds new items, buildings, units, and turrets, and has a planet for you to explore.\nMore campaign maps WIP.\nWarning: This mod makes certain modifications to the original game content to accommodate the mod's operation."
 
-version: 4.0.4
-minGameVersion: 158
+version: 4.0.4.1
+minGameVersion: 159
 java: true
