@@ -2631,11 +2631,13 @@ public class SFBlocks {
             armor = 8;
             requirements(Category.liquid, with(Items.plastanium, 70, Items.metaglass, 250, SFItems.siliSteel, 60, SFItems.chromium, 110));
             liquidCapacity = 6000;
+            explosivenessScale = flammabilityScale = 0.05f;
             absorbLasers = true;
         }};
         discConduit = new LiquidBridge("discfabric-liquid-bridge") {{
             health = 560;
             armor = 8;
+            floating = true;
             requirements(Category.liquid, with(Items.metaglass, 20, Items.silicon, 15, SFItems.siliSteel, 5, SFItems.discFabric, 5, SFItems.fermium, 5));
             ((Conduit) reArmoredConduit).bridgeReplacement = this;
             range = 26;

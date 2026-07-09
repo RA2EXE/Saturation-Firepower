@@ -5611,7 +5611,7 @@ public class SFUnitTypes {
             waveTrailY = -35;
             trailScl = 3;
             hitSize = 50;
-            health = 9300;
+            health = 11300;
             armor = 8;
             faceTarget = false;
             targetGround = false;
@@ -6322,7 +6322,7 @@ public class SFUnitTypes {
             payloadCapacity = 1.5f * (8*8);
             itemCapacity = 60;
             rotateSpeed = 4f;
-            speed = 2.1f;
+            speed = 20 /7.5f;
             drag = 0.2f;
             accel = 0.3f;
             hitSize = 10;
@@ -6401,7 +6401,7 @@ public class SFUnitTypes {
             speed = 1.2f;
             drag = 0.08f;
             hitSize = 22;
-            health = 800f;
+            health = 650f;
             armor = 6;
             parts.add(new HoverPart(){{
                 circles = 2;
@@ -6533,7 +6533,7 @@ public class SFUnitTypes {
             drag = 0.1f;
             accel = 0.16f;
             hitSize = 46;
-            health = 10000;
+            health = 8200;
             armor = 9;
             immunities.addAll(StatusEffects.corroded,SFStatusEffects.acidded);
             parts.add(new HoverPart(){{
@@ -6815,7 +6815,7 @@ public class SFUnitTypes {
             accel = 0.1f;
             hitSize = 60;
 
-            health = 19800f;
+            health = 76000f;
             armor = 12;
             immunities.addAll(
                     StatusEffects.melting,StatusEffects.freezing,StatusEffects.burning,
@@ -6877,7 +6877,7 @@ public class SFUnitTypes {
                         y = -16f;
                         reload = 260;
                         rotate = true;
-                        rotateSpeed = 1.3f;
+                        rotateSpeed = 0.9f;
 
                         shootCone = 6;
                         linearWarmup = true;
