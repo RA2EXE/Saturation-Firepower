@@ -6528,7 +6528,7 @@ public class SFUnitTypes {
             canDrown = false;
             flying = false;
             shadowElevation = 0.15f;
-            rotateSpeed = 2.6f;
+            rotateSpeed = 1.8f;
             speed = 1.1f;
             drag = 0.1f;
             accel = 0.16f;
@@ -6672,7 +6672,7 @@ public class SFUnitTypes {
             drag = 0.11f;
             accel = 0.2f;
             hitSize = 45;
-            health = 20600f;
+            health = 22600f;
             parts.add(new HoverPart(){{
                 circles = 5;
                 sides = 8;
@@ -6690,11 +6690,12 @@ public class SFUnitTypes {
                 abilities.add(new ShieldArcAbility() {{
                     x = -8 * (fi>0 ? 1 : -1);
                     y = -45/4f;
+                    whenShooting = false;
                     angleOffset = fi>0 ? 80f : -80f;
 
                     radius = 40+16;
                     width = 8;
-                    max = 800;
+                    max = 1200;
                     regen = 4;
                     cooldown = 360;
                     angle = 110;
@@ -6797,7 +6798,6 @@ public class SFUnitTypes {
                             }};
                             shootEffect = Fx.shootTitan;
                             smokeEffect = Fx.shootSmokeTitan;
-
                         }};
                     }}
             );
@@ -6854,6 +6854,7 @@ public class SFUnitTypes {
             }});
 
             faceTarget = false;
+            singleTarget = true;
             parts.add(new HaloPart() {{
                 hollow = true;
                 shapes = 1;
@@ -6869,13 +6870,58 @@ public class SFUnitTypes {
                 layer = 110;
             }});
             weapons.addAll(
+                    new Weapon(name("gharial-mark")) {{
+                        x = 0;
+                        y = 59/4f;
+                        mirror = false;
+                        reload = 20;
+                        rotate = true;
+                        rotateSpeed = 6;
+                        shootSound = Sounds.chargeLancer;
+                        shootSoundVolume = 0.3f;
+
+                        shootCone = 6;
+                        linearWarmup = true;
+                        shootWarmupSpeed = 1 / 180f;
+                        minWarmup = 0.96f;
+                        shootY = 30/4f;
+                        recoil = 0;
+
+                        bullet = new PointBulletType() {{
+                            damage = 1;
+                            lifetime = 8;
+                            speed = 64;
+                            status = SFStatusEffects.marked;
+                            statusDuration = 10;
+
+                            shootEffect = new ParticleEffect(){{
+                               particles = 1;
+                               sizeFrom = 3f;
+                               sizeInterp = Interp.bounceIn;
+                               lifetime = 23;
+                               colorFrom = SFColor.energyGreen;
+                               length = 0;
+                            }};
+                            despawnEffect = new WrapEffect(Fx.dynamicSpikes, SFColor.energyYellow, 10);
+                            hitEffect = new WaveEffect(){{
+                                sizeFrom = 60;
+                                sizeTo = 50;
+                                strokeFrom = 10;
+                                lifetime = 25;
+                                interp = Interp.circleOut;
+                                colorFrom = colorTo = SFColor.energyGreen;
+                            }};
+                            smokeEffect = Fx.none;
+                            trailEffect = Fx.none;
+                        }};
+                    }},
                     new Weapon(name("gharial-weapon")) {{
                         shootStatus = StatusEffects.unmoving;
                         shootStatusDuration = 90;
                         mirror = false;
                         x = 0;
                         y = -16f;
-                        reload = 260;
+                        reload = 330;
                         rotate = true;
                         rotateSpeed = 0.9f;
 
@@ -6893,13 +6939,13 @@ public class SFUnitTypes {
                         recoil = 4;
                         bullet = new PointBulletType() {{
                             speed = 8 * 10;
-                            lifetime = 55 / 10f;
+                            lifetime = 64 / 10f;
 
-                            damage = splashDamage = 830;
-                            buildingDamageMultiplier = 1.5f;
+                            damage = splashDamage = 1250;
+                            buildingDamageMultiplier = 2f;
                             splashDamageRadius = 50;
                             status = SFStatusEffects.echoFlame;
-                            statusDuration = 10;
+                            statusDuration = 20;
 
                             trailSpacing = 9;
                             trailEffect = new ParticleEffect() {{
@@ -6916,7 +6962,7 @@ public class SFUnitTypes {
                             hitSoundVolume = 2;
                             hitShake = 6;
                             smokeEffect = new ParticleEffect() {{
-                                particles = 25;
+                                particles = 15;
                                 interp = Interp.pow5Out;
                                 sizeInterp = Interp.fade;
                                 sizeFrom = 8;
@@ -6964,7 +7010,41 @@ public class SFUnitTypes {
                                         colorFrom = colorTo = SFColor.energyGreen;
                                     }}
                             );
+                            fragBullets = 3;
+                            fragLifeMin = 0.5f;
+                            fragBullet = bullet = new PointBulletType() {{
+                                speed = 8;
+                                lifetime = 15;
 
+                                damage = splashDamage = 180;
+                                splashDamageRadius = 24;
+                                buildingDamageMultiplier = 3f;
+                                status = SFStatusEffects.echoFlame;
+                                statusDuration = 15;
+
+                                trailSpacing = 8;
+                                trailEffect = new ParticleEffect() {{
+                                    line = true;
+                                    lenFrom = lenTo = 9;
+                                    length = baseLength = 1;
+                                    strokeFrom = 4;
+                                    randLength = false;
+                                    lifetime = 30;
+                                    colorFrom = colorTo = SFColor.energyGreen;
+                                    cone = 0;
+                                }};
+                                despawnEffect = new ParticleEffect() {{
+                                    particles = 1;
+                                    sizeInterp = Interp.fade;
+                                    sizeFrom = 8;
+                                    lifetime = 35;
+                                    length = 0;
+                                    colorFrom = SFColor.energyGreen;
+                                    colorTo = SFColor.energyGreen.cpy().a(0.2f);
+                                }};
+                                hitShake = 2;
+                                hitEffect = new WrapEffect(Fx.dynamicSpikes, SFColor.energyGreen,30);
+                            }};
                         }};
                     }}
             );

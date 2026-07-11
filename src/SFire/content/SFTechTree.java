@@ -123,6 +123,7 @@ public class SFTechTree {
             //node(fengmang);
         });
         addToNode(foreshadow, () -> {
+            node(cuowei);
             node(chongchao);
             node(relang);
             node(sizhao, () -> node(kuosan, () ->  node(zhulin)));

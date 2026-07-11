@@ -80,7 +80,7 @@ public class SFBlocks {
     pyraBlender, blastBlender, clusBlender, cryoCentrifuge,
     plasMultiCompresser, surgeTheSmelter, surgeElesmelter, phaseActiver,
 
-    silisteelSmelter, silisteelSmelterLarge, silisteelSmelterHuge, silisteelCrucible, wavesteelCompresseor, wavesteelForger, metalAnalyzer, galliumSupercooler,
+    silisteelSmelter, silisteelSmelterLarge, silisteelSmelterHuge, silisteelCrucible, wavesteelCompresseor, wavesteelForger, metalAnalyzer, metalPrecipitater, galliumSupercooler,
     nanoConstructor, nanoPrinter, lensAtomizer, airCollector, airCooler, nitrateMixer, fractionator,
     discPhaseWaver, discPhaseKnitter, chemicalSiSmelter, blastSiSmelter, nitrReactor, nitrCentrifuge, nitrPrecipitator, nanoActivator, nanoMixer, blastReagentMixer, clusMaker,
     tayriumSlelter, tayriumCrucible, leippiumSmelter, leippiumCrucible, memoryLocator,
@@ -1442,6 +1442,70 @@ public class SFBlocks {
             }}, new DrawRegion("-rot2") {{
                 rotateSpeed = -0.8f;
             }}, new DrawDefault());
+        }};
+        metalPrecipitater = new CoolantSeparator("metal-precipitater") {{
+            size = 7;
+            requirements(Category.crafting, with(Items.thorium,1250, Items.silicon,600, Items.plastanium,650, SFItems.crystalGallium,570, SFItems.tayrAlloy,400));
+            hasPower = hasItems = hasLiquids = true;
+            itemCapacity = 500;
+            liquidCapacity = 600;
+
+            craftTime = 100/60f;
+            results = with(Items.thorium,3, SFItems.strontium,3, SFItems.rubidium,7, SFItems.chromium,6, SFItems.crystalGallium,4);
+            consumePower(25f);
+            consumeItem(SFItems.rareEarth, 1);
+            consumeLiquid(SFLiquids.nitrate, 2f);
+            //coolant = consume(new ConsumeLiquid(SFLiquids.nitrate, 15f / 60f));
+
+            ambientSound = Sounds.loopHum;
+            drawer = new DrawMulti(new DrawRegion("-bottom"),
+                    new DrawPistons(){{
+                        sinScl = 5.53f;
+                        sinMag = -35f;
+                        lenOffset = 13;
+                        angleOffset = 90;
+                        sides = 2;
+                    }},
+                    new DrawPistons(){{
+                        sinScl = 8.76f;
+                        sinMag = -35f;
+                        lenOffset = 13;
+                        sides = 2;
+                    }},
+                    new DrawPistons(){{
+                        sinScl = 13.27f;
+                        sinMag = -35f;
+                        lenOffset = 13;
+                        sides = 4;
+                    }},
+                    new DrawPistons(){{
+                        sinScl = 12;
+                        sinMag = -35f;
+                        lenOffset = 13;
+                        angleOffset = 90;
+                        sides = 4;
+                    }},
+                    new DrawArcSmelt() {{
+                        midColor = Color.valueOf("eeffc7");
+                        flameColor = Color.valueOf("8c996dd8");
+                        flameRad = 2;
+                        circleSpace = 4;
+                        flameRadiusScl = 10;
+                        flameRadiusMag = 1;
+                        circleStroke = 0.6f;
+                        alpha = 0.6f;
+                        particleRad = 16;
+                        particles = 23;
+                        particleLife = 37;
+                        particleLen = 2;
+                    }},
+                    new DrawDefault(),
+                    new DrawLiquidRegion(SFLiquids.nitrate),
+                    new DrawFade(){{suffix="-light1";scale = 5;}},
+                    new DrawFade(){{suffix="-light2";scale = 7;}},
+                    new DrawFade(){{suffix="-light3";scale = 3;}},
+                    new DrawFade(){{suffix="-light4";scale = 9;}}
+            );
         }};
         galliumSupercooler = new GenericCrafter("gallium-supercooler") {{
             size = 2;
