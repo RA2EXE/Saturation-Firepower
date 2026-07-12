@@ -1443,18 +1443,21 @@ public class SFBlocks {
                 rotateSpeed = -0.8f;
             }}, new DrawDefault());
         }};
-        metalPrecipitater = new CoolantSeparator("metal-precipitater") {{
+        metalPrecipitater = new Separator("metal-precipitater") {{
+            //metalPrecipitater = new CoolantSeparator("metal-precipitater") {{
             size = 7;
-            requirements(Category.crafting, with(Items.thorium,1250, Items.silicon,600, Items.plastanium,650, SFItems.crystalGallium,570, SFItems.tayrAlloy,400));
+            health = 3000;
+            armor = 8;
+            requirements(Category.crafting, with(Items.thorium,1250, Items.plastanium,650, SFItems.nanoCore,600, SFItems.tayrAlloy,400));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 500;
             liquidCapacity = 600;
 
-            craftTime = 100/60f;
-            results = with(Items.thorium,3, SFItems.strontium,3, SFItems.rubidium,7, SFItems.chromium,6, SFItems.crystalGallium,4);
+            craftTime = 1;
+            results = with(SFItems.strontium,1, SFItems.rubidium,3, SFItems.chromium,4, SFItems.crystalGallium,2);
             consumePower(25f);
             consumeItem(SFItems.rareEarth, 1);
-            consumeLiquid(SFLiquids.nitrate, 2f);
+            consumeLiquid(SFLiquids.nitrate, 40/60f);
             //coolant = consume(new ConsumeLiquid(SFLiquids.nitrate, 15f / 60f));
 
             ambientSound = Sounds.loopHum;
@@ -1486,18 +1489,18 @@ public class SFBlocks {
                         sides = 4;
                     }},
                     new DrawArcSmelt() {{
-                        midColor = Color.valueOf("eeffc7");
+                        midColor = SFColor.energyGreen;
                         flameColor = Color.valueOf("8c996dd8");
                         flameRad = 2;
-                        circleSpace = 4;
+                        circleSpace = 6;
                         flameRadiusScl = 10;
-                        flameRadiusMag = 1;
-                        circleStroke = 0.6f;
-                        alpha = 0.6f;
+                        flameRadiusMag = 1.5f;
+                        circleStroke = 1.5f;
+                        alpha = 0.8f;
                         particleRad = 16;
                         particles = 23;
-                        particleLife = 37;
-                        particleLen = 2;
+                        particleLife = 40;
+                        particleLen = 2.2f;
                     }},
                     new DrawDefault(),
                     new DrawLiquidRegion(SFLiquids.nitrate),
@@ -2554,8 +2557,8 @@ public class SFBlocks {
             requirements(Category.distribution, with(Items.lead, 1, SFItems.waveSteel, 1));
             junctionReplacement = waveJunction;
             bridgeReplacement = waveBridge;
-            speed = 0.19f;
-            displayedSpeed = 20;
+            speed = 0.24f;
+            displayedSpeed = 30;
             placeableLiquid = true;
         }};
         rearmoredConveyor = new ArmoredConveyor("complex-armored-conveyor") {{
@@ -2564,8 +2567,8 @@ public class SFBlocks {
             requirements(Category.distribution, with(Items.titanium, 1, Items.metaglass, 1, SFItems.siliSteel, 1, SFItems.fermium, 1));
             junctionReplacement = waveJunction;
             bridgeReplacement = discConveyor;
-            speed = 0.19f;
-            displayedSpeed = 20;
+            speed = 0.24f;
+            displayedSpeed = 30;
             insulated = absorbLasers = placeableLiquid = true;
         }};
         silisteelConveyor = new StackConveyor("silisteel-conveyor") {{
@@ -2588,9 +2591,10 @@ public class SFBlocks {
             ((Conveyor) waveConveyor).junctionReplacement = this;
             ((Conveyor) rearmoredConveyor).junctionReplacement = this;
             speed = 14;
+            displayedSpeed = 30;
             health = 220;
             capacity = 7;
-            buildCostMultiplier = 6f;
+            buildCostMultiplier = 3f;
             placeableLiquid = true;
         }};
         waveBridge = new ItemBridge("wavesteel-bridge") {{
@@ -2599,7 +2603,7 @@ public class SFBlocks {
             ((Conveyor) waveConveyor).bridgeReplacement = this;
             hasPower = false;
             range = 6;
-            transportTime = 3f;
+            transportTime = 2f;
             bridgeWidth = 8f;
             arrowSpacing = 6f;
             placeableLiquid = true;

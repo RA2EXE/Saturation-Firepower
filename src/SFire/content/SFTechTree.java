@@ -155,7 +155,7 @@ public class SFTechTree {
         })));
         addToNode(multiPress, () -> node(wavesteelCompresseor, () -> node(wavesteelForger)));
         addToNode(disassembler, () -> {
-            node(metalAnalyzer);
+            node(metalAnalyzer, () -> node(metalPrecipitater));
             node(nitrPrecipitator);
         });
         addToNode(kiln, () -> {

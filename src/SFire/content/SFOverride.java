@@ -15,6 +15,7 @@ import mindustry.gen.Sounds;
 import mindustry.graphics.*;
 import mindustry.type.*;
 import mindustry.world.blocks.defense.turrets.*;
+import mindustry.world.blocks.distribution.Conveyor;
 import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.blocks.units.*;
@@ -575,9 +576,15 @@ public class SFOverride {
         Blocks.siliconCrucible.consumePower(3.5f);
         Blocks.siliconCrucible.floating = true;
         Blocks.siliconCrucible.itemCapacity = 40;
-        //endregion
+
         Blocks.armoredConveyor.placeableLiquid = true;
         Blocks.platedConduit.placeableLiquid = true;
+        ((Conveyor) Blocks.titaniumConveyor).speed = 0.13f;
+        ((Conveyor) Blocks.titaniumConveyor).displayedSpeed = 15f;
+        ((Conveyor) Blocks.armoredConveyor).speed = 0.13f;
+        ((Conveyor) Blocks.armoredConveyor).displayedSpeed = 15f;
+        Blocks.plastaniumConveyor.itemCapacity = 15;
+        //endregion
         //region power
         ((ConsumeGenerator) Blocks.combustionGenerator).itemDurationMultipliers.put(SFItems.strontium, 0.8f);
         ((ConsumeGenerator) Blocks.steamGenerator).itemDurationMultipliers.put(SFItems.strontium, 0.8f);
