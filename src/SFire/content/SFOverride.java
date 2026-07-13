@@ -16,8 +16,10 @@ import mindustry.graphics.*;
 import mindustry.type.*;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.distribution.Conveyor;
+import mindustry.world.blocks.distribution.Junction;
 import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.production.*;
+import mindustry.world.blocks.storage.Unloader;
 import mindustry.world.blocks.units.*;
 import mindustry.world.draw.DrawTurret;
 import mindustry.content.*;
@@ -584,6 +586,9 @@ public class SFOverride {
         ((Conveyor) Blocks.armoredConveyor).speed = 0.13f;
         ((Conveyor) Blocks.armoredConveyor).displayedSpeed = 15f;
         Blocks.plastaniumConveyor.itemCapacity = 15;
+        ((Unloader) Blocks.unloader).speed = 4;
+        ((Junction) Blocks.junction).displayedSpeed = 15;
+        ((Junction) Blocks.junction).speed = 24;
         //endregion
         //region power
         ((ConsumeGenerator) Blocks.combustionGenerator).itemDurationMultipliers.put(SFItems.strontium, 0.8f);

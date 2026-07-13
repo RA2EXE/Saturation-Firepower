@@ -6476,14 +6476,14 @@ public class SFUnitTypes {
                     despawnEffect = Fx.none;
 
                     sticky = true;
-                    stickyExtraLifetime = 183;
+                    stickyExtraLifetime = 60;
                     intervalDelay = lifetime + 1;
-                    bulletInterval = 60;
+                    bulletInterval = 20;
                     intervalBullet = new EmptyBulletType(){{
                         splashDamage = 18;
                         splashDamageRadius = 30f;
                         status = SFStatusEffects.disRepair;
-                        statusDuration = 60;
+                        statusDuration = 20;
                         collidesGround = collidesAir = true;
                         collides = false;
                         hitEffect = despawnEffect = Fx.none;
@@ -6494,7 +6494,7 @@ public class SFUnitTypes {
                             particles = 3;
                             sizeFrom = 4;
                             length = 25;
-                            lifetime = 25;
+                            lifetime = 30;
                             interp = Interp.pow2Out;
                             sizeInterp = Interp.pow2In;
                             colorFrom = Pal.heal;

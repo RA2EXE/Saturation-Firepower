@@ -3426,7 +3426,7 @@ public class SFBlocks {
             health = 220;
             requirements(Category.distribution, with(Items.silicon,30, SFItems.waveSteel,40));
             group = BlockGroup.transportation;
-            speed = 60/40f;
+            speed = 1f;
         }};
         molecularDatabase = new StorageBlock("molecular-database") {{
             size = 3;
