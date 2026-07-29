@@ -354,6 +354,7 @@ public class SFOverride {
         ((ItemTurret) Blocks.fuse).ammoTypes.get(Items.thorium).damage = 135.2f;
         ((ItemTurret) Blocks.fuse).ammoTypes.get(Items.thorium).rangeChange = 10;
         ((ItemTurret) Blocks.fuse).ammoTypes.put(SFItems.discFabric, new ShrapnelBulletType() {{
+            pierceArmor = true;
             inaccuracy = 3;
             length = 125;
             rangeChange = 20;
@@ -372,6 +373,7 @@ public class SFOverride {
             });
             reloadMultiplier = 0.9f;
             spawnBullets.add(new ShrapnelBulletType() {{
+                pierceArmor = true;
                 length = 85;
                 damage = 130;
                 ammoMultiplier = 4f;
@@ -736,6 +738,7 @@ public class SFOverride {
             }};
         }};
         UnitTypes.flare.weapons.get(0).name = new String("flare-weapon");
+        UnitTypes.quad.weapons.get(0).name = new String("quad-weapon");
         UnitTypes.horizon.weapons.get(0).name = new String("horizon-weapon");
         UnitTypes.retusa.weapons.get(2).name = new String("retusa-mine");
 

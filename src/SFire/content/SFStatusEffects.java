@@ -34,6 +34,7 @@ public class SFStatusEffects {
 
     public static void load() {
         repair = new StatusEffect("repair") {{
+            outline = false;
             color = Pal.heal;
             damage = -4f;
             healthMultiplier = 1.15f;

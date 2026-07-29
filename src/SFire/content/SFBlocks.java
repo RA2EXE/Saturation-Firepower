@@ -89,7 +89,7 @@ public class SFBlocks {
 
     //wall
     steelWall, steelWallLarge, influxWall, influxWallLarge, expWall, expWallLarge, discWall,
-    fermWall, fermWallLarge, fermDoor, leipWall, leipWallLarge,
+    fermWall, fermWallLarge, fermDoor, leipWall, leipWallLarge, memoryWall, memoryWallLarge,
     discContainmentUnit, armorContainmentUnit, tayrContainmentUnit,
     container1, container2, container3, container4,
 
@@ -964,7 +964,7 @@ public class SFBlocks {
             category = Category.effect;
             buildVisibility = BuildVisibility.sandboxOnly;
         }};
-        hangar = new Wall("hangar"){{
+        hangar = new Thruster("hangar"){{
             size = 12;
             category = Category.units;
             buildVisibility = BuildVisibility.sandboxOnly;
@@ -2099,17 +2099,19 @@ public class SFBlocks {
         }};
         tayriumCrucible = new AttributeCrafter("tayrium-crucible") {{
             size = 4;
-            requirements(Category.crafting, with(Items.plastanium, 80, SFItems.strontium, 80, SFItems.waveSteel, 90, SFItems.fermium, 65));
+            requirements(Category.crafting, with(Items.plastanium, 85, SFItems.strontium, 85, SFItems.waveSteel, 110, SFItems.fermium, 70));
             hasPower = hasItems = true;
-            itemCapacity = 20;
+            floating = true;
+            itemCapacity = 30;
             attribute = Attribute.heat;
-            baseEfficiency = 1;
+            baseEfficiency = 0.5f;
+            minEfficiency = 0.001f;
             maxBoost = 9f;
-            boostScale = 1 / 16f;
+            boostScale = 4 / 16f;
 
             craftTime = 80;
             outputItem = new ItemStack(SFItems.tayrAlloy, 1);
-            consumePower(5.25f);
+            //consumePower(5.25f);
             consumeItems(with(SFItems.strontium,2, SFItems.siliSteel, 1, Items.silicon,2));
 
             craftEffect = new RadialEffect() {{
@@ -2131,8 +2133,6 @@ public class SFBlocks {
             ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawDefault(), new DrawFlame() {{
                 flameColor = Color.valueOf("2CCDB1");
-                flameRadius = 0;
-                flameRadiusIn = 0;
             }});
         }};
         leippiumSmelter = new GenericCrafter("leippium-smelter") {{
@@ -2288,9 +2288,9 @@ public class SFBlocks {
         }};
         influxWall = new Wall("influx-wall") {{
             size = 1;
-            requirements(Category.defense, with(Items.plastanium, 2, Items.surgeAlloy, 3, SFItems.siliSteel, 3));
-            health = 1900;
-            armor = 13;
+            requirements(Category.defense, with(Items.plastanium, 2, Items.surgeAlloy, 3, SFItems.siliSteel, 1));
+            health = 900;
+            armor = 9;
             buildTime = 2 * 10;
             lightningChance = 0.1f;
             lightningDamage = 50;
@@ -2301,8 +2301,8 @@ public class SFBlocks {
         influxWallLarge = new Wall("influx-wall-large") {{
             size = 2;
             requirements(Category.defense, ItemStack.mult(influxWall.requirements, 4));
-            health = 1900 * largeHealth;
-            armor = 13;
+            health = 900 * largeHealth;
+            armor = 9;
             buildTime = 2 * 4 * 10;
             lightningChance = 0.1f;
             lightningDamage = 50;
@@ -2325,9 +2325,9 @@ public class SFBlocks {
         }};
         discWall = new ShieldWall("discfabric-wall") {{
             size = 2;
-            requirements(Category.defense, with(SFItems.siliSteel, 24, SFItems.fermium, 32, SFItems.discFabric, 20));
+            requirements(Category.defense, with(SFItems.siliSteel, 15, SFItems.fermium, 20, SFItems.discFabric, 15));
             consumePower(0.5f);
-            health = 1600 * largeHealth;
+            health = 3000;
             buildTime = 8f * 10;
 
             shieldHealth = 1000;
@@ -2368,8 +2368,8 @@ public class SFBlocks {
         }};
         leipWall = new Wall("complex-armor-wall") {{
             size = 1;
-            requirements(Category.defense, with(Items.metaglass, 10, Items.plastanium, 16, SFItems.siliSteel, 16, SFItems.leipAlloy, 50));
-            health = 6800;
+            requirements(Category.defense, with(Items.metaglass, 10, Items.plastanium, 8, SFItems.siliSteel, 8, SFItems.leipAlloy, 16));
+            health = 3200;
             armor = 32;
             buildTime = 8 * 10;
             insulated = true;
@@ -2379,13 +2379,34 @@ public class SFBlocks {
         leipWallLarge = new Wall("complex-armor-wall-large") {{
             size = 2;
             requirements(Category.defense, ItemStack.mult(leipWall.requirements, 4));
-            health = 6800 * largeHealth;
+            health = 3200 * largeHealth;
             armor = 32;
             buildTime = 8 * 4 * 10;
             insulated = true;
             absorbLasers = true;
             placeableLiquid = true;
         }};
+        memoryWall = new MemoryWall("memory-wall") {{
+            size = 1;
+            requirements(Category.defense, with(SFItems.memoryAlloy,10,SFItems.nanoCore,10));
+            health = 2600;
+            buildTime = 6 * 10;
+            crushDamageMultiplier = 1;
+
+            maxArmor = 80;
+            regenAmount = 10f;
+        }};
+        memoryWallLarge = new MemoryWall("memory-wall-large") {{
+            size = 2;
+            requirements(Category.defense, ItemStack.mult(memoryWall.requirements, 4));
+            health = 2600 * largeHealth;
+            buildTime = 6 * 4 * 10;
+
+            crushDamageMultiplier = 1;
+            maxArmor = 80;
+            regenAmount = 20f;
+        }};
+
         discContainmentUnit = new Wall("energy-containment-unit") {{
             size = 4;
             requirements(Category.defense, with(SFItems.fermium, 85, SFItems.discFabric, 300));
@@ -5516,17 +5537,19 @@ public class SFBlocks {
             shootY = 10;
             ammo(
                     Items.thorium, new ShrapnelBulletType(){{
+                        armorMultiplier = 1.15f;
                         rangeChange = 10;
                         length = 180;
                         width = 20;
-                        damage = 115f;
+                        damage = 125f;
                         toColor = Pal.thoriumPink;
                         shootEffect = smokeEffect = Fx.thoriumShoot;
                     }},
                     SFItems.strontium, new ShrapnelBulletType(){{
+                        armorMultiplier = 1.2f;
                         length = 170;
                         width = 20;
-                        damage = 97f;
+                        damage = 110f;
                         ammoMultiplier = 3f;
                         toColor = SFColor.strontiumLight;
                         shootEffect = smokeEffect = new Effect(12f, e -> {
@@ -5541,6 +5564,7 @@ public class SFBlocks {
                         statusDuration = 450;
                     }},
                     SFItems.fermium, new ShrapnelBulletType(){{
+                        armorMultiplier = 0.5f;
                         reloadMultiplier = 0.95f;
                         rangeChange = 20;
                         length = 190;
@@ -7728,11 +7752,11 @@ public class SFBlocks {
                         }};
                     }},
                     SFItems.leipAlloy, new SizeDamageBullet(44, 2100, "missile-large"){{
-                        sizeDamageMul = 1.15f;
+                        armorMultiplier = -2f;
+                        sizeDamageMul = 1.3f;
                         rangeChange = 48;
                         drag = 0.05f;
                         lifetime = 19.5f;
-                        pierceArmor = true;
                         collidesAir = false;
                         pierce = true;
                         pierceCap = 3;
@@ -7815,7 +7839,7 @@ public class SFBlocks {
                     }}
             );
         }};
-        fengmang = new ContinuousLiquidTurret("fengmang"){{
+        /*fengmang = new ContinuousLiquidTurret("fengmang") {{
             size = 6;
             health = 6500;
             armor = 8;
@@ -7826,36 +7850,37 @@ public class SFBlocks {
             shake = 8f;
             minWarmup = 0.9f;
             warmupMaintainTime = 180;
-            /*drawer = new DrawTurret(){{parts.add(
-                    new RegionPart("-barrel") {{
-                        mirror = false;
-                        under = true;
-                        moveY = 6;
-                        progress = PartProgress.warmup;
-                        heatProgress = PartProgress.recoil;
-                        heatColor = Color.valueOf("FF7055");
-                        moves.add(new PartMove(PartProgress.recoil.curve(Interp.pow3Out), 0, -16, 0));
-                    }},
-                    new RegionPart("-back2") {{
-                        mirror = true;
-                        x = 16;
-                        y = -8;
-                        progress = PartProgress.heat;
-                        moveX = 4;
-                        moveY = -4;
-                    }},
-                    new RegionPart("-back1") {{
-                        mirror = true;
-                        x = 12;
-                        y = -16;
-                        progress = PartProgress.heat;
-                        moveX = 4;
-                        moveY = -4;
-                    }}
-            );}};*/
-            requirements(Category.turret, with(Items.lead,1300, Items.plastanium,800, Items.surgeAlloy,650, SFItems.fermium,1100, SFItems.lens,500, SFItems.discFabric,770));
-
-        }};
+            drawer = new DrawTurret() {{
+                parts.add(
+                        new RegionPart("-barrel") {{
+                            mirror = false;
+                            under = true;
+                            moveY = 6;
+                            progress = PartProgress.warmup;
+                            heatProgress = PartProgress.recoil;
+                            heatColor = Color.valueOf("FF7055");
+                            moves.add(new PartMove(PartProgress.recoil.curve(Interp.pow3Out), 0, -16, 0));
+                        }},
+                        new RegionPart("-back2") {{
+                            mirror = true;
+                            x = 16;
+                            y = -8;
+                            progress = PartProgress.heat;
+                            moveX = 4;
+                            moveY = -4;
+                        }},
+                        new RegionPart("-back1") {{
+                            mirror = true;
+                            x = 12;
+                            y = -16;
+                            progress = PartProgress.heat;
+                            moveX = 4;
+                            moveY = -4;
+                        }}
+                );
+            }};
+            requirements(Category.turret, with(Items.lead, 1300, Items.plastanium, 800, Items.surgeAlloy, 650, SFItems.fermium, 1100, SFItems.lens, 500, SFItems.discFabric, 770));
+        }};*/
     //8*8//
         yuanling = new ItemTurret("yuanling") {{
             size = 8;
@@ -9161,6 +9186,7 @@ public class SFBlocks {
             armor = 16;
             insulated = absorbLasers = true;
             breakable = rebuildable = false;
+            canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
             drawer = new DrawTurret("heavy-") {{
@@ -9277,6 +9303,7 @@ public class SFBlocks {
             armor = 16;
             insulated = absorbLasers = true;
             breakable = rebuildable = false;
+            canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
             drawer = new DrawTurret("water-"){{
@@ -9434,6 +9461,7 @@ public class SFBlocks {
             unitSort = UnitSorts.strongest;
             insulated = absorbLasers = true;
             breakable = rebuildable = false;
+            canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
             drawer = new DrawTurret("heavy-") {{
@@ -9649,6 +9677,7 @@ public class SFBlocks {
             unitSort = UnitSorts.weakest;
             insulated = absorbLasers = true;
             breakable = rebuildable = false;
+            canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
             drawer = new DrawTurret("heavy-"){{
@@ -9733,6 +9762,7 @@ public class SFBlocks {
             armor = 16;
             insulated = absorbLasers = true;
             breakable = rebuildable = false;
+            canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
             drawer = new DrawTurret("heavy-") {{
@@ -9871,6 +9901,7 @@ public class SFBlocks {
             armor = 33;
             insulated = absorbLasers = true;
             breakable = rebuildable = false;
+            canOverdrive = false;
             category = Category.turret;
             unitSort = UnitSorts.strongest;
             buildVisibility = BuildVisibility.sandboxOnly;

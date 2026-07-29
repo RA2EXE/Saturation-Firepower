@@ -45,18 +45,18 @@ tasks.register('jarAndroid') {
         // if (!buildToolsDir) throw new GradleException("No valid build-tools directory found containing 'd8'.")  
         // def d8Path = new File(buildToolsDir, "d8").absolutePath  
 
-        // "$d8Path $dependencies --min-api 14 --output ${project.archivesBaseName}Android.jar ${project.archivesBaseName}Desktop.jar"  
+        // "$d8Path $dependencies --min-api 14 --output ${project.name}Android.jar ${project.name}Desktop.jar"  
         //     .execute(null, new File("$buildDir/libs")).waitForProcessOutput(System.out, System.err)
 
 
         //dex and desugar files - this requires d8 in your PATH
-        "$sdkRoot/build-tools/35.0.0/d8.bat $dependencies --min-api 14 --output ${project.archivesBaseName}Android.jar ${project.archivesBaseName}Desktop.jar"
-                .execute(null, new File("$buildDir/libs")).waitForProcessOutput(System.out, System.err)
+        "$sdkRoot/build-tools/35.0.0/d8.bat $dependencies --min-api 14 --output ${project.name}Android.jar ${project.name}Desktop.jar"
+                .execute(null, new File("build/libs")).waitForProcessOutput(System.out, System.err)
     }
 }
 
 jar{
-    archiveFileName = "${project.archivesBaseName}Desktop.jar"
+    archiveFileName = "${project.name}Desktop.jar"
 
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE;
 
@@ -76,14 +76,14 @@ jar{
 tasks.register('deploy', Jar) {
     dependsOn jarAndroid
     dependsOn jar
-    archiveFileName = "${project.archivesBaseName}.jar"
+    archiveFileName = "${project.name}.jar"
 
-    from { [zipTree("$buildDir/libs/${project.archivesBaseName}Desktop.jar"), zipTree("$buildDir/libs/${project.archivesBaseName}Android.jar")] }
+    from { [zipTree("build/libs/${project.name}Desktop.jar"), zipTree("build/libs/${project.name}Android.jar")] }
 
     doLast {
         delete {
-            delete "$buildDir/libs/${project.archivesBaseName}Desktop.jar"
-            delete "$buildDir/libs/${project.archivesBaseName}Android.jar"
+            delete "build/libs/${project.name}Desktop.jar"
+            delete "build/libs/${project.name}Android.jar"
         }
     }
 }

@@ -29,6 +29,7 @@ import mindustry.gen.*;
 import mindustry.graphics.Drawf;
 import mindustry.graphics.Layer;
 import mindustry.graphics.Pal;
+import mindustry.graphics.Trail;
 import mindustry.type.*;
 import mindustry.type.unit.*;
 import mindustry.type.weapons.PointDefenseWeapon;
@@ -1262,19 +1263,15 @@ public class SFUnitTypes {
                 //shootX = 14;
                 shoot = new ShootAlternate(28);
                 recoils = 2;
-                parts.addAll(
-                        new RegionPart("-barrel-l") {{
-                            under = true;
-                            moveY = -8f;
-                            progress = PartProgress.recoil;
-                            recoilIndex = 0;
-                        }},
-                        new RegionPart("-barrel-r") {{
-                            under = true;
-                            moveY = -5.5f;
-                            progress = PartProgress.recoil;
-                            recoilIndex = 1;
-                        }});
+                for(int i=0; i<2; i++){
+                    int fi = i;
+                    parts.add(new RegionPart("-barrel-" + (fi == 0 ? "l":"r")){{
+                        under = true;
+                        moveY = -8f;
+                        progress = PartProgress.recoil;
+                        recoilIndex = fi;
+                    }});
+                }
                 shootCone = 30;
                 shootSound = Sounds.shootMissileLarge;
                 shake = 3.6f;
@@ -1354,12 +1351,13 @@ public class SFUnitTypes {
                             new ParticleEffect() {{
                                 particles = 3;
                                 line = true;
-                                lenFrom = 35f;
+                                lenTo = 35f;
                                 strokeFrom = 1;
                                 baseLength = 16;
                                 length = -70;
                                 lifetime = 15;
                                 interp = Interp.pow5Out;
+                                sizeInterp = Interp.slope;
                                 colorFrom = colorTo = SFColor.discLight;
                                 cone = 16;
                             }}
@@ -2851,7 +2849,7 @@ public class SFUnitTypes {
                         shootY = 16;
                         ejectEffect = Fx.none;
                         shootSound = Sounds.shootScathe;
-                        bullet = new BasicBulletType(2, 120, "sfire-mod-dragon") {{
+                        bullet = new BasicBulletType(2, 320, "sfire-mod-dragon") {{
                             lifetime = 300;
                             homingDelay = 30;
                             homingPower = 0.5f;
@@ -2876,7 +2874,7 @@ public class SFUnitTypes {
                                 cone = 30;
                             }};
                             splashDamageRadius = 40;
-                            splashDamage = 50;
+                            splashDamage = 110;
                             frontColor = Pal.sapBulletBack;
                             backColor = Pal.sapBullet;
                             trailLength = 60;
@@ -2914,7 +2912,7 @@ public class SFUnitTypes {
                             fragRandomSpread = 0;
                             fragBullets = 1;
                             fragBullet = new ShrapnelBulletType() {{
-                                damage = 75;
+                                damage = 180;
                                 lifetime = 15;
                                 length = 110;
                                 width = 12;
@@ -2927,17 +2925,14 @@ public class SFUnitTypes {
                                 serrationWidth = 8;
                                 fromColor = lightningColor = Pal.sapBullet;
                                 toColor = Pal.sapBulletBack;
-                                lightning = 2;
-                                lightningLength = 7;
-                                lightningDamage = 40;
                             }};
                             intervalBullets = 1;
                             bulletInterval = 10f;
                             intervalRandomSpread = 180;
                             intervalSpread = 60;
                             intervalAngle = 0;
-                            intervalBullet = new BasicBulletType(6, 60, "sfire-mod-dragon") {{
-                                splashDamage = 50;
+                            intervalBullet = new BasicBulletType(6, 80, "sfire-mod-dragon") {{
+                                splashDamage = 80;
                                 splashDamageRadius = 40;
                                 scaledSplashDamage = true;
                                 suppressionDuration = 180;
@@ -3209,6 +3204,7 @@ public class SFUnitTypes {
             engineOffset = 40;
             engineSize = 16;
             BulletType sundownBullet = new FlakBulletType(10, 28) {{
+                armorMultiplier = blockArmorMultiplier = 0.6f;
                 lifetime = 30.4f;
                 splashDamage = 80;
                 splashDamageRadius = 45f;
@@ -3228,6 +3224,7 @@ public class SFUnitTypes {
                 hitEffect = Fx.flakExplosionBig;
                 fragBullets = 3;
                 fragBullet = new BasicBulletType(8, 15) {{
+                    armorMultiplier = blockArmorMultiplier = 0.6f;
                     splashDamage = 25;
                     splashDamageRadius = 30;
                     lifetime = 10;
@@ -3623,7 +3620,7 @@ public class SFUnitTypes {
                             colorFrom = colorTo = Pal.heal;
                         }};
                     }},
-                    new ForceFieldAbility(190, 35, 12000, 20*60)
+                    new ForceFieldAbility(190, 15, 12000, 20*60)
             );
             forceMultiTarget = true;
             Weapon luoPoint = new PointDefenseWeapon("point-defense-mount") {{
@@ -4137,7 +4134,8 @@ public class SFUnitTypes {
                     fragRandomSpread = 60;
                     fragBullet = new BasicBulletType(2.5f, 46) {{
                         despawnEffect = Fx.none;
-                        pierceArmor = true;
+                        ammoMultiplier = blockArmorMultiplier = -1.3f;
+                        status = SFStatusEffects.inBreak;
                         width = 10;
                         height = 12;
                         shrinkY = 1;
@@ -4361,87 +4359,200 @@ public class SFUnitTypes {
             faceTarget = false;
             drawShields = false;
             immunities.addAll(StatusEffects.burning, StatusEffects.wet, StatusEffects.electrified, StatusEffects.unmoving, SFStatusEffects.scrambled, SFStatusEffects.breakdown);
-            weapons.add(new Weapon(name("enforcer-weapon")) {{
-                rotate = true;
-                rotateSpeed = 1.5f;
-                x = y = 0;
-                shootY = 40;
-                mirror = false;
-                cooldownTime = 160;
-                recoil = shake = 6;
-                reload = 98;
-                shoot = new ShootAlternate(18) {{
-                    shots = 2;
-                    shotDelay = 8;
-                }};
-                shootSound = Sounds.shootConquer;
-                bullet = new BasicBulletType(24, 325, "missile-large") {{
-                    lifetime = 15;
-                    drag = -0.01f;
-                    width = 10;
-                    height = 26;
-                    hitSize = 16;
-                    splashDamage = 225;
-                    splashDamageRadius = 60;
-                    buildingDamageMultiplier = 1.2f;
-                    absorbable = false;
-                    hittable = false;
-                    pierce = true;
-                    pierceArmor = true;
-                    pierceBuilding = true;
-                    pierceCap = 3;
-                    status = StatusEffects.unmoving;
-                    statusDuration = 80;
-                    frontColor = Color.white;
-                    backColor = SFColor.energyYellow;
-                    trailLength = 8;
-                    trailWidth = 4;
-                    trailColor = SFColor.energyYellow;
-                    trailChance = 1;
-                    trailRotation = true;
-                    trailEffect = new ParticleEffect() {{
-                        particles = 3;
-                        sizeFrom = 3;
-                        interp = Interp.circleOut;
-                        sizeInterp = Interp.pow3In;
-                        colorFrom = colorTo = SFColor.energyYellow;
-                        lifetime = 8;
-                    }};
-                    hitSound = Sounds.explosionQuad;
-                    hitSoundVolume = 3;
-                    hitShake = 8;
-                    hitEffect = new ExplosionEffect() {{
-                        lifetime = 35;
-                        smokes = 9;
-                        smokeRad = 90;
-                        smokeSize = 10;
-                        smokeColor = waveColor = SFColor.energyYellow;
-                        waveRad = 60;
-                        waveStroke = 10;
-                        waveLife = 10;
-                    }};
-                    despawnEffect = new ParticleEffect() {{
-                        lifetime = 65;
-                        particles = 1;
-                        sizeFrom = 10;
-                        colorFrom = colorTo = SFColor.energyYellow;
-                        length = 0;
-                    }};
-                    smokeEffect = Fx.smokeCloud;
-                    shootEffect = new ParticleEffect() {{
-                        particles = 6;
-                        line = true;
-                        strokeFrom = 6;
-                        lenFrom = 25;
-                        length = 50;
-                        cone = 15;
-                        lifetime = 11;
-                        interp = Interp.pow5Out;
-                        sizeInterp = Interp.fastSlow;
-                        colorFrom = colorTo = SFColor.energyYellow;
-                    }};
-                }};
-            }});
+            singleTarget = true;
+            weapons.add(
+                    new Weapon(name("enforcer-missile")) {{
+                        rotate = true;
+                        rotateSpeed = 1.5f;
+                        x = 0;
+                        y = -2f;
+                        mirror = false;
+                        recoil = shake = 0;
+                        xRand = 6f;
+                        shootY = 27/4f;
+                        shootCone = 7;
+                        shootSound = Sounds.shootMissileSmall;
+                        shootSoundVolume = 1f;
+                        inaccuracy = 7f;
+                        /*
+                        reload = 15f;
+                        shoot = new ShootMulti(
+                            new ShootBarrel(){{
+                                barrels = new float[]{
+                                        -41/4f, -99/4f, 0,
+                                        41/4f, -99/4f, 0,
+                                        -80/4f, -55/4f, 0,
+                                        80/4f, -55/4f, 0,
+                                };
+                            }},
+                            new ShootHelix(3,1.75f)
+                        );*/
+
+                        reload = 98 * 4f + 80f;
+                        minWarmup = 0.9f;
+                        shootWarmupSpeed = 1 / (98 *2f + 60);
+
+                        linearWarmup = true;
+                        shootStatus = StatusEffects.disarmed;
+                        shootStatusDuration = 29 * 4 + 80;
+                        shoot = new ShootBarrel(){{
+                            barrels = new float[]{
+                                    -41/4f, -96/4f, 0,
+                                    41/4f, -96/4f, 0,
+                                    -80/4f, -52/4f, 0,
+                                    80/4f, -52/4f, 0,
+                            };
+                            shots = 40;
+                            shotDelay = 3;
+                        }};
+                        velocityRnd = 0.1f;
+
+                        bullet = new MissileBulletType(10,110, "sfire-mod-missile1") {{
+                            lifetime = 38.6f;
+                            splashDamage = 110;
+                            splashDamageRadius = 45;
+                            scaledSplashDamage = true;
+                            armorMultiplier = blockArmorMultiplier = 0.6f;
+                            buildingDamageMultiplier = 1.5f;
+                            homingRange = 60;
+                            homingPower = 0.18f;
+                            homingDelay = 12;
+                            status = StatusEffects.blasted;
+
+                            width = 10;
+                            height = 35;
+                            frontColor = SFColor.missileGray;
+                            backColor = SFColor.enemyRedLight;
+                            trailEffect = Fx.none;
+                            trailColor = Pal.lighterOrange.cpy().a(0.6f);
+                            trailLength = 20;
+                            trailWidth = 1;
+
+                            hitShake = 3f;
+                            hitSound = Sounds.explosionDull;
+
+                            shootEffect = Fx.shootBig;
+                            smokeEffect = Fx.shootSmokeSquareBig;
+                            hitEffect = new ExplosionEffect(){{
+                                waveLife = 12;
+                                waveRad = 45;
+                                waveStroke = 5;
+                                sparks = 6;
+                                sparkLen = 10;
+                                sparkRad = 50;
+                                lifetime = 45;
+                                smokes = 3;
+                                smokeColor = SFColor.smoke;
+                                smokeSize = 9;
+                                smokeRad = 35;
+                            }};
+                            despawnEffect = Fx.blastExplosion;
+                        }};
+                    }},
+                    new Weapon(name("enforcer-weapon")) {{
+                        rotate = true;
+                        rotateSpeed = 1.5f;
+                        x = y = 0;
+                        mirror = false;
+                        shake = 6;
+                        reload = 98;
+                        shootY = 223/4f;
+                        shoot = new ShootAlternate(18) {{
+                            shots = 2;
+                            shotDelay = 8;
+                        }};
+                        shootSound = Sounds.shootConquer;
+                        bullet = new BasicBulletType(24, 325, "missile-large") {{
+                            lifetime = 15;
+                            drag = -0.01f;
+                            width = 10;
+                            height = 26;
+                            hitSize = 16;
+                            splashDamage = 225;
+                            splashDamageRadius = 60;
+                            buildingDamageMultiplier = 0.8f;
+                            absorbable = false;
+                            hittable = false;
+                            pierce = true;
+                            pierceArmor = true;
+                            pierceBuilding = true;
+                            pierceCap = 3;
+                            status = StatusEffects.unmoving;
+                            statusDuration = 80;
+                            frontColor = Color.white;
+                            backColor = SFColor.energyYellow;
+                            trailLength = 8;
+                            trailWidth = 4;
+                            trailColor = SFColor.energyYellow;
+                            trailChance = 1;
+                            trailRotation = true;
+                            trailEffect = new ParticleEffect() {{
+                                particles = 3;
+                                sizeFrom = 3;
+                                interp = Interp.circleOut;
+                                sizeInterp = Interp.pow3In;
+                                colorFrom = colorTo = SFColor.energyYellow;
+                                lifetime = 8;
+                            }};
+                            hitSound = Sounds.explosionQuad;
+                            hitSoundVolume = 3;
+                            hitShake = 8;
+                            hitEffect = new ExplosionEffect() {{
+                                lifetime = 35;
+                                smokes = 9;
+                                smokeRad = 90;
+                                smokeSize = 10;
+                                smokeColor = waveColor = SFColor.energyYellow;
+                                waveRad = 60;
+                                waveStroke = 10;
+                                waveLife = 10;
+                            }};
+                            despawnEffect = new ParticleEffect() {{
+                                lifetime = 65;
+                                particles = 1;
+                                sizeFrom = 10;
+                                colorFrom = colorTo = SFColor.energyYellow;
+                                length = 0;
+                            }};
+                            smokeEffect = Fx.smokeCloud;
+                            shootEffect = new ParticleEffect() {{
+                                particles = 6;
+                                line = true;
+                                strokeFrom = 6;
+                                lenFrom = 25;
+                                length = 50;
+                                cone = 15;
+                                lifetime = 11;
+                                interp = Interp.pow5Out;
+                                sizeInterp = Interp.fastSlow;
+                                colorFrom = colorTo = SFColor.energyYellow;
+                            }};
+                        }};
+
+                        layerOffset = 0.001f;
+                        recoil = 0;
+                        recoils = 2;
+                        cooldownTime = 160;
+                        recoilTime = 70f;
+                        for(int i=0; i<2; i++){
+                            int fi = i;
+                            parts.add(new RegionPart("-barrel-" + (fi > 0 ? "r":"l")){{
+                                under = true;
+                                x = fi>0? 33/4f : -33/4f;
+                                y = 144/4f;
+                                moveY = -8;
+                                progress = DrawPart.PartProgress.recoil.curve(Interp.swingOut);
+                                recoilIndex = fi;
+                            }});
+                            parts.add(new RegionPart("-missile") {{
+                                x = fi>0? 41/4f : 80/4f;
+                                y = fi>0? -96/4f : -52/4f;
+                                mirror = true;
+                                layerOffset = 0.001f;
+                            }});
+                        }
+                    }}
+            );
         }};
 
         Effect hitEnergySky = new WaveEffect() {{
@@ -5604,7 +5715,7 @@ public class SFUnitTypes {
         }};
         naval4 = new UnitType("merak") {{
             constructor = UnitTypes.risso.constructor;
-            speed = 0.54f;
+            speed = 0.57f;
             rotateSpeed = 0.83f;
             trailLength = 45;
             waveTrailX = 16;
@@ -5999,124 +6110,76 @@ public class SFUnitTypes {
             faceTarget = false;
             immunities.addAll(StatusEffects.burning, StatusEffects.melting, SFStatusEffects.breakdown, SFStatusEffects.overLoad);
 
-            BasicBulletType aliothBullet = new BasicBulletType(8, 110, "missile") {{
-                splashDamage = 118;
-                splashDamageRadius = 68;
-                lightning = 1;
-                lightningLength = 1;
-                lightningLengthRand = 9;
-                buildingDamageMultiplier = 1.6f;
-                status = SFStatusEffects.breakdown;
-                statusDuration = 180;
-                lifetime = 66f;
-                shootEffect = Fx.shootBigColor;
-                smokeEffect = new ParticleEffect() {{
-                    particles = 8;
-                    interp = Interp.fastSlow;
-                    sizeFrom = 8;
-                    length = 105;
-                    lifetime = 35;
-                    colorFrom = colorTo = SFColor.discLight;
-                    cone = 30;
+            Weapon aliothWeapon = new Weapon(name("alioth-weapon")) {{
+                reload = 50;
+                rotate = true;
+                rotateSpeed = 0.8f;
+                layerOffset = 0.001f;
+                shootY = 6;
+                shoot.shots = 2;
+                shoot.shotDelay = 12;
+                minWarmup = 0.8f;
+                shootWarmupSpeed = 0.03f;
+                inaccuracy = 3;
+                recoil = 2;
+                shootSound = Sounds.shootTank;
+                parts.add(new RegionPart("-barrel") {{
+                    under = true;
+                    moveY = -2;
+                    progress = PartProgress.recoil;
+                    heatProgress = PartProgress.recoil;
+                    heatColor = Color.valueOf("FEEBB380");
+                }});
+                bullet = new BasicBulletType(8, 110, "missile") {{
+                    splashDamage = 118;
+                    splashDamageRadius = 68;
+                    lightning = 1;
+                    lightningLength = 1;
+                    lightningLengthRand = 9;
+                    buildingDamageMultiplier = 1.6f;
+                    status = SFStatusEffects.breakdown;
+                    statusDuration = 180;
+                    lifetime = 66f;
+                    shootEffect = Fx.shootBigColor;
+                    smokeEffect = new ParticleEffect() {{
+                        particles = 8;
+                        interp = Interp.fastSlow;
+                        sizeFrom = 8;
+                        length = 105;
+                        lifetime = 35;
+                        colorFrom = colorTo = SFColor.discLight;
+                        cone = 30;
+                    }};
+                    width = 18;
+                    height = 30;
+                    frontColor = Color.white;
+                    backColor = trailColor = hitColor = SFColor.discLight;
+                    trailLength = 10;
+                    trailWidth = 4;
+                    hitShake = 8;
+                    hitSound = Sounds.explosionQuad;
+                    hitEffect = new ExplosionEffect() {{
+                        sparks = 22;
+                        sparkLen = 30;
+                        sparkStroke = 3;
+                        sparkRad = 80;
+                        sparkColor = smokeColor = SFColor.discLight;
+                        smokes = 6;
+                        smokeSize = 9;
+                        smokeRad = 60;
+                        lifetime = 65;
+                        waveLife = 25;
+                        waveStroke = 3;
+                        waveRad = 66;
+                        waveColor = SFColor.discLight;
+                    }};
+                    despawnEffect = Fx.titanExplosion;
                 }};
-                width = 18;
-                height = 30;
-                frontColor = Color.white;
-                backColor = trailColor = hitColor = SFColor.discLight;
-                trailLength = 10;
-                trailWidth = 4;
-                hitShake = 8;
-                hitSound = Sounds.explosionQuad;
-                hitEffect = new ExplosionEffect() {{
-                    sparks = 22;
-                    sparkLen = 30;
-                    sparkStroke = 3;
-                    sparkRad = 80;
-                    sparkColor = smokeColor = SFColor.discLight;
-                    smokes = 6;
-                    smokeSize = 9;
-                    smokeRad = 60;
-                    lifetime = 65;
-                    waveLife = 25;
-                    waveStroke = 3;
-                    waveRad = 66;
-                    waveColor = SFColor.discLight;
-                }};
-                despawnEffect = Fx.titanExplosion;
             }};
             weapons.addAll(
-                    new Weapon(name("alioth-weapon")) {{
-                        x = 24;
-                        y = 32;
-                        reload = 52;
-                        rotate = true;
-                        rotateSpeed = 0.8f;
-                        layerOffset = 0.001f;
-                        shootY = 6;
-                        shoot.shots = 2;
-                        shoot.shotDelay = 12;
-                        minWarmup = 0.8f;
-                        shootWarmupSpeed = 0.03f;
-                        inaccuracy = 3;
-                        recoil = 2;
-                        shootSound = Sounds.shootTank;
-                        parts.add(new RegionPart("-barrel") {{
-                            under = true;
-                            moveY = -2;
-                            progress = PartProgress.recoil;
-                            heatProgress = PartProgress.recoil;
-                            heatColor = Color.valueOf("FEEBB380");
-                        }});
-                        bullet = aliothBullet;
-                    }},
-                    new Weapon(name("alioth-weapon")) {{
-                        x = -33;
-                        y = 8;
-                        reload = 55;
-                        rotate = true;
-                        rotateSpeed = 0.8f;
-                        layerOffset = 0.001f;
-                        shootY = 6;
-                        shoot.shots = 2;
-                        shoot.shotDelay = 12;
-                        minWarmup = 0.8f;
-                        shootWarmupSpeed = 0.03f;
-                        inaccuracy = 3;
-                        recoil = 2;
-                        shootSound = Sounds.shootTank;
-                        parts.add(new RegionPart("-barrel") {{
-                            under = true;
-                            moveY = -2;
-                            progress = PartProgress.recoil;
-                            heatProgress = PartProgress.recoil;
-                            heatColor = Color.valueOf("FEEBB380");
-                        }});
-                        bullet = aliothBullet;
-                    }},
-                    new Weapon(name("alioth-weapon")) {{
-                        x = -28;
-                        y = -24;
-                        reload = 58;
-                        rotate = true;
-                        rotateSpeed = 0.8f;
-                        layerOffset = 0.001f;
-                        shootY = 6;
-                        shoot.shots = 2;
-                        shoot.shotDelay = 12;
-                        minWarmup = 0.8f;
-                        shootWarmupSpeed = 0.03f;
-                        inaccuracy = 3;
-                        recoil = 2;
-                        shootSound = Sounds.shootTank;
-                        parts.add(new RegionPart("-barrel") {{
-                            under = true;
-                            moveY = -2;
-                            progress = PartProgress.recoil;
-                            heatProgress = PartProgress.recoil;
-                            heatColor = Color.valueOf("FEEBB380");
-                        }});
-                        bullet = aliothBullet;
-                    }},
+                    copyRotRel(aliothWeapon,24,32,0,2),
+                    copyRotRel(aliothWeapon,-33,8,0,5),
+                    copyRotRel(aliothWeapon,-28,-24,0,8),
                     new Weapon(name("alioth-mount")) {{
                         x = 0;
                         reload = 780;
@@ -6434,8 +6497,8 @@ public class SFUnitTypes {
 
             faceTarget = true;
             weapons.add(new Weapon(name("bombina-gun")){{
-                x = 10;
-                y = -14/4f;
+                x = 39/4f;
+                y = -9/4f;
                 reload = 27;
                 recoil = 1;
                 inaccuracy = 3;
@@ -6446,19 +6509,19 @@ public class SFUnitTypes {
                 shootY = 0;
                 shoot = new ShootBarrel() {{
                     barrels = new float[]{
-                            0.5f, 26/4f, 0,
-                            11/4f, 24/4f, 0,
-                            -2, 28/4f, 0
+                            2/4f, 22/4f, 0,
+                            11/4f, 13/4f, 0
                     };
                     shots = 2;
                 }};
-                bullet = new BasicBulletType(6f, 18, "missile") {{
+                bullet = new MissileBulletType(6f, 18, "circle-bullet") {{
                     lifetime = 8 * 26 / 6f;
-                    width = 4;
-                    height = 6;
+                    width = height = 6;
                     shrinkY = 0;
                     reflectable = false;
                     absorbable = false;
+                    homingPower = 0.1f;
+                    homingRange = 30;
                     frontColor = Color.white;
                     backColor = Pal.heal;
                     trailColor = Pal.heal.cpy().a(0.3f);
@@ -6476,12 +6539,13 @@ public class SFUnitTypes {
                     despawnEffect = Fx.none;
 
                     sticky = true;
-                    stickyExtraLifetime = 60;
+                    stickyExtraLifetime = 40;
                     intervalDelay = lifetime + 1;
                     bulletInterval = 20;
                     intervalBullet = new EmptyBulletType(){{
-                        splashDamage = 18;
+                        splashDamage = 20;
                         splashDamageRadius = 30f;
+                        scaledSplashDamage = true;
                         status = SFStatusEffects.disRepair;
                         statusDuration = 20;
                         collidesGround = collidesAir = true;
@@ -6506,18 +6570,6 @@ public class SFUnitTypes {
                             interp = Interp.circleOut;
                             colorFrom = colorTo = Pal.heal;
                         }};
-                    }};
-
-                    fragOnHit = false;
-                    fragBullets = 1;
-                    fragBullet = new EmptyBulletType(){{
-                        instantDisappear = true;
-                        healAmount = 60;
-                        splashDamage = 0;
-                        splashDamageRadius = 24;
-                        collidesTiles = true;
-                        collidesTeam = true;
-                        hitEffect = despawnEffect = Fx.none;
                     }};
                 }};
             }});

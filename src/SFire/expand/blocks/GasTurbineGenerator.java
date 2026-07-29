@@ -109,12 +109,14 @@ public class GasTurbineGenerator extends ConsumeGenerator {
         public void write(Writes write){
             super.write(write);
             write.f(warmup);
+            write.f(exPower);
         }
 
         @Override
         public void read(Reads read, byte revision){
             super.read(read, revision);
             warmup = read.f();
+            exPower = read.f();
         }
 
     }
