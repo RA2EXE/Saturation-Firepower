@@ -14,8 +14,10 @@ import mindustry.world.meta.*;
 
 
 public class MemoryWall extends Wall {
-    //每次受击提高的护甲，可负        -1不封顶，0封底
-    public float hitArmorUp = 1, maxArmor = 10;
+    //每次受击提高的护甲，负数即为每次受击降低护甲
+    public float hitArmorUp = 1;
+    //hit>0的情况下0不封顶，hit<0的情况下-1不封底
+    public float maxArmor = 10;
 
     //脱战后回血预热时间
     public float regenDelay = 60f * 2;
@@ -83,6 +85,21 @@ public class MemoryWall extends Wall {
         public boolean collision(Bullet bullet) {
             super.collision(bullet);
 
+            if (hitArmorUp > 0f) {
+                if (maxArmor > 0f) {
+                    armor = Math.min(maxArmor, armor + hitArmorUp);
+                } else {
+                    armor += hitArmorUp;
+                }
+            } else if (hitArmorUp < 0f) {
+                if (maxArmor >= 0f) {
+                    armor = Math.max(maxArmor, armor + hitArmorUp);
+                } else {
+                    armor += hitArmorUp;
+                }
+            }
+            return true;
+
             //wasHit = (health() < maxHealth()) ? true : false;
             //charge = 0;
         //    if(maxArmor !=0){
@@ -94,15 +111,18 @@ public class MemoryWall extends Wall {
         //        //wasHit = true;
         //    }
 
-            if (maxArmor!=0) {
-                if (hitArmorUp > 0) {
+            /*
+            if (hitArmorUp > 0) {
+                if (maxArmor > 0) {
                     armor = Math.min(maxArmor, armor + hitArmorUp);
-                    //wasHit = true;
                 } else {
-                    armor = Math.max(maxArmor, armor + hitArmorUp);
+                    armor = armor + hitArmorUp;
                 }
-            }
-            return true;
+            } else {
+                if (maxArmor > 0) {
+                    armor = Mathf.lerpDelta(armor, maxArmor, hitArmorUp);
+                }
+            }*/
         }
     }
 }
