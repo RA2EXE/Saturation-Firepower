@@ -675,6 +675,9 @@ public class SFOverride {
             colorFrom = Color.valueOf("A278E1");
             colorTo = Color.valueOf("A278E100");
         }});
+
+        StatusEffects.disarmed.disarm = false;
+        StatusEffects.disarmed.reloadMultiplier = 0;
         //endregion
         //region units
         ((UnitFactory)Blocks.airFactory).plans.add(new UnitFactory.UnitPlan(SFUnitTypes.air1, 60 * 25f, with(Items.silicon,15,Items.titanium,20)));

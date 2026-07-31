@@ -55,6 +55,7 @@ public class SFStatusEffects {
             });
         }};
         repairX = new StatusEffect("repair-X") {{
+            outline = false;
             color = Pal.heal;
             damage = -18f;
             speedMultiplier = 0.92f;
@@ -76,6 +77,7 @@ public class SFStatusEffects {
             init(() -> opposite(burning, sapped, melting, tarred, disRepair, scrambled));
         }};
         disRepair = new StatusEffect("dismantle") {{
+            outline = false;
             color = Pal.heal;
             damage = 1.5f;
             speedMultiplier = 0.92f;
@@ -93,6 +95,7 @@ public class SFStatusEffects {
             init(() -> opposite(repair, repairX));
         }};
         fastBuild = new StatusEffect("fast-build") {{
+            outline = false;
             color = Pal.heal;
             buildSpeedMultiplier = 1.25f;
             speedMultiplier = 1.1f;
@@ -100,6 +103,7 @@ public class SFStatusEffects {
             effect = Fx.overdriven;
         }};
         scrambled = new StatusEffect("scrambled") {{
+            outline = false;
             color = Pal.heal;
             speedMultiplier = 0.45f;
             reloadMultiplier = 0.45f;
@@ -118,6 +122,7 @@ public class SFStatusEffects {
             init(() -> opposite(repairX));
         }};
         strengthen = new StatusEffect("strengthen") {{
+            outline = false;
             color = Pal.heal;
             damageMultiplier = 1.52f;
             speedMultiplier = 1.3f;
@@ -135,6 +140,7 @@ public class SFStatusEffects {
         }};
 
         negative = new StatusEffect("negative-charge") {{
+            outline = false;
             color = Items.lead.color;
             speedMultiplier = 0.75f;
             healthMultiplier = 1.2f;
@@ -157,6 +163,7 @@ public class SFStatusEffects {
             });
         }};
         postive = new StatusEffect("postive-charge") {{
+            outline = false;
             color = Items.copper.color;
             damage = 0.33f;
             speedMultiplier = 1.2f;
@@ -178,6 +185,7 @@ public class SFStatusEffects {
             });
         }};
         magnStrif = new StatusEffect("magnetic-strif") {{
+            outline = false;
             color = Color.gray;
             speedMultiplier = 0.95f;
             dragMultiplier = 1.5f;
@@ -196,6 +204,7 @@ public class SFStatusEffects {
         }};
 
         marked = new StatusEffect("marked") {{
+            outline = false;
             color = SFColor.discLight;
             healthMultiplier = 0.6f;
             speedMultiplier = 1.5f;
@@ -214,6 +223,7 @@ public class SFStatusEffects {
             }};
         }};
         acidded = new StatusEffect("acidded") {{
+            outline = false;
             speedMultiplier = 0.98f;
             healthMultiplier = 0.95f;
             intervalDamage = 1.88f * 5;
@@ -257,6 +267,7 @@ public class SFStatusEffects {
             }
         };
         inBreak = new StatusEffect("inside-break") {{
+            outline = false;
             color = Color.valueOf("666484");
             healthMultiplier = 0.93f;
             effectChance = 0;
@@ -264,6 +275,7 @@ public class SFStatusEffects {
             permanent = true;
         }};
         breakdown = new StatusEffect("breakdown") {{
+            outline = false;
             color = SFColor.energyYellow;
             healthMultiplier = 0.95f;
             speedMultiplier = 0.95f;
@@ -299,6 +311,7 @@ public class SFStatusEffects {
             });
         }};
         echoFlame = new StatusEffect("echo-flame") {{
+            outline = false;
             color = SFColor.energyGreen;
             damage = 120;
             dragMultiplier = 1.8f;
@@ -325,6 +338,7 @@ public class SFStatusEffects {
             });
         }};
         overLoad = new StatusEffect("over-load") {{
+            outline = false;
             color = SFColor.energyYellow;
             damage = 20 / 3f;
             damageMultiplier = 1.5f;
@@ -345,6 +359,7 @@ public class SFStatusEffects {
         }};
 
         stormed = new StatusEffect("stormed") {{
+            outline = false;
             color = SFColor.enemyRedLight;
             healthMultiplier = 1.2f;
             speedMultiplier = 1.25f;
@@ -364,6 +379,7 @@ public class SFStatusEffects {
             }};
         }};
         shattered = new StatusEffect("shattered") {{
+            outline = false;
             color = SFColor.enemyRedDark;
             healthMultiplier = 0.75f;
             speedMultiplier = 0.8f;
@@ -381,6 +397,7 @@ public class SFStatusEffects {
             }};
         }};
         overFreezing = new StatusEffect("over-freezing") {{
+            outline = false;
             color = Liquids.cryofluid.color;
             healthMultiplier = 0.7f;
             speedMultiplier = 0.4f;
@@ -406,6 +423,7 @@ public class SFStatusEffects {
             });
         }};
         chemicalFlame = new StatusEffect("chemical-flame") {{
+            outline = false;
             color = SFColor.enemyRedLight;
             damage = 45 / 60f;
             speedMultiplier = 0.95f;
@@ -445,6 +463,7 @@ public class SFStatusEffects {
             });
         }};
         fullFire = new StatusEffect("saturation-attack") {{
+            outline = false;
             color = Color.gray;
             speedMultiplier = 0.125f;
             dragMultiplier = 2;
@@ -486,6 +505,7 @@ public class SFStatusEffects {
 
         skewed = new StatusEffect("skewed") {{
             //show = false;
+            outline = false;
             color = SFColor.tayrLight;
             damageMultiplier = 0.5f;
             speedMultiplier = -1.1f;
@@ -511,6 +531,7 @@ public class SFStatusEffects {
         }};
         charging = new StatusEffect("charging") {{
             //show = false;
+            outline = false;
             color = SFColor.tayrLight;
             damageMultiplier = 3f;
             healthMultiplier = 2f;

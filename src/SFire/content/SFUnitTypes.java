@@ -4364,8 +4364,7 @@ public class SFUnitTypes {
                     new Weapon(name("enforcer-missile")) {{
                         rotate = true;
                         rotateSpeed = 1.5f;
-                        x = 0;
-                        y = -2f;
+                        x = y = 0;
                         mirror = false;
                         recoil = shake = 0;
                         xRand = 6f;
@@ -4388,13 +4387,13 @@ public class SFUnitTypes {
                             new ShootHelix(3,1.75f)
                         );*/
 
-                        reload = 98 * 4f + 80f;
+                        reload = 98 * 3f;
                         minWarmup = 0.9f;
                         shootWarmupSpeed = 1 / (98 *2f + 60);
 
                         linearWarmup = true;
                         shootStatus = StatusEffects.disarmed;
-                        shootStatusDuration = 29 * 4 + 80;
+                        shootStatusDuration = 29 * 4;
                         shoot = new ShootBarrel(){{
                             barrels = new float[]{
                                     -41/4f, -96/4f, 0,

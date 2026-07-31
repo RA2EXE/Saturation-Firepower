@@ -67,7 +67,7 @@ jar{
     from(rootDir){
         include "mod.hjson"
     }
-//东西在这"D:\Program Files\JetBrains\gradle-8.12-all"下一步是？
+
     from("assets/"){
         include "**"
     }
