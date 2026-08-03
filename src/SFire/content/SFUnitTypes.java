@@ -4134,7 +4134,7 @@ public class SFUnitTypes {
                     fragRandomSpread = 60;
                     fragBullet = new BasicBulletType(2.5f, 46) {{
                         despawnEffect = Fx.none;
-                        ammoMultiplier = blockArmorMultiplier = -1.3f;
+                        armorMultiplier = blockArmorMultiplier = -1.3f;
                         status = SFStatusEffects.inBreak;
                         width = 10;
                         height = 12;

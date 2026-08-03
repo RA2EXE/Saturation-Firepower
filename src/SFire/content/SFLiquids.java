@@ -4,6 +4,7 @@ import arc.graphics.*;
 import arc.math.Interp;
 import mindustry.content.StatusEffects;
 import mindustry.entities.effect.ParticleEffect;
+import mindustry.graphics.Pal;
 import mindustry.type.*;
 
 import static mindustry.content.Liquids.*;
@@ -11,20 +12,18 @@ import static mindustry.content.Liquids.*;
 public class SFLiquids {
     public static Liquid
     nanoFluid, nitratedOil, actiNanofluid,
-    nitrate,blastReagent,mixGas;
+    nitrate,blastReagent,mixGas,heatchangeroil;
 
     public static void load(){
 
         nanoFluid = new Liquid("nanofluid", Color.valueOf("7CF389")){{
-            heatCapacity = 1.45f;
-            temperature = 0.3f;
+            heatCapacity = 1.5f;
             viscosity = 0.3f;
             effect = SFStatusEffects.scrambled;
-            lightColor =  new Color(Color.valueOf("7CF389").a(0.3f));
+            lightColor = Color.valueOf("7CF389").a(0.3f);
         }};
 
         nitratedOil =  new Liquid("nitrated-oil", Color.valueOf("36312D")){{
-            temperature = 0.5f;
             viscosity = 0.8f;
             flammability = 1.5f;
             explosiveness = 1.8f;
@@ -77,6 +76,14 @@ public class SFLiquids {
             flammability = 2f;
             explosiveness = 0.25f;
             gas = true;
+        }};
+
+        heatchangeroil = new Liquid("heat-changer", Color.valueOf("CC7B56")){{
+            heatCapacity = 2.5f;
+            viscosity = 0.7f;
+            flammability = 0.07f;
+            boilPoint = -1f;
+            effect = StatusEffects.none;
         }};
 
     }

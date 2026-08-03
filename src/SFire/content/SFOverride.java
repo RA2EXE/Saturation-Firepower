@@ -133,10 +133,18 @@ public class SFOverride {
                 }}
         );
 
+        ((LiquidTurret) Blocks.tsunami).shoot = new ShootSpread(3,1.5f);
+        ((LiquidTurret) Blocks.tsunami).rotateSpeed += 2;
+        ((LiquidTurret) Blocks.tsunami).range += 8 * 10f;
+        float tsunamiSpeed = 5.5f;
+        ((LiquidTurret) Blocks.tsunami).ammoTypes.get(Liquids.water).speed = tsunamiSpeed;
+        ((LiquidTurret) Blocks.tsunami).ammoTypes.get(Liquids.cryofluid).speed = tsunamiSpeed;
+        ((LiquidTurret) Blocks.tsunami).ammoTypes.get(Liquids.oil).speed = tsunamiSpeed;
+        ((LiquidTurret) Blocks.tsunami).ammoTypes.get(Liquids.slag).speed = tsunamiSpeed;
         ((LiquidTurret) Blocks.tsunami).ammoTypes.putAll(
                 SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.nanoFluid){{
                     lifetime = 49f;
-                    speed = 4f;
+                    speed = tsunamiSpeed;
                     puddleSize = 8f;
                     orbSize = 4f;
                     drag = 0.001f;
@@ -151,7 +159,8 @@ public class SFOverride {
                 }},
                 SFLiquids.nitrate, new LiquidBulletType(SFLiquids.nitrate){{
                     lifetime = 49f;
-                    speed = 4f;
+                    speed = tsunamiSpeed;
+
                     puddleSize = 8f;
                     orbSize = 4f;
                     drag = 0.001f;
@@ -164,7 +173,7 @@ public class SFOverride {
                 }},
                 SFLiquids.blastReagent, new LiquidBulletType(SFLiquids.blastReagent){{
                     lifetime = 49f;
-                    speed = 4f;
+                    speed = tsunamiSpeed;
                     puddleSize = 8f;
                     orbSize = 4f;
                     drag = 0.001f;
@@ -180,6 +189,7 @@ public class SFOverride {
                     layer = 98;
                 }}
         );
+
         ((ItemTurret) Blocks.ripple).shoot.shots = 5;
         ((ItemTurret) Blocks.ripple).ammoTypes.putAll(
                 SFItems.siliSteel, new ArtilleryBulletType(3,30){{

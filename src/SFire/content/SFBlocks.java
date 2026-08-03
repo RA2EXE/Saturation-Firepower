@@ -81,7 +81,7 @@ public class SFBlocks {
     plasMultiCompresser, surgeTheSmelter, surgeElesmelter, phaseActiver,
 
     silisteelSmelter, silisteelSmelterLarge, silisteelSmelterHuge, silisteelCrucible, wavesteelCompresseor, wavesteelForger, metalAnalyzer, metalPrecipitater, galliumSupercooler,
-    nanoConstructor, nanoPrinter, lensAtomizer, airCollector, airCooler, nitrateMixer, fractionator,
+    nanoConstructor, nanoPrinter, lensAtomizer, airCollector, airCooler, nitrateMixer, fractionator, oilblender,
     discPhaseWaver, discPhaseKnitter, chemicalSiSmelter, blastSiSmelter, nitrReactor, nitrCentrifuge, nitrPrecipitator, nanoActivator, nanoMixer, blastReagentMixer, clusMaker,
     tayriumSlelter, tayriumCrucible, leippiumSmelter, leippiumCrucible, memoryLocator,
     //primaryLab, seniorLab, warfareLab
@@ -1831,6 +1831,25 @@ public class SFBlocks {
             ambientSoundVolume = 0.3f;
             craftEffect = Fx.smokeCloud;
         }};
+        oilblender = new GenericCrafter("oil-blender") {{
+            size = 2;
+            requirements(Category.crafting, with(Items.metaglass,40, SFItems.siliSteel,30, SFItems.tayrAlloy,25, SFItems.lens,35));
+            hasPower = hasLiquids = true;
+            liquidCapacity = 80;
+
+            craftTime = 60 * 2f;
+            outputLiquid = new LiquidStack(SFLiquids.heatchangeroil, 24 /60f);
+            consumePower(1.5f);
+            consumeLiquid(SFLiquids.mixGas, 36 /60f);
+            consumeItem(SFItems.nanoCore, 3);
+
+            drawer = new DrawMulti(
+                    new DrawRegion("-bottom"),
+                    new DrawLiquidTile(SFLiquids.mixGas),
+                    new DrawLiquidTile(SFLiquids.heatchangeroil),
+                    new DrawDefault()
+            );
+        }};
         chemicalSiSmelter = new GenericCrafter("chemical-silicon-smelter") {{
             size = 4;
             health = 660;
@@ -2015,7 +2034,7 @@ public class SFBlocks {
             craftTime = 20;
             outputLiquid = new LiquidStack(SFLiquids.nanoFluid, 12f);
             consumePower(2500 / 60f);
-            consumeLiquid(Liquids.cryofluid, 12 * 1.8f + 0.0001f);
+            consumeLiquid(Liquids.cryofluid, 12 * 1.8f );
             consumeItem(SFItems.nanoCore, 20);
 
             craftEffect = new WaveEffect() {{
@@ -3018,11 +3037,11 @@ public class SFBlocks {
             liquidCapacity = 600;
             warmupSpeed = 0.00095f;
 
-            powerProduction = 662;
-            consumePower(40f);
+            powerProduction = 662 + 100;
+            consumePower(35f);
             consumeLiquid(Liquids.cryofluid, 2.4f);
-            consumeItems(with(Items.blastCompound, 5, SFItems.fermium, 3));
-            itemDuration = 300;
+            consumeItems(with(Items.blastCompound,5, SFItems.fermium,10));
+            itemDuration = 240;
 
             explosionMinWarmup = 0.8f;
             explosionShake = 8;
@@ -3143,7 +3162,7 @@ public class SFBlocks {
             liquidCapacity = 800;
             warmupSpeed = 0.006f;
 
-            powerProduction = 1050f;
+            powerProduction = 1080f;
             itemDuration = 35f;
             consumeLiquid(SFLiquids.nanoFluid, 2.7f);
             consume(new ConsumeItemRadioactive(0.8f));
@@ -4343,7 +4362,7 @@ public class SFBlocks {
             recoil = 1.5f;
             recoilTime = 90;
             reload = 6;
-            shoot = new ShootHelix(3,1.2f){{shots=3;shotDelay=1.5f;}};
+            shoot = new ShootHelix(3,1.2f){{shots=2;shotDelay=1.5f;}};
             velocityRnd = 0.1f;
             requirements(Category.turret, with(SFItems.waveSteel,150, Items.metaglass,130, Items.thorium,90, SFItems.siliSteel,70));
 
@@ -4353,11 +4372,12 @@ public class SFBlocks {
             shootEffect = Fx.shootLiquid;
             range = 250+30f;
             consumePower(1f);
+            float pubMul = 4f;
             ammo(
                     Liquids.water, new LiquidBulletType(Liquids.water){{
                         lifetime = 34;
                         speed = 8f;
-                        puddleSize = 8f;
+                        puddleSize = 8f*pubMul;
                         orbSize = 5;
                         drag = 0.001f;
                         ammoMultiplier = 0.2f;
@@ -4365,64 +4385,42 @@ public class SFBlocks {
                         layer = Layer.bullet - 2f;
 
                         damage = 0.4f;
-                        knockback = 1.7f;
-                        fragBullets = 3;
-                        fragRandomSpread = 45;
-                        fragBullet = new LiquidBulletType(Liquids.water){{
-                            lifetime = 10;
-                            speed = 3f;
-                            drag = 0.01f;
-                            statusDuration = 60f * 4f;
-                            layer = Layer.bullet - 2f;
-                            knockback = 1.7f;
-                        }};
+                        knockback = 1.7f/3;
+                        pierce  = true;
+                        pierceCap = 4;
                     }},
                     Liquids.slag,  new LiquidBulletType(Liquids.slag){{
                         lifetime = 34;
                         speed = 8f;
-                        puddleSize = 8f;
+                        puddleSize = 8f*pubMul;
                         orbSize = 5;
                         drag = 0.001f;
                         ammoMultiplier = 0.2f;
                         statusDuration = 60f * 4f;
 
                         damage = 6.25f;
-                        knockback = 1.3f;
-                        fragBullets = 3;
-                        fragRandomSpread = 45;
-                        fragBullet = new LiquidBulletType(Liquids.slag){{
-                            lifetime = 10;
-                            speed = 3f;
-                            drag = 0.01f;
-                            statusDuration = 60f * 4f;
-                            knockback = 1.3f;
-                        }};
+                        knockback = 1.3f/3;
+                        pierce  = true;
+                        pierceCap = 4;
                     }},
                     Liquids.cryofluid, new LiquidBulletType(Liquids.cryofluid){{
                         lifetime = 34;
                         speed = 8f;
-                        puddleSize = 8f;
+                        puddleSize = 8f*pubMul;
                         orbSize = 5;
                         drag = 0.001f;
                         ammoMultiplier = 0.2f;
                         statusDuration = 60f * 4f;
 
                         damage = 0.4f;
-                        knockback = 1.3f;
-                        fragBullets = 3;
-                        fragRandomSpread = 45;
-                        fragBullet = new LiquidBulletType(Liquids.cryofluid){{
-                            lifetime = 10;
-                            speed = 3f;
-                            drag = 0.01f;
-                            statusDuration = 60f * 4f;
-                            knockback = 1.3f;
-                        }};
+                        knockback = 1.3f/3;
+                        pierce  = true;
+                        pierceCap = 4;
                     }},
                     Liquids.oil, new LiquidBulletType(Liquids.oil){{
                         lifetime = 34;
                         speed = 8f;
-                        puddleSize = 8f;
+                        puddleSize = 8f*pubMul;
                         orbSize = 5;
                         drag = 0.001f;
                         ammoMultiplier = 0.2f;
@@ -4430,22 +4428,14 @@ public class SFBlocks {
                         layer = Layer.bullet - 2f;
 
                         damage = 0.2f;
-                        knockback = 1.3f;
-                        fragBullets = 3;
-                        fragRandomSpread = 45;
-                        fragBullet = new LiquidBulletType(Liquids.oil){{
-                            lifetime = 10;
-                            speed = 3f;
-                            drag = 0.01f;
-                            statusDuration = 60f * 4f;
-                            layer = Layer.bullet - 2f;
-                            knockback = 1.3f;
-                        }};
+                        knockback = 1.3f/4;
+                        pierce  = true;
+                        pierceCap = 4;
                     }},
                     SFLiquids.nanoFluid, new LiquidBulletType(SFLiquids.actiNanofluid){{
                         lifetime = 34;
                         speed = 8f;
-                        puddleSize = 8f;
+                        puddleSize = 8f*pubMul;
                         orbSize = 5;
                         drag = 0.001f;
                         ammoMultiplier = 0.2f;
@@ -4453,22 +4443,14 @@ public class SFBlocks {
                         statusDuration = 60f * 4f;
 
                         damage = 0.2f;
-                        knockback = 0.3f;
-                        fragBullets = 3;
-                        fragRandomSpread = 45;
-                        fragBullet = new LiquidBulletType(SFLiquids.actiNanofluid){{
-                            lifetime = 10;
-                            speed = 3f;
-                            drag = 0.01f;
-                            status = SFStatusEffects.disRepair;
-                            statusDuration = 60f * 4f;
-                            knockback = 0.3f;
-                        }};
+                        knockback = 0.3f/4;
+                        pierce  = true;
+                        pierceCap = 4;
                     }},
                     SFLiquids.nitrate, new LiquidBulletType(SFLiquids.nitrate){{
                         lifetime = 34;
                         speed = 8f;
-                        puddleSize = 8f;
+                        puddleSize = 8f*pubMul;
                         orbSize = 5;
                         drag = 0.001f;
                         ammoMultiplier = 0.2f;
@@ -4477,22 +4459,14 @@ public class SFBlocks {
                         layer = 98;
 
                         damage = 6.8f;
-                        knockback = 1.5f;
-                        fragBullets = 3;
-                        fragRandomSpread = 45;
-                        fragBullet = new LiquidBulletType(SFLiquids.nitrate){{
-                            lifetime = 10;
-                            speed = 3f;
-                            drag = 0.01f;
-                            status = SFStatusEffects.acidded;
-                            statusDuration = 60f * 4f;
-                            knockback = 1.5f;
-                        }};
+                        knockback = 1.5f/4;
+                        pierce  = true;
+                        pierceCap = 4;
                     }},
                     SFLiquids.blastReagent, new LiquidBulletType(SFLiquids.blastReagent){{
                         lifetime = 34;
                         speed = 8f;
-                        puddleSize = 8f;
+                        puddleSize = 8f*pubMul;
                         orbSize = 5;
                         drag = 0.001f;
                         ammoMultiplier = 0.2f;
@@ -6623,7 +6597,7 @@ public class SFBlocks {
             reload = 360;
             rotateSpeed = 2;
             range = 880;
-            coolantMultiplier = 0.8f;
+            coolantMultiplier = 0.75f/1.5f;
             liquidCapacity = 120;
             coolant = consumeCoolant(1.5f);
             ammoPerShot = 6;
@@ -7125,7 +7099,7 @@ public class SFBlocks {
             reload = 260;
             rotateSpeed = 2.55f;
             range = 346;
-            coolantMultiplier = 1f;
+            coolantMultiplier = 1.5f;
             liquidCapacity = 60;
             coolant = consumeCoolant(1f);
             ammoUseEffect = Fx.none;
@@ -7378,7 +7352,7 @@ public class SFBlocks {
             reload = 20;
             rotateSpeed = 3.6f;
             range = 500;
-            coolantMultiplier = 1;
+            coolantMultiplier = 0.75f;
             consumePower(50f);
             liquidCapacity = 300;
             coolant = consumeCoolant(2);
@@ -7654,7 +7628,7 @@ public class SFBlocks {
             reload = 230;
             rotateSpeed = 2.3f;
             range = 496;
-            coolantMultiplier = 0.5f;
+            coolantMultiplier = 0.75f;
             coolant = consumeCoolant(3f);
             liquidCapacity = 120;
             shootSound = Sounds.shootTank;
@@ -7916,7 +7890,7 @@ public class SFBlocks {
             reload = 9;
             rotateSpeed = 3.5f;
             range = 416;
-            coolantMultiplier = 0.77f;
+            coolantMultiplier = 0.75f;
             coolant = consumeCoolant(4.5f);
             liquidCapacity = 180;
             shootSound = Sounds.shootScepter;
@@ -8058,7 +8032,7 @@ public class SFBlocks {
             reload = 880;
             rotateSpeed = 1.7f;
             range = 800;
-            coolantMultiplier = 0.5f;
+            coolantMultiplier = 1/3.5f;
             coolant = consumeCoolant(3.5f);
             liquidCapacity = 300;
             shootSound = SFSounds.release;
@@ -8601,7 +8575,7 @@ public class SFBlocks {
             shake = 8f;
             consumePower(360f);
             liquidCapacity = 300;
-            coolantMultiplier = 0.5f;
+            coolantMultiplier = 0.8f/3.5f;
             consumeCoolant(3.5f);
 
             velocityRnd = 0.12f;
