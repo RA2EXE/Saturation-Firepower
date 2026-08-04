@@ -2250,6 +2250,14 @@ public class SFBlocks {
                     new DrawArcSmelt(){{
                         flameColor = SFColor.discLight;
                         midColor = SFColor.discDark;
+                        circleSpace = 6;
+                        flameRadiusScl = 6;
+                        flameRadiusMag = 2;
+                        circleStroke = 1f;
+                        particleRad = 8;
+                        particles = 10;
+                        particleLife = 60;
+                        particleLen = 2;
                     }},
                     new DrawGlowRegion(){{color=SFColor.discLight;}},
                     new DrawDefault()
@@ -6742,6 +6750,7 @@ public class SFBlocks {
                             pierceDamageFactor = 0.07f;
                             width = 25;
                             height = 75;
+                            hitSize = 14;
                             lightningColor = backColor = trailColor = Color.valueOf("f9c27a");
                             trailLength = 13;
                             trailWidth = 7;
@@ -7158,6 +7167,7 @@ public class SFBlocks {
                         shieldDamagePercent = 0.1f;
 
                         width = height = 18;
+                        hitSize = 9;
                         frontColor = Color.white;
                         backColor = hitColor = trailColor = SFColor.energyYellow;
                         trailLength = 8;
@@ -7256,6 +7266,7 @@ public class SFBlocks {
 
                         width = 16;
                         height = 40;
+                        hitSize = 12;
                         frontColor = backColor = hitColor = trailColor = SFColor.discLight;
                         trailLength = 10;
                         trailWidth = 3;
@@ -7652,6 +7663,7 @@ public class SFBlocks {
 
                         width = 16;
                         height = 25;
+                        hitSize = 16;
                         shrinkY = 0.1f;
                         frontColor = SFColor.chromiumLight;
                         backColor = hitColor = SFColor.chromiumDark;
@@ -7739,6 +7751,7 @@ public class SFBlocks {
 
                         width = 16;
                         height = 25;
+                        hitSize = 16;
                         shrinkY = 0.1f;
                         frontColor = SFColor.leipLight;
                         backColor = hitColor = SFColor.leipDark;
@@ -7927,6 +7940,7 @@ public class SFBlocks {
 
                         width = 16;
                         height = 21;
+                        hitSize = 10;
                         frontColor = Pal.thoriumAmmoFront;
                         backColor = hitColor = Pal.thoriumAmmoBack;
                         hitSound = Sounds.explosion;
@@ -7944,6 +7958,7 @@ public class SFBlocks {
 
                         width = 20;
                         height = 26;
+                        hitSize = 10;
                         hitColor = Pal.bulletYellowBack;
                         hitSound = Sounds.explosion;
                         hitEffect = Fx.hitBulletBig;
@@ -7970,6 +7985,7 @@ public class SFBlocks {
 
                         width = 20;
                         height = 25;
+                        hitSize = 10;
                         frontColor = SFColor.chromiumLight;
                         backColor = hitColor = SFColor.chromiumDark;
                         hitSound = Sounds.explosion;
@@ -8002,6 +8018,7 @@ public class SFBlocks {
                         inaccuracy = -1.1f;
                         width = 17;
                         height = 28;
+                        hitSize = 9;
                         frontColor = hitColor = SFColor.discLight;
                         backColor = trailColor = SFColor.discDark;
                         trailLength = 11;
@@ -8277,6 +8294,7 @@ public class SFBlocks {
 
                         width = 32;
                         height = 56;
+                        hitSize = 20;
                         shrinkY = 0;
                         frontColor = backColor = trailColor = SFColor.discDark;
                         trailLength = 9;

@@ -161,7 +161,7 @@ public class SFTechTree {
         addToNode(kiln, () -> {
             node(airCollector, () -> node(lensAtomizer, () -> node(memoryLocator)));
             node(nitrateMixer, () -> node(airCooler));
-            node(fractionator);
+            node(fractionator, () -> node(oilblender));
         });
         addToNode(phaseWeaver, () -> {
             node(discPhaseKnitter);

@@ -6722,7 +6722,7 @@ public class SFUnitTypes {
             speed = 0.7f;
             drag = 0.11f;
             accel = 0.2f;
-            hitSize = 45;
+            hitSize = 55;
             health = 22600f;
             parts.add(new HoverPart(){{
                 circles = 5;
@@ -6864,7 +6864,7 @@ public class SFUnitTypes {
             speed = 0.4f;
             drag = 0.07f;
             accel = 0.1f;
-            hitSize = 60;
+            hitSize = 65;
 
             health = 76000f;
             armor = 12;
