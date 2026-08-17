@@ -10,7 +10,6 @@ import mindustry.gen.*;
 import mindustry.world.*;
 
 import static mindustry.Vars.state;
-//完全用不了啊nnd
 //aiController = GunShipAI::new;
 
 public class GunShipAI extends FlyingAI {
@@ -19,7 +18,7 @@ public class GunShipAI extends FlyingAI {
     public float orbitSpeed = 360 / 5f;
     //攻击范围
     public float attackRange = 30;
-    public @Nullable Unit target;
+    //public @Nullable Unit target;
 
     public GunShipAI() {
         super();
@@ -42,8 +41,8 @@ public class GunShipAI extends FlyingAI {
             moveTo(target, attackRange - 50f);
         } else {
             //炮击位置
-            float targetX = target.x;
-            float targetY = target.y;
+            float targetX = target.x();
+            float targetY = target.y();
             //转圈
             float angle = (Time.time * orbitSpeed) % 360f;
             float rad = Mathf.degreesToRadians * angle;
@@ -53,5 +52,13 @@ public class GunShipAI extends FlyingAI {
             float newY = targetY + offsetY;
             unit.move(newX, newY);
         }
+    }
+
+    @Override
+    public Teamc findTarget(float x, float y, float range, boolean air, boolean ground){
+        var result = findMainTarget(x, y, range, air, ground);
+
+        //if the main target is in range, use it, otherwise target whatever is closest
+        return checkTarget(result, x, y, range) ? target(x, y, range, air, ground) : result;
     }
 }

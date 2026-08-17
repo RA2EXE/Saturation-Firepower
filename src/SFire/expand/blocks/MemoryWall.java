@@ -55,7 +55,8 @@ public class MemoryWall extends Wall {
         addBar("armor", (MemoryWallBuild e) -> new Bar(
                 () -> Core.bundle.format("bar.armorup", Strings.fixed(armor,0)),
                 () -> SFItems.memoryAlloy.color,
-                () -> (armor-e.basicArmor) / (maxArmor - e.basicArmor)
+                //() -> (armor-e.basicArmor) / (maxArmor - e.basicArmor)
+                () -> armor / maxArmor
         ));
     }
 

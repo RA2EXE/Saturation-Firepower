@@ -49,6 +49,13 @@ public class SFUnitTypes {
         n.y = y;
         return n;
     }
+    public static Weapon copyMirror(Weapon weapon, float x, float y) {
+        Weapon n = weapon.copy();
+        n.x = x;
+        n.y = y;
+        n.mirror = true;
+        return n;
+    }
 
     public static Weapon copyRotate(Weapon weapon, float x, float y, float br) {
         Weapon n = weapon.copy();
@@ -98,7 +105,11 @@ public class SFUnitTypes {
     naval1, naval2, naval3, naval4, naval5, naval6,
     //hover
     hover1, hover2, hover3, hover4, hover5, hover6,
-
+    //spaceForce
+    ship11, ship12, ship13,
+    ship21, ship22, ship23,
+    ship31, ship32, ship33,
+    ship41, ship42, ship43,
     //special force + flagship*/
     farmer, carrier, flamer, thunder, banisher, hammer, tau, omega, terrascape,
     //campaign only
@@ -7100,6 +7111,227 @@ public class SFUnitTypes {
                     }}
             );
         }};
+        /*
+        Weapon spaceCan1 = new Weapon(name("space-cannon")){{
+            reload = 20;
+            rotate = true;
+            rotateSpeed = 6;
+            mirror = false;
+
+
+            shootY = 2;
+            bullet = new BasicBulletType(8, 100){{
+                lifetime = 36;
+                trailColor = backColor = SFColor.tayrDark;
+                frontColor = SFColor.tayrLight;
+                width = 12;
+                height = 6;
+                trailLength = 6;
+                trailWidth = 2;
+            }};
+        }};
+        Weapon spaceMount = new Weapon(name("space-mount")){{
+            reload = 45;
+            rotate = true;
+            rotateSpeed = 7;
+            mirror = false;
+
+            shootY = 53/4f;
+            shootSound = Sounds.shootLocus;
+            bullet = new BasicBulletType(8, 100){{
+                lifetime = 36;
+                trailColor = backColor = SFColor.tayrDark;
+                frontColor = SFColor.tayrLight;
+                width = 12;
+                height = 6;
+                trailLength = 6;
+                trailWidth = 2;
+            }};
+            parts.add(new RegionPart("-barrel"){{
+                x = y = 0;
+                moveY = 4;
+                under = true;
+                progress = PartProgress.recoil;
+            }});
+        }};
+        Weapon spaceGun = new Weapon(name("space-gun")){{
+            reload = 26 +3*5;
+            rotate = true;
+            rotateSpeed = 10;
+            mirror = false;
+
+            recoil = 1.4f;
+            recoilTime = 30;
+            shootY = 7;
+            shoot = new ShootAlternate(3);
+            shoot.shots = 6;
+            shoot.shotDelay = 3;
+            shootSound = Sounds.shootElude;
+            bullet = new LaserBoltBulletType(8,11){{
+                lifetime = 35;
+                backColor = hitColor = trailColor =  SFColor.tayrLight;
+                frontColor = Color.white;
+                lightColor = SFColor.tayrLight;
+
+                trailLength = 10;
+                trailWidth = 2;
+                width = 2;
+                height = 12;
+                hitEffect = Fx.hitBulletColor;
+                despawnEffect = Fx.hitLaserColor;
+                shootEffect = Fx.shootSmallColor;
+                smokeEffect = Fx.none;
+            }};
+        }};
+        Weapon spacePoint = new PointDefenseWeapon(name("space-point")){{
+            reload = 30;
+            targetInterval = 20;
+            targetSwitchInterval = 10f;
+            rotateSpeed = 12;
+            shootY = 1.25f;
+            mirror = false;
+            bullet = new BulletType() {{
+                shootEffect = Fx.sparkShoot;
+                maxRange = 45 * 8;
+                damage = 75;
+                hitColor = SFColor.tayrDark;
+                hitEffect = Fx.hitSquaresColor;
+            }};
+        }};
+
+        ship11 = new UnitType("arma"){{
+            constructor = UnitTypes.flare.constructor;
+            outlineColor = SFColor.darkOutline;
+            flying = true;
+            lowAltitude = true;
+            faceTarget = false;
+            speed = 2;
+            drag = 0.04f;
+            accel = 0.05f;
+            rotateSpeed = 5;
+            hitSize = 30;
+            health = 1500;
+            armor = 14;
+            lightRadius = 60;
+            engineOffset = 108/4f;
+            engineSize = 5.5f;
+            setEnginesMirror(
+            new UnitEngine(54/4f, -96/4f-2, 2f, -90f));
+        }};
+
+        ship12 = new UnitType("bifurca"){{
+            constructor = UnitTypes.flare.constructor;
+            outlineColor = SFColor.darkOutline;
+            flying = true;
+            lowAltitude = true;
+            faceTarget = false;
+            speed = 2;
+            drag = 0.04f;
+            accel = 0.05f;
+            rotateSpeed = 5;
+            hitSize = 30;
+            health = 1500;
+            armor = 14;
+            lightRadius = 60;
+            engineOffset = 106/4f;
+            engineSize = 5f;
+            setEnginesMirror(
+                    new UnitEngine(55/4f, -152/4f-2, 3f, -90f),
+                    new UnitEngine(80/4f, -133/4f-2, 3f, -90f));
+            weapons.addAll(
+                    copyMirror(spaceGun,45/4f,25/4f),
+                    copyMirror(spaceGun,-53/4f,-60/4f),
+                    copy(spaceMount,0,-12f)
+            );
+        }};
+
+        ship13 = new UnitType("cinnabar"){{
+            constructor = UnitTypes.flare.constructor;
+            outlineColor = SFColor.darkOutline;
+            flying = true;
+            lowAltitude = true;
+            faceTarget = false;
+            speed = 2;
+            drag = 0.04f;
+            accel = 0.05f;
+            rotateSpeed = 5;
+            hitSize = 30;
+            health = 1500;
+            armor = 14;
+            lightRadius = 60;
+            engineSize = 0;
+            setEnginesMirror(
+                    new UnitEngine(108/4f, -169/4f-2, 4f, -90f),
+                    new UnitEngine(76/4f, -192/4f-2, 4f, -90f),
+                    new UnitEngine(46/4f, -218/4f-2, 4f, -90f));
+            weapons.addAll(
+                    new Weapon(name("cinnabar-laser")){{
+                        reload = 140;
+                        x = 0;
+                        y = 66/4f;
+                        shootY = 30/4f;
+                        rotate = true;
+                        rotateSpeed = 4;
+                        recoil = 0;
+                        mirror = false;
+                        shootSound = SFSounds.shortLaser;
+                        shootSoundVolume = 5;
+                        bullet = new RailBulletType() {{
+                            damage = 500f;
+                            length = 60 * 8f;
+                            smokeEffect = Fx.smokeCloud;
+                            shootEffect = new ParticleEffect() {{
+                                line = true;
+                                particles = 9;
+                                lenFrom = 10;
+                                strokeFrom = 1.5f;
+                                baseLength = 160;
+                                length = cone = 0;
+                                sizeInterp = Interp.pow3In;
+                                lifetime = 20;
+                                colorFrom = colorTo = SFColor.tayrDark;
+                            }};
+                            hitColor = SFColor.tayrDark;
+                            lineEffect = Fx.chainLightning;
+                        }};
+                    }},
+                    new Weapon(name("cinnabar-laser")){{
+                        reload = 140;
+                        x = 0;
+                        y = -133/4f;
+                        shootY = 30/4f;
+                        rotate = true;
+                        rotateSpeed = 4;
+                        recoil = 0;
+                        mirror = false;
+                        shootSound = SFSounds.shortLaser;
+                        shootSoundVolume = 5;
+                        bullet = new RailBulletType() {{
+                            damage = 500f;
+                            length = 60 * 8f;
+                            smokeEffect = Fx.smokeCloud;
+                            shootEffect = new ParticleEffect() {{
+                                line = true;
+                                particles = 9;
+                                lenFrom = 10;
+                                strokeFrom = 1.5f;
+                                baseLength = 160;
+                                length = cone = 0;
+                                sizeInterp = Interp.pow3In;
+                                lifetime = 20;
+                                colorFrom = colorTo = SFColor.tayrDark;
+                            }};
+                            hitColor = SFColor.tayrDark;
+                            lineEffect = Fx.chainLightning;
+                        }};
+                    }},
+
+                    copyMirror(spaceGun,48/4f,36/4f),
+                    copyMirror(spaceGun,-107/4f,-60/4f),
+                    copyMirror(spacePoint,54/4f,98/4f),
+                    copyMirror(spacePoint,-68/4f,-96/4f)
+            );
+        }};*/
 
 
         farmer = new UnitType("farmer") {{

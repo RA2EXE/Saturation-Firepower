@@ -2,6 +2,7 @@ package SFire.content;
 
 import arc.graphics.*;
 import arc.math.Interp;
+import mindustry.content.Liquids;
 import mindustry.content.StatusEffects;
 import mindustry.entities.effect.ParticleEffect;
 import mindustry.graphics.Pal;
@@ -28,6 +29,7 @@ public class SFLiquids {
             flammability = 1.5f;
             explosiveness = 1.8f;
             effect = StatusEffects.tarred;
+            canStayOn.addAll(water, cryofluid);
         }};
 
         actiNanofluid = new CellLiquid("actived-nanofluid", Color.valueOf("7FD489")){{

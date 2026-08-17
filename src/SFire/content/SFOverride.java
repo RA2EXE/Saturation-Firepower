@@ -34,6 +34,8 @@ public class SFOverride {
     public static void load() {
 
         //region turrets
+        ((TractorBeamTurret) Blocks.parallax).status = SFStatusEffects.magnStrif;
+        ((TractorBeamTurret) Blocks.parallax).statusDuration = 30f;
         ((ItemTurret) Blocks.scatter).ammoTypes.putAll(
                 Items.blastCompound, new FlakBulletType(4, 5){{
                     lifetime = 60;
