@@ -108,7 +108,7 @@ public class SFTechTree {
         });
         addToNode(lancer, () -> {
             node(dianguang);
-            node(dianji);
+            node(dianji, () -> node(dianmai));
         });
         addToNode(parallax, () -> node(cuodao));
         addToNode(scorch, () -> node(longxi));

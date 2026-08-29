@@ -122,7 +122,7 @@ public class SFBlocks {
     xianqu, huojian, dianguang, bingfengbao, gaosi, liebao, cuodao, longxi, mengma, zheyue,
     kuodao, mini, woliu, tieliu, dianji, changqiang, longjuan, manyou, chuanyun, cijian, chuifa,
     fangtian, leizhenyu, qingning, chongchao,
-    relang, sizhao, liemei, cuowei,
+    relang, sizhao, dianmai, liemei, cuowei,
     dingdaer, guangyin, cimai, fengmang,
     yuanling, kuosan, poxiao, fenqing, zhulin, luolong,
 
@@ -3515,8 +3515,9 @@ public class SFBlocks {
             health = 5000;
             armor = 9;
             itemCapacity = 1000;
+            cooldownTime = 30;
 
-            coolingEffect = new RadialEffect(Fx.steamCoolSmoke, 4, 70f, 10f, 0f);
+            coolingEffect = new RadialEffect(Fx.steamCoolSmoke, 8, 360/8f, 10f, 0f);
             consumeLiquid = Liquids.cryofluid;
             liquidCapacity = 3000f;
             consumeLiquidAmount = 300f;
@@ -6070,7 +6071,7 @@ public class SFBlocks {
                         lifetime = 180;
                         ammoMultiplier = 6;
                         lightning = 2;
-                        lightningDamage = 18f;
+                        lightningDamage = 23;
                         lightningLength = 8;
                         lightningType = new BulletType(0.0001f, 0f){{
                             lifetime = Fx.lightning.lifetime;
@@ -6162,6 +6163,271 @@ public class SFBlocks {
                     }}
             );
 
+        }};
+        dianmai = new ItemTurret("dianmai") {{
+            size = 4;
+            health = 2200;
+            recoil = 4f;
+            recoilTime = 80;
+            shootSound = Sounds.shootMissilePlasma;
+            shake = 3f;
+            requirements(Category.turret, with(Items.titanium,400, Items.silicon,300, Items.surgeAlloy,110, SFItems.discFabric,180));
+            consumePower(20f);
+
+            range = 8 * 47 + 16;
+            reload = 90f;
+            shootY = 12;
+            maxAmmo = 45;
+            ammoPerShot = 15;
+            ammoUseEffect = Fx.casing3Double;
+            ammo(
+                    Items.copper, new PointBulletType(){{
+                        ammoMultiplier = 1;
+                        speed = 100;
+                        lifetime = 10;
+                        damage = 50;
+                        status = SFStatusEffects.breakdown;
+                        statusDuration = 30;
+                        hitSound = Sounds.drillImpact;
+                        buildingDamageMultiplier = 0;
+                        trailSpacing = 36;
+                        trailEffect = new Effect(30, e -> {
+                            for(int i = 0; i < 2; i++){
+                                color(i == 0 ? SFStatusEffects.postive.color : Color.white);
+
+                                float m = i == 0 ? 1f : 0.5f;
+
+                                float rot = e.rotation + 180f;
+                                float w = 15f * e.fout() * m;
+                                Drawf.tri(e.x, e.y, w, (30f + Mathf.randomSeedRange(e.id, 15f)) * m, rot);
+                                Drawf.tri(e.x, e.y, w, 10f * m, rot + 180f);
+                            }
+
+                            Drawf.light(e.x, e.y, 60f, SFColor.discDark, 0.6f * e.fout());
+                        });
+                        hitEffect = new WaveEffect(){{
+                            sizeFrom = 10;
+                            sizeTo = 30;
+                            strokeFrom = 10;
+                            lifetime = 25;
+                            colorFrom = colorTo = SFStatusEffects.postive.color;
+                            interp = Interp.pow5Out;
+                        }};
+                        hitSound = Sounds.chargeLancer;
+                        despawnEffect = Fx.none;
+                        smokeEffect = Fx.smokeCloud;
+
+                        fragBullets = 1;
+                        fragBullet = new BasicBulletType(0,0f,"mine-bullet"){{
+                            hittable = absorbable = reflectable = collides = false;
+                            spin = 0.6f;
+                            width = height = 24;
+                            shrinkX = shrinkY = 0.2f;
+                            lifetime = 30 + 20*8;
+
+                            backColor = hitColor = SFStatusEffects.postive.color;
+                            frontColor = Color.white;
+                            despawnEffect = Fx.titanExplosion;
+                            hitEffect = Fx.none;
+
+                            intervalDelay = 30f;
+                            bulletInterval = 20f;
+                            intervalBullet = new EmptyBulletType(){{
+                                splashDamage = 25f;
+                                splashDamageRadius = 80f;
+                                buildingDamageMultiplier = 0f;
+                                status = SFStatusEffects.postive;
+                                statusDuration = 80;
+                                lightningColor = hitColor = SFStatusEffects.postive.color;
+                                lightning = 5;
+                                lightningLength = 7;
+                                lightningLengthRand = 4;
+                                lightningDamage = 25;
+                                lightningType = new BulletType(0.0001f, 0f){{
+                                    lifetime = Fx.lightning.lifetime;
+                                    hitEffect = Fx.hitLancer;
+                                    despawnEffect = Fx.none;
+                                    status = SFStatusEffects.postive;
+                                    statusDuration = 60f;
+                                    hittable = false;
+                                    lightColor = Color.white;
+                                }};
+
+                                despawnEffect = Fx.none;
+                                hitEffect = new WrapEffect(Fx.sparkExplosion, hitColor, splashDamageRadius);
+                                hitSound = Sounds.shootArc;
+                                hitShake = 2;
+
+                                collidesGround = true;
+                                collidesAir = true;
+                                collides = false;
+                                pierce = true;
+                                scaledSplashDamage = true;
+                                instantDisappear = true;
+                            }};
+                        }};
+                    }},
+                    Items.lead, new PointBulletType(){{
+                        ammoMultiplier = 1;
+                        speed = 100;
+                        lifetime = 10;
+                        damage = 50;
+                        status = SFStatusEffects.breakdown;
+                        statusDuration = 30;
+                        hitSound = Sounds.drillImpact;
+                        buildingDamageMultiplier = 0;
+                        trailSpacing = 36;
+                        trailEffect = new Effect(30, e -> {
+                            for(int i = 0; i < 2; i++){
+                                color(i == 0 ? SFStatusEffects.negative.color : Color.white);
+
+                                float m = i == 0 ? 1f : 0.5f;
+
+                                float rot = e.rotation + 180f;
+                                float w = 15f * e.fout() * m;
+                                Drawf.tri(e.x, e.y, w, (30f + Mathf.randomSeedRange(e.id, 15f)) * m, rot);
+                                Drawf.tri(e.x, e.y, w, 10f * m, rot + 180f);
+                            }
+
+                            Drawf.light(e.x, e.y, 60f, SFColor.discDark, 0.6f * e.fout());
+                        });
+                        hitEffect = new WaveEffect(){{
+                            sizeFrom = 10;
+                            sizeTo = 30;
+                            strokeFrom = 10;
+                            lifetime = 25;
+                            colorFrom = colorTo = SFStatusEffects.negative.color;
+                            interp = Interp.pow5Out;
+                        }};
+                        hitSound = Sounds.chargeLancer;
+                        despawnEffect = Fx.none;
+                        smokeEffect = Fx.smokeCloud;
+
+                        fragBullets = 1;
+                        fragBullet = new BasicBulletType(0,0f,"mine-bullet"){{
+                            hittable = absorbable = reflectable = collides = false;
+                            spin = 0.6f;
+                            width = height = 24;
+                            shrinkX = shrinkY = 0.2f;
+                            lifetime = 30 + 20*8;
+
+                            backColor = hitColor = SFStatusEffects.negative.color;
+                            frontColor = Color.white;
+                            despawnEffect = Fx.titanExplosion;
+                            hitEffect = Fx.none;
+
+                            intervalDelay = 30f;
+                            bulletInterval = 20f;
+                            intervalBullet = new EmptyBulletType(){{
+                                splashDamage = 25f;
+                                splashDamageRadius = 80f;
+                                buildingDamageMultiplier = 0f;
+                                status = SFStatusEffects.negative;
+                                statusDuration = 80;
+                                lightningColor = hitColor = SFStatusEffects.negative.color;
+                                lightning = 5;
+                                lightningLength = 7;
+                                lightningLengthRand = 4;
+                                lightningDamage = 25;
+                                lightningType = new BulletType(0.0001f, 0f){{
+                                    lifetime = Fx.lightning.lifetime;
+                                    hitEffect = Fx.hitLancer;
+                                    despawnEffect = Fx.none;
+                                    status = SFStatusEffects.negative;
+                                    statusDuration = 60f;
+                                    hittable = false;
+                                    lightColor = Color.white;
+                                }};
+
+                                despawnEffect = Fx.none;
+                                hitEffect = new WrapEffect(Fx.sparkExplosion, hitColor, splashDamageRadius);
+                                hitSound = Sounds.shootArc;
+                                hitShake = 2;
+
+                                collidesGround = true;
+                                collidesAir = true;
+                                collides = false;
+                                pierce = true;
+                                scaledSplashDamage = true;
+                                instantDisappear = true;
+                            }};
+                        }};
+                    }},
+                    Items.graphite,  new PointBulletType(){{
+                        ammoMultiplier = 3;
+                        reloadMultiplier = 90 / 80f;
+                        rangeChange = 80;
+                        speed = 100;
+                        lifetime = 10;
+                        damage = 50;
+                        status = SFStatusEffects.breakdown;
+                        statusDuration = 30;
+                        hitSound = Sounds.drillImpact;
+                        buildingDamageMultiplier = 0;
+                        trailSpacing = 36;
+                        trailEffect = new Effect(30, e -> {
+                            for(int i = 0; i < 2; i++){
+                                color(i == 0 ? Pal.graphiteAmmoFront : Color.white);
+
+                                float m = i == 0 ? 1f : 0.5f;
+
+                                float rot = e.rotation + 180f;
+                                float w = 15f * e.fout() * m;
+                                Drawf.tri(e.x, e.y, w, (30f + Mathf.randomSeedRange(e.id, 15f)) * m, rot);
+                                Drawf.tri(e.x, e.y, w, 10f * m, rot + 180f);
+                            }
+
+                            Drawf.light(e.x, e.y, 60f, Pal.graphiteAmmoFront, 0.6f * e.fout());
+                        });
+                        hitEffect = new WaveEffect(){{
+                            sizeFrom = 10;
+                            sizeTo = 30;
+                            strokeFrom = 10;
+                            lifetime = 25;
+                            colorFrom = colorTo = Pal.graphiteAmmoFront;
+                            interp = Interp.pow5Out;
+                        }};
+                        hitSound = Sounds.chargeLancer;
+                        despawnEffect = Fx.none;
+                        smokeEffect = Fx.smokeCloud;
+
+                        fragBullets = 1;
+                        fragBullet = new BasicBulletType(0,0f,"mine-bullet"){{
+                            hittable = absorbable = reflectable = collides = false;
+                            spin = 1.2f;
+                            width = height = 24;
+                            shrinkX = shrinkY = 0.2f;
+                            lifetime = 30 + 10*5;
+
+                            backColor = hitColor = Pal.graphiteAmmoFront;
+                            frontColor = Color.white;
+                            despawnEffect = Fx.titanExplosion;
+                            hitEffect = Fx.none;
+
+                            intervalDelay = 30f;
+                            bulletInterval = 10f;
+                            intervalBullet = new EmptyBulletType(){{
+                                buildingDamageMultiplier = 0f;
+                                lightningColor = hitColor = Pal.graphiteAmmoFront;
+                                lightning = 4;
+                                lightningLength = 7;
+                                lightningLengthRand = 4;
+                                lightningDamage = 46;
+
+                                hitEffect = despawnEffect = Fx.none;
+                                hitSound = Sounds.shootArc;
+                                hitShake = 4;
+
+                                collidesGround = true;
+                                collidesAir = true;
+                                collides = false;
+                                pierce = true;
+                                scaledSplashDamage = true;
+                                instantDisappear = true;
+                            }};
+                        }};
+                    }}
+            );
         }};
         qingning = new PowerTurret("qingning") {{
             size = 4;
@@ -6357,8 +6623,8 @@ public class SFBlocks {
             shootY = 10;
             
             requirements(Category.turret, with(Items.copper,950, Items.plastanium,460, Items.silicon,370, SFItems.tayrAlloy,300, SFItems.nanoCore,500));
-            consumePower(65);
-            consumeLiquid(SFLiquids.nanoFluid,1);
+            consumePower(24);
+            consumeLiquid(SFLiquids.nanoFluid,45/60f);
             liquidCapacity = 360;
 
             reload = 175;
@@ -7090,13 +7356,13 @@ public class SFBlocks {
                         hitSound = SFSounds.explosionbig;
                         hitSoundVolume = 0.8f;
                         hitShake = 3;
-                        hitEffect = SFFx.TriExplosion(25,4,8,24,4,hitColor);
+                        hitEffect = SFFx.TriExplosion(30,4,22,50,7,hitColor);
                         despawnEffect = Fx.bigShockwave;
                         lightColor = Pal.surgeAmmoFront;
                         lightning = 2;
                         lightningLength = 14;
                         lightningLengthRand = 4;
-                        lightningDamage = 17;
+                        lightningDamage = 23;
                         lightningType = new BulletType(0.0001f, 0f){{
                             collidesAir = false;
                             lifetime = Fx.lightning.lifetime;
@@ -7163,6 +7429,47 @@ public class SFBlocks {
                             hitSound = Sounds.explosion;
                             hitShake = 2;
                         }};
+                    }},
+                    SFItems.nanoCore, new ArtilleryBulletType(7,30, "circle-bullet"){{
+                        splashDamage = 30;
+                        splashDamageRadius = 60;
+                        lifetime = 120;
+                        ammoMultiplier = 4;
+                        collidesTiles = false;
+                        absorbable = false;
+                        status = SFStatusEffects.disRepair;
+                        statusDuration = 80;
+                        homingRange = 60;
+                        homingDelay = 28;
+                        homingPower = 0.03f;
+
+                        width = height = 10;
+                        backColor = trailColor = hitColor = Pal.heal;
+                        trailLength = 11;
+                        trailWidth = 4;
+                        shrinkY = 0;
+                        frontColor = Color.white;
+                        trailEffect = Fx.none;
+                        hitSound = Sounds.explosion;
+                        hitSoundVolume = 3;
+                        hitShake = 3;
+                        hitEffect = new ExplosionEffect(){{
+                            smokes = 5;
+                            smokeRad = splashDamageRadius * 0.75f;
+                            smokeSize = 5;
+                            smokeColor = hitColor.cpy().a(0.5f);
+                            sparks = 19;
+                            sparkRad = splashDamageRadius + 35;
+                            sparkLen = 22;
+                            sparkStroke = 1f;
+                            sparkColor = hitColor;
+                            lifetime = 25;
+                            waveColor = hitColor;
+                            waveRad = splashDamageRadius;
+                            waveStroke = 6;
+                            waveLife = 10;
+                        }};
+                        despawnEffect = Fx.bigShockwave;
                     }},
                     SFItems.clusBomb, new ArtilleryBulletType(4f,28, "shell"){{
                         rangeChange = 46;
