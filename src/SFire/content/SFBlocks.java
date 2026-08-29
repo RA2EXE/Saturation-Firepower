@@ -2063,6 +2063,7 @@ public class SFBlocks {
             health = 660;
             requirements(Category.crafting, with(Items.metaglass,160, SFItems.waveSteel,80, SFItems.chromium,60, SFItems.rubidium,80));
             hasPower = hasItems = hasLiquids = true;
+            itemCapacity = 30;
             liquidCapacity = 180;
 
             craftTime = 60;
@@ -2122,7 +2123,8 @@ public class SFBlocks {
         tayriumCrucible = new AttributeCrafter("tayrium-crucible") {{
             size = 4;
             requirements(Category.crafting, with(Items.plastanium, 85, SFItems.strontium, 85, SFItems.waveSteel, 110, SFItems.fermium, 70));
-            hasPower = hasItems = true;
+            hasPower = false;
+            hasItems = true;
             floating = true;
             itemCapacity = 30;
             attribute = Attribute.heat;
@@ -5579,6 +5581,7 @@ public class SFBlocks {
                         length = 180;
                         width = 20;
                         damage = 125f;
+                        shieldDamageMultiplier = 2;
                         toColor = Pal.thoriumPink;
                         shootEffect = smokeEffect = Fx.thoriumShoot;
                     }},
@@ -5587,6 +5590,7 @@ public class SFBlocks {
                         length = 170;
                         width = 20;
                         damage = 110f;
+                        shieldDamageMultiplier = 2;
                         ammoMultiplier = 3f;
                         toColor = SFColor.strontiumLight;
                         shootEffect = smokeEffect = new Effect(12f, e -> {
@@ -5607,6 +5611,7 @@ public class SFBlocks {
                         length = 190;
                         width = 20;
                         damage = 165f;
+                        shieldDamageMultiplier = 2;
                         ammoMultiplier = 5f;
                         toColor = SFColor.ferium;
                         shootEffect = smokeEffect = new Effect(12f, e -> {
@@ -6958,6 +6963,7 @@ public class SFBlocks {
             maxAmmo = 36;
             inaccuracy = 12;
             velocityRnd = 0.13f;
+            //extraVelocity = 0.5f * velocityRnd;
             liquidCapacity = 80;
             targetAir = false;
             ammo(
@@ -7795,6 +7801,7 @@ public class SFBlocks {
             ammo(
                     SFItems.chromium, new SizeDamageBullet(35, 1440, "missile-large"){{
                         drag = 0.05f;
+                        sizeDamageMul = 1.5f;
                         lifetime = 25;
                         armorMultiplier = -1.3f;
                         collidesAir = false;
@@ -7881,7 +7888,7 @@ public class SFBlocks {
                     }},
                     SFItems.leipAlloy, new SizeDamageBullet(44, 2100, "missile-large"){{
                         armorMultiplier = -2f;
-                        sizeDamageMul = 1.3f;
+                        sizeDamageMul = 1.95f;
                         rangeChange = 48;
                         drag = 0.05f;
                         lifetime = 19.5f;
@@ -9324,6 +9331,7 @@ public class SFBlocks {
             canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
+            outlineColor = SFColor.darkOutline;
             drawer = new DrawTurret("heavy-") {{
                 parts.add(
                         new RegionPart("-front") {{
@@ -9441,6 +9449,7 @@ public class SFBlocks {
             canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
+            outlineColor = SFColor.darkOutline;
             drawer = new DrawTurret("water-"){{
                 parts.add(
                         new RegionPart("-barrel") {{
@@ -9599,6 +9608,7 @@ public class SFBlocks {
             canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
+            outlineColor = SFColor.darkOutline;
             drawer = new DrawTurret("heavy-") {{
                 parts.add(
                         new RegionPart("-missile") {{
@@ -9815,6 +9825,7 @@ public class SFBlocks {
             canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
+            outlineColor = SFColor.darkOutline;
             drawer = new DrawTurret("heavy-"){{
                 parts.add(
                         new RegionPart("-barrel-r"){{
@@ -9900,6 +9911,7 @@ public class SFBlocks {
             canOverdrive = false;
             category = Category.turret;
             buildVisibility = BuildVisibility.sandboxOnly;
+            outlineColor = SFColor.darkOutline;
             drawer = new DrawTurret("heavy-") {{
                 for(int i = 0; i<2; i++){
                     int fi = i;
@@ -10041,6 +10053,7 @@ public class SFBlocks {
             unitSort = UnitSorts.strongest;
             buildVisibility = BuildVisibility.sandboxOnly;
             heatColor = Color.valueOf("FF4040");
+            outlineColor = SFColor.darkOutline;
             drawer = new DrawTurret("heavy-"){{
                 parts.add(
                         new RegionPart("-barrel"){{

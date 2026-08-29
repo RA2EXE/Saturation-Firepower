@@ -68,7 +68,8 @@ public class MemoryWall extends Wall {
         public void updateTile() {
             super.updateTile();
 
-            if (health() < maxHealth() && !wasRecentlyDamaged()) {
+            //护甲也回溯
+            if ((armor > basicArmor || health() < maxHealth()) && !wasRecentlyDamaged()) {
                 charge += Time.delta;
 
                 if(charge >= regenDelay){

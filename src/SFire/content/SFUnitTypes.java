@@ -704,6 +704,7 @@ public class SFUnitTypes {
             hovering = true;
             allowLegStep = true;
             range = 410;
+            mineRange = 80;
             groundLayer = 49;
             abilities.add(new StatusFieldAbility(StatusEffects.shielded, 30, 60, 8) {{
                 applyEffect = Fx.none;
@@ -7607,6 +7608,7 @@ public class SFUnitTypes {
                         alternate = false;
                         shootSound = Sounds.shootSublimate;
                         heatColor = Color.valueOf("FF4040");
+                        reload = 360;
                         bullet = new ContinuousFlameBulletType(60) {{
                             recoil = 0.01f;
                             buildingDamageMultiplier = 2f;
@@ -7659,7 +7661,7 @@ public class SFUnitTypes {
                         velocityRnd = 0.1f;
                         shoot.shots = 3;
                         shootCone = 30f;
-                        bullet = new ArtilleryBulletType(10, 35) {{
+                        bullet = new ArtilleryBulletType(8, 35) {{
                             height = 8;
                             width = 8;
                             frontColor = Pal.lightPyraFlame;
