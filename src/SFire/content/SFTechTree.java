@@ -120,7 +120,7 @@ public class SFTechTree {
                 node(guangyin, () -> node(fenqing));
                 node(dingdaer, () -> node(poxiao));
             });
-            //node(fengmang);
+            node(fengmang);
         });
         addToNode(foreshadow, () -> {
             node(cuowei);

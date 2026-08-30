@@ -2,13 +2,9 @@ package SFire.content;
 
 import arc.graphics.*;
 import arc.math.Mathf;
-import arc.util.Time;
-import arc.util.Tmp;
-import mindustry.Vars;
 import mindustry.content.Fx;
 import mindustry.content.*;
-import mindustry.entities.Effect;
-import mindustry.entities.effect.WrapEffect;
+import mindustry.entities.effect.*;
 import mindustry.entities.units.StatusEntry;
 import mindustry.gen.Unit;
 import mindustry.graphics.*;
@@ -20,8 +16,6 @@ import mindustry.type.StatusEffect;
 import mindustry.world.meta.Stat;
 import mindustry.world.meta.StatCat;
 
-import static arc.graphics.g2d.Draw.color;
-import static arc.math.Angles.randLenVectors;
 import static mindustry.content.StatusEffects.*;
 
 public class SFStatusEffects {
@@ -29,7 +23,7 @@ public class SFStatusEffects {
             repair, repairX, disRepair, fastBuild, scrambled, strengthen,
             negative, postive, magnStrif,
             marked, acidded, inBreak, breakdown, echoFlame, overLoad,
-            stormed, shattered, overFreezing, chemicalFlame, fullFire,
+            stormed, shattered, coldBreak, overFreezing, chemicalFlame, fullFire,
             skewed, charging;
 
     public static void load() {
@@ -155,7 +149,7 @@ public class SFStatusEffects {
                 colorFrom = colorTo = Color.valueOf("AB99D3");
             }};
             init(() -> {
-                opposite(burning, melting, breakdown);
+                //opposite(burning, melting, breakdown);
                 affinity(postive, (unit, result, time) -> {
                     unit.damage(transitionDamage);
                     result.set(magnStrif, 60f);
@@ -180,7 +174,7 @@ public class SFStatusEffects {
                 colorFrom = colorTo = Color.valueOf("EAC2A9");
             }};
             init(() -> {
-                opposite(burning, melting, breakdown);
+                //opposite(burning, melting, breakdown);
                 affinity(negative, (unit, result, time) -> result.set(magnStrif, 60f));
             });
         }};
@@ -269,7 +263,7 @@ public class SFStatusEffects {
         inBreak = new StatusEffect("inside-break") {{
             outline = false;
             color = Color.valueOf("666484");
-            healthMultiplier = 0.93f;
+            healthMultiplier = 0.9f;
             effectChance = 0;
             effect = null;
             permanent = true;
@@ -396,13 +390,39 @@ public class SFStatusEffects {
                 colorFrom = Color.red.lerp(Color.white, 0.5f);
             }};
         }};
+        coldBreak = new StatusEffect("cold-break") {{
+            outline = false;
+            color = Liquids.cryofluid.color;
+            healthMultiplier = 0.96f;
+            speedMultiplier = 0.96f;
+            //show = false;
+            transitionDamage = 50;
+            effectChance = 0.01f;
+            effect = Fx.freezing;
+            init(() -> {
+                opposite(melting, burning, chemicalFlame);
+
+                affinity(blasted, (unit, result, time) -> {
+                    unit.damagePierce(transitionDamage);
+                });
+            });
+        }};
         overFreezing = new StatusEffect("over-freezing") {{
             outline = false;
             color = Liquids.cryofluid.color;
-            healthMultiplier = 0.7f;
-            speedMultiplier = 0.4f;
-            dragMultiplier = 1.6f;
-            reloadMultiplier = 0.45f;
+            healthMultiplier = 0.8f;
+            speedMultiplier = 0.55f;
+            reloadMultiplier = 0.8f;
+            effectChance = 0.06f;
+            /*effect = new Effect(40f, 200f, e -> {
+                color(Liquids.cryofluid.color);
+
+                float rot = e.rotation + Mathf.randomSeedRange(e.id, 360f);
+                //Drawf.tri(e.x, e.y, w, (80f + Mathf.randomSeedRange(e.id + i, 40f)), rot);
+                randLenVectors(e.id, 25, 5f + e.fin() * 80f, e.rotation, 360f, (x, y) -> {
+                    Drawf.tri(e.x + x, e.y - 15*e.fout(), e.fout() * 8f, 8*1.2f, rot);
+                });
+            });*/
             effect = new ParticleEffect() {{
                 particles = 1;
                 length = 8;
@@ -413,14 +433,27 @@ public class SFStatusEffects {
                 sizeFrom = 5;
                 colorFrom = colorTo = Liquids.cryofluid.color;
             }};
-            transitionDamage = 20f;
+            transitionDamage = 30f;
             init(() -> {
-                opposite(melting, burning);
+                opposite(melting, burning, chemicalFlame);
+
+                affinity(freezing, (unit, result, time) -> {
+                    unit.damage(transitionDamage / 3f);
+                    result.set(coldBreak, Math.min(time + result.time, 7*60f));
+                    //result.set(overFreezing, result.time);
+                });
 
                 affinity(blasted, (unit, result, time) -> {
                     unit.damagePierce(transitionDamage);
                 });
             });
+
+            /*freezing.init(() -> {
+                affinity(overFreezing, (unit, result, time) -> {
+                    unit.damage(transitionDamage / 3f);
+                    result.set(coldBreak, Math.min(time + result.time, 7*60f));
+                });
+            });*/
         }};
         chemicalFlame = new StatusEffect("chemical-flame") {{
             outline = false;
