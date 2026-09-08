@@ -65,6 +65,8 @@ public class SFBlocks {
     magstoneFloor, magstoneWall, magstoneStone, magbasaltFloor, magbasaltWall, magbasaltStone, magshaleFloor, magshaleWall, magshaleStone, magshaleFissure, shaleFissure,
     calciteFloor, calciteWall, calciteStone, celestiteFloor, celestiteVent, celestiteWall, celestiteStone, saltdilutedFloor, saltdilutedWall, inkrockFloor, inkrockVent, inkrockWall, inkrockStone,
     crackrockFloor, crackrockWall, crackrockStone, combinationFloor, combinationVent, combinationWall, combinationStone, sulfurFloor, sulfurVent, sulfurWall, sulfurStone, pyriterockFloor, pyriterockVent, pyriterockWall, pyriterockStone,
+    crystalRed, crystalOrange, crystalGreen, crystalBlue, crystalPurple,
+            crystalRedCluster, crystalOrangeCluster, crystalGreenCluster, crystalBlueCluster, crystalPurpleCluster,
     radiquartzFloor, radiquartzWall, radiquartzStone, radiamphiboleFloor, radiamphiboleWall, radiamphiboleStone,
     radigabbroFloor, radigabbroWall, radigabbroStone, radimacadam1Floor, radimacadam2Floor,
 
@@ -313,6 +315,36 @@ public class SFBlocks {
         pyriterockStone = new Prop("pyriterock-stone") {{
             variants = 2;
         }};
+        crystalRedCluster = new TallBlock("crystal-red-cluster"){{
+            variants = 3;
+            clipSize = 128f;
+            shadowAlpha = 0.5f;
+            shadowOffset = -2.5f;
+        }};
+        crystalOrangeCluster = new TallBlock("crystal-orange-cluster"){{
+            variants = 3;
+            clipSize = 128f;
+            shadowAlpha = 0.5f;
+            shadowOffset = -2.5f;
+        }};
+        crystalGreenCluster = new TallBlock("crystal-green-cluster"){{
+            variants = 3;
+            clipSize = 128f;
+            shadowAlpha = 0.5f;
+            shadowOffset = -2.5f;
+        }};
+        crystalBlueCluster = new TallBlock("crystal-blue-cluster"){{
+            variants = 3;
+            clipSize = 128f;
+            shadowAlpha = 0.5f;
+            shadowOffset = -2.5f;
+        }};
+        crystalPurpleCluster = new TallBlock("crystal-purple-cluster"){{
+            variants = 3;
+            clipSize = 128f;
+            shadowAlpha = 0.5f;
+            shadowOffset = -2.5f;
+        }};
         radiquartzStone = new TallBlock("radiquartz-stone") {{
             variants = 2;
             clipSize = 120f;
@@ -427,6 +459,11 @@ public class SFBlocks {
             attributes.set(Attribute.heat, 0.1f);
             effectColor = Color.white.cpy().a(0.55f);
         }};
+        crystalRed = new Floor("crystal-red"){{dragMultiplier=0.98f;}};
+        crystalOrange = new Floor("crystal-orange"){{dragMultiplier=0.98f;}};
+        crystalGreen = new Floor("crystal-green"){{dragMultiplier=0.98f;}};
+        crystalBlue = new Floor("crystal-blue"){{dragMultiplier=0.98f;}};
+        crystalPurple = new Floor("crystal-purple"){{dragMultiplier=0.98f;}};
         radiquartzFloor = new Floor("radiquartz-floor", 4) {{
             wall = radiquartzWall;
             decoration = radiquartzStone;
@@ -2099,8 +2136,9 @@ public class SFBlocks {
         }};
         tayriumSlelter = new GenericCrafter("tayrium-smelter") {{
             size = 3;
-            requirements(Category.crafting, with(Items.lead,100, SFItems.siliSteel,60, SFItems.crystalGallium,45, Items.surgeAlloy,30));
+            requirements(Category.crafting, with(Items.lead,100, SFItems.siliSteel,60, SFItems.crystalGallium,45, Items.surgeAlloy,15));
             hasPower = hasItems = true;
+            itemCapacity = 5;
 
             craftTime = 80;
             outputItem = new ItemStack(SFItems.tayrAlloy, 1);
@@ -2752,10 +2790,10 @@ public class SFBlocks {
         }};
         silisteelTank = new LiquidRouter("silisteel-tank") {{
             size = 4;
-            health = 3600;
+            health = 3000;
             armor = 8;
-            requirements(Category.liquid, with(Items.plastanium, 70, Items.metaglass, 250, SFItems.siliSteel, 60, SFItems.chromium, 110));
-            liquidCapacity = 6000;
+            requirements(Category.liquid, with(Items.plastanium, 70, Items.metaglass, 120, SFItems.siliSteel, 60, SFItems.chromium, 110));
+            liquidCapacity = 12000;
             explosivenessScale = flammabilityScale = 0.05f;
             absorbLasers = true;
         }};
@@ -8301,7 +8339,25 @@ public class SFBlocks {
             minWarmup = 0.98f;
             linearWarmup = true;
             warmupMaintainTime = 120f;
+            Color fengmanghit = Color.valueOf("c0ecff");
             drawer = new DrawTurret() {{
+                for(int i = 0;i<3;i++){
+                    int fi = i;
+                    parts.add(new HaloPart(){{
+                        y = 7 + fi * 18;
+                        sides = 3;
+                        shapes = 1;
+                        layer = 110;
+                        rotateSpeed = 0.2f;
+                        color = fengmanghit;
+                        hollow = true;
+                        shapeRotation = -10 * fi;
+                        stroke = radius = 0;
+                        strokeTo = 2.1f - fi * 0.3f;
+                        radiusTo = 16 - fi;
+                        haloRadius = 0;
+                    }});
+                }
                 parts.add(new RegionPart("-barrel") {{
                     mirror = true;
                     moveX = 5;
@@ -8322,7 +8378,7 @@ public class SFBlocks {
             heatColor = Color.valueOf("FF4040");
             requirements(Category.turret, with(Items.titanium, 1800, Items.silicon, 1000, SFItems.siliSteel, 1250, SFItems.leipAlloy, 550, SFItems.lens, 1100, SFItems.discFabric, 900));
 
-            consumePower(60f);
+            consumePower(110f);
             consumeLiquid(SFLiquids.heatchangeroil,24*9 /60f);
             liquidCapacity = 600;
 
@@ -8332,7 +8388,7 @@ public class SFBlocks {
             range = 65*8f;
             shootCone = 10;
             accurateDelay = false;
-            //ammo(SFLiquids.nanoFluid,
+
             shootType = new PointLaserBulletType() {{
                 status = SFStatusEffects.overFreezing;
                 statusDuration = 110;
@@ -8347,7 +8403,7 @@ public class SFBlocks {
                 scaledSplashDamage = true;
                 buildingDamageMultiplier = 0.3f;
 
-                hitColor = color = StatusEffects.freezing.color;
+                hitColor = color = fengmanghit;
                 beamEffect = new ParticleEffect(){{
                     sizeInterp = Interp.pow5Out;
                     particles = 2;
@@ -8371,7 +8427,7 @@ public class SFBlocks {
                     buildingDamageMultiplier = 0.3f;
                     status = StatusEffects.freezing;
                     statusDuration = 120;
-                    hitColor = StatusEffects.freezing.color;
+                    hitColor = fengmanghit;
 
                     despawnEffect = Fx.none;
                     hitEffect = new Effect(15, e -> {
@@ -10754,10 +10810,10 @@ public class SFBlocks {
             size = 7;
             consumePower(5f);
             plans = Seq.with(
-            new UnitPlan(SFUnitTypes.arma, 60* 45f, SFItems.waveSteel,160, SFItems.nanoCore,100),
-            new UnitPlan(SFUnitTypes.piercer, 60* 45f, SFItems.waveSteel,160, SFItems.nanoCore,100),
-            new UnitPlan(SFUnitTypes.vagris, 60* 45f, SFItems.waveSteel,160, SFItems.nanoCore,100),
-            new UnitPlan(SFUnitTypes.shatter, 60* 45f, SFItems.waveSteel,160, SFItems.nanoCore,100)
+            new UnitPlan(SFUnitTypes.arma, 60* 45f, SFItems.waveSteel,1),
+            new UnitPlan(SFUnitTypes.piercer, 60* 45f, SFItems.waveSteel,1),
+            new UnitPlan(SFUnitTypes.vagris, 60* 45f, SFItems.waveSteel,1),
+            new UnitPlan(SFUnitTypes.shatter, 60* 45f, SFItems.waveSteel,1)
             )
         }};*/
         nanoUnitRegener = new RepairTower("nano-unit-regener") {{
