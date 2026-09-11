@@ -108,7 +108,7 @@ public class SFBlocks {
 
     //power
     armorBattery, armorNode, discNodeTower,
-    coalPyrolyzer, gasSmoker, gasTurbine, heatGenerator, radiGenerator, fermReactor, fissionReactor, arcFissionReactor,
+    coalPyrolyzer, gasSmoker, gasTurbine, eleCollector, heatGenerator, radiGenerator, fermReactor, fissionReactor, arcFissionReactor,
     // hypermagneticReactor,
 
     //production
@@ -1785,6 +1785,7 @@ public class SFBlocks {
             boostScale = 0.25f;
 
             craftTime = 133f;
+            ignoreLiquidFullness = true;
             outputItem = new ItemStack(Items.sporePod, 1);
             outputLiquid = new LiquidStack(Liquids.nitrogen, 0.025f);
             consumePower(2.5f);
@@ -1801,9 +1802,10 @@ public class SFBlocks {
         }};
         airCooler = new GenericCrafter("air-cooler") {{
             size = 3;
-            requirements(Category.crafting, with(Items.lead,120, Items.metaglass,80, Items.surgeAlloy,50, SFItems.rubidium, 80));
+            requirements(Category.crafting, with(Items.lead,120, Items.metaglass,80, Items.plastanium,50, SFItems.siliSteel, 80));
             hasPower = hasLiquids = true;
             liquidCapacity = 120;
+
 
             craftTime = 60;
             outputLiquid = new LiquidStack(Liquids.nitrogen, 12/60f);
@@ -2165,7 +2167,9 @@ public class SFBlocks {
         tayriumCrucible = new AttributeCrafter("tayrium-crucible") {{
             size = 4;
             requirements(Category.crafting, with(Items.plastanium, 85, SFItems.strontium, 85, SFItems.waveSteel, 110, SFItems.fermium, 70));
-            hasPower = false;
+            hasPower = true;
+            insulated = true;
+
             hasItems = true;
             floating = true;
             itemCapacity = 30;
@@ -2546,7 +2550,7 @@ public class SFBlocks {
             healPercent = 8;
             phaseBoost = 4;
             useTime = 350f;
-            consumePower(15f);
+            consumePower(3f);
             consumeItem(SFItems.nanoCore).boost();
         }};
         nanoRegenProjector = new RegenProjector("nano-regen-projector") {{
@@ -2559,7 +2563,7 @@ public class SFBlocks {
 
             optionalUseTime = 360;
             optionalMultiplier = 6;
-            consumePower(15f);
+            consumePower(460 /60f);
             consumeItem(SFItems.nanoCore, 5).boost();
 
             effectChance = 0.5f;
@@ -2960,8 +2964,8 @@ public class SFBlocks {
 
             powerProduction = 5.5f;
             extraPower = 1.75f;
-            warmupSpeed = 0.004f;
-            powerUpSpeed = 0.002f;
+            warmupSpeed = 0.005f;
+            powerUpSpeed = 0.0025f;
             //consumeLiquids(LiquidStack.with(Liquids.water,0.15f, SFLiquids.mixGas,0.3f));
             consumeLiquid(Liquids.water,0.2f);
             consume(new ConsumeLiquidFlammable(0.3f){{minFlammability=1f;}});
@@ -2974,6 +2978,45 @@ public class SFBlocks {
                     new DrawRegion("-rot1", 6f){{spinSprite=true;}},
                     new DrawRegion("-top"),
                     new DrawLiquidRegion(Liquids.water)
+            );
+        }};
+        eleCollector = new GasTurbineGenerator("ele-collector"){{
+            size = 4;
+            health = 1500;
+            hasItems = true;
+            itemCapacity = 30;
+            hasLiquids = true;
+            liquidCapacity = 600;
+            requirements(Category.power, with(Items.lead,250, Items.plastanium,130, Items.surgeAlloy,50, SFItems.crystalGallium,170));
+
+            powerProduction = 5f;
+            extraPower = 10 / 3f;
+            warmupSpeed = powerUpSpeed = 0.013f;
+
+            itemDuration = 60 /2f;
+            consume(new ConsumeItemCharged(0.1f));
+            itemDurationMultipliers.put(Items.surgeAlloy, 2.5f);
+            itemDurationMultipliers.put(SFItems.tayrAlloy, 6f);
+
+            consumeLiquid(SFLiquids.nitrate, 1.5f);
+            outputLiquid = new LiquidStack(Liquids.water, 1.5f);
+
+            drawer = new DrawMulti(
+                    new DrawRegion("-bottom"),
+                    new DrawLiquidTile(SFLiquids.nitrate),
+                    new DrawArcSmelt(){{
+                        midColor = Color.valueOf("eeffc7");
+                        flameColor = Color.valueOf("8c996dd8");
+                        flameRad = 1.5f;
+                        circleSpace = 5;
+                        flameRadiusScl = 12;
+                        flameRadiusMag = 2;
+                        circleStroke = 0.8f;
+                        particleRad = 12;
+                        particles = 16;
+                        particleLen = 1.2f;
+                    }},
+                    new DrawDefault()
             );
         }};
 
@@ -3021,10 +3064,10 @@ public class SFBlocks {
         fermReactor = new NuclearReactor("fermium-reactor") {{
             size = 3;
             health = 1600;
-            requirements(Category.power, with(Items.lead,300, Items.graphite,90, Items.metaglass,90, SFItems.siliSteel,130, SFItems.fermium,110));
+            requirements(Category.power, with(Items.silicon,150, Items.plastanium,100, SFItems.waveSteel,130, SFItems.fermium,90));
             buildCostMultiplier = 0.8f;
             hasPower = hasItems = hasLiquids = true;
-            itemCapacity = 30;
+            itemCapacity = 15;
             liquidCapacity = 60;
 
             powerProduction = 2300/60f;
@@ -7053,7 +7096,7 @@ public class SFBlocks {
                     moveY = 8;
                 }}
             );}};
-            requirements(Category.turret, with(Items.lead,1200, SFItems.crystalGallium,850, SFItems.fermium,600, SFItems.tayrAlloy,600, Items.phaseFabric,600));
+            requirements(Category.turret, with(Items.lead,1200, Items.silicon,850, SFItems.fermium,600, SFItems.tayrAlloy,300, Items.phaseFabric,600));
             consumePower(25);
 
             reload = 360;
@@ -8130,7 +8173,7 @@ public class SFBlocks {
                         moveY = -4;
                     }}
             );}};
-            requirements(Category.turret, with(Items.graphite,1500, SFItems.fermium,1100, Items.blastCompound,300, Items.phaseFabric,500, SFItems.waveSteel,650, SFItems.chromium,650));
+            requirements(Category.turret, with(Items.graphite,1500, SFItems.fermium,1100, Items.blastCompound,500, Items.phaseFabric,350, SFItems.waveSteel,800));
 
             reload = 230;
             rotateSpeed = 2.3f;
@@ -8986,6 +9029,7 @@ public class SFBlocks {
             enhancerItem = SFItems.lens;
             ammoPerShot = 30;
             maxEnhanced = 60;
+            reloadWhileCharging = false;
             enhancedPattern = new ShootPattern(){{firstShotDelay=120f;}};
             enhancedBullet = new LaserBulletType(4800){{
                 ammoMultiplier = 1;

@@ -52,6 +52,7 @@ public class SFItems {
         siliSteel = new Item("silisteel", Color.valueOf("7595D2")){{
             cost = 1.2f;
             healthScaling = 0.4f;
+            charge = 0.2f;
         }};
 
         waveSteel = new Item("wavesteel", Color.valueOf("71A5BF")){{

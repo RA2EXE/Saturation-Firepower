@@ -2411,7 +2411,7 @@ public class SFUnitTypes {
             researchCostMultiplier = 0.1f;
             hitSize = 48;
             canDrown = false;
-            armor = 36;
+            armor = 42;
             speed = 0.58f;
             rotateSpeed = 1.44f;
             baseRotateSpeed = 1.3f;
@@ -2503,7 +2503,7 @@ public class SFUnitTypes {
         diXing = new UnitType("libra") {{
             constructor = UnitTypes.corvus.constructor;
             researchCostMultiplier = 0.1f;
-            armor = 15;
+            armor = 30;
             speed = 0.3f;
             rotateSpeed = 1.52f;
             hitSize = 52;
@@ -3939,7 +3939,7 @@ public class SFUnitTypes {
             treadRects = new Rect[]{new Rect(-45f, -45f, 24, 88)};
 
             health = 1100;
-            armor = 8;
+            armor = 9;
             itemCapacity = 0;
             faceTarget = false;
             targetAir = false;
@@ -4070,7 +4070,7 @@ public class SFUnitTypes {
             drownTimeMultiplier = 2;
 
             health = 10500;
-            armor = 15;
+            armor = 20;
             itemCapacity = 0;
             faceTarget = false;
             abilities.add(new StatusFieldAbility(StatusEffects.overclock, 1200, 1200, 45) {{
@@ -4180,7 +4180,7 @@ public class SFUnitTypes {
             treadFrames = 8;
             drownTimeMultiplier = 5;
             health = 25000;
-            armor = 26;
+            armor = 24;
             itemCapacity = 0;
             faceTarget = false;
             immunities.addAll(StatusEffects.burning, StatusEffects.wet, SFStatusEffects.breakdown);
@@ -4866,7 +4866,7 @@ public class SFUnitTypes {
             accel = 0.02f;
             hitSize = 35;
             health = 8200;
-            armor = 6;
+            armor = 9;
             itemCapacity = 0;
             immunities.add(StatusEffects.freezing);
             engineOffset = 24;
@@ -5006,7 +5006,7 @@ public class SFUnitTypes {
             drag = 0.018f;
             hitSize = 59;
             health = 20000;
-            armor = 8;
+            armor = 16;
             itemCapacity = 0;
             engineOffset = 18;
             engineSize = 15;
@@ -6444,6 +6444,7 @@ public class SFUnitTypes {
                 shootSoundVolume = 0.2f;
                 recoil = 0;
                 shootY = 8f;
+                inaccuracy = 3;
 
                 bullet = new LiquidBulletType(SFLiquids.nitrate){{
                     lifetime = 32;
@@ -6526,6 +6527,7 @@ public class SFUnitTypes {
                     shots = 2;
                 }};
                 bullet = new MissileBulletType(6f, 18, "circle-bullet") {{
+                    splashDamage = 8;
                     lifetime = 8 * 26 / 6f;
                     width = height = 6;
                     shrinkY = 0;
@@ -6560,10 +6562,11 @@ public class SFUnitTypes {
                         status = SFStatusEffects.disRepair;
                         statusDuration = 20;
                         collidesGround = collidesAir = true;
+                        collidesTiles = true;
                         collides = false;
                         hitEffect = despawnEffect = Fx.none;
                         instantDisappear = true;
-                        buildingDamageMultiplier = 0f;
+                        buildingDamageMultiplier = 0.5f;
                         hitEffect = new ParticleEffect() {{
                             region = "shell";
                             particles = 3;
