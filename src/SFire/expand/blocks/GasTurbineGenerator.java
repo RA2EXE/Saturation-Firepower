@@ -6,14 +6,10 @@ import arc.struct.*;
 import arc.util.*;
 import arc.util.io.Reads;
 import arc.util.io.Writes;
-import mindustry.game.EventType;
 import mindustry.graphics.Pal;
 import mindustry.logic.LAccess;
-import mindustry.type.Item;
-import mindustry.type.LiquidStack;
 import mindustry.ui.Bar;
 import mindustry.world.blocks.power.*;
-import mindustry.world.consumers.ConsumeItemFilter;
 import mindustry.world.meta.*;
 
 public class GasTurbineGenerator extends ConsumeGenerator {
@@ -43,20 +39,12 @@ public class GasTurbineGenerator extends ConsumeGenerator {
                 () -> Core.bundle.format("bar.boost", Strings.fixed((e.exPower-1f)*100 ,0)),
                 () -> Pal.accent,
                 () -> ((e.exPower>1 ? e.exPower : 0)-1) / (extraPower-1) ));
-
-        /*if(outputLiquid != null){
-            addLiquidBar(outputLiquid.liquid);
-        }*/
     }
 
     @Override
     public void setStats(){
         super.setStats();
         stats.add(new Stat("extrapowermul", StatCat.power),"x"+(int)(extraPower*100)+"%");
-
-        /*if(outputLiquid != null){
-            stats.add(Stat.output, StatValues.liquid(outputLiquid.liquid, outputLiquid.amount * 60f, true));
-        }*/
     }
 
     //public @Nullable ConsumeLiquidFilter filterLiquid;
@@ -76,7 +64,10 @@ public class GasTurbineGenerator extends ConsumeGenerator {
 
         @Override
         public void updateEfficiencyMultiplier() {
-            if (filterLiquid != null) {
+            if(filterItem != null){
+                float m = filterItem.efficiencyMultiplier(this);
+                if(m > 0) efficiencyMultiplier  = m + 1;
+            }else if (filterLiquid != null) {
                 float m = filterLiquid.efficiencyMultiplier(this);
                 if (m > 0) efficiencyMultiplier = m;
             }
@@ -108,6 +99,15 @@ public class GasTurbineGenerator extends ConsumeGenerator {
                 float added = Math.min(productionEfficiency * delta() * outputLiquid.amount, liquidCapacity - liquids.get(outputLiquid.liquid));
                 liquids.add(outputLiquid.liquid, added);
                 dumpLiquid(outputLiquid.liquid);
+            }
+
+            if(filterItem != null && valid && itemDurationMultipliers.size > 0 && filterItem.getConsumed(this) != null){
+                itemDurationMultiplier = itemDurationMultipliers.get(filterItem.getConsumed(this), 1);
+            }
+            if(hasItems && valid && generateTime <= 0f){
+                consume();
+                consumeEffect.at(x + Mathf.range(generateEffectRange), y + Mathf.range(generateEffectRange));
+                generateTime = 1f;
             }
             generateTime -= delta() / (itemDuration * itemDurationMultiplier);
         }

@@ -155,7 +155,7 @@ public class SFStatusEffects {
                 //opposite(burning, melting, breakdown);
                 affinity(postive, (unit, result, time) -> {
                     unit.damage(transitionDamage);
-                    result.set(magnStrif, 60f);
+                    result.set(magnStrif, time + result.time);
                 });
             });
         }};
@@ -178,14 +178,14 @@ public class SFStatusEffects {
             }};
             init(() -> {
                 //opposite(burning, melting, breakdown);
-                affinity(negative, (unit, result, time) -> result.set(magnStrif, 60f));
+                affinity(negative, (unit, result, time) -> {
+                    result.set(magnStrif, time + result.time);              });
             });
         }};
         magnStrif = new StatusEffect("magnetic-strif") {{
             outline = false;
             color = Color.gray;
-            speedMultiplier = 0.95f;
-            dragMultiplier = 1.5f;
+            dragMultiplier = 1.2f;
             effectChance = 0.05f;
             effect = new ParticleEffect() {{
                 line = true;
@@ -358,10 +358,9 @@ public class SFStatusEffects {
         stormed = new StatusEffect("stormed") {{
             outline = false;
             color = SFColor.enemyRedLight;
-            healthMultiplier = 1.2f;
-            speedMultiplier = 1.25f;
+            speedMultiplier = 1.2f;
             reloadMultiplier = 1.5f;
-            damageMultiplier = 2;
+            damageMultiplier = 1.2f;
             effectChance = 0.8f;
             effect = new ParticleEffect() {{
                 particles = 3;
@@ -445,7 +444,7 @@ public class SFStatusEffects {
                 opposite(melting, burning, chemicalFlame);
 
                 affinity(freezing, (unit, result, time) -> {
-                    unit.damage(transitionDamage / 3f);
+                    unit.damagePierce(transitionDamage / 3f);
                     result.set(coldBreak, Math.min(time + result.time, 7*60f));
                     //result.set(overFreezing, result.time);
                 });
@@ -457,7 +456,6 @@ public class SFStatusEffects {
 
             freezing.init(() -> {
                 affinity(overFreezing, (unit, result, time) -> {
-                    unit.damage(transitionDamage / 3f);
                     result.set(coldBreak, Math.min(time + result.time, 7*60f));
                 });
             });

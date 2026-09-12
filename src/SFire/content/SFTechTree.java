@@ -210,7 +210,10 @@ public class SFTechTree {
         addToNode(surgeTower, () -> node(discNodeTower));
         addToNode(steamGenerator, () -> node(coalPyrolyzer, () -> node(gasSmoker, () -> node(gasTurbine))));
         addToNode(thermalGenerator, () -> node(heatGenerator, () -> node(radiGenerator)));
-        addToNode(thoriumReactor, () -> node(fermReactor));
+        addToNode(thoriumReactor, () -> {
+            node(fermReactor);
+            node(eleCollector);
+        });
         addToNode(impactReactor, () -> node(fissionReactor, () -> node(arcFissionReactor)));
 
         //production

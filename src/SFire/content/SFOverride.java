@@ -20,15 +20,12 @@ import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.blocks.storage.Unloader;
 import mindustry.world.blocks.units.*;
-import mindustry.world.consumers.*;
 import mindustry.world.draw.DrawTurret;
-import mindustry.content.*;
 
 import static arc.graphics.g2d.Draw.color;
 import static arc.graphics.g2d.Lines.lineAngle;
 import static arc.graphics.g2d.Lines.stroke;
 import static arc.math.Angles.randLenVectors;
-import static mindustry.content.StatusEffects.freezing;
 import static mindustry.type.ItemStack.with;
 
 public class SFOverride {
@@ -396,6 +393,7 @@ public class SFOverride {
             }});
         }});
 
+        ((ItemTurret) Blocks.spectre).rotateSpeed = 5f;
         ((ItemTurret) Blocks.spectre).reload = 8.28f;
         ((ItemTurret) Blocks.spectre).range = 280;
         ((ItemTurret) Blocks.spectre).coolantMultiplier = 1.5f;
@@ -445,6 +443,7 @@ public class SFOverride {
                 }}
         );
 
+        ((PowerTurret) Blocks.meltdown).rotateSpeed = 2.3f;
         ((PowerTurret) Blocks.meltdown).range = 250;
         ((PowerTurret) Blocks.meltdown).reload = 240;
         Blocks.meltdown.liquidCapacity = 120f;
@@ -488,12 +487,16 @@ public class SFOverride {
             }};
         }};
 
+        ((ItemTurret) Blocks.foreshadow).rotateSpeed = 2f;
+        ((ItemTurret) Blocks.foreshadow).reload = 160f;
         ((ItemTurret) Blocks.foreshadow).ammoTypes.put(SFItems.tayrAlloy, new PointBulletType(){{
             damage = 1750;
             hitSound = SFSounds.boom;
             speed = 100;
             hitShake = 5;
             buildingDamageMultiplier = 0.3f;
+            status = SFStatusEffects.scrambled;
+            statusDuration = 80;
             trailSpacing = 20;
             trailEffect = new Effect(30, e -> {
                 for(int i = 0; i < 2; i++){
@@ -585,11 +588,11 @@ public class SFOverride {
 
         ((GenericCrafter)Blocks.siliconSmelter).craftTime = 40;
         Blocks.siliconSmelter.consumePower(0.25f);
-        ((AttributeCrafter)Blocks.siliconCrucible).craftTime = 90;
-        ((AttributeCrafter)Blocks.siliconCrucible).minEfficiency = 1;
+        //((AttributeCrafter)Blocks.siliconCrucible).craftTime = 90;
+        //((AttributeCrafter)Blocks.siliconCrucible).minEfficiency = 1;
         ((AttributeCrafter)Blocks.siliconCrucible).boostScale = 1/3f;
         ((AttributeCrafter)Blocks.siliconCrucible).maxBoost = 2.5f;
-        ((AttributeCrafter)Blocks.siliconCrucible).outputItem = new ItemStack(Items.silicon,10);
+        //((AttributeCrafter)Blocks.siliconCrucible).outputItem = new ItemStack(Items.silicon,10);
         Blocks.siliconCrucible.consumePower(3.5f);
         Blocks.siliconCrucible.floating = true;
         Blocks.siliconCrucible.itemCapacity = 40;
@@ -666,8 +669,8 @@ public class SFOverride {
         Blocks.coreNucleus.armor = 12;
 
         //region status
-        StatusEffects.boss.damageMultiplier = 1.5f;
-        StatusEffects.boss.healthMultiplier = 2f;
+        StatusEffects.boss.damageMultiplier = 1.3f;
+        StatusEffects.boss.healthMultiplier = 2.5f;
 
         StatusEffects.fast.effectChance = 0.05f;
         StatusEffects.fast.effect = new MultiEffect(new WrapEffect(){{effect=Fx.colorSparkBig;color=Color.orange;rotation=45;}},
