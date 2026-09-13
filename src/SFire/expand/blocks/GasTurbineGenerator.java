@@ -44,7 +44,7 @@ public class GasTurbineGenerator extends ConsumeGenerator {
     @Override
     public void setStats(){
         super.setStats();
-        stats.add(new Stat("extrapowermul", StatCat.power),"x"+(int)(extraPower*100)+"%");
+        stats.add(new Stat("extrapowermul", StatCat.function),"x"+(int)(extraPower*100)+"%");
     }
 
     //public @Nullable ConsumeLiquidFilter filterLiquid;
@@ -81,19 +81,23 @@ public class GasTurbineGenerator extends ConsumeGenerator {
                 warmup = Mathf.lerpDelta(warmup, 1f, warmupSpeed * timeScale);
                 if (Mathf.equal(warmup, 1f, 0.001f)) {
                     warmup = 1f;
-                    exPower = Mathf.lerpDelta(exPower,extraPower,powerUpSpeed * timeScale);
+                    exPower = Mathf.lerpDelta(exPower, extraPower,powerUpSpeed * timeScale);
                 }
                 if (timer(timerUse, 60 / timeScale)) {
                     consume();
                 }
 
             } else {
-                warmup = Mathf.lerpDelta(warmup, 0f, 0.001f);
+                exPower = Mathf.lerpDelta(exPower, 1f, powerUpSpeed *2 * timeScale);
+                if (Mathf.equal(exPower, 1f, 0.001f)) {
+                    warmup = Mathf.lerpDelta(warmup, 0f, warmupSpeed *2 * timeScale);
+                }
             }
 
             totalProgress += warmup * Time.delta;
 
-            productionEfficiency = Mathf.pow(warmup, 5f) * efficiency * efficiencyMultiplier * exPower;
+            productionEfficiency = Mathf.pow(warmup, 5f) * efficiencyMultiplier * exPower;
+            //productionEfficiency = Mathf.pow(warmup, 5f) * efficiency * efficiencyMultiplier * exPower;
 
             if(outputLiquid != null){
                 float added = Math.min(productionEfficiency * delta() * outputLiquid.amount, liquidCapacity - liquids.get(outputLiquid.liquid));

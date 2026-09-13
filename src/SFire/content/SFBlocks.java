@@ -1168,10 +1168,10 @@ public class SFBlocks {
             liquidCapacity = 80;
 
             craftTime = 60;
-            outputLiquid = new LiquidStack(Liquids.cryofluid, 36.1f / 60f);
+            outputLiquid = new LiquidStack(Liquids.cryofluid, 36.3f / 60f);
             consumePower(2.8f);
             consumeItem(Items.titanium, 2);
-            consumeLiquid(Liquids.water, 36.1f / 60f);
+            consumeLiquid(Liquids.water, 36.3f / 60f);
 
             lightLiquid = Liquids.cryofluid;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(Liquids.water),
@@ -1323,20 +1323,21 @@ public class SFBlocks {
         }};
         silisteelSmelterHuge = new AttributeCrafter("silistell-smelter-heater") {{
             size = 4;
-            requirements(Category.crafting, with(Items.metaglass, 120, SFItems.siliSteel, 150, SFItems.chromium, 150, SFItems.discFabric, 40));
+            requirements(Category.crafting, with(Items.thorium, 160, Items.metaglass, 150, SFItems.siliSteel, 150, SFItems.chromium, 130, SFItems.tayrAlloy, 60));
             hasPower = hasItems = true;
-            itemCapacity = 24;
+            itemCapacity = 80;
             attribute = Attribute.heat;
-            baseEfficiency = 0.75f;
-            maxBoost = 9.25f;
-            boostScale = 10 / 16f;
-            outputScale = boostScale / 4f;
-            minEfficiency = 0;
+            baseEfficiency = 0f;
+            maxBoost = 10f;
 
-            craftTime = 120;
-            outputItem = new ItemStack(SFItems.siliSteel, 5);
+            boostScale = 10 / 16f;
+            outputScale = boostScale / 8;
+            minEfficiency = 0.001f;
+
+            craftTime = 180+30;
+            outputItem = new ItemStack(SFItems.siliSteel, 6);
             consumePower(10f);
-            consumeItems(with(Items.silicon, 4, Items.titanium, 4));
+            consumeItems(with(Items.silicon,6, Items.titanium,6));
 
             craftEffect = new ParticleEffect() {{
                 particles = 3;
@@ -1648,7 +1649,8 @@ public class SFBlocks {
             attribute = SFAttribute.radioactivity;
             baseEfficiency = 1f;
             maxBoost = 2f;
-            outputScale = boostScale = 1 / 16f;
+            boostScale = 1 / 16f;
+            outputScale = boostScale / 2f;
             minEfficiency = 0;
             requirements(Category.crafting, with(Items.lead,300, SFItems.crystalGallium,150, SFItems.tayrAlloy,80, SFItems.nanoCore, 220));
             hasPower = hasItems = hasLiquids = true;
@@ -1739,7 +1741,8 @@ public class SFBlocks {
             attribute = SFAttribute.radioactivity;
             baseEfficiency = 0.75f;
             maxBoost = 2.5f;
-            outputScale = boostScale = 1 / 9f;
+            boostScale = 1 / 9f;
+            outputScale = boostScale / 2.5f;
             minEfficiency = 0;
             requirements(Category.crafting, with(Items.silicon,100, SFItems.waveSteel,110, SFItems.fermium,90, SFItems.rubidium,180));
             hasPower = hasItems = true;
@@ -2292,6 +2295,7 @@ public class SFBlocks {
             size = 3;
             requirements(Category.crafting, with(Items.titanium,200, SFItems.waveSteel,170, SFItems.lens,70, SFItems.discFabric,30));
             hasPower = hasItems = true;
+            itemCapacity = 20;
 
             craftTime = 70;
             outputItem = new ItemStack(SFItems.memoryAlloy, 2);
@@ -2959,18 +2963,17 @@ public class SFBlocks {
             size = 2;
             health = 350;
             hasLiquids = true;
-            liquidCapacity = 100;
+            liquidCapacity = 60;
             hasItems = false;
-            requirements(Category.power, with(Items.lead,100, Items.metaglass,50, SFItems.crystalGallium,40, SFItems.rubidium,30));
-            buildCostMultiplier = 0.85f;
+            canOverdrive = false;
+            requirements(Category.power, with(Items.lead,40, Items.metaglass,20, SFItems.crystalGallium,35, SFItems.rubidium,15));
 
-            powerProduction = 5.5f;
+            powerProduction = 5f;
             extraPower = 1.75f;
-            warmupSpeed = 0.005f;
-            powerUpSpeed = 0.0025f;
-            //consumeLiquids(LiquidStack.with(Liquids.water,0.15f, SFLiquids.mixGas,0.3f));
-            consumeLiquid(Liquids.water,0.2f);
-            consume(new ConsumeLiquidFlammable(0.3f){{minFlammability=1f;}});
+            warmupSpeed = 0.01f;
+            powerUpSpeed = 0.002f;
+            consumeLiquid(Liquids.water,0.1f);
+            consume(new ConsumeLiquidFlammable(0.2f){{minFlammability=1f;}});
 
             ambientSound = Sounds.loopSteam;
             ambientSoundVolume = 0.02f;
@@ -3454,7 +3457,7 @@ public class SFBlocks {
             warmupSpeed = 0.008f;
 
             result = Liquids.water;
-            pumpAmount = 36.1f / 60f;
+            pumpAmount = 36.6f / 60f;
             baseEfficiency = 1;
             attribute = Attribute.water;
             consumePower(56 / 6f);
