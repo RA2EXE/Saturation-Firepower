@@ -134,8 +134,13 @@ public class SFBlocks {
 
     //units
     terrAssembler, hoveAssembler, payloadConstrustor, specFactory, pentativeReconstrustor, spaceFactory, spaceUpgrate, spaceUpgratePro,
-    nanoUnitRegener
+    nanoUnitRegener,
     //campaign
+
+    //spaceForce
+    spBridge, spLquidBridge
+
+
     ;
 
     public static void load() {
@@ -469,7 +474,7 @@ public class SFBlocks {
             decoration = radiquartzStone;
             attributes.set(Attribute.water, -0.1f);
             attributes.set(Attribute.spores, -1f);
-            attributes.set(SFAttribute.radioactivity, 0.3f);
+            attributes.set(SFAttribute.radioactivity, 0.16f);
         }};
         radiamphiboleFloor = new Floor("radiamphibole-floor", 4) {{
             wall = radiamphiboleWall;
@@ -483,7 +488,7 @@ public class SFBlocks {
             decoration = radigabbroStone;
             attributes.set(Attribute.water, -0.5f);
             attributes.set(Attribute.spores, -1f);
-            attributes.set(SFAttribute.radioactivity, 1.3f);
+            attributes.set(SFAttribute.radioactivity, 0.75f);
         }};
         radimacadam1Floor = new Floor("radimacadam1-floor") {{
             blendGroup = radiamphiboleFloor;
@@ -491,7 +496,7 @@ public class SFBlocks {
             attributes.set(Attribute.heat, 0.15f);
             attributes.set(Attribute.spores, -1f);
             emitLight = true;
-            attributes.set(SFAttribute.radioactivity, 1.5f);
+            attributes.set(SFAttribute.radioactivity, 1.3f);
             lightColor = SFColor.discDark.cpy().a(0.4f);
             lightRadius = 6f;
         }};
@@ -500,7 +505,7 @@ public class SFBlocks {
             attributes.set(Attribute.water, -0.75f);
             attributes.set(Attribute.heat, 0.3f);
             attributes.set(Attribute.spores, -1f);
-            attributes.set(SFAttribute.radioactivity, 2.6f);
+            attributes.set(SFAttribute.radioactivity, 1.3f);
             emitLight = true;
             lightColor = SFColor.discDark.cpy().a(0.6f);
             lightRadius = 8f;
@@ -1251,11 +1256,12 @@ public class SFBlocks {
             itemCapacity = 20;
             liquidCapacity = 30;
             attribute = SFAttribute.radioactivity;
-            baseEfficiency = 0.4f;
-            maxBoost = 3f;
-            boostScale = 2 /9f;
-            outputScale = boostScale / 2f;
+            baseEfficiency = 1f;
+            maxBoost = 2f;
+            boostScale = 1 /9f;
+            //outputScale = boostScale / 2f;
             //minEfficiency = 0.5f;
+            scaleLiquidConsumption = true;
 
             craftTime = 80;
             outputItem = new ItemStack(Items.phaseFabric,4);
@@ -1650,12 +1656,13 @@ public class SFBlocks {
             baseEfficiency = 1f;
             maxBoost = 2f;
             boostScale = 1 / 16f;
-            outputScale = boostScale / 2f;
+            //outputScale = boostScale / 4f;
             minEfficiency = 0;
             requirements(Category.crafting, with(Items.lead,300, SFItems.crystalGallium,150, SFItems.tayrAlloy,80, SFItems.nanoCore, 220));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 40;
             liquidCapacity = 80;
+            scaleLiquidConsumption = true;
 
             craftTime = 90;
             outputItem = new ItemStack(SFItems.discFabric, 12);
@@ -1739,16 +1746,16 @@ public class SFBlocks {
         discPhaseKnitter = new AttributeCrafter("discfabric-phase-knitter") {{
             size = 3;
             attribute = SFAttribute.radioactivity;
-            baseEfficiency = 0.75f;
+            baseEfficiency = 1f;
             maxBoost = 2.5f;
             boostScale = 1 / 9f;
-            outputScale = boostScale / 2.5f;
+            outputScale = boostScale / 3f;
             minEfficiency = 0;
             requirements(Category.crafting, with(Items.silicon,100, SFItems.waveSteel,110, SFItems.fermium,90, SFItems.rubidium,180));
             hasPower = hasItems = true;
             itemCapacity = 30;
 
-            craftTime = 24;
+            craftTime = 48;
             outputItem = new ItemStack(SFItems.discFabric, 1);
             consumePower(8);
             consumeItems(with(SFItems.fermium, 1, SFItems.rareEarth, 3));
@@ -2822,6 +2829,36 @@ public class SFBlocks {
             explosivenessScale = flammabilityScale = 20f / 100f;
             consumePower(0.5f);
         }};
+
+        spBridge = new OmniBridge("space-bridge"){{
+            health = 500;
+            requirements(Category.distribution, with(Items.copper, 1));
+            //envRequired = Env.space;
+            //hasPower = false;
+            pulse = true;
+            consumePower(3/60f);
+            range = 12;
+            transportTime = 2f;
+            bridgeWidth = 8f;
+            arrowSpacing = 6f;
+        }};
+        spLquidBridge = new OmniLiquidBridge("space-liquid-bridge"){{
+            health = 500;
+            requirements(Category.liquid, with(Items.copper, 1));
+            //envRequired = Env.space;
+            range = 12;
+            //hasPower = false;
+            consumePower(3/60f);
+
+            liquidCapacity = 80f;
+            explosivenessScale = flammabilityScale = 0;
+
+            bridgeWidth = 8f;
+            arrowSpacing = 6f;
+            placeableLiquid = true;
+            fadeIn = moveArrows = false;
+        }};
+
         //endregion
         //region power
         armorBattery = new Battery("armor-battery") {{
@@ -3045,7 +3082,7 @@ public class SFBlocks {
         radiGenerator = new ThermalGenerator("radiation-generator") {{
             size = 2;
             health = 400;
-            requirements(Category.power, with(Items.surgeAlloy,30,SFItems.chromium,150, SFItems.waveSteel,200, Items.phaseFabric,60));
+            requirements(Category.power, with(Items.surgeAlloy,30, SFItems.waveSteel,150, Items.phaseFabric,60));
             buildCostMultiplier = 0.9f;
             attribute = SFAttribute.radioactivity;
 
