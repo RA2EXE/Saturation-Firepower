@@ -11,7 +11,7 @@ public class SFItems {
     public static Item
             strontium, rubidium, fermium, chromium, rareEarth, crystalGallium,
     siliSteel, waveSteel, clusBomb, discFabric, nanoCore, lens,
-    tayrAlloy, leipAlloy, memoryAlloy;
+    tayrAlloy, leipAlloy, memoryAlloy, solidFuel;
     public static void load(){
         strontium = new Item("strontium", Color.valueOf("FFB0B0")){{
             hardness = 3;
@@ -95,5 +95,6 @@ public class SFItems {
             healthScaling = 1.5f;
         }};
 
+        solidFuel = new Item("solid-fuel", Color.valueOf("DAC4D0"));
     }
 }
