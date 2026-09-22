@@ -4,12 +4,11 @@ import arc.func.Boolf;
 import arc.graphics.Color;
 import arc.graphics.g2d.Draw;
 import arc.graphics.g2d.Lines;
-import arc.math.Angles;
+import arc.math.*;
 import arc.math.Mathf;
-import arc.math.geom.Point2;
-import arc.util.Eachable;
-import arc.util.Time;
-import arc.util.Tmp;
+import arc.math.geom.*;
+import arc.struct.Seq;
+import arc.util.*;
 import mindustry.core.Renderer;
 import mindustry.entities.units.BuildPlan;
 import mindustry.gen.Building;
@@ -17,6 +16,7 @@ import mindustry.graphics.Drawf;
 import mindustry.graphics.Layer;
 import mindustry.graphics.Lod;
 import mindustry.graphics.Pal;
+import mindustry.input.*;
 import mindustry.world.Edges;
 import mindustry.world.Tile;
 import mindustry.world.blocks.distribution.ItemBridge;
@@ -29,6 +29,7 @@ public class OmniBridge extends ItemBridge {
         super(name);
         squareSprite = false;
         allowDiagonal = true;
+        swapDiagonalPlacement = true;
         canOverdrive = false;
     }
 
@@ -83,6 +84,14 @@ public class OmniBridge extends ItemBridge {
         //super.drawPlace(x, y, rotation, valid);
         //Tile link = findLink(x, y);
 
+        for(int i = 0; i < 4; i++){
+            Drawf.dashLine(Pal.placing,
+                    x * tilesize + Geometry.d4[i].x * (tilesize / 2f + 2),
+                    y * tilesize + Geometry.d4[i].y * (tilesize / 2f + 2),
+                    x * tilesize + Geometry.d4[i].x * (range) * tilesize,
+                    y * tilesize + Geometry.d4[i].y * (range) * tilesize);
+        }
+
         Lines.stroke(1f);
         Draw.color(Pal.placing);
         Drawf.dashCircle(x * tilesize + offset, y * tilesize + offset, range * tilesize, Pal.placing);
@@ -99,6 +108,8 @@ public class OmniBridge extends ItemBridge {
             return false;
         }
     }
+
+
 
     public class OmniBridgeBuild extends ItemBridgeBuild {
         @Override
@@ -133,7 +144,6 @@ public class OmniBridge extends ItemBridge {
                 }
             }
         }
-
 
         @Override
         public void draw() {
@@ -218,5 +228,37 @@ public class OmniBridge extends ItemBridge {
         }
 
 
+    }
+/*
+    @Override
+    public void changePlacementPath(Seq<Point2> points, int rotation) {
+        if (points.size < 2) return;
+
+        Seq<Point2> result = new Seq<>(points.size * 2);
+        result.add(points.first());
+
+        for (int i = 0; i < points.size - 1; i++) {
+            destance(points.get(i), points.get(i + 1), result);
+        }
+
+        points.clear();
+        points.addAll(result);
+    }
+
+    private static void destance(Point2 a, Point2 b, Seq<Point2> out) {}
+*/
+
+    @Override
+    public void changePlacementPath(Seq<Point2> points, int rotation){
+        Placement.calculateNodes(points, this, rotation, (point, other) ->//起点 终点
+                overlaps(world.tile(point.x, point.y), world.tile(other.x, other.y)));
+    }
+
+    public boolean overlaps(@Nullable Tile src, @Nullable Tile other){
+        if(src == null || other == null) return true;
+        return Intersector.overlaps(
+                Tmp.cr1.set(src.worldx() + offset, src.worldy() + offset, (range-0.5f) * tilesize),
+                Tmp.r1.setSize(size * tilesize).setCenter(other.worldx() + offset, other.worldy() + offset)
+        );
     }
 }

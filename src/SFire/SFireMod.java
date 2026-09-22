@@ -40,6 +40,7 @@ public class SFireMod extends Mod {
         SFLiquids.load();
         SFUnitTypes.loadUnit();
         SFBlocks.load();
+        SFspaceBlock.load();
         SFOverride.load();
         SFPlanets.load();
         SFSectorPresets.load();
