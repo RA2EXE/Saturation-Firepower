@@ -1,19 +1,12 @@
 package SFire.content;
 
-import SFire.expand.blocks.OmniBridge;
-import SFire.expand.blocks.OmniLiquidBridge;
+import SFire.expand.blocks.*;
 import arc.graphics.Color;
-import mindustry.content.Items;
-import mindustry.type.Category;
-import mindustry.type.Item;
+import mindustry.content.*;
+import mindustry.type.*;
 import mindustry.world.Block;
-import mindustry.world.blocks.distribution.DirectionalUnloader;
-import mindustry.world.blocks.distribution.Duct;
-import mindustry.world.blocks.distribution.DuctRouter;
-import mindustry.world.blocks.liquid.ArmoredConduit;
-import mindustry.world.blocks.liquid.Conduit;
-import mindustry.world.blocks.liquid.LiquidJunction;
-import mindustry.world.blocks.liquid.LiquidRouter;
+import mindustry.world.blocks.distribution.*;
+import mindustry.world.blocks.liquid.*;
 
 import static mindustry.type.ItemStack.with;
 
@@ -22,8 +15,13 @@ public class SFspaceBlock {
     tiDuct, tiRouter, tiUnloader,
     spBridge, spBridgeLong,
     tiConduit, tiLiquidRouter, tiLiquidJunction,
-    spLquidBridge, spLquidBridgeLong
+    spLquidBridge, spLquidBridgeLong,
     //production
+
+
+
+    //unit
+    spaceFactory, spaceUpgrate, spaceUpgratePro
 
     ;
 
@@ -136,6 +134,19 @@ public class SFspaceBlock {
             //((Conduit) tiConduit).bridgeReplacement = this;
         }};
 
+
+         /*spaceFactory = new UnitFactory("space-factory"){{
+            health = 11200;
+            requirements(Category.units, with(Items.silicon,200, SFItems.waveSteel,360, SFItems.nanoCore,250));
+            size = 7;
+            consumePower(5f);
+            plans = Seq.with(
+            new UnitPlan(SFUnitTypes.arma, 60* 45f, SFItems.waveSteel,1),
+            new UnitPlan(SFUnitTypes.piercer, 60* 45f, SFItems.waveSteel,1),
+            new UnitPlan(SFUnitTypes.vagris, 60* 45f, SFItems.waveSteel,1),
+            new UnitPlan(SFUnitTypes.shatter, 60* 45f, SFItems.waveSteel,1)
+            )
+        }};*/
 
     }
 }

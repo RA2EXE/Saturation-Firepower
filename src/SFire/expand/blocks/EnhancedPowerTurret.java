@@ -38,6 +38,7 @@ public class EnhancedPowerTurret extends Turret{
     @Override
     public void setStats(){
         super.setStats();
+        stats.remove(Stat.itemCapacity);
         stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(this, shootType)));
         stats.add(Stat.ammo, StatValues.ammo(ObjectMap.of(enhancerItem, enhancedBullet)));
         stats.add(Stat.ammoCapacity, (float) maxEnhanced / ammoPerShot, StatUnit.shots);
@@ -58,6 +59,23 @@ public class EnhancedPowerTurret extends Turret{
         
         @Override
         public void handleItem(Building source, Item item){
+            /*
+            BulletType type = ammoTypes.get(item);
+            if(type == null) return;
+            totalAmmo += type.ammoMultiplier;
+
+            //find ammo entry by type
+            for(int i = 0; i < ammo.size; i++){
+                ItemTurret.ItemEntry entry = (ItemTurret.ItemEntry)ammo.get(i);
+
+                //if found, put it to the right
+                if(entry.item == item){
+                    entry.amount += type.ammoMultiplier;
+                    ammo.swap(i, ammo.size - 1);
+                    return;
+                }
+            }*/
+
             if(item == enhancerItem && enhancedAmmo < maxEnhanced){
                 enhancedAmmo += (int)enhancedBullet.ammoMultiplier;
             }

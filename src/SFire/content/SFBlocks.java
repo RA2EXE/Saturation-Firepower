@@ -65,7 +65,7 @@ public class SFBlocks {
     magstoneFloor, magstoneWall, magstoneStone, magbasaltFloor, magbasaltWall, magbasaltStone, magshaleFloor, magshaleWall, magshaleStone, magshaleFissure, shaleFissure,
     calciteFloor, calciteWall, calciteStone, celestiteFloor, celestiteVent, celestiteWall, celestiteStone, saltdilutedFloor, saltdilutedWall, inkrockFloor, inkrockVent, inkrockWall, inkrockStone,
     crackrockFloor, crackrockWall, crackrockStone, combinationFloor, combinationVent, combinationWall, combinationStone, sulfurFloor, sulfurVent, sulfurWall, sulfurStone, pyriterockFloor, pyriterockVent, pyriterockWall, pyriterockStone,
-    crystalRed, crystalOrange, crystalGreen, crystalBlue, crystalPurple,
+    crystalRed, crystalOrange, crystalGreen, crystalBlue, crystalPurple, obsidian, obsidianWall,
             crystalRedCluster, crystalOrangeCluster, crystalGreenCluster, crystalBlueCluster, crystalPurpleCluster,
     radiquartzFloor, radiquartzWall, radiquartzStone, radiamphiboleFloor, radiamphiboleWall, radiamphiboleStone,
     radigabbroFloor, radigabbroWall, radigabbroStone, radimacadam1Floor, radimacadam2Floor,
@@ -133,7 +133,7 @@ public class SFBlocks {
     defensePlatformPlasma,
 
     //units
-    terrAssembler, hoveAssembler, payloadConstrustor, specFactory, pentativeReconstrustor, spaceFactory, spaceUpgrate, spaceUpgratePro,
+    terrAssembler, hoveAssembler, payloadConstrustor, specFactory, pentativeReconstrustor,
     nanoUnitRegener
     //campaign
 
@@ -276,6 +276,9 @@ public class SFBlocks {
         }};
         pyriterockWall = new StaticWall("pyriterock-wall") {{
             variants = 3;
+        }};
+        obsidianWall = new StaticWall("obsidian-wall") {{
+            variants = 2;
         }};
         radiquartzWall = new StaticWall("radiquartz-wall") {{
             variants = 2;
@@ -461,11 +464,37 @@ public class SFBlocks {
             attributes.set(Attribute.heat, 0.1f);
             effectColor = Color.white.cpy().a(0.55f);
         }};
-        crystalRed = new Floor("crystal-red"){{dragMultiplier=0.98f;}};
-        crystalOrange = new Floor("crystal-orange"){{dragMultiplier=0.98f;}};
-        crystalGreen = new Floor("crystal-green"){{dragMultiplier=0.98f;}};
-        crystalBlue = new Floor("crystal-blue"){{dragMultiplier=0.98f;}};
-        crystalPurple = new Floor("crystal-purple"){{dragMultiplier=0.98f;}};
+        crystalRed = new Floor("crystal-red"){{
+            dragMultiplier = 0.98f;
+            emitLight = true;
+            lightColor = Color.red.cpy().a(0.2f);
+            lightRadius = 10f;
+        }};
+        crystalOrange = new Floor("crystal-orange"){{
+            dragMultiplier = 0.98f;
+            emitLight = true;
+            lightColor = Color.orange.cpy().a(0.2f);
+            lightRadius = 10f;
+        }};
+        crystalGreen = new Floor("crystal-green"){{
+            dragMultiplier = 0.98f;
+            emitLight = true;
+            lightColor = Color.green.cpy().a(0.2f);
+            lightRadius = 10f;
+        }};
+        crystalBlue = new Floor("crystal-blue"){{
+            dragMultiplier = 0.98f;
+            emitLight = true;
+            lightColor = Color.blue.cpy().a(0.2f);
+            lightRadius = 10f;
+        }};
+        crystalPurple = new Floor("crystal-purple"){{
+            dragMultiplier = 0.98f;
+            emitLight = true;
+            lightColor = Color.purple.cpy().a(0.2f);
+            lightRadius = 10f;
+        }};
+        obsidian = new Floor("obsidian");
         radiquartzFloor = new Floor("radiquartz-floor", 4) {{
             wall = radiquartzWall;
             decoration = radiquartzStone;
@@ -573,10 +602,10 @@ public class SFBlocks {
             decoration = induFloorCover;
             blendGroup = SFBlocks.induFloor;
         }};
-        induFloorNanowall = new StaticWall("industry-nanowall") {{
+        induFloorNanowall = new StaticWall("industry-nanowall"){{
             variants = 4;
         }};
-        induFloorNano = new Floor("nano-panel", 16) {{
+        induFloorNano = new Floor("nano-panel", 16){{
             emitLight = true;
             lightRadius = 10;
             lightColor = Color.valueOf("7CF38980");
@@ -637,7 +666,6 @@ public class SFBlocks {
             attributes.set(Attribute.water, -0.125f);
             drawEdgeOut = false;
         }};
-
         perimeter = new Floor("perimeter",0) {{
             placeableOn = false;
             speedMultiplier = 1.3f;
@@ -2739,15 +2767,14 @@ public class SFBlocks {
             requirements(Category.distribution, with(Items.plastanium, 80, SFItems.siliSteel, 120, SFItems.fermium, 200, SFItems.discFabric, 110));
             hasPower = hasItems = true;
             itemCapacity = 300;
-            //a new massDriveBullet
+            minDistribute = 150;
+            reload = 90;
 
-            minDistribute = 60;
-            reload = 100;
             rotateSpeed = 2.5f;
             bulletSpeed = 8.8f;
             range = 800;
 
-            consumePower(13f);
+            consumePower(10f);
             shootSound = Sounds.shootLaser;
             shootEffect = Fx.instShoot;
             smokeEffect = new ParticleEffect() {{
@@ -8072,7 +8099,7 @@ public class SFBlocks {
             maxEnhanced = 20;
             ammoPerShot = 2;
             enhancerItem = Items.surgeAlloy;
-            enhancedBullet =  new BasicBulletType(11, 80 * cryoMul) {{
+            enhancedBullet = new BasicBulletType(11, 80 * cryoMul) {{
                 lifetime = 48;
                 ammoMultiplier = 1;
                 status = SFStatusEffects.breakdown;
@@ -10853,18 +10880,6 @@ public class SFBlocks {
             consumeLiquid(SFLiquids.nanoFluid, 180f / 60f);
             //consumeLiquid(Liquids.cryofluid, 3f);
         }};
-        /*spaceFactory = new UnitFactory("space-factory"){{
-            health = 11200;
-            requirements(Category.units, with(Items.silicon,200, SFItems.waveSteel,360, SFItems.nanoCore,250));
-            size = 7;
-            consumePower(5f);
-            plans = Seq.with(
-            new UnitPlan(SFUnitTypes.arma, 60* 45f, SFItems.waveSteel,1),
-            new UnitPlan(SFUnitTypes.piercer, 60* 45f, SFItems.waveSteel,1),
-            new UnitPlan(SFUnitTypes.vagris, 60* 45f, SFItems.waveSteel,1),
-            new UnitPlan(SFUnitTypes.shatter, 60* 45f, SFItems.waveSteel,1)
-            )
-        }};*/
         nanoUnitRegener = new RepairTower("nano-unit-regener") {{
             requirements(Category.units, with(Items.metaglass,300, Items.plastanium,400, SFItems.waveSteel,400, Items.surgeAlloy,300,SFItems.nanoCore,400));
             size = 4;
