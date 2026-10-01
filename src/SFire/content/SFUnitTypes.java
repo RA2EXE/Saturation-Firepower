@@ -2958,7 +2958,7 @@ public class SFUnitTypes {
                                 weaveMag = 3;
                                 weaveScale = 3;
                                 shrinkX = shrinkY = 0;
-                                hitSound = Sounds.explosion;
+                                hitSound = Sounds.explosionArtilleryShock;
                                 knockback = 5;
                                 status = StatusEffects.sapped;
                                 statusDuration = 180;
@@ -2995,7 +2995,7 @@ public class SFUnitTypes {
                         y = 20;
                         shoot.shotDelay = 3;
                         shoot.shots = 3;
-                        shootSound = Sounds.shootSap;
+                        shootSound = Sounds.shootArtillerySap;
                         top = true;
                         shootY = 8;
                         reload = 36;
@@ -3022,7 +3022,7 @@ public class SFUnitTypes {
                         y = 12;
                         shoot.shotDelay = 3;
                         shoot.shots = 3;
-                        shootSound = Sounds.shootSap;
+                        shootSound = Sounds.shootArtillerySap;
                         top = true;
                         shootY = 8;
                         reload = 30;

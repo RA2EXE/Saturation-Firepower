@@ -1,56 +1,88 @@
-buildscript {
-    ext{
-        sdkRoot = System.getenv("ANDROID_HOME")
-    }
-    }
-plugins{
-    id "java"
-}
+apply plugin: "java"
+
+version = '1.0'
 
 sourceSets.main.java.srcDirs = ["src"]
 
 repositories{
-    mavenLocal()
     mavenCentral()
-    maven { url "https://raw.githubusercontent.com/Zelaux/MindustryRepo/master/repository" }
-    maven{ url 'https://www.jitpack.io' }
+    ivy{
+        url = 'https://github.com/'
+        patternLayout{artifact '/[organisation]/[module]/releases/download/[revision]/dependencies.jar'}
+        metadataSources{ artifact() }
+    }
+
+    ivy{
+        url = 'https://github.com/'
+        patternLayout{artifact '/[organisation]/[module]/releases/[revision]/download/dependencies.jar'}
+        metadataSources{ artifact() }
+    }
+
+    ivy{
+        url = 'https://github.com/'
+        patternLayout{artifact '/[organisation]/[module]/releases/download/master/[revision].jar'}
+        metadataSources{ artifact() }
+    }
 }
 
+java{
+    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_17
+}
 
-tasks.withType(JavaCompile).configureEach {
-    targetCompatibility = 16
-    sourceCompatibility = JavaVersion.VERSION_16
-    options.encoding = 'UTF-8'
+ext{
+    mindustryVersion = "v159.5"
+    isWindows = System.getProperty("os.name").toLowerCase().contains("windows")
+
+    // 跨平台获取 Android SDK 路径：
+    // 1. 环境变量 ANDROID_HOME（GitHub Actions 默认就有）
+    // 2. 本地环境变量
+    // 3. 本地回退：直接用你 Windows 上的路径（仅作开发期回退）
+    sdkRoot = System.getenv("ANDROID_HOME") ?: System.getenv("ANDROID_SDK_ROOT")
+            ?: (isWindows ? "D:/桌面/GAMES/MDT/android-sdk" : null)
 }
 
 dependencies{
-    compileOnly files("D:/桌面/GAMES/MDT/jre/desktop.jar")
+    // 仅在本地有 desktop.jar 时才挂载，避免 Actions 报错
+    def localDesktop = isWindows ? file("D:/桌面/GAMES/MDT/jre/desktop.jar") : null
+    if (localDesktop != null && localDesktop.exists()) {
+        compileOnly files(localDesktop)
+    } else {
+        // Actions / 其他平台：从 GitHub 拉取
+        compileOnly mindustryVersion == "be"
+                ? "Anuken:MindustryBuilds:latest"
+                : "Anuken:Mindustry:$mindustryVersion"
+    }
 }
 
-tasks.register('jarAndroid') {
-    dependsOn jar
+tasks.register('jarAndroid'){
+    dependsOn "jar"
+    def projectName = project.name
 
-    doLast {
+    doLast{
+        if(!sdkRoot || !new File(sdkRoot).exists())
+            throw new GradleException("No valid Android SDK found. Ensure that ANDROID_HOME is set to your Android SDK directory.")
 
-        if (!new File("$sdkRoot").exists()) throw new GradleException("No valid Android SDK found. Ensure that ANDROID_HOME is set to your Android SDK directory.");
+        def platformRoot = new File("$sdkRoot/platforms/").listFiles().sort().reverse().find{ f -> new File(f, "android.jar").exists() }
 
-        def platformRoot = new File("$sdkRoot/platforms/").listFiles().sort().reverse().find { f -> new File(f, "android.jar").exists() }
+        if(!platformRoot) throw new GradleException("No android.jar found. Ensure that you have an Android platform installed.")
 
-        if (!platformRoot) throw new GradleException("No android.jar found. Ensure that you have an Android platform installed.")
+        // 自动寻找最新 build-tools 中的 d8
+        def buildToolsRoot = new File("$sdkRoot/build-tools/").listFiles().sort().reverse().find{ f ->
+            new File(f, isWindows ? "d8.bat" : "d8").exists()
+        }
 
-        //collect dependencies needed for desugaring
-        def dependencies = (configurations.compileClasspath.asList() + configurations.runtimeClasspath.asList() + [new File(platformRoot, "android.jar")]).collect { "--classpath $it.path" }.join(" ")
+        if(!buildToolsRoot) throw new GradleException("No d8 found in build-tools. Ensure build-tools is installed.")
 
-        // def buildToolsDir = new File("$sdkRoot/build-tools/").listFiles().sort().reverse().find { f -> f.isDirectory() && new File(f, "d8").exists() }  
-        // if (!buildToolsDir) throw new GradleException("No valid build-tools directory found containing 'd8'.")  
-        // def d8Path = new File(buildToolsDir, "d8").absolutePath  
+        def d8 = new File(buildToolsRoot, isWindows ? "d8.bat" : "d8").absolutePath
 
-        // "$d8Path $dependencies --min-api 14 --output ${project.name}Android.jar ${project.name}Desktop.jar"  
-        //     .execute(null, new File("$buildDir/libs")).waitForProcessOutput(System.out, System.err)
+        def dependencies = (configurations.compileClasspath.asList()
+                + configurations.runtimeClasspath.asList()
+                + [new File(platformRoot, "android.jar")]).collect{
+            "--classpath $it.path"
+        }.join(" ")
 
-
-        //dex and desugar files - this requires d8 in your PATH
-        "$sdkRoot/build-tools/35.0.0/d8.bat $dependencies --min-api 14 --output ${project.name}Android.jar ${project.name}Desktop.jar"
+        "$d8 $dependencies --min-api 14 --output ${projectName}Android.jar ${projectName}Desktop.jar"
                 .execute(null, new File("build/libs")).waitForProcessOutput(System.out, System.err)
     }
 }
@@ -58,13 +90,11 @@ tasks.register('jarAndroid') {
 jar{
     archiveFileName = "${project.name}Desktop.jar"
 
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE;
-
     from{
         configurations.runtimeClasspath.collect{ it.isDirectory() ? it : zipTree(it) }
     }
 
-    from(rootDir){
+    from(projectDir){
         include "mod.hjson"
     }
 
@@ -73,17 +103,17 @@ jar{
     }
 }
 
-tasks.register('deploy', Jar) {
+tasks.register('deploy', Jar){
+    def projectName = project.name
     dependsOn jarAndroid
     dependsOn jar
-    archiveFileName = "${project.name}.jar"
+    archiveFileName = "${projectName}.jar"
 
-    from { [zipTree("build/libs/${project.name}Desktop.jar"), zipTree("build/libs/${project.name}Android.jar")] }
+    from{ [zipTree("build/libs/${projectName}Desktop.jar"), zipTree("build/libs/${projectName}Android.jar")] }
 
-    doLast {
-        delete {
-            delete "build/libs/${project.name}Desktop.jar"
-            delete "build/libs/${project.name}Android.jar"
+    doLast{
+        delete{
+            delete "build/libs/${projectName}Android.jar"
         }
     }
 }

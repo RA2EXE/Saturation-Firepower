@@ -454,11 +454,14 @@ public class SFStatusEffects {
                 });
             });
 
-            freezing.init(() -> {
+            /*freezing.init(() -> {
+                affinity(blasted, (unit, result, time) -> {
+                    unit.damagePierce(transitionDamage);
+                });
                 affinity(overFreezing, (unit, result, time) -> {
                     result.set(coldBreak, Math.min(time + result.time, 7*60f));
                 });
-            });
+            });*/
         }};
         chemicalFlame = new StatusEffect("chemical-flame") {{
             outline = false;
