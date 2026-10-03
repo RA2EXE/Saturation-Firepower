@@ -51,18 +51,28 @@ dependencies{
 
 tasks.register('jarAndroid'){
     dependsOn jar
-//口也，注释终于删干净了
-    doLast {
+    def projectName = project.name
 
-        if (!new File("$sdkRoot").exists()) throw new GradleException("No valid Android SDK found. Ensure that ANDROID_HOME is set to your Android SDK directory.");
+    doLast {
+        if (!sdkRoot || !new File("$sdkRoot").exists())
+            throw new GradleException("No valid Android SDK found. Ensure that ANDROID_HOME is set to your Android SDK directory.")
 
         def platformRoot = new File("$sdkRoot/platforms/").listFiles().sort().reverse().find { f -> new File(f, "android.jar").exists() }
 
         if (!platformRoot) throw new GradleException("No android.jar found. Ensure that you have an Android platform installed.")
 
+        def buildToolsRoot = new File("$sdkRoot/build-tools/").listFiles().sort().reverse().find {
+            f -> new File(f, isWindows ? "d8.bat" : "d8").exists()
+        }
+
+        if (!buildToolsRoot)
+            throw new GradleException("No d8 found in build-tools. Ensure that a recent build-tools is installed.")
+
+        def d8 = new File(buildToolsRoot, isWindows ? "d8.bat" : "d8").absolutePath
+
         def dependencies = (configurations.compileClasspath.asList() + configurations.runtimeClasspath.asList() + [new File(platformRoot, "android.jar")]).collect { "--classpath $it.path" }.join(" ")
 
-        "$sdkRoot/build-tools/35.0.0/d8.bat $dependencies --min-api 14 --output ${project.name}Android.jar ${project.name}Desktop.jar"
+        "$d8 $dependencies --min-api 14 --output ${projectName}Android.jar ${projectName}Desktop.jar"
                 .execute(null, new File("build/libs")).waitForProcessOutput(System.out, System.err)
     }
 }
