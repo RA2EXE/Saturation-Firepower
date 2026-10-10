@@ -2251,7 +2251,7 @@ public class SFBlocks {
             craftTime = 200;
             outputItem = new ItemStack(SFItems.leipAlloy, 2);
             consumePower(18);
-            consumeItems(with(SFItems.fermium,3, SFItems.chromium,4));
+            consumeItems(with(SFItems.fermium,2, SFItems.chromium,4));
 
             craftEffect = new RadialEffect() {{
                 amount = 4;
@@ -2280,8 +2280,8 @@ public class SFBlocks {
             hasPower = hasItems = hasLiquids = true;
 
             craftTime = 50;
-            outputItem = new ItemStack(SFItems.leipAlloy, 1);
-            consumePower(2.35f);
+            outputItem = new ItemStack(SFItems.leipAlloy, 3);
+            consumePower(200/ 60f);
             consumeItems(with(SFItems.fermium,1, SFItems.waveSteel,1));
             consumeLiquid(SFLiquids.blastReagent, 0.1f);
 
@@ -3024,7 +3024,7 @@ public class SFBlocks {
             itemCapacity = 30;
             hasLiquids = true;
             liquidCapacity = 600;
-            requirements(Category.power, with(Items.lead,250, Items.plastanium,130, Items.surgeAlloy,50, SFItems.crystalGallium,170));
+            requirements(Category.production, with(Items.lead,250, Items.plastanium,130, Items.surgeAlloy,50, SFItems.crystalGallium,170));
 
             powerProduction = 5f;
             extraPower = 10 / 3f;
@@ -6339,6 +6339,9 @@ public class SFBlocks {
                                 lightningLengthRand = 4;
                                 lightningDamage = 7;
                                 lightningType = new BulletType(0.0001f, 0f){{
+                                    armorMultiplier = 1.2f;
+                                    blockArmorMultiplier = 2f;
+                                    buildingDamageMultiplier = 0.3f;
                                     lifetime = Fx.lightning.lifetime;
                                     hitEffect = Fx.hitLancer;
                                     despawnEffect = Fx.none;
@@ -6429,6 +6432,9 @@ public class SFBlocks {
                                 lightningLengthRand = 4;
                                 lightningDamage = 7;
                                 lightningType = new BulletType(0.0001f, 0f){{
+                                    armorMultiplier = 1.2f;
+                                    blockArmorMultiplier = 2f;
+                                    buildingDamageMultiplier = 0.3f;
                                     lifetime = Fx.lightning.lifetime;
                                     hitEffect = Fx.hitLancer;
                                     despawnEffect = Fx.none;
@@ -6512,6 +6518,18 @@ public class SFBlocks {
                                 lightningLength = 7;
                                 lightningLengthRand = 4;
                                 lightningDamage = 46;
+                                lightningType = new BulletType(0.0001f, 0f){{
+                                    armorMultiplier = 1.2f;
+                                    blockArmorMultiplier = 2f;
+                                    buildingDamageMultiplier = 0.3f;
+                                    lifetime = Fx.lightning.lifetime;
+                                    hitEffect = Fx.hitLancer;
+                                    despawnEffect = Fx.none;
+                                    status = StatusEffects.shocked;
+                                    statusDuration = 60f;
+                                    hittable = false;
+                                    lightColor = Color.white;
+                                }};
 
                                 hitEffect = despawnEffect = Fx.none;
                                 hitSound = Sounds.shootArc;

@@ -4,16 +4,15 @@ import arc.struct.*;
 import mindustry.content.*;
 import mindustry.ctype.UnlockableContent;
 import mindustry.game.Objectives.*;
-import mindustry.type.Item;
 import mindustry.type.ItemStack;
 
-import static mindustry.Vars.content;
 import static mindustry.content.Blocks.*;
 import static mindustry.content.SectorPresets.*;
 import static mindustry.content.TechTree.*;
 import static mindustry.content.UnitTypes.*;
 
 import static SFire.content.SFBlocks.*;
+import static SFire.content.SFspaceBlock.*;
 import static SFire.content.SFSectorPresets.*;
 import static SFire.content.SFUnitTypes.*;
 
@@ -189,6 +188,13 @@ public class SFTechTree {
         addToNode(forceProjector, () -> node(ironCurtain, () -> node(ironDome)));
 
         //transport + liquid
+        addToNode(titaniumConveyor,() ->
+                node(tiDuct, () -> node(tiRouter, () -> node(tiUnloader, () ->
+                        node(spBridge, () -> node(spBridgeLong))))));
+        addToNode(conduit,() ->
+                node(tiConduit, () -> node(tiLiquidJunction, () -> node(tiLiquidRouter, () ->
+                        node(spLquidBridge, () -> node(spLquidBridgeLong))))));
+
         addToNode(titaniumConveyor, () -> node(waveConveyor, () -> {
             node(waveJunction);
             node(waveBridge);
