@@ -339,7 +339,7 @@ public class SFBlocks {
             clipSize = 128f;
             shadowAlpha = 0.5f;
             shadowOffset = -2.5f;
-            rotationRand = 30f;
+            rotationRand = 20f;
         }};
         crystalBlueCluster = new TallBlock("crystal-blue-cluster"){{
             variants = 2;
@@ -471,32 +471,37 @@ public class SFBlocks {
         crystalRed = new Floor("crystal-red"){{
             dragMultiplier = 0.98f;
             emitLight = true;
-            lightColor = Color.red.cpy().a(0.2f);
+            lightColor = Color.red.cpy().a(0.3f);
             lightRadius = 10f;
+            decoration = crystalRedCluster;
         }};
         crystalOrange = new Floor("crystal-orange"){{
             dragMultiplier = 0.98f;
             emitLight = true;
-            lightColor = Color.orange.cpy().a(0.2f);
+            lightColor = Color.orange.cpy().a(0.3f);
             lightRadius = 10f;
+            decoration = crystalOrangeCluster;
         }};
         crystalGreen = new Floor("crystal-green"){{
             dragMultiplier = 0.98f;
             emitLight = true;
-            lightColor = Color.green.cpy().a(0.2f);
+            lightColor = Color.green.cpy().a(0.3f);
             lightRadius = 10f;
+            decoration = crystalGreenCluster;
         }};
         crystalBlue = new Floor("crystal-blue"){{
             dragMultiplier = 0.98f;
             emitLight = true;
-            lightColor = Color.blue.cpy().a(0.2f);
+            lightColor = Color.blue.cpy().a(0.3f);
             lightRadius = 10f;
+            decoration = crystalBlueCluster;
         }};
         crystalPurple = new Floor("crystal-purple"){{
             dragMultiplier = 0.98f;
             emitLight = true;
-            lightColor = Color.purple.cpy().a(0.2f);
+            lightColor = Color.purple.cpy().a(0.3f);
             lightRadius = 10f;
+            decoration = crystalPurpleCluster;
         }};
         obsidian = new Floor("obsidian");
         radiquartzFloor = new Floor("radiquartz-floor", 4) {{
