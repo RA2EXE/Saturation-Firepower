@@ -320,36 +320,40 @@ public class SFBlocks {
         pyriterockStone = new Prop("pyriterock-stone") {{
             variants = 2;
         }};
-        /*crystalRedCluster = new TallBlock("crystal-red-cluster"){{
-            variants = 3;
+        crystalRedCluster = new TallBlock("crystal-red-cluster"){{
+            variants = 2;
             clipSize = 128f;
             shadowAlpha = 0.5f;
-            shadowOffset = -2.5f;贴图有点小多我草，后面补完了一起发
+            shadowOffset = -2.5f;
+            rotationRand = 60f;
         }};
         crystalOrangeCluster = new TallBlock("crystal-orange-cluster"){{
-            variants = 3;
+            variants = 2;
             clipSize = 128f;
             shadowAlpha = 0.5f;
             shadowOffset = -2.5f;
+            rotationRand = 45f;
         }};
         crystalGreenCluster = new TallBlock("crystal-green-cluster"){{
-            variants = 3;
+            variants = 2;
             clipSize = 128f;
             shadowAlpha = 0.5f;
             shadowOffset = -2.5f;
+            rotationRand = 30f;
         }};
         crystalBlueCluster = new TallBlock("crystal-blue-cluster"){{
-            variants = 3;
+            variants = 2;
             clipSize = 128f;
             shadowAlpha = 0.5f;
             shadowOffset = -2.5f;
         }};
         crystalPurpleCluster = new TallBlock("crystal-purple-cluster"){{
-            variants = 3;
+            variants = 0;
             clipSize = 128f;
             shadowAlpha = 0.5f;
             shadowOffset = -2.5f;
-        }};*/
+            rotationRand = 45f;
+        }};
         radiquartzStone = new TallBlock("radiquartz-stone") {{
             variants = 2;
             clipSize = 120f;
@@ -1934,7 +1938,7 @@ public class SFBlocks {
             health = 660;
             requirements(Category.crafting, with(Items.thorium, 70, Items.plastanium, 80, SFItems.waveSteel, 50));
             hasPower = hasItems = hasLiquids = true;
-            itemCapacity = 20;
+            itemCapacity = 30;
             liquidCapacity = 60;
 
             craftTime = 60;
@@ -2244,14 +2248,14 @@ public class SFBlocks {
         }};
         leippiumSmelter = new GenericCrafter("leippium-smelter") {{
             size = 3;
-            requirements(Category.crafting, with(SFItems.chromium, 80, SFItems.discFabric, 120, Items.silicon, 80));
+            requirements(Category.crafting, with(Items.lead,100, Items.silicon,80, SFItems.chromium,80, SFItems.discFabric,70));
             hasPower = hasItems = true;
             itemCapacity = 20;
 
             craftTime = 200;
             outputItem = new ItemStack(SFItems.leipAlloy, 2);
-            consumePower(18);
-            consumeItems(with(SFItems.fermium,2, SFItems.chromium,4));
+            consumePower(460/ 60f);
+            consumeItems(with(SFItems.fermium,2, SFItems.chromium,3));
 
             craftEffect = new RadialEffect() {{
                 amount = 4;
@@ -2275,15 +2279,15 @@ public class SFBlocks {
             }});
         }};
         leippiumCrucible = new GenericCrafter("leippium-crucible") {{
-            size = 3;
-            requirements(Category.crafting, with(SFItems.crystalGallium,70, SFItems.chromium,50, SFItems.discFabric, 30, SFItems.waveSteel, 130));
+            size = 4;
+            requirements(Category.crafting, with(SFItems.waveSteel,170, SFItems.nanoCore,70, SFItems.tayrAlloy,50));
             hasPower = hasItems = hasLiquids = true;
 
             craftTime = 50;
             outputItem = new ItemStack(SFItems.leipAlloy, 3);
             consumePower(200/ 60f);
-            consumeItems(with(SFItems.fermium,1, SFItems.waveSteel,1));
-            consumeLiquid(SFLiquids.blastReagent, 0.1f);
+            consumeItems(with(SFItems.fermium,2, SFItems.waveSteel,1));
+            consumeLiquid(SFLiquids.blastReagent, 0.2f);
 
             craftEffect = new MultiEffect(
                     new ParticleEffect() {{
@@ -2319,8 +2323,6 @@ public class SFBlocks {
                         colorTo = Color.valueOf("737373A8");
                     }}
             );
-            ambientSound = Sounds.loopSmelter;
-            ambientSoundVolume = 0.3f;
             drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(SFLiquids.blastReagent), new DrawDefault());
         }};
         memoryLocator = new GenericCrafter("memory-locator"){{
@@ -3024,7 +3026,7 @@ public class SFBlocks {
             itemCapacity = 30;
             hasLiquids = true;
             liquidCapacity = 600;
-            requirements(Category.production, with(Items.lead,250, Items.plastanium,130, Items.surgeAlloy,50, SFItems.crystalGallium,170));
+            requirements(Category.power, with(Items.lead,250, Items.plastanium,130, Items.surgeAlloy,50, SFItems.crystalGallium,170));
 
             powerProduction = 5f;
             extraPower = 10 / 3f;
