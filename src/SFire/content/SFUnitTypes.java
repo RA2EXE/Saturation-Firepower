@@ -110,12 +110,15 @@ public class SFUnitTypes {
     ship21, ship22, ship23,
     ship31, ship32, ship33,
     ship41, ship42, ship43,
+    geoHammer,
     //special force + flagship*/
     farmer, carrier, flamer, thunder, banisher, hammer, tau, omega, terrascape,
     //campaign only
     utv, utvA, utvC, utvD, utvM,
     //drones
     assemblerDrone, assemblerDrone2, armedDrone;
+
+
 
     public static void loadUnit() {
         flareX = new UnitType("flareX") {{
@@ -7336,6 +7339,222 @@ public class SFUnitTypes {
                     copyMirror(spacePoint,-68/4f,-96/4f)
             );
         }};*/
+
+        geoHammer = new UnitType("geological-hammer"){{
+            constructor = UnitTypes.stell.constructor;
+            outlineColor = SFColor.darkOutline;
+            hovering = true;
+            canDrown = false;
+            flying = false;
+            squareShape = true;
+            omniMovement = false;
+            rotateMoveFirst = false;
+
+            rotateSpeed = 0.5f;
+            speed = 0.6f;
+            drag = 0.07f;
+            accel = 0.08f;
+            hitSize = 90;
+            faceTarget = false;
+            treadRects = new Rect[]{new Rect(-264, -368, 124, 736)};
+            treadFrames = 8;
+
+            health = 76000f;
+            armor = 12;
+            weapons.add(new Weapon(name("geological-hammer-weapon")){{
+                rotate = true;
+                rotateSpeed = 0.35f;
+                reload = 160+80;
+                shootCone = 60;
+                recoil = 0;
+                x = 0;
+                y = 0;
+                mirror = false;
+                layerOffset = 0.01f;
+                shootSound = Sounds.shootMissileLarge;
+                maxShootVelocity = 0;
+                //y-162,x130
+                shootWarmupSpeed = 1/60f;
+                linearWarmup = true;
+                minWarmup = 0.95f;
+                for (int i=0; i<3; i++){
+                    int fi = i;//012
+                    parts.add(new RegionPart("-missile"){{
+                        x = 130/4f * (fi <= 1 ? fi : -1);
+                        y = -162/4f;
+                        recoilIndex = fi;
+                        progress = PartProgress.reload.curve(Interp.pow2In);
+                        colorTo = new Color(1f, 1f, 1f, 0f);
+                        color = Color.white;
+                        mixColorTo = SFColor.tayrDark;
+                        mixColor = new Color(1f, 1f, 1f, 0f);
+
+                        outlineColor = SFColor.darkOutline;
+                        under = true;
+                        layerOffset = -0.001f;
+                        moves.add(
+                                new PartMove(PartProgress.warmup.curve(Interp.pow5Out), 0f, 310/4f, 0f),
+                                new PartMove(PartProgress.recoil.curve(Interp.pow2In), 0, -310/4f, 0)
+                        );
+                    }});
+                }
+                recoils = 3;
+                shootY = 240/4f;
+                shoot = new ShootBarrel(){{
+                    firstShotDelay = 40f;
+                    barrels = new float[]{
+                            0,0,0,
+                            130/4f,0,0,
+                            -130/4f,0,0
+                    };
+                    shots = 3;
+                    shotDelay = 40;
+                }};
+                bullet = new BulletType() {{
+                    keepVelocity = false;
+                    collidesAir = true;
+                    hitShake = 18;
+                    speed = 0;
+                    hitColor = SFColor.tayrDark;
+                    smokeEffect = Fx.shootSmokeMissileColor;
+                    shootEffect = new Effect(20f, 200f, e -> {
+                        for(int i = 0; i < 2; i++){
+                            color(i == 0 ? SFColor.tayrDark : SFColor.tayrLight);
+                            float m = i == 0 ? 1f : 0.5f;
+
+                            for(int j = 0; j < 5; j++){
+                                float rot = e.rotation + Mathf.randomSeedRange(e.id + j, 50f);
+                                float w = 23f * e.fout() * m;
+                                Drawf.tri(e.x, e.y, w, (80f + Mathf.randomSeedRange(e.id + j, 40f)) * m, rot);
+                                Drawf.tri(e.x, e.y, w, 20f * m, rot + 180f);
+                            }
+                        }
+                    });
+
+                    spawnUnit = new MissileUnitType("geological-hammer-missile") {{
+                        outlineColor = SFColor.darkOutline;
+                        missileAccelTime = 100;
+                        homingDelay = 120 +60;
+                        speed = 7f;
+                        lifetime = 1200;
+                        rotateSpeed = 1.2f;
+
+                        hitSize = 26;
+                        health = 2000;
+
+                        targetAir = true;
+                        collidesAir = true;
+                        drawCell = true;
+                        deathSound = SFSounds.explosionbig;
+                        engineColor = trailColor = SFColor.tayrDark;
+                        trailLength = 50;
+                        engineLayer = 110;
+                        engineOffset = 24;
+                        engineSize = 6;
+                        abilities.add(new MoveEffectAbility() {{
+                            rotateEffect = true;
+                            minVelocity = 3f;
+                            interval = 10;
+                            y = -9;
+                            effect = new Effect(15, e -> {
+                                color(SFColor.tayrDark);
+                                for (int s : new int[]{1, -1}) {
+                                    Drawf.tri(e.x, e.y, 20f * e.fout(Interp.slope), 80f * e.fout(Interp.slope), e.rotation + s * 135);
+                                }
+                            });
+                        }});
+                        abilities.add(new MoveEffectAbility() {{
+                            rotateEffect = true;
+                            minVelocity = 3f;
+                            interval = 10;
+                            y = -9;
+                            effect = Fx.missileTrailSmoke;
+                            color = SFColor.tayrDark;
+                        }});
+                        maxRange = 45;
+                        weapons.add(new Weapon() {{
+                            reload = 60;
+                            x = 0;
+                            mirror = false;
+                            rotate = true;
+                            shake = 10;
+                            shootSound = Sounds.none;
+                            shootOnDeath = true;
+                            shootCone = 360;
+                            bullet = new BulletType(0, 180) {{
+                                killShooter = true;
+                                instantDisappear = true;
+                                splashDamageRadius = 120;
+                                splashDamage = 12000;
+
+                                status = SFStatusEffects.skewed;
+                                statusDuration = 300;
+
+                                hitSound = Sounds.explosionTitan;
+                                hitSoundVolume = 8;
+                                hitShake = 15;
+
+                                shootEffect = new WrapEffect(Fx.scatheExplosion, SFColor.tayrLight);
+                                smokeEffect = despawnEffect = Fx.none;
+                                hitEffect = new MultiEffect(
+                                        new ParticleEffect() {{
+                                            particles = 9;
+                                            length = 100;
+                                            interp = Interp.pow10Out;
+                                            sizeFrom = 12;
+                                            sizeInterp = Interp.pow10In;
+                                            lifetime = 120f;
+                                            colorFrom = SFColor.tayrDark.cpy().a(0.5f);
+                                            colorTo = SFColor.tayrDark;
+                                        }},
+                                        new ParticleEffect() {{
+                                            particles = 21;
+                                            length = 88;
+                                            baseLength = 20;
+                                            interp = Interp.pow10Out;
+                                            sizeFrom = 18;
+                                            sizeInterp = Interp.pow5In;
+                                            lifetime = 160f;
+                                            layer = 120;
+                                            colorFrom = SFColor.tayrDark.cpy().a(0.5f);
+                                            colorTo = SFColor.smoke.cpy().a(0.3f);
+                                        }},
+                                        new ParticleEffect() {{
+                                            particles = 21;
+                                            length = 83;
+                                            baseLength = 20;
+                                            interp = Interp.pow10Out;
+                                            line = true;
+                                            lenFrom = 66;
+                                            strokeFrom = 7;
+                                            strokeTo = 5;
+                                            sizeInterp = Interp.pow5In;
+                                            lifetime = 60;
+                                            colorFrom = SFColor.tayrDark.cpy().a(0.55f);
+                                            colorTo = SFColor.tayrDark;
+                                        }},
+                                        new WaveEffect(){{
+                                            lifetime = 40;
+                                            sizeTo = 140;
+                                            interp = Interp.circleOut;
+                                            strokeFrom = 16;
+                                            colorFrom = SFColor.tayrDark;
+                                            colorTo = SFColor.tayrLight;
+                                        }},
+                                        new WaveEffect(){{
+                                            lifetime = 11;
+                                            sizeTo = 160;
+                                            strokeFrom = 36;
+                                            colorFrom = SFColor.tayrDark.cpy().a(0.8f);
+                                            colorTo = SFColor.tayrLight.cpy().a(0);
+                                        }}
+                                );
+                            }};
+                        }});
+                    }};
+                }};
+            }});
+        }};
 
 
         farmer = new UnitType("farmer") {{
