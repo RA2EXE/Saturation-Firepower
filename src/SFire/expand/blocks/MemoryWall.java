@@ -5,6 +5,7 @@ import SFire.content.SFItems;
 import arc.Core;
 import arc.math.Mathf;
 import arc.util.*;
+import mindustry.entities.Damage;
 import mindustry.gen.*;
 import mindustry.graphics.*;
 import mindustry.ui.Bar;
@@ -53,15 +54,16 @@ public class MemoryWall extends Wall {
                 () -> e.charge>0? (regenDelay - e.charge) / regenDelay : 1
         ));
         addBar("armor", (MemoryWallBuild e) -> new Bar(
-                () -> Core.bundle.format("bar.armorup", Strings.fixed(armor,0)),
+                () -> Core.bundle.format("bar.armorup", Strings.fixed(e.memArm,0)),
                 () -> SFItems.memoryAlloy.color,
                 //() -> (armor-e.basicArmor) / (maxArmor - e.basicArmor)
-                () -> armor / maxArmor
+                () -> e.memArm / maxArmor
         ));
     }
 
     public class MemoryWallBuild extends WallBuild {
         public float charge = 0f;
+        public float memArm = 0;//饿啊臭猫的伤害计算是走的建筑type而不是单独建筑，难怪全图都会涨护甲
         public float basicArmor = armor;
 
         @Override
@@ -69,13 +71,13 @@ public class MemoryWall extends Wall {
             super.updateTile();
 
             //护甲也回溯
-            if ((armor > basicArmor || health() < maxHealth()) && !wasRecentlyDamaged()) {
+            if ((memArm != basicArmor || health() < maxHealth()) && !wasRecentlyDamaged()) {
                 charge += Time.delta;
 
                 if(charge >= regenDelay){
                     //直接回溯满血有点暴力了，还是换成量吧
                     heal((this.maxHealth * regenPercent / 100f + regenAmount) * Time.delta);
-                    armor = 0;
+                    memArm = 0;
                 }
             } else {
                 charge = 0;
@@ -89,15 +91,15 @@ public class MemoryWall extends Wall {
 
             if (hitArmorUp > 0f) {
                 if (maxArmor > 0f) {
-                    armor = Math.min(maxArmor, armor + hitArmorUp);
+                    memArm = Math.min(maxArmor, memArm + hitArmorUp);
                 } else {
-                    armor += hitArmorUp;
+                    memArm += hitArmorUp;
                 }
             } else if (hitArmorUp < 0f) {
                 if (maxArmor >= 0f) {
-                    armor = Math.max(maxArmor, armor + hitArmorUp);
+                    memArm = Math.max(maxArmor, memArm + hitArmorUp);
                 } else {
-                    armor += hitArmorUp;
+                    memArm += hitArmorUp;
                 }
             }
             return true;
@@ -125,6 +127,14 @@ public class MemoryWall extends Wall {
                     armor = Mathf.lerpDelta(armor, maxArmor, hitArmorUp);
                 }
             }*/
+        }
+
+        @Override
+        public float handleDamage(float amount){
+            if(memArm > 0f){
+                amount = Damage.applyArmor(amount, memArm + armor);
+            }
+            return amount;
         }
     }
 }
