@@ -125,7 +125,7 @@ public class SFBlocks {
     kuodao, mini, woliu, tieliu, dianji, changqiang, longjuan, manyou, chuanyun, cijian, chuifa,
     fangtian, leizhenyu, qingning, chongchao,
     relang, sizhao, dianmai, liemei, cuowei,
-    dingdaer, guangyin, cimai, fengmang,
+    dingdaer, guangyin, cimai, fengmang,dingdaerX,
     yuanling, kuosan, poxiao, fenqing, zhulin, luolong,
 
     finalWeapon1, finalWeapon2,
@@ -7908,7 +7908,7 @@ public class SFBlocks {
             );
         }};
     //6*6//
-        dingdaer = new PowerTurret("dingdaer") {{
+        dingdaer = new AccelTurret("dingdaer") {{
             size = 6;
             health = 4000;
             recoil = 3;
@@ -7924,7 +7924,7 @@ public class SFBlocks {
                         -13.25f, -2.5f, 0,
                         13.25f,-2.5f,0
                 };
-                shots = 8;
+                shots = 2;
                 shotDelay = 5;
             }};
             drawer = new DrawTurret(){{parts.add(
@@ -7945,8 +7945,12 @@ public class SFBlocks {
             warmupMaintainTime = 50;
             requirements(Category.turret, with(SFItems.rubidium,1100, Items.plastanium,600, SFItems.siliSteel,560, SFItems.tayrAlloy,750, SFItems.discFabric,850, SFItems.lens,500));
 
+            accelMount = 1/3f;
+            maxBoost = 5f;
+            downMount = 1.2f;
+
             reload = 20;
-            rotateSpeed = 3.6f;
+            rotateSpeed = 4f;
             range = 500;
             coolantMultiplier = 0.75f;
             consumePower(50f);
@@ -7955,7 +7959,7 @@ public class SFBlocks {
             targetGround = false;
             shootType = new RailBulletType() {{
                 hittable = false;
-                damage = 115;
+                damage = 160;
                 pierceArmor = true;
                 length = 500 - 24;
                 ammoMultiplier = 1;
@@ -7964,7 +7968,7 @@ public class SFBlocks {
 
                 status = SFStatusEffects.breakdown;
                 statusDuration = 60f;
-                statusChance = 0.2f;
+                statusChance = 0.05f;
 
                 hitColor = SFColor.energyYellow;
                 shootEffect = Fx.shootBigColor;
@@ -10434,7 +10438,7 @@ public class SFBlocks {
                 colors = new Color[]{Pal.accent.cpy().a(.5f), Pal.accent.cpy().mul(1.2f), Color.white};
             }};
         }};
-        defensePlatform5 = new PowerTurret("defense-platform-missile"){{
+        defensePlatform5 = new AccelTurret("defense-platform-missile"){{
             size = 6;
             health = 50000;
             armor = 16;
@@ -10466,8 +10470,8 @@ public class SFBlocks {
             recoilTime = 40;
             recoil = 0;
             shoot = new ShootBarrel(){{
-                shots = 6;
-                shotDelay = 5;
+                //shots = 6;
+                //shotDelay = 5;
                 barrels = new float[]{
                         -35/4f, 93/4f, 0,
                         35/4f, 93/4f, 0,
@@ -10475,12 +10479,16 @@ public class SFBlocks {
                         68/4f, 82/4f, 0,
                 };
             }};
+            reload = 100;
+            accelMount = 0.3f;
+            maxBoost = 10f;
+            linerAccel = false;
+
             shootY = 0;
             shootSound = Sounds.shootMissileLong;
             shootCone = 35;
             shake = 4;
             rotateSpeed = 3;
-            reload = 110 + 30;
             range = 800;
             inaccuracy = 5;
             xRand = 2;
@@ -10536,6 +10544,7 @@ public class SFBlocks {
                 trailLength = 16;
                 trailWidth = 2;
                 trailChance = 0.2f;
+                trailRotation = true;
                 trailEffect = new Effect(35f, e -> {
                     color(SFColor.energyYellow, Color.lightGray, e.fin(Interp.pow2Out));
                     alpha(e.fout(Interp.pow3Out));
