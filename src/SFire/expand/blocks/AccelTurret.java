@@ -56,7 +56,7 @@ public class AccelTurret extends PowerTurret {
         protected void updateBoost(){
             float seconds = delta() / 60f;
 
-            if(isShooting){
+            if(isShooting && efficiency != 0){
                 if(linerAccel){//线加速感觉跟现有方案差不多？？？留着吧
                     boost = Mathf.clamp(boost + accelMount * seconds, 1f, maxBoost);
                 }else{//复利加速，麻麻滴高中数学还在追我/好像这个比线性有实战价值啊我草/专注轻机枪，还是这个爽

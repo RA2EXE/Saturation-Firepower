@@ -109,7 +109,7 @@ public class SFBlocks {
     //power
     armorBattery, armorNode, discNodeTower,
     coalPyrolyzer, gasSmoker, gasTurbine, eleCollector, heatGenerator, radiGenerator, fermReactor, fissionReactor, arcFissionReactor,
-    // hypermagneticReactor,
+    arcFR,// hypermagneticReactor,
 
     //production
     energyDrill, heavyDrill, blastWell, quantumOreExtractor,
@@ -2867,7 +2867,7 @@ public class SFBlocks {
             size = 4;
             health = 4400;
             armor = 16;
-            requirements(Category.power, with(Items.silicon,360, Items.plastanium,160, SFItems.chromium,100, SFItems.tayrAlloy,160, SFItems.discFabric,110));
+            requirements(Category.power, with(Items.silicon,160, Items.plastanium,160, SFItems.chromium,100, SFItems.tayrAlloy,60, SFItems.discFabric,55));
             consumePowerBuffered(625000f);
             drawer = new DrawMulti(new DrawDefault(),
                     new DrawPower() {{
@@ -3372,7 +3372,21 @@ public class SFBlocks {
                         suffix = "-liquid";
                     }}
             );
-        }};
+        }};/*红温了兄弟，发电，存储，消耗，总有一个不能用，以后再修
+        arcFR = new ArcFissionReactor("arc-fiss"){{
+            size = 10;
+            armor = 18;
+            health = 33000;
+            requirements(Category.power, with(SFItems.waveSteel,2000, Items.metaglass,1100, Items.plastanium,800, SFItems.nanoCore,1200, SFItems.discFabric,1000));
+            itemCapacity = 20;
+            liquidCapacity = 1000;
+
+            consumeLiquid(SFLiquids.nanoFluid, 2.7f);
+
+            setItemMul(Items.thorium,0.75f);
+            setItemMul(SFItems.fermium,1);
+            setItemMul(SFItems.discFabric, 1.25f);
+        }};*/
         //hypermagneticReactor = new ConsumeGenerator("hypermagnetic-reactor") {{}};
         //endregion
         //region drill
@@ -10351,7 +10365,7 @@ public class SFBlocks {
                 }};
             }};
         }};
-        defensePlatform4 = new PowerTurret("defense-platform-laser"){{
+        defensePlatform4 = new AccelTurret("defense-platform-laser"){{
             size = 6;
             health = 50000;
             armor = 16;
@@ -10413,6 +10427,9 @@ public class SFBlocks {
             shake = 6;
             rotateSpeed = 3.8f;
             reload = 88;
+            accelMount = 0.3f;
+            maxBoost = 5f;
+            linerAccel = false;
             range = 450;
             targetAir = false;
             shootType = new LaserBulletType(500) {{
