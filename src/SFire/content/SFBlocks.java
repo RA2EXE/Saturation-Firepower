@@ -2328,7 +2328,7 @@ public class SFBlocks {
                         colorTo = Color.valueOf("737373A8");
                     }}
             );
-            drawer = new DrawMulti(new DrawRegion("-bottom"), new DrawLiquidTile(SFLiquids.blastReagent), new DrawDefault());
+            drawer = new DrawMulti(new DrawDefault(),new DrawLiquidRegion(SFLiquids.blastReagent));
         }};
         memoryLocator = new GenericCrafter("memory-locator"){{
             size = 3;
@@ -7927,8 +7927,9 @@ public class SFBlocks {
             health = 4000;
             recoil = 3;
             cooldownTime = 90;
-            shootSound = SFSounds.lancer;
-            soundPitchMax = soundPitchMin = 5f;
+            shootSound = SFSounds.shootDingdaer;
+            shootSoundVolume = 0.5f;//有点吵
+            //soundPitchMax = soundPitchMin = 1f;
             shake = 0.5f;
             inaccuracy = 2;
             shoot = new ShootBarrel(){{
@@ -8740,7 +8741,7 @@ public class SFBlocks {
             requirements(Category.turret, with(Items.copper,4500, Items.plastanium,1800, SFItems.waveSteel,2200, SFItems.fermium,1300, SFItems.tayrAlloy,1450, SFItems.discFabric,1200));
 
             reload = 880;
-            rotateSpeed = 1.7f;
+            rotateSpeed = 2f;
             range = 800;
             coolantMultiplier = 1/3.5f;
             coolant = consumeCoolant(3.5f);

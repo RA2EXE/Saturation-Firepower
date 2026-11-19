@@ -7118,13 +7118,13 @@ public class SFUnitTypes {
                     }}
             );
         }};
+
         /*
         Weapon spaceCan1 = new Weapon(name("space-cannon")){{
             reload = 20;
             rotate = true;
             rotateSpeed = 6;
             mirror = false;
-
 
             shootY = 2;
             bullet = new BasicBulletType(8, 100){{
@@ -7142,6 +7142,7 @@ public class SFUnitTypes {
             rotate = true;
             rotateSpeed = 7;
             mirror = false;
+            layerOffset = 0.0001f;
 
             shootY = 53/4f;
             shootSound = Sounds.shootLocus;
@@ -7156,7 +7157,7 @@ public class SFUnitTypes {
             }};
             parts.add(new RegionPart("-barrel"){{
                 x = y = 0;
-                moveY = 4;
+                moveY = -4;
                 under = true;
                 progress = PartProgress.recoil;
             }});
@@ -7224,6 +7225,7 @@ public class SFUnitTypes {
             engineSize = 5.5f;
             setEnginesMirror(
             new UnitEngine(54/4f, -96/4f-2, 2f, -90f));
+            weapons.add(copyRotate(spaceCan1,0,-6,0));
         }};
 
         ship12 = new UnitType("bifurca"){{
@@ -7339,6 +7341,7 @@ public class SFUnitTypes {
                     copyMirror(spacePoint,-68/4f,-96/4f)
             );
         }};*/
+
 
         geoHammer = new UnitType("geological-hammer"){{
             constructor = UnitTypes.stell.constructor;

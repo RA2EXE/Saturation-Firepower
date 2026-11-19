@@ -22,7 +22,11 @@ public class SFSectorPresets {
         crackHills = new SectorPreset("crackHills", tiberia, 2){{
             difficulty = 1;
             addStartingItems = true;
-        }}
+        }};
+        craterBay = new SectorPreset("craterBay", tiberia, 3){{
+            difficulty = 1;
+            addStartingItems = true;
+        }};
          */
         /*centerCore = new SectorPreset("centerCore", tiberia, 125){{
             difficulty = 2;

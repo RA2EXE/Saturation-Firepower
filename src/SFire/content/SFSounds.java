@@ -11,7 +11,7 @@ import java.lang.reflect.Field;
 
 public class SFSounds {
         public static Sound
-        flying, hugeExplosion, missileX, lancer, shortLaser,
+        flying, hugeExplosion, missileX, lancer, shortLaser, shootDingdaer,
 
     boom, explosionbig, release, laser
 
