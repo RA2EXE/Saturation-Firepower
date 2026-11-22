@@ -7119,7 +7119,7 @@ public class SFUnitTypes {
             );
         }};
 
-        /*
+
         Weapon spaceCan1 = new Weapon(name("space-cannon")){{
             reload = 20;
             rotate = true;
@@ -7234,11 +7234,11 @@ public class SFUnitTypes {
             flying = true;
             lowAltitude = true;
             faceTarget = false;
-            speed = 2;
+            speed = 1;
             drag = 0.04f;
             accel = 0.05f;
-            rotateSpeed = 5;
-            hitSize = 30;
+            rotateSpeed = 2;
+            hitSize = 48;
             health = 1500;
             armor = 14;
             lightRadius = 60;
@@ -7260,11 +7260,11 @@ public class SFUnitTypes {
             flying = true;
             lowAltitude = true;
             faceTarget = false;
-            speed = 2;
+            speed = 0.5f;
             drag = 0.04f;
             accel = 0.05f;
-            rotateSpeed = 5;
-            hitSize = 30;
+            rotateSpeed = 1;
+            hitSize = 55;
             health = 1500;
             armor = 14;
             lightRadius = 60;
@@ -7340,7 +7340,7 @@ public class SFUnitTypes {
                     copyMirror(spacePoint,54/4f,98/4f),
                     copyMirror(spacePoint,-68/4f,-96/4f)
             );
-        }};*/
+        }};
 
 
         geoHammer = new UnitType("geological-hammer"){{

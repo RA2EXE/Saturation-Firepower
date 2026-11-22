@@ -3,22 +3,33 @@ package SFire.content;
 import SFire.expand.blocks.*;
 import arc.graphics.Color;
 import mindustry.content.*;
+import mindustry.gen.Sounds;
 import mindustry.type.*;
 import mindustry.world.Block;
 import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.liquid.*;
+import mindustry.world.blocks.power.ConsumeGenerator;
+import mindustry.world.consumers.ConsumeLiquidFlammable;
+import mindustry.world.draw.*;
 
 import static mindustry.type.ItemStack.with;
 
 public class SFspaceBlock {
     public static Block
+    //storage两个核心+两种容器
+    //transport
     tiDuct, tiRouter, tiUnloader,
     spBridge, spBridgeLong,
     tiConduit, tiLiquidRouter, tiLiquidJunction,
     spLquidBridge, spLquidBridgeLong,
-    //production
-
-
+    //drill大小离子钻、万向离子钻、墙钻
+    //crafter
+    vacuumFurnace, irradiatedRefiner, arcSynthesizer, phasesConverter,
+    electrolyzer, gravityAssembler, ionPlanter, spectrumWaver,
+    //power？不考虑？或者用dp做修改
+    oxiGenerator, chemGenerator, solarArray,
+    //turret
+    //defense
 
     //unit
     spaceFactory, spaceUpgrate, spaceUpgratePro
@@ -26,6 +37,7 @@ public class SFspaceBlock {
     ;
 
     public static void load(){
+        //region transport
         tiDuct = new Duct("space-duct"){{
             health = 250;
             requirements(Category.distribution, with(Items.titanium, 1));
@@ -133,6 +145,51 @@ public class SFspaceBlock {
             fadeIn = moveArrows = false;
             //((Conduit) tiConduit).bridgeReplacement = this;
         }};
+        //endregion
+        //region power
+        oxiGenerator = new ConsumeGenerator("oixden-generator"){{
+            health = 500;
+            size = 2;
+            requirements(Category.power, with(Items.lead,20, SFItems.rubidium,25));
+
+            powerProduction = 3;
+            consumeLiquid(SFLiquids.mixGas,0.2f);
+            drawer = new DrawMulti(new DrawDefault(), new DrawWarmupRegion());
+        }};
+        chemGenerator = new GasTurbineGenerator("chemcal-generator"){{
+            size = 3;
+            health = 1500;
+            hasLiquids = true;
+            liquidCapacity = 20;
+            hasItems = false;
+            canOverdrive = false;
+            requirements(Category.power, with(SFItems.rubidium,60, SFItems.crystalGallium,80, SFItems.waveSteel,35));
+
+            powerProduction = 10f;
+            extraPower = 1.75f;
+            warmupSpeed = 0.002f;
+            powerUpSpeed = 0.005f;
+            consumeLiquid(Liquids.ozone,0.1f);
+            consume(new ConsumeLiquidFlammable(0.3f){{minFlammability=1f;}});
+
+            drawer = new DrawMulti(
+                    new DrawRegion("-bottom"),
+                    new DrawLiquidTile(Liquids.ozone){{alpha=0.3f;}},
+                    new DrawRegion("-rot2", 6f){{rotation=20;}},
+                    new DrawRegion("-rot1", -6f){{rotation=-10;}},
+                    new DrawDefault()
+            );
+        }};
+        solarArray = new SolarArray("solar-array"){{
+            health = 250;
+            armor = 8;
+            size = 1;
+            requirements(Category.power, with(SFItems.chromium,10, SFItems.crystalGallium,15));
+            baseExplosiveness = 1.5f;
+            powerProduction = 1;
+        }};
+
+        //endregion
 
 
          /*spaceFactory = new UnitFactory("space-factory"){{

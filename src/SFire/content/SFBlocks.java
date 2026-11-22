@@ -73,6 +73,7 @@ public class SFBlocks {
     induFloor, induFloorSupplyer, induFloorBroken, induFloorHeater, induHeatBroken, induFloorCover, induFloorWall, induFloorNano, induFloorNanowall,
             lightRed, lightYellow, lightBlue, lightGreen,
     reforcedFloor1, reforcedFloor2, perimeter,
+    spaceFloor1, spaceFloor2, spaceFloor3, spaceMetal, spaceStationCover, spaceStationWall,
 
     discEngine, ammoBox, ammoBoxLarge, oilDrums, oilDrumsLarge, oilDrumsArmor, chemicalTank, radarBig, radarStation, hangar,
 
@@ -657,7 +658,6 @@ public class SFBlocks {
             lightColor = Color.green.cpy().a(0.6f);
         }};
 
-
         reforcedFloor1 = new Floor("reforced-floor-1") {{
             speedMultiplier = 1.3f;
             dragMultiplier = 1.15f;
@@ -682,6 +682,25 @@ public class SFBlocks {
             attributes.set(Attribute.oil, -0.125f);
             attributes.set(Attribute.water, -0.125f);
         }};
+
+        spaceFloor1 = new Floor("space-floor-1"){{
+            autotile = true;
+            drawEdgeOut = false;
+            drawEdgeIn = false;
+        }};
+        spaceFloor2 = new Floor("space-floor-2"){{
+            autotileVariants = 3;
+            autotile = true;
+            drawEdgeOut = false;
+            drawEdgeIn = false;
+        }};
+        spaceFloor3 = new Floor("space-floor-3",0){{
+            drawEdgeOut = false;
+            drawEdgeIn = false;
+        }};
+        spaceMetal = new Floor("space-metal",0);
+        spaceStationCover = new StaticWall("space-station-cover"){{variants=0;}};
+        spaceStationWall = new StaticWall("space-station-wall"){{variants=0;}};
 
         discEngine = new Thruster("disc-engine") {{
             health = 4000;
