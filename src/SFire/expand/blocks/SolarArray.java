@@ -20,7 +20,7 @@ import mindustry.world.meta.*;
 
 public class SolarArray extends SolarGenerator {
     //相邻光伏板强化发电倍率
-    public float nearbyEnchant = 1 / 4f;
+    public float nearbyEnchant = 1.5f / 8f;
     public float maxBoost = 10;
 
     public final int timerUse = timers++;
@@ -33,7 +33,8 @@ public class SolarArray extends SolarGenerator {
 
     public SolarArray(String name) {
         super(name);
-        flags = EnumSet.of(BlockFlag.generator);
+        flags = EnumSet.of(BlockFlag.battery);
+        consumePowerBuffered(1000f);
     }
 
     @Override

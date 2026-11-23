@@ -767,7 +767,7 @@ public class SFOverride {
 
         //endregion
 
-        Liquids.ozone.flammability = 0.9f;
+        Liquids.hydrogen.flammability = 1.25f;
 
 
 

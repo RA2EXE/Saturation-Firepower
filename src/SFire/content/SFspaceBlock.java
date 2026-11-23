@@ -2,15 +2,20 @@ package SFire.content;
 
 import SFire.expand.blocks.*;
 import arc.graphics.Color;
+import arc.math.Mathf;
+import arc.struct.EnumSet;
 import mindustry.content.*;
 import mindustry.gen.Sounds;
+import mindustry.graphics.Pal;
 import mindustry.type.*;
 import mindustry.world.Block;
 import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.liquid.*;
 import mindustry.world.blocks.power.ConsumeGenerator;
+import mindustry.world.blocks.production.GenericCrafter;
 import mindustry.world.consumers.ConsumeLiquidFlammable;
 import mindustry.world.draw.*;
+import mindustry.world.meta.BlockFlag;
 
 import static mindustry.type.ItemStack.with;
 
@@ -150,10 +155,12 @@ public class SFspaceBlock {
         oxiGenerator = new ConsumeGenerator("oixden-generator"){{
             health = 500;
             size = 2;
-            requirements(Category.power, with(Items.lead,20, SFItems.rubidium,25));
+            requirements(Category.power, with(Items.lead,60, Items.silicon,80, SFItems.rubidium,25));
+            flags = EnumSet.of(BlockFlag.battery);
 
             powerProduction = 3;
-            consumeLiquid(SFLiquids.mixGas,0.2f);
+            consumePowerBuffered(10000);
+            consume(new ConsumeLiquidFlammable(0.3f));
             drawer = new DrawMulti(new DrawDefault(), new DrawWarmupRegion());
         }};
         chemGenerator = new GasTurbineGenerator("chemcal-generator"){{
@@ -170,13 +177,13 @@ public class SFspaceBlock {
             warmupSpeed = 0.002f;
             powerUpSpeed = 0.005f;
             consumeLiquid(Liquids.ozone,0.1f);
-            consume(new ConsumeLiquidFlammable(0.3f){{minFlammability=1f;}});
+            consume(new ConsumeLiquidFlammable(0.3f){{minFlammability=1.1f;}});
 
             drawer = new DrawMulti(
                     new DrawRegion("-bottom"),
                     new DrawLiquidTile(Liquids.ozone){{alpha=0.3f;}},
-                    new DrawRegion("-rot2", 6f){{rotation=20;}},
-                    new DrawRegion("-rot1", -6f){{rotation=-10;}},
+                    new DrawRegion("-rot2",8f){{rotation=20;spinSprite=true;}},
+                    new DrawRegion("-rot1",-8f){{rotation=-10;spinSprite=true;}},
                     new DrawDefault()
             );
         }};
@@ -184,13 +191,116 @@ public class SFspaceBlock {
             health = 250;
             armor = 8;
             size = 1;
-            requirements(Category.power, with(SFItems.chromium,10, SFItems.crystalGallium,15));
+            requirements(Category.power, with(SFItems.chromium,20, SFItems.crystalGallium,35));
             baseExplosiveness = 1.5f;
             powerProduction = 1;
         }};
 
         //endregion
+        //region crafter
+        irradiatedRefiner = new GenericCrafter("irradiated-refiner"){{
+            size = 2;
+            health = 500;
+            requirements(Category.crafting, with(Items.lead,30, SFItems.chromium,30));
+            hasPower = false;
+            hasItems = hasLiquids = true;
+            itemCapacity = 20;
+            liquidCapacity = 50;
 
+            craftTime = 70;
+            consumeItem(Items.sand,3);
+            outputItem = new ItemStack(Items.silicon, 3);
+            outputLiquid = new LiquidStack(Liquids.ozone,0.2f);
+
+            drawer = new DrawMulti(new DrawDefault(),new DrawLiquidRegion(Liquids.ozone));
+        }};
+        arcSynthesizer = new GenericCrafter("arc-synthesizer"){{
+            size = 3;
+            health = 660;
+            requirements(Category.crafting, with(Items.titanium,80, SFItems.siliSteel,80));
+            hasPower = hasItems = hasLiquids = true;
+            itemCapacity = 15;
+            liquidCapacity = 80;
+
+            craftTime = 30;
+            consumePower(4.5f);
+            consumeItem(Items.graphite, 1);
+            consumeLiquid(Liquids.hydrogen, 20f / 60f);
+            outputLiquid = new LiquidStack(SFLiquids.mixGas, 10f / 60f);
+
+            drawer = new DrawMulti(new DrawRegion("-bottom"),
+                    new DrawLiquidTile(Liquids.hydrogen),
+                    new DrawLiquidTile(SFLiquids.mixGas),
+                    new DrawArcSmelt(){{midColor=Pal.lighterOrange;flameColor=SFLiquids.mixGas.color;}},
+                    new DrawDefault());
+        }};
+        phasesConverter = new GenericCrafter("phases-converter"){{
+            size = 3;
+            requirements(Category.crafting, with(Items.titanium,60, SFItems.rubidium,80, SFItems.chromium,150));
+            hasPower = false;
+            hasItems = hasLiquids = true;
+            itemCapacity = 20;
+            liquidCapacity = 60;
+            rotate = true;
+            invertFlip = true;
+
+            craftTime = 30;
+            consumeItem(SFItems.solidFuel, 1);
+            outputLiquids = LiquidStack.with(Liquids.water, 10/60f, SFLiquids.mixGas,3/60f);
+
+            regionRotated1 = 3;
+            liquidOutputDirections = new int[]{1, 3};
+            drawer = new DrawMulti(
+                    new DrawRegion("-bottom"),
+                    new DrawPistons(){{
+                        sinMag = 2.75f;
+                        sinScl = 5f;
+                        sides = 8;
+                        sideOffset = Mathf.PI / 2f;
+                    }},
+                    new DrawLiquidTile(SFLiquids.mixGas),
+                    new DrawRegion(),
+                    new DrawLiquidRegion(Liquids.water),
+                    new DrawLiquidOutputs()
+            );
+        }};
+        electrolyzer = new GenericCrafter("electrolyzer"){{
+            size = 3;
+            requirements(Category.crafting, with(SFItems.siliSteel,75, SFItems.siliSteel,110, SFItems.waveSteel,80));
+            hasPower = hasItems = hasLiquids = true;
+            itemCapacity = 15;
+            liquidCapacity = 100;
+            rotate = true;
+            invertFlip = true;
+
+            craftTime = 60;
+            consumeLiquid(Liquids.water, 30f / 60f);
+            consumePower(300 / 60f);
+            outputLiquids = LiquidStack.with(Liquids.ozone, 10f / 60, Liquids.hydrogen, 30f / 60);
+
+            regionRotated1 = 3;
+            liquidOutputDirections = new int[]{1, 3};
+            drawer = new DrawMulti(
+                    new DrawRegion("-bottom"),
+                    new DrawLiquidTile(Liquids.water),
+                    new DrawBubbles(Color.valueOf("7693e3")){{
+                        sides = 10;
+                        recurrence = 3f;
+                        spread = 6;
+                        radius = 1.5f;
+                        amount = 20;
+                    }},
+                    new DrawRegion(),
+                    new DrawLiquidOutputs(),
+                    new DrawGlowRegion(){{
+                        alpha = 0.7f;
+                        color = Pal.techBlue;
+                        glowIntensity = 0.3f;
+                        glowScale = 6f;
+                    }}
+            );
+        }};
+        //endregion
 
          /*spaceFactory = new UnitFactory("space-factory"){{
             health = 11200;

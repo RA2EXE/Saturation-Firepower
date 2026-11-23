@@ -281,7 +281,10 @@ public class SFTechTree {
                 });
             });
         }));//改动
-        addToNode(Items.coal, () -> nodeProduce(SFLiquids.mixGas, () -> nodeProduce(SFLiquids.heatchangeroil, () -> {})));
+        addToNode(Items.coal, () -> {
+            nodeProduce(SFItems.solidFuel, ()->{});
+            nodeProduce(SFLiquids.mixGas, () -> nodeProduce(SFLiquids.heatchangeroil, () -> {}));
+        });
         addToNode(Items.titanium, () -> nodeProduce(SFItems.siliSteel, () -> {}));
         addToNode(Items.silicon, () -> nodeProduce(SFItems.nanoCore, () -> {
             nodeProduce(SFItems.lens, () -> {
