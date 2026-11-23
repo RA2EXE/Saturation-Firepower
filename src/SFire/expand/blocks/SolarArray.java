@@ -34,7 +34,7 @@ public class SolarArray extends SolarGenerator {
     public SolarArray(String name) {
         super(name);
         flags = EnumSet.of(BlockFlag.battery);
-        consumePowerBuffered(1000f);
+        enableDrawStatus = false;
     }
 
     @Override

@@ -159,7 +159,6 @@ public class SFspaceBlock {
             flags = EnumSet.of(BlockFlag.battery);
 
             powerProduction = 3;
-            consumePowerBuffered(10000);
             consume(new ConsumeLiquidFlammable(0.3f));
             drawer = new DrawMulti(new DrawDefault(), new DrawWarmupRegion());
         }};
