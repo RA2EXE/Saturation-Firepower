@@ -223,8 +223,8 @@ public class SFspaceBlock {
         ionDrill = new IonDrill("ion-drill"){{
             size = 3;
             health = 2000;
-            itemCapacity = 50;
-            requirements(Category.production, with(Items.graphite,160, SFItems.waveSteel,110, SFItems.tayrAlloy,50, SFItems.nanoCore,80));
+            itemCapacity = 80;
+            requirements(Category.production, with(Items.graphite,160, SFItems.waveSteel,160, SFItems.tayrAlloy,80, SFItems.nanoCore,100));
 
             tier = 6;
             drillTime = 120f;
@@ -235,10 +235,7 @@ public class SFspaceBlock {
             range = 8;
             itemRangeBoost = 5f;
 
-            sparkLife = 20;
-            sparkRange = 30;
-
-            laserWidth = 0.15f;
+            laserWidth = 0.2f;
             glowColor = SFColor.tayrDark.cpy().a(0.1f);
         }};
         wallCrusher = new BeamCrusher("wall-crusher"){{
