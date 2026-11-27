@@ -16,6 +16,7 @@ import mindustry.type.*;
 import mindustry.world.blocks.defense.turrets.*;
 import mindustry.world.blocks.distribution.Conveyor;
 import mindustry.world.blocks.distribution.Junction;
+import mindustry.world.blocks.environment.StaticWall;
 import mindustry.world.blocks.power.*;
 import mindustry.world.blocks.production.*;
 import mindustry.world.blocks.storage.Unloader;
@@ -769,9 +770,9 @@ public class SFOverride {
 
         Liquids.hydrogen.flammability = 1.25f;
 
-
-
-
-
+        Blocks.darkMetal.attributes.set(SFAttribute.scrap,1);
+        Blocks.metalWall1.attributes.set(SFAttribute.scrap,1);
+        Blocks.metalWall2.attributes.set(SFAttribute.scrap,1);
+        Blocks.metalWall3.attributes.set(SFAttribute.scrap,1);
     }
 }

@@ -12,9 +12,12 @@ import mindustry.world.Block;
 import mindustry.world.blocks.distribution.*;
 import mindustry.world.blocks.liquid.*;
 import mindustry.world.blocks.power.ConsumeGenerator;
+import mindustry.world.blocks.production.BeamDrill;
 import mindustry.world.blocks.production.GenericCrafter;
+import mindustry.world.blocks.production.WallCrafter;
 import mindustry.world.consumers.ConsumeLiquidFlammable;
 import mindustry.world.draw.*;
+import mindustry.world.meta.Attribute;
 import mindustry.world.meta.BlockFlag;
 
 import static mindustry.type.ItemStack.with;
@@ -28,10 +31,11 @@ public class SFspaceBlock {
     tiConduit, tiLiquidRouter, tiLiquidJunction,
     spLquidBridge, spLquidBridgeLong,
     //drill大小离子钻、万向离子钻、墙钻
+    ozoDrill, ionDrill, wallCrusher, metalCrusher,
     //crafter
     vacuumFurnace, irradiatedRefiner, arcSynthesizer, phasesConverter,
     electrolyzer, gravityAssembler, ionPlanter, spectrumWaver,
-    //power？不考虑？或者用dp做修改
+    //power
     oxiGenerator, chemGenerator, solarArray,
     //turret
     //defense
@@ -155,8 +159,9 @@ public class SFspaceBlock {
         oxiGenerator = new ConsumeGenerator("oixden-generator"){{
             health = 500;
             size = 2;
-            requirements(Category.power, with(Items.lead,60, Items.silicon,80, SFItems.rubidium,25));
+            requirements(Category.power, with(Items.titanium,60, Items.silicon,80, SFItems.rubidium,25));
             flags = EnumSet.of(BlockFlag.battery);
+            liquidCapacity = 60;
 
             powerProduction = 3;
             consume(new ConsumeLiquidFlammable(0.3f));
@@ -194,7 +199,83 @@ public class SFspaceBlock {
             baseExplosiveness = 1.5f;
             powerProduction = 1;
         }};
+        //endregion
+        //region drill
+        ozoDrill = new BeamDrill("ozone-drill"){{
+            size = 2;
+            health = 600;
+            itemCapacity = 20;
+            requirements(Category.production, with(Items.lead,15, SFItems.rubidium,20));
 
+            tier = 4;
+            drillTime = 90f;
+            range = 5;
+            consumeLiquid(Liquids.ozone, 0.02f);
+            optionalBoostIntensity = 2f;
+            consumeLiquid(Liquids.hydrogen, 0.3f / 60f).boost();
+
+            sparkLife = 12;
+            sparkRange = 20;
+
+            glowColor = Liquids.ozone.color;
+            boostHeatColor = Pal.techBlue;
+        }};
+        ionDrill = new IonDrill("ion-drill"){{
+            size = 3;
+            health = 2000;
+            itemCapacity = 50;
+            requirements(Category.production, with(Items.graphite,160, SFItems.waveSteel,110, SFItems.tayrAlloy,50, SFItems.nanoCore,80));
+
+            tier = 6;
+            drillTime = 120f;
+            consumePower(4f);
+            consumeLiquid(Liquids.water, 0.3f);
+            itemConsumer = consumeItem(SFItems.lens,1).boost();
+            boostItemUseTime = 300f;
+            range = 8;
+            itemRangeBoost = 5f;
+
+            sparkLife = 20;
+            sparkRange = 30;
+
+            laserWidth = 0.15f;
+            glowColor = SFColor.tayrDark.cpy().a(0.1f);
+        }};
+        wallCrusher = new BeamCrusher("wall-crusher"){{
+            size = 2;
+            requirements(Category.production, with(Items.titanium,15, Items.graphite,15, SFItems.chromium,25));
+            itemCapacity = 20;
+            liquidCapacity = 50;
+
+            drillTime = 90f;
+            consumePower(20 / 60f);
+            itemConsumer = consumeItem(Items.silicon,1).boost();
+            boostItemUseTime = 120f;
+            itemBoostIntensity = 2f;
+
+            attribute = Attribute.sand;
+            output = Items.sand;
+        }};
+        metalCrusher = new BeamCrusher("metal-crusher"){{
+            size = 3;
+            health = 2000;
+            requirements(Category.production, with(Items.thorium,110, SFItems.waveSteel,80, SFItems.tayrAlloy,50, SFItems.crystalGallium,60));
+            itemCapacity = 50;
+            liquidCapacity = 50;
+
+            drillTime = 15f;
+            consumePower(2f);
+            consumeLiquid(Liquids.ozone,0.2f);
+            liquidBoostIntensity = optionalBoostIntensity = 3f;
+            consumeLiquid(Liquids.hydrogen, 0.3f).boost();
+
+            attribute = SFAttribute.scrap;
+            output = Items.scrap;
+
+            laserWidth = 0.7f;
+            glowColor = Liquids.ozone.color;
+            boostHeatColor = Pal.techBlue;
+        }};
         //endregion
         //region crafter
         irradiatedRefiner = new GenericCrafter("irradiated-refiner"){{
@@ -211,7 +292,9 @@ public class SFspaceBlock {
             outputItem = new ItemStack(Items.silicon, 3);
             outputLiquid = new LiquidStack(Liquids.ozone,0.2f);
 
-            drawer = new DrawMulti(new DrawDefault(),new DrawLiquidRegion(Liquids.ozone));
+            lightLiquid = Liquids.ozone;
+            drawer = new DrawMulti(new DrawDefault(),new DrawLiquidRegion(Liquids.ozone){{drawLiquidLight = true;}},
+                    new DrawWarmupRegion(){{color=Color.yellow.cpy().a(0.2f);}});
         }};
         arcSynthesizer = new GenericCrafter("arc-synthesizer"){{
             size = 3;
@@ -265,7 +348,7 @@ public class SFspaceBlock {
         }};
         electrolyzer = new GenericCrafter("electrolyzer"){{
             size = 3;
-            requirements(Category.crafting, with(SFItems.siliSteel,75, SFItems.siliSteel,110, SFItems.waveSteel,80));
+            requirements(Category.crafting, with(Items.graphite,75, SFItems.siliSteel,110, SFItems.waveSteel,80));
             hasPower = hasItems = hasLiquids = true;
             itemCapacity = 15;
             liquidCapacity = 100;

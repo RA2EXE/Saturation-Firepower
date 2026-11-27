@@ -18,10 +18,12 @@ import mindustry.world.blocks.*;
 import mindustry.world.blocks.power.SolarGenerator;
 import mindustry.world.meta.*;
 
+import static mindustry.Vars.state;
+
 public class SolarArray extends SolarGenerator {
     //相邻光伏板强化发电倍率
     public float nearbyEnchant = 1.5f / 8f;
-    public float maxBoost = 10;
+    public float maxBoost = 1 + nearbyEnchant * 8;
 
     public final int timerUse = timers++;
     public boolean autotile = true;
@@ -49,7 +51,7 @@ public class SolarArray extends SolarGenerator {
         addBar("boost", (SolarArrayBuild e) -> new Bar(
                 () -> Core.bundle.format("bar.boost", Strings.fixed((e.nowEnchant - 1) * 100, 0)),
                 () -> Pal.accent,
-                () -> e.nowEnchant > 1 ? 1 : 0
+                () -> (e.nowEnchant-1) / maxBoost
         ));
     }
 
@@ -117,7 +119,9 @@ public class SolarArray extends SolarGenerator {
 
         @Override
         public void updateTile() {
-            super.updateTile();
+            productionEfficiency = enabled ?
+                    state.rules.solarMultiplier * Mathf.maxZero(Attribute.light.env() + 1)
+                    : 0f;
 
             //定期刷新
             if (timer(timerUse, 1)) {
